@@ -1,5 +1,0 @@
-build:
-  engine: "../nanobox-engine-tolmark-gulp"
-
-web1:
-  httpd_document_root: rel
