@@ -1,4 +1,10 @@
-## Running the app
+# Installation
+
+1. the Repo
+2. Install the shared library
+  * `git submodule add git@github.com:nanobox-io/nanobox-dash-ui-core-styles.git lib/assets/core-styles`
+
+# Running the app
 
 #### Local:
 ```
@@ -12,7 +18,7 @@ gulp rel
 (NOTE! A few changes need to be made before gulp rel will work)
 
 
-## Adding a new article
+# Adding a new article
 
 ##### 1) Create the article file in `markdown`
 ```
