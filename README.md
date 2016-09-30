@@ -1,8 +1,8 @@
 # Installation
 
-1. the Repo
+1. Clone the Repo
 2. Install the shared library
-  * `git submodule add git@github.com:nanobox-io/nanobox-dash-ui-core-styles.git lib/assets/core-styles`
+  * `git submodule update --init`
 
 # Running the app
 
@@ -68,13 +68,13 @@ window.articleGroupData =
 
   # Articles
   articles : [
-    {href: "#", title: "Getting Started"}
-    {href: "#", title: "Connecting to a database"}
-    {href: "#", title: "Adding components"}
-    {href: "#", title: "Preparing for productions", articles : [
-        {href: "#", title: "Example of nested articles"}
-        {href: "#", title: "Some other article"}
-        {href: "#", title: "Another", articles : [
+    {href: "/ruby/rails/getting-started",          title: "Getting Started"}
+    {href: "/ruby/rails/connecting to a database", title: "Connecting to a database"}
+    {href: "/ruby/rails/adding-components",        title: "Adding components"}
+    {href: "/ruby/rails/getting-started",          title: "Sub Directory", articles : [
+        {href: "ruby/rails/nested", title: "Example of nested articles"}
+        {href: "ruby/rails/other",  title: "Some other article"}
+        {href: "#",                 title: "Another", articles : [
             {href: "#", title: "Deep nesting"}
             {href: "#", title: "Very Deep"}
           ]
