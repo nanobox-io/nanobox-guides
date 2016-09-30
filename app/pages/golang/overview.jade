@@ -1,0 +1,21 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Overview"
+    articles = "golang"
+    icons    = "golang"
+
+block custom
+  h1 Golang
+  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
+  h4 Frameworks
+  .frameworks
+    a.hex(href="/golang/hugo/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-hugo" scalable='true')
+      .txt Hugo
+    a.hex(href="/golang/beego/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-beego" scalable='true')
+      .txt Beego

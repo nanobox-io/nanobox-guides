@@ -1,8 +1,8 @@
 window.articleGroupData =
-  title: "Sails"
+  title: "Django"
   breadCrumb: [
-    {title:'nodejs', href:'/nodejs/overview'}
-    {title:'sails',  href:'/nodejs/sails/getting-started'}
+    {title:'python', href:'/python/overview'}
+    {title:'django', href:'/python/django/getting-started'}
   ]
   articles: [
     {href: "#", title: "Getting Started"}
