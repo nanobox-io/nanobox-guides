@@ -1,0 +1,32 @@
+@mixin transition ($property:all, $duration:0.05s, $timing:linear, $delay:0s) {
+  @if $property != none {
+    -webkit-transition: $property $duration $timing $delay;
+    transition: $property $duration $timing $delay;
+  } @else {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@mixin transition-duration ( $duration:0s) {
+  -webkit-transition-duration: $duration;
+  transition-duration: $duration;
+}
+
+@mixin removeTransitions(){ @include transition(); }
+@mixin selectable($val:none){
+  -moz-user-select: $val;
+  -khtml-user-select: $val;
+  -webkit-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
+
+@mixin transform ($transform) {
+  transform:         $transform;
+  -webkit-transform: $transform;
+  -ms-transform:     $transform;
+}
+@mixin center-v()   { position:relative; top:50%; @include transform(translateY(-50%)); }
+@mixin center-h() { position:relative; top:50%; @include transform(translateX(-50%)); }
+@mixin circle($size)       { height:$size; width:$size; border-radius:50%; }

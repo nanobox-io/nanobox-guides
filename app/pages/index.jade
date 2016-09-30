@@ -1,0 +1,15 @@
+extends templates/base
+
+block css
+  // build:index /css/index.css
+  link(href="/css/index-svg.css", rel="stylesheet")
+  // endbuild
+
+block js
+  // build:home /js/home.js
+  script(src="/js/index-svg.js")
+  script(src="/js/home.js")
+  // endbuild
+  
+block content
+  a(href="/asdf/asdf/ruby/") asdfa

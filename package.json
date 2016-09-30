@@ -1,0 +1,43 @@
+{
+  "name": "nanobox-front-site",
+  "version": "0.0.1",
+  "dependencies": {
+    "bower": "^1.5.4",
+    "coffee-script": "~1.7.1",
+    "connect": "2.19.5",
+    "gulp": "~3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-bower": "0.0.10",
+    "gulp-bump": "~0.1.11",
+    "gulp-coffee": "~2.0.1",
+    "gulp-concat": "~2.3.3",
+    "gulp-declare": "~0.2.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-git": "^1.2.1",
+    "gulp-ignore": "^1.2.1",
+    "gulp-inject": "^1.3.1",
+    "gulp-jade": "~1.1.0",
+    "gulp-livereload": "~3.8.1",
+    "gulp-minify-css": "~0.3.6",
+    "gulp-minify-html": "~0.1.4",
+    "gulp-open": "~0.2.8",
+    "gulp-plumber": "~0.6.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "~1.1.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sass": "~0.7.2",
+    "gulp-shadow-icons": "tolmark12/gulp-shadow-icons",
+    "gulp-uglify": "~0.3.1",
+    "gulp-usemin": "^0.3.14",
+    "gulp-util": "~2.2.20",
+    "gulp-wait": "0.0.2",
+    "gulp-watch": "^0.6.9",
+    "gulp-wrap": "~0.3.0",
+    "jade": "^1.11.0",
+    "marked": "^0.3.6",
+    "rimraf": "~2.2.8"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2"
+  }
+}

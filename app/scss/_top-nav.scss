@@ -1,0 +1,66 @@
+.top-nav                 {display: flex; align-items: center; max-width:996px; margin: 0 auto; padding-top: 15px;
+  .logo                  {display:flex; align-items: center;}
+  .company               {margin-left:25px; text-transform: uppercase; font-weight: $semibold; font-size:21px; color:#1CACEF; letter-spacing: 0.1em;
+    &:after              {content:"/ Private Beta /"; color:#94ACBA; font-size:12px; letter-spacing: 0.06em; margin-left:15px; }
+  }
+  .index-items           {display:none;}
+  .menu                  {margin-left:auto;
+    .nav                 {display:flex;  font-size:12px; letter-spacing: 0.06em; font-weight: $bold; text-transform: uppercase;
+      a                  {color:#94ACBA; margin-left:32px; display:flex; align-items: center;
+        svg              {margin-left:5px; margin-bottom:-1px;}
+        &:hover          {color:#0091D5;
+          svg *          {fill:#0091D5; }
+        }
+      }
+    }
+  }
+  .hamburg-icon          {display:none; }
+
+  // FIXED - only used on the index page
+  @media screen and (min-width:540px )
+                         {
+    &.fixed              {position:fixed; max-width: initial; width: 100%; background: rgba(#19242b, 0.8); margin:0; z-index:10; filter : drop-shadow(0px 2px 1px rgba(#000, 0.16)); padding-top: 0px;
+      .logo              {display:none; }
+      .index-items       {display: flex; background:#f27e8f; padding: 12px 15px; align-items: center; justify-content: space-between; min-width: 260px;
+        .jumper          {padding:4px 8px; cursor:pointer; color: white; font-weight: $bold; font-size:12px; text-transform: uppercase;
+          &.active,
+          &.active:hover {outline:solid white 2px;  }
+          &:hover        {outline:solid #F0909E 2px;  }
+          &.active       {position:relative;
+            &:after      {top: 30px; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-top-color: #f27e8f; border-width: 15px; margin-left: -15px;
+            }
+          }
+        }
+      }
+      .nav               {padding-right:15px;
+        a                {
+          &:hover        {color:white;
+            svg *        {fill:white; }
+          }
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width:540px )
+                         {background: white;
+    .menu                {display:none;}
+    .hamburg-icon        {display:block; cursor:pointer; position: absolute; right:10px; top:20px;
+      &:hover            {
+        svg *            {stroke:#F27E8F}
+      }
+    }
+    .logo                {margin:0 8px;}
+    .company             {margin-left:8px; font-size:16px;
+      &:after            {margin-left:5px; font-size:11px;}
+    }
+    &.open               {background: rgba(#FCFCFC, 0.8); position:relative; flex-direction:column; align-items: flex-start; padding-bottom:10px;
+      .menu              {display:flex; align-self:flex-start; margin-left:initial;
+        .nav             {flex-direction:column;
+
+        }
+      }
+    }
+  }
+}

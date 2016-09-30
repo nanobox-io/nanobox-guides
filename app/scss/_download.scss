@@ -1,0 +1,69 @@
+.download                   { margin:70px auto 0;
+  .download-btn             { cursor:pointer; position:relative; min-height: 320px; max-width:214px; margin:0 auto; @include transition; opacity:1;
+    svg                     {
+      &#download-bg         { position: absolute;
+        *                   { @include transition(all, 150ms); }
+      }
+    }
+
+    &:not(&.disabled):hover {
+      svg                   {
+        &#download-bg       {
+          .arrow            { stroke:#F27E8F; }
+          .bg1              { fill:#0099D9; }
+          .bg2              { fill:#005C82; }
+        }
+      }
+    }
+    .os                     { position: absolute; top:72px; left:65px;
+      svg#cube              {
+        .top                { fill:#1EB8FF;}
+        .left               { fill:#1CACEF;}
+        .right              { fill:#109CDE;}
+      }
+      svg#logo-apple,
+      svg#logo-windows,
+      svg#logo-linux,       { position: absolute; top:15px; left:18px; }
+      svg#logo-windows      { top:24px; }
+    }
+  }
+  .linux-instructions       { display:none; top:180px; position:absolute; background:rgba(white, 0.95); z-index: 1; font-weight: bold; padding:10px 20px; box-shadow: 0 2px 3px 1px rgba(#000, 0.1); color:#099ce0; border:solid; left: 50%; transform: translateX(-50%);
+    .main                   { font-style:italic; color:#9EAFB5; border-bottom: solid 1px #E4EBED; padding-bottom:7px; margin-bottom:7px;  }
+    .item                   { font-family:$code; font-size:14px; font-weight:bold; margin:3px 0; white-space: nowrap; }
+  }
+
+  .info                     { text-align:center; margin:0 auto; max-width:250px;
+    .h1                     { font-size:20px; font-weight:bold; letter-spacing: 0.06em; color:#1CACEF; border-bottom:solid 1px #DBE1E4; padding-bottom:5px; margin-bottom: 6px; text-transform: uppercase; }
+    .txt                    { font-size:15px; font-style: italic; color:#637D8C; line-height:1.4; }
+  }
+
+  .os-cubes                 { display: flex; max-width:180px; margin:0 auto; justify-content: space-between; margin-top:40px;
+    .os-cube                { position:relative; width:44px; cursor: pointer;
+      svg#cube              { position:absolute; }
+      .logo                 { position:absolute; width:24px; left:0; right:0; margin-left: auto; margin-right: auto;
+        svg#logo-apple      { margin-top:3px; }
+        svg#logo-windows    { margin-top:8px; }
+        svg#logo-linux      { margin-top:4px;
+          .logo-bg          { fill: #94999C; }
+        }
+      }
+      &.active, &:hover     {
+        svg#cube            {
+          .top              { fill:#1EB8FF;}
+          .left             { fill:#1CACEF;}
+          .right            { fill:#109CDE;}
+        }
+        svg#logo-linux      {
+          .logo-bg          { fill: #0D81B8; }
+        }
+      }
+    }
+  }
+  &.is-linux                {
+    .download-btn           { pointer-events: none; }
+    .linux-instructions     { display:block; }
+    .download-btn           { cursor:initial;
+      // > *                   { opacity:0.8; }
+    }
+  }
+}

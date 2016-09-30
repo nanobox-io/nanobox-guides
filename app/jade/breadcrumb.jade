@@ -1,0 +1,4 @@
+.breadcrumbs
+  a.breadcrumb(href="/") home
+  each crumb in breadCrumbs
+    a.breadcrumb(href="#{crumb.href}")=crumb.title

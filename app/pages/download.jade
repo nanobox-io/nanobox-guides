@@ -1,0 +1,40 @@
+extends templates/base
+
+block css
+  // build:download /css/download.css
+  link(href="/css/download-svg.css", rel="stylesheet")
+  // endbuild
+
+block js
+  // build:download /js/download.js
+  script(src="/js/download-svg.js")
+  script(src="/js/download.js")
+  // endbuild
+  
+block content
+  .download
+    .download-btn
+      img.shadow-icon(data-src="download-bg")
+      .os
+        img.shadow-icon(data-src="cube")
+        img.shadow-icon(data-src="logo-apple")
+    .linux-instructions 
+      .main Download the following binaries and add them to your path:
+      .item wget https://s3.amazonaws.com/tools.nanobox.io/nanobox/v1/linux/amd64/nanobox
+      .item wget https://s3.amazonaws.com/tools.nanobox.io/nanobox/v1/linux/amd64/nanobox-update
+    .info
+      .h1 MAC OSX INSTALLER
+      .txt v0.0.34 (Beta)<br/>Mac OSX Intel<br/>124 MB
+    .os-cubes
+      .os-cube.active(data-os="apple")
+        img.shadow-icon(data-src="cube", scalable="true")
+        .logo
+          img.shadow-icon(data-src="logo-apple", scalable="true")
+      .os-cube(data-os="windows")
+        img.shadow-icon(data-src="cube", scalable="true")
+        .logo
+          img.shadow-icon(data-src="logo-windows", scalable="true")
+      .os-cube(data-os="linux")
+        img.shadow-icon(data-src="cube", scalable="true")
+        .logo
+          img.shadow-icon(data-src="logo-linux", scalable="true")

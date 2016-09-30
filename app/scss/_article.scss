@@ -1,0 +1,22 @@
+.article-page          {max-width:1015px; margin:0 auto; display:flex; margin-top:100px;
+
+  .markdown            {max-width:665px; background:white; padding:30px; position:relative;
+    h1,h2,h3,h4,h5,h6  {color:$navy; border-bottom:solid 1px #E1E9ED; margin-bottom:0;padding-bottom:0.2em;
+      a                {color:inherit; position:relative;
+        &:before       {content:"#"; opacity:0; transition: opacity 300ms; position:absolute; left:-0.65em; font-size:24px; color:#E1E8ED; }
+        &:hover:before {opacity:1; }
+      }
+    }
+    h1, h2             {text-transform:uppercase; letter-spacing:0.05em; }
+    h1                 {font-size:41px;
+      a:before         {top:10px;}
+    }
+    h2                 {letter-spacing:0.03em;margin-top:40px; }
+    h4                 {font-size:18px; font-style:italic;
+      a:before         {font-size:20px; left:-0.7em;}
+    }
+    p                  {color:#94ACBA; font-size:18px; font-style:italic; font-weight:$semibold; }
+    @import "bread-crumb";
+  }
+
+}

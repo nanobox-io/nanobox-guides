@@ -1,0 +1,4 @@
+.page-nav
+  .links
+    each header in headers
+      a(class="#{header.tag}" href="##{header.id}")= header.text
