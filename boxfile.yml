@@ -1,5 +1,4 @@
 code.build:
-  image: quay.io/nanobox/build
   engine: nanobox-io/nanobox-engine-tolmark-gulp
   config:
     nodejs_runtime: 'nodejs-0.12'
