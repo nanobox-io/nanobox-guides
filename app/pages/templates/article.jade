@@ -10,18 +10,25 @@ block js
   block configParams
   // build:home /js/article.js
   script(src="/js/article.js")
+  //- Load in a custom article group
   script(src="/js/article-groups/#{articles}.js")
   // endbuild
 
   script.
-    article = new Article("#{title}", "#{articles}")
+    article = new Article("#{title}", "#{articles}", "#{icons}")
 
 
 block content
   .article-page
     .left-nav#left-nav
-      //- .article-nav
-        block articles
+      .article-nav
+        .title
+        .articles
 
-    .markdown 
-      block markdown
+    .main
+      block custom
+      //- Populated with any custom content
+      
+      .markdown 
+        block markdown
+        //- Populated with any markdown files

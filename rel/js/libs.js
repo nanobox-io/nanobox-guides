@@ -13418,7 +13418,1041 @@ return function (global, window, document, undefined) {
 /* The CSS spec mandates that the translateX/Y/Z transforms are %-relative to the element itself -- not its parent.
 Velocity, however, doesn't make this distinction. Thus, converting to or from the % unit with these subproperties
 will produce an inaccurate conversion value. The same issue exists with the cx/cy attributes of SVG circles and ellipses. */
-var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='<g id="logo" data-size="19x33" class="shared-svg-svg ">	<polygon class="st0_itd4y711" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/><polygon class="st1_itd4y711" points="15.003,23.96 9.498,26.797 3.863,23.91 9.368,21.072 	"/><polygon class="st2_itd4y711" points="9.591,30.828 18.959,26 18.959,27.378 9.591,32.207 	"/><polygon class="st3_itd4y711" points="9.591,30.828 0,25.901 0,27.279 9.591,32.207 	"/><polygon class="st4_itd4y711" points="9.688,23.017 17.325,19.079 17.325,20.228 9.688,24.165 	"/><polygon class="st5_itd4y711" points="9.688,23.017 2.049,19.079 2.049,20.228 9.688,24.165 	"/><polygon class="st6_itd4y711" points="17.325,19.079 9.688,23.017 2.049,19.079 9.688,15.143 	"/><polygon class="st7_itd4y711" points="15.311,18.046 9.688,20.945 4.063,18.046 9.688,15.148 	"/><polygon class="st8_itd4y711" points="9.688,16.896 18.942,12.127 18.942,13.517 9.688,18.287 	"/><polygon class="st9_itd4y711" points="9.688,16.896 0.432,12.127 0.432,13.517 9.688,18.287 	"/><polygon class="st10_itd4y711" points="18.942,12.127 9.688,16.896 0.432,12.127 9.688,7.356 	"/><polygon class="st11_itd4y711" points="16.501,10.873 9.688,14.386 2.873,10.873 9.688,7.361 	"/><polygon class="st12_itd4y711" points="18.94,4.803 9.623,9.604 0.306,4.803 9.623,0 	"/><polygon class="st13_itd4y711" points="9.623,9.604 18.94,4.803 18.94,6.204 9.623,11.006 	"/><polygon class="st14_itd4y711" points="9.623,9.604 0.306,4.803 0.306,6.204 9.623,11.006 	"/></g><g id="more-arrow" data-size="8x5" class="shared-svg-svg ">	<polygon class="st15_itd4y711" points="0,0 3.603,4.883 7.207,0 	"/></g><g id="hamburg-menu" data-size="25x12" class="shared-svg-svg ">	<line class="st16_itd4y711" x1="1" y1="1" x2="24" y2="1"/><line class="st16_itd4y711" x1="1" y1="6" x2="24" y2="6"/><line class="st16_itd4y711" x1="1" y1="11" x2="24" y2="11"/></g>';var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='';
+
+/* **********************************************
+     Begin prism-core.js
+********************************************** */
+
+var _self = (typeof window !== 'undefined')
+	? window   // if in browser
+	: (
+		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
+		? self // if in worker
+		: {}   // if in node js
+	);
+
+/**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ * MIT license http://www.opensource.org/licenses/mit-license.php/
+ * @author Lea Verou http://lea.verou.me
+ */
+
+var Prism = (function(){
+
+// Private helper vars
+var lang = /\blang(?:uage)?-(\w+)\b/i;
+var uniqueId = 0;
+
+var _ = _self.Prism = {
+	util: {
+		encode: function (tokens) {
+			if (tokens instanceof Token) {
+				return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
+			} else if (_.util.type(tokens) === 'Array') {
+				return tokens.map(_.util.encode);
+			} else {
+				return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
+			}
+		},
+
+		type: function (o) {
+			return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
+		},
+
+		objId: function (obj) {
+			if (!obj['__id']) {
+				Object.defineProperty(obj, '__id', { value: ++uniqueId });
+			}
+			return obj['__id'];
+		},
+
+		// Deep clone a language definition (e.g. to extend it)
+		clone: function (o) {
+			var type = _.util.type(o);
+
+			switch (type) {
+				case 'Object':
+					var clone = {};
+
+					for (var key in o) {
+						if (o.hasOwnProperty(key)) {
+							clone[key] = _.util.clone(o[key]);
+						}
+					}
+
+					return clone;
+
+				case 'Array':
+					// Check for existence for IE8
+					return o.map && o.map(function(v) { return _.util.clone(v); });
+			}
+
+			return o;
+		}
+	},
+
+	languages: {
+		extend: function (id, redef) {
+			var lang = _.util.clone(_.languages[id]);
+
+			for (var key in redef) {
+				lang[key] = redef[key];
+			}
+
+			return lang;
+		},
+
+		/**
+		 * Insert a token before another token in a language literal
+		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
+		 * we cannot just provide an object, we need anobject and a key.
+		 * @param inside The key (or language id) of the parent
+		 * @param before The key to insert before. If not provided, the function appends instead.
+		 * @param insert Object with the key/value pairs to insert
+		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+		 */
+		insertBefore: function (inside, before, insert, root) {
+			root = root || _.languages;
+			var grammar = root[inside];
+
+			if (arguments.length == 2) {
+				insert = arguments[1];
+
+				for (var newToken in insert) {
+					if (insert.hasOwnProperty(newToken)) {
+						grammar[newToken] = insert[newToken];
+					}
+				}
+
+				return grammar;
+			}
+
+			var ret = {};
+
+			for (var token in grammar) {
+
+				if (grammar.hasOwnProperty(token)) {
+
+					if (token == before) {
+
+						for (var newToken in insert) {
+
+							if (insert.hasOwnProperty(newToken)) {
+								ret[newToken] = insert[newToken];
+							}
+						}
+					}
+
+					ret[token] = grammar[token];
+				}
+			}
+
+			// Update references in other language definitions
+			_.languages.DFS(_.languages, function(key, value) {
+				if (value === root[inside] && key != inside) {
+					this[key] = ret;
+				}
+			});
+
+			return root[inside] = ret;
+		},
+
+		// Traverse a language definition with Depth First Search
+		DFS: function(o, callback, type, visited) {
+			visited = visited || {};
+			for (var i in o) {
+				if (o.hasOwnProperty(i)) {
+					callback.call(o, i, o[i], type || i);
+
+					if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {
+						visited[_.util.objId(o[i])] = true;
+						_.languages.DFS(o[i], callback, null, visited);
+					}
+					else if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {
+						visited[_.util.objId(o[i])] = true;
+						_.languages.DFS(o[i], callback, i, visited);
+					}
+				}
+			}
+		}
+	},
+	plugins: {},
+
+	highlightAll: function(async, callback) {
+		var env = {
+			callback: callback,
+			selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
+		};
+
+		_.hooks.run("before-highlightall", env);
+
+		var elements = env.elements || document.querySelectorAll(env.selector);
+
+		for (var i=0, element; element = elements[i++];) {
+			_.highlightElement(element, async === true, env.callback);
+		}
+	},
+
+	highlightElement: function(element, async, callback) {
+		// Find language
+		var language, grammar, parent = element;
+
+		while (parent && !lang.test(parent.className)) {
+			parent = parent.parentNode;
+		}
+
+		if (parent) {
+			language = (parent.className.match(lang) || [,''])[1].toLowerCase();
+			grammar = _.languages[language];
+		}
+
+		// Set language on the element, if not present
+		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+
+		// Set language on the parent, for styling
+		parent = element.parentNode;
+
+		if (/pre/i.test(parent.nodeName)) {
+			parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+		}
+
+		var code = element.textContent;
+
+		var env = {
+			element: element,
+			language: language,
+			grammar: grammar,
+			code: code
+		};
+
+		_.hooks.run('before-sanity-check', env);
+
+		if (!env.code || !env.grammar) {
+			_.hooks.run('complete', env);
+			return;
+		}
+
+		_.hooks.run('before-highlight', env);
+
+		if (async && _self.Worker) {
+			var worker = new Worker(_.filename);
+
+			worker.onmessage = function(evt) {
+				env.highlightedCode = evt.data;
+
+				_.hooks.run('before-insert', env);
+
+				env.element.innerHTML = env.highlightedCode;
+
+				callback && callback.call(env.element);
+				_.hooks.run('after-highlight', env);
+				_.hooks.run('complete', env);
+			};
+
+			worker.postMessage(JSON.stringify({
+				language: env.language,
+				code: env.code,
+				immediateClose: true
+			}));
+		}
+		else {
+			env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
+
+			_.hooks.run('before-insert', env);
+
+			env.element.innerHTML = env.highlightedCode;
+
+			callback && callback.call(element);
+
+			_.hooks.run('after-highlight', env);
+			_.hooks.run('complete', env);
+		}
+	},
+
+	highlight: function (text, grammar, language) {
+		var tokens = _.tokenize(text, grammar);
+		return Token.stringify(_.util.encode(tokens), language);
+	},
+
+	tokenize: function(text, grammar, language) {
+		var Token = _.Token;
+
+		var strarr = [text];
+
+		var rest = grammar.rest;
+
+		if (rest) {
+			for (var token in rest) {
+				grammar[token] = rest[token];
+			}
+
+			delete grammar.rest;
+		}
+
+		tokenloop: for (var token in grammar) {
+			if(!grammar.hasOwnProperty(token) || !grammar[token]) {
+				continue;
+			}
+
+			var patterns = grammar[token];
+			patterns = (_.util.type(patterns) === "Array") ? patterns : [patterns];
+
+			for (var j = 0; j < patterns.length; ++j) {
+				var pattern = patterns[j],
+					inside = pattern.inside,
+					lookbehind = !!pattern.lookbehind,
+					greedy = !!pattern.greedy,
+					lookbehindLength = 0,
+					alias = pattern.alias;
+
+				pattern = pattern.pattern || pattern;
+
+				for (var i=0; i<strarr.length; i++) { // Don’t cache length as it changes during the loop
+
+					var str = strarr[i];
+
+					if (strarr.length > text.length) {
+						// Something went terribly wrong, ABORT, ABORT!
+						break tokenloop;
+					}
+
+					if (str instanceof Token) {
+						continue;
+					}
+
+					pattern.lastIndex = 0;
+
+					var match = pattern.exec(str),
+					    delNum = 1;
+
+					// Greedy patterns can override/remove up to two previously matched tokens
+					if (!match && greedy && i != strarr.length - 1) {
+						// Reconstruct the original text using the next two tokens
+						var nextToken = strarr[i + 1].matchedStr || strarr[i + 1],
+						    combStr = str + nextToken;
+
+						if (i < strarr.length - 2) {
+							combStr += strarr[i + 2].matchedStr || strarr[i + 2];
+						}
+
+						// Try the pattern again on the reconstructed text
+						pattern.lastIndex = 0;
+						match = pattern.exec(combStr);
+						if (!match) {
+							continue;
+						}
+
+						var from = match.index + (lookbehind ? match[1].length : 0);
+						// To be a valid candidate, the new match has to start inside of str
+						if (from >= str.length) {
+							continue;
+						}
+						var to = match.index + match[0].length,
+						    len = str.length + nextToken.length;
+
+						// Number of tokens to delete and replace with the new match
+						delNum = 3;
+
+						if (to <= len) {
+							if (strarr[i + 1].greedy) {
+								continue;
+							}
+							delNum = 2;
+							combStr = combStr.slice(0, len);
+						}
+						str = combStr;
+					}
+
+					if (!match) {
+						continue;
+					}
+
+					if(lookbehind) {
+						lookbehindLength = match[1].length;
+					}
+
+					var from = match.index + lookbehindLength,
+					    match = match[0].slice(lookbehindLength),
+					    to = from + match.length,
+					    before = str.slice(0, from),
+					    after = str.slice(to);
+
+					var args = [i, delNum];
+
+					if (before) {
+						args.push(before);
+					}
+
+					var wrapped = new Token(token, inside? _.tokenize(match, inside) : match, alias, match, greedy);
+
+					args.push(wrapped);
+
+					if (after) {
+						args.push(after);
+					}
+
+					Array.prototype.splice.apply(strarr, args);
+				}
+			}
+		}
+
+		return strarr;
+	},
+
+	hooks: {
+		all: {},
+
+		add: function (name, callback) {
+			var hooks = _.hooks.all;
+
+			hooks[name] = hooks[name] || [];
+
+			hooks[name].push(callback);
+		},
+
+		run: function (name, env) {
+			var callbacks = _.hooks.all[name];
+
+			if (!callbacks || !callbacks.length) {
+				return;
+			}
+
+			for (var i=0, callback; callback = callbacks[i++];) {
+				callback(env);
+			}
+		}
+	}
+};
+
+var Token = _.Token = function(type, content, alias, matchedStr, greedy) {
+	this.type = type;
+	this.content = content;
+	this.alias = alias;
+	// Copy of the full string this token was created from
+	this.matchedStr = matchedStr || null;
+	this.greedy = !!greedy;
+};
+
+Token.stringify = function(o, language, parent) {
+	if (typeof o == 'string') {
+		return o;
+	}
+
+	if (_.util.type(o) === 'Array') {
+		return o.map(function(element) {
+			return Token.stringify(element, language, o);
+		}).join('');
+	}
+
+	var env = {
+		type: o.type,
+		content: Token.stringify(o.content, language, parent),
+		tag: 'span',
+		classes: ['token', o.type],
+		attributes: {},
+		language: language,
+		parent: parent
+	};
+
+	if (env.type == 'comment') {
+		env.attributes['spellcheck'] = 'true';
+	}
+
+	if (o.alias) {
+		var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
+		Array.prototype.push.apply(env.classes, aliases);
+	}
+
+	_.hooks.run('wrap', env);
+
+	var attributes = '';
+
+	for (var name in env.attributes) {
+		attributes += (attributes ? ' ' : '') + name + '="' + (env.attributes[name] || '') + '"';
+	}
+
+	return '<' + env.tag + ' class="' + env.classes.join(' ') + '" ' + attributes + '>' + env.content + '</' + env.tag + '>';
+
+};
+
+if (!_self.document) {
+	if (!_self.addEventListener) {
+		// in Node.js
+		return _self.Prism;
+	}
+ 	// In worker
+	_self.addEventListener('message', function(evt) {
+		var message = JSON.parse(evt.data),
+		    lang = message.language,
+		    code = message.code,
+		    immediateClose = message.immediateClose;
+
+		_self.postMessage(_.highlight(code, _.languages[lang], lang));
+		if (immediateClose) {
+			_self.close();
+		}
+	}, false);
+
+	return _self.Prism;
+}
+
+//Get current script and highlight
+var script = document.currentScript || [].slice.call(document.getElementsByTagName("script")).pop();
+
+if (script) {
+	_.filename = script.src;
+
+	if (document.addEventListener && !script.hasAttribute('data-manual')) {
+		if(document.readyState !== "loading") {
+			requestAnimationFrame(_.highlightAll, 0);
+		}
+		else {
+			document.addEventListener('DOMContentLoaded', _.highlightAll);
+		}
+	}
+}
+
+return _self.Prism;
+
+})();
+
+if (typeof module !== 'undefined' && module.exports) {
+	module.exports = Prism;
+}
+
+// hack for components to work correctly in node.js
+if (typeof global !== 'undefined') {
+	global.Prism = Prism;
+}
+
+
+/* **********************************************
+     Begin prism-markup.js
+********************************************** */
+
+Prism.languages.markup = {
+	'comment': /<!--[\w\W]*?-->/,
+	'prolog': /<\?[\w\W]+?\?>/,
+	'doctype': /<!DOCTYPE[\w\W]+?>/,
+	'cdata': /<!\[CDATA\[[\w\W]*?]]>/i,
+	'tag': {
+		pattern: /<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,
+		inside: {
+			'tag': {
+				pattern: /^<\/?[^\s>\/]+/i,
+				inside: {
+					'punctuation': /^<\/?/,
+					'namespace': /^[^\s>\/:]+:/
+				}
+			},
+			'attr-value': {
+				pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,
+				inside: {
+					'punctuation': /[=>"']/
+				}
+			},
+			'punctuation': /\/?>/,
+			'attr-name': {
+				pattern: /[^\s>\/]+/,
+				inside: {
+					'namespace': /^[^\s>\/:]+:/
+				}
+			}
+
+		}
+	},
+	'entity': /&#?[\da-z]{1,8};/i
+};
+
+// Plugin to make entity title show the real entity, idea by Roman Komarov
+Prism.hooks.add('wrap', function(env) {
+
+	if (env.type === 'entity') {
+		env.attributes['title'] = env.content.replace(/&amp;/, '&');
+	}
+});
+
+Prism.languages.xml = Prism.languages.markup;
+Prism.languages.html = Prism.languages.markup;
+Prism.languages.mathml = Prism.languages.markup;
+Prism.languages.svg = Prism.languages.markup;
+
+
+/* **********************************************
+     Begin prism-css.js
+********************************************** */
+
+Prism.languages.css = {
+	'comment': /\/\*[\w\W]*?\*\//,
+	'atrule': {
+		pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
+		inside: {
+			'rule': /@[\w-]+/
+			// See rest below
+		}
+	},
+	'url': /url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
+	'selector': /[^\{\}\s][^\{\};]*?(?=\s*\{)/,
+	'string': /("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,
+	'property': /(\b|\B)[\w-]+(?=\s*:)/i,
+	'important': /\B!important\b/i,
+	'function': /[-a-z0-9]+(?=\()/i,
+	'punctuation': /[(){};:]/
+};
+
+Prism.languages.css['atrule'].inside.rest = Prism.util.clone(Prism.languages.css);
+
+if (Prism.languages.markup) {
+	Prism.languages.insertBefore('markup', 'tag', {
+		'style': {
+			pattern: /(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,
+			lookbehind: true,
+			inside: Prism.languages.css,
+			alias: 'language-css'
+		}
+	});
+	
+	Prism.languages.insertBefore('inside', 'attr-value', {
+		'style-attr': {
+			pattern: /\s*style=("|').*?\1/i,
+			inside: {
+				'attr-name': {
+					pattern: /^\s*style/i,
+					inside: Prism.languages.markup.tag.inside
+				},
+				'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+				'attr-value': {
+					pattern: /.+/i,
+					inside: Prism.languages.css
+				}
+			},
+			alias: 'language-css'
+		}
+	}, Prism.languages.markup.tag);
+}
+
+/* **********************************************
+     Begin prism-clike.js
+********************************************** */
+
+Prism.languages.clike = {
+	'comment': [
+		{
+			pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
+			lookbehind: true
+		},
+		{
+			pattern: /(^|[^\\:])\/\/.*/,
+			lookbehind: true
+		}
+	],
+	'string': {
+		pattern: /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+		greedy: true
+	},
+	'class-name': {
+		pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
+		lookbehind: true,
+		inside: {
+			punctuation: /(\.|\\)/
+		}
+	},
+	'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+	'boolean': /\b(true|false)\b/,
+	'function': /[a-z0-9_]+(?=\()/i,
+	'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
+	'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
+	'punctuation': /[{}[\];(),.:]/
+};
+
+
+/* **********************************************
+     Begin prism-javascript.js
+********************************************** */
+
+Prism.languages.javascript = Prism.languages.extend('clike', {
+	'keyword': /\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,
+	'number': /\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,
+	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
+	'function': /[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i
+});
+
+Prism.languages.insertBefore('javascript', 'keyword', {
+	'regex': {
+		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,
+		lookbehind: true,
+		greedy: true
+	}
+});
+
+Prism.languages.insertBefore('javascript', 'string', {
+	'template-string': {
+		pattern: /`(?:\\\\|\\?[^\\])*?`/,
+		greedy: true,
+		inside: {
+			'interpolation': {
+				pattern: /\$\{[^}]+\}/,
+				inside: {
+					'interpolation-punctuation': {
+						pattern: /^\$\{|\}$/,
+						alias: 'punctuation'
+					},
+					rest: Prism.languages.javascript
+				}
+			},
+			'string': /[\s\S]+/
+		}
+	}
+});
+
+if (Prism.languages.markup) {
+	Prism.languages.insertBefore('markup', 'tag', {
+		'script': {
+			pattern: /(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,
+			lookbehind: true,
+			inside: Prism.languages.javascript,
+			alias: 'language-javascript'
+		}
+	});
+}
+
+Prism.languages.js = Prism.languages.javascript;
+
+/* **********************************************
+     Begin prism-file-highlight.js
+********************************************** */
+
+(function () {
+	if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
+		return;
+	}
+
+	self.Prism.fileHighlight = function() {
+
+		var Extensions = {
+			'js': 'javascript',
+			'py': 'python',
+			'rb': 'ruby',
+			'ps1': 'powershell',
+			'psm1': 'powershell',
+			'sh': 'bash',
+			'bat': 'batch',
+			'h': 'c',
+			'tex': 'latex'
+		};
+
+		if(Array.prototype.forEach) { // Check to prevent error in IE8
+			Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+				var src = pre.getAttribute('data-src');
+
+				var language, parent = pre;
+				var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
+				while (parent && !lang.test(parent.className)) {
+					parent = parent.parentNode;
+				}
+
+				if (parent) {
+					language = (pre.className.match(lang) || [, ''])[1];
+				}
+
+				if (!language) {
+					var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+					language = Extensions[extension] || extension;
+				}
+
+				var code = document.createElement('code');
+				code.className = 'language-' + language;
+
+				pre.textContent = '';
+
+				code.textContent = 'Loading…';
+
+				pre.appendChild(code);
+
+				var xhr = new XMLHttpRequest();
+
+				xhr.open('GET', src, true);
+
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState == 4) {
+
+						if (xhr.status < 400 && xhr.responseText) {
+							code.textContent = xhr.responseText;
+
+							Prism.highlightElement(code);
+						}
+						else if (xhr.status >= 400) {
+							code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+						}
+						else {
+							code.textContent = '✖ Error: File does not exist or is empty';
+						}
+					}
+				};
+
+				xhr.send(null);
+			});
+		}
+
+	};
+
+	document.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);
+
+})();
+
+Prism.languages.yaml = {
+	'scalar': {
+		pattern: /([\-:]\s*(![^\s]+)?[ \t]*[|>])[ \t]*(?:((?:\r?\n|\r)[ \t]+)[^\r\n]+(?:\3[^\r\n]+)*)/,
+		lookbehind: true,
+		alias: 'string'
+	},
+	'comment': /#.*/,
+	'key': {
+		pattern: /(\s*(?:^|[:\-,[{\r\n?])[ \t]*(![^\s]+)?[ \t]*)[^\r\n{[\]},#\s]+?(?=\s*:\s)/,
+		lookbehind: true,
+		alias: 'atrule'
+	},
+	'directive': {
+		pattern: /(^[ \t]*)%.+/m,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'datetime': {
+		pattern: /([:\-,[{]\s*(![^\s]+)?[ \t]*)(\d{4}-\d\d?-\d\d?([tT]|[ \t]+)\d\d?:\d{2}:\d{2}(\.\d*)?[ \t]*(Z|[-+]\d\d?(:\d{2})?)?|\d{4}-\d{2}-\d{2}|\d\d?:\d{2}(:\d{2}(\.\d*)?)?)(?=[ \t]*($|,|]|}))/m,
+		lookbehind: true,
+		alias: 'number'
+	},
+	'boolean': {
+		pattern: /([:\-,[{]\s*(![^\s]+)?[ \t]*)(true|false)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'null': {
+		pattern: /([:\-,[{]\s*(![^\s]+)?[ \t]*)(null|~)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'string': {
+		pattern: /([:\-,[{]\s*(![^\s]+)?[ \t]*)("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')(?=[ \t]*($|,|]|}))/m,
+		lookbehind: true
+	},
+	'number': {
+		pattern: /([:\-,[{]\s*(![^\s]+)?[ \t]*)[+\-]?(0x[\da-f]+|0o[0-7]+|(\d+\.?\d*|\.?\d+)(e[\+\-]?\d+)?|\.inf|\.nan)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true
+	},
+	'tag': /![^\s]+/,
+	'important': /[&*][\w]+/,
+	'punctuation': /---|[:[\]{}\-,|>?]|\.\.\./
+};
+
+(function(Prism) {
+	var insideString = {
+		variable: [
+			// Arithmetic Environment
+			{
+				pattern: /\$?\(\([\w\W]+?\)\)/,
+				inside: {
+					// If there is a $ sign at the beginning highlight $(( and )) as variable
+					variable: [{
+							pattern: /(^\$\(\([\w\W]+)\)\)/,
+							lookbehind: true
+						},
+						/^\$\(\(/,
+					],
+					number: /\b-?(?:0x[\dA-Fa-f]+|\d*\.?\d+(?:[Ee]-?\d+)?)\b/,
+					// Operators according to https://www.gnu.org/software/bash/manual/bashref.html#Shell-Arithmetic
+					operator: /--?|-=|\+\+?|\+=|!=?|~|\*\*?|\*=|\/=?|%=?|<<=?|>>=?|<=?|>=?|==?|&&?|&=|\^=?|\|\|?|\|=|\?|:/,
+					// If there is no $ sign at the beginning highlight (( and )) as punctuation
+					punctuation: /\(\(?|\)\)?|,|;/
+				}
+			},
+			// Command Substitution
+			{
+				pattern: /\$\([^)]+\)|`[^`]+`/,
+				inside: {
+					variable: /^\$\(|^`|\)$|`$/
+				}
+			},
+			/\$(?:[a-z0-9_#\?\*!@]+|\{[^}]+\})/i
+		],
+	};
+
+	Prism.languages.bash = {
+		'shebang': {
+			pattern: /^#!\s*\/bin\/bash|^#!\s*\/bin\/sh/,
+			alias: 'important'
+		},
+		'comment': {
+			pattern: /(^|[^"{\\])#.*/,
+			lookbehind: true
+		},
+		'string': [
+			//Support for Here-Documents https://en.wikipedia.org/wiki/Here_document
+			{
+				pattern: /((?:^|[^<])<<\s*)(?:"|')?(\w+?)(?:"|')?\s*\r?\n(?:[\s\S])*?\r?\n\2/g,
+				lookbehind: true,
+				greedy: true,
+				inside: insideString
+			},
+			{
+				pattern: /(["'])(?:\\\\|\\?[^\\])*?\1/g,
+				greedy: true,
+				inside: insideString
+			}
+		],
+		'variable': insideString.variable,
+		// Originally based on http://ss64.com/bash/
+		'function': {
+			pattern: /(^|\s|;|\||&)(?:alias|apropos|apt-get|aptitude|aspell|awk|basename|bash|bc|bg|builtin|bzip2|cal|cat|cd|cfdisk|chgrp|chmod|chown|chroot|chkconfig|cksum|clear|cmp|comm|command|cp|cron|crontab|csplit|cut|date|dc|dd|ddrescue|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|enable|env|ethtool|eval|exec|expand|expect|export|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|getopts|git|grep|groupadd|groupdel|groupmod|groups|gzip|hash|head|help|hg|history|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|jobs|join|kill|killall|less|link|ln|locate|logname|logout|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|make|man|mkdir|mkfifo|mkisofs|mknod|more|most|mount|mtools|mtr|mv|mmv|nano|netstat|nice|nl|nohup|notify-send|nslookup|open|op|passwd|paste|pathchk|ping|pkill|popd|pr|printcap|printenv|printf|ps|pushd|pv|pwd|quota|quotacheck|quotactl|ram|rar|rcp|read|readarray|readonly|reboot|rename|renice|remsync|rev|rm|rmdir|rsync|screen|scp|sdiff|sed|seq|service|sftp|shift|shopt|shutdown|sleep|slocate|sort|source|split|ssh|stat|strace|su|sudo|sum|suspend|sync|tail|tar|tee|test|time|timeout|times|touch|top|traceroute|trap|tr|tsort|tty|type|ulimit|umask|umount|unalias|uname|unexpand|uniq|units|unrar|unshar|uptime|useradd|userdel|usermod|users|uuencode|uudecode|v|vdir|vi|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yes|zip)(?=$|\s|;|\||&)/,
+			lookbehind: true
+		},
+		'keyword': {
+			pattern: /(^|\s|;|\||&)(?:let|:|\.|if|then|else|elif|fi|for|break|continue|while|in|case|function|select|do|done|until|echo|exit|return|set|declare)(?=$|\s|;|\||&)/,
+			lookbehind: true
+		},
+		'boolean': {
+			pattern: /(^|\s|;|\||&)(?:true|false)(?=$|\s|;|\||&)/,
+			lookbehind: true
+		},
+		'operator': /&&?|\|\|?|==?|!=?|<<<?|>>|<=?|>=?|=~/,
+		'punctuation': /\$?\(\(?|\)\)?|\.\.|[{}[\];]/
+	};
+
+	var inside = insideString.variable[1].inside;
+	inside['function'] = Prism.languages.bash['function'];
+	inside.keyword = Prism.languages.bash.keyword;
+	inside.boolean = Prism.languages.bash.boolean;
+	inside.operator = Prism.languages.bash.operator;
+	inside.punctuation = Prism.languages.bash.punctuation;
+})(Prism);
+jadeTemplate = {};
+jadeTemplate['article-icons'] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (icons, undefined) {
+buf.push("<div class=\"icon-crumbs\">");
+// iterate icons
+;(function(){
+  var $$obj = icons;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var icon = $$obj[$index];
+
+buf.push("<div class=\"icon\"><img" + (jade.attr("data-src", "hex-" + (icon) + "", true, false)) + " scalable=\"true\" class=\"shadow-icon\"/></div>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var icon = $$obj[$index];
+
+buf.push("<div class=\"icon\"><img" + (jade.attr("data-src", "hex-" + (icon) + "", true, false)) + " scalable=\"true\" class=\"shadow-icon\"/></div>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");}.call(this,"icons" in locals_for_with?locals_for_with.icons:typeof icons!=="undefined"?icons:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+
+jadeTemplate['articles-nav'] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (articles, title, undefined) {
+buf.push("<div class=\"article-nav\"><div class=\"title\">" + (jade.escape(null == (jade_interp = title) ? "" : jade_interp)) + "</div><div class=\"articles\">");
+// iterate articles
+;(function(){
+  var $$obj = articles;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var article = $$obj[$index];
+
+buf.push("<a" + (jade.attr("href", "" + (article.href) + "", true, false)) + (jade.cls([article.active?"active":""], [true])) + ">" + (jade.escape(null == (jade_interp = article.title) ? "" : jade_interp)) + "</a>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var article = $$obj[$index];
+
+buf.push("<a" + (jade.attr("href", "" + (article.href) + "", true, false)) + (jade.cls([article.active?"active":""], [true])) + ">" + (jade.escape(null == (jade_interp = article.title) ? "" : jade_interp)) + "</a>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div></div>");}.call(this,"articles" in locals_for_with?locals_for_with.articles:typeof articles!=="undefined"?articles:undefined,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+
+jadeTemplate['breadcrumb'] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (breadCrumbs, undefined) {
+buf.push("<div class=\"breadcrumbs\"><a href=\"/\" class=\"breadcrumb\">home</a>");
+// iterate breadCrumbs
+;(function(){
+  var $$obj = breadCrumbs;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var crumb = $$obj[$index];
+
+buf.push("<a" + (jade.attr("href", "" + (crumb.href) + "", true, false)) + " class=\"breadcrumb\">" + (jade.escape(null == (jade_interp = crumb.title) ? "" : jade_interp)) + "</a>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var crumb = $$obj[$index];
+
+buf.push("<a" + (jade.attr("href", "" + (crumb.href) + "", true, false)) + " class=\"breadcrumb\">" + (jade.escape(null == (jade_interp = crumb.title) ? "" : jade_interp)) + "</a>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div>");}.call(this,"breadCrumbs" in locals_for_with?locals_for_with.breadCrumbs:typeof breadCrumbs!=="undefined"?breadCrumbs:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+
+jadeTemplate['page-nav'] = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (headers, undefined) {
+buf.push("<div class=\"page-nav\"><div class=\"links\">");
+// iterate headers
+;(function(){
+  var $$obj = headers;
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var header = $$obj[$index];
+
+buf.push("<a" + (jade.attr("href", "#" + (header.id) + "", true, false)) + (jade.cls(["" + (header.tag) + ""], [true])) + ">" + (jade.escape(null == (jade_interp = header.text) ? "" : jade_interp)) + "</a>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var header = $$obj[$index];
+
+buf.push("<a" + (jade.attr("href", "#" + (header.id) + "", true, false)) + (jade.cls(["" + (header.tag) + ""], [true])) + ">" + (jade.escape(null == (jade_interp = header.text) ? "" : jade_interp)) + "</a>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</div></div>");}.call(this,"headers" in locals_for_with?locals_for_with.headers:typeof headers!=="undefined"?headers:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+};
+
+var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='<g id="hex-ruby" data-size="49x56" class="hexes-svg-svg ">	<g>		<polygon class="st0_itq47fg4" points="48.5,42 24.3,56 0,42 0,14 24.3,0 48.5,14 		"/><g>			<g>				<g>					<g>						<g>							<defs>								<polygon id="SVGID_1_itq47fg4" points="48.5,42 24.3,56 0,42 0,14 24.3,0 48.5,14 								"/></defs>							<clipPath id="SVGID_2_itq47fg4">								<use xlink:href="#SVGID_1_itq47fg4"  style="overflow:visible;"/></clipPath>							<polyline class="st1_itq47fg4" points="11.9,33.4 28.511,53.564 48.5,42 48.5,35.308 42,25.3 							"/></g>					</g>				</g>			</g>		</g>		<polygon class="st2_itq47fg4" points="35.1,18.1 30.1,15.4 24.2,15.4 18.2,15.4 13.4,18.1 6.5,25.3 12.3,33.3 24.2,42.1 24.2,42.1 			24.2,42.1 24.2,42.1 24.3,42 36.1,33.3 42,25.3 		"/><polygon class="st3_itq47fg4" points="36.1,33.3 29.4,25.3 24.2,34 		"/><polygon class="st2_itq47fg4" points="29.4,25.3 35,21.7 36.1,33.3 		"/><polygon class="st4_itq47fg4" points="36.1,33.3 42,25.3 35.1,18.1 35,21.7 		"/><polygon class="st5_itq47fg4" points="12.3,33.3 19,25.3 24.2,34 		"/><polygon class="st6_itq47fg4" points="19,25.3 13.5,21.7 12.3,33.3 		"/><polygon class="st7_itq47fg4" points="19,25.3 13.5,21.7 12.3,33.3 		"/><polygon class="st8_itq47fg4" points="12.3,33.3 6.5,25.3 13.4,18.1 13.5,21.7 		"/><polygon class="st4_itq47fg4" points="24.2,25.3 19,25.3 19,25.3 24.2,34 29.4,25.3 29.4,25.3 		"/><polygon class="st9_itq47fg4" points="30.1,15.4 24.2,15.4 18.2,15.4 13.4,18.1 13.5,21.7 19,25.3 24.2,25.3 29.4,25.3 35,21.7 35.1,18.1 					"/><polygon class="st10_itq47fg4" points="24.2,34 24.3,42 36.1,33.3 		"/><polygon class="st11_itq47fg4" points="24.2,34 24.2,34 12.3,33.3 24.2,42.1 24.3,42 		"/><polygon class="st12_itq47fg4" points="35,21.7 42,25.3 35.1,18.1 		"/><polyline class="st12_itq47fg4" points="13.4,22 13.4,22 6.5,25.3 13.4,18.1 		"/><polygon class="st13_itq47fg4" points="18.2,33.6 24.2,42.1 24.2,34 		"/><polygon class="st11_itq47fg4" points="30.2,33.6 24.2,42.1 24.2,34 		"/></g></g><g id="hex-node" data-size="47x54" class="hexes-svg-svg ">	<g>		<polygon class="st14_itq47fg4" points="46.5,40.27 23.249,53.694 0,40.27 0,13.423 23.249,0 46.5,13.423 		"/><g>			<g>				<g>					<defs>						<polygon id="SVGID_3_itq47fg4" points="46.5,40.27 23.249,53.694 0,40.27 0,13.423 23.249,0 46.5,13.423 						"/></defs>					<clipPath id="SVGID_4_itq47fg4">						<use xlink:href="#SVGID_3_itq47fg4"  style="overflow:visible;"/></clipPath>					<polyline class="st15_itq47fg4" points="12.163,36.337 12.313,36.485 27.225,51.398 46.5,40.27 46.473,32.771 34.129,20.426 						23.25,19.509 15.685,21.492 					"/></g>			</g>		</g>		<path class="st9_itq47fg4" d="M34.129,20.426c0-0.432-0.229-0.83-0.6-1.044l-9.943-5.959c-0.168-0.101-0.357-0.397-0.547-0.397			c-0.017,0-0.089,0-0.104,0c-0.19,0-0.378,0.296-0.549,0.397l-9.943,5.841c-0.37,0.211-0.6,0.67-0.6,1.104l0.022,15.437			c0,0.211,0.112,0.427,0.299,0.532c0.186,0.112,0.413,0.118,0.597,0.009l5.955-3.38c0.373-0.222,0.649-0.61,0.649-1.039v-7.196			c0-0.429,0.182-0.826,0.555-1.039l2.492-1.451c0.187-0.107,0.381-0.16,0.589-0.16c0.206,0,0.41,0.053,0.592,0.16l2.69,1.451			c0.372,0.213,0.776,0.61,0.776,1.039v7.196c0,0.429,0.052,0.823,0.424,1.043l5.818,3.384c0.185,0.109,0.371,0.109,0.556,0			c0.182-0.106,0.277-0.305,0.277-0.517L34.129,20.426z"/></g></g><g id="hex-memcached" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st16_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><path class="st9_itq47fg4" d="M23.167,42.894c10.21,0,13.757-7.354,13.757-12.2c0-4.932-1.211-12.113-7.874-18.689		c0,4.586-0.087,10.469-5.451,10.469"/><path class="st9_itq47fg4" d="M24.033,42.894c-10.21,0-13.757-7.354-13.757-12.2c0-4.932,1.211-12.113,7.874-18.689		c0,4.586,0.087,10.469,5.451,10.469"/><g>		<circle class="st9_itq47fg4" cx="31.214" cy="30.262" r="3.028"/></g>	<g>		<path class="st17_itq47fg4" d="M31.214,27.493c1.471,0,2.682,1.211,2.682,2.682s-1.211,2.682-2.682,2.682s-2.682-1.211-2.682-2.682			C28.532,28.705,29.657,27.493,31.214,27.493 M31.214,26.628c-1.99,0-3.547,1.557-3.547,3.547s1.557,3.547,3.547,3.547			s3.547-1.557,3.547-3.547C34.761,28.272,33.117,26.628,31.214,26.628L31.214,26.628z"/></g>	<g>		<polyline class="st18_itq47fg4" points="23.687,32.771 23.687,37.963 20.658,40.904 		"/><line class="st18_itq47fg4" x1="27.147" y1="40.818" x2="24.033" y2="37.616"/></g>	<g>		<circle class="st9_itq47fg4" cx="16.938" cy="30.262" r="3.028"/></g>	<polygon class="st19_itq47fg4" points="25.763,32.079 24.033,33.723 22.389,32.079 	"/><g>		<path class="st17_itq47fg4" d="M16.938,27.493c1.471,0,2.682,1.211,2.682,2.682s-1.211,2.682-2.682,2.682s-2.682-1.211-2.682-2.682			C14.256,28.705,15.467,27.493,16.938,27.493 M16.938,26.628c-1.99,0-3.547,1.557-3.547,3.547s1.557,3.547,3.547,3.547			s3.547-1.557,3.547-3.547C20.485,28.272,18.928,26.628,16.938,26.628L16.938,26.628z"/></g></g><g id="hex-platform" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st20_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><g id="logo-horizontal_1_" class="hexes-svg-svg ">		<g>			<polygon class="st9_itq47fg4" points="34.6,39 23.1,44.9 11.3,38.9 22.8,32.9 			"/><polygon class="st21_itq47fg4" points="29.7,36.5 22.9,40 16,36.4 22.8,32.9 			"/><polygon class="st22_itq47fg4" points="23.1,44.9 34.6,39 34.6,40.7 23.1,46.6 			"/><polygon class="st23_itq47fg4" points="23.1,44.9 11.3,38.9 11.3,40.6 23.1,46.6 			"/></g>		<g>			<polygon class="st24_itq47fg4" points="23.2,35.3 32.6,30.5 32.6,31.9 23.2,36.7 			"/><polygon class="st25_itq47fg4" points="23.2,35.3 13.8,30.5 13.8,31.9 23.2,36.7 			"/><polygon class="st9_itq47fg4" points="32.6,30.5 23.2,35.3 13.8,30.5 23.2,25.7 			"/><polygon class="st21_itq47fg4" points="30.1,29.2 23.2,32.8 16.3,29.2 23.2,25.7 			"/></g>		<g>			<polygon class="st22_itq47fg4" points="23.2,27.8 34.6,21.9 34.6,23.7 23.2,29.5 			"/><polygon class="st23_itq47fg4" points="23.2,27.8 11.8,21.9 11.8,23.7 23.2,29.5 			"/><polygon class="st9_itq47fg4" points="34.6,21.9 23.2,27.8 11.8,21.9 23.2,16.1 			"/><polygon class="st21_itq47fg4" points="31.6,20.4 23.2,24.7 14.8,20.4 23.2,16.1 			"/></g>		<g>			<polygon class="st9_itq47fg4" points="34.6,12.9 23.1,18.8 11.6,12.9 23.1,7 			"/><polygon class="st24_itq47fg4" points="23.1,18.8 34.6,12.9 34.6,14.7 23.1,20.6 			"/><polygon class="st25_itq47fg4" points="23.1,18.8 11.6,12.9 11.6,14.7 23.1,20.6 			"/></g>	</g></g><g id="hex-system" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st26_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><polygon class="st27_itq47fg4" points="29.4,16.2 35.6,26.9 29.4,37.5 17.1,37.5 10.9,26.9 17.1,16.2 	"/></g><g id="hex-storage" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st28_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><polygon class="st29_itq47fg4" points="34.1,36.1 34.1,32.3 23.1,40.4 23.1,44.5 	"/><polyline class="st30_itq47fg4" points="23.1,40.4 8.1,29.4 8.1,33.7 23,44.7 	"/><polygon class="st9_itq47fg4" points="19.6,22.1 8.5,29.4 23.4,40.5 34.1,32.3 	"/><polygon class="st31_itq47fg4" points="14,25.8 28.4,36.7 34.1,32.3 19.6,21.2 	"/><polygon class="st29_itq47fg4" points="37.1,25 37.1,21.2 27.1,29 27.1,33.1 	"/><polyline class="st30_itq47fg4" points="27,29 12.1,18 12.1,22.3 27,33.3 	"/><polygon class="st9_itq47fg4" points="22.8,11 12.2,18 27.1,29.1 37.3,21.2 	"/><g>		<g>			<line class="st32_itq47fg4" x1="33.9" y1="5.4" x2="32.6" y2="6.2"/><line class="st33_itq47fg4" x1="30.6" y1="7.5" x2="26.7" y2="10.2"/><line class="st32_itq47fg4" x1="25.7" y1="10.9" x2="24.5" y2="11.7"/></g>	</g>	<g>		<g>			<line class="st32_itq47fg4" x1="38.7" y1="8.5" x2="37.5" y2="9.3"/><line class="st33_itq47fg4" x1="35.5" y1="10.7" x2="31.5" y2="13.3"/><line class="st32_itq47fg4" x1="30.5" y1="14" x2="29.3" y2="14.8"/></g>	</g>	<g>		<g>			<line class="st32_itq47fg4" x1="43.5" y1="11.6" x2="42.3" y2="12.4"/><line class="st33_itq47fg4" x1="40.3" y1="13.8" x2="36.4" y2="16.5"/><line class="st32_itq47fg4" x1="35.4" y1="17.1" x2="34.1" y2="18"/></g>	</g>	<g>		<g>			<line class="st32_itq47fg4" x1="11.6" y1="36.1" x2="10.4" y2="37"/><line class="st34_itq47fg4" x1="8.7" y1="38.2" x2="5.3" y2="40.6"/><line class="st32_itq47fg4" x1="4.5" y1="41.3" x2="3.3" y2="42.1"/></g>	</g>	<g>		<g>			<line class="st32_itq47fg4" x1="16.4" y1="39.2" x2="15.2" y2="40.1"/><line class="st35_itq47fg4" x1="13.5" y1="41.3" x2="10.2" y2="43.8"/><line class="st32_itq47fg4" x1="9.3" y1="44.4" x2="8.1" y2="45.3"/></g>	</g>	<g>		<g>			<line class="st32_itq47fg4" x1="21.3" y1="42.3" x2="20.1" y2="43.2"/><line class="st36_itq47fg4" x1="18.4" y1="44.4" x2="15" y2="46.9"/><line class="st32_itq47fg4" x1="14.2" y1="47.5" x2="13.411" y2="48.046"/></g>	</g></g><g id="hex-java" data-size="47x54" class="hexes-svg-svg ">	<g>		<polygon class="st37_itq47fg4" points="46.547,40.312 23.274,53.749 0,40.312 0,13.437 23.274,0 46.547,13.437 		"/><ellipse class="st9_itq47fg4" cx="21.799" cy="38.949" rx="6.542" ry="4.331"/><ellipse class="st28_itq47fg4" cx="21.8" cy="25.877" rx="11.337" ry="6.098"/><g>			<defs>				<ellipse id="SVGID_5_itq47fg4" cx="21.799" cy="28.147" rx="9.378" ry="5.044"/></defs>			<use xlink:href="#SVGID_5_itq47fg4"  style="overflow:visible;fill:#E80000;"/><clipPath id="SVGID_6_itq47fg4">				<use xlink:href="#SVGID_5_itq47fg4"  style="overflow:visible;"/></clipPath>			<ellipse class="st38_itq47fg4" cx="21.799" cy="28.147" rx="9.378" ry="5.044"/><path class="st39_itq47fg4" d="M36.266,21.289H12.751v6.089c1.733-1.163,4.265-1.91,7.242-1.91c4.061,0,7.468,1.467,8.769,3.409				C28.762,28.877,35.691,28.219,36.266,21.289z"/></g>		<path class="st9_itq47fg4" d="M28.081,39.485c-0.794,1.732-3.305,2.152-6.281,2.152c-2.977,0-5.493-0.794-6.283-1.965l-0.153,0.034			c-5.823-7.275-5.211-13.612-5.211-13.612v-0.217c0,3.368,5.232,6.098,11.493,6.098c6.261,0,11.414-2.73,11.414-6.098l0.037,0.09			c0,0,0.806,6.584-5.017,13.518H28.081z"/><g>			<path class="st9_itq47fg4" d="M21.63,21.618c5.534,0,9.668,2.249,9.668,4.26c0,2.01-4.135,4.258-9.668,4.258				c-5.533,0-9.667-2.248-9.667-4.258C11.964,23.866,16.098,21.618,21.63,21.618 M21.63,19.779c-6.355,0-11.505,2.731-11.505,6.098				c0,3.367,5.15,6.096,11.505,6.096c6.356,0,11.507-2.73,11.507-6.096C33.137,22.511,27.986,19.779,21.63,19.779L21.63,19.779z"/></g>		<path class="st40_itq47fg4" d="M32.943,26.49c2.988,0,5.409,2.425,5.409,5.414c0,2.988-2.425,5.414-5.414,5.414c-2.986,0-4.59,0-4.59,0"/><path class="st40_itq47fg4" d="M32.943,26.49c2.988,0,5.409,2.425,5.409,5.414c0,2.988-2.425,5.414-5.414,5.414c-2.986,0-4.59,0-4.59,0"/><path class="st41_itq47fg4" d="M32.982,27.064c1.939,0,3.612,1.141,4.381,2.789"/><line class="st41_itq47fg4" x1="29.214" y1="38.183" x2="34.414" y2="38.183"/><path class="st41_itq47fg4" d="M16.035,38.124c-2.437-3.263-3.39-6.239-3.765-8.077"/><path class="st42_itq47fg4" d="M30.23,11.338c-1.025,3.454-3.702,5.688-4.964,6.739"/><path class="st42_itq47fg4" d="M16.035,19.031c-0.568-4.062,1.789-6.028,3.68-7.609c0.573-0.478,1.02-0.884,1.358-1.246"/><path class="st42_itq47fg4" d="M26.066,6.751c1.084,4.111-1.948,6.64-3.576,8.001c-1.944,1.62-2.378,2.157-2.165,3.681"/></g></g><g id="hex-php" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st43_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><polyline class="st44_itq47fg4" points="30.3,32.4 23.663,53.434 46.5,40.3 46.5,14.553 36.6,13.1 	"/><polygon class="st45_itq47fg4" points="39.5,16.1 46.3,25.9 35.6,44.2 31.7,35.7 	"/><polygon class="st44_itq47fg4" points="17.5,14.3 23.2,9.2 28.9,10.1 36,9.2 44.4,25.8 35.8,37.8 27,33.7 28.3,26 27,32.3 23.9,32.1 		21.3,34.9 19.5,34.6 19.3,32.6 17.5,33.6 15.4,42.3 11.1,43.3 2.6,37.8 5.4,36.5 10.6,39.2 12.6,37.8 10.9,26.7 	"/><polygon class="st9_itq47fg4" points="19.9,26.2 21.1,28.5 17,29.4 7.6,22.3 9,21.6 16.9,26.7 	"/><polygon class="st9_itq47fg4" points="9.7,27.9 6.9,27.9 2.3,24 1.3,24.7 6.2,29.5 10.3,29.9 	"/><circle class="st46_itq47fg4" cx="23.2" cy="20" r="1.8"/><polygon class="st45_itq47fg4" points="30.3,17.4 27.2,32.4 24.4,32.2 	"/></g><g id="hex-couch" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st47_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><g>		<polygon class="st48_itq47fg4" points="3.4,37.9 43.1,37.9 43.1,22.6 40.7,22.6 40.7,15.2 6.2,15.2 6.2,22.6 3.4,22.6 		"/><polygon class="st49_itq47fg4" points="38.1,23.9 38.1,17.3 8.7,17.3 8.7,22.8 6.3,22.8 6.3,35.6 8.7,35.6 10.3,35.6 34.7,35.6 38.1,35.6 			40.5,35.6 40.5,23.9 		"/><polygon class="st48_itq47fg4" points="10.3,31.3 10.3,37.1 36.2,37.1 36.2,30.9 18,33 		"/><polygon class="st48_itq47fg4" points="10.3,23.7 10.3,27.6 16.8,29.8 36.2,27.9 36.2,24 32.2,26.5 25.5,23.7 17.7,25.2 		"/><polygon class="st9_itq47fg4" points="7.4,21.3 10.6,20 9.4,18.7 9.4,14.1 13.9,14.1 13.9,18.9 19.6,14.2 27,15.7 27.2,17.3 24.9,17.3 			23.7,17.3 20.9,17.3 17.8,20.6 19.7,23.2 26.4,20.9 32.4,25.8 35.8,26.6 36.2,27.9 30.3,28.5 30,27.7 29.7,27.5 26,25.2 			19.3,29.4 20.4,39.8 17.1,39.9 14.6,29.1 13.5,28.7 10.2,24.2 8.7,24.2 8.7,25.3 7.9,24.9 7.9,26.6 6.3,26 6.3,22.6 		"/></g></g><g id="hex-mongo" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st50_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><path class="st51_itq47fg4" d="M23.2,9.3v32c0,0,8.6-3.6,8.6-15.8S23.2,9.3,23.2,9.3z"/><path class="st52_itq47fg4" d="M23.2,9.3v32c0,0-8.6-3.6-8.6-15.8S23.2,9.3,23.2,9.3z"/><line class="st53_itq47fg4" x1="23.2" y1="41.3" x2="23.2" y2="45.5"/></g><g id="hex-arbiter" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st54_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><line class="st55_itq47fg4" x1="27.1" y1="49.4" x2="39.5" y2="42.3"/><line class="st55_itq47fg4" x1="19.3" y1="49.4" x2="7" y2="42.3"/><line class="st55_itq47fg4" x1="27.1" y1="5.3" x2="39.5" y2="12.4"/><line class="st55_itq47fg4" x1="43.4" y1="19" x2="43.4" y2="35.2"/><line class="st55_itq47fg4" x1="3" y1="19" x2="3" y2="35.2"/><line class="st55_itq47fg4" x1="19.3" y1="5.3" x2="7" y2="12.4"/><polyline class="st56_itq47fg4" points="32.4,24.6 32.4,30.7 25.8,36.4 25.8,12.8 27.6,10.9 31.4,10.9 33.3,12.7 	"/><circle class="st57_itq47fg4" cx="43.4" cy="16" r="1.7"/><circle class="st57_itq47fg4" cx="23.2" cy="4.7" r="1.7"/><circle class="st57_itq47fg4" cx="23.2" cy="49.5" r="1.7"/><circle class="st57_itq47fg4" cx="43.4" cy="39" r="1.7"/><circle class="st57_itq47fg4" cx="3" cy="16" r="1.7"/><circle class="st57_itq47fg4" cx="3" cy="39" r="1.7"/><polyline class="st56_itq47fg4" points="29,27.6 29,20 33.7,15.3 37.7,19.3 	"/><polyline class="st56_itq47fg4" points="33.7,20.5 37.7,24.6 37.7,29.7 	"/><path class="st56_itq47fg4" d="M32.1,36.2l3.9-3.9h3.1c0,0,0,4.1,0,4.2l-3.6,3.6h-3.8l-3.5-3.5"/><polyline class="st56_itq47fg4" points="13.1,12.7 14.9,10.9 18.7,10.9 20.5,12.8 20.5,36.4 13.9,30.7 13.9,24.6 	"/><polyline class="st56_itq47fg4" points="17.3,27.6 17.3,20 12.6,15.3 8.6,19.3 	"/><polyline class="st56_itq47fg4" points="12.6,20.5 8.6,24.6 8.6,29.7 	"/><path class="st56_itq47fg4" d="M14.2,36.2l-3.9-3.9H7.2c0,0,0,4.1,0,4.2l3.6,3.6h3.8l3.5-3.5"/><polyline class="st56_itq47fg4" points="18.6,40.1 21.2,42.6 22.8,42.6 	"/><polyline class="st56_itq47fg4" points="27.7,40.1 25.1,42.6 23.5,42.6 	"/></g><g id="hex-mysql" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st58_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><path class="st9_itq47fg4" d="M34.5,24.7c-2.5-3.5-4.2-7-9.9-8.2C18.9,15.3,13,18,13,18s-0.8-1.5-2.8-2.1s-3.4-0.2-3.4-0.2S5.9,16.3,6.1,18		c0.2,1.7,2,4.1,2.7,4.7c0.7,0.6,2.6,2.9,3.3,3.6c0.7,0.7,2,3.6,2.2,5.2c1.9,2.3,7.6,7.8,15.2,4.8c5.6-2.2,7.2-5.5,7.6-8		C36.2,27,35.2,25.7,34.5,24.7z"/><path class="st59_itq47fg4" d="M37.2,28c-0.8-1.3-1.7-2.6-2.4-3.5c-2.5-3.5-4.6-6.9-10.3-8.2c-5.7-1.2-10.7,1-10.7,1s-1.4-0.9-3.4-1.7		c-2.5-1.1-3.7,0.3-3.7,0.3S6.6,16,6.5,16.1c1.7,0.7,3.6,2.8,4.8,4.4c2.1,2.9,7.4,4.9,10.4,7.8c1.9,1.9,2.6,1.1,3.7,2.4		c1.2,1.5,0.7,4.4,1.2,6.6c0.9-0.1,1.8-0.4,2.8-0.7C35.4,34.2,36.8,30.5,37.2,28z"/><ellipse transform="matrix(0.9834 -0.1815 0.1815 0.9834 -4.72 5.8316)" class="st9_itq47fg4" cx="29.503" cy="28.706" rx="2" ry="2"/><path class="st60_itq47fg4" d="M36.1,30.4"/><g>		<path class="st60_itq47fg4" d="M3.7,35.2c-0.6-1.5-1-3.2-1.1-4.9c-0.1-2.4,0.3-4.8,1.3-6.9"/><path class="st60_itq47fg4" d="M13.4,12.5C16.5,11,20,10,23.8,9.8c4-0.2,7.8,0.4,11.1,1.6"/><path class="st60_itq47fg4" d="M39.5,38.3c-3.2,3.1-8,5.2-13.3,5.5C15.9,44.4,7.2,38.2,6.7,30c-0.1-2,0.3-4,1.1-5.9"/><path class="st60_itq47fg4" d="M25.2,13.4C35.5,13.2,44,19.7,44.1,28c0,2-0.4,3.9-1.3,5.6"/><path class="st60_itq47fg4" d="M37.3,21.9c1.8,1.7,2.9,3.9,3,6.2c0.4,6.3-6.1,11.7-14.4,12.2s-15.4-4.2-15.8-10.4"/></g>	<path class="st60_itq47fg4" d="M15.2,18.7"/><path class="st61_itq47fg4" d="M13.8,17.2c0,0,5.7,2.7,7.7,4c-0.8-1.5-5.3-4.8-5.3-4.8S14.7,16.7,13.8,17.2z"/></g><g id="hex-maria" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st62_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><circle class="st9_itq47fg4" cx="20.7" cy="9.3" r="0.8"/><circle class="st9_itq47fg4" cx="25.1" cy="5.6" r="0.8"/><circle class="st9_itq47fg4" cx="9.2" cy="11.6" r="0.8"/><circle class="st9_itq47fg4" cx="44.1" cy="25" r="0.8"/><polygon class="st63_itq47fg4" points="23.2,53.7 6.414,44.005 39.819,44.094 	"/><path id="path3352_5_" class="st64_itq47fg4" d="M20.207,51.971c0,0,3.193-16.171,4.893-18.771c1.8-2.8,4.6-4.5,7.1-6.3c2.9-2,5.5-4.1,5.9-8		c-3-0.3-3.7-1-4.2-2.5c-1.5,0.9-2.9,1-4.5,1.1c-1.4,0-2.9,0-4.7,0.2C11.3,19.1,1.343,41.075,1.343,41.075L20.207,51.971z"/><radialGradient id="path3352_1_" cx="3615.4849" cy="-11666.8574" r="22.2561" gradientTransform="matrix(0.3794 -0.9252 0.3629 0.1488 2887.2488 5125.001)" gradientUnits="userSpaceOnUse">		<stop  offset="0" style="stop-color:#543824"/><stop  offset="1" style="stop-color:#8B5E3C;stop-opacity:0"/></radialGradient>	<path id="path3352_2_" class="st65_itq47fg4" d="M20.207,51.971c0,0,3.193-16.171,4.893-18.771c1.8-2.8,4.6-4.5,7.1-6.3c2.9-2,5.5-4.1,5.9-8		c-3-0.3-3.7-1-4.2-2.5c-1.5,0.9-2.9,1-4.5,1.1c-1.4,0-2.9,0-4.7,0.2C11.3,19.1,1.343,41.075,1.343,41.075L20.207,51.971z"/><radialGradient id="path4028_1_" cx="655.7087" cy="-2486.21" r="12.9538" gradientTransform="matrix(0.108 0.3929 1.445 -0.397 3546.0259 -1227.8672)" gradientUnits="userSpaceOnUse">		<stop  offset="0" style="stop-color:#FFFFFF"/><stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/></radialGradient>	<path id="path4028_3_" class="st66_itq47fg4" d="M33.9,16.4c-1.5,0.9-2.9,1-4.5,1.1c-1.4,0-2.9,0-4.7,0.2c-5.7,0.6-11,5.4-14.1,9l12.5,12.6		c0.7-2.8,1.3-5,2-6.1c1.8-2.8,4.6-4.5,7.1-6.3c2.9-2,5.4-4.1,5.9-8C35.1,18.7,34.4,18,33.9,16.4z"/><path id="path3880_6_" class="st67_itq47fg4" d="M19.6,24c2.2,1.9,6.7,0.4,5.9-3.4C22.1,20.4,20.2,21.5,19.6,24z"/><path id="path3880_5_" class="st9_itq47fg4" d="M22.7,22.2c0.5,0.4,1.5,0.1,1.3-0.8C23.2,21.3,22.8,21.6,22.7,22.2z"/><path id="path3882_3_" class="st68_itq47fg4" d="M34.1,22.2c0,0.9-0.3,2.1,0.4,4c0.1,0.3,0,0.6-0.2,0.2c-0.7-1.8-0.6-2.8-0.5-4.1		C33.8,21.7,34.1,21.8,34.1,22.2z"/><path id="path3884_3_" class="st68_itq47fg4" d="M33.1,22.2c-0.2,1.1-1,3.2-0.4,5.8c0.1,0.4-0.2,0.8-0.3,0.1c-0.6-2.5,0-4.3,0.3-5.9		C32.9,21.6,33.1,21.8,33.1,22.2z"/><path id="path3888_3_" class="st68_itq47fg4" d="M32,22.1c-0.4,1.1-1.6,4.6-1.3,7.2c0,0.4-0.3,0.8-0.3,0.1c-0.2-2.5,0.8-5.8,1.3-7.3		C31.9,21.4,32.1,21.6,32,22.1z"/><path class="st69_itq47fg4" d="M33.9,16.4c0,0,2.3-2.5,3.6-2.4c0.7,0.1,1.1,0.3,1.4,1.2c0.3,0.9-0.8,3.7-0.8,3.7s-2,0.2-3-0.4		S33.9,16.4,33.9,16.4z"/><polygon class="st9_itq47fg4" points="45.52,40.837 35.72,46.437 36.029,46.348 35.7,40.1 40.3,33.1 42.9,36.8 44.9,40 	"/><polygon class="st70_itq47fg4" points="38.7,37.9 39.3,42 37.429,45.448 36.029,46.348 33.729,47.648 36.9,35.4 40.4,33.1 	"/></g><g id="hex-postgres" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st71_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><path class="st72_itq47fg4" d="M20.8,36.4v8.9c0,2.2,1.8,3.9,3.9,3.9s3.9-1.8,3.9-3.9v-8.7c0-1.9,1.4-3.4,3.2-3.6V22.5		c0-5.2-4.3-9.5-9.5-9.5s-9.5,4.3-9.5,9.5V31c0,1.4,1,2.5,2.3,2.6c0.6-0.4,1.3-0.7,2.1-0.7C19.1,33,20.7,34.5,20.8,36.4L20.8,36.4		L20.8,36.4z"/><circle class="st73_itq47fg4" cx="28.5" cy="23.5" r="3.3"/><path class="st73_itq47fg4" d="M25.5,24.9c0,0,4.7,5.6,4.7,8.8c0,0,0.7-0.6,1.7-0.6v-9.5"/><circle class="st73_itq47fg4" cx="16.8" cy="23.9" r="3.9"/><path class="st73_itq47fg4" d="M20.6,23.9c0,3.5-3.1,5.3-3.1,9c0,0-2.1,0.3-2.4,0.8c0,0-0.7,0.1-1.5-0.8S12.9,31,12.9,31v-6.8"/><circle class="st72_itq47fg4" cx="16.9" cy="23.5" r="1.3"/><circle class="st73_itq47fg4" cx="22.1" cy="36.3" r="1.3"/><rect x="20.8" y="36.3" class="st73_itq47fg4" width="2.6" height="9.3"/><circle class="st73_itq47fg4" cx="24.7" cy="47.9" r="1.3"/><path class="st73_itq47fg4" d="M23.4,45.6c0,0.9,0.3,1,1.3,1s0,2.6,0,2.6c-2.4,0-3.9-2.1-3.9-3.6"/><path class="st72_itq47fg4" d="M16.3,10.9C9,10.9,3.2,16.8,3.2,24c0,5.1,2.9,9.5,7.1,11.6v-4.2c0-0.1,0-0.3,0-0.4v-8.5c0-5.3,3.4-9.7,8-11.4		l0,0C17.6,10.9,17,10.9,16.3,10.9z"/><path class="st72_itq47fg4" d="M17.2,35.1c-1-0.1-2,0.6-2.1,1.6c-0.6,4.1,0.6,8.8,0.6,8.8s2.4-3.3,3.1-8.2l0,0l0,0		C18.9,36.2,18.2,35.3,17.2,35.1z"/><path class="st72_itq47fg4" d="M33.9,36.4L33.9,36.4c-0.1-1-1.1-1.8-2.1-1.6s-1.8,1.1-1.6,2.1c0.5,4.2,2.9,8.3,2.9,8.3S34.5,41.3,33.9,36.4z		"/><path class="st73_itq47fg4" d="M7,14.7c-2.4,2.4-3.8,5.7-3.8,9.3s1.5,6.9,3.8,9.3V14.7z"/><circle class="st72_itq47fg4" cx="28.5" cy="23.5" r="1.3"/><circle class="st73_itq47fg4" cx="16.9" cy="37" r="1.9"/><circle class="st73_itq47fg4" cx="32.1" cy="36.6" r="1.9"/><g>		<path class="st72_itq47fg4" d="M28.8,10.6c-1,0-1.9,0.1-2.8,0.3c4.9,1.6,8.5,6.2,8.5,11.6v11.7c4.9-4.9,6.3-7.1,6.3-11.7			C40.8,15.9,35.4,10.6,28.8,10.6z"/></g>	<path class="st73_itq47fg4" d="M35.8,27.5c0,1.5,0.5,2.8,1.4,3.9c2.8-3.1,3.6-5.3,3.6-8.9c0-0.4,0-0.8-0.1-1.2C37.9,22,35.8,24.5,35.8,27.5z		"/></g><g id="hex-redis" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st74_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><polygon class="st75_itq47fg4" points="23.1,44.5 6.3,35.3 6.3,31.3 23.1,40.5 	"/><polygon class="st76_itq47fg4" points="6.3,31.3 23.1,40.5 41.1,31.2 24.4,22 	"/><polygon class="st75_itq47fg4" points="23.1,44.5 41.1,35.1 41.1,31.2 23.1,40.5 	"/><polygon class="st75_itq47fg4" points="23.1,38.1 6.3,28.9 6.3,25 23.1,34.2 	"/><polygon class="st76_itq47fg4" points="6.3,25 23.1,34.2 41.1,24.8 24.4,15.6 	"/><polygon class="st75_itq47fg4" points="23.1,38.1 41.1,28.8 41.1,24.8 23.1,34.2 	"/><polygon class="st75_itq47fg4" points="23.1,31.8 6.3,22.6 6.3,18.6 23.1,27.8 	"/><polygon class="st76_itq47fg4" points="6.3,18.6 23.1,27.8 41.1,18.5 24.4,9.3 	"/><polygon class="st75_itq47fg4" points="23.1,31.8 41.1,22.4 41.1,18.5 23.1,27.8 	"/></g><g id="hex-percona" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st77_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><circle class="st78_itq47fg4" cx="23.6" cy="26.1" r="16.1"/><circle class="st79_itq47fg4" cx="23.6" cy="26.1" r="9.4"/><polygon class="st78_itq47fg4" points="14.3,49.8 7.7,46 7.7,26.5 14.3,26.5 	"/></g><g id="hex-default" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st80_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><circle class="st81_itq47fg4" cx="23.3" cy="25.9" r="11.7"/><circle class="st9_itq47fg4" cx="11.5" cy="10.4" r="1.3"/><circle class="st9_itq47fg4" cx="42.3" cy="14" r="1.3"/><circle class="st9_itq47fg4" cx="3.4" cy="16.6" r="0.9"/><circle class="st9_itq47fg4" cx="32.6" cy="39.5" r="0.9"/><circle class="st9_itq47fg4" cx="21.4" cy="40.3" r="0.9"/><circle class="st9_itq47fg4" cx="16.8" cy="45.5" r="0.9"/><circle class="st9_itq47fg4" cx="42.5" cy="40.3" r="0.9"/><circle class="st9_itq47fg4" cx="11.8" cy="40.3" r="2.5"/><circle class="st9_itq47fg4" cx="35.4" cy="11.9" r="2.5"/><circle class="st9_itq47fg4" cx="39" cy="19" r="1.8"/><path class="st9_itq47fg4" d="M35,25.9c0,6.4-23.3,6.4-23.3,0s5.2-11.7,11.7-11.7C29.8,14.2,35,19.5,35,25.9z"/><path class="st82_itq47fg4" d="M29.4,21c-2-2.3-6.6-3.8-8.9-3.6c2.3-1.3,3.9-1.3,5.7-0.7C28,17.3,29.1,18.9,29.4,21z"/></g><g id="hex-db" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st83_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><polyline class="st84_itq47fg4" points="36.1,16.1 46.5,26.5 46.5,40.3 24.268,53.086 9.374,38.192 	"/><polygon class="st9_itq47fg4" points="16.1,37.6 9.4,33.2 16.1,28.8 29.4,28.8 36.1,33.2 29.4,37.6 	"/><polygon class="st85_itq47fg4" points="36.1,33.2 36.1,38 29.4,42.4 29.4,37.6 	"/><rect x="16.1" y="37.6" class="st86_itq47fg4" width="13.3" height="4.7"/><polygon class="st87_itq47fg4" points="16.1,37.6 9.4,33.2 9.4,38 16.1,42.4 	"/><polygon class="st9_itq47fg4" points="16.1,29.1 9.4,24.7 16.1,20.3 29.4,20.3 36.1,24.7 29.4,29.1 	"/><polygon class="st85_itq47fg4" points="36.1,24.7 36.1,29.4 29.4,33.8 29.4,29.1 	"/><rect x="16.1" y="29.1" class="st86_itq47fg4" width="13.3" height="4.7"/><polygon class="st87_itq47fg4" points="16.1,29.1 9.4,24.7 9.4,29.4 16.1,33.8 	"/><polygon class="st9_itq47fg4" points="16.1,20.5 9.4,16.1 16.1,11.7 29.4,11.7 36.1,16.1 29.4,20.5 	"/><polygon class="st85_itq47fg4" points="36.1,16.1 36.1,20.9 29.4,25.3 29.4,20.5 	"/><rect x="16.1" y="20.5" class="st86_itq47fg4" width="13.3" height="4.7"/><polygon class="st87_itq47fg4" points="16.1,20.5 9.4,16.1 9.4,20.9 16.1,25.3 	"/></g><g id="hex-go" data-size="47x54" class="hexes-svg-svg ">	<polygon class="st88_itq47fg4" points="46.697,40.441 23.348,53.922 0,40.441 0,13.481 23.348,0 46.697,13.481 	"/><circle class="st89_itq47fg4" cx="33.515" cy="19.173" r="2.983"/><circle class="st90_itq47fg4" cx="33.515" cy="19.174" r="1.252"/><circle class="st89_itq47fg4" cx="13.268" cy="19.173" r="2.982"/><circle class="st90_itq47fg4" cx="13.267" cy="19.174" r="1.252"/><g>		<path class="st89_itq47fg4" d="M35.356,26.434c0,6.604-5.403,12.008-12.008,12.008S11.34,33.038,11.34,26.434s5.403-12.008,12.008-12.008			S35.356,19.83,35.356,26.434z"/></g>	<polygon class="st89_itq47fg4" points="11.34,46.989 23.348,53.922 35.356,47.01 35.356,26.435 11.34,26.435 	"/><circle class="st9_itq47fg4" cx="17.618" cy="23.32" r="4.146"/><circle class="st9_itq47fg4" cx="29.369" cy="23.32" r="4.146"/><circle class="st9_itq47fg4" cx="22.596" cy="32.937" r="0.755"/><rect x="21.84" y="30.542" class="st9_itq47fg4" width="1.511" height="2.395"/><circle class="st9_itq47fg4" cx="24.473" cy="32.937" r="0.755"/><rect x="23.718" y="30.542" class="st9_itq47fg4" width="1.51" height="2.395"/><circle class="st90_itq47fg4" cx="27.754" cy="23.527" r="1.252"/><circle class="st90_itq47fg4" cx="15.679" cy="23.527" r="1.252"/><circle class="st89_itq47fg4" cx="36.928" cy="33.568" r="1.238"/><rect x="34.14" y="32.33" class="st89_itq47fg4" width="2.788" height="2.476"/><circle class="st89_itq47fg4" cx="9.768" cy="33.568" r="1.238"/><rect x="9.768" y="32.33" class="st89_itq47fg4" width="2.789" height="2.476"/><ellipse class="st91_itq47fg4" cx="25.891" cy="29.959" rx="1.242" ry="1.233"/><ellipse class="st91_itq47fg4" cx="21.235" cy="29.959" rx="1.242" ry="1.233"/><path class="st91_itq47fg4" d="M21.766,31.073c0.86-0.531,2.216-0.883,3.366-0.14c1.148,0.743,1.549-1.92,1.549-1.92		c-1.348-0.843-3.943-1.232-6.132-0.082L21.766,31.073z"/><ellipse class="st90_itq47fg4" cx="23.588" cy="28.214" rx="1.846" ry="1.097"/></g><g id="hex-tolmar" data-size="47x54" class="hexes-svg-svg ">	<polygon class="st92_itq47fg4" points="46.604,40.36 23.301,51.814 0,40.36 0,13.455 23.301,0 46.604,13.455 	"/><polyline class="st93_itq47fg4" points="23.301,51.814 0,40.36 0,13.455 23.301,0 46.604,13.455 	"/><g>		<g id="leaf" class="hexes-svg-svg ">			<path class="st9_itq47fg4" d="M40.309,18.015c-7.742,0-13.515,8.182-10.846,14.059C40.42,32.074,35.96,21.96,40.309,18.015z"/></g>		<path class="st94_itq47fg4" d="M23.301,53.814L46.604,40.36c-2.715-1.24-2.715-1.24-3.726-1.5c-5.335-1.372-12.467-2.654-19.374-3.057			c-4.394-0.257-16.198,1.589-23.442,4.593L23.301,53.814z"/><path class="st95_itq47fg4" d="M0,40.36l11.518,6.65c6.914-1.074,12.533-8.735,12.533-18.151c0-10.422-6.878-12.519-10.693-12.519			c-4.789,0-9.583,1.813-13.358,5.005V40.36z"/><path id="eye_rim" class="st94_itq47fg4" d="M8.198,27.492c0,2.812,2.279,5.091,5.091,5.091c2.812,0,5.091-2.28,5.091-5.091			c0-2.812-2.279-5.091-5.091-5.091C10.477,22.401,8.198,24.68,8.198,27.492z"/><path id="eye" class="st96_itq47fg4" d="M10.241,27.492c0,1.683,1.365,3.048,3.048,3.048s3.048-1.365,3.048-3.048			c0-1.683-1.365-3.048-3.048-3.048C11.606,24.444,10.241,25.809,10.241,27.492z"/><ellipse id="pupil_highlight" class="st9_itq47fg4" cx="13.289" cy="26.14" rx="1.776" ry="1.104"/><path id="beak" class="st97_itq47fg4" d="M23.733,24.884c-2.314,1.348-2.238,5.711-1.209,7.84c1.991-0.738,4.766-2.202,5.197-2.464			c0.431-0.262-0.238-1.254,1.434-1.254c2.319,0,4.416,0.725,5.017,0.986C33.79,29.207,29.024,24.884,23.733,24.884z"/><g>			<path class="st96_itq47fg4" d="M0,22.142c3.574-3.348,8.256-5.341,13.358-5.341c6.316,0,9.169,4.971,9.755,6.854				c-3.81,3.862-2.306,8.747-0.918,10.955c-1.974,3.283-5.853,5.529-10.36,6.551c5.06,0,8.036-1.302,9.767-2.578				c1.105-0.814,1.704-1.617,2.01-2.065c7.502,0.485,19.38,2.902,20.539,3.685c0.326,0.22,0.652,0.632,0.846,1.085l1.608-0.929				v-1.885c-4.8-2.352-17.143-3.83-21.36-4.296c0.23-0.543,0.425-1.104,0.587-1.681c0.647-0.283,1.344-0.547,2.066-0.767				c0.088,0.259,0.502,1.253,0.738,1.725c9.537,0.263,10.027-7.087,10.415-9.101c0.379-1.969,0.36-3.872,3.631-7.35				c-4.874-1.42-11.882,2.201-14.23,7.591c-0.882-0.331-1.766-0.575-2.641-0.726c-0.626-2.528-3.89-9.571-12.453-9.571				C8.642,14.3,3.901,15.969,0,18.919V22.142z M29.623,31.85c-0.322-0.698-0.648-1.857-0.608-2.539				c0.543-0.013,1.583,0.191,1.75,0.23c-0.064,0.32-0.098,1.021-0.099,1.112c0.103-0.178,0.389-0.79,0.506-1.031				c1.042,0.199,2.411,0.532,3.214,0.906C33.444,31.139,31.841,31.803,29.623,31.85z M39.906,18.307				c-2.92,2.648-1.824,7.934-4.284,11.066l-0.731-0.682c-0.75-0.703-1.533-1.339-2.336-1.904c1.197-2.374,2.7-4.967,4.6-6.571				c-2.09,0.843-4.155,3.361-5.375,6.053c-0.622-0.395-1.253-0.748-1.89-1.056C31.591,21.579,35.546,18.544,39.906,18.307z				 M33.555,29.596c-1.463-0.575-3.32-0.938-4.621-0.938c-1.845,0-2.969,1.046-4.705,1.046c-0.365,0-1.234,0.002-1.932-0.247				c0.459,0.481,1.03,0.743,2.137,0.743c0.661,0,1.971-0.338,3.031-0.657c0.015,0.223,0.038,0.445,0.07,0.665				c-1.986,0.475-4.071,1.739-4.674,2.067c-1.342-2.963-0.188-5.765,0.879-7.058C28.519,25.228,32.378,28.509,33.555,29.596z"/></g>	</g></g><g id="hex-python" data-size="47x54" class="hexes-svg-svg ">	<polygon class="st98_itq47fg4" points="46.572,40.332 23.286,53.778 0,40.332 0,13.444 23.286,0 46.572,13.444 	"/><polygon class="st98_itq47fg4" points="23.286,53.778 0,40.332 0,13.444 23.286,0 	"/><g>		<g>			<g>				<defs>					<polygon id="SVGID_7_itq47fg4" points="46.572,40.332 23.286,53.778 0,40.332 0,13.444 23.286,0 46.572,13.444 					"/></defs>				<clipPath id="SVGID_8_itq47fg4">					<use xlink:href="#SVGID_7_itq47fg4"  style="overflow:visible;"/></clipPath>				<polyline class="st99_itq47fg4" points="17.164,38.036 30.716,49.487 46.572,40.332 46.572,33.117 29.552,16.097 28.716,23.726 					23.286,26.46 23.286,29.211 17.164,38.036 				"/></g>		</g>	</g>	<polygon class="st100_itq47fg4" points="12.98,33.502 17.667,38.189 23.286,30.055 23.286,24.213 12.98,29.462 	"/><path class="st9_itq47fg4" d="M23.388,19.127h-6.224v-2.605l2.771-2.928h7.462l2.906,3.034v7.354l-2.724,2.753h-8.673l-3.128,3.154v3.969		l-2.799-0.357l-2.732-2.615v-7.204l3.169-3.171h9.971L23.388,19.127L23.388,19.127z"/><rect x="20.048" y="15.269" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.3948 19.7842)" class="st100_itq47fg4" width="2.272" height="2.271"/><path class="st9_itq47fg4" d="M24.079,35.727h6.224v2.402l-2.642,2.439h-7.462l-3.036-2.544V30.67l2.853-2.552h8.672l2.998-3.028v-4.035		l2.963,0.095l2.57,2.616v7.205l-3.042,3.373H24.078L24.079,35.727L24.079,35.727z M24.473,39.744l1.533-1.533l-1.532-1.533		l-1.533,1.533L24.473,39.744z"/></g><g id="hex-middleman" data-size="47x54" class="hexes-svg-svg ">	<polygon  class="bg  st101_itq47fg4" points="46.5,40.3 23.2,53.7 0,40.3 0,13.4 23.2,0 46.5,13.4 	"/><path class="st102_itq47fg4" d="M8.886,20.71v12.738l3.11,0.529v-8.062l3.043,5.735h0.067l3.207-5.757v8.666l3.669,0.544V18.942l-3.93,0.552		l-3.005,5.824l-2.856-5.131L8.886,20.71z M8.819,17.041l14.542-2.871v2.133L8.819,18.711V17.041z"/><path class="st102_itq47fg4" d="M8.819,36.796l14.542,2.864v-2.125L8.819,35.118V36.796z"/><path class="st9_itq47fg4" d="M37.681,20.732v12.835l-3.11,0.403v-8.136l-3.043,5.735h-0.067l-3.207-5.757v8.875l-3.662,0.328V18.965		l3.923,0.552l3.005,5.713l2.856-4.915L37.681,20.732z M37.606,17.041l-14.244-2.871v2.028l14.244,2.416V17.041z"/><path class="st9_itq47fg4" d="M37.606,36.796L23.362,39.66v-2.125l14.244-2.312V36.796z"/></g><g id="hex-empty" data-size="48x55" class="hexes-svg-svg ">	<polygon class="st103_itq47fg4" points="47,40.877 23.7,54.277 0.5,40.877 0.5,13.977 23.7,0.577 47,13.977 	"/></g><g id="hex-scala" data-size="47x55" class="hexes-svg-svg ">	<polygon class="st104_itq47fg4" points="46.956,40.666 23.478,54.222 0,40.666 0,13.555 23.478,0 46.956,13.555 	"/><polyline class="st105_itq47fg4" points="15.009,39.439 27.48,51.911 46.956,40.666 46.956,27.182 31.181,11.406 	"/><path class="st106_itq47fg4" d="M15.009,22.188c0,0,16.173,1.617,16.173,4.313v-6.469c0,0,0-2.696-16.173-4.313v2.501V22.188z"/><path class="st106_itq47fg4" d="M15.009,30.813c0,0,16.173,1.618,16.173,4.314v-6.469c0,0,0-2.696-16.173-4.314V30.813z"/><path class="st9_itq47fg4" d="M31.181,11.406v6.47c0,0,0,2.696-16.173,4.313v-6.469C15.009,15.719,31.181,14.101,31.181,11.406z"/><path class="st9_itq47fg4" d="M15.009,24.344c0,0,16.173-1.617,16.173-4.313v6.469c0,0,0,2.696-16.173,4.313V24.344z"/><path class="st9_itq47fg4" d="M15.009,39.439v-6.47c0,0,16.173-1.617,16.173-4.311v6.469C31.181,35.127,31.181,37.821,15.009,39.439z"/></g><g id="hex-erlang" data-size="47x55" class="hexes-svg-svg ">	<polygon class="st107_itq47fg4" points="46.956,40.666 23.478,54.221 0,40.666 0,13.555 23.478,0 46.956,13.555 	"/><path class="st9_itq47fg4" d="M9.526,26.947c0,4.836,2.031,7.946,4.811,9.831h17.62c2.835-2,3.7-4.484,3.7-4.484l-4.262-2.161		c0,0-2.675,4.77-6.63,4.77c-3.956,0-6.05-4.42-6.05-7.794c0-0.305,0.002-0.593,0.004-0.868h16.306V24.93l-0.023-0.036		c-0.009-4.769-1.769-7.429-4.396-8.88H15.21C11.95,17.798,9.526,21.196,9.526,26.947z M22.543,18.321		c4.286,0,3.883,3.683,3.883,3.683H18.92C19.022,21.565,19.861,18.321,22.543,18.321z"/></g><g id="hex-rust" data-size="47x55" class="hexes-svg-svg ">	<polygon class="st108_itq47fg4" points="46.956,40.665 23.477,54.222 0,40.665 0,13.556 23.477,0 46.956,13.556 	"/><polygon class="st109_itq47fg4" points="23.066,12.577 23.718,11.722 25.727,13.73 26.664,11.914 28.701,13.949 29.598,12.852 31.645,14.9 		32.193,14.205 34.542,16.554 34.598,16.169 46.942,28.513 46.956,40.665 26.058,52.669 11.993,38.604 12.261,38.364 10.211,36.315 		10.599,35.54 8.753,33.694 9.506,32.491 7.803,30.79 9.01,29.265 7.383,27.639 14.225,17.121 	"/><path id="path3_1_" class="st110_itq47fg4" d="M39.048,27.046l-1.338-0.829c-0.011-0.131-0.025-0.259-0.039-0.389l1.151-1.073		c0.115-0.109,0.169-0.27,0.137-0.427c-0.031-0.157-0.141-0.286-0.291-0.342l-1.47-0.549c-0.037-0.127-0.075-0.253-0.114-0.38		l0.917-1.273c0.094-0.131,0.113-0.298,0.051-0.447c-0.06-0.147-0.193-0.251-0.352-0.277l-1.549-0.254		c-0.06-0.117-0.122-0.232-0.187-0.347l0.652-1.429c0.066-0.146,0.053-0.315-0.035-0.448c-0.089-0.132-0.24-0.21-0.399-0.204		l-1.573,0.055c-0.082-0.102-0.164-0.201-0.248-0.302l0.36-1.531c0.037-0.156-0.008-0.319-0.122-0.432		c-0.112-0.112-0.275-0.159-0.432-0.124l-1.532,0.363c-0.098-0.085-0.199-0.168-0.303-0.248l0.056-1.575		c0.006-0.158-0.071-0.31-0.204-0.399c-0.133-0.089-0.301-0.102-0.447-0.036l-1.428,0.652c-0.117-0.064-0.232-0.126-0.349-0.188		l-0.254-1.55c-0.025-0.157-0.13-0.291-0.278-0.352c-0.146-0.06-0.315-0.04-0.444,0.052l-1.275,0.917		c-0.126-0.041-0.252-0.079-0.38-0.115l-0.549-1.47c-0.056-0.151-0.185-0.26-0.343-0.291c-0.155-0.031-0.316,0.021-0.425,0.137		l-1.073,1.151c-0.13-0.015-0.259-0.028-0.389-0.039l-0.828-1.338c-0.084-0.135-0.233-0.218-0.392-0.218		c-0.159,0-0.308,0.083-0.39,0.218l-0.828,1.338c-0.13,0.011-0.261,0.025-0.391,0.039l-1.074-1.151		c-0.108-0.116-0.269-0.169-0.424-0.137c-0.157,0.031-0.287,0.141-0.342,0.291l-0.551,1.47c-0.127,0.036-0.253,0.075-0.378,0.115		l-1.275-0.917c-0.128-0.094-0.297-0.114-0.444-0.052c-0.149,0.061-0.254,0.195-0.278,0.352l-0.254,1.55		c-0.117,0.061-0.233,0.123-0.349,0.188l-1.429-0.652c-0.145-0.066-0.314-0.054-0.445,0.036c-0.133,0.088-0.211,0.24-0.204,0.399		l0.054,1.575c-0.102,0.08-0.203,0.163-0.301,0.248l-1.533-0.363c-0.156-0.035-0.318,0.012-0.431,0.124		c-0.114,0.113-0.16,0.276-0.122,0.432l0.358,1.531c-0.082,0.101-0.166,0.2-0.246,0.302l-1.573-0.055		c-0.16-0.004-0.31,0.073-0.399,0.204c-0.089,0.133-0.103,0.302-0.037,0.448l0.652,1.429c-0.063,0.115-0.126,0.23-0.186,0.347		l-1.55,0.254c-0.157,0.025-0.291,0.13-0.352,0.277c-0.06,0.149-0.041,0.316,0.052,0.447l0.917,1.273		c-0.04,0.126-0.079,0.252-0.115,0.38l-1.47,0.549c-0.15,0.056-0.259,0.184-0.29,0.342c-0.031,0.156,0.021,0.317,0.138,0.427		l1.15,1.073c-0.013,0.129-0.027,0.258-0.037,0.389l-1.338,0.829c-0.136,0.084-0.218,0.231-0.218,0.392		c0,0.16,0.082,0.307,0.218,0.391l1.338,0.829c0.011,0.131,0.025,0.26,0.037,0.39L7.84,30.12c-0.117,0.108-0.169,0.27-0.138,0.425		c0.031,0.156,0.141,0.286,0.29,0.342l1.47,0.55c0.037,0.126,0.075,0.253,0.115,0.379l-0.917,1.273		c-0.093,0.131-0.112,0.299-0.052,0.447c0.061,0.146,0.195,0.252,0.352,0.277l1.55,0.252c0.06,0.118,0.122,0.233,0.186,0.349		l-0.652,1.429c-0.066,0.144-0.052,0.314,0.037,0.447c0.089,0.133,0.239,0.211,0.399,0.203l1.572-0.055		c0.082,0.103,0.165,0.203,0.247,0.303l-0.358,1.532c-0.038,0.155,0.007,0.318,0.122,0.431c0.113,0.113,0.275,0.159,0.431,0.122		l1.533-0.361c0.098,0.085,0.199,0.168,0.301,0.248l-0.054,1.573c-0.006,0.16,0.071,0.31,0.204,0.399		c0.131,0.089,0.301,0.102,0.445,0.036l1.429-0.652c0.116,0.065,0.232,0.126,0.349,0.188l0.254,1.549		c0.025,0.157,0.13,0.291,0.278,0.352c0.146,0.061,0.315,0.041,0.444-0.052l1.275-0.917c0.126,0.04,0.252,0.078,0.378,0.116		l0.55,1.468c0.056,0.149,0.185,0.26,0.343,0.29c0.155,0.032,0.316-0.021,0.424-0.137l1.074-1.15		c0.129,0.015,0.258,0.028,0.391,0.039l0.828,1.338c0.082,0.135,0.231,0.218,0.39,0.218c0.159,0,0.309-0.083,0.392-0.218		l0.828-1.338c0.13-0.011,0.26-0.025,0.389-0.039l1.073,1.15c0.109,0.116,0.27,0.17,0.425,0.137c0.157-0.031,0.287-0.142,0.343-0.29		l0.549-1.468c0.128-0.038,0.254-0.076,0.38-0.116l1.275,0.917c0.128,0.094,0.297,0.113,0.444,0.052		c0.149-0.06,0.254-0.194,0.278-0.352l0.254-1.549c0.117-0.061,0.232-0.124,0.348-0.188l1.429,0.652		c0.146,0.066,0.315,0.052,0.447-0.036c0.133-0.089,0.211-0.24,0.204-0.399l-0.056-1.573c0.103-0.082,0.203-0.163,0.303-0.248		l1.532,0.361c0.156,0.037,0.318-0.009,0.432-0.122c0.114-0.113,0.159-0.276,0.122-0.431l-0.36-1.532		c0.084-0.099,0.166-0.2,0.248-0.303l1.572,0.055c0.159,0.008,0.312-0.07,0.399-0.203c0.089-0.133,0.103-0.303,0.037-0.447		l-0.652-1.429c0.064-0.116,0.126-0.231,0.187-0.349l1.549-0.252c0.159-0.025,0.291-0.131,0.352-0.277		c0.06-0.147,0.041-0.316-0.052-0.447l-0.916-1.273c0.04-0.126,0.078-0.252,0.115-0.379l1.47-0.55		c0.149-0.056,0.26-0.185,0.29-0.342c0.031-0.156-0.021-0.317-0.138-0.425l-1.148-1.073c0.014-0.13,0.027-0.26,0.037-0.39		l1.337-0.829c0.137-0.084,0.219-0.231,0.219-0.391C39.265,27.278,39.183,27.129,39.048,27.046L39.048,27.046z M30.093,38.144		c-0.51-0.109-0.836-0.613-0.726-1.126c0.109-0.513,0.613-0.837,1.123-0.728c0.51,0.109,0.838,0.614,0.726,1.126		C31.107,37.927,30.603,38.255,30.093,38.144z M29.638,35.07c-0.467-0.099-0.925,0.198-1.025,0.663l-0.476,2.218		c-1.466,0.664-3.093,1.035-4.808,1.035c-1.754,0-3.416-0.389-4.908-1.083l-0.475-2.216c-0.1-0.468-0.56-0.764-1.025-0.663		l-1.956,0.42c-0.365-0.374-0.702-0.773-1.012-1.194h9.521c0.108,0,0.18-0.019,0.18-0.117v-3.368c0-0.098-0.071-0.117-0.18-0.117		h-2.783v-2.135h3.011c0.275,0,1.471,0.078,1.853,1.606c0.119,0.47,0.381,1.998,0.561,2.488c0.18,0.548,0.908,1.644,1.686,1.644		h4.744c0.053,0,0.113-0.004,0.172-0.017c-0.329,0.448-0.691,0.87-1.079,1.266L29.638,35.07L29.638,35.07z M16.468,38.098		c-0.51,0.111-1.014-0.216-1.123-0.727c-0.109-0.514,0.216-1.016,0.726-1.127c0.51-0.109,1.014,0.217,1.123,0.729		C17.304,37.484,16.979,37.989,16.468,38.098z M12.856,23.451c0.212,0.479-0.004,1.038-0.481,1.251		c-0.479,0.211-1.037-0.004-1.25-0.482c-0.212-0.479,0.005-1.039,0.482-1.251C12.085,22.756,12.645,22.972,12.856,23.451z		 M11.746,26.083l2.039-0.907c0.435-0.193,0.632-0.702,0.439-1.14l-0.42-0.949h1.65v7.443h-3.33		c-0.289-1.015-0.444-2.087-0.444-3.195C11.68,26.912,11.702,26.493,11.746,26.083z M20.692,25.359v-2.193h3.932		c0.203,0,1.434,0.235,1.434,1.155c0,0.764-0.944,1.038-1.72,1.038H20.692L20.692,25.359z M34.983,27.335		c0,0.29-0.011,0.578-0.031,0.864h-1.196c-0.121,0-0.168,0.078-0.168,0.195v0.55c0,1.291-0.729,1.573-1.367,1.644		c-0.609,0.068-1.283-0.253-1.366-0.625c-0.36-2.019-0.957-2.449-1.901-3.195c1.171-0.743,2.39-1.84,2.39-3.31		c0-1.586-1.088-2.585-1.828-3.075c-1.041-0.684-2.191-0.822-2.502-0.822H14.652c1.676-1.872,3.948-3.197,6.518-3.679l1.458,1.53		c0.329,0.344,0.874,0.357,1.219,0.027l1.632-1.559c3.416,0.636,6.309,2.763,7.976,5.68l-1.117,2.521		c-0.193,0.437,0.004,0.947,0.439,1.14l2.149,0.955C34.963,26.558,34.983,26.944,34.983,27.335z M22.628,14.582		c0.377-0.363,0.977-0.347,1.338,0.03c0.362,0.381,0.348,0.978-0.032,1.341c-0.377,0.361-0.975,0.347-1.337-0.031		C22.236,15.544,22.248,14.944,22.628,14.582z M33.705,23.497c0.212-0.479,0.771-0.695,1.249-0.482		c0.476,0.212,0.693,0.773,0.481,1.251c-0.212,0.478-0.77,0.695-1.249,0.482C33.709,24.536,33.493,23.976,33.705,23.497z"/></g><g id="hex-c" data-size="48x55" class="hexes-svg-svg ">	<polygon class="st111_itq47fg4" points="47.065,40.759 23.533,54.345 0,40.759 0,13.586 23.533,0 47.065,13.586 	"/><polygon class="st112_itq47fg4" points="12.169,37.345 27.107,52.282 47.065,40.759 47.065,28.835 33.531,15.3 23.533,14.398 12.169,21.336 			"/><path class="st113_itq47fg4" d="M35.235,22.056c-1.975-4.506-6.469-7.658-11.702-7.658c-7.056,0-12.774,5.719-12.774,12.775		c0,7.056,5.718,12.776,12.774,12.776c5.234,0,9.727-3.152,11.702-7.658"/></g>';var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='';
+var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='<g id="hex-sinatra" data-size="46x54" class="hexes-frameworks-svg-svg ">	<polygon class="st0_itq47f97" points="45.998,39.766 22.999,53.065 0,39.766 0,13.298 22.999,0 45.998,13.298 	"/><polygon class="st1_itq47f97" points="7.645,32.571 25.312,51.651 45.934,39.831 45.934,32.122 37.968,22.035 36.426,22.806 32.057,16.832 		22.871,25.183 	"/><path class="st2_itq47f97" d="M7.131,30.387c0-2.57,5.975-6.36,15.483-9.251c4.882-1.478,9.572-1.67,12.849-0.578		c3.276,1.092,4.176,3.726,4.176,6.232c0,3.919-7.131,8.801-14.647,9.444C17.474,36.876,7.131,36.233,7.131,30.387z"/><path class="st2_itq47f97" d="M13.62,23.963c0,0,0.514-3.405,0.578-4.112c0.321-2.891,2.056-3.598,4.369-4.047		c1.537-0.334,3.135-0.245,4.626,0.257c0.642,0.257-6.039,2.056-5.589,2.505c1.221,1.092,9.123-3.919,12.913-2.762		c1.349,0.45,1.67,0.899,2.505,3.983c0.257,0.899,1.092,4.69,1.092,4.69c-0.866,1.339-2.326,2.176-3.919,2.249		c-2.634,0.064-7.902,0.257-10.472,0.064S13.877,25.826,13.62,23.963z"/><path class="st3_itq47f97" d="M34.434,25.826c0,0,0.642,2.12-3.405,3.855c-2.377,1.028-7.067,1.992-11.5,1.992		c-2.57,0-5.975-1.67-6.232-3.533l0.321-4.176c0.257,1.863,3.598,2.57,6.167,2.827s7.709-0.128,10.536-1.092		c1.382-0.441,2.623-1.239,3.598-2.313L34.434,25.826z"/></g><g id="hex-rails" data-size="47x54" class="hexes-frameworks-svg-svg ">	<polygon class="st4_itq47f97" points="45.953,39.799 22.973,53.065 0,39.799 0,13.266 22.973,0 45.953,13.266 	"/><polygon class="st5_itq47f97" points="30.066,11.153 28.029,14.056 23.314,9.283 22.678,12.842 26.674,16.755 23.757,21.791 18.508,16.607 		14.423,17.012 22.125,24.612 19.453,29.211 14.121,23.95 10.388,25.691 17.448,32.655 15.675,35.7 12.213,32.218 8.827,35.16 		24.528,51.883 46.107,39.799 46.107,28.299 	"/><path class="st6_itq47f97" d="M12.746,20.564"/><path class="st6_itq47f97" d="M13.735,39.387c-0.373-12.849,3.617-23.931,16.331-28.235l0.989,1.927c-7.433,5.101-8.544,15.38-5.274,26.23		L13.735,39.387z"/><rect x="8.981" y="32.174" transform="matrix(0.0698 -0.9976 0.9976 0.0698 -23.8496 41.9529)" class="st6_itq47f97" width="3.181" height="3.181"/><polygon class="st6_itq47f97" points="13.26,26.59 10.388,25.646 11.326,22.774 14.121,23.956 	"/><polygon class="st6_itq47f97" points="16.812,18.624 14.423,17.012 16.472,14.59 18.515,16.607 	"/><polygon class="st6_itq47f97" points="22.729,12.842 21.104,10.812 23.436,9.283 24.689,11.557 	"/><polygon class="st6_itq47f97" points="29.982,36.374 27.066,36.169 26.359,33.188 29.121,33.381 	"/><polygon class="st6_itq47f97" points="28.62,30.214 25.935,29.745 25.877,27.117 28.273,27.837 	"/><polygon class="st6_itq47f97" points="28.248,25.382 26.115,24.515 26.783,22.19 28.62,23.5 	"/><polygon class="st6_itq47f97" points="29.141,20.982 27.702,19.395 29.031,17.532 30.014,19.421 	"/></g><g id="hex-sails" data-size="47x54" class="hexes-frameworks-svg-svg ">	<polygon class="st7_itq47f97" points="46.014,39.851 23.004,53.135 0,39.851 0,13.284 23.004,0 46.014,13.284 	"/><path class="st8_itq47f97" d="M11.948,39.553c0,0-11.126-17.708,11.769-29.108v29.108C23.717,39.553,11.948,39.553,11.948,39.553z"/><path class="st8_itq47f97" d="M27.256,39.553V21.507c0,0,3.656,5.963,11.078,18.046H27.256z"/></g>';var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='';
+var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='<g id="logo" data-size="19x33" class="base-svg-svg ">	<polygon class="st0_itq47flx" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/><polygon class="st1_itq47flx" points="15.003,23.96 9.498,26.797 3.863,23.91 9.368,21.072 	"/><polygon class="st2_itq47flx" points="9.591,30.828 18.959,26 18.959,27.378 9.591,32.207 	"/><polygon class="st3_itq47flx" points="9.591,30.828 0,25.901 0,27.279 9.591,32.207 	"/><polygon class="st4_itq47flx" points="9.688,23.017 17.325,19.079 17.325,20.228 9.688,24.165 	"/><polygon class="st5_itq47flx" points="9.688,23.017 2.049,19.079 2.049,20.228 9.688,24.165 	"/><polygon class="st6_itq47flx" points="17.325,19.079 9.688,23.017 2.049,19.079 9.688,15.143 	"/><polygon class="st7_itq47flx" points="15.311,18.046 9.688,20.945 4.063,18.046 9.688,15.148 	"/><polygon class="st8_itq47flx" points="9.688,16.896 18.942,12.127 18.942,13.517 9.688,18.287 	"/><polygon class="st9_itq47flx" points="9.688,16.896 0.432,12.127 0.432,13.517 9.688,18.287 	"/><polygon class="st10_itq47flx" points="18.942,12.127 9.688,16.896 0.432,12.127 9.688,7.356 	"/><polygon class="st11_itq47flx" points="16.501,10.873 9.688,14.386 2.873,10.873 9.688,7.361 	"/><polygon class="st12_itq47flx" points="18.94,4.803 9.623,9.604 0.306,4.803 9.623,0 	"/><polygon class="st13_itq47flx" points="9.623,9.604 18.94,4.803 18.94,6.204 9.623,11.006 	"/><polygon class="st14_itq47flx" points="9.623,9.604 0.306,4.803 0.306,6.204 9.623,11.006 	"/></g><g id="more-arrow" data-size="8x5" class="base-svg-svg ">	<polygon class="st15_itq47flx" points="0,0 3.603,4.883 7.207,0 	"/></g><g id="hamburg-menu" data-size="25x12" class="base-svg-svg ">	<line class="st16_itq47flx" x1="1" y1="1" x2="24" y2="1"/><line class="st16_itq47flx" x1="1" y1="6" x2="24" y2="6"/><line class="st16_itq47flx" x1="1" y1="11" x2="24" y2="11"/></g><g id="map" data-size="37x31" class="base-svg-svg ">	<polyline class="st17_itq47flx" points="12.85,11.85 0.75,17.85 4.05,22.95 7.45,21.25 10.95,26.35 14.35,24.75 17.75,29.85 35.35,21.05 		31.95,15.95 28.65,17.65 25.05,12.45 21.85,14.05 	"/><line class="st17_itq47flx" x1="14.45" y1="24.75" x2="28.55" y2="17.65"/><line class="st17_itq47flx" x1="7.45" y1="21.25" x2="16.15" y2="16.95"/><path class="st17_itq47flx" d="M24.35,7.05c0,5.6-6.3,11.9-6.3,11.9s-6.3-6.3-6.3-11.9c0-3.5,2.8-6.3,6.3-6.3S24.35,3.55,24.35,7.05z"/><circle class="st17_itq47flx" cx="18.05" cy="7.05" r="2.6"/></g><g id="right-arrow" data-size="8x15" class="base-svg-svg ">	<polyline class="st18_itq47flx" points="0.75,0.75 7.089,7.089 0.75,13.428 	"/></g>';var pxSvgIconString = pxSvgIconString || ''; pxSvgIconString+='';
 var TopNav, nanobox;
 
 TopNav = (function() {

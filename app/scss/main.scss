@@ -3,10 +3,12 @@
 @import "utils";
 @import "base";
 // Misc
+@import "shared";
 @import "top-nav";
 @import "left-nav";
 @import "code-markup";
 // Pages
+@import "index";
 @import "article";
 
 // Temp

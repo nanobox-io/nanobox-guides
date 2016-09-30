@@ -1,31 +1,55 @@
 class Article
 
-  constructor: (@title, @clusterId) ->
+  constructor: (@title, @clusterId, @icons) ->
+    @$main    = $ ".main"
+    @$leftNav = $ "#left-nav"
     @buildRelatedPagesNav()
     @buildPageNav()
     @buildBreadCrumbs()
+    @addIcons()
+
+  addIcons : () ->
+    icons = @icons.split ','
+    $node = $ jadeTemplate['article-icons']( {icons:icons} )
+    @$main.prepend $node
 
   # Build the nav in the upper left hand that shows the related articles
   buildRelatedPagesNav : () ->
-    for article in window.articleGroupData.articles
+    @markMatchedArticle window.articleGroupData.articles
+
+    $node = $ jadeTemplate['articles']( articleGroupData )
+    $(".title",    @$leftNav).text articleGroupData.title
+    $(".articles", @$leftNav).append $node
+    $(".child-toggle", $node).on 'click', (e)->
+      # console.log $(e.currentTarget).parent().text()
+      $($(e.currentTarget).parent()).toggleClass 'open'
+      $(e.currentTarget).toggleClass 'open'
+
+  markMatchedArticle : (articles) ->
+    shouldBeOpen = false
+    foundActiveArticle = false
+    for article in articles
       if article.title == @title
         article.active = true
+        foundActiveArticle = true
+      if article.articles?
+        shouldBeOpen = @markMatchedArticle article.articles
+        if shouldBeOpen
+          article.isOpen = true
+    return shouldBeOpen || foundActiveArticle
 
-    $node = $ jadeTemplate['articles-nav']( articleGroupData )
-    $("#left-nav").append $node
 
   buildBreadCrumbs : () ->
     articleGroupData.breadCrumb.push {title:@title, href:"#"}
     $node = $ jadeTemplate['breadcrumb']( {breadCrumbs:articleGroupData.breadCrumb} )
-    $(".markdown").prepend $node
-
-    for crumb in articleGroupData.breadCrumb
-      console.log crumb
+    @$main.prepend $node
 
   # Dynamically build the page `header` navication
   buildPageNav : () ->
     ar = []
-    $headers = $("h1, h2, h3, h4, h5, h6", $(".markdown") )
+    $headers = $("h1, h2, h3, h4, h5, h6", @$main )
+
+    return if $headers.length < 2
 
     # Find all the headers on the page and
     #  1) remove their text, and add an anchor

@@ -1,0 +1,21 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Overview"
+    articles = "nodejs"
+    icons    = "node"
+
+block custom
+  h1 Node JS
+  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
+  h4 Frameworks
+  .frameworks
+    a.hex(href="")
+      .icon
+        img.shadow-icon(data-src="hex-rails" scalable='true')
+      .txt Rails
+    a.hex(href="/nodejs/sails/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-sails" scalable='true')
+      .txt Sails

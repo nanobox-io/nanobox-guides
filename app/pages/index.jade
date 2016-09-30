@@ -2,14 +2,61 @@ extends templates/base
 
 block css
   // build:index /css/index.css
-  link(href="/css/index-svg.css", rel="stylesheet")
   // endbuild
 
 block js
   // build:home /js/home.js
-  script(src="/js/index-svg.js")
-  script(src="/js/home.js")
   // endbuild
   
 block content
-  a(href="/asdf/asdf/ruby/") asdfa
+  .index
+    .languages
+      .title
+        img.shadow-icon(data-src="map")
+        .txt Guides : Choose A Language
+      .language-icons
+        .row
+          a.hex.language(href="/go/overview")
+            .icon
+              img.shadow-icon(data-src="hex-go" scalable="true") 
+            .txt Go
+          a.hex.language(href="/ruby/overview")
+            .icon
+              img.shadow-icon(data-src="hex-ruby" scalable="true") 
+            .txt Ruby
+          a.hex.language(href="/nodejs/overview")
+            .icon
+              img.shadow-icon(data-src="hex-node" scalable="true") 
+            .txt Nodejs
+          a.hex.language(href="/python/overview")
+            .icon
+              img.shadow-icon(data-src="hex-python" scalable="true") 
+            .txt Python
+          a.hex.language(href="/java/overview")
+            .icon
+              img.shadow-icon(data-src="hex-java" scalable="true") 
+            .txt Java
+        .row
+          a.hex.language(href="/php/overview")
+            .icon
+              img.shadow-icon(data-src="hex-php" scalable="true") 
+            .txt PHP
+          a.hex.language(href="/rust/overview")
+            .icon
+              img.shadow-icon(data-src="hex-rust" scalable="true") 
+            .txt Rust
+          a.hex.language(href="/scala/overview")
+            .icon
+              img.shadow-icon(data-src="hex-scala" scalable="true") 
+            .txt Scala
+          a.hex.language(href="/c/overview")
+            .icon
+              img.shadow-icon(data-src="hex-c" scalable="true") 
+            .txt C
+          a.hex.language(href="/erlang/overview")
+            .icon
+              img.shadow-icon(data-src="hex-erlang" scalable="true") 
+            .txt Erlang
+      a.more(href="#")
+        .txt View More
+        img.shadow-icon(data-src="right-arrow")

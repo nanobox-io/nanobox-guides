@@ -6,7 +6,7 @@ for $link in links
   href = $link.getAttribute 'href'
 
   # If this is a local link such as /ruby/rails
-  if href.match /^\/[^.]+$/g
+  if href?.match /^\/[^.]+$/g
     # If there is a trailing slash, chop it off..
     if href.substr(href.length - 1) == '/'
       href = href.substr 0, href.length-1

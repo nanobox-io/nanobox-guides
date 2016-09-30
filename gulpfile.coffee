@@ -45,7 +45,7 @@ cssStagePath      = 'stage/stage.scss'
 coffeePath        = 'app/coffee/**/*.coffee'
 assetPath         = ['app/images/*', 'app/fonts/*']
 miscJsPath        = 'app/js/*'
-svgPath           = 'app/assets/compiled/*.svg'
+svgPath           = ['lib/assets/core-styles/svg/compiled/*.svg','app/assets/compiled/*.svg']
 htaccessPath      = 'app/misc/.htaccess'
 
 parseSVG = (cb)->
@@ -141,7 +141,7 @@ bumpBowerVersion = ->
 #     .pipe(gulp.dest('rel/'));
 
 minifyAndJoin = () ->
-  gulp.src('./server/*.html').pipe foreach((stream, file) ->
+  gulp.src('./server/**/*.html').pipe foreach((stream, file) ->
     stream.pipe(
       usemin
         css : [ minifyCss(), 'concat']
