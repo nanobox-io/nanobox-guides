@@ -108,6 +108,11 @@ copyHtaccess = ()->
     .pipe gulp.dest('./rel')
     # .on('end', cb)
 
+copyRandomJs = (path, destination, cb) ->
+  gulp.src path
+    .pipe gulp.dest(destination)
+    .on('end', cb)
+
 copyBowerLibs = (cb)->
   bower()
     .pipe gulp.dest('./server/bower-libs/')
@@ -144,9 +149,12 @@ minifyAndJoin = () ->
   gulp.src('./server/**/*.html').pipe foreach((stream, file) ->
     stream.pipe(
       usemin
-        css : [ minifyCss(), 'concat']
-        html: [ minifyHtml({empty: true})]
-        js  : [ uglify()]
+        css                  : [ minifyCss(), 'concat']
+        html                 : [ minifyHtml({empty: true})]
+        js                   : [ uglify()]
+        path                 : './server'
+        skipMissingResources : true
+        # assetsDir            : 'rel/'
     ).pipe gulp.dest('rel/')
   )
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -172,15 +180,18 @@ launch = ->
     ))
 
 prettyURLS = () ->
-  gulp.src(["./rel/*.html","!./rel/index.html"])
+  gulp.src(["./rel/**/*.html","!./rel/index.html"])
     .pipe( rename (path)->
       path.dirname  = "#{path.dirname}/#{path.basename}"
       path.basename = "index"
     )
     .pipe gulp.dest('./rel')
 
-deleteOldHtml = ()->
-  gulp.src(["./rel/*.html","!./rel/index.html"])
+deleteUneededFiles = ()->
+  gulp.src([
+      "./rel/**/*.html",    "!./rel/**/index.html",
+      "./rel/**/style.css", "!./rel/style.css",
+      "./rel/**/js",        "!./rel/js"])
     .pipe rimrafgulp()
 
 compileFiles = (doWatch=false, cb) ->
@@ -223,6 +234,7 @@ gulp.task 'bumpVersion', ['copy-htaccess'],            ()    -> bumpBowerVersion
 gulp.task 'copyStatics', ['bowerLibs'],                ()    -> copyAssets('rel/assets', ->)
 gulp.task 'releaseCompile', ['copyStatics'],           (cb)  -> compileFiles(false, cb)
 gulp.task 'minify',['releaseCompile'],                 ()    -> minifyAndJoin();
-gulp.task 'pretty',['minify'],                         ()    -> prettyURLS()
-gulp.task 'cleanhtml', ['pretty'],                     ()    -> deleteOldHtml()
-gulp.task 'rel', ['rel:clean', 'bumpVersion', 'cleanhtml'],  -> #pushViaGit()
+gulp.task 'copy-random-js', ['minify'],                ()    -> copyRandomJs('./server/js/article-groups/*', './rel/js/article-groups/', ->)
+gulp.task 'pretty',['copy-random-js'],                 ()    -> prettyURLS()
+gulp.task 'cleanhtml', ['pretty'],                     ()    -> deleteUneededFiles()
+gulp.task 'rel', ['rel:clean', 'bumpVersion', 'cleanhtml'],  -> process.exit()

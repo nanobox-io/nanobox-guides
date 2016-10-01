@@ -8,11 +8,8 @@ mixin createArticles(title, articles, pageTitle)
 
 block js
   block configParams
-  // build:home /js/article.js
-  script(src="/js/article.js")
   //- Load in a custom article group
   script(src="/js/article-groups/#{articles}.js")
-  // endbuild
 
   script.
     article = new Article("#{title}", "#{articles}", "#{icons}")

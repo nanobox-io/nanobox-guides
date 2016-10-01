@@ -45,6 +45,10 @@ html(lang="en")
     script(src="/js/top-nav.js")
     // endbuild
     
+    // build:main /js/main.js
+    script(src="/js/article.js")
+    // endbuild
+    
     
     script(src="https://use.typekit.net/cqd5kth.js")
     script try{Typekit.load({ async: true });}catch(e){}
@@ -61,5 +65,6 @@ html(lang="en")
     include ../shared/google-analytics.jade
     // build:remove 
     script(src="//guides.nanobox.dev:35729/livereload.js")
+    //- script(src="localhost:35729/livereload.js")
     script(src="/js/local.js")
     // endbuild
