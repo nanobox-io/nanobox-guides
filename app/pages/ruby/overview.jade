@@ -1,0 +1,21 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Overview"
+    articles = "ruby"
+    icons    = "ruby"
+
+block custom
+  h1 Ruby
+  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
+  h4 Frameworks
+  .frameworks
+    a.hex(href="/ruby/rails/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-rails" scalable='true')
+      .txt Rails
+    a.hex(href="/ruby/sinatra/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-sinatra" scalable='true')
+      .txt Sinatra

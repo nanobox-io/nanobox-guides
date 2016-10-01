@@ -1,0 +1,21 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Overview"
+    articles = "python"
+    icons    = "python"
+
+block custom
+  h1 Python
+  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
+  h4 Frameworks
+  .frameworks
+    a.hex(href="/python/flask/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-flask" scalable='true')
+      .txt Flask
+    a.hex(href="/python/django/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-django" scalable='true')
+      .txt Django

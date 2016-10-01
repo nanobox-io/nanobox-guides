@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Getting Started"
+    articles = "django"
+    icons    = "python,django"
+    
+block markdown
+  include:md /articles/python/django/getting-started.md

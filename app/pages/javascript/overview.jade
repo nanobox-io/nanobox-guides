@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Overview"
+    articles = "javascript"
+    icons    = "javascript"
+
+block custom
+  h1 Ruby
+  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
+  h4 Frameworks
+  .frameworks
+    a.hex(href="/javascript/angular/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-angular" scalable='true')
+      .txt Sinatra

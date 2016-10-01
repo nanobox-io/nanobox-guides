@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Getting Started"
+    articles = "angular"
+    icons    = "javascript,angular"
+    
+block markdown
+  include:md /articles/javascript/angular/getting-started.md

@@ -1,10 +1,10 @@
 window.articleGroupData =
-  title: "Sails"
-  breadCrumb: [
-    {title:'nodejs', href:'/nodejs/overview'}
-    {title:'sails',  href:'/nodejs/sails/getting-started'}
+  title    : "Rails"
+  breadCrumb:[
+    {title:'ruby', href:'/ruby/overview'}
+    {title:'rails',  href:'/ruby/rails/getting-started'}
   ]
-  articles: [
+  articles : [
     {href: "#", title: "Getting Started"}
     {href: "#", title: "Connecting to a database"}
     {href: "#", title: "Adding components"}

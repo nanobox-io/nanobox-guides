@@ -1,8 +1,8 @@
 window.articleGroupData =
-  title: "Sails"
+  title: "Ember"
   breadCrumb: [
     {title:'nodejs', href:'/nodejs/overview'}
-    {title:'sails',  href:'/nodejs/sails/getting-started'}
+    {title:'ember',  href:'/nodejs/ember/getting-started'}
   ]
   articles: [
     {href: "#", title: "Getting Started"}
