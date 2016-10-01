@@ -27,7 +27,7 @@ gulp rel
 
 ##### 2) Create a page that loads your article
 ```
-/articles/ruby/rails/getting-started.jade
+/app/pages/ruby/rails/getting-started.jade
 ```
 Every page that is created in the `app/pages` directory will create a page on the final site.
 
