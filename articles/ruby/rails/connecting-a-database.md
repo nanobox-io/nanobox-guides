@@ -1,11 +1,11 @@
 # Rails: Connecting a Database
-Once you have an app [up and running]() the next thing may need to do is connect a database.
+Once you have an app [up and running](getting-started.html#up-and-running) the next thing may need to do is connect a database.
 
 The guide is broken down into three sections:
 
-1. Adding a data component
-2. Connecting your application
-3. Testing the connection
+1. [Adding a data component](adding-a-data-component)
+2. [Connecting your application](connecting-your-application)
+3. [Testing the connection](testing-the-connection)
 
 ## Adding a data component
 Nanobox applications are comprised of [components](). If your application has a database it needs to connect to then you can add [a data component]().
@@ -79,7 +79,7 @@ development:
 With your data component provisioned, and your application updated to connect to it, it's time to test that connection. You can do this in one of several ways.
 
 #### Connecting an external client
-You can test your connection by connecting an external client to your database using the [connection credentials]() above.
+You can test your connection by connecting an external client to your database using the [connection credentials](#connection-credentials) above.
 
 #### Running your application
 You can also test your connection by simply trying to run your application and see if it is able to connect. In rails we could run the following command:
@@ -95,5 +95,5 @@ bundle exec rake db:setup
 ## Now what?
 Now that you have a database connected to your application whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Preparing for production
-* Launching your app
+* [Preparing for production](preparing-for-production.html)
+* [Launching your app](launching-your-app.html)
