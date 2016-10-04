@@ -1,7 +1,7 @@
 # Rails: Getting Started
 This guide will walk you through getting a simple Rails app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-rails" target="\_blank">nanobox-rails</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-The guide is broken down into three steps:
+The guide is broken down into three sections:
 
 1. Project Setup
 2. Application Config
@@ -96,6 +96,5 @@ Visit the app from your favorite browser at: `rails.nanobox.dev:8080`
 Now that you have an application running with nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * Connecting to a database
-* Adding components
 * Preparing for production
 * Launching your app

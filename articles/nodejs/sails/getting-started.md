@@ -1,7 +1,7 @@
 # Sails: Getting Started
 This guide will walk you through getting a simple Sails app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-sailsjs" target="\_blank">nanobox-sailsjs</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-The guide is broken down into three steps:
+The guide is broken down into three sections:
 
 1. Project Setup
 2. Application Config
