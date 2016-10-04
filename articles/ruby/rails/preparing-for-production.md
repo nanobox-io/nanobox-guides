@@ -3,11 +3,11 @@ Once your application is running locally and you've developed it to a point wher
 
 The guide is broken down into three sections:
 
-1. Development vs Simulation
-2. Setting up a sim environment
-3. Sim up and running
+1. [Dev vs Sim](dev-vs-sim)
+2. [Setting up a sim environment](setting-up-a-sim-environment)
+3. [Sim up and running](sim-up-and-running)
 
-## Development vs Sim
+## Dev vs Sim
 The nanobox development environment is just that. It's a local running instance of your application. It doesn't compile assets or run a web server.
 
 The nanobox simulation environment (sim for short) is an exact replica of a production environment running locally. All this means is your application will run in sim as if it were running in production, just not on a live server. If your application runs in `sim` *it will run in production*. Guaranteed.
@@ -73,4 +73,4 @@ Visit the app from your favorite browser at: `rails.nanobox.sim:8080`
 ## Now what?
 Now with your application running in `sim` whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Launching your app
+* [Launching your app](launching-your-app.html)
