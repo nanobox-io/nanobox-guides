@@ -1,0 +1,10 @@
+extends /app/pages/templates/article
+
+block configParams
+  -
+    title    = "Getting Started"
+    articles = "express"
+    icons    = "node,express"
+
+block markdown
+  include:md /articles/nodejs/express/getting-started.md
