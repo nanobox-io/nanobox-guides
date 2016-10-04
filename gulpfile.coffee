@@ -65,8 +65,11 @@ html = (cb)->
   gulp.src jadePath
     .pipe jade({jade:pug, basedir:'./' }).on('error', (err)-> console.log(err); this.emit('end') )
     .pipe gulp.dest('./server/')
-    .pipe wait(300) # annoyingly, have to add a short delay for the files to get copied or live reload is too fast
-    .on 'end', cb
+    .on 'end', ()->
+      livereload.reload()
+      console.log "           (Reloaded all html files)"
+
+      cb()
 
 jadeTemplates = (cb)->
   gulp.src( templatePath )
@@ -173,11 +176,14 @@ server = ->
 
 # Open in the browser
 launch = ->
-  gulp.src("./server/index.html") # An actual file must be specified or gulp will overlook the task.
-    .pipe(open("",
-      url: "http://localhost:3814/index.html",
-      app: "google chrome"
-    ))
+  console.log '-------------------------------'
+  console.log 'Build Complete, visit : '
+  console.log "http://guides.nanobox.dev:3814/"
+  # gulp.src("./server/index.html") # An actual file must be specified or gulp will overlook the task.
+  #   .pipe(open("",
+  #     url: "http://localhost:3814/index.html",
+  #     app: "google chrome"
+  #   ))
 
 prettyURLS = () ->
   gulp.src(["./rel/**/*.html","!./rel/index.html"])
@@ -196,19 +202,27 @@ deleteUneededFiles = ()->
 
 compileFiles = (doWatch=false, cb) ->
   count      = 0
-  onComplete = ()=> if ++count == ar.length then cb();
+  onComplete = ()=>
+    if ++count == ar.length then cb();
   ar         = [
     {meth:js,            glob:coffeePath}
     {meth:css,           glob:cssPath}
     {meth:miscJs,        glob:miscJsPath}
     {meth:jadeTemplates, glob:templatePath}
-    {meth:html,          glob:[articlePath, jadePath]}
+    {meth:html,          glob:[articlePath, jadePath], dontLiveReload:true}
     {meth:parseSVG,      glob:svgPath}
     {meth:copyAssets,    glob:assetPath, params:['server/assets', onComplete]}
   ]
 
-  createWatcher = (item, params)-> watch( { glob:item.glob }, =>
-    item.meth.apply(null, params).pipe( livereload() ) )
+  # createWatcher = (item, params)-> watch( { glob:item.glob }, => item.meth.apply(null, ->).pipe( livereload() ) )
+
+
+  createWatcher = (item, params)->
+    item.meth.apply(null, params)
+    watch item.glob, =>
+      stream = item.meth.apply( null, [=>])
+      if !item.dontLiveReload
+        stream.pipe( livereload() )
 
   for item in ar
     params = if item.params? then item.params else [onComplete]
@@ -220,15 +234,15 @@ compileFiles = (doWatch=false, cb) ->
 
 # ----------- MAIN ----------- #
 
-gulp.task 'clean',                  (cb) -> rimraf './server', cb
+gulp.task 'clean',                  (cb) -> rimraf './server/*', cb
 gulp.task 'bowerLibs', ['clean'],   (cb) -> copyBowerLibs()
 gulp.task 'compile', ['bowerLibs'], (cb) -> compileFiles(true, cb)
-gulp.task 'server', ['compile'],    (cb) -> server(); launch();
+gulp.task 'server', ['compile'],    (cb) -> server(); launch(); #process.exit()
 gulp.task 'default', ['server']
 
 # ----------- BUILD (rel) ----------- #
 
-gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel', cb
+gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/*', cb
 gulp.task 'copy-htaccess',['rel:clean'],               ()    -> copyHtaccess()
 gulp.task 'bumpVersion', ['copy-htaccess'],            ()    -> bumpBowerVersion()
 gulp.task 'copyStatics', ['bowerLibs'],                ()    -> copyAssets('rel/assets', ->)

@@ -31,7 +31,7 @@
     "gulp-usemin": "^0.3.14",
     "gulp-util": "~2.2.20",
     "gulp-wait": "0.0.2",
-    "gulp-watch": "^0.6.9",
+    "gulp-watch": "^4.3.10",
     "gulp-wrap": "~0.3.0",
     "jade": "^1.11.0",
     "marked": "^0.3.6",
