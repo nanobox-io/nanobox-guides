@@ -3,12 +3,12 @@ With your application running in `sim` you can feel comfortable knowing it will 
 
 The guide is broken down into three sections:
 
-1. Adding a service provider
-2. Launch your app
-3. Deploy your app
+1. [Adding a service provider](adding-a-service-provider)
+2. [Launch your app](launch-your-app)
+3. [Deploy your app](deploy-your-app)
 
 ## Adding a service provider
-To launch your app into production you'll first need to create it on [nanobox](). After you've logged in to your nanobox account, before you can create an app you'll need to add a provider account. Go to your [account admin]() under [hosting providers]() and add a new provider.
+To launch your app into production you'll first need to create it on [nanobox](//dashboard.nanobox.io). After you've logged in to your nanobox account, before you can create an app you'll need to add a provider account. Go to your account admin under [hosting providers](//dashboard.nanobox.io/users/provider_accounts) and add a new provider.
 
 ## Launching your app
 After you've added your provider go back to your [apps dashboard]() and [launch a new app](). After you've completed the process for launching a new app wait while Nanobox provisions your app on your service provider.

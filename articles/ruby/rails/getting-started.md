@@ -3,9 +3,9 @@ This guide will walk you through getting a simple Rails app up and running with 
 
 The guide is broken down into three sections:
 
-1. Project Setup
-2. Application Config
-3. Up and Running
+1. [Project Setup](#project-setup)
+2. [Application Config](#application-config)
+3. [Up and Running](#up-and-running)
 
 ## Project Setup
 If you already have a project you'd like to use with nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
@@ -95,6 +95,6 @@ Visit the app from your favorite browser at: `rails.nanobox.dev:8080`
 ## Now what?
 Now that you have an application running with nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Connecting to a database
-* Preparing for production
-* Launching your app
+* [Connecting to a database](connecting-a-database.html)
+* [Preparing for production](preparing-for-production.html)
+* [Launching your app](launching-your-app.html)
