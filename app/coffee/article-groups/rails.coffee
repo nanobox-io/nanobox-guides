@@ -5,17 +5,8 @@ window.articleGroupData =
     {title:'rails',  href:'/ruby/rails/getting-started'}
   ]
   articles : [
-    {href: "#", title: "Getting Started"}
-    {href: "#", title: "Connecting to a database"}
-    {href: "#", title: "Adding components"}
-    {href: "#", title: "Preparing for productions", articles : [
-        {href: "#", title: "Example of nested articles"}
-        {href: "#", title: "Deeper"}
-        {href: "#", title: "Deeper still", articles : [
-            {href: "#", title: "Basement"}
-            {href: "#", title: "Low.."}
-          ]
-        }
-      ]
-    }
+    {href: "/ruby/rails/getting-started", title: "Getting Started"}
+    {href: "/ruby/rails/connecting-a-database", title: "Connecting a database"}
+    {href: "/ruby/rails/preparing-for-production", title: "Preparing for production"}
+    {href: "/ruby/rails/launching-your-application", title: "Launching your application"}
   ]
