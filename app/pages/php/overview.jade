@@ -1,0 +1,25 @@
+extends /app/pages/templates/article
+
+block configParams
+  -
+    title    = "Overview"
+    articles = "php"
+    icons    = "php"
+
+block custom
+  h1 PHP
+  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
+  h4 Frameworks
+  .frameworks
+    a.hex(href="/php/laravel/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-laravel" scalable='true')
+      .txt Laravel
+    a.hex(href="/php/codeigniter/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-codeigniter" scalable='true')
+      .txt CodeIgniter
+    a.hex(href="/php/wordpress/getting-started")
+      .icon
+        img.shadow-icon(data-src="hex-wordpress" scalable='true')
+      .txt WordPress
