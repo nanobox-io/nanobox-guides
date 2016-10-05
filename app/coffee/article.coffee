@@ -1,6 +1,6 @@
 class Article
 
-  constructor: (@title, @clusterId, @icons) ->
+  constructor: (@title, @clusters, @icons) ->
     @$main    = $ ".main"
     @$leftNav = $ "#left-nav"
     @buildRelatedPagesNav()
@@ -16,7 +16,7 @@ class Article
   buildRelatedPagesNav : () ->
     store = {}
     $.when(
-      nanobox.getYaml( '/article-groups/rails.yml', (yml)=>
+      nanobox.getYaml( "/article-groups/#{@clusters}.yml", (yml)=>
         @articleGroupData = yml
       )
     ).then ()=>
@@ -31,6 +31,7 @@ class Article
         $(e.currentTarget).toggleClass 'open'
 
       @buildBreadCrumbs()
+      localizeLinks()
 
   markMatchedArticle : (articles) ->
     shouldBeOpen = false
