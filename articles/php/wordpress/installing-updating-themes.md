@@ -20,7 +20,7 @@ This will start your dev environment if it's not running, then run the [start co
 ## Install & Update Themes Like You Would Normally
 When using WordPress in dev, you can manage themes the same way you normally would. You can either manually download themes and include them in your `wp-content/themes` directory or you can install themes through your WordPress admin panel in your dev app. Theme files can be updated in your local filesystem and changes will be reflected in your running dev app.
 
-![Install Themes](/images/php/wordpress/wp-themes.png)
+![Install Themes](/assets/wp-themes.png)
 
 ## Build & Deploy into Sim & Production
 Once themes are installed/updated in dev, you can generate a new build and deploy into `sim` for testing, then into production. The [Deploy WordPress](/wordpress/deploy-wordpress) guide walks through each.

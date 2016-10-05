@@ -4,13 +4,13 @@
 Nanobox provides a "sim" environment that simulates a full production deploy on your local machine. Once you're done making changes in dev and are ready to test your app, test the deploy and running app in sim:
 
 ```bash
-# Generate a new build
-nanobox build
+# Compile your code
+nanobox compile
 
 # Start your sim environment
 nanobox sim start
 
-# add a convenient way to access your sim app from the browser
+# Add a convenient way to access your sim app from the browser
 nanobox sim dns add wordpress.nanobox.sim
 
 # Deploy to your sim environment
@@ -19,14 +19,14 @@ nanobox sim deploy
 
 Once deployed, you can access and test your sim app at `http://wordpress.nanobox.sim`.
 
-*Dev and sim environments are completely isolated from each other so you may want/need to [import data and uploads](data-storage-management/) into your sim app.*
+*Dev and sim environments are completely isolated from each other so you may want/need to [import data](/php/wordpress/data-storage/importing-data) and [uploads](/php/wordpress/data-storage/importing-uploads) into your sim app.*
 
 
 ## Launch Your App with Nanobox
-Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io/getting-started/launch-app/).
+Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io/production/launch-app/).
 
 ### Link Your Codebase to Your New App
-In order to deploy to your new app, you'll need to link it to your local WordPress codebase. Once linked, you can deploy your latest build package to your new app.
+In order to deploy to your new app, you'll need to link it to your local WordPress codebase using the `nanobox link` command.
 
 ```bash
 # Link your local codebase to your nanobox app
@@ -34,7 +34,7 @@ nanobox link app-name
 ```
 
 ### Set Auth Key & Salt Evars
-WordPress uses authentication keys and salts to securely create sessions. If you've updated your wp-config.php to use the configuration specified [here](/wordpress/#setup-auth-keys-amp-salts), you'll need to set those environment variables in your production app.
+WordPress uses authentication keys and salts to securely create sessions. If you've updated your wp-config.php to use the configuration specified [here](/php/wordpress/getting-started.html#setup-auth-keys-salts), you'll need to set those environment variables in your production app.
 
 Visit [WordPress' Auth Key and Salt API](https://api.wordpress.org/secret-key/1.1/salt/) to generate random values for each. Pass each key-value pair into your Nanobox app using the following command:
 
@@ -55,8 +55,8 @@ Your app's build package will be deployed to your app on Nanobox and all your ap
 ### Import Data & Uploads
 With your production app up and running, you can import your database and uploads if necessary.
 
-[Importing Data](/wordpress/data-storage-management/importing-data/)  
-[Importing Uploads](/wordpress/data-storage-management/importing-uploads/)
+[Importing Data](/php/wordpress/data-storage/importing-data.html#importing-data-into-a-production-database)  
+[Importing Uploads](/wordpress/data-storage/importing-uploads.html)
 
 ## Enjoy Your Live WordPress App
 Congratulations. Your WordPress app is now live. The here's a few next steps you may want to go through:

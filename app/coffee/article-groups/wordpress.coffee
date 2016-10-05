@@ -12,8 +12,8 @@ window.articleGroupData =
       {href: "/php/wordpress/plugins-themes/installing-updating-themes", title: "Installing & Updating Themes"}
       ]}
     {href: "#", title: "Data & Storage Management", articles : [
-      {href: "/php/wordpress/data-storage-management/importing-data", title: "Importing Data"}
-      {href: "/php/wordpress/data-storage-management/importing-uploads", title: "Importing Uploads"}
+      {href: "/php/wordpress/data-storage/importing-data", title: "Importing Data"}
+      {href: "/php/wordpress/data-storage/importing-uploads", title: "Importing Uploads"}
       ]}
     {href: "#", title: "Advanced", articles : [
       {href: "/php/wordpress/advanced/boxfile-explained", title: "WordPress boxfile.yml Explained"}
