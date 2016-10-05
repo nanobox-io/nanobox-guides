@@ -3,7 +3,15 @@ a.hex           {cursor:pointer; color:#809CAD; text-transform:uppercase; font-s
     &:after     {position: absolute; top:-6px; left:-73px; z-index: -1; content:""; display:block; background:url(/assets/sprite.png); width:216px; height:188px; background-position:-49px -61px; opacity:0; transition:opacity 300ms; }
   }
   .txt          {margin-top:7px}
+  &.active,
   &:hover       {color:#1B415D;
     .icon:after {opacity:1;}
+  }
+}
+
+a.direction-link   {display: flex; align-items: center; padding:12px 0; cursor:pointer;
+  .txt             {color:#1884D6; font-weight:$semibold; font-style:italic; font-size:15px; padding-right:10px;}
+  &:hover          {
+    .txt           {color:$navy;}
   }
 }

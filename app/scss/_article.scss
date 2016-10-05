@@ -1,4 +1,4 @@
-.article-page          {max-width:1015px; margin:0 auto; display:flex; margin-top:100px;
+.article-page          {max-width:$app-width; margin:0 auto; display:flex; margin-top:100px;
   .main                {width:665px; background:white; padding:30px; position:relative;
     h1,h2,h3,h4,h5,h6  {color:$navy; border-bottom:solid 1px #E1E9ED; margin-bottom:0;padding-bottom:0.2em;
       a                {color:inherit; position:relative;

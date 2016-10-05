@@ -51,36 +51,27 @@ block markdown
 Article groups define the related articles that will are shown in the left hand column of article pages.
 
 ```
-/app/coffee/article-groups/rails.coffee
+/articles/article-groups/rails.yml
 ```
 
 Sample Article Group File:
-```coffee
-window.articleGroupData =
+```yaml
   # Used to show the title of the left nav
-  title    : "Sails"
-
+  title    : Rails
   # Used to create the breadcrumb
-  breadCrumb:[
-    {title:'ruby',   href:'/ruby/overview'}
-    {title:'rails',  href:'/ruby/rails/getting-started'}
-  ]
-
+  breadCrumb:
+    - {title: ruby,  href: /ruby/overview}
+    - {title: rails, href: /ruby/rails/getting-started}
   # Articles
-  articles : [
-    {href: "/ruby/rails/getting-started",          title: "Getting Started"}
-    {href: "/ruby/rails/connecting to a database", title: "Connecting to a database"}
-    {href: "/ruby/rails/adding-components",        title: "Adding components"}
-    {href: "/ruby/rails/getting-started",          title: "Sub Directory", articles : [
-        {href: "ruby/rails/nested", title: "Example of nested articles"}
-        {href: "ruby/rails/other",  title: "Some other article"}
-        {href: "#",                 title: "Another", articles : [
-            {href: "#", title: "Deep nesting"}
-            {href: "#", title: "Very Deep"}
-          ]
-        }
-      ]
-    }
-  ]
+  articles :
+    - {href: /ruby/rails/getting-started, title: Getting Started}
+    - {href: /ruby/rails/connecting-a-database, title: Connecting a database}
+    - {href: /ruby/rails/preparing-for-production, title: Preparing for production}
+    - {href: /ruby/rails/launching-your-application, title: Launching your application}
+    - title: Sub Nav Item
+      articles:
+        - {href: '#', title: Lower Article}
+        - {href: '#', title: Another}
+
 
 ```

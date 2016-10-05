@@ -1,11 +1,10 @@
 class Article
 
-  constructor: (@title, @clusterId, @icons) ->
+  constructor: (@title, @clusters, @icons) ->
     @$main    = $ ".main"
     @$leftNav = $ "#left-nav"
     @buildRelatedPagesNav()
     @buildPageNav()
-    @buildBreadCrumbs()
     @addIcons()
 
   addIcons : () ->
@@ -15,21 +14,30 @@ class Article
 
   # Build the nav in the upper left hand that shows the related articles
   buildRelatedPagesNav : () ->
-    @markMatchedArticle window.articleGroupData.articles
+    store = {}
+    $.when(
+      nanobox.getYaml( "/article-groups/#{@clusters}.yml", (yml)=>
+        @articleGroupData = yml
+      )
+    ).then ()=>
+      @markMatchedArticle @articleGroupData.articles
 
-    $node = $ jadeTemplate['articles']( articleGroupData )
-    $(".title",    @$leftNav).text articleGroupData.title
-    $(".articles", @$leftNav).append $node
-    $(".child-toggle", $node).on 'click', (e)->
-      # console.log $(e.currentTarget).parent().text()
-      $($(e.currentTarget).parent()).toggleClass 'open'
-      $(e.currentTarget).toggleClass 'open'
+      $node = $ jadeTemplate['articles']( @articleGroupData )
+      $(".title",    @$leftNav).text @articleGroupData.title
+      $(".articles", @$leftNav).append $node
+      $(".child-toggle", $node).on 'click', (e)->
+        # console.log $(e.currentTarget).parent().text()
+        $($(e.currentTarget).parent()).toggleClass 'open'
+        $(e.currentTarget).toggleClass 'open'
+
+      @buildBreadCrumbs()
+      localizeLinks()
 
   markMatchedArticle : (articles) ->
     shouldBeOpen = false
     foundActiveArticle = false
     for article in articles
-      if article.title == @title
+      if article.title.toLowerCase() == @title.toLowerCase()
         article.active = true
         foundActiveArticle = true
       if article.articles?
@@ -40,8 +48,8 @@ class Article
 
 
   buildBreadCrumbs : () ->
-    articleGroupData.breadCrumb.push {title:@title, href:"#"}
-    $node = $ jadeTemplate['breadcrumb']( {breadCrumbs:articleGroupData.breadCrumb} )
+    @articleGroupData.breadCrumb.push {title:@title, href:"#"}
+    $node = $ jadeTemplate['breadcrumb']( {breadCrumbs:@articleGroupData.breadCrumb} )
     @$main.prepend $node
 
   # Dynamically build the page `header` navication

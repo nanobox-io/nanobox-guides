@@ -1,0 +1,30 @@
+extends ../templates/base
+
+block js
+
+block content
+  .framework 
+    
+    .title
+      .icon
+        img.shadow-icon(data-src="hex-rails" scalable="true")
+      .framework Ruby on Rails
+      .sub With Nanobox
+  
+    .article-groups
+      .group
+        .title First Steps
+        a(href="#") Getting Started
+        a(href="#") Connecting to a database
+        a(href="#") Adding Components
+        a(href="#") Preparing for production
+      .group
+        .title Next Steps
+        a(href="#") Adding additional components
+        a(href="#") Adding custom environment variables
+        a(href="#") What I don't know I need to know
+      .group
+        .title Production
+        a(href="#") Pointing your domain
+        a(href="#") Troubleshooting
+        a(href="#") Adding SSL/TLS encryption

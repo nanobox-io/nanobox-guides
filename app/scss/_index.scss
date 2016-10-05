@@ -4,15 +4,24 @@
       .txt             {color:#548099; font-size:18px; text-transform:uppercase; margin-left:10px;}
     }
     .language-icons    {border:solid 1px #C4CCD1; border-right:none; border-left:none;
-      .row             {display:flex; justify-content: space-between;margin:40px 0 55px;
+      .row             {display:flex; justify-content: space-between; margin:40px 0 55px;
         &:last-of-type {margin-bottom:30px;}
       }
     }
-    a.more             {display: flex; align-items: center; justify-content: flex-end; padding:12px 0;
-      .txt             {color:#1884D6; font-weight:$semibold; font-style:italic; font-size:15px; padding-right:10px;}
-      &:hover          {
-        .txt           {color:$navy;}
-      }
+    a.more             {justify-content: flex-end;}
+    &.hidden           {display: none;}
+  }
+
+  // Language Details
+  .language-detail     {max-width:590px; margin:81px auto 0; position:relative;
+    .direction-link    {position:absolute; top:-40px; right:0;
+      svg              {transform:scale(-1,-1)}
+      .txt             {margin-left:10px; }
+    }
+    .mother-language   {position:absolute; top:41px; left:-170px;}
+    .frameworks        {display:flex; border-top:solid 1px #C4CCD1; padding-top:40px; position: relative;
+      a                {margin-right:70px;}
+      &:before         {content:"frameworks"; text-transform:uppercase; position: absolute; top:-20px; font-size:12px; color:#94ACBA; font-weight:bold; letter-spacing:0.06em; }
     }
   }
 }

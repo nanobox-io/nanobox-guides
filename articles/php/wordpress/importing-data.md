@@ -15,7 +15,7 @@ $ nanobox sim start
 ```
 
 ### Get Your Database Credentials
-To get the credentials of your MySQL database, run the `info` command. This will output information for each of your app's compoents.
+To get the credentials of your MySQL database, run the `info` command. This will output information for each of your app's components.
 
 ```bash
 # List dev app info
