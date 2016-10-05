@@ -51,7 +51,7 @@ block markdown
 Article groups define the related articles that will are shown in the left hand column of article pages.
 
 ```
-/articles/article-groups/ruby/rails.coffee
+/articles/article-groups/rails.yml
 ```
 
 Sample Article Group File:
