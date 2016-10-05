@@ -99,6 +99,6 @@ bundle exec rake db:setup
 ## Now what?
 With a database connected to your app, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Preparing for production](preparing-for-production.html)
-* [Launching your app](launching-your-app.html)
+* [Prepare for production](prepare-for-production.html)
+* [Launch your app](launch-your-app.html)
 * [Back to rails overview](overview.html)

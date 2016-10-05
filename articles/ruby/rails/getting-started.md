@@ -95,7 +95,7 @@ Visit the app from your favorite browser at: `rails.nanobox.dev:8080`
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Connecting to a database](connecting-a-database.html)
-* [Preparing for production](preparing-for-production.html)
-* [Launching your app](launching-your-app.html)
+* [Connect a database](connect-a-database.html)
+* [Prepare for production](prepare-for-production.html)
+* [Launch your app](launch-your-app.html)
 * [Back to rails overview](overview.html)
