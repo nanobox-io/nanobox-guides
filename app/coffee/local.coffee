@@ -13,6 +13,5 @@ window.localizeLinks = ()->
         href = href.substr 0, href.length-1
 
       $link.setAttribute 'href', "#{href}.html"
-  console.log links.length
 
 window.localizeLinks()

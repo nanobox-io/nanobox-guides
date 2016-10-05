@@ -1,0 +1,15 @@
+.map
+  .description Nanobox builds an environment and launches the components a #{informalName} app needs to run
+  img.shadow-icon(data-src="framework-map")
+  .components
+    each component in requiredComponents
+      .component
+        .icon
+          img.shadow-icon(data-src="hex-#{component.icon}" scalable="true")
+        .txt= component.name
+    .header Additional Components
+    each component in optionalComponents
+      .component
+        .icon
+          img.shadow-icon(data-src="hex-#{component.icon}" scalable="true")
+        .txt= component.name
