@@ -37,3 +37,5 @@ Now that you have a database connected to your application whats next? Think abo
 * Adding custom environment variables
 * What I don't know I need to know
 * Troubleshooting
+* Intermediate Topics
+* Advanced Topics

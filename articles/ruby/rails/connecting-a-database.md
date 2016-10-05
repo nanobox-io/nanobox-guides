@@ -1,13 +1,13 @@
-# Rails: Connecting a Database
+# Rails: Connect a Database
 Once you have an app [up and running](getting-started.html#up-and-running) the next thing may need to do is connect a database.
 
 The guide is broken down into three sections:
 
-1. [Adding a data component](adding-a-data-component)
-2. [Connecting your application](connecting-your-application)
-3. [Testing the connection](testing-the-connection)
+1. [Add a data component](add-a-data-component)
+2. [Connect your application](connect-your-application)
+3. [Test the connection](test-the-connection)
 
-## Adding a data component
+## Add a data component
 Nanobox applications are comprised of [components](). If your application has a database it needs to connect to then you can add [a data component]().
 
 #### Specify the component
@@ -37,7 +37,7 @@ nanobox build
 nanobox dev deploy
 ```
 
-## Connecting your application
+## Connect your application
 When a data component is provisioned with nanobox, unique connection credentials are generated along with [environment variables](). The keys for each variable is based on the [component ID]() in your boxfile.yml. Using environment variables in this way allows your application to be secure yet portable.
 
 #### Environment Variables
@@ -64,7 +64,7 @@ Data component ports will always be the default port for that service. Database 
 
 For rails, you'll need to modify your `config/database.yml` to connect your application:
 
-```yml
+```yaml
 development:
   adapter: postgresql
   encoding: unicode
@@ -75,10 +75,10 @@ development:
   password: <%= ENV['DATA_DB_PASS'] %>
 ```
 
-## Testing the connection
+## Test the connection
 With your data component provisioned, and your application updated to connect to it, it's time to test that connection. You can do this in one of several ways.
 
-#### Connecting an external client
+#### Connect an external client
 You can test your connection by connecting an external client to your database using the [connection credentials](#connection-credentials) above.
 
 #### Running your application

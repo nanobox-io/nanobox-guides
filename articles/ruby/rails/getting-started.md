@@ -24,7 +24,8 @@ Create a `boxfile.yml` at the root of your project that contains the following:
 ```yaml
 code.build:
 
-  # because we're using rails we need to tell nanobox that we need ruby in our container
+  # because we're using rails we need to tell nanobox that we need ruby in our
+  # container
   engine: "ruby"
 ```
 
