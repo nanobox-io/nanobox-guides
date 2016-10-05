@@ -1,4 +1,4 @@
-# Rails: Launching your application
+# Rails: Prepare for production
 After you have an application (app) running locally in a development (dev) environment with nanobox, and you've developed it to a point where you're beginning to think about production, nanobox can help you test your app as if it were running in production using the simulation (sim) environment.
 
 This guide is broken down into three sections:
@@ -7,7 +7,7 @@ This guide is broken down into three sections:
 2. [Setting up sim](setting-up-a-sim-environment)
 3. [Sim: up and running](sim-up-and-running)
 
-## Dev vs Sim
+## Dev vs. Sim
 The nanobox dev environment is just that. It's a local running instance of your app. It doesn't compile assets or run a web server.
 
 The nanobox sim environment is an exact replica of a production environment running locally. All this means is your app will run in sim as if it were running in production, just not on a live server. If your app runs in `sim` *it will run in production*. Guaranteed.

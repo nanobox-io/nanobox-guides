@@ -1,13 +1,13 @@
-# Rails: Connecting a Database
+# Rails: Launch your application
 Once your application (app) has been [prepared for production](preparing-for-prduction.html) you can feel comfortable knowing it will work in production, all you need to do now is hook it up.
 
 This guide is broken down into three sections:
 
-1. [Adding a service provider](adding-a-service-provider)
+1. [Add a service provider](adding-a-service-provider)
 2. [Launch your app](launch-your-app)
 3. [Deploy your app](deploy-your-app)
 
-## Adding a service provider
+## Add a service provider
 If you don't already have an account with [nanobox](//dashboard.nanobox.io), you'll need to create one. After you've logged in to your account, **before you can create an app**, you'll need to add a hosting provider. Go to your account admin under [hosting providers](//dashboard.nanobox.io/users/provider_accounts) and add one.
 
 ## Launching your app
@@ -31,9 +31,9 @@ nanobox deploy <alias-of-local-app>
 ## Now what?
 With a production app launched using nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Adding additional components
+* Add additional components
 * Pointing your domain
-* Adding SSL/TLS encryption
-* Adding custom environment variables
+* Add SSL/TLS encryption
+* Add custom environment variables
 * [Next Steps](overview.html)
 * [Back to rails overview](overview.html)
