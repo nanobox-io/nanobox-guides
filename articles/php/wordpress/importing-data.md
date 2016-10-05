@@ -1,6 +1,6 @@
 # Importing Data
 
-## Importing Data Into a Dev or Sim Database
+## Into a Dev or Sim Database
 Nanobox makes MySQL databases running in dev and sim environments accessible to your local machine through a specific IP and port. You can use these along with the database's username(s) and password(s) to connect.
 
 ### Make Sure Dev/Sim is Running
@@ -11,7 +11,7 @@ Whatever environment you'd like to import data needs to be running before you'll
 $ nanobox dev start
 
 # Starts a sim environment
-$ annobox sim start
+$ nanobox sim start
 ```
 
 ### Get Your Database Credentials
@@ -54,7 +54,7 @@ Below is an example of importing data using the MySQL CLI.
 $ mysql -h 192.168.99.65 -P 3306 -u nanobox -pPAsSw0Rd gonano < path/to/data_dump.sql
 ```
 
-## Importing Data into a Production Database
+## Into a Production Database
 To ensure data security, databases in production Nanobox apps are accessible only through secure tunnels established through the Nanobox CLI's `tunnel` command. These tunnels bind to and listen on a local port. To establish a secure tunnel run the `tunnel` command, passing in your your MySQL data component as the tunnel endpoint.
 
 ```bash
