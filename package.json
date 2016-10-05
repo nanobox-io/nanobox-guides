@@ -33,6 +33,7 @@
     "gulp-wait": "0.0.2",
     "gulp-watch": "^4.3.10",
     "gulp-wrap": "~0.3.0",
+    "gulp-yaml": "^1.0.1",
     "jade": "^1.11.0",
     "marked": "^0.3.6",
     "rimraf": "~2.2.8"

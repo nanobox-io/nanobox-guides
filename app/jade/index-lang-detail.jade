@@ -1,0 +1,17 @@
+.language-detail
+  a.direction-link
+    img.shadow-icon(data-src="right-arrow")
+    .txt Back
+      
+  .mother-language
+    a.hex.language.active()
+      .icon
+        img.shadow-icon(data-src="hex-#{language}" scalable="true") 
+      .txt= language
+
+  .frameworks
+    each framework in frameworks
+      a.hex.language(data-language="javascript", href="#{framework.href}")
+        .icon
+          img.shadow-icon(data-src="hex-#{framework.id}" scalable="true") 
+        .txt= framework.id

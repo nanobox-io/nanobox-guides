@@ -43,8 +43,9 @@ templatePath      = 'app/jade/**/*.jade'
 cssPath           = 'app/scss/**/*.scss'
 cssStagePath      = 'stage/stage.scss'
 coffeePath        = 'app/coffee/**/*.coffee'
-assetPath         = ['app/images/*', 'app/fonts/*']
+assetPath         = ['app/images/**/*', 'app/fonts/*']
 miscJsPath        = 'app/js/*'
+yamlPath          = ['articles/article-groups/**/*.yml', 'articles/article-groups/**/*.yaml']
 svgPath           = ['lib/assets/core-styles/svg/compiled/*.svg','app/assets/compiled/*.svg']
 htaccessPath      = 'app/misc/.htaccess'
 
@@ -106,6 +107,9 @@ copyAssets = (destination, cb) ->
     .pipe gulp.dest(destination)
     .on('end', cb)
 
+copyImages = (cb)->
+  copyAssets 'server/assets', cb
+
 copyHtaccess = ()->
   gulp.src htaccessPath
     .pipe gulp.dest('./rel')
@@ -123,6 +127,11 @@ copyBowerLibs = (cb)->
 copyFilesToBuild = ->
   gulp.src( './server/js/*' ).pipe gulp.dest('./rel/')
   gulp.src( './server/css/main.css' ).pipe gulp.dest('./rel/')
+
+copyYaml = (cb)->
+  gulp.src yamlPath
+    .pipe gulp.dest('server/article-groups')
+    .on('end', cb)
 
 pushViaGit = ->
   # Start out by reading the version number for commit msg, then git push, etc..
@@ -211,7 +220,8 @@ compileFiles = (doWatch=false, cb) ->
     {meth:jadeTemplates, glob:templatePath}
     {meth:html,          glob:[articlePath, jadePath], dontLiveReload:true}
     {meth:parseSVG,      glob:svgPath}
-    {meth:copyAssets,    glob:assetPath, params:['server/assets', onComplete]}
+    {meth:copyImages,    glob:assetPath}
+    {meth:copyYaml,      glob:yamlPath}
   ]
 
   # createWatcher = (item, params)-> watch( { glob:item.glob }, => item.meth.apply(null, ->).pipe( livereload() ) )
