@@ -6,7 +6,7 @@ window.articleGroupData =
   ]
   articles : [
     {href: "/ruby/rails/getting-started", title: "Getting Started"}
-    {href: "/ruby/rails/connecting-a-database", title: "Connecting a database"}
-    {href: "/ruby/rails/preparing-for-production", title: "Preparing for production"}
-    {href: "/ruby/rails/launching-your-application", title: "Launching your application"}
+    {href: "/ruby/rails/connect-a-database", title: "Connect a database"}
+    {href: "/ruby/rails/prepare-for-production", title: "Prepare for production"}
+    {href: "/ruby/rails/launch-your-application", title: "Launch your application"}
   ]
