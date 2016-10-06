@@ -1,4 +1,4 @@
 documentation: /some/link/to/docs
 boxfile: |
-  data.mongo :
-    image : nanobox/mongodb
+  data.storage:
+    image: nanobox/unfs

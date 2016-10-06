@@ -1,5 +1,5 @@
 documentation: /some/link/to/docs
+description: 'Add the following snippet to your boxfile.yml and redeploy to create a ruby runtime'
 boxfile: |
-  # /boxfile.yml
-  data.db :
-    image : nanobox/mongodb
+  code.build:
+    engine: ruby
