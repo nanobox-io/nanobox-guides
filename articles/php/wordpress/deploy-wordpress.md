@@ -58,6 +58,8 @@ With your production app up and running, you can import your database and upload
 [Importing Data](/php/wordpress/data-storage/importing-data.html#importing-data-into-a-production-database)  
 [Importing Uploads](/wordpress/data-storage/importing-uploads.html)
 
+*If importing data, be sure to [update your baseurl in your database](/php/wordpress/data-storage/importing-data.html#update-your-wordpress-baseurl).*
+
 ## Enjoy Your Live WordPress App
 Congratulations. Your WordPress app is now live. The here's a few next steps you may want to go through:
 

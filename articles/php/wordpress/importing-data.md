@@ -63,7 +63,7 @@ $ nanobox tunnel data.db
 
 To view your tunnel connection credentials, go to your dashboard and click the "Connect" button below your database component. *In a new app, your database will be nested under "App Components"*
 
-![Tunnel Credentials](wordpress-tunnel-credentials.png)
+![Tunnel Credentials](/assets/php/wordpress/wordpress-tunnel-credentials.png)
 
 ### Connect to MySQL Using the Tunnel Credentials
 Use the credentials provided in your dashboard and the port on which the tunnel is listening to connect with your MySQL client of choice to import your data. These include, but are not limited to, the MySQL CLI, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.

@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "WordPress"
+    informalName = "WordPress"
+    icon         = "wordpress"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"First Steps",   group:"wordpress/first-steps"},
+      {title:"Next Steps",    group:"wordpress/next-steps,shared/next-steps"},
+      {title:"Production",    group:"wordpress/production,shared/production"},
+      {title:"Going Further", group:"shared/going-further"},
+    ]
+    requiredComponents = [
+      {name:'php', icon:'php', href:'#'},
+      {name:'MySQL', icon:'mysql', href:'#'},
+      {name:'Storage', icon:'storage', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Redis',   icon:'redis',    href:'#'}
+    ]
