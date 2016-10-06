@@ -1,0 +1,5 @@
+title: Rails specific thing
+breadCrumb:
+  - {title: /ruby/rails, href: /ruby/rails/rails-specific-thing}
+articles:
+  - {href: /ruby/rails/rails-specific-thing, title: Rails specific thing}
