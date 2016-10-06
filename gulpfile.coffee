@@ -69,7 +69,6 @@ html = (cb)->
     .on 'end', ()->
       livereload.reload()
       console.log "           (Reloaded all html files)"
-
       cb()
 
 jadeTemplates = (cb)->
