@@ -29,6 +29,7 @@
 	.st23{fill:#E1E5E8;}
 	.st24{fill:#E5EAED;}
 	.st25{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st26{fill:none;stroke:#7B8185;stroke-width:1.4;stroke-miterlimit:10;}
 </style>
 <g id="logo_x60_19x33">
 	<polygon class="st0" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/>
@@ -121,5 +122,9 @@
 		<polygon id="_x3E_l" class="st23" points="99.657,58.58 87.393,52.257 87.393,61.702 99.657,67.973 		"/>
 		<polyline id="_x3E_line" class="st25" points="109.322,47.81 0.5,105.061 0.5,124.817 		"/>
 	</g>
+</g>
+<g id="card-x_x60_17x17">
+	<line class="st26" x1="0.495" y1="0.495" x2="15.948" y2="15.948"/>
+	<line class="st26" x1="15.948" y1="0.495" x2="0.495" y2="15.948"/>
 </g>
 </svg>

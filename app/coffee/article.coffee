@@ -16,7 +16,7 @@ class Article
   buildRelatedPagesNav : () ->
     store = {}
     $.when(
-      nanobox.getYaml( "/article-groups/#{@clusters}.yml", null, (yml)=>
+      nanobox.getYaml( "/yaml/article-groups/#{@clusters}.yml", null, (yml)=>
         @articleGroupData = yml
       )
     ).then ()=>

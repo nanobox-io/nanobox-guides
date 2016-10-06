@@ -1,5 +1,3 @@
-$ruby-color                          : #EF3942;
-
 @mixin languageBox($class, $color) {
   &.#{$class}      {
     .line     {stroke:$color}
@@ -9,12 +7,14 @@ $ruby-color                          : #EF3942;
   }
 }
 
+@mixin main-title(){font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #BAC8CF; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
+
 .article-page           {
   &.framework           {max-width:$app-width; margin:0 auto; padding-top:30px;
     .main               {padding:0;
-      > .title          {margin:0 auto; display:flex; flex-direction: column; align-items: center; background:#EBEFF2; padding: 40px 0;
+      > .title          { margin:0 auto; display:flex; flex-direction: column; align-items: center; background:#EBEFF2; padding: 40px 0;
         .icon           {width:75px; }
-        .framework      {font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #BAC8CF; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
+        .framework      {@include main-title;}
         .sub            {color:#5A7B8F; font-style:italic; font-wdith: $semibold; font-size:17px; margin-top:10px; }
       }
     }
@@ -27,7 +27,7 @@ $ruby-color                          : #EF3942;
     }
   }
 
-  .left                 {
+  .left                 {position:relative;
     .map                {max-width:230px; margin:40px auto 0;
       .description      {color:#809CAD; font-size:14px; font-style:italic; font-weight:$semibold; text-align:center; }
       svg#framework-map {margin:20px 0 6px 14px;
@@ -44,15 +44,28 @@ $ruby-color                          : #EF3942;
         }
       }
       .components       {
-        .component      {display:flex; align-items: center; margin-bottom:6px;
+        .component      {display:flex; align-items: center; margin-bottom:6px; cursor:pointer;
           .icon         {width:30px;}
           .txt          {font-weight:bold; text-transform: uppercase; color:#285875; font-size:12px; margin-left:13px; margin-top:-4px; }
         }
         .header         {color:#809CAD; font-size:12px; text-transform:uppercase; font-weight:$bold; letter-spacing: 0.06em; border-bottom:solid 1px #BAC8CF; margin:30px 0 12px; padding-bottom:5px; }
       }
-      .show-all         {font-size:13px; color:#1884D6; font-style:italic; font-weight:$semibold; cursor:pointer;
-        &:before        {content : "+"; font-style:normal; margin-right:5px; text-decoration:none; }
-        &:hover         {text-decoration:underline;}
+      .show-all         {font-size:13px; color:#1884D6; font-style:italic; font-weight:$semibold; cursor:pointer; display: flex;
+        &:before        {content : "+"; font-style:normal; margin-right:5px; }
+        &:hover         {
+          .txt          {text-decoration:underline; }
+        }
+      }
+    }
+    .service-card   {padding:20px; position:absolute; top:120px; left:30px; width:295px; background:white; display:flex; align-items: center; flex-direction:column; box-shadow: 0px 2px 8px 3px rgba(#000, 0.03);
+      > .icon       {width:65px; margin-top:-43px;}
+      .close        {position:absolute; top:0px; right:0px; cursor:pointer; padding:10px;}
+      .main-title   {@include main-title; font-size:25px}
+      .blurb        {color:#94ACBA; font-size:16px; font-weight:$semibold; font-style:italic; line-height: 1.5; margin:25px 0 10px; padding:10px; }
+      pre           {width: 100%; padding: 14px 15px; }
+      .guide        {display:flex; flex-direction: column; align-items:center; margin:15px 0 8px 0;
+        .small-icon {width:30px;}
+        .txt        {color:#0079D6; font-weight:$semibold; font-style:italic; text-align:center; font-size:14px; }
       }
     }
   }

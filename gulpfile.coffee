@@ -45,7 +45,7 @@ cssStagePath      = 'stage/stage.scss'
 coffeePath        = 'app/coffee/**/*.coffee'
 assetPath         = ['app/images/**/*', 'app/fonts/*']
 miscJsPath        = 'app/js/*'
-yamlPath          = ['articles/article-groups/**/*.yml', 'articles/article-groups/**/*.yaml']
+yamlPath          = 'articles/**/*.yml'
 svgPath           = ['lib/assets/core-styles/svg/compiled/*.svg','app/assets/compiled/*.svg']
 htaccessPath      = 'app/misc/.htaccess'
 
@@ -128,8 +128,9 @@ copyFilesToBuild = ->
   gulp.src( './server/css/main.css' ).pipe gulp.dest('./rel/')
 
 copyYaml = (cb)->
+  console.log 'copy yml'
   gulp.src yamlPath
-    .pipe gulp.dest('server/article-groups')
+    .pipe gulp.dest('server/yaml')
     .on('end', cb)
 
 pushViaGit = ->
@@ -218,9 +219,9 @@ compileFiles = (doWatch=false, cb) ->
     {meth:miscJs,        glob:miscJsPath}
     {meth:jadeTemplates, glob:templatePath}
     {meth:html,          glob:[articlePath, jadePath], dontLiveReload:true}
+    {meth:copyYaml,      glob:yamlPath}
     {meth:parseSVG,      glob:svgPath}
     {meth:copyImages,    glob:assetPath}
-    {meth:copyYaml,      glob:yamlPath}
   ]
 
   # createWatcher = (item, params)-> watch( { glob:item.glob }, => item.meth.apply(null, ->).pipe( livereload() ) )
