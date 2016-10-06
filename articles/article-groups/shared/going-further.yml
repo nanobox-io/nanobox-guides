@@ -1,0 +1,6 @@
+title: Going Further
+breadCrumb:
+  - {title: going-further, href: /going-further}
+articles:
+  - {href: /going-further/manage-platform-components, title: Manage platform components}
+  - {href: /going-further/optimize-your-environment, title: Optimize your environment}
