@@ -3,14 +3,16 @@
   img.shadow-icon(data-src="framework-map")
   .components
     each component in requiredComponents
-      .component
+      .component(id="#{component.icon}")
         .icon
           img.shadow-icon(data-src="hex-#{component.icon}" scalable="true")
         .txt= component.name
-    .header Additional Components
-    each component in optionalComponents
-      .component
-        .icon
-          img.shadow-icon(data-src="hex-#{component.icon}" scalable="true")
-        .txt= component.name
-    .show-all Show All
+    if optionalComponents.length > 0
+      .header Additional Components
+      each component in optionalComponents
+        .component(id="#{component.icon}")
+          .icon
+            img.shadow-icon(data-src="hex-#{component.icon}" scalable="true")
+          .txt= component.name
+      .show-all 
+        .txt Show All

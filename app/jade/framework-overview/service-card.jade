@@ -1,0 +1,13 @@
+.service-card
+  .close
+    img.shadow-icon(data-src="card-x")
+  .icon
+    img.shadow-icon(data-src="hex-#{service}" scalable="true")
+  .main-title= name
+  .blurb Add the following snippet to your boxfile.yml and redeploy to create a #{service} component
+  pre.lang-yaml
+    code= boxfile
+  a(href="#{documentation}").guide
+    .small-icon
+      img.shadow-icon(data-src="hex-#{service}" scalable="true")
+    .txt View Complete #{name} Documentation and Options

@@ -3,6 +3,10 @@ extends ../templates/base
 block js
   script(src="/js/framework-overview.js")
   script.
+    //- Don't fail if these vals aren't set...
+    var requiredComponents = (requiredComponents === null) ? [] : requiredComponents
+    var optionalComponents = (optionalComponents === null) ? [] : optionalComponents
+    var articleGroups      = (articleGroups === null)      ? [] : articleGroups
     article = new FrameworkOverview(requiredComponents, optionalComponents, "#{informalName}", articleGroups )
     
 block content
