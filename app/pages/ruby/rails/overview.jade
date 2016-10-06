@@ -9,12 +9,6 @@ block configParams
 block jsParams
   script.
     //- This is javascript
-    articleGroups = [
-      {title:"First Steps",   group:"rails"},
-      {title:"Next Steps",    group:"shared/next-steps"},
-      {title:"Production",    group:"shared/production,rails/rails-specific-production-thing"},
-      {title:"Going Further", group:"shared/going-further"},
-    ]
     requiredComponents = [
       {name:'ruby', icon:'ruby', href:'#'},
       {name:'PostgreSQL', icon:'postgres', href:'#'}
@@ -22,5 +16,11 @@ block jsParams
     optionalComponents = [
       {name:'Mondo DB',   icon:'mongo',    href:'#'},
       {name:'MySQL',      icon:'mysql',    href:'#'},
-      {name:'PostgreSQL', icon:'postgres', href:'#'}
     ]
+    articleGroups = [
+      {title:"First Steps",   group:"shared/first-steps,rails/first-steps"},
+      {title:"Next Steps",    group:"rails/next-steps,shared/next-steps"},
+      {title:"Production",    group:"rails/production,shared/production"},
+      {title:"Going Further", group:"rails/going-further,shared/going-further"}
+    ]
+    

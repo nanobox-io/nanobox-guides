@@ -1,6 +1,2 @@
 title: Next Steps
-breadCrumb:
-  - {title: next-steps, href: /next-steps}
 articles:
-  - {href: /next-steps/add-custom-environment-variables, title: Add custom environment variables}
-  - {href: /next-steps/add-encryption, title: Add SSL/TLS encryption}

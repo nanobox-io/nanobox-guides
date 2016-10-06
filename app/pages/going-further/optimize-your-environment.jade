@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Optimize your Environment"
+    articles = "shared/going-further"
+    icons    = ""
+    
+block markdown
+  include:md /articles/shared/going-further/optimize-your-environment.md

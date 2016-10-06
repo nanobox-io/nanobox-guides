@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Understanding Stats"
+    articles = "shared/going-further"
+    icons    = ""
+    
+block markdown
+  include:md /articles/shared/going-further/understanding-stats.md

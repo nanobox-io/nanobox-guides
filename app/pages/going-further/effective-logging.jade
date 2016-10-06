@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Effective Logging"
+    articles = "shared/going-further"
+    icons    = ""
+    
+block markdown
+  include:md /articles/shared/going-further/effective-logging.md

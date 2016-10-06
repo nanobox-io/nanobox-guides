@@ -1,6 +1,8 @@
 title: Going Further
-breadCrumb:
-  - {title: going-further, href: /going-further}
 articles:
-  - {href: /going-further/manage-platform-components, title: Manage platform components}
-  - {href: /going-further/optimize-your-environment, title: Optimize your environment}
+  - {href: /going-further/manage-platform-components, title: Manage Platform Components}
+  - {href: /going-further/optimize-your-environment, title: Optimize Your Environment}
+  - {href: /going-further/scale-your-app, title: Scale Your Application}
+  - {href: /going-further/understanding-stats, title: Understanding Stats}
+  - {href: /going-further/master-the-boxfile, title: Master the Boxfile}
+  - {href: /going-further/effective-logging, title: Effective Logging}
