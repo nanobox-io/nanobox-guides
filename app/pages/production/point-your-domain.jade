@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Point your domain"
+    articles = "shared/production"
+    icons    = ""
+    
+block markdown
+  include:md /articles/shared/production/point-your-domain.md

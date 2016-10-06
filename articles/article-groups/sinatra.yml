@@ -1,4 +1,4 @@
-title : Sinatra
+title: Sinatra
 breadCrumb:
   - {title: ruby,    href: /ruby/overview}
   - {title: sinatra, href: /ruby/sinatra/getting-started}

@@ -1,4 +1,4 @@
-$ruby-color: #EF3942;
+$ruby-color                          : #EF3942;
 
 @mixin languageBox($class, $color) {
   &.#{$class}      {
@@ -49,6 +49,10 @@ $ruby-color: #EF3942;
           .txt          {font-weight:bold; text-transform: uppercase; color:#285875; font-size:12px; margin-left:13px; margin-top:-4px; }
         }
         .header         {color:#809CAD; font-size:12px; text-transform:uppercase; font-weight:$bold; letter-spacing: 0.06em; border-bottom:solid 1px #BAC8CF; margin:30px 0 12px; padding-bottom:5px; }
+      }
+      .show-all         {font-size:13px; color:#1884D6; font-style:italic; font-weight:$semibold; cursor:pointer;
+        &:before        {content : "+"; font-style:normal; margin-right:5px; text-decoration:none; }
+        &:hover         {text-decoration:underline;}
       }
     }
   }
