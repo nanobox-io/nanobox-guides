@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Mongo Settings"
+    articles = "php"
+    icons    = "php"
+    
+block markdown
+  include:md /articles/php/generic/mongo-settings.md

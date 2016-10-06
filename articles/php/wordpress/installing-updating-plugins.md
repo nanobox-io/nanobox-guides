@@ -35,6 +35,6 @@ Network directories are stored in your persistent network file-storage and are s
 Requests to network directories must traverse your app's network, adding latency to every request. While this latency is minimal, it can add up very quickly.
 
 ### Bytecode Caching
-If you're using a bytecode cache like xCache or OPcache, PHP will cache it's first response it gets back from a file in your filesystem. If that file gets updated, PHP will never see it since a response is already cached.
+If you're using a bytecode cache like xCache or OPcache, PHP will cache its first response it gets back from a file in your filesystem. If that file gets updated, PHP will never see it since a response is already cached.
 
 If you're running in a multi-node web component, things can get even more complicated. Each node will store its own bytecode cache, potentially resulting in out-of-sync nodes serving inconsistent results.
