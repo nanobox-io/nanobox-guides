@@ -28,3 +28,4 @@ articles:
           - {href: /php/config/advanced/opcache-settings, title: Opcache Settings}
           - {href: /php/config/advanced/php-fpm-settings, title: PHP-FPM Settings}
           - {href: /php/config/advanced/xcache-settings, title: XCache Settings}
+  - {href: /php/nodejs-npm, title: Using Node.js & npm}
