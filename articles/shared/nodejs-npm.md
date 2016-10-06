@@ -21,6 +21,9 @@ code.build:
     - npm install
 ```
 
+#### Using a Specific Version of Node.js
+Specifying the `nodejs` package in your boxfile.yml will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions in the [Node.js Settings guide](#).
+
 ## Build a New Runtime
 With these options added to your boxfile.yml, build a new runtime to install the Node.js package and run npm.
 

@@ -40,6 +40,8 @@
             @include languageBox(mongo,    #5ECC81);
             @include languageBox(mysql,    #1A93DB);
             @include languageBox(postgres, #3D8EC9);
+            @include languageBox(php,      #5b649a);
+            @include languageBox(storage,  #9dc6e4);
           }
         }
       }

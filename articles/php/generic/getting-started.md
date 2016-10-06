@@ -4,7 +4,7 @@ Creating a PHP environment and app with Nanobox is done in a few simple steps.
 
 1. [Add a boxfile.yml](#add-a-boxfile-yml)
 2. [Configure PHP](#configure-php)
-3. Build Your App
+3. [Up and Running](#up-and-running)
 
 ## Add a boxfile.yml
 The [`boxfile.yml`](https://docs.nanobox.io/boxfile/) is a yaml config file used to configure your app's runtime and environment. It should be added to the root of your project.

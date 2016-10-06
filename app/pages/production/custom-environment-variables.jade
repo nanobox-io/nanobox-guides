@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Custom Environment Variables"
+    articles = "shared"
+    icons    = ""
+    
+block markdown
+  include:md /articles/shared/production/custom-environment-variables.md
