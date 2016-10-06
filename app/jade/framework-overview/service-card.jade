@@ -4,7 +4,7 @@
   .icon
     img.shadow-icon(data-src="hex-#{service}" scalable="true")
   .main-title= name
-  .blurb Add the following snippet to your boxfile.yml and redeploy to create a #{service} component
+  .blurb= description 
   pre.lang-yaml
     code= boxfile
   a(href="#{documentation}").guide

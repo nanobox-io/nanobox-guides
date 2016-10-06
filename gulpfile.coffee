@@ -128,7 +128,6 @@ copyFilesToBuild = ->
   gulp.src( './server/css/main.css' ).pipe gulp.dest('./rel/')
 
 copyYaml = (cb)->
-  console.log 'copy yml'
   gulp.src yamlPath
     .pipe gulp.dest('server/yaml')
     .on('end', cb)

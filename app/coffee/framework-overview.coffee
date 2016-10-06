@@ -23,10 +23,13 @@ class FrameworkOverview
       @showServiceCard $component.attr('id'), $('.txt', $component).text()
 
   showServiceCard : (serviceId, name) ->
-    nanobox.getYaml "/yaml/services/snippets/#{serviceId}.yml", null, (yaml)=>
+    nanobox.getYaml "/yaml/service-snippets/#{serviceId}.yml", null, (yaml)=>
       if @$serviceCard? then @$serviceCard.remove()
+
       yaml.service = serviceId
       yaml.name    = name
+      if !yaml.description? then yaml.description = "Add the following snippet to your boxfile.yml and redeploy to create a #{yaml.service} component"
+
       @$serviceCard = $ jadeTemplate['framework-overview/service-card']( yaml )
       @$serviceCard.css opacity:0
       @$serviceCard.velocity {opacity:1}, {duration:200}
