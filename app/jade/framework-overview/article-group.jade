@@ -1,4 +1,8 @@
-.group
-  .title= title
-  each article in data.articles
+if !isChild
+  .group(id="group#{info.index}")
+    .title= info.title
+    each article in info.data.articles
+      a(href="#{article.href}")= article.title
+else
+  each article in info.data.articles
     a(href="#{article.href}")= article.title
