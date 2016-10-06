@@ -1,14 +1,55 @@
-.framework        {max-width:$app-width; margin:0 auto; padding-top:30px;
-  > .title        {margin:0 auto; display:flex; flex-direction: column; align-items: center;
-    .icon         {width:75px; }
-    .framework    {font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #BAC8CF; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
-    .sub          {color:#5A7B8F; font-style:italic; font-wdith: $semibold; font-size:17px; margin-top:10px; }
+$ruby-color: #EF3942;
+
+@mixin languageBox($class, $color) {
+  &.#{$class}      {
+    .line     {stroke:$color}
+    .t        {fill:$color}
+    .r        {fill:darken($color, 1%)}
+    .l        {fill:darken($color, 5%)}
+  }
+}
+
+.article-page           {
+  &.framework           {max-width:$app-width; margin:0 auto; padding-top:30px;
+    .main               {padding:0;
+      > .title          {margin:0 auto; display:flex; flex-direction: column; align-items: center; background:#EBEFF2; padding: 40px 0;
+        .icon           {width:75px; }
+        .framework      {font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #BAC8CF; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
+        .sub            {color:#5A7B8F; font-style:italic; font-wdith: $semibold; font-size:17px; margin-top:10px; }
+      }
+    }
+
+    .article-groups     {display:flex; margin-top:20px; justify-content: space-between; padding:30px; flex-wrap: wrap;
+      .group            {width:45%; display:flex; flex-direction: column; align-items: flex-start; margin-bottom:50px;
+        .title          {font-size:20px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.04em; border-bottom: solid 1px #BAC8CF; width:100%; text-align: left; margin-bottom:10px; padding-bottom:7px; }
+        a               {font-style:italic; color:#0079D6; font-size:15px; font-weight: $semibold; padding:2px 0;}
+      }
+    }
   }
 
-  .article-groups {display:flex; margin-top:60px; justify-content: space-between;
-    .group        {width:30.5%; display:flex; flex-direction: column; align-items: flex-start;
-      .title      {font-size:20px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.04em; border-bottom: solid 1px #BAC8CF; width:100%; text-align: left; margin-bottom:10px; padding-bottom:7px; }
-      a           {font-style:italic; color:#0079D6; font-size:15px; font-weight: $semibold; padding:2px 0;}
+  .left                 {
+    .map                {max-width:230px; margin:40px auto 0;
+      .description      {color:#809CAD; font-size:14px; font-style:italic; font-weight:$semibold; text-align:center; }
+      svg#framework-map {margin:20px 0 6px 14px;
+        .box            {
+          .line         {opacity:0;}
+          &.active      {
+            .line       {opacity:1;}
+            @include languageBox(ruby,     #DB2317);
+            @include languageBox(redis,    #DB2317);
+            @include languageBox(mongo,    #5ECC81);
+            @include languageBox(mysql,    #1A93DB);
+            @include languageBox(postgres, #3D8EC9);
+          }
+        }
+      }
+      .components       {
+        .component      {display:flex; align-items: center; margin-bottom:6px;
+          .icon         {width:30px;}
+          .txt          {font-weight:bold; text-transform: uppercase; color:#285875; font-size:12px; margin-left:13px; margin-top:-4px; }
+        }
+        .header         {color:#809CAD; font-size:12px; text-transform:uppercase; font-weight:$bold; letter-spacing: 0.06em; border-bottom:solid 1px #BAC8CF; margin:30px 0 12px; padding-bottom:5px; }
+      }
     }
   }
 }

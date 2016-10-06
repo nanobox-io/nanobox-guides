@@ -1,1 +1,24 @@
 extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Ruby on Rails"
+    informalName = "rails"
+    icon         = "rails"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"First Steps", group:"rails"},
+      {title:"Next Steps",  group:"wordpress"},
+      {title:"Production",  group:"sinatra"}
+    ]
+    requiredComponents = [
+      {name:'ruby', icon:'ruby', href:'#'},
+    ]
+    optionalComponents = [
+      {name:'Mondo DB',   icon:'mongo',    href:'#'},
+      {name:'MySQL',      icon:'mysql',    href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'}
+    ]

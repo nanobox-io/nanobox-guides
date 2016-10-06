@@ -8,8 +8,6 @@ mixin createArticles(title, articles, pageTitle)
 
 block js
   block configParams
-  //- Load in a custom article group
-  script(src="/js/article-groups/#{articles}.js")
 
   script.
     article = new Article("#{title}", "#{articles}", "#{icons}")
@@ -17,7 +15,7 @@ block js
 
 block content
   .article-page
-    .left-nav#left-nav
+    .left#left-nav
       .article-nav
         .title
         .articles

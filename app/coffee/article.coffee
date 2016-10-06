@@ -16,7 +16,7 @@ class Article
   buildRelatedPagesNav : () ->
     store = {}
     $.when(
-      nanobox.getYaml( "/article-groups/#{@clusters}.yml", (yml)=>
+      nanobox.getYaml( "/article-groups/#{@clusters}.yml", null, (yml)=>
         @articleGroupData = yml
       )
     ).then ()=>
@@ -26,7 +26,6 @@ class Article
       $(".title",    @$leftNav).text @articleGroupData.title
       $(".articles", @$leftNav).append $node
       $(".child-toggle", $node).on 'click', (e)->
-        # console.log $(e.currentTarget).parent().text()
         $($(e.currentTarget).parent()).toggleClass 'open'
         $(e.currentTarget).toggleClass 'open'
 
