@@ -1,0 +1,4 @@
+articles:
+  - {href: /php/laravel/getting-started, title: Laravel}
+  - {href: /php/codeigniter/getting-started, title: CodeIgniter}
+  - {href: /php/wordpress/overview, title: WordPress}

@@ -1,25 +1,28 @@
-extends /app/pages/templates/article
+extends /app/pages/templates/framework-landing  
 
 block configParams
   -
-    title    = "Overview"
-    articles = "php"
-    icons    = "php"
+    formalName   = "PHP"
+    informalName = "PHP"
+    icon         = "php"
 
-block custom
-  h1 PHP
-  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
-  h4 Frameworks
-  .frameworks
-    a.hex(href="/php/laravel/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-laravel" scalable='true')
-      .txt Laravel
-    a.hex(href="/php/codeigniter/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-codeigniter" scalable='true')
-      .txt CodeIgniter
-    a.hex(href="/php/wordpress/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-wordpress" scalable='true')
-      .txt WordPress
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"First Steps",   group:"php/first-steps"},
+      {title:"Next Steps",    group:"php/next-steps,shared/next-steps"},
+      {title:"Production",    group:"php/production,shared/production"},
+      {title:"Going Further", group:"shared/going-further"},
+      {title:"Frameworks",    group:"php/frameworks"}
+    ]
+    requiredComponents = [
+      {name:'php', icon:'php', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MySQL',      icon:'mysql',    href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'MongoDB',    icon:'mongo',    href:'#'},
+      {name:'Redis',      icon:'redis',    href:'#'},      
+      {name:'Memcached',  icon:'memcached',href:'#'}
+    ]
