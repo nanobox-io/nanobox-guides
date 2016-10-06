@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Download Nanobox"
+    articles = "shared/first-steps"
+    icons    = ""
+    
+block markdown
+  include:md /articles/shared/first-steps/download-nanobox.md
