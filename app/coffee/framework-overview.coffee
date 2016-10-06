@@ -18,27 +18,18 @@ class FrameworkOverview
 
   loadArticleGroups : (articles) ->
     deffereds        = []
-    for article in articles
+    for article, i in articles
+      article.index = i
       nanobox.getYaml( "/article-groups/#{article.group}.yml", article, (yml, baseArticle)=>
         baseArticle.data = yml
         $node = $ jadeTemplate['framework-overview/article-group']( baseArticle )
+        # Make sure the articles are ordered no matter wha order tyeh are loaded
+        $node.css order:baseArticle.index
         $("#article-groups").append $node
         # Only applicable to local testing
         if window.isLocal
           window.localizeLinks()
       )
-
-
-    # for article in articles
-    #   deffereds.push( nanobox.getYaml( "/article-groups/#{article.group}.yml", article, (yml, baseArticle)=>
-    #     article.data = yml
-    #   ))
-    # $.when.apply($, deffereds)
-    # .then ()=>
-    #   console.log articles
-    #   for article in articles
-    #     $node = $ jadeTemplate['framework-overview/article-group']( article )
-    #     $("#article-groups").append $node
 
 
 window.FrameworkOverview = FrameworkOverview
