@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Connect to PostgreSQL"
+    articles = "postgresql"
+    icons    = "postgres"
+    
+block markdown
+  include:md /articles/postgresql/connect.md

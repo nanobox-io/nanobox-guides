@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Redis Config Options"
+    articles = "redis"
+    icons    = "redis"
+    
+block markdown
+  include:md /articles/redis/configure.md

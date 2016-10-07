@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Connect to Redis"
+    articles = "redis"
+    icons    = "redis"
+    
+block markdown
+  include:md /articles/redis/connect.md

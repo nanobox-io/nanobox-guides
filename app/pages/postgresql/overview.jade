@@ -1,0 +1,19 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "PostgreSQL"
+    informalName = "Postgres"
+    icon         = "postgres"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"Getting Started", group:"postgresql/getting-started"},
+      {title:"Configuration",   group:"postgresql/configuration"},
+      {title:"Managing",        group:"postgresql/manage"}
+    ]
+    requiredComponents = [
+      {name:'PostgreSQL', icon:'postgres', href:'#'}
+    ]

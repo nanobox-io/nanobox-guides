@@ -7,23 +7,18 @@ nanobox dev info
 
 # ...
 
-data.mysql
-  IP      : 192.168.99.76
+data.postgres
+  IP      : 192.168.99.77
   User(s) :
-    root - kLuuZYMVqZ
-    nanobox - rC9ETppTfX
+    nanobox - Xz6leSMkFb
 
 # ...
 ```
 
 ## Use Your Client of Choice to Connect
-Use the IP of your PostgreSQL component with either the root or nanobox user/password provided in the info output to connect with your MySQL client or GUI of choice.
+Use the IP of your PostgreSQL component with either the root or nanobox user/password provided in the info output to connect with your PostgreSQL client or GUI of choice.
 
 Other credentials you may need to establish the connection:
 
-**Port:** `3306`  
+**Port:** `5432`  
 **Name:** `gonano`
-
-Here's an example connection with [Sequel Pro](https://www.sequelpro.com/):
-
-![Sequel Pro Local Connection Example](/assets/mysql/sequel-pro-local.png)

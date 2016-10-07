@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Creating a PostgreSQL Database"
+    articles = "postgresql"
+    icons    = "postgres"
+    
+block markdown
+  include:md /articles/postgresql/create.md

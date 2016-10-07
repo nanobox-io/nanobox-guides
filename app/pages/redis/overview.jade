@@ -1,0 +1,19 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Redis"
+    informalName = "Redis"
+    icon         = "redis"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"Getting Started", group:"redis/getting-started"},
+      {title:"Configuration",   group:"redis/configuration"},
+      {title:"Managing",        group:"redis/manage"}
+    ]
+    requiredComponents = [
+      {name:'Redis', icon:'redis', href:'#'}
+    ]

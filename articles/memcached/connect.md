@@ -3,7 +3,7 @@
 When using Nanobox, projects are meant to be both portable and secure. In order for your project to be both, you should use environment variables in your Memcached connections.
 
 ## Use Environment Variables to Connect
-In your app's connection to Memcached, used the auto-generated HOST environment variable and the default Memcached port.
+In your app's connection to Memcached, use the auto-generated HOST environment variable and the default Memcached port.
 
 ```php
 # Example PHP connection

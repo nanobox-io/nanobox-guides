@@ -23,7 +23,7 @@ data.mysql:
 ```
 
 ## Build & Deploy
-With your MySQL component included in your boxfile.yml, build a new runtime to apply the changes, then deploy your newly built runtime into your dev, sim, or production environment(s). In the deploy process, your MySQL component will be created.
+With your MySQL component included in your boxfile.yml, build a new runtime to apply the changes, then deploy your newly built runtime into your dev, sim, or production environment(s). In the deploy process, your MySQL database will be created.
 
 ```bash
 # build a new runtime

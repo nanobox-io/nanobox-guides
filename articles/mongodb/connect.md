@@ -3,7 +3,7 @@
 When using Nanobox, projects are meant to be both portable and secure. In order for your project to be both, you should use environment variables in your MongoDB connections.
 
 ## Use Environment Variables to Connect
-In your app's connection to MongoDB, used the auto-generated environment variables.
+In your app's connection to MongoDB, use the auto-generated environment variables.
 
 ```ruby
 # ruby connection example
@@ -26,7 +26,7 @@ The port will always be the default MongoDB port `27017`.
 The database name is provided by Nanobox and will always be `gonano`.
 
 #### Variable Naming Convention
-Environment variable names/keys are generated using the ID of the MongoDB component in your boxfile.yml - data.memcached, data.whatever, etc. Letters are capitalized and special characters are replaced with underscores. For example:
+Environment variable names/keys are generated using the ID of the MongoDB component in your boxfile.yml - data.mongo, data.whatever, etc. Letters are capitalized and special characters are replaced with underscores. For example:
 
 ```yaml
 data.mongodb => DATA_MONGODB

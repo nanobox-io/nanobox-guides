@@ -9,7 +9,7 @@ $ nanobox tunnel data.mongodb
 The tunnel command will output the port to which it is bound. Since it's a local port, you'll need to use `127.0.0.1` as your host.
 
 ## Use Your Client of Choice to Connect
-Use tunnel-bound port on your local machine to connect with your Mongo client or GUI of choice. Credentials needed to establish the connection:
+Use the tunnel-bound port on your local machine to connect with your Mongo client or GUI of choice. Credentials needed to establish the connection:
 
 **Host:** `127.0.0.1`  
 **Port:** *Shown in tunnel output*  

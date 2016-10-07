@@ -3,7 +3,7 @@
 When using Nanobox, projects are meant to be both portable and secure. In order for your project to be both, you should use environment variables in your MySQL connections.
 
 ## Use Environment Variables to Connect
-In your app's connection to MySQL, used the auto-generated environment variables.
+In your app's connection to MySQL, use the auto-generated environment variables.
 
 ```php
 # php connection example
@@ -28,7 +28,7 @@ The port will always be the default MySQL port `3306`.
 The database name is provided by Nanobox and will always be `gonano`.
 
 #### Variable Naming Convention
-Environment variable names/keys are generated using the ID of the MySQL component in your boxfile.yml - data.memcached, data.whatever, etc. Letters are capitalized and special characters are replaced with underscores. For example:
+Environment variable names/keys are generated using the ID of the MySQL component in your boxfile.yml - data.mysql, data.whatever, etc. Letters are capitalized and special characters are replaced with underscores. For example:
 
 ```yaml
 data.mysql  => DATA_MYSQL

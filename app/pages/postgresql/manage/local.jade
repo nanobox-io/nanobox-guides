@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Managing Local Data"
+    articles = "postgresql"
+    icons    = "postgres"
+    
+block markdown
+  include:md /articles/postgresql/manage-local.md
