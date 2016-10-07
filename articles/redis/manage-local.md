@@ -14,7 +14,7 @@ data.redis
 ```
 
 ## Use Your Client of Choice to Connect
-Use the IP of your Redis component with either the root or nanobox user/password provided in the info output to connect with your Redis client or GUI of choice.
+Use the IP of your Redis component provided in the info output to connect with your Redis client or GUI of choice.
 
 Other credentials you may need to establish the connection:
 

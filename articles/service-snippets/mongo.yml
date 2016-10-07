@@ -1,4 +1,4 @@
-documentation: /mongodb/create.html
+documentation: /mongodb/overview.html
 boxfile: |
   data.mongodb:
     image: nanobox/mongodb

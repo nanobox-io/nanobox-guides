@@ -6,7 +6,11 @@ To establish a secure remote connection to your production component, use the Na
 $ nanobox tunnel data.memcached
 ```
 
-The tunnel command will output the port to which it is bound. Since it's a local port, you'll need to use `127.0.0.1` as your host.
+The tunnel command will output the port to which it is bound. Connection credentials for the tunnel are provided in your app dashboard under the "Connect" section of your Memcached component.
+
+![Memcached Tunnel Connection Credentials](/assets/memcached/tunnel-creds.png)
+
+**Note:** Because the tunnel is bound to a port on your local machine, `127.0.0.1` is the host to which you connect.
 
 ## Use telnet to Connect
 Use `telnet` to connect to the tunnel-bound port on your local machine. You can then use the [telnet commands](https://github.com/memcached/memcached/wiki/Commands) to manage your data.

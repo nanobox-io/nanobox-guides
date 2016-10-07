@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Managing Local Storage Components"
+    articles = "storage"
+    icons    = "storage"
+    
+block markdown
+  include:md /articles/storage/manage-local.md

@@ -1,0 +1,18 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Storage"
+    informalName = "storage"
+    icon         = "storage"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"Getting Started", group:"storage/getting-started"},
+      {title:"Managing",        group:"storage/manage"}
+    ]
+    requiredComponents = [
+      {name:'Storage', icon:'storage', href:'#'}
+    ]

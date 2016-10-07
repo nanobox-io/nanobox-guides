@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Creating a Storage Component"
+    articles = "storage"
+    icons    = "storage"
+    
+block markdown
+  include:md /articles/storage/create.md
