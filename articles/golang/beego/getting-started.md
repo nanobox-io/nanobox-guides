@@ -21,12 +21,11 @@ mkdir nanobox-beego
 Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
+# because we're using beego we need to tell nanobox that we need nodejs in our
+# container. We also need to tell go where our package is located; since we want
+# to use this projects codebase we specify "nanobox-beego"
 code.build:
-
-  # because we're using beego we need to tell nanobox that we need nodejs in our container
   engine: "golang"
-
-  # we need to tell go where our package is located; since we want to use this projects codebase we specify "."
   config:
     package: "nanobox-beego"
 ```
@@ -40,11 +39,11 @@ Part of what makes nanobox so useful is you don't have to have beego installed o
 First we need to get a development environment running:
 
 ```bash
-# build the code
+# build a golang runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the golang runtime into the dev environment
+nanobox dev deploy
 
 # console into the dev environment
 nanobox dev console
@@ -71,13 +70,13 @@ httpport = 8080
 With the application configured the last thing to do is run it with nanobox. From the project directory run the following commands:
 
 ```bash
-# build the code
+# build a golang runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the golang runtime into the dev environment
+nanobox dev deploy
 
-# add a convenient way to access your app from the browser
+# add a convenient way to access your app from a browser
 nanobox dev dns add beego.nanobox.dev
 
 # console into the dev environment
@@ -92,7 +91,7 @@ Visit the app from your favorite browser at `beego.nanobox.dev:8080`
 ## Now what?
 Now that you have an application running with nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Connecting to a database
-* Adding components
-* Preparing for production
-* Launching your app
+* [Connect a database](connect-a-database.html)
+* [Prepare for production](prepare-for-production.html)
+* [Launch your app](launch-your-app.html)
+* [Back to rails overview](overview.html)

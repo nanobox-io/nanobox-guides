@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Prepare for production"
+    articles = "python/django"
+    icons    = "python,django"
+    
+block markdown
+  include:md /articles/python/django/prepare-for-production.md

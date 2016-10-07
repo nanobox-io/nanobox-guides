@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Connect a Database"
+    articles = "nodejs/ember"
+    icons    = "nodejs,ember"
+    
+block markdown
+  include:md /articles/nodejs/ember/connect-a-database.md

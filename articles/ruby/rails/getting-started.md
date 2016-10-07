@@ -37,11 +37,11 @@ Part of what makes nanobox so useful is you don't have to have rails installed o
 First we need to get a dev environment running:
 
 ```bash
-# build the code
+# build a ruby runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the ruby runtime into the dev environment
+nanobox dev deploy
 
 # console into the dev environment
 nanobox dev console
@@ -74,11 +74,11 @@ end
 With the app configured the last thing to do is run it with nanobox. From the project directory run the following commands:
 
 ```bash
-# build the code
+# build a ruby runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the ruby runtime into the dev environment
+nanobox dev deploy
 
 # add a convenient way to access your app from a browser
 nanobox dev dns add rails.nanobox.dev

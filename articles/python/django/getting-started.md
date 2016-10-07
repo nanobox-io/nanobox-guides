@@ -17,66 +17,48 @@ Decide where you want your project to live and create a folder there
 mkdir nanobox-django
 ```
 
-Create a `Gemfile` at the root of the project that contains the following:
+Create a `requirements.txt` at the root of the project that contains the following:
 
-```ruby
-source "https://rubygems.org"
-
-#
-gem "django"
+```txt
+Django
 ```
 
 #### Add a boxfile.yml
 Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
+# because we're using django we need to tell nanobox that we need ruby in our container
 code.build:
-
-  # because we're using django we need to tell nanobox that we need ruby in our container
-  engine: "ruby"
+  engine: "python"
 ```
 
 ## Application Config
 If you already have an application you'd like to run with nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an application.
 
 #### Create an Application
-At the root of the project create a file named `myapp.rb` with the following:
-
-```ruby
-require "django"
-
-#
-get "/" do
-  "Hello nanobox!"
-end
-```
+WIP
 
 #### Make it Accessible
-Most frameworks by default will bind to localhost, however we need to allow connections from the host into your container. To do this we need to tell django to bind to all available IP's
-
-```ruby
-set :bind, "0.0.0.0"
-set :port, "8080"
-```
+WIP
 
 ## Up and Running
 With the application configured the last thing to do is run it with nanobox. From the project directory run the following commands:
 
 ```bash
-# build the code
+# build a python runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the python runtime into the dev environment
+nanobox dev deploy
 
-# add a convenient way to access your app from the browser
+# add a convenient way to access your app from a browser
 nanobox dev dns add django.nanobox.dev
 
 # console into the dev environment
 nanobox dev console
 
 # run the app
-bundle exec ruby myapp.rb
+python manage.py runserver 0.0.0.0:8080
 ```
 
 Visit the app from your favorite browser at `django.nanobox.dev:8080`
@@ -84,7 +66,7 @@ Visit the app from your favorite browser at `django.nanobox.dev:8080`
 ## Now what?
 Now that you have an application running with nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Connecting to a database
-* Adding components
-* Preparing for production
-* Launching your app
+* [Connect a database](connect-a-database.html)
+* [Prepare for production](prepare-for-production.html)
+* [Launch your app](launch-your-app.html)
+* [Back to rails overview](overview.html)

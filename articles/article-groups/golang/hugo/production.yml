@@ -1,0 +1,3 @@
+title: Hugo
+articles:
+  - {href: /golang/hugo/prepare-for-production, title: Prepare for Production}

@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Sails"
+    informalName = "sails"
+    icon         = "sails"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'nodejs', href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Mongo DB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = [
+      {title:"First Steps",   group:"shared/first-steps,nodejs/sails/first-steps"},
+      {title:"Next Steps",    group:"nodejs/sails/next-steps,shared/next-steps"},
+      {title:"Production",    group:"nodejs/sails/production,shared/production"},
+      {title:"Going Further", group:"nodejs/sails/going-further,shared/going-further"}
+    ]
