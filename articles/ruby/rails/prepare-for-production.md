@@ -33,34 +33,20 @@ web.site:
   start: 'bundle exec rails s'
 ```
 
-#### Build and deploy the sim environment
-Once we've specified our sim environment we need to provision it and deploy it into the sim runtime:
-
-```bash
-# build your new environment
-nanobox build
-
-# deploy the environment to the sim runtime
-nanobox sim deploy
-```
-
 ## Sim: up and running
 With our sim environment created and deployed lets test it!
 
 ```bash
-# build the code
+# build a ruby runtime
 nanobox build
 
 # compile the app
 nanobox compile
 
-# start the sim environment
-nanobox sim start
-
 # add a convenient way to access your app from a browser
 nanobox sim dns add rails.nanobox.sim
 
-# console into the sim environment
+# deploy the ruby runtime into the sim environment
 nanobox sim deploy
 ```
 

@@ -1,0 +1,14 @@
+title: Ember
+articles:
+  - {href: /nodejs/ember/overview, title: Overview}
+
+  # first steps
+  - {href: /nodejs/ember/getting-started, title: Getting Started}
+
+  # next steps
+  - {href: /nodejs/ember/connect-a-database, title: Connect a Database}
+
+  # production
+  - {href: /nodejs/ember/prepare-for-production, title: Prepare for Production}
+
+  # going further

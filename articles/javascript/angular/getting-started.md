@@ -21,9 +21,9 @@ mkdir nanobox-angular
 Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
+# because we're using angular we need to tell nanobox that we need nodejs in
+# our container
 code.build:
-
-  # because we're using angular we need to tell nanobox that we need nodejs in our container
   engine: "nodejs"
 ```
 
@@ -38,11 +38,11 @@ Angular requires some initial configuration before being able to create the appl
 Once you've got all the configuration in place we need to get a development environment running:
 
 ```bash
-# build the code
+# build a nodejs runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the nodejs runtime into the dev environment
+nanobox dev deploy
 
 # console into the dev environment
 nanobox dev console
@@ -77,13 +77,13 @@ In your applications `bs-config.json` add the following (create this file at the
 With the application configured the last thing to do is run it on nanobox. From the project directory run the following commands:
 
 ```bash
-# build the code
+# build a nodejs runtime
 nanobox build
 
-# start the dev environment
-nanobox dev start
+# deploy the nodejs runtime into the dev environment
+nanobox dev deploy
 
-# add a convenient way to access your app from the browser
+# add a convenient way to access your app from a browser
 nanobox dev dns add angular.nanobox.dev
 
 # console into the dev environment
@@ -98,7 +98,7 @@ Visit the app from your favorite browser at `angular.nanobox.dev:8080`
 ## Now what?
 Now that you have an application running with nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* Connecting to a database
-* Adding components
-* Preparing for production
-* Launching your app
+* [Connect a database](connect-a-database.html)
+* [Prepare for production](prepare-for-production.html)
+* [Launch your app](launch-your-app.html)
+* [Back to rails overview](overview.html)

@@ -1,0 +1,14 @@
+title: Django
+articles:
+  - {href: /python/django/overview, title: Overview}
+
+  # first steps
+  - {href: /python/django/getting-started, title: Getting Started}
+
+  # next steps
+  - {href: /python/django/connect-a-database, title: Connect a Database}
+
+  # production
+  - {href: /python/django/prepare-for-production, title: Prepare for Production}
+
+  # going further

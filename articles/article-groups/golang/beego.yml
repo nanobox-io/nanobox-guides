@@ -1,0 +1,14 @@
+title: Beego
+articles:
+  - {href: /golang/beego/overview, title: Overview}
+
+  # first steps
+  - {href: /golang/beego/getting-started, title: Getting Started}
+
+  # next steps
+  - {href: /golang/beego/connect-a-database, title: Connect a Database}
+
+  # production
+  - {href: /golang/beego/prepare-for-production, title: Prepare for Production}
+
+  # going further

@@ -1,9 +1,0 @@
-title: Sinatra
-breadCrumb:
-  - {title: ruby,    href: /ruby/overview}
-  - {title: sinatra, href: /ruby/sinatra/getting-started}
-articles :
-  - {href: /ruby/sinatra/getting-started, title: Getting Started}
-  - {href: /ruby/sinatra/connecting-a-database, title: Connecting a database}
-  - {href: /ruby/sinatra/preparing-for-production, title: Preparing for production}
-  - {href: /ruby/sinatra/launching-your-application, title: Launching your application}
