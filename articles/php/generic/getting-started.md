@@ -44,4 +44,4 @@ nanobox build
 nanobox dev console
 ```
 
-This will drop you into an interactive console inside your virtualized dev environment on your local machine. You can [run Composer](composer.html) or [start your webserver](#). Your local codebase is mounted into your dev container so any changes made to your code will apply to your dev environment.
+This will drop you into an interactive console inside your virtualized dev environment on your local machine. You can [run Composer](composer.html) or [start your webserver](working-in-dev.html#starting-your-webserver). Your local codebase is mounted into your dev container so any changes made to your code will apply to your dev environment.

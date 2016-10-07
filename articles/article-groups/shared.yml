@@ -4,7 +4,7 @@ articles:
   - {href: /first-steps/download-nanobox, title: Download Nanobox}
 
   # next steps
-  # - {href: /next-steps/, title: }
+  - {href: /next-steps/add-components, title:Add App Components}
 
   # production
   - {href: /production/launch-your-application, title: Launch your Application}

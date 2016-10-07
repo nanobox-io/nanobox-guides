@@ -4,7 +4,10 @@ breadCrumb:
 articles:
   - {href: /php/overview, title: Overview}
   - {href: /php/getting-started, title: Getting Started}
+  - {href: /php/add-components, title: Add App Components}
+  - {href: /php/working-in-dev, title: Working in Dev}
   - {href: /php/composer, title: Composer}
+  - {href: /php/nodejs-npm, title: Using Node.js & npm}
   - title: PHP Config Options
     articles:
       - {href: /php/config/overview, title: Config Options Overview}
@@ -28,4 +31,3 @@ articles:
           - {href: /php/config/advanced/opcache-settings, title: Opcache Settings}
           - {href: /php/config/advanced/php-fpm-settings, title: PHP-FPM Settings}
           - {href: /php/config/advanced/xcache-settings, title: XCache Settings}
-  - {href: /php/nodejs-npm, title: Using Node.js & npm}
