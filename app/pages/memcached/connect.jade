@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Connect to Memcached"
+    articles = "memcached"
+    icons    = "memcached"
+    
+block markdown
+  include:md /articles/memcached/connect.md

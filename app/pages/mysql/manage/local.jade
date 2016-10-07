@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Managing Local Data"
+    articles = "mysql"
+    icons    = "mysql"
+    
+block markdown
+  include:md /articles/mysql/manage-local.md

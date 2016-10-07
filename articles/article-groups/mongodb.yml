@@ -1,0 +1,10 @@
+title: MongoDB
+articles:
+  - {href: /mongodb/overview.html, title: Overview}
+  - {href: /mongodb/create.html, title: Create a MongoDB Component}
+  - {href: /mongodb/connect.html, title: Connect to MongoDB}
+  - {href: '/mongodb/configure.html', title: MongoDB Config Options}
+  - title: Managing MongoDB Data
+    articles:
+      - {href: /mongodb/manage/local.html, title: Managing Local Data}
+      - {href: /mongodb/manage/production.html, title: Managing Production Data}

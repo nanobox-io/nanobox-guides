@@ -1,0 +1,19 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "MySQL"
+    informalName = "MySQL"
+    icon         = "mysql"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"Getting Started", group:"mysql/getting-started"},
+      {title:"Configuration",   group:"mysql/configuration"},
+      {title:"Managing",        group:"mysql/manage"}
+    ]
+    requiredComponents = [
+      {name:'MySQL', icon:'mysql', href:'#'}
+    ]

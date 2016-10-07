@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Creating a MongoDB Component"
+    articles = "mongodb"
+    icons    = "mongo"
+    
+block markdown
+  include:md /articles/mongodb/create.md

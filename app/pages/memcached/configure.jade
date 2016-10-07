@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Memcached Config Options"
+    articles = "memcached"
+    icons    = "memcached"
+    
+block markdown
+  include:md /articles/memcached/configure.md

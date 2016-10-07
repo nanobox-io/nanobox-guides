@@ -1,4 +1,4 @@
-documentation: /some/link/to/docs
+documentation: /mysql/overview.html
 boxfile: |
-  data.mysql :
-    image : nanobox/mysql
+  data.mysql:
+    image: nanobox/mysql

@@ -1,4 +1,4 @@
-documentation: /some/link/to/docs
+documentation: /memcached/create.html
 boxfile: |
-  data.memcached :
-    image : nanobox/memcached
+  data.memcached:
+    image: nanobox/memcached

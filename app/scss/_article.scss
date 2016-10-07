@@ -22,7 +22,7 @@
       code             {color:#395465; font-weight:bold; padding:4px 8px 6px; background:$bg; white-space:nowrap;}
       a code           {border-bottom: 1px dotted #26BBFF;}
     }
-    img                {max-width:100%;}
+    img                {display:block; margin:0 auto; max-width:100%;}
     table              {width:100%; margin:10px 0 30px; border-spacing:0; border-collapse:initial; color:#738792; font-size: 17px;
       th               {padding:.65em .75em; background:$navy; color: #fff; border-right: 1px solid #48728c;
         &:last-child   {border: none;}

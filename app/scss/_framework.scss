@@ -35,13 +35,14 @@
           .line         {opacity:0;}
           &.active      {
             .line       {opacity:1;}
-            @include languageBox(ruby,     #DB2317);
-            @include languageBox(redis,    #DB2317);
-            @include languageBox(mongo,    #5ECC81);
-            @include languageBox(mysql,    #1A93DB);
-            @include languageBox(postgres, #3D8EC9);
-            @include languageBox(php,      #5b649a);
-            @include languageBox(storage,  #9dc6e4);
+            @include languageBox(ruby,      #DB2317);
+            @include languageBox(redis,     #DB2317);
+            @include languageBox(mongo,     #5ECC81);
+            @include languageBox(mysql,     #1A93DB);
+            @include languageBox(postgres,  #3D8EC9);
+            @include languageBox(php,       #5b649a);
+            @include languageBox(memcached, #A1CCCC);
+            @include languageBox(storage,   #9dc6e4);
           }
         }
       }

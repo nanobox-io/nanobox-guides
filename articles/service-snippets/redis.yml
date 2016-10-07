@@ -1,4 +1,4 @@
-documentation: /some/link/to/docs
+documentation: /redis/overview.html
 boxfile: |
   data.redis :
     image : nanobox/redis

@@ -1,0 +1,10 @@
+title: Memcached
+articles:
+  - {href: /memcached/overview.html, title: Overview}
+  - {href: /memcached/create.html, title: Create a Memcached Component}
+  - {href: /memcached/connect.html, title: Connect to Memcached}
+  - {href: '/memcached/configure.html', title: Memcached Config Options}
+  - title: Managing Memcached Data
+    articles:
+      - {href: /memcached/manage/local.html, title: Managing Local Data}
+      - {href: /memcached/manage/production.html, title: Managing Production Data}

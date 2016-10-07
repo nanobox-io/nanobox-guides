@@ -1,0 +1,19 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Memcached"
+    informalName = "Memcached"
+    icon         = "memcached"
+
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"Getting Started", group:"memcached/getting-started"},
+      {title:"Configuration",   group:"memcached/configuration"},
+      {title:"Managing",        group:"memcached/manage"}
+    ]
+    requiredComponents = [
+      {name:'Memcached', icon:'memcached', href:'#'}
+    ]
