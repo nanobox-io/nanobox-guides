@@ -7,7 +7,9 @@ block js
     //- Don't fail if articleGroups isn't set...
     var articleGroups = (articleGroups === null) ? [] : articleGroups
     article = new LanguageLanding( articleGroups, "#{frameworks}" )
-    nanobox.addBreadcrumb( $('.main') )
+    $main = $('.main')
+    nanobox.addBreadcrumb( $main )
+    //- nanobox.addIcons( $main, "#{icon}" )
     
 block content
   block configParams

@@ -22,4 +22,14 @@ nanobox.addBreadcrumb = ($el)->
     ar.push {href:"/#{pages.slice(0,i+1).join('/')}", txt:item.replace(/-/g, ' '), klass:klass}
 
   $node = $ jadeTemplate['breadcrumb']( {breadCrumbs:ar} )
-  $el.append $node
+  $el.prepend $node
+
+
+nanobox.addIcons = ($el, icons) ->
+  icons = icons.split ','
+  ar = []
+  for icon, i in icons
+    ar.push {icon:icon, href:"/#{icons.slice(0,i+1).join('/')}"}
+
+  $node = $ jadeTemplate['article-icons']( {icons:ar} )
+  $el.prepend $node

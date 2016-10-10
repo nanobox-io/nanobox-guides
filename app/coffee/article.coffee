@@ -1,16 +1,10 @@
 class Article
 
-  constructor: (@title, @clusters, @icons) ->
+  constructor: (@title, @clusters) ->
     @$main    = $ ".main"
     @$leftNav = $ "#left-nav"
     @buildRelatedPagesNav()
     @buildPageNav()
-    @addIcons()
-
-  addIcons : () ->
-    icons = @icons.split ','
-    $node = $ jadeTemplate['article-icons']( {icons:icons} )
-    @$main.prepend $node
 
   # Build the nav in the upper left hand that shows the related articles
   buildRelatedPagesNav : () ->
