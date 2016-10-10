@@ -10,7 +10,10 @@ block js
   block configParams
 
   script.
-    article = new Article("#{title}", "#{articles}", "#{icons}")
+    article = new Article("#{title}", "#{articles}")
+    $main = $('.main')
+    nanobox.addBreadcrumb( $main )
+    nanobox.addIcons( $main, "#{icons}" )
 
 
 block content

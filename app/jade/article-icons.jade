@@ -1,4 +1,4 @@
 .icon-crumbs
   each icon in icons
-    .icon
-      img.shadow-icon(data-src="hex-#{icon}" scalable="true")
+    a.icon(href="#{icon.href}")
+      img.shadow-icon(data-src="hex-#{icon.icon}" scalable="true")

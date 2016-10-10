@@ -59,6 +59,12 @@ html(lang="en")
     
     script(src="https://use.typekit.net/cqd5kth.js")
     script try{Typekit.load({ async: true });}catch(e){}
+
+    // build:remove 
+    script(src="//guides.nanobox.dev:35729/livereload.js")
+    //- script(src="//localhost:35729/livereload.js")
+    script(src="/js/local.js")
+    // endbuild
   
     block js
     
@@ -68,8 +74,3 @@ html(lang="en")
       topNav = new nanobox.TopNav( $(".top-nav") );
       
     include ../shared/google-analytics.jade
-    // build:remove 
-    script(src="//guides.nanobox.dev:35729/livereload.js")
-    //- script(src="//localhost:35729/livereload.js")
-    script(src="/js/local.js")
-    // endbuild

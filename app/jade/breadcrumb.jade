@@ -1,4 +1,3 @@
 .breadcrumbs
-  a.breadcrumb(href="/") home
   each crumb in breadCrumbs
-    a.breadcrumb(href="#{crumb.href}")=crumb.title
+    a.breadcrumb(href="#{crumb.href}" class="#{crumb.klass}")=crumb.txt

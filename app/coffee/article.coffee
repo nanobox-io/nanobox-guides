@@ -1,16 +1,10 @@
 class Article
 
-  constructor: (@title, @clusters, @icons) ->
+  constructor: (@title, @clusters) ->
     @$main    = $ ".main"
     @$leftNav = $ "#left-nav"
     @buildRelatedPagesNav()
     @buildPageNav()
-    @addIcons()
-
-  addIcons : () ->
-    icons = @icons.split ','
-    $node = $ jadeTemplate['article-icons']( {icons:icons} )
-    @$main.prepend $node
 
   # Build the nav in the upper left hand that shows the related articles
   buildRelatedPagesNav : () ->
@@ -78,8 +72,7 @@ class Article
     $("a", $headers).on 'click', @onAnchorClick
 
   onAnchorClick : (e)->
-      e.preventDefault();
-      $('body').velocity 'scroll', {duration:600, offset:$($.attr(this, 'href')).offset().top, easing:'easeInOutQuint' }
+    $('body').velocity 'scroll', {duration:600, offset:$($.attr(this, 'href')).offset().top, easing:'easeInOutQuint' }
 
 
 window.nanobox ||= {}
