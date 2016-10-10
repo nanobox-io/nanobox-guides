@@ -1,0 +1,6 @@
+name: Python
+icon: python
+home: /python
+frameworks:
+  - {href: /python/django, name: Django, icon: django}
+  - {href: /python/flask, name: Flask, icon: flask}

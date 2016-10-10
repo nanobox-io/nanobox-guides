@@ -1,18 +1,19 @@
 extends ../templates/base
 
 block js
-  script(src="/js/framework-overview.js")
+  script(src="/js/landing.js")
+  script(src="/js/framework-landing.js")
   script.
     //- Don't fail if these vals aren't set...
     var requiredComponents = (requiredComponents === null) ? [] : requiredComponents
     var optionalComponents = (optionalComponents === null) ? [] : optionalComponents
     var articleGroups      = (articleGroups === null)      ? [] : articleGroups
-    article = new FrameworkOverview(requiredComponents, optionalComponents, "#{informalName}", articleGroups )
+    article = new FrameworkLanding(requiredComponents, optionalComponents, "#{informalName}", articleGroups )
     
 block content
   block configParams
   block jsParams
-  .article-page.framework 
+  .article-page.landing.framework 
     .left#left
       
     .main

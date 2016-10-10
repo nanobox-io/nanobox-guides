@@ -30,13 +30,18 @@ class IndexPage
     if targ == 'frameworks'
       left = -592
       txt  = "Guides : Choose a framework"
+      $first = @$languages
+      $next  = @$frameworks
     else
       left = 0
       txt  = "Guides : Choose a language"
+      $first = @$frameworks
+      $next  = @$languages
 
-    @$languages.toggleClass 'hidden'
-    @$frameworks.toggleClass 'hidden'
-    @$slidePath.velocity {left:left}, {duration:600, easing:"easeInOutQuint", delay:100}
+    $first.toggleClass 'hidden'
+    @$slidePath.velocity {left:left}, {duration:600, easing:"easeInOutQuint", complete:()=>
+      $next.toggleClass 'hidden'
+    }
     @$title.text txt
 
 
