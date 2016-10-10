@@ -1,4 +1,4 @@
-documentation: /ruby/overview.html
+documentation: /ruby
 description: 'Add the following snippet to your boxfile.yml and redeploy to create a ruby runtime'
 boxfile: |
   code.build:

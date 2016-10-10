@@ -1,15 +1,5 @@
 class IndexPage
 
-  lang :
-    language:"ruby"
-    frameworks:[
-      {id:'rails', href:"/ruby/rails/overview"}
-      {id:'sinatra', href:"/ruby/sinatra/overview"}
-    ]
-    guides:[
-      {title:"Launching a Basic Ruby App"}
-    ]
-
   constructor: () ->
     @$slidePath  = $ '.slide-path'
     @$languages  = $ '.languages'

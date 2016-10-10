@@ -1,4 +1,4 @@
-documentation: /postgresql/overview.html
+documentation: /postgresql
 boxfile: |
   data.postgres:
     image: nanobox/postgresql
