@@ -1,9 +1,12 @@
-.breadcrumbs     {display:flex; position: absolute; top:-28px; left:0; font-size:12px; text-transform: uppercase; font-weight: $semibold;
-  a              {color:$navy;position:relative; margin-right:14px; letter-spacing:0.05em;
-    &:before     {content:"> "; position:absolute; transform:scale(0.5,1); font-size:17px; right:-12px; top:-2px; color:#A4B0BF;}
-    &:last-child {
-      &:before   {content:''}
+.breadcrumbs         {display:flex; position: absolute; top:-28px; left:0; font-size:12px; text-transform: uppercase; font-weight: $semibold;
+  a                  {color:$navy;position:relative; margin-right:14px; letter-spacing:0.05em;
+    &:before         {content:"> "; position:absolute; transform:scale(0.5,1); font-size:17px; right:-12px; top:-2px; color:#A4B0BF;}
+    &:last-child     {
+      &:before       {content:''}
     }
-    &:hover      { border-bottom:solid 1px; }
+    &:hover          {border-bottom:solid 1px; }
+    &.current        {font-style:italic; text-transform: none; pointer-events: none; letter-spacing:0; font-size:13px; 
+      &:first-letter {text-transform:uppercase;}
+    }
   }
 }

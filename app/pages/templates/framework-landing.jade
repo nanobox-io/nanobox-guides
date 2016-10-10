@@ -9,7 +9,8 @@ block js
     var optionalComponents = (optionalComponents === null) ? [] : optionalComponents
     var articleGroups      = (articleGroups === null)      ? [] : articleGroups
     article = new FrameworkLanding(requiredComponents, optionalComponents, "#{informalName}", articleGroups )
-    
+    nanobox.addBreadcrumb( $('.main') )
+      
 block content
   block configParams
   block jsParams

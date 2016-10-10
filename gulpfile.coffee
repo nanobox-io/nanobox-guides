@@ -94,7 +94,9 @@ js = (cb)->
     .pipe coffee( bare: true ).on( 'error', gutil.log ) .on( 'error', gutil.beep )
     # .pipe concat('app.js')
     .pipe gulp.dest('server/js')
-    .on('end', cb)
+    .on 'end', ()->
+      livereload.reload()
+      cb()
 
 miscJs = (cb)->
   gulp.src miscJsPath
@@ -130,7 +132,9 @@ copyFilesToBuild = ->
 copyYaml = (cb)->
   gulp.src yamlPath
     .pipe gulp.dest('server/yaml')
-    .on('end', cb)
+    .on 'end', ()->
+      livereload.reload()
+      cb()
 
 pushViaGit = ->
   # Start out by reading the version number for commit msg, then git push, etc..
@@ -213,12 +217,12 @@ compileFiles = (doWatch=false, cb) ->
   onComplete = ()=>
     if ++count == ar.length then cb();
   ar         = [
-    {meth:js,            glob:coffeePath}
+    {meth:js,            glob:coffeePath, dontLiveReload:true}
     {meth:css,           glob:cssPath}
     {meth:miscJs,        glob:miscJsPath}
     {meth:jadeTemplates, glob:templatePath}
     {meth:html,          glob:[articlePath, jadePath], dontLiveReload:true}
-    {meth:copyYaml,      glob:yamlPath}
+    {meth:copyYaml,      glob:yamlPath, dontLiveReload:true}
     {meth:parseSVG,      glob:svgPath}
     {meth:copyImages,    glob:assetPath}
   ]
