@@ -1,0 +1,6 @@
+name: Golang
+icon: golang
+home: /golang
+frameworks:
+  - {href: /golang/hugo, name: Hugo, icon: hugo}
+  - {href: /golang/beego, name: Beego, icon: beego}
