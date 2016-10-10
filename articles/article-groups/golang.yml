@@ -1,4 +1,8 @@
 title: Golang
 articles:
   - {href: /golang, title: Overview}
-  - {href: /golang/launching-first-app, title: Launching a Generic Golang App}
+  - {href: /golang/getting-started, title: Getting Started}
+  - {href: /golang/add-components, title: Add App Components}
+  - {href: /golang/deps, title: Dependency Management}
+  - {href: /golang/nodejs-npm, title: Using Node.js & npm}
+  - {href: /golang/config, title: Configure Golang}
