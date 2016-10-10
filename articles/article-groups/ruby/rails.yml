@@ -1,6 +1,6 @@
 title: Rails
 articles:
-  - {href: /ruby/rails/overview, title: Overview}
+  - {href: /ruby/rails, title: Overview}
 
   # first steps
   - {href: /ruby/rails/getting-started, title: Getting Started}

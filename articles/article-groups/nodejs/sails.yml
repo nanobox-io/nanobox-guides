@@ -1,6 +1,6 @@
 title: Sails
 articles:
-  - {href: /nodejs/sails/overview, title: Overview}
+  - {href: /nodejs/sails, title: Overview}
 
   # first steps
   - {href: /nodejs/sails/getting-started, title: Getting Started}

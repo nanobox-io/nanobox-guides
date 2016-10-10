@@ -1,6 +1,6 @@
 title: MongoDB
 articles:
-  - {href: /mongodb/overview, title: Overview}
+  - {href: /mongodb, title: Overview}
   - {href: /mongodb/create, title: Create a MongoDB Component}
   - {href: /mongodb/connect, title: Connect to MongoDB}
   - {href: '/mongodb/configure', title: MongoDB Config Options}

@@ -1,6 +1,6 @@
 title: Memcached
 articles:
-  - {href: /memcached/overview, title: Overview}
+  - {href: /memcached, title: Overview}
   - {href: /memcached/create, title: Create a Memcached Component}
   - {href: /memcached/connect, title: Connect to Memcached}
   - {href: '/memcached/configure', title: Memcached Config Options}

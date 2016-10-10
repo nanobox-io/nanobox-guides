@@ -1,6 +1,6 @@
 title: Node.js
 articles:
-  - {href: /nodejs/overview, title: Overview}
+  - {href: /nodejs, title: Overview}
   - {href: /nodejs/getting-started, title: Getting Started}
   - {href: /nodejs/add-components, title: Add App Components}
   - {href: /nodejs/npm, title: npm}

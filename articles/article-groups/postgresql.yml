@@ -1,6 +1,6 @@
 title: PostgreSQL
 articles:
-  - {href: /postgresql/overview, title: Overview}
+  - {href: /postgresql, title: Overview}
   - {href: /postgresql/create, title: Create a PostgreSQL Database}
   - {href: /postgresql/connect, title: Connect to PostgreSQL}
   - {href: /postgresql/configure, title: PostgreSQL Config Options}

@@ -1,6 +1,6 @@
 title: Sinatra
 articles:
-  - {href: /ruby/sinatra/overview, title: Overview}
+  - {href: /ruby/sinatra, title: Overview}
 
   # first steps
   - {href: /ruby/sinatra/getting-started, title: Getting Started}

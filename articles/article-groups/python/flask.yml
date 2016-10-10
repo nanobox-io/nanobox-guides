@@ -1,6 +1,6 @@
 title: Flask
 articles:
-  - {href: /python/flask/overview, title: Overview}
+  - {href: /python/flask, title: Overview}
 
   # first steps
   - {href: /python/flask/getting-started, title: Getting Started}
