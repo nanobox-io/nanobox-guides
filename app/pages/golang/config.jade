@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Configure Golang"
+    articles = "golang"
+    icons    = "golang"
+    
+block markdown
+  include:md /articles/golang/generic/config.md

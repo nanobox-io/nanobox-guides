@@ -5,10 +5,10 @@ With Nanobox, every app consists of one or more "components" - supporting servic
 There are three different types of components:
 
 #### web
-A code component with publicly accessible ports. Webs use the Node.js runtime defined by your engine.
+A code component with publicly accessible ports. Webs use the Go runtime defined by your engine.
 
 #### worker
-A backend code component with no publicly accessible ports. Workers use the Node.js runtime defined by your engine.
+A backend code component with no publicly accessible ports. Workers use the Go runtime defined by your engine.
 
 #### data
 A component that houses data of some sort. These include databases, caches, persistent storage, etc.
@@ -31,10 +31,10 @@ The minimum required information for webs and workers is a `start` command. Thes
 
 ```yaml
 web.site:
-  start: node app.js
+  start: app-bin
 
 worker.jobs:
-  start: node jobs-worker.js
+  start: worker-bin
 ```
 
 **IMPORTANT:** *Web apps must listen on* `0.0.0.0:8080` *to connect to the public network over http/https.*

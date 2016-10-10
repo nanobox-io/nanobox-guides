@@ -37,6 +37,8 @@ worker.jobs:
   start: 'python jobs-worker.py'
 ```
 
+**IMPORTANT:** *Web apps must listen on* `0.0.0.0:8080` *to connect to the public network over http/https.*
+
 ### Data Components
 Data components house data of some sort. These include databases, caches, persistent storage, etc. Each data component needs an [image](/images) - a docker image used to provision the service.
 
@@ -68,4 +70,4 @@ $ nanobox build
 $ nanobox dev deploy
 ```
 
-**Note:** Web and worker components are provisioned and started in sim and production environments, but not in dev. Data components are provisioned in all components.
+**Note:** Web and worker components are provisioned and started in sim and production environments, but not in dev. Data components are provisioned in all environments.
