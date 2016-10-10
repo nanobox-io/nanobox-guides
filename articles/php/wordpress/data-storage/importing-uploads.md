@@ -16,7 +16,7 @@ nanobox dev info
 data.storage
   IP      : 192.168.99.74
   User(s) :
-    nanobox - OpAssWoRDX
+    gonano - OpAssWoRDX
 
 # ...
 ```
@@ -28,12 +28,14 @@ Other credentials you may need to establish the connection:
 
 **Port:** `22`
 
+Network directories are housed in the `data` directory in the home directory of your storage component.
+
 #### Copy Files with SCP (Secure Copy)
 ```bash
 # copy the contents of your local uploads folder
 # into to your uploads folder in your storage component
 
-scp -r wp-content/uploads/* nanobox@192.168.99.74:wp-content/uploads
+scp -r wp-content/uploads/* gonano@192.168.99.74:data/wp-content/uploads
 
 # This will prompt for your storage password
 ```
@@ -61,12 +63,14 @@ Connection credentials for the tunnel are provided in your app dashboard under t
 ### Connect with SSH or SFTP
 Use the tunnel-bound port on your local machine and the tunnel credentials provided in your dashboard to connect with SSH or SFTP.
 
+Network directories are housed in the `data` directory in the home directory of your storage component.
+
 #### Copy files with SCP
 ```bash
 # copy files from your local code filesystem
-# into to your storage component at the same path
+# into to your storage component at the data/path
 
-scp -P 22 -r wp-content/uploads/* nanobox@127.0.0.1:wp-content/uploads
+scp -P 22 -r wp-content/uploads/* gonano@127.0.0.1:data/wp-content/uploads
 
 # This will prompt for your storage password
 ```
