@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=storing-files-in-a-storage-component>Storing Files in a Storage Component</h1><p>Directories inside your storage component are connected to your app through <a href=https://docs.nanobox.io/app-config/network-storage/#network-mounts>network mounts</a>. These mounts essentially replace directories in your web and worker filesystems allowing you to use the same filepaths in your code to store the files in your storage component.</p><h2 id=network-directories>Network Directories</h2><p>For each web and worker component in your boxfile.yml, you need to tell Nanobox which directories to mount and the storage service to which they should be connected. These are called &quot;network directories&quot; and are specified through the <code>network_dirs</code> config.</p><pre><code class=lang-yaml>web.site:
+  network_dirs:
+    data.storage:
+      - path/to/dirA
+      - path/to/dirB
+
+data.storage:
+  image: nanobox/unfs
+</code></pre><p>Anything written by web.site to <code>path/to/dirA</code> and <code>path/to/dirB</code> will be stored in your storage component.</p><p><strong>Note:</strong> <em>Network directories paths must be relative to the root of your project.</em></p><h3 id=sharing-network-dirs-between-components>Sharing Network Dirs Between Components</h3><p>Network directories must be specified per web/worker component. If two components need to write to the same file, the <code>network_dirs</code> config needs to be specified on both.</p><pre><code class=lang-yaml>web.site:
+  network_dirs:
+    data.storage:
+      - path/to/dirA
+      - path/to/dirB
+
+worker.jobs:
+  network_dirs:
+    data.storage:
+      - path/to/dirA
+
+data.storage:
+  image: nanobox/unfs
+</code></pre><p>Both web.site and worker.jobs will be able to write to and read from <code>path/to/dirA</code> on data.storage.</p><h2 id=importing-things-to-note>Importing Things to Note</h2><p>The following are importing things you should know when using storage components.</p><h3 id=do-not-nest-network-dirs-in-other-network-dirs>Do Not Nest Network Dirs in other Network Dirs</h3><p>When listing network directories, do not list nested directories. Only list the common most parent. For example, you shouldn&#39;t include both <code>tmp-files</code> and <code>tmp-files/logs</code> as network directories. You should only include <code>tmp-files</code></p><p>Listing nested network directories will invalidate the network mounts and prevent a successful connection to your storage component.</p><h3 id=local-directories-are-replaced-by-network-mounts>Local Directories are Replaced by Network Mounts</h3><p>Because network directories are replaced with network mounts, the contents of network directories in your local filesystem will not be available. Also, anything written to a network directory will be written to the filesystem of your storage component, not your local filesystem.</p><p>You can import and export data to and from your storage components using SSH and/or SFTP. Examples of this are covered in the <a href=manage/local.html>Managing Local Storage Components</a> and <a href=manage/production.html>Managing Production Storage Components</a> guides.</p><h3 id=add-network-directories-to-your-nanoignore>Add Network Directories to Your .nanoignore</h3><p>The <a href="https://docs.nanobox.io/local-dev/local-config/nanoignore/">.nanoignore</a> file allows you to omit files from your <a href="https://docs.nanobox.io/cli/compile/">compiled deploy package</a>, reducing the size of your deploy and time it takes to upload. Since network directories are replaced by network mounts, it&#39;s recommend the contents of these directories be .nanoingore&#39;d.</p></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Storing Files in a Storage Component", "storage", "storage")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

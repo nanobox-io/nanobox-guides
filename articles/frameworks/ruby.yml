@@ -1,0 +1,5 @@
+name: Ruby
+icon: ruby
+frameworks:
+  - {href: /ruby/rails, name: rails, icon: rails}
+  - {href: /ruby/sinatra, name: sinatra, icon: sinatra}

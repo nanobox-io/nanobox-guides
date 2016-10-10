@@ -1,4 +1,4 @@
-documentation: /memcached/overview.html
+documentation: /memcached
 boxfile: |
   data.memcached:
     image: nanobox/memcached

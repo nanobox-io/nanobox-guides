@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=express-getting-started>Express: Getting Started</h1><p>This guide will walk you through getting a simple Express.js app up and running on nanobox. This guide was used in the creation of the <a href=https://github.com/nanobox-quickstarts/nanobox-expressjs>nanobox-expressjs</a> app found under <a href=https://github.com/nanobox-quickstarts>nanobox-quickstarts</a> on github.</p><h2 id=setup-your-project>Setup Your Project</h2><p>If you don&#39;t have an existing project, create a new project directory.</p><pre><code class=lang-bash>mkdir nanobox-expressjs
+</code></pre><p>Create a <code>boxfile.yml</code> at the root of your project that contains the following. Because we&#39;re using Express.js, we need to tell Nanobox we need a Node.js environment.</p><pre><code class=lang-yaml>code.build:
+  # tells nanobox to install node.js and associated executables
+  engine: nodejs
+</code></pre><h2 id=create-your-dev-environment>Create Your Dev Environment</h2><p>With your boxfile.yml in place, you&#39;re ready setup your dev environment. From the project directory run the following commands:</p><pre><code class=lang-bash># build the code
+nanobox build
+
+# start the dev environment
+nanobox dev start
+
+# add a convenient way to access your app from the browser
+nanobox dev dns add expressjs.nanobox.dev
+
+# console into the dev environment
+nanobox dev console
+</code></pre><h2 id=install-configure-express>Install &amp; Configure Express</h2><p>If you&#39;re working with a brand new project directory with nothing in it, you&#39;ll need to install Express and Express Generator. If you already have an Express codebase, you can skip to <a href=#listen-on-port-8080>Listen on Port 8080</a>.</p><pre><code class=lang-bash># install express.js and save to package.json
+npm install express --save
+
+# install the express generator
+npm install express-generator -g
+
+# build an express skeleton
+express
+
+# Answer &#39;y&#39; when notified the destination is not empty
+
+# install express npm packages
+npm install
+</code></pre><h3 id=listen-on-port-8080>Listen on Port 8080</h3><p>Nanobox requires apps to listen on <code>0.0.0.0:8080</code>. In <code>bin/www</code>, set the default port to be <code>8080</code>:</p><pre><code class=lang-js>/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || &#39;8080&#39;);
+app.set(&#39;port&#39;, port);
+</code></pre><h2 id=start-your-app>Start Your App</h2><p>Now you&#39;re ready to run Express. Inside your dev console, just run:</p><pre><code class=lang-bash>npm start
+</code></pre><p>Your Express app can be accessed in your browser of choice at <code>expressjs.nanobox.io:8080</code>.</p><h2 id=now-what->Now What?</h2><p>Now that you have Express running on Nanobox, what&#39;s next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!</p><ul><li>Connecting to a database</li><li>Adding components</li><li>Preparing for production</li><li>Launching your app</li></ul></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Getting Started", "nodejs/express", "node,express")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

@@ -1,4 +1,4 @@
-documentation: /storage/overview.html
+documentation: /storage
 boxfile: |
   data.storage:
     image: nanobox/unfs

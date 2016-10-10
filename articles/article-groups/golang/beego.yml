@@ -1,6 +1,6 @@
 title: Beego
 articles:
-  - {href: /golang/beego/overview, title: Overview}
+  - {href: /golang/beego, title: Overview}
 
   # first steps
   - {href: /golang/beego/getting-started, title: Getting Started}

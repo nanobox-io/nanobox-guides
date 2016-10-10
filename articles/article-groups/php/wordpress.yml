@@ -1,7 +1,7 @@
 title : Wordpress
 breadCrumb:
-  - {title: PHP, href: /php/overview}
-  - {title: WordPress, href: /php/wordpress/overview}
+  - {title: PHP, href: /php}
+  - {title: WordPress, href: /php/wordpress}
 
 articles:
   - {href: /php/wordpress/getting-started, title: Getting Started}

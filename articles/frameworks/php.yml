@@ -1,0 +1,6 @@
+name: PHP
+icon: php
+frameworks:
+  - {href: /php/laravel/getting-started, name: Laravel, icon: laravel}
+  - {href: /php/codeigniter/getting-started, name: CodeIgniter, icon: codeigniter}
+  - {href: /php/wordpress/getting-started, name: Wordpress, icon: wordpress}

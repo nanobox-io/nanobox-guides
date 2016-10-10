@@ -1,15 +1,14 @@
 var Article;
 
 Article = (function() {
-  function Article(title, clusterId, icons) {
+  function Article(title, clusters, icons) {
     this.title = title;
-    this.clusterId = clusterId;
+    this.clusters = clusters;
     this.icons = icons;
     this.$main = $(".main");
     this.$leftNav = $("#left-nav");
     this.buildRelatedPagesNav();
     this.buildPageNav();
-    this.buildBreadCrumbs();
     this.addIcons();
   }
 
@@ -23,15 +22,29 @@ Article = (function() {
   };
 
   Article.prototype.buildRelatedPagesNav = function() {
-    var $node;
-    this.markMatchedArticle(window.articleGroupData.articles);
-    $node = $(jadeTemplate['articles'](articleGroupData));
-    $(".title", this.$leftNav).text(articleGroupData.title);
-    $(".articles", this.$leftNav).append($node);
-    return $(".child-toggle", $node).on('click', function(e) {
-      $($(e.currentTarget).parent()).toggleClass('open');
-      return $(e.currentTarget).toggleClass('open');
-    });
+    var store;
+    store = {};
+    return $.when(nanobox.getYaml("/yaml/article-groups/" + this.clusters + ".yml", null, (function(_this) {
+      return function(yml) {
+        return _this.articleGroupData = yml;
+      };
+    })(this))).then((function(_this) {
+      return function() {
+        var $node;
+        _this.markMatchedArticle(_this.articleGroupData.articles);
+        $node = $(jadeTemplate['articles'](_this.articleGroupData));
+        $(".title", _this.$leftNav).text(_this.articleGroupData.title);
+        $(".articles", _this.$leftNav).append($node);
+        $(".child-toggle", $node).on('click', function(e) {
+          $($(e.currentTarget).parent()).toggleClass('open');
+          return $(e.currentTarget).toggleClass('open');
+        });
+        _this.buildBreadCrumbs();
+        if (window.isLocal) {
+          return localizeLinks();
+        }
+      };
+    })(this));
   };
 
   Article.prototype.markMatchedArticle = function(articles) {
@@ -40,7 +53,7 @@ Article = (function() {
     foundActiveArticle = false;
     for (_i = 0, _len = articles.length; _i < _len; _i++) {
       article = articles[_i];
-      if (article.title === this.title) {
+      if (article.title.toLowerCase() === this.title.toLowerCase()) {
         article.active = true;
         foundActiveArticle = true;
       }
@@ -56,12 +69,13 @@ Article = (function() {
 
   Article.prototype.buildBreadCrumbs = function() {
     var $node;
-    articleGroupData.breadCrumb.push({
+    return;
+    this.articleGroupData.breadCrumb.push({
       title: this.title,
       href: "#"
     });
     $node = $(jadeTemplate['breadcrumb']({
-      breadCrumbs: articleGroupData.breadCrumb
+      breadCrumbs: this.articleGroupData.breadCrumb
     }));
     return this.$main.prepend($node);
   };

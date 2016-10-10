@@ -1,0 +1,14 @@
+a.direction-link
+  img.shadow-icon(data-src="right-arrow")
+  .txt Back
+  .row
+    each framework in frameworks
+      a.hex.language(href="#{framework.href}")
+        .icon
+          img.shadow-icon(data-src="hex-#{framework.icon}" scalable="true") 
+        .txt #{framework.name}
+.row
+  a.general(href="/ruby")
+    .icon
+      img.shadow-icon(data-src="hex-#{icon}" scalable="true") 
+    .txt General #{name} Guides

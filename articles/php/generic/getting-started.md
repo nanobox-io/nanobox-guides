@@ -31,7 +31,7 @@ code.build:
     webserver: apache
 ```
 
-All PHP configuration options are detailed in the [Config Options guides](/php/config/overview).
+All PHP configuration options are detailed in the [Config Options guides](/php/config).
 
 ## Up and Running
 With your boxfile.yml in place, you're ready to build your runtime, start your development environment (dev), and console in.

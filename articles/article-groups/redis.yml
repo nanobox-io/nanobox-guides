@@ -1,6 +1,6 @@
 title: Redis
 articles:
-  - {href: /redis/overview, title: Overview}
+  - {href: /redis, title: Overview}
   - {href: /redis/create, title: Create a Redis Database}
   - {href: /redis/connect, title: Connect to Redis}
   - {href: '/redis/configure', title: Redis Config Options}

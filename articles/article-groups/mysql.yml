@@ -1,6 +1,6 @@
 title: MySQL
 articles:
-  - {href: /mysql/overview, title: Overview}
+  - {href: /mysql, title: Overview}
   - {href: /mysql/create, title: Create a MySQL Database}
   - {href: /mysql/connect, title: Connect to MySQL}
   - {href: '/mysql/configure', title: MySQL Config Options}

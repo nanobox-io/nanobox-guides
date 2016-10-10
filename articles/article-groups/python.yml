@@ -1,6 +1,6 @@
 title: Python
 articles:
-  - {href: /python/overview, title: Overview}
+  - {href: /python, title: Overview}
   - {href: /python/getting-started, title: Getting Started}
   - {href: /python/add-components, title: Add App Components}
   - {href: /python/pip, title: Pip}

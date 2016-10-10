@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=importing-data>Importing Data</h1><h2 id=into-a-dev-or-sim-database>Into a Dev or Sim Database</h2><p>Nanobox makes MySQL databases running in dev and sim environments accessible to your local machine through a specific IP and port. You can use these along with the database&#39;s username(s) and password(s) to connect.</p><h3 id=make-sure-dev-sim-is-running>Make Sure Dev/Sim is Running</h3><p>Whatever environment you&#39;d like to import data needs to be running before you&#39;ll be able to connect to MySQL. If it&#39;s not, simply run the <code>start</code> command.</p><pre><code class=lang-bash># Starts a dev environment
+$ nanobox dev start
+
+# Starts a sim environment
+$ nanobox sim start
+</code></pre><h3 id=get-your-database-credentials>Get Your Database Credentials</h3><p>To get the credentials of your MySQL database, run the <code>info</code> command. This will output information for each of your app&#39;s components.</p><pre><code class=lang-bash># List dev app info
+$ nanobox dev info
+
+# List sim app info
+$ nanobox sim info
+</code></pre><p>Find your MySQL data component in the info output.</p><pre><code class=lang-bash>...
+
+data.db
+  IP      : 192.168.99.65
+  User(s) :
+    root - paSsW0rD
+    nanobox - PAsSw0Rd
+
+...
+</code></pre><p><strong>Name:</strong> The database name will always be &#39;gonano&#39;.<br><strong>Host:</strong> The IP of your MySQL data component.<br><strong>Port:</strong> 3306, the default MySQL port.<br><strong>User:</strong> You can use either the &#39;nanobox&#39; or &#39;root&#39; user.<br><strong>Password:</strong> The password provided for whichever user you use.</p><h3 id=connect-to-mysql-using-the-provided-credentials>Connect to MySQL Using the Provided Credentials</h3><p>With the database credentials you can use your MySQL client of choice to import your data. These include but are not limited to the MySQL CLI, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you&#39;ll need to reference your client&#39;s documentation on importing data.</p><p>Below is an example of importing data using the MySQL CLI.</p><pre><code class=lang-bash>$ mysql -h 192.168.99.65 -P 3306 -u nanobox -pPAsSw0Rd gonano &lt; path/to/data_dump.sql
+</code></pre><h2 id=into-a-production-database>Into a Production Database</h2><p>To ensure data security, databases in production Nanobox apps are accessible only through secure tunnels established through the Nanobox CLI&#39;s <code>tunnel</code> command. These tunnels bind to and listen on a local port. To establish a secure tunnel run the <code>tunnel</code> command, passing in your your MySQL data component as the tunnel endpoint.</p><pre><code class=lang-bash>$ nanobox tunnel data.db
+</code></pre><p>To view your tunnel connection credentials, go to your dashboard and click the &quot;Connect&quot; button below your database component. <em>In a new app, your database will be nested under &quot;App Components&quot;</em></p><p><img src=/assets/php/wordpress/wordpress-tunnel-credentials.png alt="Tunnel Credentials"></p><h3 id=connect-to-mysql-using-the-tunnel-credentials>Connect to MySQL Using the Tunnel Credentials</h3><p>Use the credentials provided in your dashboard and the port on which the tunnel is listening to connect with your MySQL client of choice to import your data. These include, but are not limited to, the MySQL CLI, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you&#39;ll need to reference your client&#39;s documentation on importing data.</p><p>Below is an example of importing data using the MySQL CLI.</p><pre><code class=lang-bash>$ mysql -h 127.0.0.1 -P 3306 -u nanobox -pPAsSw0Rd gonano &lt; path/to/data_dump.sql
+</code></pre><h2 id=update-your-wordpress-baseurl>Update Your WordPress BaseURL</h2><p>As you move data between environments, you&#39;ll need to update the WordPress baseURL stored in your database. If you don&#39;t, permalinks won&#39;t work properly. They&#39;ll all go to the wrong URL. You likely won&#39;t even be able to access your WP Admin panel.</p><p>Connect to your database and run query below to update all the necessary tables. Be sure to update the <code>old_url</code> and <code>new_url</code> variables in the query to be your old and new URLs.</p><pre><code class=lang-sql>SET @old_url = &#39;http://your-old-domain.com&#39;;
+SET @new_url = &#39;http://your-new-domain.com&#39;;
+UPDATE wp_options
+  SET option_value = @new_url
+  WHERE option_name = &#39;siteurl&#39;
+    OR option_name = &#39;home&#39;;
+UPDATE wp_posts
+  SET guid = REPLACE(
+      guid
+    , @old_url
+    , @new_url);
+UPDATE wp_posts
+  SET post_content = REPLACE(
+      post_content
+    , @old_url
+    , @new_url)
+  WHERE post_type = &#39;post&#39;;
+</code></pre></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Importing Data", "php/wordpress", "php,wordpress")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

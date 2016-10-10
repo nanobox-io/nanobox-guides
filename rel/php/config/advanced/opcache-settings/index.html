@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=opcache-settings>Opcache Settings</h1><p>The following settings are used to configure the OPcache PHP byte-code caching engine.</p><h3 id=opcache-_memory-_consumption>opcache_memory_consumption</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.memory-consumption><code>opcache.memory_consumption</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_memory_consumption: 64
+</code></pre><h3 id=opcache-_validate-_timestamps>opcache_validate_timestamps</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.validate-timestamps><code>opcache.validate_timestamps</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_validate_timestamps: 1
+</code></pre><h3 id=opcache-_revalidate-_freq>opcache_revalidate_freq</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.revalidate-freq><code>opcache.revalidate_freq</code> PHP setting</a></p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_revalidate_freq: 2
+</code></pre><h3 id=opcache-_revalidate-_path>opcache_revalidate_path</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.revalidate-path><code>opcache.revalidate_path</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_revalidate_path: 0
+</code></pre><h3 id=opcache-_save-_comments>opcache_save_comments</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments><code>opcache.save_comments</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_save_comments: 1
+</code></pre><h3 id=opcache-_load-_comments>opcache_load_comments</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.load-comments><code>opcache_load_comments</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_load_comments: 1
+</code></pre><h3 id=opcache-_enable-_file-_override>opcache_enable_file_override</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable-file-override><code>opcache.enable_file_override</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_enable_file_override: 0
+</code></pre><h3 id=opcache-_optimization-_level>opcache_optimization_level</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.optimization-level><code>opcache.optimization_level</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_optimization_level: &#39;0xffffffff&#39;
+</code></pre><h3 id=opcache-_inherited-_hack>opcache_inherited_hack</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.inherited-hack><code>opcache.inherited_hack</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_inherited_hack: 1
+</code></pre><h3 id=opcache-_dups-_fix>opcache_dups_fix</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.dups-fix><code>opcache.dups_fix</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_dups_fix: 0
+</code></pre><h3 id=opcache-_blacklist-_filename>opcache_blacklist_filename</h3><p>Sets the <a href=http://php.net/manual/en/opcache.configuration.php#ini.opcache.blacklist-filename><code>opcache.blacklist_filename</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    opcache_blacklist_filename: &#39;&#39;
+</code></pre></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Opcache Settings", "php", "php")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

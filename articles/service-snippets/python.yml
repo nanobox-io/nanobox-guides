@@ -1,4 +1,4 @@
-documentation: /python/overview
+documentation: /python
 description: 'Add the following snippet to your boxfile.yml and redeploy to create a Python runtime'
 boxfile: |
   code.build:
