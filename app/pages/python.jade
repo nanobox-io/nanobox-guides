@@ -1,21 +1,29 @@
-extends /app/pages/templates/article  
+extends /app/pages/templates/framework-landing  
 
 block configParams
   -
-    title    = "Overview"
-    articles = "python"
-    icons    = "python"
+    formalName   = "Python"
+    informalName = "Python"
+    icon         = "python"
 
-block custom
-  h1 Python
-  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
-  h4 Frameworks
-  .frameworks
-    a.hex(href="/python/flask/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-flask" scalable='true')
-      .txt Flask
-    a.hex(href="/python/django/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-django" scalable='true')
-      .txt Django
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"First Steps",   group:"shared/first-steps,python/first-steps"},
+      {title:"Deps Management", group:"python/dependency-management"},
+      {title:"Configuration", group:"python/configuration"},
+      {title:"Production",    group:"python/production,shared/production"},
+      {title:"Going Further", group:"shared/going-further"},
+      {title:"Frameworks",    group:"python/frameworks"}
+    ]
+    requiredComponents = [
+      {name:'python', icon:'python', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MySQL',      icon:'mysql',    href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'MongoDB',    icon:'mongo',    href:'#'},
+      {name:'Redis',      icon:'redis',    href:'#'},      
+      {name:'Memcached',  icon:'memcached',href:'#'}
+    ]

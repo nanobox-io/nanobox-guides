@@ -1,0 +1,3 @@
+articles:
+  - {href: /python/django, title: Django}
+  - {href: /python/flask, title: Flask}

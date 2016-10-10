@@ -1,25 +1,29 @@
-extends /app/pages/templates/article
+extends /app/pages/templates/framework-landing  
 
 block configParams
   -
-    title    = "Overview"
-    articles = "nodejs"
-    icons    = "node"
+    formalName   = "Node.js"
+    informalName = "Node"
+    icon         = "node"
 
-block custom
-  h1 Node.js
-  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
-  h4 Frameworks
-  .frameworks
-    a.hex(href="/nodejs/sails/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-sails" scalable='true')
-      .txt Sails
-    a.hex(href="/nodejs/ember/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-ember" scalable='true')
-      .txt Ember
-    a.hex(href="/nodejs/express/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-express" scalable='true')
-      .txt Express
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"First Steps",   group:"shared/first-steps,nodejs/first-steps"},
+      {title:"Deps Management", group:"nodejs/dependency-management"},
+      {title:"Configuration", group:"nodejs/configuration"},
+      {title:"Production",    group:"nodejs/production,shared/production"},
+      {title:"Going Further", group:"shared/going-further"},
+      {title:"Frameworks",    group:"nodejs/frameworks"}
+    ]
+    requiredComponents = [
+      {name:'nodejs', icon:'node', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MySQL',      icon:'mysql',    href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'MongoDB',    icon:'mongo',    href:'#'},
+      {name:'Redis',      icon:'redis',    href:'#'},      
+      {name:'Memcached',  icon:'memcached',href:'#'}
+    ]
