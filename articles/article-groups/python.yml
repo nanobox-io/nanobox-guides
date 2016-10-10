@@ -1,4 +1,8 @@
 title: Python
 articles:
   - {href: /python/overview, title: Overview}
-  - {href: /python/launching-first-app, title: Launching a Generic Python App}
+  - {href: /python/getting-started, title: Getting Started}
+  - {href: /python/add-components, title: Add App Components}
+  - {href: /python/pip, title: Pip}
+  - {href: /python/nodejs-npm, title: Using Node.js & npm}
+  - {href: /python/config, title: Configure Python}

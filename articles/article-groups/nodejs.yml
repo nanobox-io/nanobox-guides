@@ -1,4 +1,7 @@
-title: NodeJS
+title: Node.js
 articles:
   - {href: /nodejs/overview, title: Overview}
-  - {href: /nodejs/launching-first-app, title: Launching a Generic Node App}
+  - {href: /nodejs/getting-started, title: Getting Started}
+  - {href: /nodejs/add-components, title: Add App Components}
+  - {href: /nodejs/npm, title: npm}
+  - {href: /nodejs/config, title: Configure Node.js}
