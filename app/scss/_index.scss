@@ -8,7 +8,7 @@ $lang-width:590px;
     .slide-path             {position: absolute; left:0;}
     .languages,
     .frameworks             {width:$lang-width; display: inline-block; transition: opacity 400ms;
-      &.hidden              {opacity:0;
+      &.hidden              {opacity:0; pointer-events: none;
         .direction-link     {opacity:0;}
       }
     }
