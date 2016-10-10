@@ -1,21 +1,29 @@
-extends /app/pages/templates/article  
+extends /app/pages/templates/framework-landing  
 
 block configParams
   -
-    title    = "Overview"
-    articles = "ruby"
-    icons    = "ruby"
+    formalName   = "Ruby"
+    informalName = "Ruby"
+    icon         = "ruby"
 
-block custom
-  h1 Ruby
-  p Lorem Ipsum. Some sort of intro paragraph where we direct them to frameworks
-  h4 Frameworks
-  .frameworks
-    a.hex(href="/ruby/rails/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-rails" scalable='true')
-      .txt Rails
-    a.hex(href="/ruby/sinatra/getting-started")
-      .icon
-        img.shadow-icon(data-src="hex-sinatra" scalable='true')
-      .txt Sinatra
+block jsParams
+  script.
+    //- This is javascript
+    articleGroups = [
+      {title:"First Steps",   group:"shared/first-steps,ruby/first-steps"},
+      {title:"Deps Management", group:"ruby/dependency-management"},
+      {title:"Configuration", group:"ruby/configuration"},
+      {title:"Production",    group:"ruby/production,shared/production"},
+      {title:"Going Further", group:"shared/going-further"},
+      {title:"Frameworks",    group:"ruby/frameworks"}
+    ]
+    requiredComponents = [
+      {name:'ruby', icon:'ruby', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MySQL',      icon:'mysql',    href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'MongoDB',    icon:'mongo',    href:'#'},
+      {name:'Redis',      icon:'redis',    href:'#'},      
+      {name:'Memcached',  icon:'memcached',href:'#'}
+    ]
