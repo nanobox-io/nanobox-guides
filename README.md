@@ -60,7 +60,7 @@ Sample Article Group File:
   title    : Rails
   # Used to create the breadcrumb
   breadCrumb:
-    - {title: ruby,  href: /ruby/overview}
+    - {title: ruby,  href: /ruby}
     - {title: rails, href: /ruby/rails/getting-started}
   # Articles
   articles :

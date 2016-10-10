@@ -49,12 +49,12 @@ data.storage:
 ```
 
 #### Data Service Guides
-- [PostgreSQL Guides](/postgresql/overview.html)
-- [MySQL Guides](/mysql/overview.html)
-- [MongoDB Guides](/mongodb/overview.html)
-- [Redis Guides](/redis/overview.html)
-- [Memcached Guides](/memcached/overview.html)
-- [Storage Guides](/storage/overview.html)
+- [PostgreSQL Guides](/postgresql)
+- [MySQL Guides](/mysql)
+- [MongoDB Guides](/mongodb)
+- [Redis Guides](/redis)
+- [Memcached Guides](/memcached)
+- [Storage Guides](/storage)
 
 ### Build & Deploy to Provision  Components
 To provision your components, build a new runtime and deploy it.
