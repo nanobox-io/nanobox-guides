@@ -21,7 +21,6 @@ class Article
       )
     ).then ()=>
       @markMatchedArticle @articleGroupData.articles
-
       $node = $ jadeTemplate['articles']( @articleGroupData )
       $(".title",    @$leftNav).text @articleGroupData.title
       $(".articles", @$leftNav).append $node
@@ -47,6 +46,7 @@ class Article
 
 
   buildBreadCrumbs : () ->
+    return
     @articleGroupData.breadCrumb.push {title:@title, href:"#"}
     $node = $ jadeTemplate['breadcrumb']( {breadCrumbs:@articleGroupData.breadCrumb} )
     @$main.prepend $node
