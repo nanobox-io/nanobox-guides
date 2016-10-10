@@ -72,8 +72,7 @@ class Article
     $("a", $headers).on 'click', @onAnchorClick
 
   onAnchorClick : (e)->
-      e.preventDefault();
-      $('body').velocity 'scroll', {duration:600, offset:$($.attr(this, 'href')).offset().top, easing:'easeInOutQuint' }
+    $('body').velocity 'scroll', {duration:600, offset:$($.attr(this, 'href')).offset().top, easing:'easeInOutQuint' }
 
 
 window.nanobox ||= {}
