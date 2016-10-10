@@ -1,10 +1,11 @@
-extends /app/pages/templates/framework-landing  
+extends /app/pages/templates/language-landing  
 
 block configParams
   -
     formalName   = "Node.js"
-    informalName = "Node"
+    informalName = "node"
     icon         = "node"
+    frameworks   = "node"
 
 block jsParams
   script.
@@ -16,14 +17,4 @@ block jsParams
       {title:"Production",    group:"nodejs/production,shared/production"},
       {title:"Going Further", group:"shared/going-further"},
       {title:"Frameworks",    group:"nodejs/frameworks"}
-    ]
-    requiredComponents = [
-      {name:'nodejs', icon:'node', href:'#'}
-    ]
-    optionalComponents = [
-      {name:'MySQL',      icon:'mysql',    href:'#'},
-      {name:'PostgreSQL', icon:'postgres', href:'#'},
-      {name:'MongoDB',    icon:'mongo',    href:'#'},
-      {name:'Redis',      icon:'redis',    href:'#'},      
-      {name:'Memcached',  icon:'memcached',href:'#'}
     ]
