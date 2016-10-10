@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=postgresql-config-options>PostgreSQL Config Options</h1><p>PostgreSQL components are configured in your <code>boxfile.yml</code>. All available configuration options are outlined below.</p><h3 id=version>version</h3><p>Specifies which Postgres version to use. The following version(s) are available:</p><ul><li>9.3</li><li>9.4 <em>(default)</em></li><li>9.5</li></ul><p><strong>Note:</strong> PostgreSQL versions cannot be changed after the service is created. To use a different version, you&#39;ll have to create a new PostgreSQL component and manually migrate data.</p><pre><code class=lang-yaml># default setting
+data.db:
+  image: nanobox/postgresql
+  config:
+    version: 9.4
+</code></pre><h3 id=request-postgresql-boxfile-yml-configs>Request PostgreSQL boxfile.yml Configs</h3><p>One of the many benefits of using PostgreSQL is that it doesn&#39;t require much configuration. The project itself is finely tuned. However we know there are settings that users may want to tweak. If there&#39;s a setting you&#39;d like to modify that is typically handled in the <code>postresql.conf</code>, let us know by creating a <a href=https://github.com/nanobox-io/nanobox-docker-postgresql/issues/new>new issue on the PostgreSQL image project on Github</a>.</p></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("PostgreSQL Config Options", "postgresql", "postgres")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

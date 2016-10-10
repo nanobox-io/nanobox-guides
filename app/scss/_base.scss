@@ -3,7 +3,7 @@ html           {box-sizing: border-box; }
 *, *:before,
 *:after        {box-sizing: inherit; ; }
 
-body           { margin:0; padding:0 0 0 0; font-family: $proxima; background:#DBE1E6; }
+body           { margin:0; padding:0 0 0 0; font-family: $proxima; background:#DBE1E6; overflow-x: hidden; }
 body *         { -webkit-font-smoothing:antialiased;  }
 a              { text-decoration: none; color: #26BBFF; }
 ::-webkit-input-placeholder {

@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=redis-config-options>Redis Config Options</h1><p>Redis components are configured in your <code>boxfile.yml</code>. All available configuration options are outlined below.</p><h3 id=important-notes-about-configuration-changes>Important Notes About Configuration Changes</h3><p>Whenever configuration changes are made to your Redis boxfile.yml config, in order to apply those changes, Nanobox must provision a new Redis node.</p><h4 id=changes-in-dev-sim>Changes in Dev &amp; Sim</h4><p>When working in dev and sim, this will replace the existing node, wiping all data. If you&#39;re using Redis as a persistent datastore, data will need to be re-seeded.</p><h4 id=changes-to-redis-in-production>Changes to Redis in Production</h4><p>When config changes are made to Redis in production, a new node is provisioned and data is migrated. There will be slight downtime as data is synced between the old and new node(s), but the process is designed to minimize this as much as possible. More information is available in the <a href="https://docs.nanobox.io/data-management/data-migrations-scaling/">Data Migrations During Scaling &amp; Repairs</a> doc.</p><h2 id=config-options>Config Options</h2><pre><code class=lang-yaml>data.redis:
+  image: nanobox/redis
+  config:
+    version: 2.8
+    tcp_keepalive: 60
+    databases: 16
+    stop_writes_on_bgsave_error: &#39;yes&#39;
+    slave_serve_stale_data: &#39;yes&#39;
+    slave_read_only: &#39;yes&#39;
+    repl_ping_slave_period: 10
+    repl_timeout: 60
+    repl_disable_tcp_nodelay: &#39;no&#39;
+    max_clients: 1024
+    maxmemory_policy: &#39;volatile-lru&#39;
+    maxmemory_samples: 3
+    appendonly: &#39;no&#39;
+    appendfsync: &#39;everysec&#39;
+    no_appendfsync_on_rewrite: &#39;no&#39;
+    auto_aof_rewrite_percentage: 100
+    auto_aof_rewrite_min_size: &#39;64m&#39;
+    lua_time_limit: 5000
+    slowlog_log_slower_than: 0
+    slowlog_max_len: 128
+
+    # Advanced Configs
+    hash_max_ziplist_entries: 512
+    hash_max_ziplist_value: 64
+    list_max_ziplist_entries: 512
+    list_max_ziplist_value: 64
+    set_max_intset_entries: 512
+    zset_max_ziplist_entries: 12
+    zset_max_ziplist_value: 64
+    activerehashing: &#39;yes&#39;
+    hz: 10
+    aof_rewrite_incremental_fsync: &#39;yes&#39;
+</code></pre><h3 id=version>version</h3><p>Specifies which Redis version to use. The following versions are available:</p><ul><li>2.6</li><li>2.8</li><li>3.0</li><li>3.2</li></ul><p><strong>Note:</strong> Due to version compatibility constraints, Redis versions cannot be changed after the service is created. To use a different version, you&#39;ll have to create a new Redis component.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    version: 3.0
+</code></pre><h3 id=tcp-_keepalive>tcp_keepalive</h3><p>If non-zero, use SO_KEEPALIVE to send TCP ACKs to clients in absence of communication. This is useful for two reasons:</p><ol><li>Detect dead peers.</li><li>Take the connection alive from the point of view of network equipment in the middle.</li></ol><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    tcp_keepalive: 60
+</code></pre><h3 id=databases>databases</h3><p>Sets the number of databases.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    databases: 16
+</code></pre><h3 id=stop-_writes-_on-_bgsave-_error>stop_writes_on_bgsave_error</h3><p>By default Redis will stop accepting writes if RDB snapshots are enabled (at least one save point) and the latest background save failed. This will make the user aware (in an hard way) that data is not persisting on disk properly, otherwise chances are that no one will notice and some disaster will happen.</p><p>If the background saving process will start working again Redis will automatically allow writes again.</p><p>However if you have setup your proper monitoring of the Redis server and persistence, you may want to disable this feature so that Redis will continue to work as usually even if there are problems with disk, permissions, and so forth.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    stop_writes_on_bgsave_error: &#39;yes&#39;
+</code></pre><h3 id=slave-_serve-_stale-_data>slave_serve_stale_data</h3><p>When a slave loses its connection with the master, or when the replication is still in progress, the slave can act in two different ways:</p><ol><li><p>If slave-serve-stale-data is set to &#39;yes&#39; the slave will still reply to client requests, possibly with out of date data, or the data set may just be empty if this is the first synchronization.</p></li><li><p>If slave-serve-stale-data is set to &#39;no&#39; the slave will reply with an error &quot;SYNC with master in progress&quot; to all the kind of commands but to INFO and SLAVEOF.</p></li></ol><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    slave_serve_stale_data: &#39;yes&#39;
+</code></pre><h3 id=slave-_read-_only>slave_read_only</h3><p>You can configure a slave instance to accept writes or not. Writing against a slave instance may be useful to store some ephemeral data (because data written on a slave will be easily deleted after resync with the master) but may also cause problems if clients are writing to it because of a misconfiguration.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    slave_read_only: &#39;yes&#39;
+</code></pre><h3 id=repl-_ping-_slave-_period>repl_ping_slave_period</h3><p>Slaves send PINGs to server in a predefined interval. It&#39;s possible to change this interval.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    repl_ping_slave_period: 10
+</code></pre><h3 id=repl-_timeout>repl_timeout</h3><p>The following option sets a timeout for both Bulk transfer I/O timeout and master data or ping response timeout. The default value is 60 seconds. It is important to make sure that this value is greater than the value specified for <a href=#repl-ping-slave-period><code>repl_ping_slave_period</code></a> otherwise a timeout will be detected every time there is low traffic between the master and the slave.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    repl_timeout: 60
+</code></pre><h3 id=repl-_disable-_tcp-_nodelay>repl_disable_tcp_nodelay</h3><p>Toggles TCP_NODELAY on the slave socket after SYNC. If you select &quot;yes&quot; Redis will use a smaller number of TCP packets and less bandwidth to send data to slaves. But this can add a delay for the data to appear on the slave side. If you select &quot;no&quot; the delay for data to appear on the slave side will be reduced but more bandwidth will be used for replication.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    repl_disable_tcp_nodelay: &#39;no&#39;
+</code></pre><h3 id=max-_clients>max_clients</h3><p>Set the max number of clients connected at the same time. Once the limit is reached Redis will close all the new connections sending an error &#39;max number of clients reached&#39;.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    max_clients: 1024
+</code></pre><h3 id=maxmemory-_policy>maxmemory_policy</h3><p>Defines how Redis will select what to remove when maxmemory is reached. You can select among five behaviors:</p><ul><li><strong>volatile-lru</strong> - remove the key with an expire set using an LRU algorithm</li><li><strong>allkeys-lru</strong> - remove any key accordingly to the LRU algorithm</li><li><strong>volatile-random</strong> - remove a random key with an expire set</li><li><strong>allkeys-random</strong> - remove a random key, any key</li><li><strong>volatile-ttl</strong> - remove the key with the nearest expire time (minor TTL)</li><li><strong>noeviction</strong> - don&#39;t expire at all, just return an error on write operations</li></ul><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    maxmemory_policy: &#39;volatile-lru&#39;
+</code></pre><h3 id=maxmemory-_samples>maxmemory_samples</h3><p>LRU and minimal TTL algorithms are not precise algorithms but approximated algorithms (in order to save memory), so you can select as well the sample size to check. For instance for default Redis will check three keys and pick the one that was used less recently, you can change the sample size using the following configuration directive.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    maxmemory_samples: 3
+</code></pre><h3 id=appendonly>appendonly</h3><p>By default Redis asynchronously dumps the dataset on disk. This mode is good enough in many applications, but an issue with the Redis process or a power outage may result into a few minutes of writes lost (depending on the configured save points).</p><p>The Append Only File is an alternative persistence mode that provides much better durability. For instance, using the default data <a href=#appendfsync>fsync policy</a>, Redis can lose just one second of writes in a dramatic event like a server power outage, or a single write if something wrong with the Redis process itself happens, but the operating system is still running correctly.</p><p>AOF and RDB persistence can be enabled at the same time without problems. If the AOF is enabled on startup Redis will load the AOF, that is the file with the better durability guarantees. Please check <a href=http://redis.io/topics/persistence>Redis Persistence Documentation</a> for more information.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    appendonly: &#39;no&#39;
+</code></pre><h3 id=appendfsync>appendfsync</h3><p>The fsync() call tells the Operating System to actually write data on disk instead to wait for more data in the output buffer. Redis supports three different modes:</p><ul><li><strong>no</strong> - don&#39;t fsync, just let the OS flush the data when it wants. Faster.</li><li><strong>always</strong> - fsync after every write to the append only log . Slow, Safest.</li><li><strong>everysec</strong> - fsync only one time every second. Compromise.</li></ul><p>The default is &quot;everysec&quot;, as that&#39;s usually the right compromise between speed and data safety. It&#39;s up to you to understand if you can relax this to &quot;no&quot; that will let the operating system flush the output buffer when it wants, for better performances (but if you can live with the idea of some data loss consider the default persistence mode that&#39;s snapshotting), or on the contrary, use &quot;always&quot; that&#39;s very slow but a bit safer than everysec.</p><p>More details in <a href=http://antirez.com/post/redis-persistence-demystified.html>Redis Persistence Demistified</a>.</p><p>If unsure, use &quot;everysec&quot;.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    appendfsync: &#39;everysec&#39;
+</code></pre><h3 id=no-_appendfsync-_on-_rewrite>no_appendfsync_on_rewrite</h3><p>When the <a href=#appendfsync>AOF fsync</a> policy is set to always or everysec, and a background saving process (a background save or AOF log background rewriting) is performing a lot of I/O against the disk, Redis may block too long on the fsync() call. Note that there is no fix for this currently, as even performing fsync in a different thread will block the synchronous write(2) call.</p><p>In order to mitigate this problem it&#39;s possible to use the following option that will prevent fsync() from being called in the main process while a BGSAVE or BGREWRITEAOF is in progress.</p><p>This means that while another child is saving, the durability of Redis is the same as <code>appendfsync: &#39;none&#39;</code>. In practical terms, this means that it is possible to lose up to 30 seconds of log in the worst scenario.</p><p>If you have latency problems turn this to &quot;yes&quot;. Otherwise leave it as &quot;no&quot; that is the safest pick from the point of view of durability.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    no_appendfsync_on_rewrite: &#39;no&#39;
+</code></pre><h3 id=auto-_aof-_rewrite-_percentage>auto_aof_rewrite_percentage</h3><p>Redis is able to automatically rewrite the log file implicitly calling BGREWRITEAOF when the AOF log size grows by the specified percentage. Redis remembers the size of the AOF file after the latest rewrite. This base size is compared to the current size. If the current size is bigger than the specified percentage, the rewrite is triggered. Also you need to <a href=#auto-aof-rewrite-percentage>specify a minimal size for the AOF file to be rewritten</a>, this is useful to avoid rewriting the AOF file even if the percentage increase is reached but it is still pretty small.</p><p>Specify a percentage of zero in order to disable the automatic AOF rewrite feature.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    auto_aof_rewrite_percentage: 100
+</code></pre><h3 id=auto-_aof-_rewrite-_min-_size>auto_aof_rewrite_min_size</h3><p>Specifies the minimal size for the AOF file to be rewritten.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    auto_aof_rewrite_min_size: &#39;64m&#39;
+</code></pre><h3 id=lua-_time-_limit>lua_time_limit</h3><p>Set the Max execution time of a Lua script in milliseconds.</p><p>If the maximum execution time is reached Redis will log that a script is still in execution after the maximum allowed time and will start to reply to queries with an error.</p><p>When a long running script exceed the maximum execution time only the SCRIPT KILL and SHUTDOWN NOSAVE commands are available. The first can be used to stop a script that did not yet called write commands. The second is the only way to shut down the server in the case a write commands was already issue by the script but the user don&#39;t want to wait for the natural termination of the script.</p><p>Set it to 0 or a negative value for unlimited execution without warnings.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    lua_time_limit: 5000
+</code></pre><h3 id=slowlog-_log-_slower-_than>slowlog_log_slower_than</h3><p>This tells Redis what is the execution time, in microseconds, to exceed in order for the command to get logged to the <a href=http://redis.io/commands/slowlog>Redis Slow Log</a>.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    slowlog_log_slower_than:
+</code></pre><h3 id=slowlog-_max-_len>slowlog_max_len</h3><p>This parameter sets the length of the slow log. When a new command is logged the oldest one is removed from the queue of logged commands.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    slowlog_max_len: 128
+</code></pre><h2 id=advanced-redis-config>Advanced Redis Config</h2><h3 id=hash-_max-_ziplist-_entries>hash_max_ziplist_entries</h3><p>Sets the max number of hash entries before they are encrypted to save space.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    hash_max_ziplist_entries: 512
+</code></pre><h3 id=hash-_max-_ziplist-_value>hash_max_ziplist_value</h3><p>Sets the max value of hash entries before they are encrypted to save space.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    hash_max_ziplist_value: 64
+</code></pre><h3 id=list-_max-_ziplist-_entries>list_max_ziplist_entries</h3><p>Sets the max number of list entries before they are encrypted to save space.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    list_max_ziplist_entries: 512
+</code></pre><h3 id=list-_max-_ziplist-_value>list_max_ziplist_value</h3><p>Sets the max value of list entries before they are encrypted to save space.</p><pre><code class=lang-yaml># default settings
+data.redis:
+  image: nanobox/redis
+  config:
+    list_max_ziplist_value: 64
+</code></pre><h3 id=set-_max-_intset-_entries>set_max_intset_entries</h3><p>Sets have a special encoding in just one case: when a set is composed of just strings that happens to be integers in radix 10 in the range of 64 bit signed integers. The following configuration setting sets the limit in the size of the set in order to use this special memory saving encoding.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    set_max_intset_entries: 512
+</code></pre><h3 id=zset-_max-_ziplist-_entries>zset_max_ziplist_entries</h3><p>Sets the maximum number of entries before a sorted set is encoded to save space.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    zset_max_ziplist_entries: 12
+</code></pre><h3 id=zset-_max-_ziplist-_value>zset_max_ziplist_value</h3><p>Sets the maximum value of entries before a sorted set is encoded to save space.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    zset_max_ziplist_value: 64
+</code></pre><h3 id=activerehashing>activerehashing</h3><p>Active rehashing uses 1 millisecond every 100 milliseconds of CPU time in order to help rehashing the main Redis hash table (the one mapping top-level keys to values). The hash table implementation Redis uses (see dict.c) performs a lazy rehashing: the more operation you run into an hash table that is rehashing, the more rehashing &quot;steps&quot; are performed, so if the server is idle the rehashing is never complete and some more memory is used by the hash table.</p><p>The default is to use this millisecond 10 times every second in order to active rehashing the main dictionaries, freeing memory when possible.</p><p>If unsure: use <code>activerehashing: &#39;no&#39;</code> if you have hard latency requirements and it is not a good thing in your environment that Redis can reply form time to time to queries with 2 milliseconds delay.</p><p>Use <code>activerehashing: &#39;yes&#39;</code> if you don&#39;t have such hard requirements but want to free memory asap when possible.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    activerehashing: &#39;yes&#39;
+</code></pre><h3 id=hz>hz</h3><p>Redis calls an internal function to perform many background tasks, like closing connections of clients in timeout, purging expired keys that are never requested, and so forth. Not all tasks are performed with the same frequency, but Redis checks for tasks to perform accordingly to the specified &quot;hz&quot; value.</p><p>By default &quot;hz&quot; is set to 10. Raising the value will use more CPU when Redis is idle, but at the same time will make Redis more responsive when there are many keys expiring at the same time, and timeouts may be handled with more precision.</p><p>The range is between 1 and 500, however a value over 100 is usually not a good idea. Most users should use the default of 10 and raise this up to 100 only in environments where very low latency is required.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    hz: 10
+</code></pre><h3 id=aof-_rewrite-_incremental-_fsync>aof_rewrite_incremental_fsync</h3><p>When a child rewrites the AOF file, if the following option is enabled the file will be fsync-ed every 32 MB of data generated. This is useful in order to commit the file to the disk more incrementally and avoid big latency spikes.</p><pre><code class=lang-yaml># default setting
+data.redis:
+  image: nanobox/redis
+  config:
+    aof_rewrite_incremental_fsync: &#39;yes&#39;
+</code></pre><h3 id=request-redis-boxfile-yml-configs>Request Redis boxfile.yml Configs</h3><p>If there&#39;s a setting you&#39;d like to modify that isn&#39;t currently available, please let us know by creating a <a href=https://github.com/nanobox-io/nanobox-docker-redis/issues/new>new issue on the Redis image project on Github</a>.</p></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Redis Config Options", "redis", "redis")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

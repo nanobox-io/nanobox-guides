@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=deploy-wordpress>Deploy WordPress</h1><h2 id=test-locally-first>Test Locally First</h2><p>Nanobox provides a &quot;sim&quot; environment that simulates a full production deploy on your local machine. Once you&#39;re done making changes in dev and are ready to test your app, test the deploy and running app in sim:</p><pre><code class=lang-bash># Compile your code
+nanobox compile
+
+# Start your sim environment
+nanobox sim start
+
+# Add a convenient way to access your sim app from the browser
+nanobox sim dns add wordpress.nanobox.sim
+
+# Deploy to your sim environment
+nanobox sim deploy
+</code></pre><p>Once deployed, you can access and test your sim app at <code>http://wordpress.nanobox.sim</code>.</p><p><em>Dev and sim environments are completely isolated from each other so you may want/need to <a href=/php/wordpress/data-storage/importing-data>import data</a> and <a href=/php/wordpress/data-storage/importing-uploads>uploads</a> into your sim app.</em></p><h2 id=launch-your-app-with-nanobox>Launch Your App with Nanobox</h2><p>Login to your <a href=https://dashboard.nanobox.io>Nanobox dashboard</a> and <a href="https://docs.nanobox.io/production/launch-app/">launch a new app</a>.</p><h3 id=link-your-codebase-to-your-new-app>Link Your Codebase to Your New App</h3><p>In order to deploy to your new app, you&#39;ll need to link it to your local WordPress codebase using the <code>nanobox link</code> command.</p><pre><code class=lang-bash># Link your local codebase to your nanobox app
+nanobox link app-name
+</code></pre><h3 id=set-auth-key-salt-evars>Set Auth Key &amp; Salt Evars</h3><p>WordPress uses authentication keys and salts to securely create sessions. If you&#39;ve updated your wp-config.php to use the configuration specified <a href=/php/wordpress/getting-started.html#setup-auth-keys-salts>here</a>, you&#39;ll need to set those environment variables in your production app.</p><p>Visit <a href="https://api.wordpress.org/secret-key/1.1/salt/">WordPress&#39; Auth Key and Salt API</a> to generate random values for each. Pass each key-value pair into your Nanobox app using the following command:</p><p><em style="font-size: .8em">This is an example. Be sure to use your own unique values.</em></p><pre><code class=lang-bash>nanobox evar add AUTH_KEY=&#39;Sl&gt;,5![EPRR:7dQd4/P03$_5Ira$dF,~&gt;&#39; SECURE_AUTH_KEY=&#39;:=D;!X(1an~r#B(L.E?_+oAYXoGgjDen1&#39; LOGGED_IN_KEY=&#39;4]X]-,`1zjrcvG=WSWE/-2+n%=V^bHB9J&#39; NONCE_KEY=&#39;WJVs@}9#s7U,q-}&lt;&gt;07FvxHO3rYJ`u-{p&#39; AUTH_SALT=&#39;S$.W{XrI2%adaMysm-&lt;S:e&amp;d!&lt;9E-)N/d&#39; SECURE_AUTH_SALT=&#39;_h)+V.XBHXL@@Cc.BG,-At|vS|)_rOJ`H&#39; LOGGED_IN_SALT=&#39;;VE`XM9--ih!LJju=c;2|/|6$8ik0u[Me&#39; NONCE_SALT=&#39;/fTF;u`(z&lt;$|d nse?HwD1Ih@o[:v=ub|&#39;
+</code></pre><h3 id=deploy-to-your-app>Deploy to Your App</h3><pre><code class=lang-bash># deploy to your nanobox app
+nanobox deploy
+</code></pre><p>Your app&#39;s build package will be deployed to your app on Nanobox and all your app&#39;s components (web, database, storage) will be provisioned.</p><h3 id=import-data-uploads>Import Data &amp; Uploads</h3><p>With your production app up and running, you can import your database and uploads if necessary.</p><p><a href=/php/wordpress/data-storage/importing-data.html#importing-data-into-a-production-database>Importing Data</a><br><a href=/wordpress/data-storage/importing-uploads.html>Importing Uploads</a></p><p><em>If importing data, be sure to <a href=/php/wordpress/data-storage/importing-data.html#update-your-wordpress-baseurl>update your baseurl in your database</a>.</em></p><h2 id=enjoy-your-live-wordpress-app>Enjoy Your Live WordPress App</h2><p>Congratulations. Your WordPress app is now live. The here&#39;s a few next steps you may want to go through:</p><p><a href="https://docs.nanobox.io/domains-networking/custom-domains/">Use a Custom Domain</a><br><a href="https://docs.nanobox.io/domains-networking/ssl-tls/adding/">Adding SSL/TLS</a><br><a href="https://docs.nanobox.io/teams/app-add-member/">Adding Team Members</a></p></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Deploy WordPress", "php/wordpress", "php,wordpress")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=working-in-dev>Working in Dev</h1><p>Nanobox provides a local virtualized development environment in which to craft your PHP app. Your local codebase is mounted into your dev environment, so any code changes will be reflected in your running dev app. The following will get your dev environment up and running and give your app a DNS alias to run from.</p><pre><code class=lang-bash># start your dev environment
+nanobox dev start
+
+# provide a convenient way to access
+# your app from the browser
+nanobox dev dns add appname.dev
+</code></pre><p>After <a href=#starting-your-webserver>starting your webserver</a>, your app will be available at <code>appname.dev:8080</code>.</p><h2 id=starting-your-webserver>Starting Your Webserver</h2><p>You have a few options for starting PHP and your webserver.</p><h3 id=run-all-start-commands>Run All Start Commands</h3><p>The <code>nanobox dev run</code> command will run all web and worker start commands specified in your boxfile.yml. This is the recommended method when you have more than one start command.</p><pre><code class=lang-yaml># run all web and worker start commands
+nanobox dev run
+</code></pre><h3 id=console-in>Console In</h3><p>You can also console into your dev environment and manually start your web server. This is recommended when you have only one start command and/or want to run start command(s) different than those specified in your boxfile.yml.</p><pre><code class=lang-bash># console into dev
+nanobox dev console
+
+# start apache (using mod-php)
+start-apache
+</code></pre><h2 id=disable-bytecode-cachers>Disable Bytecode Cachers</h2><p>Bytecode cachers (APC, EAccelerator, xCache and OPcache) provide significant performance boosts, but you don&#39;t want them enabled while in development. They will cache your PHP responses and pull future responses only from the cache. This will prevent changes to files from propagating to your running app.</p><p>The PHP engines allows you to remove certain extensions while in dev using the <a href=/php/config/php-settings.html#dev_extensions><code>dev_extenesions</code></a> and <a href=/php/config/php-settings.html#dev_zend_extensions><code>dev_zend_extenesions</code></a> options.</p><pre><code class=lang-yaml>code.build:
+  engine: php
+  config:
+    extensions:
+      - mysqli
+      - xcache
+    dev_extensions:
+      rm:
+        - xcache
+</code></pre></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Working in Dev", "php", "php")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

@@ -29,7 +29,8 @@ class Article
         $(e.currentTarget).toggleClass 'open'
 
       @buildBreadCrumbs()
-      localizeLinks()
+      if window.isLocal
+        localizeLinks()
 
   markMatchedArticle : (articles) ->
     shouldBeOpen = false

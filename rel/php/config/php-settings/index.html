@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=php-settings>PHP Settings</h1><p>The following settings are typically configured in the php.ini. When using Nanobox, these are configured in the boxfile.yml.</p><h3 id=runtime>runtime</h3><p>Specifies which PHP runtime and version to use. The following runtimes are available:</p><ul><li>php-5.3</li><li>php-5.4</li><li>php-5.5</li><li>php-5.6</li><li>php-7.0</li></ul><pre><code class=lang-yaml>code.build:
+  config:
+    runtime: &#39;php-5.6&#39;
+</code></pre><h3 id=extensions>extensions</h3><p>Specifies what PHP extensions should be included in your app&#39;s environment. To see what PHP extensions are available, view the <a href="../php-zend-extensions/">full list of available PHP extensions</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    extensions:
+      - curl
+      - gd
+      - mbstring
+      - pdo_mysql
+</code></pre><h3 id=dev_extensions>dev_extensions</h3><p>Specifies what extensions should be added or removed when working in a development environment.</p><p><strong>Note:</strong> <em>Bytecode cachers should always be disabled when working in dev. If enabled, changes to php files will not appear in your running dev app because they will be cached.</em></p><pre><code class=lang-yaml>dev_extensions:
+  add:
+    - svn
+  rm:
+    - xcache
+</code></pre><h3 id=zend_extensions>zend_extensions</h3><p>Specifies what Zend extensions should be included in your app&#39;s environment. To see what Zend extensions are available, view the <a href=../php-zend-extensions/#zend-extensions>Zend Extensions section of the PHP extensions list</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    zend_extensions:
+      - ioncube_loader
+      - opcache
+</code></pre><h3 id=dev_zend_extensions>dev_zend_extensions</h3><p>Specifies what Zend extensions should be added or removed when working in a development environment.</p><p><strong>Note:</strong> <em>Bytecode cachers should always be disabled when working in dev. If enabled, changes to php files will not appear in your running dev app because they will be cached.</em></p><pre><code class=lang-yaml>dev_zend_extensions:
+  add:
+    - xdebug
+  rm:
+    - opcache
+</code></pre><h3 id=short-_open-_tag>short_open_tag</h3><p>Sets the <a href=http://www.php.net/manual/en/ini.core.php#ini.short-open-tag><code>short_open_tag</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    short_open_tag: true
+</code></pre><h3 id=zlib-_output-_compression>zlib_output_compression</h3><p>Sets the <a href=http://php.net/manual/en/zlib.configuration.php#ini.zlib.output-compression><code>zlib.output_compression</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    zlib_output_compression: &#39;Off&#39;
+</code></pre><h3 id=allow-_url-_fopen>allow_url_fopen</h3><p>Sets the <a href=http://php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen><code>allow_url_fopen</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    allow_url_fopen: &#39;On&#39;
+</code></pre><h3 id=disable_functions>disable_functions</h3><p>Sets the <a href=http://php.net/manual/en/ini.core.php#ini.disable-functions><code>disable_fuctions</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    disable_functions:
+      - exec
+      - shell_exec
+      - system
+</code></pre><h3 id=expose_php>expose_php</h3><p>Sets the <a href=http://www.php.net/manual/en/ini.core.php#ini.expose-php><code>expose_php</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    expose_php: &#39;On&#39;
+</code></pre><h3 id=max-_execution-_time>max_execution_time</h3><p>Sets the <a href=http://www.php.net/manual/en/info.configuration.php#ini.max-execution-time><code>max_execution_time</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    max_execution_time: 30
+</code></pre><h3 id=max-_input-_time>max_input_time</h3><p>Sets the <a href=http://www.php.net/manual/en/info.configuration.php#ini.max-input-time><code>max_input_time</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    max_input_time: 60
+</code></pre><h3 id=memory_limit>memory_limit</h3><p>Sets the <a href=http://php.net/manual/en/ini.core.php#ini.memory-limit><code>memory_limit</code> PHP setting</a>. <strong>Note:</strong> This setting should not exceed the memory available on your PHP server(s).</p><pre><code class=lang-yaml>code.build:
+  config:
+    memory_limit: &#39;128M&#39;
+</code></pre><h3 id=error_reporting>error_reporting</h3><p>Sets the <a href=http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting><code>error_reporting</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    error_reporting: E_ALL
+</code></pre><h3 id=display_errors>display_errors</h3><p>Sets the <a href=http://us3.php.net/manual/en/errorfunc.configuration.php#ini.display-errors><code>display_errors</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    display_errors: &#39;stderr&#39;
+</code></pre><h3 id=register_globals>register_globals</h3><p>Sets the <a href=http://www.php.net/manual/en/ini.core.php#ini.register-globals><code>register_globals</code> PHP setting</a></p><pre><code class=lang-yaml>code.build:
+  config:
+    register_globals: &#39;Off&#39;
+</code></pre><h3 id=register-_argc-_argv>register_argc_argv</h3><p>Sets the <a href=http://www.php.net/manual/en/ini.core.php#ini.register-argc-argv><code>register_argc_argv</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    register_argc_argv: &#39;Off&#39;
+</code></pre><h3 id=post-_max-_size>post_max_size</h3><p>Sets the <a href=http://www.php.net/manual/en/ini.core.php#ini.post-max-size><code>post_max_size</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    post_max_size: &#39;8M&#39;
+</code></pre><h3 id=upload-_max-_filesize>upload_max_filesize</h3><p>Sets the <a href=http://php.net/manual/en/ini.core.php#ini.upload-max-filesize><code>upload_max_filesize</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    upload_max_filesize: &#39;2M&#39;
+</code></pre><h3 id=file_uploads>file_uploads</h3><p>Sets the <a href=http://php.net/manual/en/ini.core.php#ini.file-uploads><code>file_uploads</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    file_uploads: true
+</code></pre><h3 id=max-_file-_uploads>max_file_uploads</h3><p>Sets the <a href=http://php.net/manual/en/ini.core.php#ini.max-file-uploads><code>max_file_uploads</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    max_file_uploads: 20
+</code></pre><h3 id=max-_input-_vars>max_input_vars</h3><p>Sets the <a href=http://php.net/manual/en/info.configuration.php#ini.max-input-vars><code>max_input_vars</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    max_input_vars: 1000
+</code></pre><h3 id=default_mimetype>default_mimetype</h3><p>Sets the <a href=http://www.php.net/manual/en/ini.core.php#ini.default-mimetype><code>default_mime_type</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    default_mimetype: &#39;text/html&#39;
+</code></pre><h3 id=default_locale>default_locale</h3><p>Sets the <a href=http://php.net/manual/en/intl.configuration.php#ini.intl.default-locale><code>intl.default_locale</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    default_locale: &#39;en_US&#39;
+</code></pre><h3 id=browscap>browscap</h3><p>This allows you to specify the filepath to your browser capabilities file (browscap.ini). See <a href=http://php.net/manual/en/misc.configuration.php#ini.browscap>PHP.net Docs</a> for definition &amp; configuration options. When specifying the path to your browscap.ini in your boxfile.yml, it should relative to the root of your repo.</p><p><strong><em>Note:</em></strong> You must include your own browscap.ini in your app&#39;s repo. They are available for free from <a href="http://browscap.org/">browscap.org</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    browscap: &#39;app/browscap.ini&#39;
+</code></pre><h3 id=session-_save-_handler>session_save_handler</h3><p>Sets the <a href=http://www.php.net/manual/en/session.configuration.php#ini.session.save-handler><code>session.save_handler</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    session_save_handler: &#39;files&#39;
+</code></pre><h3 id=session-_save-_path>session_save_path</h3><p>Sets the <a href=http://www.php.net/manual/en/session.configuration.php#ini.session.save-path><code>session.save_path</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    session_save_path: &#39;/tmp/nanobox/sessions&#39;
+</code></pre><h3 id=session_length>session_length</h3><p>Sets the <a href=http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime><code>session.gc_maxlifetime</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    session_length: 3600
+</code></pre><h3 id=session_autostart>session_autostart</h3><p>Sets the <a href=http://www.php.net/manual/en/session.configuration.php#ini.session.auto-start><code>session.autostart</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    session_autostart: &#39;false&#39;
+</code></pre><h3 id=date_timezone>date_timezone</h3><p>Sets the <a href=http://php.net/manual/en/datetime.configuration.php#ini.date.timezone><code>date.timezone</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    date_timezone: &#39;US/central&#39;
+</code></pre><h3 id=iconv-_internal-_encoding>iconv_internal_encoding</h3><p>Sets the <a href=http://www.php.net/manual/en/iconv.configuration.php#ini.iconv.internal-encoding><code>iconv.internal_encoding</code> PHP setting</a>.</p><pre><code class=lang-yaml>code.build:
+  config:
+    iconv_internal_encoding: &#39;UTF-8&#39;
+</code></pre></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("PHP Settings", "php", "php")
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>
