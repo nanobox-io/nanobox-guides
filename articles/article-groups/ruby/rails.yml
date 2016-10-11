@@ -4,7 +4,7 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /ruby/rails/getting-started/download-nanobox, title: Download Nanobox}
+      - {href: /ruby/rails/getting-started/install-nanobox, title: Install Nanobox}
       - {href: /ruby/rails/getting-started/from-scratch, title: Rails from Scratch}
       - {href: /ruby/rails/getting-started/existing-app, title: Existing Rails App}
 
