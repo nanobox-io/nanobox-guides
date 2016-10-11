@@ -1,5 +1,5 @@
 title: Rails
 articles:
-  - {href: /ruby/rails/next-steps/add-nodejs, title: Add Nodejs}
-  - {href: /ruby/rails/next-steps/connect-a-database, title: Connect a Database}
-  - {href: /ruby/rails/next-steps/add-additional-components, title: Add Additional Components}
+  - {href: /ruby/rails/next-steps/add-a-database, title: Add a Database}
+  - {href: /ruby/rails/going-further/local-evars, title: Local Environment Variables}
+  - {href: /ruby/rails/next-steps/javascript-runtime, title: Javascript Runtime}

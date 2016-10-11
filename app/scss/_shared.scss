@@ -1,12 +1,17 @@
-a.hex           {cursor:pointer; color:#809CAD; text-transform:uppercase; font-size:15px; letter-spacing:0.06em; position:relative; transition:all 200ms; font-weight:bold; text-align:center; display: flex; flex-direction: column; align-items: center; width: 47px;
-  .icon         {width:70px;height:86px;position:relative;
-    &:after     {position: absolute; top:-6px; left:-73px; z-index: -1; content:""; display:block; background:url(/assets/sprite.png); width:216px; height:188px; background-position:-49px -61px; opacity:0; transition:opacity 300ms; }
+a.hex              {cursor:pointer; color:#809CAD; text-transform:uppercase; font-size:15px; letter-spacing:0.06em; position:relative; transition:all 200ms; font-weight:bold; text-align:center; display: flex; flex-direction: column; align-items: center; width: 47px;
+  .icon            {width:70px;height:86px;position:relative;
+    &:after        {position: absolute; top:-6px; left:-73px; z-index: -1; content:""; display:block; background:url(/assets/sprite.png); width:216px; height:188px; background-position:-49px -61px; opacity:0; transition:opacity 300ms; }
   }
-  .txt          {margin-top:7px}
+  .txt             {margin-top:7px}
   &.active,
-  &:hover       {color:#1B415D;
-    .icon:after {opacity:1;}
+  &:hover          {color:#1B415D;
+    .icon:after    {opacity:1;}
   }
+  &.new            {
+    &:before       {z-index: 2; position: absolute; top:12px; right:15px; content:""; display:block; background:url(/assets/sprite.png); width:31px; height:31px; background-position:-214px -11px;}
+    &:hover:before {top:13px; left:-7px; width:121px; height:41px; background-position:-72px -9px;}
+  }
+
 }
 
 a.direction-link   {display: flex; align-items: center; padding:12px 0; cursor:pointer;
