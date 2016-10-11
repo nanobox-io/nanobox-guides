@@ -2,5 +2,5 @@ name: Ruby
 icon: ruby
 home: /ruby
 frameworks:
-  - {href: /ruby/rails, name: rails, icon: rails}
-  - {href: /ruby/sinatra, name: sinatra, icon: sinatra}
+  - {href: /ruby/rails, name: rails, icon: rails, devMode: true}
+  - {href: /ruby/sinatra, name: sinatra, icon: sinatra, devMode: true}

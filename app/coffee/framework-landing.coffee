@@ -6,6 +6,7 @@ class FrameworkLanding extends Landing
     @loadArticleGroups articles
 
   buildLeftSection : (requiredComponents=[], optionalComponents=[], informalName) ->
+    return if requiredComponents.length == 0
     data =
       requiredComponents : requiredComponents
       optionalComponents : optionalComponents
