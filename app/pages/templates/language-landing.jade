@@ -10,7 +10,7 @@ block js
     $main = $('.main')
     nanobox.addBreadcrumb( $main )
     //- nanobox.addIcons( $main, "#{icon}" )
-    if(typeof devMode === 'undefined'){
+    if(typeof devMode !== 'undefined'){
       nanobox.showWorkInProgress( $main, "#{formalName}", "#{informalName}" )
     }
         
