@@ -11,10 +11,10 @@ articles:
   #
   - title: "Next Steps"
     articles:
-      - {href: /ruby/rails/next-steps/add-nodejs, title: Add Nodejs}
-      - {href: /ruby/rails/next-steps/connect-a-database, title: Connect a Database}
-      - {href: /ruby/rails/next-steps/add-additional-components, title: Add Additional Components}
-      - {href: /ruby/rails/going-further/local-evars, title: Add Local Environment Variables}
+      - {href: /ruby/rails/next-steps/add-a-database, title: Add a Database}
+      - {href: /ruby/rails/next-steps/additional-components, title: Additional Components}
+      - {href: /ruby/rails/going-further/local-evars, title: Local Environment Variables}
+      - {href: /ruby/rails/next-steps/nodejs, title: Nodejs}
 
   #
   - title: "Production"
@@ -22,9 +22,9 @@ articles:
       - {href: /ruby/rails/production/prepare-for-production, title: Prepare for Production}
       - {href: /ruby/rails/production/stage-your-app, title: Stage your App}
       - {href: /ruby/rails/production/launch-your-app, title: Launch your App}
-      - {href: /ruby/rails/production/add-encryption, title: Add SSL/TLC Encryption}
+      - {href: /ruby/rails/production/encryption, title: SSL/TLS Encryption}
       - {href: /ruby/rails/production/point-your-domain, title: Point your Domain}
-      - {href: /ruby/rails/going-further/production-evars, title: Add Production Environment Variables}
+      - {href: /ruby/rails/going-further/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
