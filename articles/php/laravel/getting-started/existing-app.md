@@ -1,13 +1,14 @@
 # Starting with an Existing Laravel App
 
-Nanobox allows you to create a local PHP development environment in which you can develop your Laravel app without actually having to install PHP and other associated executables on your local machine.
+Part of what makes Nanobox so useful is you don't have to have PHP installed on your local machine to run PHP apps. This guide walks through getting an existing Laravel app up and running with Nanobox.
 
-This guide walks through getting an existing Laravel app up and running with Nanobox.
+*If you don't have an existing Laravel project, the [Laravel from Scratch](/php/laravel/getting-started/from-scratch) guide would be the best place to start.*
 
-*If you don't already have a Laravel project, the [Laravel from Scratch](/php/laravel/getting-started/from-scratch) would be the best place to start.*
+## Build a PHP Dev Environment
+Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app, artisan commands, or other tasks as you would normally.
 
-## Setup Your Project
-In the root of your project directory, create a file named `boxfile.yml` that contains the following:
+### Add a boxfile.yml
+The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
 code.build:
@@ -57,15 +58,15 @@ web.laravel:
     laravel[error]: /app/storage/logs/laravel.log
 ```
 
-### runtime
+#### runtime
 Using PHP 7.0 is recommended, but other versions are available. The list of available PHP versions can be found in the [PHP Settings guide](/php/config/php-settings#runtime).
 
-### extensions
+#### extensions
 The [PHP engine](https://github.com/nanobox-io/nanobox-engine-php) takes a minimalist approach to including extensions in your PHP environment. Besides a few basic extensions, only extensions specified in your boxfile.yml are included in your PHP runtime.
 
 If you need other extensions, just include them in your boxfile.yml. A list of available extensions can be found in the [PHP Extensions guide](/php/config/extensions).
 
-## Up and Running
+### Build the Environment
 With the your boxfile.yml in place, you're ready to create your dev environment. From the project directory run the following commands:
 
 ```bash
@@ -79,7 +80,7 @@ nanobox dev start
 nanobox dev dns add laravel.nanobox.dev
 ```
 
-#### Start PHP-FPM & Apache
+## Start PHP-FPM & Apache
 Either `exit` out of your dev console or open a new terminal window and run the following to start PHP-FPM and Apache.
 
 ```bash
@@ -87,7 +88,7 @@ Either `exit` out of your dev console or open a new terminal window and run the 
 nanobox dev run
 ```
 
-### View the App in Your Browser
+## View the App in Your Browser
 With your app running, you can access it at `laravel.nanobox.dev:8080` in your browser of choice.
 
 ## Now What?

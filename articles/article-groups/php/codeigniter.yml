@@ -2,6 +2,6 @@ title: CodeIgniter
 articles:
   - title: Getting Started
     articles:
-      - {href: /php/codeigniter/getting-started/download-nanobox, title: Download Nanobox}
+      - {href: /php/codeigniter/getting-started/install-nanobox, title: Install Nanobox}
       - {href: /php/codeigniter/getting-started/from-scratch, title: CodeIgniter from Scratch}
       - {href: /php/codeigniter/getting-started/existing-app, title: Existing CodeIgniter App}

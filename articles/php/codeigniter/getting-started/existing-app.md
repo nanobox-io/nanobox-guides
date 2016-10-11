@@ -1,18 +1,19 @@
-# CodeIgniter: Getting Started
+# Starting with an Existing CodeIgniter App
 
-**THIS CONTENT NEEDS TO BE UPDATED**
+Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run CodeIgniter apps. This guide walks through creating a simple CodeIgniter app from scratch with Nanobox.
 
-This guide will walk you through getting a simple CodeIgniter app up and running with Nanobox. This guide was used to create the [nanobox-codeigniter](https://github.com/nanobox-quickstarts/nanobox-codeigniter) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
+*If you don't have an existing CodeIgniter project, the [CodeIgniter form Scratch guide](/php/codeigniter/getting-started/from-scratch) is where you should start.*
 
-## Setup Your CodeIgniter Project
-If you don't already have a CodeIgniter codebase, you can download and use a fresh one. Downloads are available through the [CodeIgniter Downloads page](http://www.codeigniter.com/user_guide/installation/downloads.html) or from [CodeIgniter's Github repo](https://github.com/bcit-ci/CodeIgniter).
+## Build a PHP Dev Environment
+Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app or other tasks as you would normally.
 
 ### Add a boxfile.yml
-In the root directory of your WordPress project, create a `boxfile.yml`. The [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/) is a yaml config file used to specify the components and configuration need for you app. For a base CodeIgniter install, the boxfile.yml should contain the following:
+The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
 code.build:
-  # the php engine provides the php runtime and associated executables
+  # the php engine provides the php runtime
+  # and associated executables
   engine: php
   config:
     # tells nanobox to use php 7.0
@@ -41,9 +42,8 @@ web.codeigniter:
     php[fpm]: /data/var/log/php/php_fpm.log
 ```
 
-## Up and Running
+### Build the Environment
 With your boxfile.yml in place , you're ready to get CodeIgniter up and running in your dev environment.
-
 
 ```bash
 # build the code
@@ -54,8 +54,13 @@ nanobox dev deploy
 
 # add a convenient way to access your app from the browser
 nanobox dev dns add codeigniter.nanobox.dev
+```
 
-# start PHP-FPM and Apache
+## Start PHP-FPM and Apache
+Run the following to start PHP-FPM and Apache.
+
+```bash
+# run the start commands specified in your boxfile.yml
 nanobox dev run
 ```
 

@@ -1,11 +1,15 @@
 # Laravel from Scratch
 
-This guide walks through creating a simple Laravel app from scratch with with Nanobox. The process outlined here is the same process used to create the [nanobox-laravel](https://github.com/nanobox-quickstarts/nanobox-laravel) quickstart found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
+Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run Laravel apps. This guide walks through creating a simple Laravel app from scratch with Nanobox.
+
+The process outlined here is the same process used to create the [nanobox-laravel](https://github.com/nanobox-quickstarts/nanobox-laravel) quickstart found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
 *If you have an existing Laravel project, the [Existing Laravel App guide](/php/laravel/getting-started/existing-app) is where you should start.*
 
 
 ## Build a PHP Dev Environment
+Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app, artisan commands, or other tasks as you would normally.
+
 Create a new project directory and cd into it.
 
 ```bash
@@ -17,7 +21,7 @@ cd nanobox-laravel
 ```
 
 ### Add a boxfile.yml
-In your new directory, create a file named [`boxfile.yml`](https://docs.nanobox.io/boxfile) that contains the following:
+The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
 code.build:
@@ -80,7 +84,7 @@ nanobox dev start
 nanobox dev dns add laravel.nanobox.dev
 ```
 
-### Create a New Laravel App
+## Create a New Laravel App
 With your dev environment running, you can console into it and install Laravel.
 
 ```bash
@@ -94,7 +98,7 @@ composer global require "laravel/installer"
 laravel new
 ```
 
-### Start PHP-FPM & Apache
+## Start PHP-FPM & Apache
 Either `exit` out of your dev console or open a new terminal window and run the following to start PHP-FPM and Apache.
 
 ```bash

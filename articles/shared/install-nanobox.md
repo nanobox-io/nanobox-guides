@@ -11,6 +11,8 @@ When working locally, your local codebase is mounted into your Nanobox container
 
 In your user home directory, there's a `.nanobox/config.yml`. This file is used to configure your Nanobox container and how the container interacts with your local filesystem.
 
+Set the `mount-type` to `netfs` for faster reads and writes in your local development environments.
+
 ```yaml
 mount-type: netfs
 ```
