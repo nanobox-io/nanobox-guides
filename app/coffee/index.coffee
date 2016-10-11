@@ -39,7 +39,7 @@ class IndexPage
       $next  = @$languages
 
     $first.toggleClass 'hidden'
-    @$slidePath.velocity {left:left}, {duration:600, easing:"easeInOutQuint", complete:()=>
+    @$slidePath.velocity {left:left}, {duration:400, delay:200, easing:"easeInOutQuint", complete:()=>
       $next.toggleClass 'hidden'
     }
     @$title.text txt
