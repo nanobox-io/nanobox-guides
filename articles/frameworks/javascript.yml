@@ -2,4 +2,3 @@ name: Javascript
 icon: javascript
 home: /javascript
 frameworks:
-  - {href: /javascript/angular, name: Angular, icon: angular}

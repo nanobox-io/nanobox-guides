@@ -1,6 +1,5 @@
 title: Hugo
 articles:
-  - {href: /golang/hugo, title: Overview}
 
   # first steps
   - {href: /golang/hugo/getting-started, title: Getting Started}
