@@ -1,11 +1,5 @@
-# Rails: Getting Started
+# Existing Rails App
 This guide will walk you through getting a Rails application (app) up and running with nanobox.
-
-This guide is broken down into three sections:
-
-1. [Add a boxfile.yaml](#add-a-boxfile.yml)
-2. [Make it accessible](#make-it-accessible)
-3. [Up and Running](#up-and-running)
 
 ## Add a boxfile.yml
 Create a `boxfile.yml` at the root of your project that contains the following:

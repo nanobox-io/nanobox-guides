@@ -1,11 +1,5 @@
-# Rails: Getting Started
+# Rails from Scratch
 This guide will walk you through getting a simple Rails application (app) up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-rails" target="\_blank">nanobox-rails</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
-
-This guide is broken down into three sections:
-
-1. [Create a Project](#create-a-project)
-2. [Create an App](#create-an-app)
-3. [Up and Running](#up-and-running)
 
 ## Create a project
 Decide where you want your project to live and create a folder there:
