@@ -1,0 +1,29 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "CodeIgniter"
+    informalName = "CI"
+    icon         = "codeigniter"
+    iconCrumbs   = "php,codeigniter"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'PHP', icon:'php', href:'#'},
+    ]
+    optionalComponents = [
+      {name:'MySQL', icon:'mysql', href:'#'},
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'Mongo DB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'},
+      {name:'Memcached', icon:'memcached', href:'#'},
+      {name:'Storage', icon:'storage', href:'#'}
+    ]
+    articleGroups = [
+      {title:"First Steps",   group:"shared/first-steps,php/codeigniter/first-steps"},
+      {title:"Next Steps",    group:"php/codeigniter/next-steps,shared/next-steps"},
+      {title:"Production",    group:"php/codeigniter/production,shared/production"},
+      {title:"Going Further", group:"php/codeigniter/going-further,shared/going-further"}
+    ]

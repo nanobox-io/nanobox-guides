@@ -1,6 +1,3 @@
-title: Code Igniter
-breadCrumb:
-  - {title: PHP, href: /php}
-  - {title: CodeIgniter, href: /php/codeigniter/getting-started}
+title: CodeIgniter
 articles:
   - {href: '#', title: Getting Started}
