@@ -4,6 +4,8 @@ Nanobox allows you to create a local PHP development environment in which you ca
 
 This guide walks through getting an existing Laravel app up and running with Nanobox.
 
+*If you don't already have a Laravel project, the [Laravel from Scratch](/php/laravel/getting-started/from-scratch) would be the best place to start.*
+
 ## Setup Your Project
 In the root of your project directory, create a file named `boxfile.yml` that contains the following:
 

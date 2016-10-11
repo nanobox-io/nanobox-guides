@@ -4,7 +4,8 @@ This guide walks through creating a simple Laravel app from scratch with with Na
 
 *If you have an existing Laravel project, the [Existing Laravel App guide](/php/laravel/getting-started/existing-app) is where you should start.*
 
-## Create a New Project
+
+## Build a PHP Dev Environment
 Create a new project directory and cd into it.
 
 ```bash
@@ -15,6 +16,7 @@ mkdir nanobox-laravel
 cd nanobox-laravel
 ```
 
+### Add a boxfile.yml
 In your new directory, create a file named [`boxfile.yml`](https://docs.nanobox.io/boxfile) that contains the following:
 
 ```yaml
@@ -64,7 +66,7 @@ web.laravel:
     laravel[error]: /app/storage/logs/laravel.log
 ```
 
-## Up and Running
+### Build the Environment
 With the your boxfile.yml in place, you're ready to create your development (dev) environment. From your project directory, run:
 
 ```bash
@@ -78,8 +80,8 @@ nanobox dev start
 nanobox dev dns add laravel.nanobox.dev
 ```
 
-### Install Laravel
-With your dev environment running, you're ready to install Laravel. This can be done by consoling into your dev environment and running the laravel installer.
+### Create a New Laravel App
+With your dev environment running, you can console into it and install Laravel.
 
 ```bash
 # console into the dev environment
@@ -88,7 +90,7 @@ nanobox dev console
 # download the laravel installer
 composer global require "laravel/installer"
 
-# install laravel
+# create a new laravel app
 laravel new
 ```
 
