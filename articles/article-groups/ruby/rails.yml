@@ -4,7 +4,7 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /ruby/rails/getting-started/download-nanobox, title: Download Nanobox}
+      - {href: /ruby/rails/getting-started/install-nanobox, title: Install Nanobox}
       - {href: /ruby/rails/getting-started/from-scratch, title: Rails from Scratch}
       - {href: /ruby/rails/getting-started/existing-app, title: Existing Rails App}
 
@@ -12,26 +12,25 @@ articles:
   - title: "Next Steps"
     articles:
       - {href: /ruby/rails/next-steps/add-a-database, title: Add a Database}
-      - {href: /ruby/rails/next-steps/additional-components, title: Additional Components}
       - {href: /ruby/rails/going-further/local-evars, title: Local Environment Variables}
-      - {href: /ruby/rails/next-steps/nodejs, title: Nodejs}
+      - {href: /ruby/rails/next-steps/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /ruby/rails/production/prepare-for-production, title: Prepare for Production}
+      - {href: /ruby/rails/production/configure-rails, title: Configure Rails}
       - {href: /ruby/rails/production/stage-your-app, title: Stage your App}
       - {href: /ruby/rails/production/launch-your-app, title: Launch your App}
-      - {href: /ruby/rails/production/encryption, title: SSL/TLS Encryption}
       - {href: /ruby/rails/production/point-your-domain, title: Point your Domain}
+      - {href: /ruby/rails/production/encryption, title: SSL/TLS Encryption}
       - {href: /ruby/rails/going-further/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /ruby/rails/going-further/effective-logging, title: Effective Logging}
-      - {href: /ruby/rails/going-further/manage-platform-components, title: Manage Platform Components}
-      - {href: /ruby/rails/going-further/master-the-boxfile, title: Master the Boxfile}
-      - {href: /ruby/rails/going-further/optimize-your-environment, title: Optimize your Environment}
       - {href: /ruby/rails/going-further/scale-your-app, title: Scale your App}
-      - {href: /ruby/rails/going-further/understanding-stats, title: Understanding Stats}
+      - {href: /ruby/rails/going-further/debugging, title: Debugging}
+      - {href: /ruby/rails/going-further/app-health, title: App Health}
+      - {href: /ruby/rails/going-further/remote-access, title: Remote Access}
+      - {href: /ruby/rails/going-further/team-management, title: Team Management}
+      - {href: /ruby/rails/going-further/manage-platform, title: Manage Platform}
