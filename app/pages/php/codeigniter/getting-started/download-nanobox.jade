@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Download Nanobox"
+    articles = "php/codeigniter"
+    icons    = "php,codeigniter"
+    
+block markdown
+  include:md /articles/shared/download-nanobox.md
