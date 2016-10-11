@@ -1,0 +1,4 @@
+articles:
+  - {href: /php/laravel/getting-started/install-nanobox, title: Install Nanobox}
+  - {href: /php/laravel/getting-started/from-scratch, title: Laravel from Scratch}
+  - {href: /php/laravel/getting-started/existing-app, title: Existing Laravel App}
