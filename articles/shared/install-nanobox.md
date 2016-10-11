@@ -1,4 +1,4 @@
-# Download Nanobox
+# Install Nanobox
 
 Nanobox can be downloaded on the [Nanobox Download](https://nanobox.io/download/) page.
 

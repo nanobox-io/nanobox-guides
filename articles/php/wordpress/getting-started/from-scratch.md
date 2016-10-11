@@ -1,5 +1,7 @@
 # WordPress: Getting Started
 
+**THIS CONTENT NEEDS TO BE UPDATED**
+
 This guide will walk you through getting a WordPress app up and running on Nanobox. This guide was used in the creation of the [nanobox-wordpress](https://github.com/nanobox-quickstarts/nanobox-wordpress) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
 ## Setup Your WordPress Project
