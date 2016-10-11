@@ -2,5 +2,5 @@ name: Python
 icon: python
 home: /python
 frameworks:
-  - {href: /python/django, name: Django, icon: django}
-  - {href: /python/flask, name: Flask, icon: flask}
+  - {href: /python/django, name: Django, icon: django, devMode: true}
+  - {href: /python/flask, name: Flask, icon: flask, devMode: true}

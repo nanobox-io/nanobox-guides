@@ -3,7 +3,7 @@ a.direction-link
   .txt Back
   .row
     each framework in frameworks
-      a.hex.language(href="#{framework.href}")
+      a.hex.language(href="#{framework.href}" class=framework.devMode ? "new" : "")
         .icon
           img.shadow-icon(data-src="hex-#{framework.icon}" scalable="true") 
         .txt #{framework.name}
