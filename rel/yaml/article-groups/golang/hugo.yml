@@ -1,0 +1,13 @@
+title: Hugo
+articles:
+
+  # first steps
+  - {href: /golang/hugo/getting-started, title: Getting Started}
+
+  # next steps
+  - {href: /golang/hugo/connect-a-database, title: Connect a Database}
+
+  # production
+  - {href: /golang/hugo/prepare-for-production, title: Prepare for Production}
+
+  # going further

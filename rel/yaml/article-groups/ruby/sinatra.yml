@@ -1,0 +1,14 @@
+title: Sinatra
+articles:
+  - {href: /ruby/sinatra, title: Overview}
+
+  # first steps
+  - {href: /ruby/sinatra/getting-started, title: Getting Started}
+
+  # next steps
+  - {href: /ruby/sinatra/connect-a-database, title: Connect a Database}
+
+  # production
+  - {href: /ruby/sinatra/prepare-for-production, title: Prepare for Production}
+
+  # going further

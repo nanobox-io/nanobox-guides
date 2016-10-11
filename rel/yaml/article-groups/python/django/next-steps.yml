@@ -1,0 +1,3 @@
+title: Django
+articles:
+  - {href: /python/django/connect-a-database, title: Connect a Database}

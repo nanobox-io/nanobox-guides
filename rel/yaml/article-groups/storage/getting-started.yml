@@ -1,0 +1,3 @@
+articles:
+  - {href: /storage/create.html, title: Create a Storage Component}
+  - {href: /storage/storing-files.html, title: Storing Files in a Storage Component}

@@ -1,0 +1,9 @@
+title    : Sails
+breadCrumb:
+  - {title: nodejs, href: /nodejs/overview}
+  - {title: sails,  href: /nodejs/sails/getting-started}
+articles :
+  - {href: /nodejs/sails/getting-started, title: Getting Started}
+  - {href: /nodejs/sails/connecting-a-database, title: Connecting a database}
+  - {href: /nodejs/sails/preparing-for-production, title: Preparing for production}
+  - {href: /nodejs/sails/launching-your-application, title: Launching your application}

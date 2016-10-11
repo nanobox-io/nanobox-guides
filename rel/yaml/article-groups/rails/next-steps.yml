@@ -1,0 +1,3 @@
+title: Rails
+articles:
+  - {href: /ruby/rails/connect-a-database, title: Connect a Database}

@@ -1,0 +1,5 @@
+title: Rails
+articles:
+  - {href: /ruby/rails/next-steps/add-a-database, title: Add a Database}
+  - {href: /ruby/rails/going-further/local-evars, title: Local Environment Variables}
+  - {href: /ruby/rails/next-steps/javascript-runtime, title: Javascript Runtime}

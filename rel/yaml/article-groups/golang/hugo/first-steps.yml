@@ -1,0 +1,3 @@
+title: Hugo
+articles:
+  - {href: /golang/hugo/getting-started, title: Getting Started}

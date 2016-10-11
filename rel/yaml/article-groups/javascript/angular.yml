@@ -1,0 +1,14 @@
+title: Angular
+articles:
+  - {href: /javascript/angular, title: Overview}
+
+  # first steps
+  - {href: /javascript/angular/getting-started, title: Getting Started}
+
+  # next steps
+  - {href: /javascript/angular/connect-a-database, title: Connect a Database}
+
+  # production
+  - {href: /javascript/angular/prepare-for-production, title: Prepare for Production}
+
+  # going further

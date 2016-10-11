@@ -1,0 +1,4 @@
+articles:
+  - {href: /php/wordpress/deploy-wordpress, title: Deploy WordPress}
+  - {href: /php/wordpress/advanced/force-https, title: Force HTTPS}
+  - {href: /php/wordpress/advanced/reduce-deploy-size, title: Reduce the Size of Your Deploy}

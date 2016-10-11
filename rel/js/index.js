@@ -1,24 +1,6 @@
 var IndexPage;
 
 IndexPage = (function() {
-  IndexPage.prototype.lang = {
-    language: "ruby",
-    frameworks: [
-      {
-        id: 'rails',
-        href: "/ruby/rails/overview"
-      }, {
-        id: 'sinatra',
-        href: "/ruby/sinatra/overview"
-      }
-    ],
-    guides: [
-      {
-        title: "Launching a Basic Ruby App"
-      }
-    ]
-  };
-
   function IndexPage() {
     this.$slidePath = $('.slide-path');
     this.$languages = $('.languages');
@@ -54,21 +36,30 @@ IndexPage = (function() {
   };
 
   IndexPage.prototype.slide = function(targ) {
-    var left, txt;
+    var $first, $next, left, txt;
     if (targ === 'frameworks') {
       left = -592;
       txt = "Guides : Choose a framework";
+      $first = this.$languages;
+      $next = this.$frameworks;
     } else {
       left = 0;
       txt = "Guides : Choose a language";
+      $first = this.$frameworks;
+      $next = this.$languages;
     }
-    this.$languages.toggleClass('hidden');
-    this.$frameworks.toggleClass('hidden');
+    $first.toggleClass('hidden');
     this.$slidePath.velocity({
       left: left
     }, {
-      duration: 600,
-      easing: "easeInOutQuint"
+      duration: 400,
+      delay: 200,
+      easing: "easeInOutQuint",
+      complete: (function(_this) {
+        return function() {
+          return $next.toggleClass('hidden');
+        };
+      })(this)
     });
     return this.$title.text(txt);
   };
