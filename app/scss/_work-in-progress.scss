@@ -1,0 +1,26 @@
+$offset : 160px;
+.work-in-progress-parent{margin-top:$offset;
+
+}
+.work-in-progress {position: absolute; top:-$offset; display:flex; background: #EBEFF2; color:$navy;
+  &:before        {z-index: 2; position: absolute; top:-13px; left:-13px; content:""; display:block; background:url(/assets/sprite.png); width:31px; height:31px; background-position:-214px -11px;}
+  .overview       {padding:16px; font-style:italic; font-weight:$semibold;
+    .title        {display:flex; align-items: baseline; border-bottom:solid 1px #BDD2DE; font-weight:$bold; font-style:normal; margin-bottom: 5px; padding-bottom:5px;
+      .primary    {font-weight:bold; text-transform:uppercase; letter-spacing:0.06em; font-size:21px; }
+      .sub        {font-style:italic; font-weight:$semibold;
+        &:before  {content:" - "; margin:0 3px 0 7px; }
+      }
+    }
+    .blurb        {font-size:14px; }
+  }
+  .chat           {background: white;font-weight:bold; text-transform:uppercase; letter-spacing:0.06em; display:flex; align-items: center; padding:0 20px; font-size:11px; cursor:pointer;
+    .icon         {
+      &:before    {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px; background-position:-292px -2px;}
+    }
+    .txt          {margin-left:10px;
+      .primary    {color:#00AEF7;}
+      .sub        {width:80px;}
+    }
+    &:hover       {color:#00AEF7; }
+  }
+}
