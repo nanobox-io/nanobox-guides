@@ -1,6 +1,5 @@
 title: Ember
 articles:
-  - {href: /nodejs/ember, title: Overview}
 
   # first steps
   - {href: /nodejs/ember/getting-started, title: Getting Started}

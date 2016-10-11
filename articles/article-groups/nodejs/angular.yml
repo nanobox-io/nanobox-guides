@@ -1,6 +1,5 @@
 title: Angular
 articles:
-  - {href: /nodejs/angular, title: Overview}
 
   # first steps
   - {href: /nodejs/angular/getting-started, title: Getting Started}
