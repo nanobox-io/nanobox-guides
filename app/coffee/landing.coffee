@@ -3,6 +3,7 @@ class Landing
   constructor : () ->
 
   loadArticleGroups : (articles) =>
+    return if !articles?
     @articleLoadIndexes = {}
     for article, i in articles
       article.index = i
