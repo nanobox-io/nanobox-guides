@@ -1,12 +1,37 @@
 title: Rails
 articles:
-  # first steps
-  - {href: /ruby/rails/getting-started, title: Getting Started}
 
-  # next steps
-  - {href: /ruby/rails/connect-a-database, title: Connect a Database}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /ruby/rails/getting-started/download-nanobox, title: Download Nanobox}
+      - {href: /ruby/rails/getting-started/from-scratch, title: Rails from Scratch}
+      - {href: /ruby/rails/getting-started/existing-app, title: Existing Rails App}
 
-  # production
-  - {href: /ruby/rails/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /ruby/rails/next-steps/add-nodejs, title: Add Nodejs}
+      - {href: /ruby/rails/next-steps/connect-a-database, title: Connect a Database}
+      - {href: /ruby/rails/next-steps/add-additional-components, title: Add Additional Components}
+      - {href: /ruby/rails/going-further/local-evars, title: Add Local Environment Variables}
 
-  # going further
+  #
+  - title: "Production"
+    articles:
+      - {href: /ruby/rails/production/prepare-for-production, title: Prepare for Production}
+      - {href: /ruby/rails/production/stage-your-app, title: Stage your App}
+      - {href: /ruby/rails/production/launch-your-app, title: Launch your App}
+      - {href: /ruby/rails/production/add-encryption, title: Add SSL/TLC Encryption}
+      - {href: /ruby/rails/production/point-your-domain, title: Point your Domain}
+      - {href: /ruby/rails/going-further/production-evars, title: Add Production Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /ruby/rails/going-further/effective-logging, title: Effective Logging}
+      - {href: /ruby/rails/going-further/manage-platform-components, title: Manage Platform Components}
+      - {href: /ruby/rails/going-further/master-the-boxfile, title: Master the Boxfile}
+      - {href: /ruby/rails/going-further/optimize-your-environment, title: Optimize your Environment}
+      - {href: /ruby/rails/going-further/scale-your-app, title: Scale your App}
+      - {href: /ruby/rails/going-further/understanding-stats, title: Understanding Stats}

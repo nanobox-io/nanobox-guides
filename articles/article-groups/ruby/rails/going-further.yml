@@ -1,2 +1,8 @@
 title: Rails
-articles: ""
+articles:
+  - {href: /ruby/rails/going-further/effective-logging, title: Effective Logging}
+  - {href: /ruby/rails/going-further/manage-platform-components, title: Manage Platform Components}
+  - {href: /ruby/rails/going-further/master-the-boxfile, title: Master the Boxfile}
+  - {href: /ruby/rails/going-further/optimize-your-environment, title: Optimize your Environment}
+  - {href: /ruby/rails/going-further/scale-your-app, title: Scale your App}
+  - {href: /ruby/rails/going-further/understanding-stats, title: Understanding Stats}

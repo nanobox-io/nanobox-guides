@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Existing Rails App"
+    articles = "ruby/rails"
+    icons    = "ruby,rails"
+    
+block markdown
+  include:md /articles/ruby/rails/getting-started/existing-app.md
