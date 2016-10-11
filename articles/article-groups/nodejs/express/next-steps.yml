@@ -1,3 +1,3 @@
 title: Ember
 articles:
-  - {href: /nodejs/ember/connect-a-database, title: Connect a Database}
+  - {href: /nodejs/express/connect-a-database, title: Connect a Database}

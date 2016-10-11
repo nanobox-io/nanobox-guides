@@ -1,3 +1,3 @@
 title: Ember
 articles:
-  - {href: /nodejs/ember/prepare-for-production, title: Prepare for Production}
+  - {href: /nodejs/express/prepare-for-production, title: Prepare for Production}

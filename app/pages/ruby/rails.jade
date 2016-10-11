@@ -6,6 +6,9 @@ block configParams
     informalName = "rails"
     icon         = "rails"
     iconCrumbs   = "ruby,rails"
+    
+block overview
+  p Part of what makes nanobox so useful is you don't have to have rails installed on your local machine to utilize it. We're going to create a development (dev) environment in which you will generate your rails app.
 
 block jsParams
   script.
@@ -19,8 +22,8 @@ block jsParams
       {name:'Redis', icon:'redis', href:'#'}
     ]
     articleGroups = [
-      {title:"First Steps",   group:"shared/first-steps,ruby/rails/first-steps"},
-      {title:"Next Steps",    group:"ruby/rails/next-steps,shared/next-steps"},
-      {title:"Production",    group:"ruby/rails/production,shared/production"},
-      {title:"Going Further", group:"ruby/rails/going-further,shared/going-further"}
+      {title:"Getting Started", group:"ruby/rails/getting-started"},
+      {title:"Next Steps",      group:"ruby/rails/next-steps"},
+      {title:"Production",      group:"ruby/rails/production"},
+      {title:"Going Further",   group:"ruby/rails/going-further"}
     ]

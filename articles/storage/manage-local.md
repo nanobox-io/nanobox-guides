@@ -11,7 +11,7 @@ nanobox dev info
 data.storage
   IP      : 192.168.99.74
   User(s) :
-    nanobox - OpAssWoRDX
+    gonano - OpAssWoRDX
 
 # ...
 ```
@@ -23,21 +23,26 @@ Other credentials you may need to establish the connection:
 
 **Port:** `22`
 
+Network directories are housed in the `data` directory in the home directory of your storage component. Directory paths are relative to the `data` directory.
+
 ### SSH Example
 ```bash
-ssh nanobox@192.168.99.74
+ssh gonano@192.168.99.74
 # You'll be prompted for the password
+
+# navigate to a network directory
+cd data/path/to/dirA
 ```
 
 ### SCP Examples
 ```bash
 # copy files from your local code filesystem
 # into to your storage component at the same path
-scp -r path/to/dirA/* nanobox@192.168.99.74:path/to/dirA
+scp -r path/to/dirA/* gonano@192.168.99.74:data/path/to/dirA
 
 # copy files from your storage component
 # into to your local code filesystem
-scp -r nanobox@192.168.99.74:path/to/dirA/* path/to/dirA
+scp -r gonano@192.168.99.74:data/path/to/dirA/* path/to/dirA
 
 # Both commands will prompt for the password
 ```

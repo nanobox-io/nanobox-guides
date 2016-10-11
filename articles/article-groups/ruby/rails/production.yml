@@ -1,3 +1,8 @@
 title: Rails
 articles:
-  - {href: /ruby/rails/prepare-for-production, title: Prepare for Production}
+  - {href: /ruby/rails/production/prepare-for-production, title: Prepare for Production}
+  - {href: /ruby/rails/production/stage-your-app, title: Stage your App}
+  - {href: /ruby/rails/production/launch-your-app, title: Launch your App}
+  - {href: /ruby/rails/production/encryption, title: SSL/TLS Encryption}
+  - {href: /ruby/rails/production/point-your-domain, title: Point your Domain}
+  - {href: /ruby/rails/going-further/production-evars, title: Production Environment Variables}

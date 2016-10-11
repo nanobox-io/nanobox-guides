@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Rails From Scratch"
+    articles = "ruby/rails"
+    icons    = "ruby,rails"
+    
+block markdown
+  include:md /articles/ruby/rails/getting-started/from-scratch.md

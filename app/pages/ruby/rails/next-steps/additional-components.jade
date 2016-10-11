@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Additional Components"
+    articles = "ruby/rails"
+    icons    = "ruby,rails"
+    
+block markdown
+  include:md /articles/ruby/rails/next-steps/additional-components.md

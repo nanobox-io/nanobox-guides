@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Prepare for production"
+    articles = "nodejs/angular"
+    icons    = "nodejs,angular"
+    
+block markdown
+  include:md /articles/nodejs/angular/prepare-for-production.md
