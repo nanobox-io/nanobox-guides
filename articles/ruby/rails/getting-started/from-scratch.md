@@ -3,15 +3,12 @@ This guide will walk you through getting a simple Rails application (app) up and
 
 This guide is broken down into three sections:
 
-1. [Project Setup](#project-setup)
-2. [App Config](#app-config)
+1. [Create a Project](#create-a-project)
+2. [Create an App](#create-an-app)
 3. [Up and Running](#up-and-running)
 
-## Project Setup
-If you already have a project you'd like to use with nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to setup a new project.
-
-#### Create a project
-Decide where you want your project to live and create a folder there.
+## Create a project
+Decide where you want your project to live and create a folder there:
 
 ```bash
 # create your project
@@ -28,12 +25,7 @@ code.build:
   engine: "ruby"
 ```
 
-## App Config
-If you already have an app you'd like to run with nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an app.
-
-#### Create an App
-Part of what makes nanobox so useful is you don't have to have rails installed on your local machine to utilize it. We're going to create a development (dev) environment in which you will generate your rails app.
-
+## Create an App
 First we need to get a dev environment running:
 
 ```bash
@@ -74,12 +66,6 @@ end
 With the app configured the last thing to do is run it with nanobox. From the project directory run the following commands:
 
 ```bash
-# build a ruby runtime
-nanobox build
-
-# deploy the ruby runtime into the dev environment
-nanobox dev deploy
-
 # add a convenient way to access your app from a browser
 nanobox dev dns add rails.nanobox.dev
 
@@ -96,6 +82,6 @@ Visit the app from your favorite browser at: `rails.nanobox.dev:8080`
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Connect a database](connect-a-database.html)
-* [Prepare for production](prepare-for-production.html)
-* [Launch your app](launch-your-app.html)
-* [Back to rails overview](overview.html)
+* [Javascript Runtime](javascript-runtime.html)
+* [Local Environment Variables](local-evars.html)
+* [Back to rails overview](rails.html)
