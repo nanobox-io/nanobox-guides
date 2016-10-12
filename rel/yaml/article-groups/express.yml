@@ -1,6 +1,0 @@
-title: Express
-breadCrumb:
-  - {title: nodejs, href: /nodejs/overview}
-  - {title: express, href: /nodejs/express/getting-started}
-articles:
-  - {href: '#', title: Getting Started}

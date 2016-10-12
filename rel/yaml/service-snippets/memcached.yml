@@ -1,4 +1,0 @@
-documentation: /memcached
-boxfile: |
-  data.memcached:
-    image: nanobox/memcached

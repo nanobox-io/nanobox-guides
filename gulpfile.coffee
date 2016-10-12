@@ -248,7 +248,7 @@ compileFiles = (doWatch=false, cb) ->
 
 # ----------- MAIN ----------- #
 
-gulp.task 'clean',                  (cb) -> rimraf './server/**/*', cb
+gulp.task 'clean',                  (cb) -> rimraf './server/*', cb
 gulp.task 'bowerLibs', ['clean'],   (cb) -> copyBowerLibs()
 gulp.task 'compile', ['bowerLibs'], (cb) -> compileFiles(true, cb)
 gulp.task 'server', ['compile'],    (cb) -> server(); launch(); #process.exit()
@@ -256,7 +256,7 @@ gulp.task 'default', ['server']
 
 # ----------- BUILD (rel) ----------- #
 
-gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/**/*', cb
+gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/*', cb
 gulp.task 'copy-htaccess',['rel:clean'],               ()    -> copyHtaccess()
 gulp.task 'bumpVersion', ['copy-htaccess'],            ()    -> bumpBowerVersion()
 gulp.task 'copyStatics', ['bowerLibs'],                ()    -> copyAssets('rel/assets', ->)

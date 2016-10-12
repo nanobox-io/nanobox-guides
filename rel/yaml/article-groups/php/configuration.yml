@@ -1,6 +1,0 @@
-articles:
-  - {href: /php/config/php-settings, title: PHP Settings}
-  - {href: /php/config/start-commands, title: Start Commands}
-  - {href: /php/config/extensions, title: Extensions}
-  - {href: /php/config/webserver/webserver-settings, title: Webserver Settings}
-  - {href: /php/config, title: Advanced Config Options}

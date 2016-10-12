@@ -1,5 +1,0 @@
-documentation: /some/link/to/docs
-boxfile: |
-  # /boxfile.yml  asdf
-  data.db :
-    image : nanobox/mongodb

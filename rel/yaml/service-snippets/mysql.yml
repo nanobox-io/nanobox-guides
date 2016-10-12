@@ -1,4 +1,0 @@
-documentation: /mysql
-boxfile: |
-  data.mysql:
-    image: nanobox/mysql

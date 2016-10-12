@@ -1,8 +1,0 @@
-title: Rails
-articles:
-  - {href: /ruby/rails/going-further/scale-your-app, title: Scale your App}
-  - {href: /ruby/rails/going-further/debugging, title: Debugging}
-  - {href: /ruby/rails/going-further/app-health, title: App Health}
-  - {href: /ruby/rails/going-further/remote-access, title: Remote Access}
-  - {href: /ruby/rails/going-further/team-management, title: Team Management}
-  - {href: /ruby/rails/going-further/manage-platform, title: Manage Platform}

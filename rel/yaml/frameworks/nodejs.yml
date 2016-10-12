@@ -1,6 +1,0 @@
-name: Node.JS
-icon: nodejs
-frameworks:
-  - {href: /nodejs/ember, name: Ember, icon: ember}
-  - {href: /nodejs/express, name: Express, icon: express}
-  - {href: /nodejs/sails, name: Sails, icon: sails}
