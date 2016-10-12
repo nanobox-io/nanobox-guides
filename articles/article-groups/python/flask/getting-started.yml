@@ -1,0 +1,5 @@
+title: Flask
+articles:
+  - {href: /python/flask/getting-started/install-nanobox, title: Install Nanobox}
+  - {href: /python/flask/getting-started/from-scratch, title: Flask From Scratch}
+  - {href: /python/flask/getting-started/existing-app, title: Existing Flask App}

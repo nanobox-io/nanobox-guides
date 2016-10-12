@@ -1,3 +1,5 @@
 title: Sails
 articles:
-  - {href: /nodejs/sails/connect-a-database, title: Connect a Database}
+  - {href: /nodejs/sails/next-steps/add-a-database, title: Add a Database}
+  - {href: /nodejs/sails/going-further/local-evars, title: Local Environment Variables}
+  - {href: /nodejs/sails/next-steps/javascript-runtime, title: Javascript Runtime}

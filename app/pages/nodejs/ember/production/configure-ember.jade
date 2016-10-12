@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Configure Ember"
+    articles = "nodejs/ember"
+    icons    = "nodejs,ember"
+    
+block markdown
+  include:md /articles/nodejs/ember/production/configure-ember.md

@@ -1,4 +1,4 @@
-# Add SSL/TLS Encryption
+# SSL/TLS Encryption
 
 Normally the process of adding SSL/TLS encryption to your app is tedious and complicated. With Nanobox, we've tried to make it as simple as possible.
 

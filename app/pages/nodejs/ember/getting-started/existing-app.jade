@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Existing Ember App"
+    articles = "nodejs/ember"
+    icons    = "nodejs,ember"
+    
+block markdown
+  include:md /articles/nodejs/ember/getting-started/existing-app.md

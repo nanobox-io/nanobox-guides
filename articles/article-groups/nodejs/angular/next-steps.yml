@@ -1,3 +1,5 @@
 title: Angular
 articles:
-  - {href: /nodejs/angular/connect-a-database, title: Connect a Database}
+  - {href: /nodejs/angular/next-steps/add-a-database, title: Add a Database}
+  - {href: /nodejs/angular/going-further/local-evars, title: Local Environment Variables}
+  - {href: /nodejs/angular/next-steps/javascript-runtime, title: Javascript Runtime}

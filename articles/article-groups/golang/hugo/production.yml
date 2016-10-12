@@ -1,3 +1,8 @@
 title: Hugo
 articles:
-  - {href: /golang/hugo/prepare-for-production, title: Prepare for Production}
+  - {href: /golang/hugo/production/configure-hugo, title: Configure Hugo}
+  - {href: /golang/hugo/production/stage-your-app, title: Stage your App}
+  - {href: /golang/hugo/production/launch-your-app, title: Launch your App}
+  - {href: /golang/hugo/production/point-your-domain, title: Point your Domain}
+  - {href: /golang/hugo/production/encryption, title: SSL/TLS Encryption}
+  - {href: /golang/hugo/going-further/production-evars, title: Production Environment Variables}

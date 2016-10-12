@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Sails From Scratch"
+    articles = "nodejs/sails"
+    icons    = "nodejs,sails"
+    
+block markdown
+  include:md /articles/nodejs/sails/getting-started/from-scratch.md

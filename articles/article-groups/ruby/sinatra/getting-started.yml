@@ -1,0 +1,5 @@
+title: Sinatra
+articles:
+  - {href: /ruby/sinatra/getting-started/install-nanobox, title: Install Nanobox}
+  - {href: /ruby/sinatra/getting-started/from-scratch, title: Sinatra From Scratch}
+  - {href: /ruby/sinatra/getting-started/existing-app, title: Existing Sinatra App}

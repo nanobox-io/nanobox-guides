@@ -1,3 +1,5 @@
 title: Sinatra
 articles:
-  - {href: /ruby/sinatra/connect-a-database, title: Connect a Database}
+  - {href: /ruby/sinatra/next-steps/add-a-database, title: Add a Database}
+  - {href: /ruby/sinatra/going-further/local-evars, title: Local Environment Variables}
+  - {href: /ruby/sinatra/next-steps/javascript-runtime, title: Javascript Runtime}

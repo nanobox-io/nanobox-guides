@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Production Environment Variables"
+    articles = "nodejs/ember"
+    icons    = "nodejs,ember"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

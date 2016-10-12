@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Remote Access"
+    articles = "nodejs/ember"
+    icons    = "nodejs,ember"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

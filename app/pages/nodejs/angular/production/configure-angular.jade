@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Configure Angular"
+    articles = "nodejs/angular"
+    icons    = "nodejs,angular"
+    
+block markdown
+  include:md /articles/nodejs/angular/production/configure-angular.md

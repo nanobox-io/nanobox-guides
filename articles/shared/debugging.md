@@ -1,1 +1,1 @@
-# Effective Logging
+# Debugging

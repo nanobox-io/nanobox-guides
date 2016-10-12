@@ -1,3 +1,8 @@
 title: Beego
 articles:
-  - {href: /golang/beego/prepare-for-production, title: Prepare for Production}
+  - {href: /golang/beego/production/configure-beego, title: Configure Beego}
+  - {href: /golang/beego/production/stage-your-app, title: Stage your App}
+  - {href: /golang/beego/production/launch-your-app, title: Launch your App}
+  - {href: /golang/beego/production/point-your-domain, title: Point your Domain}
+  - {href: /golang/beego/production/encryption, title: SSL/TLS Encryption}
+  - {href: /golang/beego/going-further/production-evars, title: Production Environment Variables}

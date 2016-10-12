@@ -1,1 +1,1 @@
-# Manage platform components
+# Manage Platform

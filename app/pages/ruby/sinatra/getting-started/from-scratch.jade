@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Sinatra From Scratch"
+    articles = "ruby/sinatra"
+    icons    = "ruby,sinatra"
+    
+block markdown
+  include:md /articles/ruby/sinatra/getting-started/from-scratch.md
