@@ -2,8 +2,10 @@
 ☐ Make left nav parent items clickable
 ☐ Add Docs link
 ☐ Add Services link
-☐ Add "In Beta" overarching message
-☐ Add in depth "Let us know you're interested / help us" messaging on alpha pages
+✔ Add "In Beta" overarching message     done(√)
+✔ Add in depth "Let us know you're interested / help us" messaging on alpha pages     done(√)
+✔ Add lua page     done(√)
+✔ Add lisp page     done(√)
 ☐ Maintain ordering of grouped articles
 ☐ Change "additional components" -> "optional components"
 
