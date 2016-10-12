@@ -63,6 +63,6 @@ With your production app up and running, you can import your database and upload
 ## Enjoy Your Live WordPress App
 Congratulations. Your WordPress app is now live. The here's a few next steps you may want to go through:
 
-[Use a Custom Domain](https://docs.nanobox.io/domains-networking/custom-domains/)  
-[Adding SSL/TLS](https://docs.nanobox.io/domains-networking/ssl-tls/adding/)  
-[Adding Team Members](https://docs.nanobox.io/teams/app-add-member/)
+[Point Your Domain](/php/wordpress/production/point-your-domain)  
+[SSL/TLS Encryption](/php/wordpress/production/encryption)  
+[Force HTTPS](/php/wordpress/production/force-https)

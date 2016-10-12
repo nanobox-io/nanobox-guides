@@ -51,7 +51,7 @@ To establish a secure remote connection to your production storage component, us
 
 #### Open a Tunnel to Your Storage Component
 ```bash
-$ nanobox tunnel data.storage
+nanobox tunnel data.storage
 ```
 
 Connection credentials for the tunnel are provided in your app dashboard under the "Connect" section of your storage component.

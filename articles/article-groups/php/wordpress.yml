@@ -17,13 +17,15 @@ articles:
       - {href: /php/wordpress/data-storage/importing-data, title: Importing Data}
       - {href: /php/wordpress/data-storage/importing-uploads, title: Importing Uploads}
 
+  - title: Production
+    articles:
+      - {href: /php/wordpress/production/deploy-wordpress, title: Deploy WordPress}
+      - {href: /php/wordpress/production/point-your-domain, title: Point Your Domain}
+      - {href: /php/wordpress/production/encryption, title: SSL/TLS Encryption}
+      - {href: /php/wordpress/production/force-https, title: Force HTTPS in WordPress}
+
   - title: Advanced
     articles:
       - {href: /php/wordpress/advanced/boxfile-explained, title: WordPress boxfile.yml Explained}
       - {href: /php/wordpress/advanced/reduce-deploy-size, title: Reduce the Size of Your Deploy}
-      - {href: /php/wordpress/advanced/force-https, title: Force HTTPS in WordPress}
       - {href: /php/wordpress/advanced/caching-plugins, title: Using Caching Plugins}
-
-  - title: Production
-    articles:
-      - {href: /php/wordpress/deploy-wordpress, title: Deploy WordPress}

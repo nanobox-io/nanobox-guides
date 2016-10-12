@@ -61,11 +61,11 @@ In order to provision your components, you must build a new runtime and deploy i
 
 ```bash
 # build an updated runtime
-$ nanobox build
+nanobox build
 
 # deploy the runtime into dev
 # and provision components
-$ nanobox dev deploy
+nanobox dev deploy
 ```
 
 **Note:** Web and worker components are provisioned and started in sim and production environments, but not in dev. Data components are provisioned in all components.

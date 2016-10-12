@@ -15,7 +15,7 @@ Nanobox provisions and deploys your app on your hosting provider. Before you can
 ## Launch a New App
 New apps are launched from your [app dashboard](https://dashboard.nanobox.io). Nanobox will provision a [bunkhouse server](https://docs.nanobox.io/scaling/bunkhouse) on your hosting provider.
 
-![Launch an App](/assets/shared/production/app-launch-button.png)
+![Launch an App](/assets/shared/app-launch-button.png)
 
 ## Deploy Your App
 With an app created, you're ready to deploy your runtime and code. From your app's root directory, run the following:

@@ -6,5 +6,5 @@ Your WordPress app running on Nanobox sits behind a load balancer that forwards 
 ```apacheconf
 RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} =http
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ```

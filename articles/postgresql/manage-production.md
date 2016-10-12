@@ -3,7 +3,7 @@ To establish a secure remote connection to your production database, use the Nan
 
 #### Open a Tunnel to PostgreSQL
 ```bash
-$ nanobox tunnel data.postgres
+nanobox tunnel data.postgres
 ```
 
 The tunnel command will output the port to which it is bound. Connection credentials for the tunnel are provided in your app dashboard under the "Connect" section of your PostgreSQL component.

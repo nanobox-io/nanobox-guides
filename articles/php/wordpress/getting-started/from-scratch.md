@@ -1,16 +1,21 @@
-# WordPress: Getting Started
+# WordPress from Scratch
 
-**THIS CONTENT NEEDS TO BE UPDATED**
+Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run WordPress. This guide walks through creating a simple WordPress app from scratch with Nanobox.
 
-This guide will walk you through getting a WordPress app up and running on Nanobox. This guide was used in the creation of the [nanobox-wordpress](https://github.com/nanobox-quickstarts/nanobox-wordpress) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
+The processed outlined in this guide was the same used to create the [nanobox-wordpress](https://github.com/nanobox-quickstarts/nanobox-wordpress) quickstart found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
-## Setup Your WordPress Project
-If you don't already have a WordPress codebase, you can download and use a fresh one. Downloads are available through the [WordPress Downloads page](https://wordpress.org/download/) or from [WordPress' Github repo](https://github.com/wordpress/wordpress).
+*If you have an existing WordPress project, the [Existing WordPress App guide](/php/wordpress/getting-started/existing-app) is where you should start.*
+
+## Download WordPress
+WordPress Downloads are available through the [WordPress Downloads page](https://wordpress.org/download/) or from [WordPress' Github repo](https://github.com/wordpress/wordpress).
+
+## Prepare Your Codebase
+With WordPress downloaded to your local machine, there are a few modifications you need make.
 
 ### Add a boxfile.yml
-In the root directory of your WordPress project, create a `boxfile.yml`. The [boxfile.yml](https://docs.nanobox.io/boxfile/) is a yaml config file used to specify the components and configuration need for you app. For WordPress, the boxfile should contain the following:
+The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
 
-*For a detailed explanation of each of the WordPress boxfile.yml config settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained/).*
+*For a detailed explanation of each of the WordPress boxfile.yml settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained).*
 
 ```yaml
 code.build:
@@ -43,11 +48,8 @@ data.storage:
   image: nanobox/unfs
 ```
 
-For a detailed explanation of each of the WordPress boxfile.yml config settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained/).
-
-
 ### Update Database Connection in wp-config.php
-In order for WordPress to connect to its database, you'll need your database connection credentials to use environment variables that will be automatically generated when your app is built and deployed.
+For WordPress to connect to its database, you'll need update your database connection credentials to use environment variables that will be automatically generated when your app is built and deployed.
 
 These environment variables are generated using ID of your database component. With an ID of `data.db`, environment variable keys will be created with `DATA_DB_` and the credential title. Below is what the db config will should look like:
 
@@ -83,9 +85,11 @@ define('LOGGED_IN_SALT',   $_ENV['LOGGED_IN_SALT']   ?: '');
 define('NONCE_SALT',       $_ENV['NONCE_SALT']       ?: '');
 ```
 
-When you [deploy Wordpress](/wordpress/deploy-wordpress/), you can define these variables in your live environment.
+*Generating these environment variables is covered in the [Deploy Wordpress](/php/wordpress/production/deploy-wordpress) guide.*
 
-## Up and Running
+## Build a WordPress Dev Environment
+Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app and perform other tasks as you would normally.
+
 With your boxfile.yml in place and your wp-config.php updated, you're ready to get WordPress up and running in your dev environment.
 
 
@@ -106,9 +110,8 @@ nanobox dev run
 You can visit your running WordPress app at `wordpress.nanobox.dev:8080`.
 
 ## Now What?
-Now that you have WordPress running on Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!
-
-[Importing Data](data-storage-management/importing-data/)  
-[Importing Uploads](data-storage-management/importing-uploads/)  
-[Installing & Updating Plugins & Themes](plugins-themes/)  
-[Deploying Wordpress](deploy-wordpress/)
+Now that you have WordPress running with Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!
+ 
+[Installing & Updating Plugins](/php/wordpress/plugins-themes/installing-updating-plugins)  
+[Installing & Updating Themes](/php/wordpress/plugins-themes/installing-updating-themes)  
+[Deploying Wordpress](/php/wordpress/production/deploy-wordpress)

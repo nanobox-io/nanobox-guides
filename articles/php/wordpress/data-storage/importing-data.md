@@ -8,10 +8,10 @@ Whatever environment you'd like to import data needs to be running before you'll
 
 ```bash
 # Starts a dev environment
-$ nanobox dev start
+nanobox dev start
 
 # Starts a sim environment
-$ nanobox sim start
+nanobox sim start
 ```
 
 ### Get Your Database Credentials
@@ -19,10 +19,10 @@ To get the credentials of your MySQL database, run the `info` command. This will
 
 ```bash
 # List dev app info
-$ nanobox dev info
+nanobox dev info
 
 # List sim app info
-$ nanobox sim info
+nanobox sim info
 ```
 
 Find your MySQL data component in the info output.
@@ -51,14 +51,14 @@ With the database credentials you can use your MySQL client of choice to import 
 Below is an example of importing data using the MySQL CLI.
 
 ```bash
-$ mysql -h 192.168.99.65 -P 3306 -u nanobox -pPAsSw0Rd gonano < path/to/data_dump.sql
+mysql -h 192.168.99.65 -P 3306 -u nanobox -pPAsSw0Rd gonano < path/to/data_dump.sql
 ```
 
 ## Into a Production Database
 To ensure data security, databases in production Nanobox apps are accessible only through secure tunnels established through the Nanobox CLI's `tunnel` command. These tunnels bind to and listen on a local port. To establish a secure tunnel run the `tunnel` command, passing in your your MySQL data component as the tunnel endpoint.
 
 ```bash
-$ nanobox tunnel data.db
+nanobox tunnel data.db
 ```
 
 To view your tunnel connection credentials, go to your dashboard and click the "Connect" button below your database component. *In a new app, your database will be nested under "App Components"*
@@ -71,7 +71,7 @@ Use the credentials provided in your dashboard and the port on which the tunnel 
 Below is an example of importing data using the MySQL CLI.
 
 ```bash
-$ mysql -h 127.0.0.1 -P 3306 -u nanobox -pPAsSw0Rd gonano < path/to/data_dump.sql
+mysql -h 127.0.0.1 -P 3306 -u nanobox -pPAsSw0Rd gonano < path/to/data_dump.sql
 ```
 
 ## Update Your WordPress BaseURL
