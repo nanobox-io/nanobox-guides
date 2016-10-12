@@ -1,3 +1,0 @@
-articles:
-  - {href: /redis/manage/local.html, title: Managing Local Data}
-  - {href: /redis/manage/production.html, title: Managing Production Data}

@@ -1,8 +1,14 @@
 extends ../templates/base
 
 block js
+  // build:index /js/landing.js
   script(src="/js/landing.js")
+  // endbuild
+  
+  // build:index /js/language-landing.js
   script(src="/js/language-landing.js")
+  // endbuild
+  
   script.
     //- Don't fail if articleGroups isn't set...
     var articleGroups = (articleGroups === null) ? [] : articleGroups
