@@ -1,0 +1,3 @@
+articles:
+  - {href: /mongodb/create.html, title: Create a MongoDB Component}
+  - {href: /mongodb/connect.html, title: Connect to MongoDB}

@@ -1,0 +1,8 @@
+articles:
+  - {href: /php/wordpress/getting-started, title: Getting Started}
+  # - {href: /php/wordpress/deploy-wordpress, title: Deploy WordPress}
+  - {href: /php/wordpress/plugins-themes/installing-updating-plugins, title: Installing & Updating Plugins}
+  - {href: /php/wordpress/plugins-themes/installing-updating-themes, title: Installing & Updating Themes}
+  # articles:
+  # - {href: /php/wordpress/data-storage/importing-data, title: Importing Data}
+  # - {href: /php/wordpress/data-storage/importing-uploads, title: Importing Uploads}

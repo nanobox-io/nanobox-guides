@@ -1,0 +1,3 @@
+title: Flask
+articles:
+  - {href: /python/flask/prepare-for-production, title: Prepare for Production}

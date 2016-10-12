@@ -1,0 +1,10 @@
+title: MySQL
+articles:
+  - {href: /mysql, title: Overview}
+  - {href: /mysql/create, title: Create a MySQL Database}
+  - {href: /mysql/connect, title: Connect to MySQL}
+  - {href: '/mysql/configure', title: MySQL Config Options}
+  - title: Managing MySQL Data
+    articles:
+      - {href: /mysql/manage/local, title: Managing Local Data}
+      - {href: /mysql/manage/production, title: Managing Production Data}

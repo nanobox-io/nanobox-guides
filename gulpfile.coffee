@@ -114,9 +114,10 @@ copyImages = (cb)->
 copyHtaccess = ()->
   gulp.src htaccessPath
     .pipe gulp.dest('./rel')
+gulp.task 'copy-yaml', ['minify']
     # .on('end', cb)
 
-copyRandomJs = (path, destination, cb) ->
+copyFiles = (path, destination, cb) ->
   gulp.src path
     .pipe gulp.dest(destination)
     .on('end', cb)
@@ -247,7 +248,7 @@ compileFiles = (doWatch=false, cb) ->
 
 # ----------- MAIN ----------- #
 
-gulp.task 'clean',                  (cb) -> rimraf './server/*', cb
+gulp.task 'clean',                  (cb) -> rimraf './server/**/*', cb
 gulp.task 'bowerLibs', ['clean'],   (cb) -> copyBowerLibs()
 gulp.task 'compile', ['bowerLibs'], (cb) -> compileFiles(true, cb)
 gulp.task 'server', ['compile'],    (cb) -> server(); launch(); #process.exit()
@@ -255,13 +256,13 @@ gulp.task 'default', ['server']
 
 # ----------- BUILD (rel) ----------- #
 
-gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/*', cb
+gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/**/*', cb
 gulp.task 'copy-htaccess',['rel:clean'],               ()    -> copyHtaccess()
 gulp.task 'bumpVersion', ['copy-htaccess'],            ()    -> bumpBowerVersion()
 gulp.task 'copyStatics', ['bowerLibs'],                ()    -> copyAssets('rel/assets', ->)
 gulp.task 'releaseCompile', ['copyStatics'],           (cb)  -> compileFiles(false, cb)
 gulp.task 'minify',['releaseCompile'],                 ()    -> minifyAndJoin();
-gulp.task 'copy-random-js', ['minify'],                ()    -> copyRandomJs('./server/js/article-groups/*', './rel/js/article-groups/', ->)
-gulp.task 'pretty',['copy-random-js'],                 ()    -> prettyURLS()
+gulp.task 'copy-yaml', ['minify'],                     ()    -> copyFiles('./server/yaml/**/*', './rel/yaml/', ->)
+gulp.task 'pretty',['copy-yaml'],                      ()    -> prettyURLS()
 gulp.task 'cleanhtml', ['pretty'],                     ()    -> deleteUneededFiles()
 gulp.task 'rel', ['rel:clean', 'bumpVersion', 'cleanhtml'],  -> process.exit()

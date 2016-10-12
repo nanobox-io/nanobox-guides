@@ -1,0 +1,3 @@
+articles:
+  - {href: /golang/deps, title: Dependency Management}
+  - {href: /golang/nodejs-npm, title: Using Node.js & npm}

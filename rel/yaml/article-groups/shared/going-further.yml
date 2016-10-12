@@ -1,0 +1,8 @@
+title: Going Further
+articles:
+  - {href: /going-further/manage-platform-components, title: Manage Platform Components}
+  - {href: /going-further/optimize-your-environment, title: Optimize Your Environment}
+  - {href: /going-further/scale-your-app, title: Scale Your Application}
+  - {href: /going-further/understanding-stats, title: Understanding Stats}
+  - {href: /going-further/master-the-boxfile, title: Master the Boxfile}
+  - {href: /going-further/effective-logging, title: Effective Logging}

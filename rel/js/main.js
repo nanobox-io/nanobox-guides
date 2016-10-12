@@ -1,25 +1,14 @@
 var Article;
 
 Article = (function() {
-  function Article(title, clusters, icons) {
+  function Article(title, clusters) {
     this.title = title;
     this.clusters = clusters;
-    this.icons = icons;
     this.$main = $(".main");
     this.$leftNav = $("#left-nav");
     this.buildRelatedPagesNav();
     this.buildPageNav();
-    this.addIcons();
   }
-
-  Article.prototype.addIcons = function() {
-    var $node, icons;
-    icons = this.icons.split(',');
-    $node = $(jadeTemplate['article-icons']({
-      icons: icons
-    }));
-    return this.$main.prepend($node);
-  };
 
   Article.prototype.buildRelatedPagesNav = function() {
     var store;
@@ -108,7 +97,6 @@ Article = (function() {
   };
 
   Article.prototype.onAnchorClick = function(e) {
-    e.preventDefault();
     return $('body').velocity('scroll', {
       duration: 600,
       offset: $($.attr(this, 'href')).offset().top,

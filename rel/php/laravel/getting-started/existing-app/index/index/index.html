@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang=en><head><title>Nanobox</title><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel=stylesheet href=/style.css><link href="//fonts.googleapis.com/css?family=Lato:400,400italic" rel=stylesheet type=text/css><link rel=icon type=image/png href=/assets/favicon.png></head><body><div class=main-wrapper><div style=height:49px; class=top-nav-wrapper><div class=top-nav><a href="/" class=logo><div class=img></div><div class=company>Nanobox</div></a><div class=index-items><div id=local-link data-target=#local class="jumper active">Local</div><div id=deploy-link data-target=#deploy class=jumper>Deploy</div><div id=live-link data-target=#live class=jumper>Live</div></div><div class=menu><div class=nav><a href=http://dashboard.nanobox.io>Sign Up</a></div></div><div class=hamburg-icon><img data-src=hamburg-menu class=shadow-icon></div></div></div><div class=content-area><div class=article-page><div id=left-nav class=left><div class=article-nav><div class=title></div><div class=articles></div></div></div><div class=main><div class=markdown><h1 id=starting-with-an-existing-laravel-app>Starting with an Existing Laravel App</h1><p>Nanobox allows you to create a local PHP development environment in which you can develop your Laravel app without actually having to install PHP and other associated executables on your local machine.</p><p>This guide walks through getting an existing Laravel app up and running with Nanobox.</p><h2 id=setup-your-project>Setup Your Project</h2><p>In the root of your project directory, create a file named <code>boxfile.yml</code> that contains the following:</p><pre><code class=lang-yaml>code.build:
+
+  # tells nanobox to install php and associated runtimes
+  engine: php
+  config:
+
+    # sets the php version
+    # you can use a difference version if you prefer
+    runtime: php-7.0
+
+    # specifies the webserver document_root
+    document_root: public
+
+    # enables php extensions
+    extensions:
+
+      # required by laravel
+      - pdo
+      - mbstring
+      - tokenizer
+      - session
+
+      # required by composer
+      - phar
+      - filter
+      - json
+      - hash
+      - zip
+      - dom
+
+# creates a web component in sim and production environments
+web.laravel:
+
+  # commands to start PHP-FPM and Apache
+  start:
+    fpm: start-php
+    apache: start-apache
+
+  # pipes log output in your app&#39;s log-stream
+  log_watch:
+    apache[access]: /data/var/log/apache/access.log
+    apache[error]: /data/var/log/apache/error.log
+    php[error]: /data/var/log/php/php_error.log
+    php[fpm]: /data/var/log/php/php_fpm.log
+    laravel[error]: /app/storage/logs/laravel.log
+</code></pre><h3 id=runtime>runtime</h3><p>Using PHP 7.0 is recommended, but other versions are available. The list of available PHP versions can be found in the <a href=/php/config/php-settings#runtime>PHP Settings guide</a>.</p><h3 id=extensions>extensions</h3><p>The <a href=https://github.com/nanobox-io/nanobox-engine-php>PHP engine</a> takes a minimalist approach to including extensions in your PHP environment. Besides a few basic extensions, only extensions specified in your boxfile.yml are included in your PHP runtime.</p><p>If you need other extensions, just include them in your boxfile.yml. A list of available extensions can be found in the <a href=/php/config/extensions>PHP Extensions guide</a>.</p><h2 id=up-and-running>Up and Running</h2><p>With the your boxfile.yml in place, you&#39;re ready to create your dev environment. From the project directory run the following commands:</p><pre><code class=lang-bash># build the code
+nanobox build
+
+# start the dev environment
+nanobox dev start
+
+# add a convenient way to access your app from the browser
+nanobox dev dns add laravel.nanobox.dev
+</code></pre><h4 id=start-php-fpm-apache>Start PHP-FPM &amp; Apache</h4><p>Either <code>exit</code> out of your dev console or open a new terminal window and run the following to start PHP-FPM and Apache.</p><pre><code class=lang-bash># run the start commands specified in your boxfile.yml
+nanobox dev run
+</code></pre><h3 id=view-the-app-in-your-browser>View the App in Your Browser</h3><p>With your app running, you can access it at <code>laravel.nanobox.dev:8080</code> in your browser of choice.</p><h2 id=now-what->Now What?</h2><p>Now that you have Laravel running on Nanobox, what&#39;s next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!</p><ul><li>Connecting to a database</li><li>Adding components</li><li>Preparing for production</li><li>Launching your app</li></ul></div></div></div></div></div><script src=/js/libs.js></script><script src=/js/main.js></script><script src=https://use.typekit.net/cqd5kth.js></script><script>try{Typekit.load({ async: true });}catch(e){}</script><script>article = new Article("Existing Laravel App", "php/laravel")
+$main = $('.main')
+nanobox.addBreadcrumb( $main )
+nanobox.addIcons( $main, "php,laravel" )
+
+</script><script type=text/javascript>$mainwrapper = $(".main-wrapper");
+castShadows( $('.main-wrapper') );
+topNav = new nanobox.TopNav( $(".top-nav") );
+</script><script type=text/javascript>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-78086337-1', 'auto');
+ga('send', 'pageview');
+
+  </script></body></html>

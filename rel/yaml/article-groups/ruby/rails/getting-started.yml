@@ -1,0 +1,5 @@
+title: Rails
+articles:
+  - {href: /ruby/rails/getting-started/install-nanobox, title: Install Nanobox}
+  - {href: /ruby/rails/getting-started/from-scratch, title: Rails From Scratch}
+  - {href: /ruby/rails/getting-started/existing-app, title: Existing Rails App}

@@ -1,0 +1,3 @@
+articles:
+  - {href: /redis/create.html, title: Create a Redis Component}
+  - {href: /redis/connect.html, title: Connect to Redis}

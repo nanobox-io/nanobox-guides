@@ -1,0 +1,3 @@
+articles:
+  - {href: /python/pip, title: Pip}
+  - {href: /python/nodejs-npm, title: Using Node.js & npm}

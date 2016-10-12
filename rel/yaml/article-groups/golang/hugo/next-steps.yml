@@ -1,0 +1,3 @@
+title: Hugo
+articles:
+  - {href: /golang/hugo/connect-a-database, title: Connect a Database}

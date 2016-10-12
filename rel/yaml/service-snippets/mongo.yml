@@ -1,0 +1,4 @@
+documentation: /mongodb
+boxfile: |
+  data.mongodb:
+    image: nanobox/mongodb
