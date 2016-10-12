@@ -7,7 +7,7 @@ Part of what makes nanobox so useful is you don't have to have Node.js or Expres
 ## Build a Node Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside of. From within this environment you can run the app, a ember console, or even rake tasks as you would normally.
 
-#### Add a boxfile.yml
+### Add a boxfile.yml
 The boxfile.yml tells nanobox how to build and configure these environments. Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
