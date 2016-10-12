@@ -1,0 +1,4 @@
+title: Laravel
+articles:
+  - {href: /php/laravel/next-steps/add-a-database, title: Add a Database}
+  - {href: /php/laravel/going-further/local-evars, title: Local Environment Variables}

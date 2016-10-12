@@ -1,3 +1,4 @@
-title: Ember
+title: Express
 articles:
-  - {href: /nodejs/express/connect-a-database, title: Connect a Database}
+  - {href: /nodejs/express/next-steps/add-a-database, title: Add a Database}
+  - {href: /nodejs/express/going-further/local-evars, title: Local Environment Variables}

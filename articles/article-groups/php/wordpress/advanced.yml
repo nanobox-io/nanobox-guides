@@ -1,5 +1,4 @@
 articles:
   - {href: /php/wordpress/advanced/boxfile-explained, title: WordPress boxfile.yml Explained}
   - {href: /php/wordpress/advanced/reduce-deploy-size, title: Reduce the Size of Your Deploy}
-  - {href: /php/wordpress/advanced/force-https, title: Force HTTPS in WordPress}
   - {href: /php/wordpress/advanced/caching-plugins, title: Using Caching Plugins}

@@ -5,4 +5,4 @@ articles:
   - {href: /golang/hugo/production/launch-your-app, title: Launch your App}
   - {href: /golang/hugo/production/point-your-domain, title: Point your Domain}
   - {href: /golang/hugo/production/encryption, title: SSL/TLS Encryption}
-  - {href: /golang/hugo/going-further/production-evars, title: Production Environment Variables}
+  - {href: /golang/hugo/production/production-evars, title: Production Environment Variables}

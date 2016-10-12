@@ -1,0 +1,8 @@
+title: Laravel
+articles:
+  - {href: /php/laravel/production/configure-laravel, title: Configure Laravel}
+  - {href: /php/laravel/production/stage-your-app, title: Stage your App}
+  - {href: /php/laravel/production/launch-your-app, title: Launch your App}
+  - {href: /php/laravel/production/point-your-domain, title: Point your Domain}
+  - {href: /php/laravel/production/encryption, title: SSL/TLS Encryption}
+  - {href: /php/laravel/production/production-evars, title: Production Environment Variables}

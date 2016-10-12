@@ -2,4 +2,3 @@ title: Ember
 articles:
   - {href: /nodejs/ember/next-steps/add-a-database, title: Add a Database}
   - {href: /nodejs/ember/going-further/local-evars, title: Local Environment Variables}
-  - {href: /nodejs/ember/next-steps/javascript-runtime, title: Javascript Runtime}

@@ -5,4 +5,4 @@ articles:
   - {href: /golang/beego/production/launch-your-app, title: Launch your App}
   - {href: /golang/beego/production/point-your-domain, title: Point your Domain}
   - {href: /golang/beego/production/encryption, title: SSL/TLS Encryption}
-  - {href: /golang/beego/going-further/production-evars, title: Production Environment Variables}
+  - {href: /golang/beego/production/production-evars, title: Production Environment Variables}

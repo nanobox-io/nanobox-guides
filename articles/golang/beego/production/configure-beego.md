@@ -1,1 +1,1 @@
-# Configure Sinatra
+# Configure Beego

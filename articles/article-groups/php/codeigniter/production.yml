@@ -1,0 +1,8 @@
+title: CodeIgniter
+articles:
+  - {href: /php/codeigniter/production/configure-codeigniter, title: Configure CodeIgniter}
+  - {href: /php/codeigniter/production/stage-your-app, title: Stage your App}
+  - {href: /php/codeigniter/production/launch-your-app, title: Launch your App}
+  - {href: /php/codeigniter/production/point-your-domain, title: Point your Domain}
+  - {href: /php/codeigniter/production/encryption, title: SSL/TLS Encryption}
+  - {href: /php/codeigniter/production/production-evars, title: Production Environment Variables}

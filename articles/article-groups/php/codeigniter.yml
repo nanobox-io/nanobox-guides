@@ -1,7 +1,31 @@
 title: CodeIgniter
 articles:
+
   - title: Getting Started
     articles:
       - {href: /php/codeigniter/getting-started/install-nanobox, title: Install Nanobox}
       - {href: /php/codeigniter/getting-started/from-scratch, title: CodeIgniter from Scratch}
       - {href: /php/codeigniter/getting-started/existing-app, title: Existing CodeIgniter App}
+
+  - title: Next Steps
+    articles:
+      - {href: /php/codeigniter/next-steps/add-a-database, title: Add a Database}
+      - {href: /php/codeigniter/going-further/local-evars, title: Local Environment Variables}
+
+  - title: Production
+    articles:
+      - {href: /php/codeigniter/production/configure-codeigniter, title: Configure CodeIgniter}
+      - {href: /php/codeigniter/production/stage-your-app, title: Stage your App}
+      - {href: /php/codeigniter/production/launch-your-app, title: Launch your App}
+      - {href: /php/codeigniter/production/point-your-domain, title: Point your Domain}
+      - {href: /php/codeigniter/production/encryption, title: SSL/TLS Encryption}
+      - {href: /php/codeigniter/production/production-evars, title: Production Environment Variables}
+
+  - title: Going Further
+    articles:
+      - {href: /php/codeigniter/going-further/scale-your-app, title: Scale your App}
+      - {href: /php/codeigniter/going-further/debugging, title: Debugging}
+      - {href: /php/codeigniter/going-further/app-health, title: App Health}
+      - {href: /php/codeigniter/going-further/remote-access, title: Remote Access}
+      - {href: /php/codeigniter/going-further/team-management, title: Team Management}
+      - {href: /php/codeigniter/going-further/manage-platform, title: Manage Platform}

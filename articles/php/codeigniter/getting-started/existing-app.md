@@ -1,8 +1,8 @@
 # Starting with an Existing CodeIgniter App
 
-Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run CodeIgniter apps. This guide walks through creating a simple CodeIgniter app from scratch with Nanobox.
+Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run CodeIgniter apps. This guide walks through getting an existing CodeIgniter app up and running with Nanobox.
 
-*If you don't have an existing CodeIgniter project, the [CodeIgniter form Scratch guide](/php/codeigniter/getting-started/from-scratch) is where you should start.*
+*If you don't have an existing CodeIgniter project, the [CodeIgniter from Scratch guide](/php/codeigniter/getting-started/from-scratch) is where you should start.*
 
 ## Build a PHP Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app or other tasks as you would normally.

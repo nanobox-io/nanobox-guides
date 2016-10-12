@@ -1,7 +1,31 @@
 title: Laravel
 articles:
+
   - title: Getting Started
     articles:
       - {href: /php/laravel/getting-started/install-nanobox, title: Install Nanobox}
       - {href: /php/laravel/getting-started/from-scratch, title: Laravel from Scratch}
       - {href: /php/laravel/getting-started/existing-app, title: Existing Laravel App}
+
+  - title: Next Steps
+    articles:
+      - {href: /php/laravel/next-steps/add-a-database, title: Add a Database}
+      - {href: /php/laravel/going-further/local-evars, title: Local Environment Variables}
+
+  - title: Production
+    articles:
+      - {href: /php/laravel/production/configure-laravel, title: Configure Laravel}
+      - {href: /php/laravel/production/stage-your-app, title: Stage your App}
+      - {href: /php/laravel/production/launch-your-app, title: Launch your App}
+      - {href: /php/laravel/production/point-your-domain, title: Point your Domain}
+      - {href: /php/laravel/production/encryption, title: SSL/TLS Encryption}
+      - {href: /php/laravel/production/production-evars, title: Production Environment Variables}
+
+  - title: Going Further
+    articles:
+      - {href: /php/laravel/going-further/scale-your-app, title: Scale your App}
+      - {href: /php/laravel/going-further/debugging, title: Debugging}
+      - {href: /php/laravel/going-further/app-health, title: App Health}
+      - {href: /php/laravel/going-further/remote-access, title: Remote Access}
+      - {href: /php/laravel/going-further/team-management, title: Team Management}
+      - {href: /php/laravel/going-further/manage-platform, title: Manage Platform}

@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't have to have nodejs or angular
 
 This guide will help you get an existing Angular app up-and-running with nanobox.
 
-## Build a Ruby Dev Environment
+## Build a Node Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside of. From within this environment you can run the app, a angular console, or even rake tasks as you would normally.
 
 #### Add a boxfile.yml

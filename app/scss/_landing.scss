@@ -10,7 +10,7 @@
 @mixin main-title(){font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #BAC8CF; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
 
 .article-page        {
-  &.landing          {max-width:$app-width; margin:0 auto; padding-top:30px; margin-top:60px; 
+  &.landing          {max-width:$app-width; margin:0 auto; margin-top:60px; 
     .main            {padding:0;}
 
     .article-groups  {display:flex; margin-top:20px; justify-content: space-between; padding:30px; flex-wrap: wrap;

@@ -1,0 +1,8 @@
+title: Laravel
+articles:
+  - {href: /php/laravel/going-further/scale-your-app, title: Scale your App}
+  - {href: /php/laravel/going-further/debugging, title: Debugging}
+  - {href: /php/laravel/going-further/app-health, title: App Health}
+  - {href: /php/laravel/going-further/remote-access, title: Remote Access}
+  - {href: /php/laravel/going-further/team-management, title: Team Management}
+  - {href: /php/laravel/going-further/manage-platform, title: Manage Platform}
