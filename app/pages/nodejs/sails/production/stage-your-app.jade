@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Stage your App"
+    articles = "nodejs/sails"
+    icons    = "nodejs,sails"
+    
+block markdown
+  include:md /articles/shared/stage-your-app.md

@@ -1,13 +1,36 @@
 title: Angular
 articles:
 
-  # first steps
-  - {href: /nodejs/angular/getting-started, title: Getting Started}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /nodejs/angular/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /nodejs/angular/getting-started/from-scratch, title: Angular from Scratch}
+      - {href: /nodejs/angular/getting-started/existing-app, title: Existing Angular App}
 
-  # next steps
-  - {href: /nodejs/angular/connect-a-database, title: Connect a Database}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /nodejs/angular/next-steps/add-a-database, title: Add a Database}
+      - {href: /nodejs/angular/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /nodejs/angular/next-steps/javascript-runtime, title: Javascript Runtime}
 
-  # production
-  - {href: /nodejs/angular/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/angular/production/configure-angular, title: Configure Angular}
+      - {href: /nodejs/angular/production/stage-your-app, title: Stage your App}
+      - {href: /nodejs/angular/production/launch-your-app, title: Launch your App}
+      - {href: /nodejs/angular/production/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/angular/production/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/angular/production/production-evars, title: Production Environment Variables}
 
-  # going further
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/angular/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/angular/going-further/debugging, title: Debugging}
+      - {href: /nodejs/angular/going-further/app-health, title: App Health}
+      - {href: /nodejs/angular/going-further/remote-access, title: Remote Access}
+      - {href: /nodejs/angular/going-further/team-management, title: Team Management}
+      - {href: /nodejs/angular/going-further/manage-platform, title: Manage Platform}

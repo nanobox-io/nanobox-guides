@@ -1,13 +1,36 @@
 title: Ember
 articles:
 
-  # first steps
-  - {href: /nodejs/ember/getting-started, title: Getting Started}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /nodejs/ember/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /nodejs/ember/getting-started/from-scratch, title: Ember from Scratch}
+      - {href: /nodejs/ember/getting-started/existing-app, title: Existing Ember App}
 
-  # next steps
-  - {href: /nodejs/ember/connect-a-database, title: Connect a Database}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /nodejs/ember/next-steps/add-a-database, title: Add a Database}
+      - {href: /nodejs/ember/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /nodejs/ember/next-steps/javascript-runtime, title: Javascript Runtime}
 
-  # production
-  - {href: /nodejs/ember/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/ember/production/configure-ember, title: Configure Ember}
+      - {href: /nodejs/ember/production/stage-your-app, title: Stage your App}
+      - {href: /nodejs/ember/production/launch-your-app, title: Launch your App}
+      - {href: /nodejs/ember/production/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/ember/production/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/ember/production/production-evars, title: Production Environment Variables}
 
-  # going further
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/ember/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/ember/going-further/debugging, title: Debugging}
+      - {href: /nodejs/ember/going-further/app-health, title: App Health}
+      - {href: /nodejs/ember/going-further/remote-access, title: Remote Access}
+      - {href: /nodejs/ember/going-further/team-management, title: Team Management}
+      - {href: /nodejs/ember/going-further/manage-platform, title: Manage Platform}

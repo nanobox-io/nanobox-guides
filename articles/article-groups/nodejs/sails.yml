@@ -1,13 +1,36 @@
 title: Sails
 articles:
 
-  # first steps
-  - {href: /nodejs/sails/getting-started, title: Getting Started}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /nodejs/sails/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /nodejs/sails/getting-started/from-scratch, title: Sails from Scratch}
+      - {href: /nodejs/sails/getting-started/existing-app, title: Existing Sails App}
 
-  # next steps
-  - {href: /nodejs/sails/connect-a-database, title: Connect a Database}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /nodejs/sails/next-steps/add-a-database, title: Add a Database}
+      - {href: /nodejs/sails/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /nodejs/sails/next-steps/javascript-runtime, title: Javascript Runtime}
 
-  # production
-  - {href: /nodejs/sails/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/sails/production/configure-sails, title: Configure Sails}
+      - {href: /nodejs/sails/production/stage-your-app, title: Stage your App}
+      - {href: /nodejs/sails/production/launch-your-app, title: Launch your App}
+      - {href: /nodejs/sails/production/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/sails/production/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/sails/production/production-evars, title: Production Environment Variables}
 
-  # going further
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/sails/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/sails/going-further/debugging, title: Debugging}
+      - {href: /nodejs/sails/going-further/app-health, title: App Health}
+      - {href: /nodejs/sails/going-further/remote-access, title: Remote Access}
+      - {href: /nodejs/sails/going-further/team-management, title: Team Management}
+      - {href: /nodejs/sails/going-further/manage-platform, title: Manage Platform}

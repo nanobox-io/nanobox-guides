@@ -1,14 +1,36 @@
 title: Sinatra
 articles:
-  - {href: /ruby/sinatra, title: Overview}
 
-  # first steps
-  - {href: /ruby/sinatra/getting-started, title: Getting Started}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /ruby/sinatra/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /ruby/sinatra/getting-started/from-scratch, title: Sinatra from Scratch}
+      - {href: /ruby/sinatra/getting-started/existing-app, title: Existing Sinatra App}
 
-  # next steps
-  - {href: /ruby/sinatra/connect-a-database, title: Connect a Database}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /ruby/sinatra/next-steps/add-a-database, title: Add a Database}
+      - {href: /ruby/sinatra/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /ruby/sinatra/next-steps/javascript-runtime, title: Javascript Runtime}
 
-  # production
-  - {href: /ruby/sinatra/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Production"
+    articles:
+      - {href: /ruby/sinatra/production/configure-sinatra, title: Configure Sinatra}
+      - {href: /ruby/sinatra/production/stage-your-app, title: Stage your App}
+      - {href: /ruby/sinatra/production/launch-your-app, title: Launch your App}
+      - {href: /ruby/sinatra/production/point-your-domain, title: Point your Domain}
+      - {href: /ruby/sinatra/production/encryption, title: SSL/TLS Encryption}
+      - {href: /ruby/sinatra/production/production-evars, title: Production Environment Variables}
 
-  # going further
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /ruby/sinatra/going-further/scale-your-app, title: Scale your App}
+      - {href: /ruby/sinatra/going-further/debugging, title: Debugging}
+      - {href: /ruby/sinatra/going-further/app-health, title: App Health}
+      - {href: /ruby/sinatra/going-further/remote-access, title: Remote Access}
+      - {href: /ruby/sinatra/going-further/team-management, title: Team Management}
+      - {href: /ruby/sinatra/going-further/manage-platform, title: Manage Platform}

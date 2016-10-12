@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "SSL/TLS Encryption"
+    articles = "nodejs/angular"
+    icons    = "nodejs,angular"
+    
+block markdown
+  include:md /articles/shared/encryption.md

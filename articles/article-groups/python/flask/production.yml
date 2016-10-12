@@ -1,3 +1,8 @@
 title: Flask
 articles:
-  - {href: /python/flask/prepare-for-production, title: Prepare for Production}
+  - {href: /python/flask/production/configure-flask, title: Configure Flask}
+  - {href: /python/flask/production/stage-your-app, title: Stage your App}
+  - {href: /python/flask/production/launch-your-app, title: Launch your App}
+  - {href: /python/flask/production/point-your-domain, title: Point your Domain}
+  - {href: /python/flask/production/encryption, title: SSL/TLS Encryption}
+  - {href: /python/flask/going-further/production-evars, title: Production Environment Variables}

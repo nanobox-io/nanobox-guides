@@ -1,13 +1,36 @@
 title: Hugo
 articles:
 
-  # first steps
-  - {href: /golang/hugo/getting-started, title: Getting Started}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /golang/hugo/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /golang/hugo/getting-started/from-scratch, title: Hugo from Scratch}
+      - {href: /golang/hugo/getting-started/existing-app, title: Existing Hugo App}
 
-  # next steps
-  - {href: /golang/hugo/connect-a-database, title: Connect a Database}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /golang/hugo/next-steps/add-a-database, title: Add a Database}
+      - {href: /golang/hugo/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /golang/hugo/next-steps/javascript-runtime, title: Javascript Runtime}
 
-  # production
-  - {href: /golang/hugo/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Production"
+    articles:
+      - {href: /golang/hugo/production/configure-hugo, title: Configure Hugo}
+      - {href: /golang/hugo/production/stage-your-app, title: Stage your App}
+      - {href: /golang/hugo/production/launch-your-app, title: Launch your App}
+      - {href: /golang/hugo/production/point-your-domain, title: Point your Domain}
+      - {href: /golang/hugo/production/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/hugo/production/production-evars, title: Production Environment Variables}
 
-  # going further
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /golang/hugo/going-further/scale-your-app, title: Scale your App}
+      - {href: /golang/hugo/going-further/debugging, title: Debugging}
+      - {href: /golang/hugo/going-further/app-health, title: App Health}
+      - {href: /golang/hugo/going-further/remote-access, title: Remote Access}
+      - {href: /golang/hugo/going-further/team-management, title: Team Management}
+      - {href: /golang/hugo/going-further/manage-platform, title: Manage Platform}

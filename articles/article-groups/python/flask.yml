@@ -1,14 +1,36 @@
 title: Flask
 articles:
-  - {href: /python/flask, title: Overview}
 
-  # first steps
-  - {href: /python/flask/getting-started, title: Getting Started}
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /python/flask/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /python/flask/getting-started/from-scratch, title: Flask from Scratch}
+      - {href: /python/flask/getting-started/existing-app, title: Existing Flask App}
 
-  # next steps
-  - {href: /python/flask/connect-a-database, title: Connect a Database}
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /python/flask/next-steps/add-a-database, title: Add a Database}
+      - {href: /python/flask/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /python/flask/next-steps/javascript-runtime, title: Javascript Runtime}
 
-  # production
-  - {href: /python/flask/prepare-for-production, title: Prepare for Production}
+  #
+  - title: "Production"
+    articles:
+      - {href: /python/flask/production/configure-flask, title: Configure Flask}
+      - {href: /python/flask/production/stage-your-app, title: Stage your App}
+      - {href: /python/flask/production/launch-your-app, title: Launch your App}
+      - {href: /python/flask/production/point-your-domain, title: Point your Domain}
+      - {href: /python/flask/production/encryption, title: SSL/TLS Encryption}
+      - {href: /python/flask/production/production-evars, title: Production Environment Variables}
 
-  # going further
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /python/flask/going-further/scale-your-app, title: Scale your App}
+      - {href: /python/flask/going-further/debugging, title: Debugging}
+      - {href: /python/flask/going-further/app-health, title: App Health}
+      - {href: /python/flask/going-further/remote-access, title: Remote Access}
+      - {href: /python/flask/going-further/team-management, title: Team Management}
+      - {href: /python/flask/going-further/manage-platform, title: Manage Platform}

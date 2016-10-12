@@ -1,4 +1,4 @@
-# Rails from Scratch
+# Existing Rails App
 Part of what makes nanobox so useful is you don't have to have ruby or rails installed on your local machine.
 
 This guide will help you get an existing Rails app up-and-running with nanobox.

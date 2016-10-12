@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Production Environment Variables"
+    articles = "ruby/sinatra"
+    icons    = "ruby,sinatra"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

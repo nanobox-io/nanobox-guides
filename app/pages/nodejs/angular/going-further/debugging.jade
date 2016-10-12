@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Debugging"
+    articles = "nodejs/angular"
+    icons    = "nodejs,angular"
+    
+block markdown
+  include:md /articles/shared/debugging.md

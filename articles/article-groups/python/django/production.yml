@@ -1,3 +1,8 @@
 title: Django
 articles:
-  - {href: /python/django/prepare-for-production, title: Prepare for Production}
+  - {href: /python/django/production/configure-django, title: Configure Django}
+  - {href: /python/django/production/stage-your-app, title: Stage your App}
+  - {href: /python/django/production/launch-your-app, title: Launch your App}
+  - {href: /python/django/production/point-your-domain, title: Point your Domain}
+  - {href: /python/django/production/encryption, title: SSL/TLS Encryption}
+  - {href: /python/django/going-further/production-evars, title: Production Environment Variables}

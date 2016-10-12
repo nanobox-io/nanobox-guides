@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Existing Angular App"
+    articles = "nodejs/angular"
+    icons    = "nodejs,angular"
+    
+block markdown
+  include:md /articles/nodejs/angular/getting-started/existing-app.md

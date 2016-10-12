@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Add a Database"
+    articles = "golang/beego"
+    icons    = "golang,beego"
+    
+block markdown
+  include:md /articles/golang/beego/next-steps/add-a-database.md

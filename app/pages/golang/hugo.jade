@@ -6,22 +6,18 @@ block configParams
     informalName = "hugo"
     icon         = "hugo"
     iconCrumbs   = "golang,hugo"
-    
+
 block jsParams
   script.
     //- This is javascript
     requiredComponents = [
-      {name:'Golang', icon:'golang', href:'#'},
-      {name:'PostgreSQL', icon:'postgres', href:'#'}
+      {name:'Golang', icon:'golang', href:'#'}
     ]
-    optionalComponents = [
-      {name:'Mongo DB', icon:'mongo', href:'#'},
-      {name:'Redis', icon:'redis', href:'#'}
-    ]
+    optionalComponents = []
     articleGroups = [
-      {title:"First Steps",   group:"shared/first-steps,golang/hugo/first-steps"},
-      {title:"Next Steps",    group:"golang/hugo/next-steps,shared/next-steps"},
-      {title:"Production",    group:"golang/hugo/production,shared/production"},
-      {title:"Going Further", group:"golang/hugo/going-further,shared/going-further"}
+      {title:"Getting Started", group:"golang/hugo/getting-started"},
+      {title:"Next Steps",      group:"golang/hugo/next-steps"},
+      {title:"Production",      group:"golang/hugo/production"},
+      {title:"Going Further",   group:"golang/hugo/going-further"}
     ]
     devMode = true
