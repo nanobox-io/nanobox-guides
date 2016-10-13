@@ -4,8 +4,8 @@
     &:before      {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px;}
   }
   .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase;
-    &:before      {}
-    &:after       {color:#00AEF7;}
+    &:before      {margin-bottom:1px; padding-bottom:1px; border-bottom:1px solid #cdd3d8; color:#407287;}
+    &:after       {color:#1eb8ff;}
   }
 
   //
