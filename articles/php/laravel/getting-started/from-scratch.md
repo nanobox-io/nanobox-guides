@@ -52,6 +52,7 @@ code.build:
       - hash
       - zip
       - dom
+      - xml
 
 # creates a web component in sim and production environments
 web.laravel:

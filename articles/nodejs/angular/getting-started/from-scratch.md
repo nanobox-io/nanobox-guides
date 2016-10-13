@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't have to have nodejs or angular
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-angular" target="\_blank">nanobox-angular</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-## Build a Ruby Dev Environment
+## Build a Node Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside of. From within this environment you can run the app, a angular console, or even rake tasks as you would normally.
 
 Decide where you want your project to live and create a folder there:
