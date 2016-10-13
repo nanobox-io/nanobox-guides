@@ -13,14 +13,27 @@ $offset : 160px;
     }
     .blurb        {font-size:14px; }
   }
-  .chat           {background: white;font-weight:bold; text-transform:uppercase; letter-spacing:0.06em; display:flex; align-items: center; padding:0 20px; font-size:11px; cursor:pointer;
-    .icon         {
-      &:before    {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px; background-position:-292px -2px;}
+
+  //
+  .chat             {display:none; background: white;font-weight:bold; text-transform:uppercase; letter-spacing:0.06em; align-items: center; padding:0 20px; font-size:11px; cursor:pointer;
+    .icon           {
+      &:before      {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px;}
     }
-    .txt          {margin-left:10px;
-      .primary    {color:#00AEF7;}
-      .sub        {width:80px;}
+    .txt            {margin-left:10px;
+      &:before      {margin-right:3px; color:#00AEF7;}
+      &:after       {width:80px;}
     }
-    &:hover       {color:#00AEF7; }
+    &:hover         {color:#00AEF7;}
+
+    //
+    &.olark         {display:flex;
+      .icon:before  {background-position:-292px -2px;}
+      .txt          {&:before{content:"Live Chat";} &:after{content:"Share your Expertise"}}
+    }
+
+    &.groove        {display:flex;
+      .icon:before  {background-position:-244px -2px;}
+      .txt          {&:before{content:"Submit A Ticket";} &:after{content:"Share your Expertise"}}
+    }
   }
 }

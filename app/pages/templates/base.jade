@@ -68,10 +68,30 @@ html(lang="en")
   
     block js
     
+    //- 
     script(type="text/javascript").
       $mainwrapper = $(".main-wrapper");
       castShadows( $('.main-wrapper') );
       topNav = new nanobox.TopNav( $(".top-nav") );
       
+      //- olark/groove integration
+      $(document).ready(function() {
+        var $chat = $(".work-in-progress").find(".chat");
+
+        //- 
+        olark('api.box.hide');
+        //- olark('api.chat.onReady', function() {$chat.removeClass("groove"); $chat.addClass("olark")};
+        olark('api.chat.onOperatorsAvailable', function() {$chat.removeClass("groove"); $chat.addClass("olark");});
+        olark('api.chat.onOperatorsAway', function() {$chat.removeClass("olark"); $chat.addClass("groove");});
+        //- olark('api.box.onExpand', function() {});
+        olark('api.box.onShrink', function() {olark('api.box.hide')});
+        
+        $chat.click(function(e) {
+          if ($chat.hasClass("olark")) {olark('api.box.expand'); olark('api.box.show');}
+          if ($chat.hasClass("groove")) {groove.widget("open");}
+        });
+      });
+      
     include ../shared/google-analytics.jade
-    //- include ../shared/chat.jade
+    include ../shared/olark.jade
+    include ../shared/groove.jade

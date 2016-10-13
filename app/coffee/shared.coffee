@@ -34,8 +34,8 @@ nanobox.addIcons = ($el, icons) ->
   $node = $ jadeTemplate['article-icons']( {icons:ar} )
   $el.prepend $node
 
+#
 nanobox.showWorkInProgress = ($el, formalName, informalName)->
   $el.addClass 'work-in-progress-parent'
   $node = $ jadeTemplate['work-in-progress']( {formalName:formalName, informalName:informalName} )
   $el.prepend $node
-  $(".chat", $node).on "click", ()=> console.log "Show chatter"
