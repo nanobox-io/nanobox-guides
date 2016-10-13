@@ -3,9 +3,9 @@
   .icon           {
     &:before      {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px;}
   }
-  .txt            {margin-left:10px; text-transform:uppercase;
-    &:before      {margin-right:5px;}
-    &:after       {width:80px; color:#00AEF7;}
+  .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase;
+    &:before      {}
+    &:after       {color:#00AEF7;}
   }
 
   //
