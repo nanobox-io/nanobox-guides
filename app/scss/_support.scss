@@ -3,8 +3,8 @@
   .icon           {margin-left:10px;
     &:before      {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px;}
   }
-  .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase; font-size: 11px;
-    &:before      {}
+  .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase;
+    &:before      {border-bottom:solid 1px #ABB9C4; padding-bottom: 1px; margin-bottom:2px; color:#407287; }
     &:after       {color:#00AEF7;}
   }
 
@@ -12,7 +12,7 @@
   &.groove        {display:flex; flex-direction: column; font-weight:$bold; align-items: center; color:$navy; }
   &.olark         {
     .icon:before  {background-position:-292px -2px;}
-    .txt          {&:before{content:"Live Chat"; border-bottom:solid 1px #ABB9C4; padding-bottom: 1px; margin-bottom:2px;  } &:after{content:"Online"}}
+    .txt          {&:before{content:"Live Chat";  } &:after{content:"Online"}}
   }
   &.groove        {
     .icon:before  {background-position:-244px -2px;}
