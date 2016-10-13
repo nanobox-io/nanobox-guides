@@ -31,8 +31,8 @@ $offset : 160px;
 
     //
     &.groove              {display:flex;
-      .icon:before        {background-position:-244px -2px;}
-      .txt                {&:before{content:"";} &:after{content:"Share your Expertise"}}
+      .icon:before        {width:46px; height:53px; background-position:-339px -2px;}
+      .txt                {&:before{content:""; display:none; } &:after{content:"Share your Expertise"}}
     }
   }
 }
