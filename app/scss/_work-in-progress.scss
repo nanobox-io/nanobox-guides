@@ -26,10 +26,10 @@ $offset : 160px;
     //
     &.olark               {display:flex;
       .icon:before        {background-position:-292px -2px;}
-      .txt                {&:before{content:"Live Chat";} &:after{content:"Share your Expertise"}}
+      .txt                {&:before{content:"Live Chat"; display:block; } &:after{content:"Share your Expertise"}}
     }
 
-    // 
+    //
     &.groove              {display:flex;
       .icon:before        {background-position:-244px -2px;}
       .txt                {&:before{content:"";} &:after{content:"Share your Expertise"}}

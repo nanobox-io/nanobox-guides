@@ -30,3 +30,10 @@
 @mixin center-v()   { position:relative; top:50%; @include transform(translateY(-50%)); }
 @mixin center-h() { position:relative; top:50%; @include transform(translateX(-50%)); }
 @mixin circle($size)       { height:$size; width:$size; border-radius:50%; }
+
+@mixin placeholder($color){
+  ::-webkit-input-placeholder {color: $color !important;}
+  :-moz-placeholder           {color: $color !important;}
+  ::-moz-placeholder          {color: $color !important;}
+  :-ms-input-placeholder      {color: $color !important;}
+}

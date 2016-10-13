@@ -1,21 +1,20 @@
 //
 .support          {display:none; align-items:center; position:fixed; right:21px; bottom:8px; font-size:12px; line-height:12px; cursor:pointer;
-  .icon           {
+  .icon           {margin-left:10px;
     &:before      {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px;}
   }
-  .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase;
+  .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase; font-size: 11px;
     &:before      {}
     &:after       {color:#00AEF7;}
   }
 
-  //
-  &.olark         {display:flex;
+  &.olark,
+  &.groove        {display:flex; flex-direction: column; font-weight:$bold; align-items: center; color:$navy; }
+  &.olark         {
     .icon:before  {background-position:-292px -2px;}
-    .txt          {&:before{content:"Live Chat";} &:after{content:"Online"}}
+    .txt          {&:before{content:"Live Chat"; border-bottom:solid 1px #ABB9C4; padding-bottom: 1px; margin-bottom:2px;  } &:after{content:"Online"}}
   }
-
-  //
-  &.groove        {display:flex;
+  &.groove        {
     .icon:before  {background-position:-244px -2px;}
     .txt          {&:before{content:"Ask a";} &:after{content:"Question"}}
   }
