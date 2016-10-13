@@ -1,0 +1,22 @@
+//
+.support          {display:none; align-items:center; position:fixed; right:21px; bottom:8px; font-size:12px; line-height:12px; cursor:pointer;
+  .icon           {
+    &:before      {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px;}
+  }
+  .txt            {display:flex; flex-direction:column; align-items:center; margin-left:10px; text-transform:uppercase;
+    &:before      {}
+    &:after       {color:#00AEF7;}
+  }
+
+  //
+  &.olark         {display:flex;
+    .icon:before  {background-position:-292px -2px;}
+    .txt          {&:before{content:"Live Chat";} &:after{content:"Online"}}
+  }
+
+  //
+  &.groove        {display:flex;
+    .icon:before  {background-position:-244px -2px;}
+    .txt          {&:before{content:"Ask a";} &:after{content:"Question"}}
+  }
+}
