@@ -28,6 +28,24 @@ html(lang="en")
       include ../shared/top-nav.jade
       .content-area
         block content
+        
+    //- most of this is built via css/js
+    .support
+      .icon
+      .txt
+        
+    //- .support
+    //-   .toggle#toggle-groove
+    //-     .icon
+    //-     .text
+    //-       %span ask a
+    //-       %span question
+    //- 
+    //-   .toggle#toggle-olark
+    //-     .icon
+    //-     .text
+    //-       %span live chat
+    //-       %span online
           
     // build:libs /js/libs.js
     script(src="/bower-libs/jquery/dist/jquery.js")
@@ -77,18 +95,32 @@ html(lang="en")
       //- olark/groove integration
       $(document).ready(function() {
         var $chat = $(".work-in-progress").find(".chat");
+        var $support = $(".support")
 
         //- 
         olark('api.box.hide');
         //- olark('api.chat.onReady', function() {$chat.removeClass("groove"); $chat.addClass("olark")};
-        olark('api.chat.onOperatorsAvailable', function() {$chat.removeClass("groove"); $chat.addClass("olark");});
-        olark('api.chat.onOperatorsAway', function() {$chat.removeClass("olark"); $chat.addClass("groove");});
-        //- olark('api.box.onExpand', function() {});
-        olark('api.box.onShrink', function() {olark('api.box.hide')});
+        olark('api.chat.onOperatorsAvailable', function() {
+          $chat.removeClass("groove"); $chat.addClass("olark");
+          $support.removeClass("groove"); $support.addClass("olark");
+        });
+        olark('api.chat.onOperatorsAway', function() {
+          $chat.removeClass("olark"); $chat.addClass("groove");
+          $support.removeClass("olark"); $support.addClass("groove");
+        });
+        olark('api.box.onExpand', function() {$support.hide();});
+        olark('api.box.onShrink', function() {$support.show(); olark('api.box.hide')});
         
+        //- 
         $chat.click(function(e) {
           if ($chat.hasClass("olark")) {olark('api.box.expand'); olark('api.box.show');}
           if ($chat.hasClass("groove")) {groove.widget("open");}
+        });
+        
+        //- 
+        $support.click(function(e) {
+          if ($support.hasClass("olark")) {olark('api.box.expand'); olark('api.box.show');}
+          if ($support.hasClass("groove")) {groove.widget("open");}
         });
       });
       
