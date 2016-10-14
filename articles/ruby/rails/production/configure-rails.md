@@ -1,59 +1,71 @@
-# Rails: Prepare for production
-After you have an application (app) running locally in a development (dev) environment with nanobox, and you've developed it to a point where you're beginning to think about production, nanobox can help you test your app as if it were running in production using the simulation (sim) environment.
+# Configure Rails for Production
+With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
-This guide is broken down into three sections:
+## Add webs and workers
+For your app to run in production at the very least you'll need a [web component](). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc.
 
-1. [Dev vs Sim](dev-vs-sim)
-2. [Setting up sim](setting-up-a-sim-environment)
-3. [Sim: up and running](sim-up-and-running)
+#### Specify web components
+You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
-## Dev vs. Sim
-The nanobox dev environment is just that. It's a local running instance of your app. It doesn't compile assets or run a web server.
-
-The nanobox sim environment is an exact replica of a production environment running locally. All this means is your app will run in sim as if it were running in production, just not on a live server. If your app runs in `sim` *it will run in production*. Guaranteed.
-
-## Setting up sim
-You use `nanobox sim` in the same way you use `nanobox dev`, it just needs a little extra setup. Add a web component to your `boxfile.yml` like in the following example:
-
-#### Adding a web server
 ```yaml
-# because we're using rails we need to tell nanobox that we need ruby in our
-# container
 code.build:
   engine: "ruby"
 
-# specify that we need a data component (called "db"); for this example we'll
-# use postgresql as our database
-data.db:
-  image: nanobox/postgresql
-
-# we need to specify a web component to run our app in and tell nanobox how to
-# start our server
-web.site:
-  start: 'bundle exec rails s'
+# add a web component and give it a "start" command
+web.main:
+  start: rails s
 ```
 
-## Sim: up and running
-With our sim environment created and deployed lets test it!
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command will be unique to the web server you're using within your app (unicorn, puma, etc.)
 
-```bash
-# build a ruby runtime
-nanobox build
+#### Specify worker components
+You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
-# compile the app
-nanobox compile
+```yaml
+code.build:
+  engine: "ruby"
 
-# add a convenient way to access your app from a browser
-nanobox sim dns add rails.nanobox.sim
-
-# deploy the ruby runtime into the sim environment
-nanobox sim deploy
+# add a worker component and give it a "start" command
+worker.main:
+  start: sidekiq
 ```
 
-Visit the app from your favorite browser at: `rails.nanobox.sim`
+In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier). The `start` command will be unique to the background processor you're using within your app (sidekiq, resque, etc.)
+
+## Add Writable Directories
+By default, each components container is a read only environment. Rails will need certain directories available to write to for things like log output, temporary files, etc.
+
+You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
+
+```yaml
+web.dashboard:
+  start: rails s
+  writable_dirs:
+    - tmp
+    - log
+
+worker.sequences:
+  start: sidekiq
+  writable_dirs:
+    - tmp
+    - log
+```
+
+## Compile Assets
+For Rails to run in production we'll need to compile all of our assets. To do that you can update your existing `boxfile.yml` with an after_compile [hook]():
+
+```yaml
+code.build:
+  engine: ruby
+
+  #
+  after_compile:
+    - bundle exec rake assets:precompile
+```
 
 ## Now what?
-With an app running in a sim environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Launch your App](/ruby/rails/launch-your-app)
-* [Back to Rails overview](/ruby/rails/)
+* [Stage your App](stage-your-app.html)
+* [Launch your App](launch-your-app.html)
+* [Back to rails overview](rails.html)

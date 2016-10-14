@@ -1,5 +1,4 @@
 # Javascript Runtime
-
 Many handy tools for tasks such as dependency management, asset compilation, etc. require Node.js, npm, and/or other javascript tools. Including Node.js in your app can done by adding the following options to the `code.build` section of your boxfile.yml.
 
 ## Include Node.js in Your boxfile.yml
@@ -34,10 +33,13 @@ With these options added to your boxfile.yml, build a new runtime to install the
 ```bash
 # build a new runtime
 nanobox build
+
+# deploy the environment to the dev runtime
+nanobox dev deploy
 ```
 
-## Console In & Use
-When the newly built runtime, you can console in and use `node`, `npm`, and any other tools installed with them.
+#### Verify installation
+With the newly built runtime, you can console in and use `node`, and `npm` like you would normally.
 
 ```bash
 # console into your dev environment
@@ -49,3 +51,10 @@ node -v
 # check the npm version
 npm -v
 ```
+
+## Now what?
+With a javascript runtime available, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+
+* [Local Environment Variables](local-evars.html)
+* [Prepare for Production](configure-rails.html)
+* [Back to rails overview](rails.html)
