@@ -1,6 +1,0 @@
-title: Django
-href: /python/django
-articles:
-  - {href: /python/django/next-steps/add-a-database, title: Add a Database}
-  - {href: /python/django/going-further/local-evars, title: Local Environment Variables}
-  - {href: /python/django/next-steps/javascript-runtime, title: Javascript Runtime}

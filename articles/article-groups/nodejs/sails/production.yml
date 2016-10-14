@@ -1,9 +1,0 @@
-title: Sails
-href: /nodejs/sails
-articles:
-  - {href: /nodejs/sails/production/configure-sails, title: Configure Sails}
-  - {href: /nodejs/sails/production/stage-your-app, title: Stage your App}
-  - {href: /nodejs/sails/production/launch-your-app, title: Launch your App}
-  - {href: /nodejs/sails/production/point-your-domain, title: Point your Domain}
-  - {href: /nodejs/sails/production/encryption, title: SSL/TLS Encryption}
-  - {href: /nodejs/sails/production/production-evars, title: Production Environment Variables}

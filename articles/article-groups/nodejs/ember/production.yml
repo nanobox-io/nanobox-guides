@@ -1,9 +1,0 @@
-title: Ember
-href: /nodejs/ember
-articles:
-  - {href: /nodejs/ember/production/configure-ember, title: Configure Ember}
-  - {href: /nodejs/ember/production/stage-your-app, title: Stage your App}
-  - {href: /nodejs/ember/production/launch-your-app, title: Launch your App}
-  - {href: /nodejs/ember/production/point-your-domain, title: Point your Domain}
-  - {href: /nodejs/ember/production/encryption, title: SSL/TLS Encryption}
-  - {href: /nodejs/ember/production/production-evars, title: Production Environment Variables}

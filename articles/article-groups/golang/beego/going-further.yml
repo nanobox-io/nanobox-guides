@@ -1,9 +1,0 @@
-title: Beego
-href: /golang/beego
-articles:
-  - {href: /golang/beego/going-further/scale-your-app, title: Scale your App}
-  - {href: /golang/beego/going-further/debugging, title: Debugging}
-  - {href: /golang/beego/going-further/app-health, title: App Health}
-  - {href: /golang/beego/going-further/remote-access, title: Remote Access}
-  - {href: /golang/beego/going-further/team-management, title: Team Management}
-  - {href: /golang/beego/going-further/manage-platform, title: Manage Platform}

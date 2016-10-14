@@ -1,6 +1,0 @@
-title: Hugo
-href: /golang/hugo
-articles:
-  - {href: /golang/hugo/getting-started/install-nanobox, title: Install Nanobox}
-  - {href: /golang/hugo/getting-started/from-scratch, title: Hugo From Scratch}
-  - {href: /golang/hugo/getting-started/existing-app, title: Existing Hugo App}

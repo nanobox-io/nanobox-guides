@@ -1,9 +1,0 @@
-title: Hugo
-href: /golang/hugo
-articles:
-  - {href: /golang/hugo/going-further/scale-your-app, title: Scale your App}
-  - {href: /golang/hugo/going-further/debugging, title: Debugging}
-  - {href: /golang/hugo/going-further/app-health, title: App Health}
-  - {href: /golang/hugo/going-further/remote-access, title: Remote Access}
-  - {href: /golang/hugo/going-further/team-management, title: Team Management}
-  - {href: /golang/hugo/going-further/manage-platform, title: Manage Platform}

@@ -1,5 +1,0 @@
-title: Angular
-href: /nodejs/angular
-articles:
-  - {href: /nodejs/angular/next-steps/add-a-database, title: Add a Database}
-  - {href: /nodejs/angular/going-further/local-evars, title: Local Environment Variables}

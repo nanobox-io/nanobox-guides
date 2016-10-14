@@ -1,9 +1,0 @@
-title: Sinatra
-href: /ruby/sinatra
-articles:
-  - {href: /ruby/sinatra/going-further/scale-your-app, title: Scale your App}
-  - {href: /ruby/sinatra/going-further/debugging, title: Debugging}
-  - {href: /ruby/sinatra/going-further/app-health, title: App Health}
-  - {href: /ruby/sinatra/going-further/remote-access, title: Remote Access}
-  - {href: /ruby/sinatra/going-further/team-management, title: Team Management}
-  - {href: /ruby/sinatra/going-further/manage-platform, title: Manage Platform}

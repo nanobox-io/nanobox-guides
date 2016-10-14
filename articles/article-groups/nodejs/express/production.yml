@@ -1,9 +1,0 @@
-title: Express
-href: /nodejs/express
-articles:
-  - {href: /nodejs/express/production/configure-express, title: Configure Express}
-  - {href: /nodejs/express/production/stage-your-app, title: Stage your App}
-  - {href: /nodejs/express/production/launch-your-app, title: Launch your App}
-  - {href: /nodejs/express/production/point-your-domain, title: Point your Domain}
-  - {href: /nodejs/express/production/encryption, title: SSL/TLS Encryption}
-  - {href: /nodejs/express/production/production-evars, title: Production Environment Variables}

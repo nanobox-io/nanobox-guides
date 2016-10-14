@@ -1,9 +1,0 @@
-title: Flask
-href: /python/flask
-articles:
-  - {href: /python/flask/going-further/scale-your-app, title: Scale your App}
-  - {href: /python/flask/going-further/debugging, title: Debugging}
-  - {href: /python/flask/going-further/app-health, title: App Health}
-  - {href: /python/flask/going-further/remote-access, title: Remote Access}
-  - {href: /python/flask/going-further/team-management, title: Team Management}
-  - {href: /python/flask/going-further/manage-platform, title: Manage Platform}

@@ -56,7 +56,7 @@ Visit the app from your favorite browser at: `rails.nanobox.dev:8080`
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Connect a database](/ruby/rails/connect-a-database)
-* [Javascript Runtime](/ruby/rails/javascript-runtime)
-* [Local Environment Variables](/ruby/rails/local-evars)
+* [Connect a database](/ruby/rails/next-steps/add-a-database)
+* [Javascript Runtime](/ruby/rails/next-steps/javascript-runtime)
+* [Local Environment Variables](/ruby/rails/next-steps/local-evars)
 * [Back to Rails overview](/ruby/rails)

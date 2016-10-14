@@ -1,6 +1,0 @@
-title: Express
-href: /nodejs/express
-articles:
-  - {href: /nodejs/express/getting-started/install-nanobox, title: Install Nanobox}
-  - {href: /nodejs/express/getting-started/from-scratch, title: Express From Scratch}
-  - {href: /nodejs/express/getting-started/existing-app, title: Existing Express App}

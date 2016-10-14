@@ -1,9 +1,0 @@
-title: Angular
-href: /nodejs/angular
-articles:
-  - {href: /nodejs/angular/going-further/scale-your-app, title: Scale your App}
-  - {href: /nodejs/angular/going-further/debugging, title: Debugging}
-  - {href: /nodejs/angular/going-further/app-health, title: App Health}
-  - {href: /nodejs/angular/going-further/remote-access, title: Remote Access}
-  - {href: /nodejs/angular/going-further/team-management, title: Team Management}
-  - {href: /nodejs/angular/going-further/manage-platform, title: Manage Platform}

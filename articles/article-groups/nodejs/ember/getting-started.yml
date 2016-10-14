@@ -1,6 +1,0 @@
-title: Ember
-href: /nodejs/ember
-articles:
-  - {href: /nodejs/ember/getting-started/install-nanobox, title: Install Nanobox}
-  - {href: /nodejs/ember/getting-started/from-scratch, title: Ember From Scratch}
-  - {href: /nodejs/ember/getting-started/existing-app, title: Existing Ember App}

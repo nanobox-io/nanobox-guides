@@ -1,5 +1,0 @@
-title: Sails
-href: /nodejs/sails
-articles:
-  - {href: /nodejs/sails/next-steps/add-a-database, title: Add a Database}
-  - {href: /nodejs/sails/going-further/local-evars, title: Local Environment Variables}

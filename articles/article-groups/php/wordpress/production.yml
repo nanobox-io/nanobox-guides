@@ -1,6 +1,0 @@
-href: /php/wordpress
-articles:
-  - {href: /php/wordpress/production/deploy-wordpress, title: Deploy WordPress}
-  - {href: /php/wordpress/production/point-your-domain, title: Point Your Domain}
-  - {href: /php/wordpress/production/encryption, title: SSL/TLS Encryption}
-  - {href: /php/wordpress/production/force-https, title: Force HTTPS in WordPress}

@@ -66,6 +66,6 @@ code.build:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](stage-your-app.html)
-* [Launch your App](launch-your-app.html)
-* [Back to rails overview](rails.html)
+* [Stage your App](/ruby/rails/production/stage-your-app)
+* [Launch your App](/ruby/rails/production/launch-your-app)
+* [Back to rails overview](/ruby/rails)

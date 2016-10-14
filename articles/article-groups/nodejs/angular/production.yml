@@ -1,9 +1,0 @@
-title: Angular
-href: /nodejs/angular
-articles:
-  - {href: /nodejs/angular/production/configure-angular, title: Configure Angular}
-  - {href: /nodejs/angular/production/stage-your-app, title: Stage your App}
-  - {href: /nodejs/angular/production/launch-your-app, title: Launch your App}
-  - {href: /nodejs/angular/production/point-your-domain, title: Point your Domain}
-  - {href: /nodejs/angular/production/encryption, title: SSL/TLS Encryption}
-  - {href: /nodejs/angular/production/production-evars, title: Production Environment Variables}

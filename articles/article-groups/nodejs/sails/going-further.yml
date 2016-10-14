@@ -1,9 +1,0 @@
-title: Sails
-href: /nodejs/sails
-articles:
-  - {href: /nodejs/sails/going-further/scale-your-app, title: Scale your App}
-  - {href: /nodejs/sails/going-further/debugging, title: Debugging}
-  - {href: /nodejs/sails/going-further/app-health, title: App Health}
-  - {href: /nodejs/sails/going-further/remote-access, title: Remote Access}
-  - {href: /nodejs/sails/going-further/team-management, title: Team Management}
-  - {href: /nodejs/sails/going-further/manage-platform, title: Manage Platform}

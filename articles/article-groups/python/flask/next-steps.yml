@@ -1,6 +1,0 @@
-title: Flask
-href: /python/flask
-articles:
-  - {href: /python/flask/next-steps/add-a-database, title: Add a Database}
-  - {href: /python/flask/going-further/local-evars, title: Local Environment Variables}
-  - {href: /python/flask/next-steps/javascript-runtime, title: Javascript Runtime}

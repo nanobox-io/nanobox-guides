@@ -55,6 +55,6 @@ npm -v
 ## Now what?
 With a javascript runtime available, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Local Environment Variables](local-evars.html)
-* [Prepare for Production](configure-rails.html)
-* [Back to rails overview](rails.html)
+* [Local Environment Variables](/ruby/rails/next-steps/local-evars)
+* [Prepare for Production](/ruby/rails/production/configure-rails)
+* [Back to rails overview](/ruby/rails)

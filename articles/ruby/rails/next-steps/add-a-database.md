@@ -76,7 +76,7 @@ bundle exec rake db:setup
 ## Now what?
 With your app connected to a database, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Javascript Runtime](javascript-runtime.html)
-* [Local Environment Variables](local-evars.html)
-* [Prepare for Production](configure-rails.html)
-* [Back to rails overview](rails.html)
+* [Javascript Runtime](/ruby/rails/next-steps/javascript-runtime)
+* [Local Environment Variables](/ruby/rails/next-steps/local-evars)
+* [Prepare for Production](/ruby/rails/production/configure-rails)
+* [Back to rails overview](/ruby/rails)
