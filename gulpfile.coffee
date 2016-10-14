@@ -248,6 +248,7 @@ compileFiles = (doWatch=false, cb) ->
 
 
 # ----------- GENERATOR ----------- #
+
 gulp.task 'new-framework', ()->
   [language, framework] = gutil.env.path.split "/"
   gulp.src 'templates/framework/**/*.jade'
