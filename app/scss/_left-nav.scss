@@ -3,18 +3,20 @@
   .title                      {color:$navy; text-transform:uppercase;  font-size:13px;  letter-spacing: 0.06em; font-weight:$bold; }
 
   .article-nav                {background:#E6EAED;
-    .title                    {background:white; padding:13px 0px 10px 15px; }
+    a.title                   {background:white; padding:13px 0px 10px 15px; display: block; position: relative;
+      &:hover:before          {content:"< "; position:absolute; transform:scale(0.5,1); font-size:17px; top:10px; left:4px;}
+    }
     .articles                 {
       > .children             {display:flex; flex-direction:column; padding:10px 0;
         .nav-item             {
-          a                   {padding:5px 0px 2px 20px;font-size:15px; color:$navy; font-weight:$medium; position: relative;
+          a                   {padding:5px 0px 2px 20px;font-size:15px; color:$navy; font-weight:$medium; position: relative; display: block;
             &:before          {content:"> "; opacity:0; position:absolute; transform:scale(0.5,1); font-size:17px; top:4px; left:7px; }
             &:hover           {color:#092F46;
               &:before        {opacity:0.5;}
             }
           }
           &.active            {
-            a                 {font-weight:$bold;
+            a                 {font-weight:$bold; font-style:italic; 
               &:before        {opacity:1;}
             }
           }
@@ -27,6 +29,11 @@
               >.children       {display:block;}
               > .child-toggle {
                 &:after       {content:"-"; line-height: 16px;}
+              }
+            }
+            &.hover           {
+              > .child-toggle {
+                &:after       {background:#0276E3; color:white; }
               }
             }
           }

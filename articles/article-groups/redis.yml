@@ -1,11 +1,12 @@
 title: Redis
 href: /redis
 articles:
-  - {href: /redis, title: Overview}
-  - {href: /redis/create, title: Create a Redis Database}
-  - {href: /redis/connect, title: Connect to Redis}
-  - {href: '/redis/configure', title: Redis Config Options}
-  - title: Managing Redis Data
+  - title: Getting Started
+    articles:
+      - {href: /redis/create, title: Creating a Redis Component}
+      - {href: /redis/connect, title: Connect to Redis}
+      - {href: '/redis/configure', title: Redis Config Options}
+  - title: Managing Data
     articles:
       - {href: /redis/manage/local, title: Managing Local Data}
       - {href: /redis/manage/production, title: Managing Production Data}

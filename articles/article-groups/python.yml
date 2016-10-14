@@ -1,9 +1,10 @@
 title: Python
 href: /python
 articles:
-  - {href: /python, title: Overview}
-  - {href: /python/getting-started, title: Getting Started}
-  - {href: /python/add-components, title: Add App Components}
-  - {href: /python/pip, title: Pip}
-  - {href: /python/nodejs-npm, title: Using Node.js & npm}
-  - {href: /python/config, title: Configure Python}
+  - title: First Steps
+    articles:
+      - {href: /python/getting-started, title: Getting Started}
+      - {href: /python/add-components, title: Add App Components}
+      - {href: /python/pip, title: Pip}
+      - {href: /python/nodejs-npm, title: Using Node.js & npm}
+      - {href: /python/config, title: Configure Python}

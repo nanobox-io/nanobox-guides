@@ -1,22 +1,23 @@
 title: Django
+href: /python/django
 articles:
 
   #
-  - title: "Getting Started"
+  - title: Getting Started
     articles:
       - {href: /python/django/getting-started/install-nanobox, title: Install Nanobox}
       - {href: /python/django/getting-started/from-scratch, title: Django from Scratch}
       - {href: /python/django/getting-started/existing-app, title: Existing Django App}
 
   #
-  - title: "Next Steps"
+  - title: Next Steps
     articles:
       - {href: /python/django/next-steps/add-a-database, title: Add a Database}
       - {href: /python/django/next-steps/local-evars, title: Local Environment Variables}
       - {href: /python/django/next-steps/javascript-runtime, title: Javascript Runtime}
 
   #
-  - title: "Production"
+  - title: Production
     articles:
       - {href: /python/django/production/configure-django, title: Configure Django}
       - {href: /python/django/production/stage-your-app, title: Stage your App}
@@ -26,7 +27,7 @@ articles:
       - {href: /python/django/production/production-evars, title: Production Environment Variables}
 
   #
-  - title: "Going Further"
+  - title: Going Further
     articles:
       - {href: /python/django/going-further/scale-your-app, title: Scale your App}
       - {href: /python/django/going-further/debugging, title: Debugging}

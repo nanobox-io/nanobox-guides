@@ -17,10 +17,19 @@ class Article
       @markMatchedArticle @articleGroupData.articles
       $node = $ jadeTemplate['articles']( @articleGroupData )
       $(".title",    @$leftNav).text @articleGroupData.title
+      $(".title",    @$leftNav).attr 'href', @articleGroupData.href
       $(".articles", @$leftNav).append $node
-      $(".child-toggle", $node).on 'click', (e)->
+
+      # click on a parent node
+      $("a.trigger", $node).on 'click', (e)->
+        e.stopPropagation()
+        e.preventDefault()
         $($(e.currentTarget).parent()).toggleClass 'open'
-        $(e.currentTarget).toggleClass 'open'
+      # mouseover / mouseout on a parent node
+      $("a.trigger", $node).on 'mouseover', (e)->
+        $($(e.currentTarget).parent()).addClass 'hover'
+      $("a.trigger", $node).on 'mouseout', (e)->
+        $($(e.currentTarget).parent()).removeClass 'hover'
 
       @buildBreadCrumbs()
       if window.isLocal

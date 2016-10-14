@@ -1,9 +1,10 @@
 title: Storage
 href: /storage
 articles:
-  - {href: /storage, title: Overview}
-  - {href: /storage/create, title: Create a Storage Component}
-  - {href: /storage/storing-files, title: Storing Files in a Storage Component}
+  - title: Basics
+    articles:
+      - {href: /storage/create, title: Creating a Storage Component}
+      - {href: /storage/storing-files, title: Storing Files in a Storage Component}
   - title: Managing Storage
     articles:
       - {href: /storage/manage/local, title: Managing Local Storage Components}

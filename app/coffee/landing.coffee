@@ -4,31 +4,12 @@ class Landing
 
   loadArticleGroups : (articles) =>
     return if !articles?
-    @articleLoadIndexes = {}
-    for article, i in articles
-      article.index = i
-      yamlFiles = article.group.split ","
-      for item in yamlFiles
-        nanobox.getYaml "/yaml/article-groups/#{item}.yml", article, @onArticleLoad
+    return if articles.length == 0
+    nanobox.getYaml "/yaml/article-groups/#{articles}.yml", null, @onNavLoad
 
-  onArticleLoad : (yml, baseArticle) =>
-    addToExisting = @articleLoadIndexes[baseArticle.index]?
-
-    baseArticle.data = yml
-    data = {info:baseArticle}
-
-    if addToExisting
-      data.isChild = true
-    else
-      @articleLoadIndexes[baseArticle.index] = ""
-
-    $node = $ jadeTemplate['framework-overview/article-group']( data )
-    # Make sure the articles are ordered no matter wha order tyeh are loaded
-    $node.css order:baseArticle.index
-
-    if addToExisting
-      $("#article-groups #group#{baseArticle.index}").append $node
-    else
+  onNavLoad : (yaml)=>
+    for group in yaml.articles
+      $node = $ jadeTemplate['framework-overview/article-group']( group )
       $("#article-groups").append $node
 
     # Only applicable to local testing

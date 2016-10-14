@@ -1,8 +1,7 @@
-if !isChild
-  .group(id="group#{info.index}")
-    a.title(href="#{href}")= info.title
-    each article in info.data.articles
-      a(href="#{article.href}")= article.title
-else
-  each article in info.data.articles
-    a(href="#{article.href}")= article.title
+.group
+  a.title= title
+  if typeof articles !== undefined
+    each article in articles
+      //- Only show links, (not sub menu items)
+      if typeof article.href !== undefined
+        a(href="#{article.href}")= article.title

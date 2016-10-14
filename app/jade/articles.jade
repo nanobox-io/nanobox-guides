@@ -2,12 +2,13 @@ mixin addChildren(articles)
   .children
     each article in articles
       - hasChildren = article.articles != null
-      - classes = article.active ? "active" : ""
-      - classes += hasChildren ? " parent" : ""
-      - classes += article.isOpen ? " open" : ""
+      - classes       = article.active ? "active" : ""
+      - classes      += hasChildren ? " parent" : ""
+      - classes      += article.isOpen ? " open" : ""
+      - anchorClass   = hasChildren ? "trigger" : ""
       
       .nav-item(class="#{classes}")
-        a(href="#{article.href}")=article.title
+        a(href="#{article.href}" class="#{anchorClass}")=article.title
         if hasChildren
           .child-toggle
           +addChildren(article.articles)

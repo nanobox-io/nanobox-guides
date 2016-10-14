@@ -1,9 +1,12 @@
-title: Python
-href: /python
+title: Golang
+href: /golang
 articles:
-  - {href: /golang, title: Overview}
-  - {href: /golang/getting-started, title: Getting Started}
-  - {href: /golang/add-components, title: Add App Components}
-  - {href: /golang/deps, title: Dependency Management}
-  - {href: /golang/nodejs-npm, title: Using Node.js & npm}
-  - {href: /golang/config, title: Configure Golang}
+  - title: First Steps
+    articles:
+      - {href: /golang/getting-started, title: Getting Started}
+      - {href: /golang/add-components, title: Add App Components}
+      - {href: /golang/config, title: Configure Golang}
+  - title: Deps Management
+    articles:
+      - {href: /golang/deps, title: Dependency Management}
+      - {href: /golang/nodejs-npm, title: Using Node.js & npm}

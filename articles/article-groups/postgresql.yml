@@ -1,11 +1,12 @@
 title: PostgreSQL
 href: /postgresql
 articles:
-  - {href: /postgresql, title: Overview}
-  - {href: /postgresql/create, title: Create a PostgreSQL Database}
-  - {href: /postgresql/connect, title: Connect to PostgreSQL}
-  - {href: /postgresql/configure, title: PostgreSQL Config Options}
-  - title: Managing PostgreSQL Data
+  - title: Getting Started
+    articles:
+      - {href: /postgresql/create, title: Create a PostgreSQL Database}
+      - {href: /postgresql/connect, title: Connect to PostgreSQL}
+      - {href: /postgresql/configure, title: PostgreSQL Config Options}
+  - title: Managing Data
     articles:
       - {href: /postgresql/manage/local, title: Managing Local Data}
       - {href: /postgresql/manage/production, title: Managing Production Data}

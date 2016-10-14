@@ -1,11 +1,12 @@
 title: MongoDB
 href: /mongodb
 articles:
-  - {href: /mongodb, title: Overview}
-  - {href: /mongodb/create, title: Create a MongoDB Component}
-  - {href: /mongodb/connect, title: Connect to MongoDB}
-  - {href: '/mongodb/configure', title: MongoDB Config Options}
-  - title: Managing MongoDB Data
+  - title: Getting Started
+    articles:
+      - {href: /mongodb/create, title: Create a MongoDB Component}
+      - {href: /mongodb/connect, title: Connect to MongoDB}
+      - {href: '/mongodb/configure', title: MongoDB Config Options}
+  - title: Managing Mongo Data
     articles:
       - {href: /mongodb/manage/local, title: Managing Local Data}
       - {href: /mongodb/manage/production, title: Managing Production Data}
