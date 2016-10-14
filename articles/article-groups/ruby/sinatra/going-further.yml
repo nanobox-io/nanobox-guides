@@ -1,4 +1,5 @@
 title: Sinatra
+href: /ruby/sinatra
 articles:
   - {href: /ruby/sinatra/going-further/scale-your-app, title: Scale your App}
   - {href: /ruby/sinatra/going-further/debugging, title: Debugging}

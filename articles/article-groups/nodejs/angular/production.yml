@@ -1,4 +1,5 @@
 title: Angular
+href: /nodejs/angular
 articles:
   - {href: /nodejs/angular/production/configure-angular, title: Configure Angular}
   - {href: /nodejs/angular/production/stage-your-app, title: Stage your App}

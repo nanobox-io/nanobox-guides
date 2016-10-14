@@ -1,4 +1,5 @@
-title: Golang
+title: Python
+href: /python
 articles:
   - {href: /golang, title: Overview}
   - {href: /golang/getting-started, title: Getting Started}

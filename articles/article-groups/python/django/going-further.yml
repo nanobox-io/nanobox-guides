@@ -1,4 +1,5 @@
 title: Django
+href: /python/django
 articles:
   - {href: /python/django/going-further/scale-your-app, title: Scale your App}
   - {href: /python/django/going-further/debugging, title: Debugging}

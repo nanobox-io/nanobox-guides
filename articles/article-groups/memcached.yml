@@ -1,4 +1,5 @@
 title: Memcached
+href: /memcached
 articles:
   - {href: /memcached, title: Overview}
   - {href: /memcached/create, title: Create a Memcached Component}

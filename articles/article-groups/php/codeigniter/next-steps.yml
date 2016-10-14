@@ -1,4 +1,5 @@
 title: CodeIgniter
+href: /php/codeigniter
 articles:
   - {href: /php/codeigniter/next-steps/add-a-database, title: Add a Database}
   - {href: /php/codeigniter/going-further/local-evars, title: Local Environment Variables}

@@ -1,4 +1,5 @@
 title: MySQL
+href: /mysql
 articles:
   - {href: /mysql, title: Overview}
   - {href: /mysql/create, title: Create a MySQL Database}

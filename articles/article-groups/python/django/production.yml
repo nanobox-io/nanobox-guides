@@ -1,4 +1,5 @@
 title: Django
+href: /python/django
 articles:
   - {href: /python/django/production/configure-django, title: Configure Django}
   - {href: /python/django/production/stage-your-app, title: Stage your App}

@@ -1,4 +1,5 @@
 title: Rails
+href: /ruby/rails
 articles:
   - {href: /ruby/rails/production/configure-rails, title: Configure Rails}
   - {href: /ruby/rails/production/stage-your-app, title: Stage your App}

@@ -1,4 +1,5 @@
 title: Storage
+href: /storage
 articles:
   - {href: /storage, title: Overview}
   - {href: /storage/create, title: Create a Storage Component}

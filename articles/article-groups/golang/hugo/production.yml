@@ -1,4 +1,5 @@
 title: Hugo
+href: /golang/hugo
 articles:
   - {href: /golang/hugo/production/configure-hugo, title: Configure Hugo}
   - {href: /golang/hugo/production/stage-your-app, title: Stage your App}

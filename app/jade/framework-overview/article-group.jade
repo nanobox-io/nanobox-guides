@@ -1,6 +1,6 @@
 if !isChild
   .group(id="group#{info.index}")
-    .title= info.title
+    a.title(href="#{href}")= info.title
     each article in info.data.articles
       a(href="#{article.href}")= article.title
 else

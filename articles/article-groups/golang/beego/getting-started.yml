@@ -1,4 +1,5 @@
 title: Beego
+href: /golang/beego
 articles:
   - {href: /golang/beego/getting-started/install-nanobox, title: Install Nanobox}
   - {href: /golang/beego/getting-started/from-scratch, title: Beego From Scratch}

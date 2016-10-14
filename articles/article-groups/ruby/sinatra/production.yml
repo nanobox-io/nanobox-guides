@@ -1,4 +1,5 @@
 title: Sinatra
+href: /ruby/sinatra
 articles:
   - {href: /ruby/sinatra/production/configure-sinatra, title: Configure Sinatra}
   - {href: /ruby/sinatra/production/stage-your-app, title: Stage your App}

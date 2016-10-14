@@ -1,4 +1,5 @@
 title: Hugo
+href: /golang/hugo
 articles:
   - {href: /golang/hugo/going-further/scale-your-app, title: Scale your App}
   - {href: /golang/hugo/going-further/debugging, title: Debugging}

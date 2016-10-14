@@ -1,4 +1,5 @@
 title: Angular
+href: /nodejs/angular
 articles:
   - {href: /nodejs/angular/going-further/scale-your-app, title: Scale your App}
   - {href: /nodejs/angular/going-further/debugging, title: Debugging}

@@ -1,4 +1,5 @@
 title: Express
+href: /nodejs/express
 articles:
   - {href: /nodejs/express/production/configure-express, title: Configure Express}
   - {href: /nodejs/express/production/stage-your-app, title: Stage your App}

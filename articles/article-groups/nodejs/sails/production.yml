@@ -1,4 +1,5 @@
 title: Sails
+href: /nodejs/sails
 articles:
   - {href: /nodejs/sails/production/configure-sails, title: Configure Sails}
   - {href: /nodejs/sails/production/stage-your-app, title: Stage your App}

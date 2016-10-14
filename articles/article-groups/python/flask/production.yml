@@ -1,4 +1,5 @@
 title: Flask
+href: /python/flask
 articles:
   - {href: /python/flask/production/configure-flask, title: Configure Flask}
   - {href: /python/flask/production/stage-your-app, title: Stage your App}

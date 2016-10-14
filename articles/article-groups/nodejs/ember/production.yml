@@ -1,4 +1,5 @@
 title: Ember
+href: /nodejs/ember
 articles:
   - {href: /nodejs/ember/production/configure-ember, title: Configure Ember}
   - {href: /nodejs/ember/production/stage-your-app, title: Stage your App}

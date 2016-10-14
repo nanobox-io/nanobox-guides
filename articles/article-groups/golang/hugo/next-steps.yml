@@ -1,4 +1,5 @@
 title: Hugo
+href: /golang/hugo
 articles:
   - {href: /golang/hugo/next-steps/add-a-database, title: Add a Database}
   - {href: /golang/hugo/going-further/local-evars, title: Local Environment Variables}

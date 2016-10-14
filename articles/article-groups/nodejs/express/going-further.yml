@@ -1,4 +1,5 @@
 title: Express
+href: /nodejs/express
 articles:
   - {href: /nodejs/express/going-further/scale-your-app, title: Scale your App}
   - {href: /nodejs/express/going-further/debugging, title: Debugging}

@@ -1,4 +1,5 @@
 title: Beego
+href: /golang/beego
 articles:
   - {href: /golang/beego/production/configure-beego, title: Configure Beego}
   - {href: /golang/beego/production/stage-your-app, title: Stage your App}

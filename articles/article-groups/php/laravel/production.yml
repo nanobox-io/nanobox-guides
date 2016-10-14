@@ -1,4 +1,5 @@
 title: Laravel
+href: /php/laravel
 articles:
   - {href: /php/laravel/production/configure-laravel, title: Configure Laravel}
   - {href: /php/laravel/production/stage-your-app, title: Stage your App}

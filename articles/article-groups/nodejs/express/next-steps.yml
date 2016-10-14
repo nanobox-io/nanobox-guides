@@ -1,4 +1,5 @@
 title: Express
+href: /nodejs/express
 articles:
   - {href: /nodejs/express/next-steps/add-a-database, title: Add a Database}
   - {href: /nodejs/express/going-further/local-evars, title: Local Environment Variables}

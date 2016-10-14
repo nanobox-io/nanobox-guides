@@ -1,4 +1,5 @@
 title: Beego
+href: /golang/beego
 articles:
   - {href: /golang/beego/next-steps/add-a-database, title: Add a Database}
   - {href: /golang/beego/going-further/local-evars, title: Local Environment Variables}

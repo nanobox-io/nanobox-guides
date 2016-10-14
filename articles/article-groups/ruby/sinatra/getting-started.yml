@@ -1,4 +1,5 @@
 title: Sinatra
+href: /ruby/sinatra
 articles:
   - {href: /ruby/sinatra/getting-started/install-nanobox, title: Install Nanobox}
   - {href: /ruby/sinatra/getting-started/from-scratch, title: Sinatra From Scratch}

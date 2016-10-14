@@ -1,4 +1,5 @@
 title: Rails
+href: /ruby/rails
 articles:
   - {href: /ruby/rails/going-further/scale-your-app, title: Scale your App}
   - {href: /ruby/rails/going-further/debugging, title: Debugging}

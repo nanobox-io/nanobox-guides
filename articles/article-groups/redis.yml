@@ -1,4 +1,5 @@
 title: Redis
+href: /redis
 articles:
   - {href: /redis, title: Overview}
   - {href: /redis/create, title: Create a Redis Database}

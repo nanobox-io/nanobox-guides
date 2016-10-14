@@ -1,4 +1,5 @@
 title: Sails
+href: /nodejs/sails
 articles:
   - {href: /nodejs/sails/getting-started/install-nanobox, title: Install Nanobox}
   - {href: /nodejs/sails/getting-started/from-scratch, title: Sails From Scratch}

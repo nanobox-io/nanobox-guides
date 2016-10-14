@@ -1,4 +1,5 @@
 title: PostgreSQL
+href: /postgresql
 articles:
   - {href: /postgresql, title: Overview}
   - {href: /postgresql/create, title: Create a PostgreSQL Database}

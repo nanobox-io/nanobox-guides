@@ -1,4 +1,5 @@
 title: Sinatra
+href: /ruby/sinatra
 articles:
   - {href: /ruby/sinatra/next-steps/add-a-database, title: Add a Database}
   - {href: /ruby/sinatra/going-further/local-evars, title: Local Environment Variables}
