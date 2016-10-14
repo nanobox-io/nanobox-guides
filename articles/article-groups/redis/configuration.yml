@@ -1,2 +1,2 @@
 articles:
-  - {href: /redis/configure.html, title: Redis Config Options}
+  - {href: /redis/configure, title: Redis Config Options}

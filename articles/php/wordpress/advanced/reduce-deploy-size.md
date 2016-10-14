@@ -17,7 +17,7 @@ wp-content/uploads/
 ```
 
 #### wp-content/uploads/
-Because `wp-content/uploads` is a [network directory](/php/wordpress/advanced/boxfile-explained.html#network_dirs)
+Because `wp-content/uploads` is a [network directory](/php/wordpress/advanced/boxfile-explained/#network_dirs)
 
 #### Version Control Files
 Version control histories aren't necessary in deploy packages and can substantially increase the size of your deploy. Feel free to only include the files applicable to the version control software you're using.

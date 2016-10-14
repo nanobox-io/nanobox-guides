@@ -6,7 +6,7 @@ Installing and updating themes requires modifying the filesystem, which is why i
 
 ## Run WordPress in Dev
 If you walked through the [Setting Up WordPress on Nanobox](/php/wordpress/getting-started) guide, that you've already created a dev environment in your local Nanobox virtual machine (VM). If you don't have a dev environment setup, the instructions are outlined in the
-[Up and Running](/php/wordpress/getting-started.html#up-and-running) section of that guide.
+[Up and Running](/php/wordpress/getting-started/#up-and-running) section of that guide.
 
 ### Start Your WordPress App in Dev
 The quickest way to start your app in dev is to run:

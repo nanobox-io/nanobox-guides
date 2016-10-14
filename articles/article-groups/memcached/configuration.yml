@@ -1,2 +1,2 @@
 articles:
-  - {href: /memcached/configure.html, title: Memcached Config Options}
+  - {href: /memcached/configure, title: Memcached Config Options}

@@ -11,7 +11,7 @@ data.mysql:
 
 
 ## Configure MySQL
-The MySQL image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [MySQL Config Options guide](configure.html).
+The MySQL image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [MySQL Config Options guide](/mysql/configure).
 
 ```yaml
 data.mysql:

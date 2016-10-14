@@ -11,7 +11,7 @@ data.mongodb:
 
 
 ## Configure MongoDB
-The MongoDB image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [MongoDB Config Options guide](configure.html).
+The MongoDB image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [MongoDB Config Options guide](/mongodb/configure).
 
 ```yaml
 data.mongodb:

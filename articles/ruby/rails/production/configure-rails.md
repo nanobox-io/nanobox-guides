@@ -55,5 +55,5 @@ Visit the app from your favorite browser at: `rails.nanobox.sim`
 ## Now what?
 With an app running in a sim environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Launch your app](launch-your-app.html)
-* [Back to rails overview](overview.html)
+* [Launch your App](/ruby/rails/launch-your-app)
+* [Back to Rails overview](/ruby/rails/)

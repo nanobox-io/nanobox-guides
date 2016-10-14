@@ -11,7 +11,7 @@ data.redis:
 
 
 ## Configure Redis
-The Redis image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [Redis Config Options guide](configure.html).
+The Redis image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [Redis Config Options guide](/redis/configure).
 
 ```yaml
 data.redis:

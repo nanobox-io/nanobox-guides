@@ -11,7 +11,7 @@ data.postgres:
 
 
 ## Configure PostgreSQL
-The PostgreSQL image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [PostgreSQL Config Options guide](configure.html).
+The PostgreSQL image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [PostgreSQL Config Options guide](/postgresql/configure).
 
 ```yaml
 data.postgres:

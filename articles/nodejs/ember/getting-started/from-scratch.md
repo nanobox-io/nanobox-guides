@@ -82,7 +82,7 @@ Visit the app from your favorite browser at: `ember.nanobox.dev:8080`
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Connect a database](connect-a-database.html)
-* [Javascript Runtime](javascript-runtime.html)
-* [Local Environment Variables](local-evars.html)
-* [Back to ember overview](ember.html)
+* [Connect a database](/nodejs/ember/connect-a-database)
+* [Javascript Runtime](/nodejs/ember/javascript-runtime)
+* [Local Environment Variables](/nodejs/ember/local-evars)
+* [Back to ember overview](/nodejs/ember)

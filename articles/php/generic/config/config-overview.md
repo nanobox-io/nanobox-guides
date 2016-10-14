@@ -158,23 +158,23 @@ code.build:
 
 #### Quick Links
 **General PHP Settings**  
-[PHP Settings](php-settings.html)  
-[Start Commands](start-commands.html)   
-[Extensions](extensions.html)  
+[PHP Settings](/php/config/php-settings)  
+[Start Commands](/php/config/start-commands)   
+[Extensions](/php/config/extensions)  
 
 **Webserver Settings**  
-[General Webserver Settings](webserver/webserver-settings.html)  
-[Apache Settings](webserver/apache-settings.html)  
-[Nginx Settings](webserver/nginx-settings.html)  
-[Built-In Settings](webserver/builtin-settings.html)  
+[General Webserver Settings](/php/config/webserver/webserver-settings)  
+[Apache Settings](/php/config/webserver/apache-settings)  
+[Nginx Settings](/php/config/webserver/nginx-settings)  
+[Built-In Settings](/php/config/webserver/builtin-settings)  
 
 **Advanced PHP Settings**  
-[APC Settings](advanced/apc-settings.html)  
-[eAccelerator Settings](advanced/eaccelerator-settings.html)  
-[GeoIP Settings](advanced/geoip-settings.html)  
-[Memcache Settings](advanced/memcache-settings.html)  
-[Mongo Settings](advanced/mongo-settings.html)  
-[New Relic Settings](advanced/new-relic-settings.html)  
-[Opcache Settings](advanced/opcache-settings.html)  
-[PHP-FPM Settings](advanced/php-fpm-settings.html)  
-[XCache Settings](advanced/xcache-settings.html)  
+[APC Settings](/php/config/advanced/apc-settings)  
+[eAccelerator Settings](/php/config/advanced/eaccelerator-settings)  
+[GeoIP Settings](/php/config/advanced/geoip-settings)  
+[Memcache Settings](/php/config/advanced/memcache-settings)  
+[Mongo Settings](/php/config/advanced/mongo-settings)  
+[New Relic Settings](/php/config/advanced/new-relic-settings)  
+[Opcache Settings](/php/config/advanced/opcache-settings)  
+[PHP-FPM Settings](/php/config/advanced/php-fpm-settings)  
+[XCache Settings](/php/config/advanced/xcache-settings)  

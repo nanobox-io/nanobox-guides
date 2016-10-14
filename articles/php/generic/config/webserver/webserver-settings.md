@@ -15,7 +15,7 @@ code.build:
     webserver: 'apache'
 ```
 
-*Webserver-specific settings are available in the [Apache Settings](apache-settings.html), [Nginx Settings](nginx-settings.html), & [Built-In PHP Web Server Settings](builtin-settings.html) guides.*
+*Webserver-specific settings are available in the [Apache Settings](/php/config/webserver/apache-settings), [Nginx Settings](/php/config/webserver/nginx-settings), & [Built-In PHP Web Server Settings](/php/config/webserver/builtin-settings) guides.*
 
 ### document_root
 The public root of your web application. For instance, if you like to house your app in `/public` for security or organizational purposes, you can specify that here. The default is the `/`.

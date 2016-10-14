@@ -34,7 +34,7 @@ nanobox link app-name
 ```
 
 ### Set Auth Key & Salt Evars
-WordPress uses authentication keys and salts to securely create sessions. If you've updated your wp-config.php to use the configuration specified [here](/php/wordpress/getting-started.html#setup-auth-keys-salts), you'll need to set those environment variables in your production app.
+WordPress uses authentication keys and salts to securely create sessions. If you've updated your wp-config.php to use the configuration specified [here](/php/wordpress/getting-started/#setup-auth-keys-salts), you'll need to set those environment variables in your production app.
 
 Visit [WordPress' Auth Key and Salt API](https://api.wordpress.org/secret-key/1.1/salt/) to generate random values for each. Pass each key-value pair into your Nanobox app using the following command:
 
@@ -55,10 +55,10 @@ Your app's build package will be deployed to your app on Nanobox and all your ap
 ### Import Data & Uploads
 With your production app up and running, you can import your database and uploads if necessary.
 
-[Importing Data](/php/wordpress/data-storage/importing-data.html#importing-data-into-a-production-database)  
-[Importing Uploads](/wordpress/data-storage/importing-uploads.html)
+[Importing Data](/php/wordpress/data-storage/importing-data/#importing-data-into-a-production-database)  
+[Importing Uploads](/wordpress/data-storage/importing-uploads/)
 
-*If importing data, be sure to [update your baseurl in your database](/php/wordpress/data-storage/importing-data.html#update-your-wordpress-baseurl).*
+*If importing data, be sure to [update your baseurl in your database](/php/wordpress/data-storage/importing-data/#update-your-wordpress-baseurl).*
 
 ## Enjoy Your Live WordPress App
 Congratulations. Your WordPress app is now live. The here's a few next steps you may want to go through:

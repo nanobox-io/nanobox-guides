@@ -41,5 +41,3 @@ With a production app launched, what's next? Think about what else your applicat
 * Pointing your domain
 * Add SSL/TLS encryption
 * Add custom environment variables
-* [Next Steps](overview.html)
-* [Back to rails overview](overview.html)

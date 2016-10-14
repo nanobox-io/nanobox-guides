@@ -37,7 +37,7 @@ start-apache
 ## Disable Bytecode Cachers
 Bytecode cachers (APC, EAccelerator, xCache and OPcache) provide significant performance boosts, but you don't want them enabled while in development. They will cache your PHP responses and pull future responses only from the cache. This will prevent changes to files from propagating to your running app.
 
-The PHP engines allows you to remove certain extensions while in dev using the [`dev_extenesions`](/php/config/php-settings.html#dev_extensions) and [`dev_zend_extenesions`](/php/config/php-settings.html#dev_zend_extensions) options.
+The PHP engines allows you to remove certain extensions while in dev using the [`dev_extenesions`](/php/config/php-settings/#dev_extensions) and [`dev_zend_extenesions`](/php/config/php-settings/#dev_zend_extensions) options.
 
 ```yaml
 code.build:

@@ -1,2 +1,2 @@
 articles:
-  - {href: /postgresql/configure.html, title: PostgreSQL Config Options}
+  - {href: /postgresql/configure, title: PostgreSQL Config Options}
