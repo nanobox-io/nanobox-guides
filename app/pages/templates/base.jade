@@ -7,9 +7,12 @@ doctype html
 html(lang="en")
   
   head
-    title Nanobox
-    meta( name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" )
-
+    block configParams
+    title= title
+    meta( name="viewport"    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" )
+    meta( name="description" content="#{description}")
+    meta( name="keywords"    content="#{keywords}")
+      
     // build:css /style.css
     link(href='/css/shared-svg.css' rel='stylesheet' type='text/css')
     link(href='/css/hexes-svg.css' rel='stylesheet' type='text/css')
