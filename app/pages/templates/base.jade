@@ -1,13 +1,13 @@
-mixin link(href, name)
-  - var xtra = isProduction ? '.html' : '.html'
-  a(href="#{href}#{xtra}")&attributes(attributes)= name
-    block
-
 doctype html
 html(lang="en")
   
   head
     block configParams
+    -
+      title       = typeof title === "undefined"       ? "Nanobox" : title
+      keywords    = typeof keywords === "undefined"    ? "paas,app hosting" : keywords
+      description = typeof description === "undefined" ? "nanobox" : description
+      
     title= title
     meta( name="viewport"    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" )
     meta( name="description" content="#{description}")
