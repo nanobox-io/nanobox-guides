@@ -15,80 +15,81 @@ block content
       .title
         img.shadow-icon(data-src="map")
         .txt Guides : Choose A Language
-      .slide-path
-        .languages
-          .row
-            a.hex.language(data-language="python")
-              .icon
-                img.shadow-icon(data-src="hex-python" scalable="true") 
-              .txt Python
-            a.hex.language(data-language="node")
-              .icon
-                img.shadow-icon(data-src="hex-node" scalable="true") 
-              .txt Nodejs
-            a.hex.language(data-language="ruby")
-              .icon
-                img.shadow-icon(data-src="hex-ruby" scalable="true") 
-              .txt Ruby  
-            a.hex.language(data-language="golang")
-              .icon
-                img.shadow-icon(data-src="hex-golang" scalable="true") 
-              .txt Go
-            a.hex.language(data-language="php")
-              .icon
-                img.shadow-icon(data-src="hex-php" scalable="true") 
-              .txt PHP
-          
-          .row
-            a.hex.language(data-language="javascript")
-              .icon
-                img.shadow-icon(data-src="hex-javascript" scalable="true") 
-                .txt Javascript
-            a.hex.language(data-language="elixir" href="/elixir")
-              .icon
-                img.shadow-icon(data-src="hex-elixir" scalable="true") 
-                .txt Elixir
-            a.hex.new.language(data-language="java" href="/java")
-              .icon
-                img.shadow-icon(data-src="hex-java" scalable="true") 
-              .txt Java
-            a.hex.new.language(data-language="scala" href="/scala")
-              .icon
-                img.shadow-icon(data-src="hex-scala" scalable="true") 
-              .txt Scala
-            a.hex.new.language(data-language="net" href="/net")
-              .icon
-                img.shadow-icon(data-src="hex-net" scalable="true") 
-              .txt .NET
+      .languages
+        a.hex.language(data-language="python" href="/python")
+          .icon
+            img.shadow-icon(data-src="hex-python" scalable="true") 
+          .txt Python
+        a.hex.language(data-language="node" href="/node")
+          .icon
+            img.shadow-icon(data-src="hex-node" scalable="true") 
+          .txt Nodejs
+        a.hex.language(data-language="ruby" href="/ruby")
+          .icon
+            img.shadow-icon(data-src="hex-ruby" scalable="true") 
+          .txt Ruby  
+        a.hex.language(data-language="golang" href="/golang")
+          .icon
+            img.shadow-icon(data-src="hex-golang" scalable="true") 
+          .txt Go
+        a.hex.language(data-language="php" href="/php")
+          .icon
+            img.shadow-icon(data-src="hex-php" scalable="true") 
+          .txt PHP
+      
+        a.hex.language(data-language="javascript" href="/javascript")
+          .icon
+            img.shadow-icon(data-src="hex-javascript" scalable="true") 
+          .txt Javascript
+        a.hex.language(data-language="elixir" href="/elixir")
+          .icon
+            img.shadow-icon(data-src="hex-elixir" scalable="true") 
+          .txt Elixir
+        a.hex.new.language(data-language="java" href="/java")
+          .icon
+            img.shadow-icon(data-src="hex-java" scalable="true") 
+          .txt Java
+        a.hex.new.language(data-language="scala" href="/scala")
+          .icon
+            img.shadow-icon(data-src="hex-scala" scalable="true") 
+          .txt Scala
+        a.hex.new.language(data-language="net" href="/net")
+          .icon
+            img.shadow-icon(data-src="hex-net" scalable="true") 
+          .txt .NET
 
-          .row
-            a.hex.new.language(data-language="rust" href="/rust")
-              .icon
-                img.shadow-icon(data-src="hex-rust" scalable="true") 
-              .txt Rust    
-            a.hex.language(data-language="erlang" href="/erlang")
-              .icon
-                img.shadow-icon(data-src="hex-erlang" scalable="true") 
-                .txt Erlang
-            a.hex.new.language(data-language="perl" href="/perl")
-              .icon
-                img.shadow-icon(data-src="hex-perl" scalable="true") 
-              .txt Perl
-            a.hex.new.language(data-language="clojure" href="/clojure")
-              .icon
-                img.shadow-icon(data-src="hex-clojure" scalable="true") 
-              .txt Clojure
-            //- a.hex.language(data-language="mono")
-            //-   .icon
-            //-     img.shadow-icon(data-src="hex-mono" scalable="true") 
-            //-   .txt Mono
-            a.hex.new.language(data-language="c" href="/c")
-              .icon
-                img.shadow-icon(data-src="hex-c" scalable="true") 
-              .txt C
+        a.hex.new.language(data-language="rust" href="/rust")
+          .icon
+            img.shadow-icon(data-src="hex-rust" scalable="true") 
+          .txt Rust    
+        a.hex.language(data-language="erlang" href="/erlang")
+          .icon
+            img.shadow-icon(data-src="hex-erlang" scalable="true") 
+            .txt Erlang
+        a.hex.new.language(data-language="perl" href="/perl")
+          .icon
+            img.shadow-icon(data-src="hex-perl" scalable="true") 
+          .txt Perl
+        a.hex.new.language(data-language="clojure" href="/clojure")
+          .icon
+            img.shadow-icon(data-src="hex-clojure" scalable="true") 
+          .txt Clojure
+        //- a.hex.language(data-language="mono")
+        //-   .icon
+        //-     img.shadow-icon(data-src="hex-mono" scalable="true") 
+        //-   .txt Mono
+        a.hex.new.language(data-language="c" href="/c")
+          .icon
+            img.shadow-icon(data-src="hex-c" scalable="true") 
+          .txt C
 
-        .frameworks.hidden  
-            
+      .other-links
+        a(href="//docs.nanobox.io")
+          img.shadow-icon(data-src="docs-hand")
+          .txt Comprehensive<br/>Documentation
+        a(href="/components")
+          img.shadow-icon(data-src="services-bundle")
+          .txt View all Database and<br/>Code Components
           //- a.direction-link.more(href="#")
           //-   .txt View More
           //-   img.shadow-icon(data-src="right-arrow")

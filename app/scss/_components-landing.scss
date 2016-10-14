@@ -1,0 +1,11 @@
+.article-page.landing.services
+           {
+  .main    {background: none; margin: 0 auto;  }
+  .title   {display:flex; justify-content: space-between; align-items: baseline; border-bottom:solid 1px #ACBDC8; margin-bottom:10px;
+    .full  {text-transform:uppercase; font-weight:$bold; color: $navy;  font-size: 25px; letter-spacing: 0.06em; }
+    .sub   {font-style:italic; color:#64879C; font-size:14px; }
+  }
+  .cluster {display:flex; flex-wrap:wrap; background: #EBEFF2; padding:30px 0 20px; margin-bottom:40px;
+    a      {width:20%; padding-bottom:20px; }
+  }
+}

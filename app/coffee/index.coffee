@@ -1,6 +1,7 @@
 class IndexPage
 
   constructor: () ->
+    return
     @$slidePath  = $ '.slide-path'
     @$languages  = $ '.languages'
     @$frameworks = $ '.frameworks'
