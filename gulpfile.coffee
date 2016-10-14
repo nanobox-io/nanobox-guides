@@ -16,6 +16,7 @@ livereload   = require 'gulp-livereload'
 marked       = require 'marked'
 minifyCss    = require 'gulp-minify-css'
 minifyHtml   = require 'gulp-minify-html'
+mustache     = require 'gulp-mustache'
 open         = require "gulp-open"
 plumber      = require 'gulp-plumber'
 rename       = require 'gulp-rename'
@@ -244,6 +245,16 @@ compileFiles = (doWatch=false, cb) ->
       createWatcher(item, params)
     else
       item.meth.apply null, params
+
+
+# ----------- GENERATOR ----------- #
+gulp.task 'new-framework', ()->
+  [language, framework] = gutil.env.path.split "/"
+  gulp.src 'templates/framework/**/*.jade'
+    .pipe mustache({language:language, framework:framework})
+    .pipe gulp.dest("app/pages/#{language}/#{framework}")
+    .on 'end', process.exit
+
 
 
 # ----------- MAIN ----------- #
