@@ -30,7 +30,6 @@ Specifies which version of MongoDB to use. The following version(s) are availabl
 
 - 2.6
 - 3.0
-- 3.2
 
 **Note:** Due to version compatibility constraints, MongoDB versions cannot be changed after the service is created. To use a different version, you'll have to create a new MongoDB service and manually migrate data.
 
