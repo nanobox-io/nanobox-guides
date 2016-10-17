@@ -4,9 +4,8 @@ Memcached components are configured in your `boxfile.yml`. All available configu
 
 ```yaml
 data.memcached:
-  image: nanobox/memcached
+  image: nanobox/memcached:1.4
   config:
-    version: 1.4
     return_error_on_memory_exhausted: false
     max_connections: 1024
     chunk_size_growth_factor: 1.25
@@ -17,19 +16,19 @@ data.memcached:
     binding_protocol: 'auto'
 ```
 
-### version
+### Memcached Version
 When configuring a Memcached component in your Boxfile, you can specify which version to use. The following version(s) are available:
 
-- 1.4
+- 1.4 *(Default)*
+
+It's recommended that you specify your Memcached version. Default versions can change and may prevent your service from starting up in new builds.
 
 **Note:** Due to version compatibility constraints, memcached versions cannot be changed after the component is created. To use a different version, you'll have to create a new Memcached component.
 
 ```yaml
 # default setting
 data.memcached:
-  image: nanobox/memcached
-  config:
-    version: 1.4
+  image: nanobox/memcached:1.4
 ```
 
 #### return\_error\_on\_memory\_exhausted

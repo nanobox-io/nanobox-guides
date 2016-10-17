@@ -14,9 +14,8 @@ When config changes are made to Redis in production, a new node is provisioned a
 ## Config Options
 ```yaml
 data.redis:
-  image: nanobox/redis
+  image: nanobox/redis:3.0
   config:
-    version: 2.8
     tcp_keepalive: 60
     databases: 16
     stop_writes_on_bgsave_error: 'yes'
@@ -50,22 +49,21 @@ data.redis:
     aof_rewrite_incremental_fsync: 'yes'
 ```
 
-### version
-Specifies which Redis version to use. The following versions are available:
+### Redis Version
+To use a specific version of Redis, you can append the version number to your `image` with a `:`. The following versions are available:
 
 - 2.6
 - 2.8
-- 3.0
+- 3.0 *(Default)*
 - 3.2
+
+It's recommended that you specify your Redis version. Default versions can change and may prevent your service from starting up in new builds.
 
 **Note:** Due to version compatibility constraints, Redis versions cannot be changed after the service is created. To use a different version, you'll have to create a new Redis component.
 
 ```yaml
-# default setting
 data.redis:
-  image: nanobox/redis
-  config:
-    version: 3.0
+  image: nanobox/redis:3.0
 ```
 
 ### tcp\_keepalive

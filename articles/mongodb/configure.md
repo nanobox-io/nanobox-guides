@@ -14,9 +14,8 @@ When config changes are made to a production database, a new node is provisioned
 ## Config Options
 ```yaml
 data.db:
-  image: nanobox/mongodb
+  image: nanobox/mongodb:3.0
   config:
-    version: 3.0
     objcheck: true
     log_verbosity: 'v'
     directoryperdb: true
@@ -25,20 +24,19 @@ data.db:
     noscripting: false
 ```
 
-### version
-Specifies which version of MongoDB to use. The following version(s) are available:
+### MongoDB Version
+To use a specific version of MongoDB, you can append the version number to your `image` with a `:`. The following versions are available:
 
 - 2.6
-- 3.0
+- 3.0 *(Default)*
+
+It's recommended that you specify your MongoDB version. Default versions can change and may prevent your service from starting up in new builds.
 
 **Note:** Due to version compatibility constraints, MongoDB versions cannot be changed after the service is created. To use a different version, you'll have to create a new MongoDB service and manually migrate data.
 
 ```yaml
-# default setting
 data.db:
-  image: nanobox/mongodb
-  config:
-    version: 3.0
+  image: nanobox/mongodb:3.0
 ```
 
 ### objcheck
