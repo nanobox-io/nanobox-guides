@@ -30,6 +30,8 @@ wrap         = require 'gulp-wrap'
 shadow       = require 'gulp-shadow-icons'
 wait         = require 'gulp-wait'
 
+marked.setOptions
+  smartypants: true
 pug.filters.md = marked
 livereload.listen()
 
