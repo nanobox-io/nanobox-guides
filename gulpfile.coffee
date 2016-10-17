@@ -41,7 +41,7 @@ foreach      = require 'gulp-foreach'
 # Paths to source files
 
 articlePath       = 'articles/**/*.md'
-jadePath          = 'app/pages/**/*.jade'
+jadePath          = 'app/pages'
 templatePath      = 'app/jade/**/*.jade'
 cssPath           = 'app/scss/**/*.scss'
 cssStagePath      = 'stage/stage.scss'
@@ -65,14 +65,20 @@ parseSVG = (cb)->
     .pipe gulp.dest('./server/')
     .on('end', cb)
 
-html = (cb)->
-  gulp.src jadePath
+html = (cb, src)->
+  src    = if !src? then "" else "#{src}/"
+  source = "#{jadePath}/#{src}**/*.jade"
+  gulp.src source
     .pipe jade({jade:pug, basedir:'./' }).on('error', (err)-> console.log(err); this.emit('end') )
-    .pipe gulp.dest('./server/')
+    .pipe gulp.dest("./server/#{src}")
     .on 'end', ()->
       livereload.reload()
-      console.log "           (Reloaded all html files)"
-      cb()
+      if !src?
+        console.log "           (Reloaded all html files)"
+      else
+        console.log "           (Only reloaded files matched by : #{source})"
+      if cb?
+        cb()
 
 jadeTemplates = (cb)->
   gulp.src( templatePath )
@@ -216,23 +222,40 @@ deleteUneededFiles = ()->
       "./rel/**/js",        "!./rel/js"])
     .pipe rimrafgulp()
 
+markdownChange = (file)->
+  path = file.path.split("/")
+  path.pop()
+  path.shift()
+  path.shift()
+  path.shift()
+  # Find the deepest matching folder with jaded files to recompile
+  for i in [path.length..0]
+    testPath = path.slice(0, i).join("/")
+    try
+      # If this directory exists in ./app/pages, trigger a rebuild on all the jade files in that dir
+      if fs.lstatSync("app/pages/#{testPath}").isDirectory()
+        html null, testPath
+        return
+    catch e
+
+
 compileFiles = (doWatch=false, cb) ->
   count      = 0
   onComplete = ()=>
     if ++count == ar.length then cb();
   ar         = [
-    {meth:js,            glob:coffeePath, dontLiveReload:true}
-    {meth:css,           glob:cssPath}
-    {meth:miscJs,        glob:miscJsPath}
-    {meth:jadeTemplates, glob:templatePath}
-    {meth:html,          glob:[articlePath, jadePath], dontLiveReload:true}
-    {meth:copyYaml,      glob:yamlPath, dontLiveReload:true}
-    {meth:parseSVG,      glob:svgPath}
-    {meth:copyImages,    glob:assetPath}
+    {meth:js,             glob:coffeePath, dontLiveReload:true}
+    {meth:css,            glob:cssPath}
+    {meth:miscJs,         glob:miscJsPath}
+    {meth:jadeTemplates,  glob:templatePath}
+    {meth:html,           glob:jadePath, dontLiveReload:true}
+    {meth:copyYaml,       glob:yamlPath, dontLiveReload:true}
+    {meth:parseSVG,       glob:svgPath}
+    {meth:copyImages,     glob:assetPath}
   ]
 
-  # createWatcher = (item, params)-> watch( { glob:item.glob }, => item.meth.apply(null, ->).pipe( livereload() ) )
-
+  # Create a custom watcher for markdown files
+  gulp.watch(articlePath).on 'change', markdownChange
 
   createWatcher = (item, params)->
     item.meth.apply(null, params)
@@ -248,6 +271,9 @@ compileFiles = (doWatch=false, cb) ->
     else
       item.meth.apply null, params
 
+
+gulp.task 'tester', ()->
+  gulp.watch(articlePath).on 'change', markdownChange
 
 # ----------- GENERATOR ----------- #
 
