@@ -14,9 +14,8 @@ When config changes are made to a production database, a new node is provisioned
 ## Config Options
 ```yaml
 data.mysql:
-  image: nanobox/mysql
+  image: nanobox/mysql:5.6
   config:
-    version: 5.5
     plugins:
       - federated
       - audit_log
@@ -37,20 +36,20 @@ data.mysql:
     ft_stopword_file: ' '
 ```  
 
-### version
-When configuring MySQL in your Boxfile, you can define which of the following versions you'd like to use.
+### MySQL Version
+To use a specific version of MySQL, you can append the version number to your `image` with a `:`. The following versions are available:
 
 - 5.5
-- 5.6
+- 5.6 *(Default)*
+
+It's recommended that you specify your MySQL version. Default versions can change and may prevent your service from starting up in new builds.
 
 **Note:** Due to version compatibility constraints, MySQL versions cannot be changed after the service is created. To use a different version, you'll have to create a new MySQL service and manually migrate data.
 
 ```yaml
 # default setting
 data.mysql:
-  image: nanobox/mysql
-  config:
-    version: 5.6
+  image: nanobox/mysql:5.6
 ```
 
 ### plugins

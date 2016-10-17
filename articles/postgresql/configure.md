@@ -2,21 +2,20 @@
 
 PostgreSQL components are configured in your `boxfile.yml`. All available configuration options are outlined below.
 
-### version
-Specifies which Postgres version to use. The following version(s) are available:
+### Postgres Version
+To use a specific version of Postgres, you can append the version number to your `image` with a `:`. The following versions are available:
 
 - 9.3
-- 9.4 *(default)*
-- 9.5
+- 9.4
+- 9.5 *(Default)*
+
+It's recommended that you specify your Postgres version. Default versions can change and may prevent your service from starting up in new builds.
 
 **Note:** PostgreSQL versions cannot be changed after the service is created. To use a different version, you'll have to create a new PostgreSQL component and manually migrate data.
 
 ```yaml
-# default setting
 data.db:
-  image: nanobox/postgresql
-  config:
-    version: 9.4
+  image: nanobox/postgresql:9.4
 ```
 
 ### Request PostgreSQL boxfile.yml Configs
