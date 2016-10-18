@@ -3,7 +3,7 @@
 Using your own domain on your app is really simple and can be done by either adding an A-Record or CNAME to your DNS zone file. The pros and cons of using each method are outlined [Using Custom Domains documentation](https://docs.nanobox.io/domains-networking/using-custom-domains/).
 
 ## Using an A-Record
-A-Records are used to point your domain to a specific IP address. If you choose to use this method, you need to point your domain to the IP of the server that houses your app's [load-balancer](/production-management/platform-components/#load-balancer). This IP can be found in your dashboard under Network > DNS.
+A-Records are used to point your domain to a specific IP address. If you choose to use this method, you need to point your domain to the IP of the server that houses your app's [load-balancer](https://docs.nanobox.io/production-management/platform-components/#load-balancer). This IP can be found in your dashboard under Network > DNS.
 
 ![Load-Balancer IP](/assets/shared/point-your-domain.png)
 
