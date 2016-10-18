@@ -27,10 +27,3 @@ nanobox link app-name
 # deploy to production
 nanobox deploy
 ```
-
-## Now what?
-With a production app launched, what's next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
-
-* [Point your Domain](/production/point-your-domain)
-* [SSL/TLS Encryption](/production/encryption)
-* [Debugging your app](/going-further/debugging)

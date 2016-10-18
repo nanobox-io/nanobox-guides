@@ -63,6 +63,39 @@ code.build:
     - bundle exec rake assets:precompile
 ```
 
+## Migrate Data
+The last step is to prepare any databases you might need. Just as you might `rake db:setup` locally, we'll need to have nanobox do that with each deploy incase you're modifying data with migrations as part of the deploy.
+
+#### Add a deploy hook
+Nanobox can run hooks at different points in the development process. We'll want to tell nanobox to run a special rake task each time we deploy. In your existing boxfile.yml add the following code:
+
+```yaml
+code.deploy:
+  before_deploy:
+    web.dashboard:
+      - rake db:setup_or_migrate`
+```
+
+#### Add a rake task
+You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could for example create a `lib/tasks/db.rb` file that contained the following:
+
+```ruby
+# custom tasks in the db namespace
+namespace :db do
+  desc 'either sets up the db or migrates it depending on state of db'
+  task setup_or_migrate: :environment do
+    begin
+      ActiveRecord::Base.connection
+    rescue ActiveRecord::NoDatabaseError
+      Rake::Task["db:setup"].invoke
+    else
+      Rake::Task["db:migrate"].invoke
+    end
+  end
+```
+
+**NOTE:** You're rake task may need to be modified to fit the database you're using.
+
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
