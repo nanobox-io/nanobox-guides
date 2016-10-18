@@ -2,7 +2,7 @@
 Nanobox makes it effortless to launch a database for your app to connect to.
 
 ## Add a data component
-Nanobox apps are comprised of [components]() (docker images configured for nanobox).
+Nanobox apps are comprised of [components](https://docs.nanobox.io/getting-started/add-components/) (docker images configured for nanobox).
 
 #### Specify a database
 To add a database to your app, simply add a data component to your existing `boxfile.yml`:

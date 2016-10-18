@@ -38,13 +38,42 @@ By default, each components container is a read only environment. Rails will nee
 You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
 
 ```yaml
+code.build:
+  engine: "ruby"
+
 web.dashboard:
   start: rails s
+
+  # add writable dirs to your web component
   writable_dirs:
     - tmp
-    -log
+    - log
 
-  # this is how production logs are piped out to the nanobox dashboard
+worker.sequences:
+  start: sidekiq
+
+  # add writable dirs to your worker component
+  writable_dirs:
+    - tmp
+    - log
+```
+
+You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
+
+## Add Streaming Logs
+Although our app is now able to write it's logs to log files, if want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
+
+```yaml
+code.build:
+  engine: "ruby"
+
+web.dashboard:
+  start: ruby myapp.rb
+  writable_dirs:
+    - tmp
+    - log
+
+  # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
     key: 'production.log'
 
@@ -54,10 +83,12 @@ worker.sequences:
     - tmp
     - log
 
-  # this is how logs are piped out to the nanobox dashboard
+  # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
     key: 'path/to/log.file'
 ```
+
+You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
 ## Compile Assets
 For Rails to run in production we'll need to compile all of our assets. To do that you can update your existing `boxfile.yml` with an after_compile [hook]():
