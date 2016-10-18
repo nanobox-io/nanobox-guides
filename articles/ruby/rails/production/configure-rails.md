@@ -2,7 +2,7 @@
 With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 ## Add webs and workers
-For your app to run in production at the very least you'll need a [web component](). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc.
+For your app to run in production, at the very least you'll need a [web component](). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a worker.
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -42,13 +42,21 @@ web.dashboard:
   start: rails s
   writable_dirs:
     - tmp
-    - log
+    -log
+
+  # this is how production logs are piped out to the nanobox dashboard
+  log_watch:
+    key: 'production.log'
 
 worker.sequences:
   start: sidekiq
   writable_dirs:
     - tmp
     - log
+
+  # this is how logs are piped out to the nanobox dashboard
+  log_watch:
+    key: 'path/to/log.file'
 ```
 
 ## Compile Assets
@@ -60,11 +68,11 @@ code.build:
 
   #
   after_compile:
-    - bundle exec rake assets:precompile
+    - rake assets:precompile
 ```
 
 ## Migrate Data
-The last step is to prepare any databases you might need. Just as you might `rake db:setup` locally, we'll need to have nanobox do that with each deploy incase you're modifying data with migrations as part of the deploy.
+The last step is to prepare any databases you might need. Just as you might `rake db:setup` locally, you'll need to have nanobox do that with each deploy incase you're modifying data with migrations as part of the deploy.
 
 #### Add a deploy hook
 Nanobox can run hooks at different points in the development process. We'll want to tell nanobox to run a special rake task each time we deploy. In your existing boxfile.yml add the following code:
@@ -77,7 +85,7 @@ code.deploy:
 ```
 
 #### Add a rake task
-You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could for example create a `lib/tasks/db.rb` file that contained the following:
+You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could, for example, create a `lib/tasks/db.rb` file that contained the following:
 
 ```ruby
 # custom tasks in the db namespace
@@ -94,7 +102,7 @@ namespace :db do
   end
 ```
 
-**NOTE:** You're rake task may need to be modified to fit the database you're using.
+**NOTE:** Your rake task may need to be modified to fit the database you're using.
 
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
