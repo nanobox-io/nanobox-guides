@@ -19,13 +19,13 @@ data.db:
 In the above snippet `db` is the name of this component and can be anything you choose; it is used as a unique identifier and when generating [environment variables]() while `image` can be any docker image configured for nanobox.
 
 #### Provision the database
-To provision your database, you'll need to rebuild your environment and deploy it to the dev runtime:
+To provision your database, you'll need to build a new runtime and deploy it to the dev environment:
 
 ```bash
-# build your new environment
+# build your new runtime
 nanobox build
 
-# deploy the environment to the dev runtime
+# deploy the runtime to the dev environment
 nanobox dev deploy
 ```
 
@@ -36,7 +36,7 @@ When a data component is provisioned with nanobox, environment variables are gen
 Environment variables are generated from a combination of the component type (`data`), and the unique id (`db`), which together make the component ID (`data.db`) as specified in the boxfile:
 
 ```bash
-DATA_DB_HOST = <your-apps-ip>
+DATA_DB_HOST = <your-components-ip>
 DATA_DB_USER = nanobox
 DATA_DB_PASS = <unique-password>
 ```
