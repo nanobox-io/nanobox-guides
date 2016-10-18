@@ -3,13 +3,11 @@
 PostgreSQL components are configured in your `boxfile.yml`. All available configuration options are outlined below.
 
 ### Postgres Version
-To use a specific version of Postgres, you can append the version number to your `image` with a `:`. The following versions are available:
+You should append the Postgres version number to your `image` with a `:`. The following versions are available:
 
 - 9.3
 - 9.4
-- 9.5 *(Default)*
-
-It's recommended that you specify your Postgres version. Default versions can change and may prevent your service from starting up in new builds.
+- 9.5
 
 **Note:** PostgreSQL versions cannot be changed after the service is created. To use a different version, you'll have to create a new PostgreSQL component and manually migrate data.
 

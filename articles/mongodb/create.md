@@ -1,6 +1,6 @@
 # Create a MongoDB Component
 
-To add a MongoDB to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/mongodb`. It's also recommended you append your image with a specific version of MongoDB to future-proof the component. Available versions are listed [here](/mongodb/configure/#mongodb-version).
+To add a MongoDB to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/mongodb`. You should append your image with a specific version of MongoDB. Available versions are listed in the [MongoDB Config Options guide](/mongodb/configure/#mongodb-version).
 
 ```yaml
 data.mongodb:

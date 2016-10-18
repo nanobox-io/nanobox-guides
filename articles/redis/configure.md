@@ -50,14 +50,12 @@ data.redis:
 ```
 
 ### Redis Version
-To use a specific version of Redis, you can append the version number to your `image` with a `:`. The following versions are available:
+You should append the Redis version number to your `image` with a `:`. The following versions are available:
 
 - 2.6
 - 2.8
-- 3.0 *(Default)*
+- 3.0
 - 3.2
-
-It's recommended that you specify your Redis version. Default versions can change and may prevent your service from starting up in new builds.
 
 **Note:** Due to version compatibility constraints, Redis versions cannot be changed after the service is created. To use a different version, you'll have to create a new Redis component.
 

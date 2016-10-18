@@ -1,6 +1,6 @@
 # Create a Memcached Component
 
-To add a Memcached to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/memcached`. It's also recommended you append your image with a specific version of Memcached to future-proof the component. Available versions are listed [here](/memcached/configure/#memcached-version).
+To add a Memcached to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/memcached`. You should append your image with a specific version of Memcached. Available versions are listed in the [Memcached Config Options guide](/memcached/configure/#memcached-version).
 
 ```yaml
 data.memcached:

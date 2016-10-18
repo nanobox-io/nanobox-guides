@@ -1,6 +1,6 @@
 # Create a MySQL Database
 
-To add a MySQL to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/mysql`. It's also recommended you append your image with a specific version of MySQL to future-proof the component. Available versions are listed [here](/mysql/configure/#mysql-version).
+To add a MySQL to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/mysql`. You should append your image with a specific version of MySQL. Available versions are listed in the [MySQL Config Options guide](/mysql/configure/#mysql-version).
 
 ```yaml
 data.mysql:

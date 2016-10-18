@@ -37,12 +37,10 @@ data.mysql:
 ```  
 
 ### MySQL Version
-To use a specific version of MySQL, you can append the version number to your `image` with a `:`. The following versions are available:
+You should append the MySQL version number to your `image` with a `:`. The following versions are available:
 
 - 5.5
-- 5.6 *(Default)*
-
-It's recommended that you specify your MySQL version. Default versions can change and may prevent your service from starting up in new builds.
+- 5.6
 
 **Note:** Due to version compatibility constraints, MySQL versions cannot be changed after the service is created. To use a different version, you'll have to create a new MySQL service and manually migrate data.
 

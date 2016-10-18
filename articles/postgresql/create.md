@@ -1,6 +1,6 @@
 # Create a PostgreSQL Database
 
-To add a PostgreSQL to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/postgresql`. It's also recommended you append your image with a specific version of Postgres to future-proof the component. Available versions are listed [here](/postgresql/configure/#postgres-version).
+To add a PostgreSQL to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/postgresql`. You should also append your image with a specific version of Postgres. Available versions are listed in the [Postgres Config Options guide](/postgresql/configure/#postgres-version).
 
 ```yaml
 data.postgres:

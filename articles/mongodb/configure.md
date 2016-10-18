@@ -25,12 +25,10 @@ data.db:
 ```
 
 ### MongoDB Version
-To use a specific version of MongoDB, you can append the version number to your `image` with a `:`. The following versions are available:
+You should append the MongoDB version number to your `image` with a `:`. The following versions are available:
 
 - 2.6
-- 3.0 *(Default)*
-
-It's recommended that you specify your MongoDB version. Default versions can change and may prevent your service from starting up in new builds.
+- 3.0
 
 **Note:** Due to version compatibility constraints, MongoDB versions cannot be changed after the service is created. To use a different version, you'll have to create a new MongoDB service and manually migrate data.
 

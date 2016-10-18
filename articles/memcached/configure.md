@@ -17,13 +17,11 @@ data.memcached:
 ```
 
 ### Memcached Version
-When configuring a Memcached component in your Boxfile, you can specify which version to use. The following version(s) are available:
+You should append the Memcached version to your `image`. The following version(s) are available:
 
-- 1.4 *(Default)*
+- 1.4
 
-It's recommended that you specify your Memcached version. Default versions can change and may prevent your service from starting up in new builds.
-
-**Note:** Due to version compatibility constraints, memcached versions cannot be changed after the component is created. To use a different version, you'll have to create a new Memcached component.
+**Note:** Due to version compatibility constraints, Memcached versions cannot be changed after the component is created. To use a different version, you'll have to create a new Memcached component.
 
 ```yaml
 # default setting

@@ -5,6 +5,7 @@ articles:
     articles:
       - {href: /storage/create, title: Creating a Storage Component}
       - {href: /storage/storing-files, title: Storing Files in a Storage Component}
+      - {href: /storage/configure, title: Storage Config Options}
   - title: Managing Storage
     articles:
       - {href: /storage/manage/local, title: Managing Local Storage Components}

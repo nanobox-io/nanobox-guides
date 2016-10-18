@@ -1,6 +1,6 @@
 # Create a Redis Component
 
-To add a Redis to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/redis`. It's also recommended you append your image with a specific version of Redis to future-proof the component. Available versions are listed [here](/redis/configure/#redis-version).
+To add a Redis to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/redis`. You should also append your image with a specific version of Redis. Available versions are listed in the [Redis Config Options guide](/redis/configure/#redis-version).
 
 ```yaml
 data.redis:
