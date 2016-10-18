@@ -16,6 +16,10 @@ code.build:
   lib_dirs:
     - node_modules
 
+  # Adds npm binaries to the $PATH
+  paths:
+    - node_modules/.bin
+
   # Runs npm in the final step of your build process
   after_build:
     - npm install
