@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Manage Platform"
+    articles = "golang"
+    icons    = "golang"
+    
+block markdown
+  include:md /articles/shared/going-further/manage-platform.md

@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Create a Ruby Dev Environment"
+    articles = "ruby"
+    icons    = "ruby"
+    
+block markdown
+  include:md /articles/ruby/generic/create-dev-env.md

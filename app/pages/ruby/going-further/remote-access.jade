@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Remote Access"
+    articles = "ruby"
+    icons    = "ruby"
+    
+block markdown
+  include:md /articles/shared/going-further/remote-access.md

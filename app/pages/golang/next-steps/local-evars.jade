@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Local Environment Variables"
+    articles = "nodejs"
+    icons    = "node"
+    
+block markdown
+  include:md /articles/shared/next-steps/local-evars.md

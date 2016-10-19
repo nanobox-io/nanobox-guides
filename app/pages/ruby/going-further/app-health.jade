@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "App Health"
+    articles = "ruby"
+    icons    = "ruby"
+    
+block markdown
+  include:md /articles/shared/going-further/app-health.md

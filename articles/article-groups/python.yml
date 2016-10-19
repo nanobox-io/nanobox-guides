@@ -1,10 +1,34 @@
 title: Python
 href: /python
 articles:
-  - title: First Steps
+  - title: Getting Started
     articles:
-      - {href: /python/getting-started, title: Getting Started}
-      - {href: /python/add-components, title: Add App Components}
-      - {href: /python/pip, title: Pip}
-      - {href: /python/nodejs-npm, title: Using Node.js & npm}
-      - {href: /python/config, title: Configure Python}
+      - {href: /python/getting-started/create-dev-env, title: Create a Python Dev Environment}
+      - {href: /python/getting-started/config, title: Configure Python}
+
+  - title: Next Steps
+    articles:
+      - {href: /python/next-steps/add-components, title: Add App Components}
+      - {href: /python/next-steps/local-evars, title: Local Environment Variables}
+
+  - title: Dependency Management
+    articles:
+      - {href: /python/deps-management/pip, title: Pip}
+      - {href: /python/deps-management/nodejs-npm, title: Using Node.js & npm}
+
+  - title: Production
+    articles:
+      - {href: /python/production/stage-your-app, title: Stage your App}
+      - {href: /python/production/launch-your-app, title: Launch your App}
+      - {href: /python/production/point-your-domain, title: Point your Domain}
+      - {href: /python/production/encryption, title: SSL/TLS Encryption}
+      - {href: /python/production/production-evars, title: Production Environment Variables}
+
+  - title: Going Further
+    articles:
+      - {href: /python/going-further/scale-your-app, title: Scale Your App}
+      - {href: /python/going-further/debugging, title: Debugging}
+      - {href: /python/going-further/app-health, title: App Health}
+      - {href: /python/going-further/remote-access, title: Remote Access}
+      - {href: /python/going-further/team-management, title: Team Management}
+      - {href: /python/going-further/manage-platform, title: Manage Platform}

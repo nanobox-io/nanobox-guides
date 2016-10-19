@@ -11,6 +11,7 @@ articles:
   - title: Next Steps
     articles:
       - {href: /php/codeigniter/next-steps/add-a-database, title: Add a Database}
+      - {href: /php/codeigniter/next-steps/writable-permissions, title: Writable Permissions}
       - {href: /php/codeigniter/next-steps/local-evars, title: Local Environment Variables}
       - {href: /php/codeigniter/next-steps/javascript-runtime, title: Javascript Runtime}
 

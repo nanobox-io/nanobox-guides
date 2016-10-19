@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Scale Your App"
+    articles = "php"
+    icons    = "php"
+    
+block markdown
+  include:md /articles/shared/going-further/scale-your-app.md

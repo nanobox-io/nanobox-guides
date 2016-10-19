@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Production Environment Variables"
+    articles = "php"
+    icons    = "php"
+    
+block markdown
+  include:md /articles/shared/production/production-evars.md

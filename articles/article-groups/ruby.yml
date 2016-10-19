@@ -1,11 +1,34 @@
 title: Ruby
 href: /ruby
 articles:
-  - title: First Steps
+  - title: Getting Started
     articles:
-      - {href: /ruby, title: Overview}
-      - {href: /ruby/getting-started, title: Getting Started}
-      - {href: /ruby/add-components, title: Add App Components}
-      - {href: /ruby/bundler, title: Bundler}
-      - {href: /ruby/nodejs-npm, title: Using Node.js & npm}
-      - {href: /ruby/config, title: Configure Ruby}
+      - {href: /ruby/getting-started/create-dev-env, title: Create a Ruby Dev Environment}
+      - {href: /ruby/getting-started/config, title: Configure Ruby}
+
+  - title: Next Steps
+    articles:
+      - {href: /ruby/next-steps/add-components, title: Add App Components}
+      - {href: /ruby/next-steps/local-evars, title: Local Environment Variables}
+
+  - title: Dependency Management
+    articles:
+      - {href: /ruby/deps-management/bundler, title: Bundler}
+      - {href: /ruby/deps-management/nodejs-npm, title: Using Node.js & npm}
+
+  - title: Production
+    articles:
+      - {href: /ruby/production/stage-your-app, title: Stage your App}
+      - {href: /ruby/production/launch-your-app, title: Launch your App}
+      - {href: /ruby/production/point-your-domain, title: Point your Domain}
+      - {href: /ruby/production/encryption, title: SSL/TLS Encryption}
+      - {href: /ruby/production/production-evars, title: Production Environment Variables}
+
+  - title: Going Further
+    articles:
+      - {href: /ruby/going-further/scale-your-app, title: Scale Your App}
+      - {href: /ruby/going-further/debugging, title: Debugging}
+      - {href: /ruby/going-further/app-health, title: App Health}
+      - {href: /ruby/going-further/remote-access, title: Remote Access}
+      - {href: /ruby/going-further/team-management, title: Team Management}
+      - {href: /ruby/going-further/manage-platform, title: Manage Platform}

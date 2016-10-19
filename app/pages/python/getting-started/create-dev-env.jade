@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Create a Python Dev Environment"
+    articles = "python"
+    icons    = "python"
+    
+block markdown
+  include:md /articles/python/generic/create-dev-env.md

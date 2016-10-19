@@ -3,10 +3,32 @@ href: /golang
 articles:
   - title: First Steps
     articles:
-      - {href: /golang/getting-started, title: Getting Started}
-      - {href: /golang/add-components, title: Add App Components}
-      - {href: /golang/config, title: Configure Golang}
-  - title: Deps Management
+      - {href: /golang/getting-started/create-dev-env, title: Create a Golang Dev Environment}
+      - {href: /golang/getting-started/config, title: Configure Golang}
+
+  - title: Next Steps
     articles:
-      - {href: /golang/deps, title: Dependency Management}
-      - {href: /golang/nodejs-npm, title: Using Node.js & npm}
+      - {href: /golang/next-steps/add-components, title: Add App Components}
+      - {href: /golang/next-steps/local-evars, title: Local Environment Variables}
+
+  - title: Dependency Management
+    articles:
+      - {href: /golang/deps-management/deps, title: Go Dependency Management}
+      - {href: /golang/deps-management/nodejs-npm, title: Using Node.js & npm}
+
+  - title: Production
+    articles:
+      - {href: /golang/production/stage-your-app, title: Stage your App}
+      - {href: /golang/production/launch-your-app, title: Launch your App}
+      - {href: /golang/production/point-your-domain, title: Point your Domain}
+      - {href: /golang/production/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/production/production-evars, title: Production Environment Variables}
+
+  - title: Going Further
+    articles:
+      - {href: /golang/going-further/scale-your-app, title: Scale Your App}
+      - {href: /golang/going-further/debugging, title: Debugging}
+      - {href: /golang/going-further/app-health, title: App Health}
+      - {href: /golang/going-further/remote-access, title: Remote Access}
+      - {href: /golang/going-further/team-management, title: Team Management}
+      - {href: /golang/going-further/manage-platform, title: Manage Platform}

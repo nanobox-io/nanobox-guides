@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Create a Node.js Dev Environment"
+    articles = "nodejs"
+    icons    = "node"
+    
+block markdown
+  include:md /articles/nodejs/generic/create-dev-env.md
