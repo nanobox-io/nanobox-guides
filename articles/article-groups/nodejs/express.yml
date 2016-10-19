@@ -28,7 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /nodejs/express/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/express/going-further/scale-your-app, title: Scale Your App}
       - {href: /nodejs/express/going-further/debugging, title: Debugging}
       - {href: /nodejs/express/going-further/app-health, title: App Health}
       - {href: /nodejs/express/going-further/remote-access, title: Remote Access}

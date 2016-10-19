@@ -29,7 +29,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /python/flask/going-further/scale-your-app, title: Scale your App}
+      - {href: /python/flask/going-further/scale-your-app, title: Scale Your App}
       - {href: /python/flask/going-further/debugging, title: Debugging}
       - {href: /python/flask/going-further/app-health, title: App Health}
       - {href: /python/flask/going-further/remote-access, title: Remote Access}

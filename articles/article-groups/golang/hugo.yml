@@ -28,7 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /golang/hugo/going-further/scale-your-app, title: Scale your App}
+      - {href: /golang/hugo/going-further/scale-your-app, title: Scale Your App}
       - {href: /golang/hugo/going-further/debugging, title: Debugging}
       - {href: /golang/hugo/going-further/app-health, title: App Health}
       - {href: /golang/hugo/going-further/remote-access, title: Remote Access}

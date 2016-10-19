@@ -28,7 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /nodejs/ember/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/ember/going-further/scale-your-app, title: Scale Your App}
       - {href: /nodejs/ember/going-further/debugging, title: Debugging}
       - {href: /nodejs/ember/going-further/app-health, title: App Health}
       - {href: /nodejs/ember/going-further/remote-access, title: Remote Access}

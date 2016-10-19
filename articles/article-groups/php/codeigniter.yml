@@ -25,7 +25,7 @@ articles:
 
   - title: Going Further
     articles:
-      - {href: /php/codeigniter/going-further/scale-your-app, title: Scale your App}
+      - {href: /php/codeigniter/going-further/scale-your-app, title: Scale Your App}
       - {href: /php/codeigniter/going-further/debugging, title: Debugging}
       - {href: /php/codeigniter/going-further/app-health, title: App Health}
       - {href: /php/codeigniter/going-further/remote-access, title: Remote Access}

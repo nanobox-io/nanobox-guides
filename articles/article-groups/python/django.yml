@@ -29,7 +29,7 @@ articles:
   #
   - title: Going Further
     articles:
-      - {href: /python/django/going-further/scale-your-app, title: Scale your App}
+      - {href: /python/django/going-further/scale-your-app, title: Scale Your App}
       - {href: /python/django/going-further/debugging, title: Debugging}
       - {href: /python/django/going-further/app-health, title: App Health}
       - {href: /python/django/going-further/remote-access, title: Remote Access}

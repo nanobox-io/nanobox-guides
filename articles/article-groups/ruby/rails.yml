@@ -29,7 +29,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /ruby/rails/going-further/scale-your-app, title: Scale your App}
+      - {href: /ruby/rails/going-further/scale-your-app, title: Scale Your App}
       - {href: /ruby/rails/going-further/debugging, title: Debugging}
       - {href: /ruby/rails/going-further/app-health, title: App Health}
       - {href: /ruby/rails/going-further/remote-access, title: Remote Access}

@@ -28,7 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /nodejs/sails/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/sails/going-further/scale-your-app, title: Scale Your App}
       - {href: /nodejs/sails/going-further/debugging, title: Debugging}
       - {href: /nodejs/sails/going-further/app-health, title: App Health}
       - {href: /nodejs/sails/going-further/remote-access, title: Remote Access}

@@ -28,7 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
-      - {href: /nodejs/angular/going-further/scale-your-app, title: Scale your App}
+      - {href: /nodejs/angular/going-further/scale-your-app, title: Scale Your App}
       - {href: /nodejs/angular/going-further/debugging, title: Debugging}
       - {href: /nodejs/angular/going-further/app-health, title: App Health}
       - {href: /nodejs/angular/going-further/remote-access, title: Remote Access}

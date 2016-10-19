@@ -3,7 +3,7 @@
 Nanobox provides different methods for remotely accessing production apps deployed with Nanobox:
 
 - [Nanobox Console](#nanobox-console)
-- [Nanobox Tunnel](#nanbox-tunnel)
+- [Nanobox Tunnel](#nanobox-tunnel)
 
 ## Nanobox Console
 The `nanobox console` command will drop you into an interactive console inside a component running on your production platform. Here you can navigate around your component filesystem and use any executables included in your app's runtime.

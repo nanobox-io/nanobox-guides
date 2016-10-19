@@ -25,7 +25,7 @@ articles:
 
   - title: Going Further
     articles:
-      - {href: /php/laravel/going-further/scale-your-app, title: Scale your App}
+      - {href: /php/laravel/going-further/scale-your-app, title: Scale Your App}
       - {href: /php/laravel/going-further/debugging, title: Debugging}
       - {href: /php/laravel/going-further/app-health, title: App Health}
       - {href: /php/laravel/going-further/remote-access, title: Remote Access}
