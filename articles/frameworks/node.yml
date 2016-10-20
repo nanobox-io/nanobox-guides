@@ -3,6 +3,5 @@ icon: node
 home: /nodejs
 frameworks:
   - {href: /nodejs/meteor, name: Meteor, icon: meteor, devMode: true}
-  - {href: /nodejs/ember, name: Ember, icon: ember, devMode: true}
   - {href: /nodejs/express, name: Express, icon: express, devMode: true}
   - {href: /nodejs/sails, name: Sails, icon: sails, devMode: true}
