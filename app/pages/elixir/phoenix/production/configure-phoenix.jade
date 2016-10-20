@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Phoenix"
+    keywords    = "configure,elixir,phoenix,production"
+    description = "Configuring phoenix for production"
+    articles    = "elixir/phoenix"
+    icons       = "elixir,phoenix"
+    
+block markdown
+  include:md /articles/elixir/phoenix/production/configure-phoenix.md

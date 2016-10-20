@@ -1,0 +1,18 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Angular"
+    informalName = "angular"
+    icon         = "angular"
+    iconCrumbs   = "javascript,angular"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'}
+    ]
+    optionalComponents = []
+    articleGroups = "javascript/angular"
+    devMode = true

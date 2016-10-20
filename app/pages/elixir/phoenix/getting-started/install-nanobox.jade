@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Install Nanobox"
+    articles = "elixir/phoenix"
+    icons    = "elixir,phoenix"
+    
+block markdown
+  include:md /articles/shared/getting-started/install-nanobox.md
