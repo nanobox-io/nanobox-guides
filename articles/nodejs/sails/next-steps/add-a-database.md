@@ -56,7 +56,7 @@ somePostgresqlServer: {
   host: process.env.DATA_DB_HOST,
   user: process.env.DATA_DB_USER,
   password: process.env.DATA_DB_PASS,
-  database: 'development'
+  database: 'db'
   }
 ```
 

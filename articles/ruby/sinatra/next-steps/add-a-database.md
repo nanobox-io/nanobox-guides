@@ -60,7 +60,7 @@ The `environment.rb` file should look like this:
 #The environment variable DATABASE_URL should be in the following format:
 # => postgres://{user}:{password}@{host}:{port}/path
 configure :production, :development do
-	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://<component-ip>/development')
+	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://<component-ip>/db')
 
 	ActiveRecord::Base.establish_connection(
 		:adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,

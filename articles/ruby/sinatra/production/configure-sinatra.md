@@ -2,14 +2,14 @@
 With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](). Up until now we've been running our app by consoling into the dev environment and running the sinatra app manually. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a worker.
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and running the sinatra app manually. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
 code.build:
-  engine: "ruby"
+  engine: ruby
 
 # add a web component and give it a "start" command
 web.main:
@@ -23,7 +23,7 @@ You can have as many worker components as your app needs by simply adding them t
 
 ```yaml
 code.build:
-  engine: "ruby"
+  engine: ruby
 
 # add a worker component and give it a "start" command
 worker.main:
@@ -39,9 +39,9 @@ You'll need to specify these writable directories **per component** by updating 
 
 ```yaml
 code.build:
-  engine: "ruby"
+  engine: ruby
 
-web.dashboard:
+web.main:
   start: ruby myapp.rb
 
   # add writable dirs to your web component
@@ -49,7 +49,7 @@ web.dashboard:
     - tmp
     - log
 
-worker.sequences:
+worker.main:
   start: sidekiq
 
   # add writable dirs to your worker component
@@ -66,9 +66,9 @@ Although our app is now able to write it's logs to log files, if want it to stre
 
 ```yaml
 code.build:
-  engine: "ruby"
+  engine: ruby
 
-web.dashboard:
+web.main:
   start: ruby myapp.rb
   writable_dirs:
     - tmp
@@ -78,7 +78,7 @@ web.dashboard:
   log_watch:
     key: 'path/to/log.file'
 
-worker.sequences:
+worker.main:
   start: sidekiq
   writable_dirs:
     - tmp
@@ -112,7 +112,7 @@ Nanobox can run hooks at different points in the development process. We'll want
 ```yaml
 code.deploy:
   before_deploy:
-    web.dashboard:
+    web.main:
       - rake db:setup_or_migrate`
 ```
 
