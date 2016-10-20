@@ -1,7 +1,7 @@
 # Existing Angular App
-**When using nanobox with angular, keep in mind that the angular will communicate with an API that could be built in any language. Nanobox can be used for quickly testing angular in isolation, however, think about the backend that your angular app will be communicating with and reference those guides to run your backend server with nanobox.**
+When using nanobox with angular, keep in mind that the angular will communicate with an API that could be built in any language.
 
-Part of what makes nanobox so useful is you don't have to have nodejs or angular installed on your local machine. This guide will help you get an existing Angular app up-and-running with nanobox.
+Nanobox can be used for quickly testing angular in isolation, however, think about the backend that your angular app will be communicating with and reference those guides to run your backend server with nanobox.
 
 ## Build a Node Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside of. From within this environment you can run the app, a angular console, or even rake tasks as you would normally.

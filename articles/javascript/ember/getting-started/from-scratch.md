@@ -1,7 +1,7 @@
 # Ember from Scratch
-**When using nanobox with ember, keep in mind that the ember will communicate with an API that could be built in any language. Nanobox can be used for quickly testing ember in isolation, however, think about the backend that your ember app will be communicating with and reference those guides to run your backend server with nanobox.**
+When using nanobox with ember, keep in mind that the ember will communicate with an API that could be built in any language.
 
-Part of what makes nanobox so useful is you don't have to have nodejs or ember installed on your local machine.
+Nanobox can be used for quickly testing ember in isolation, however, think about the backend that your ember app will be communicating with and reference those guides to run your backend server with nanobox.
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-ember" target="\_blank">nanobox-ember</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 

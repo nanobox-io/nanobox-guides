@@ -1,7 +1,7 @@
 # Angular from Scratch
-**When using nanobox with angular, keep in mind that the angular will communicate with an API that could be built in any language. Nanobox can be used for quickly testing angular in isolation, however, think about the backend that your angular app will be communicating with and reference those guides to run your backend server with nanobox.**
+When using nanobox with angular, keep in mind that the angular will communicate with an API that could be built in any language.
 
-Part of what makes nanobox so useful is you don't have to have nodejs or angular installed on your local machine.
+Nanobox can be used for quickly testing angular in isolation, however, think about the backend that your angular app will be communicating with and reference those guides to run your backend server with nanobox.
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-angular" target="\_blank">nanobox-angular</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
