@@ -1,0 +1,23 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Angular"
+    informalName = "angular"
+    icon         = "angular"
+    iconCrumbs   = "javascript,angular"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Ruby', icon:'ruby', href:'#'},
+      {name:'Nodejs', icon:'nodejs', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "javascript/angular"
+    devMode = true

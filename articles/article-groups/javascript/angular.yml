@@ -1,0 +1,15 @@
+title: Angular
+href: /javascript/angular
+articles:
+
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /javascript/angular/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /javascript/angular/getting-started/from-scratch, title: Angular from Scratch}
+      - {href: /javascript/angular/getting-started/existing-app, title: Existing Angular App}
+
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /javascript/angular/next-steps/launch-backend, title: Launch your backend}

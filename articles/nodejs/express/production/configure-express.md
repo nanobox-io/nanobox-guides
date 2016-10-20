@@ -15,10 +15,10 @@ code.build:
 
 # add a web component and give it a "start" command
 web.main:
-  start: npm start
+  start: NODE_ENV=production npm start
 ```
 
-In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command is what tells nanobox how to start your app.
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command is what tells nanobox how to start your app. Since we're going to be running in production we need to tell express to run in production mode by setting the `NODE_ENV` to `production` when starting our server.
 
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -55,7 +55,7 @@ code.build:
   engine: nodejs
 
 web.main:
-  start: npm start
+  start: NODE_ENV=production npm start
 
   # add writable dirs to your web component
   writable_dirs:
@@ -77,7 +77,7 @@ code.build:
   engine: nodejs
 
 web.main:
-  start: npm start
+  start: NODE_ENV=production npm start
   writable_dirs:
     - log
 
@@ -98,9 +98,7 @@ worker.main:
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
 ## Migrate Data
-
-## Enable Production
-By default express runs in development mode. Once you're ready for production you'll need to tell express to run in production mode by setting the `NODE_ENV` to `production` when starting our server.
+Since there is no standard tool for migrating data with nodejs, it's recommended that you find one that works for your needs and follow their documentation. For a basic migration strategy you could simply import your database schema to the production database.
 
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

@@ -1,6 +1,8 @@
 # Configure Sails for Production
 With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
+Sails has a [best practices](http://sailsjs.org/documentation/concepts/deployment) guide when it comes to preparing your app for production. It is recommended that you review that document before using this guide.
+
 ## Add webs and workers
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the sails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
@@ -13,10 +15,10 @@ code.build:
 
 # add a web component and give it a "start" command
 web.main:
-  start: sails lift
+  start: NODE_ENV=production node app.js --prod
 ```
 
-In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command is what tells nanobox how to start your app.
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command is what tells nanobox how to start your app. Notice that we're not using `sails lift` to start the app. [Sails recommends](http://sailsjs.org/documentation/concepts/deployment#?lift-your-app) starting the app using node to avoid dependencies on the sails command line tool.
 
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -51,7 +53,7 @@ code.build:
   engine: nodejs
 
 web.main:
-  start: sails lift
+  start: NODE_ENV=production node app.js
 
   # add writable dirs to your web component
   writable_dirs:
@@ -73,7 +75,7 @@ code.build:
   engine: nodejs
 
 web.main:
-  start: sails lift
+  start: NODE_ENV=production node app.js
   writable_dirs:
     - log
 
@@ -94,25 +96,7 @@ worker.main:
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
 ## Migrate Data
-The last step is to prepare any databases you might need. From the sails [documentation](http://sailsjs.org/documentation/concepts/models-and-orm/model-settings#?can-i-use-automigrations-in-production):
-
-```
-...as a failsafe to help protect you from [dropping/altering] inadvertently, any time you lift your app in a production environment, Sails always uses migrate: 'safe', no matter what you have configured.
-```
-
-Due to this configuration in sails, you'll need to migrate your data manually.
-
-## Enable Production
-By default sails runs in development mode. Once you're ready for production you'll need to tell sails to run in production mode. There are two ways to do this.
-
-From the sailsjs [documentation](http://sailsjs.org/documentation/reference/configuration/sails-config#?using-the-production-environment):
-```
-By default, Sails determines its environment using the NODE_ENV environment variable. If NODE_ENV is not set, Sails will look to see if you provided a sails.config.environment setting, and use it if possible. Otherwise, it runs in the ‘development’ environment.
-
-...the recommended way of switching to production mode is by setting the NODE_ENV environment variable to "production"
-```
-
-To tell sails to run in production we'll want to set our `NODE_ENV` to `production` when starting our server.
+The last step is to prepare any databases you might need. By default [sails does not allow production migrations](http://sailsjs.org/documentation/concepts/models-and-orm/model-settings#?can-i-use-automigrations-in-production). The recommended way is to import your database schema [manually](http://sailsjs.org/documentation/concepts/deployment#?set-up-production-database-s-for-your-models) into the production database.
 
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
