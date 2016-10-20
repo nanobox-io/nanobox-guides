@@ -16,7 +16,7 @@ data.db:
   image: nanobox/postgresql
 ```
 
-In the above snippet `db` is the name of this component and can be anything you choose; it is used as a unique identifier and when generating [environment variables]() while `image` can be any docker image configured for nanobox.
+In the above snippet `db` is the name of this component and can be anything you choose; it is used as a unique identifier and when generating [environment variables](https://docs.nanobox.io/app-config/environment-variables/) while `image` can be any docker image configured for nanobox.
 
 #### Provision the database
 To provision your database, you'll need to build a new runtime and deploy it to the dev environment:
@@ -42,18 +42,22 @@ DATA_DB_PASS = <unique-password>
 ```
 
 #### Connection Credentials
+For sails, you'll first need to install the `sails-postgresql` adapter from inside your `nanobox dev console`:
 
-For sails, you'll need to modify your `config/database.yml` to connect your app:
+```bash
+npm install sails-postgresql
+```
 
-```yaml
-development:
-  adapter: postgresql # this may change depending on your database
-  encoding: unicode
-  database: development
-  pool: 5
-  host: <%= ENV['DATA_DB_HOST'] %>
-  username: <%= ENV['DATA_DB_USER'] %>
-  password: <%= ENV['DATA_DB_PASS'] %>
+Then modify your `config/connections.js` to connect your app:
+
+```javascript
+somePostgresqlServer: {
+  adapter: 'sails-postgresql',
+  host: process.env.DATA_DB_HOST,
+  user: process.env.DATA_DB_USER,
+  password: process.env.DATA_DB_PASS,
+  database: 'db'
+  }
 ```
 
 ## Test the connection
@@ -63,14 +67,11 @@ With your data component provisioned, and your app updated to connect to it, it'
 You can test your connection by connecting an external client to your database using your apps <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">connection credentials</a>.
 
 #### From within your app
-You can also test your connection by simply trying to run your app and see if it is able to connect. In sails we could run the following command:
+You can also test your connection by simply trying to run your app and see if it is able to connect. In sails we could run the following command from the `nanobox dev console`:
 
 ```bash
-# console into the dev environment
-nanobox dev console
-
-# attempt to setup the database
-bundle exec rake db:setup
+# attempt to run the app
+sails lift
 ```
 
 ## Now what?

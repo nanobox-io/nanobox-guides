@@ -16,7 +16,7 @@ data.db:
   image: nanobox/postgresql
 ```
 
-In the above snippet `db` is the name of this component and can be anything you choose; it is used as a unique identifier and when generating [environment variables]() while `image` can be any docker image configured for nanobox.
+In the above snippet `db` is the name of this component and can be anything you choose; it is used as a unique identifier and when generating [environment variables](https://docs.nanobox.io/app-config/environment-variables/) while `image` can be any docker image configured for nanobox.
 
 #### Provision the database
 To provision your database, you'll need to build a new runtime and deploy it to the dev environment:
@@ -63,13 +63,10 @@ With your data component provisioned, and your app updated to connect to it, it'
 You can test your connection by connecting an external client to your database using your apps <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">connection credentials</a>.
 
 #### From within your app
-You can also test your connection by simply trying to run your app and see if it is able to connect. In rails we could run the following command:
+You can also test your connection by simply trying to run your app and see if it is able to connect. In rails we could run the following command from the `nanobox dev console`:
 
 ```bash
-# console into the dev environment
-nanobox dev console
-
-# attempt to setup the database
+# attempt to run the app
 bundle exec rake db:setup
 ```
 
