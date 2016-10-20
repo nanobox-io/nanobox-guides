@@ -9,7 +9,7 @@ To add a database to your app, simply add a data component to your existing `box
 
 ```yaml
 code.build:
-  engine: "python"
+  engine: "elixir"
 
 # for this example we're going to add a postgres database
 data.db:
@@ -56,7 +56,7 @@ WIP
 ## Now what?
 With your app connected to a database, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Javascript Runtime](/python/django/next-steps/javascript-runtime)
-* [Local Environment Variables](/python/django/next-steps/local-evars)
-* [Prepare for Production](/python/django/production/configure-django)
-* [Back to django overview](/python/django)
+* [Javascript Runtime](/elixir/phoenix/next-steps/javascript-runtime)
+* [Local Environment Variables](/elixir/phoenix/next-steps/local-evars)
+* [Prepare for Production](/elixir/phoenix/production/configure-phoenix)
+* [Back to phoenix overview](/elixir/phoenix)

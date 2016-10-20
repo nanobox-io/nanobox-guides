@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Team Management"
+    articles = "elixir/phoenix"
+    icons    = "elixir,phoenix"
+    
+block markdown
+  include:md /articles/shared/going-further/team-management.md

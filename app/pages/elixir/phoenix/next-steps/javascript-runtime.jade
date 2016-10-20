@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Javascript Runtime"
+    articles = "elixir/phoenix"
+    icons    = "elixir,phoenix"
+    
+block markdown
+  include:md /articles/elixir/phoenix/next-steps/javascript-runtime.md
