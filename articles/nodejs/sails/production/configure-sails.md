@@ -36,64 +36,8 @@ In the above snippet `main` is the name of the worker component and can be anyth
 
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
-## Add Logs
-By default sails only logs to the console, but for better debugging we'll want to add some log files. At the root of your project, create a `log` folder with a `sails.log` file.
-
-Next edit your `config/log.js` file to include a `filepath` to where you want sails to save logs. Inside the `module.exports` include the following:
-```javascript
-filepath: 'log/sails.log'
-```
-#### Make logs writable
-By default, each components container is a read only environment. Now that we're having sails write logs we'll need to tell nanobox those files are writable.
-
-You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
-
-```yaml
-code.build:
-  engine: nodejs
-
-web.main:
-  start: NODE_ENV=production node app.js
-
-  # add writable dirs to your web component
-  writable_dirs:
-    - log
-
-worker.main:
-  start: <start-worker>
-
-  # add writable dirs to your worker component
-  writable_dirs:
-    - log
-```
-
-#### Add Streaming Logs
-Although our app is now able to write it's logs to log files, if want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
-
-```yaml
-code.build:
-  engine: nodejs
-
-web.main:
-  start: NODE_ENV=production node app.js
-  writable_dirs:
-    - log
-
-  # the path to a logfile you want streamed to the nanobox dashboard
-  log_watch:
-    key: 'log/sails.log'
-
-worker.main:
-  start: <start-worker>
-  writable_dirs:
-    - log
-
-  # the path to a logfile you want streamed to the nanobox dashboard
-  log_watch:
-    key: 'log/sails.log'
-```
-
-You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
+## Logging
+By default sails logs to the console which is exactly what we want. Anything that logs to stdout will automatically get picked up by the nanobox logger, and be displayed in the dashboard.
 
 ## Migrate Data
 The last step is to prepare any databases you might need. By default [sails does not allow production migrations](http://sailsjs.org/documentation/concepts/models-and-orm/model-settings#?can-i-use-automigrations-in-production). The recommended way is to import your database schema [manually](http://sailsjs.org/documentation/concepts/deployment#?set-up-production-database-s-for-your-models) into the production database.
