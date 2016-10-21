@@ -36,66 +36,8 @@ In the above snippet `main` is the name of the worker component and can be anyth
 
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
-## Add Logs
-By default express only logs to the console, but for better debugging we'll want to add some log files. At the root of your project, create a `log` folder with a `express.log` file.
-
-Next we'll need pipe the default express logs into our log file. In your `server.js` add the following:
-```javascript
-var fs = require('fs');
-var logfile = fs.createWriteStream('log/express.log', {flags: 'a'});
-app.use(express.logger({stream: logfile}));
-```
-#### Make logs writable
-By default, each components container is a read only environment. Now that we're having express write logs we'll need to tell nanobox those files are writable.
-
-You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
-
-```yaml
-code.build:
-  engine: nodejs
-
-web.main:
-  start: NODE_ENV=production npm start
-
-  # add writable dirs to your web component
-  writable_dirs:
-    - log
-
-worker.main:
-  start: <start-worker>
-
-  # add writable dirs to your worker component
-  writable_dirs:
-    - log
-```
-
-#### Add Streaming Logs
-Although our app is now able to write it's logs to log files, if want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
-
-```yaml
-code.build:
-  engine: nodejs
-
-web.main:
-  start: NODE_ENV=production npm start
-  writable_dirs:
-    - log
-
-  # the path to a logfile you want streamed to the nanobox dashboard
-  log_watch:
-    key: 'log/express.log'
-
-worker.main:
-  start: <start-worker>
-  writable_dirs:
-    - log
-
-  # the path to a logfile you want streamed to the nanobox dashboard
-  log_watch:
-    key: 'log/express.log'
-```
-
-You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
+## Logging
+By default express logs to the console which is exactly what we want. Anything that logs to stdout will automatically get picked up by the nanobox logger, and be displayed in the dashboard.
 
 ## Migrate Data
 Since there is no standard tool for migrating data with nodejs, it's recommended that you find one that works for your needs and follow their documentation. For a basic migration strategy you could simply import your database schema to the production database.
