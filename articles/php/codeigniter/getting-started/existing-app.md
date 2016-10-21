@@ -64,7 +64,7 @@ Run the following to start PHP-FPM and Apache.
 nanobox dev run
 ```
 
-You can visit your running CodeIgniter app at `codeigniter.nanobox.dev:8080`.
+You can visit your running CodeIgniter app at `codeigniter.nanobox.dev`.
 
 ## Now What?
 Now that you have CodeIgniter running in Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!

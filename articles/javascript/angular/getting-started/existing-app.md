@@ -46,4 +46,4 @@ With the app configured the last thing to do is run it:
 npm start
 ```
 
-Visit the app from your favorite browser at: `angular.nanobox.dev:8080`
+Visit the app from your favorite browser at: `angular.nanobox.dev`

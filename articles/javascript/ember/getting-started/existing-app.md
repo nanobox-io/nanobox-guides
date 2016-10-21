@@ -46,4 +46,4 @@ With the app configured the last thing to do is run it:
 ember server
 ```
 
-Visit the app from your favorite browser at: `ember.nanobox.dev:8080`
+Visit the app from your favorite browser at: `ember.nanobox.dev`

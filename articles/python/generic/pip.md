@@ -10,7 +10,7 @@ nanobox dev console
 pip install package
 ```
 
-## Bundler Runs During Build
+## Pip Runs During Build
 When building your runtime, the Python engine checks for a `requirements.txt` and, if it exists, runs `pip install -r requirements.txt` to load your packages.
 
 ```bash

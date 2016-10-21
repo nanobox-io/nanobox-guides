@@ -44,7 +44,7 @@ WIP
 ## Phoenix up-and-running
 WIP
 
-Visit the app from your favorite browser at: `phoenix.nanobox.dev:8080`
+Visit the app from your favorite browser at: `phoenix.nanobox.dev`
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

@@ -10,7 +10,7 @@ nanobox dev start
 nanobox dev dns add appname.dev
 ```
 
-After [starting your webserver](#starting-your-webserver), your app will be available at `appname.dev:8080`.
+After [starting your webserver](#starting-your-webserver), your app will be available at `appname.dev`.
 
 ## Starting Your Webserver
 You have a few options for starting PHP and your webserver.

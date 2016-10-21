@@ -53,7 +53,7 @@ nanobox dev console
 npm start
 ```
 
-Your Express app can be accessed in your browser of choice at `expressjs.nanobox.io:8080`.
+Your Express app can be accessed in your browser of choice at `expressjs.nanobox.io`.
 
 ## Now What?
 Now that you have Express running on Nanobox, what's next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!

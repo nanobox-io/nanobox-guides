@@ -108,7 +108,7 @@ nanobox dev run
 ```
 
 ### View the App in Your Browser
-With your app running, you can access it at `laravel.nanobox.dev:8080` in your browser of choice.
+With your app running, you can access it at `laravel.nanobox.dev` in your browser of choice.
 
 ## Now What?
 Now that you have Laravel running on Nanobox, what's next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
