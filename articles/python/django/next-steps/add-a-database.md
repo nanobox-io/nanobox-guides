@@ -1,11 +1,9 @@
 # Add a Database
-Nanobox makes it effortless to launch a database for your app to connect to.
+Nanobox apps are comprised of
+<a href="https://docs.nanobox.io/getting-started/add-components/" target="\_blank">components</a> (docker images configured for nanobox). Components are added to apps via the `boxfile.yml`, making adding a database for your app to connect to effortless.
 
 ## Add a data component
-Nanobox apps are comprised of [components](https://docs.nanobox.io/getting-started/add-components/) (docker images configured for nanobox).
-
-#### Specify a database
-To add a database to your app, simply add a data component to your existing `boxfile.yml`:
+To add a database to your app, simply add a data component to your `boxfile.yml`:
 
 ```yaml
 code.build:
@@ -16,24 +14,22 @@ data.db:
   image: nanobox/postgresql
 ```
 
-In the above snippet `db` is the name of this component and can be anything you choose; it is used as a unique identifier and when generating [environment variables](https://docs.nanobox.io/app-config/environment-variables/) while `image` can be any docker image configured for nanobox.
+In the above snippet `db` is the name of this component (and can be anything you choose); it is used as a unique identifier and when generating <a href="https://docs.nanobox.io/app-config/environment-variables/" target="\_blank">environment variables</a>. `image` can be any docker image configured for nanobox.
 
 #### Provision the database
-To provision your database, you'll need to build a new runtime and deploy it to the dev environment:
+To provision your database, simply deploy the `boxfile.yml` changes to the dev environment:
 
 ```bash
-# build your new runtime
-nanobox build
-
-# deploy the runtime to the dev environment
-nanobox dev deploy
+`nanobox dev deploy`
 ```
 
 ## Connect your app
 When a data component is provisioned with nanobox, environment variables are generated along with unique connection credentials.
 
 #### Environment Variables
-Environment variables are generated from a combination of the component type (`data`), and the unique id (`db`), which together make the component ID (`data.db`) as specified in the boxfile:
+From the `boxfile.yml` snippet above, the component type (data) and the unique ID (db) make up the `component ID`.
+
+Environment variables are generated from the `component ID`:
 
 ```bash
 DATA_DB_HOST = <your-components-ip>
@@ -59,4 +55,4 @@ With your app connected to a database, whats next? Think about what else your ap
 * [Javascript Runtime](/python/django/next-steps/javascript-runtime)
 * [Local Environment Variables](/python/django/next-steps/local-evars)
 * [Prepare for Production](/python/django/production/configure-django)
-* [Back to django overview](/python/django)
+* [Back to Rails overview](/python/django)

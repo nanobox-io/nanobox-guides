@@ -1,1 +1,2 @@
-# Configure Hugo
+# Configure Hugo for Production
+WIP

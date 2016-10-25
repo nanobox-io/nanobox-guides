@@ -1,63 +1,59 @@
-# Starting with an Existing Express App
+# Existing Express App
+Part of what makes nanobox so useful is you don't even need nodejs or express installed on your local machine to use them.
 
-Part of what makes nanobox so useful is you don't have to have Node.js or Express installed on your local machine. This guide walks through getting an existing Express app up and running with Nanobox.
+This guide will help you get an existing Express app up-and-running with nanobox.
 
 *If you don't have an existing Express project, the [Express form Scratch guide](/php/express/getting-started/from-scratch) is where you should start.*
 
-## Build a Node Dev Environment
-Nanobox will create an isolated virtual environment and mount your local codebase inside of. From within this environment you can run the app, a ember console, or even rake tasks as you would normally.
+## Build a Ruby Dev Environment
+Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
-### Add a boxfile.yml
-The boxfile.yml tells nanobox how to build and configure these environments. Create a `boxfile.yml` at the root of your project that contains the following:
+From within this environment you can develop and run your app as you normally would with things like `npm install` or `npm start`.
+
+**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+
+#### Add a boxfile.yml
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
 
 ```yaml
 code.build:
-  # tells nanobox to install node.js and associated executables
   engine: nodejs
 ```
 
-### Build the Environment
-With your boxfile.yml in place, you're ready setup your dev environment. From the project directory run the following commands:
+#### Start the Environment
+You can then start the dev environment:
 
 ```bash
-# build the code
-nanobox build
-
-# start the dev environment
 nanobox dev start
-
-# add a convenient way to access your app from the browser
-nanobox dev dns add expressjs.nanobox.dev
 ```
 
 ## Configure Express
-Nanobox requires apps to listen on `0.0.0.0:8080`. In `bin/www`, set the default port to be `8080`:
+To allow connections from the host machine into the app's container modify the `bin/www` telling express to listen on all available IP's at port 8080:
 
 ```js
-/**
- * Get port from environment and store in Express.
- */
-
 var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 ```
 
-## Start Your App
-Now you're ready to run Express. Inside your dev console, just run:
+Also, add a convenient way to access your app from a browser:
 
 ```bash
-# console into the dev environment
-nanobox dev console
+nanobox dev dns add express.nanobox.dev
+```
 
-# start express
+## Express up-and-running
+Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+
+```bash
 npm start
 ```
 
-Your Express app can be accessed in your browser of choice at `expressjs.nanobox.io`.
+Once the app has started you can visit it from your favorite browser at `express.nanobox.dev:8080`.
 
-## Now What?
-Now that you have Express running on Nanobox, what's next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
+## Now what?
+With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a database](/nodejs/express/next-steps/add-a-database)
+* [Add a Database](/nodejs/express/next-steps/add-a-database)
+* [Javascript Runtime](/nodejs/express/next-steps/javascript-runtime)
 * [Local Environment Variables](/nodejs/express/next-steps/local-evars)
-* [Configure Express](/nodejs/express/production/configure-express)
+* [Back to Express overview](/nodejs/express)

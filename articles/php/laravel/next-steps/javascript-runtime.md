@@ -1,5 +1,5 @@
 # Javascript Runtime
-Many handy tools for tasks such as dependency management, asset compilation, etc. require Node.js, npm, and/or other javascript tools. Including Node.js in your app can done by adding the following options to the `code.build` section of your boxfile.yml.
+Many handy tools for tasks such as dependency management, asset compilation, etc. require Node.js, npm, and/or other javascript tools. Including Node.js in your app can done by adding the following options to the `code.build` section of your `boxfile.yml`.
 
 ## Include Node.js in Your boxfile.yml
 
@@ -25,26 +25,15 @@ code.build:
 ```
 
 #### Using a Specific Version of Node.js
-Specifying the `nodejs` package in your boxfile.yml will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions in the [Node.js Settings guide](#).
+Specifying the `nodejs` package in your `boxfile.yml` will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions [here](/nodejs/getting-started/config.html#runtime).
 
 ## Build a New Runtime
-With these options added to your boxfile.yml, build a new runtime to install the Node.js package and run npm.
-
-```bash
-# build a new runtime
-nanobox build
-
-# deploy the environment to the dev runtime
-nanobox dev deploy
-```
+With these options added to your `boxfile.yml`, simply deploy the changes to the dev environment with `nanobox dev deploy`.
 
 #### Verify installation
-With the newly built runtime, you can console in and use `node`, and `npm` like you would normally.
+Once the changes have been deployed, you can verify the javascript runtime from the `nanobox dev console`:
 
 ```bash
-# console into your dev environment
-nanobox dev console
-
 # check the node version
 node -v
 
@@ -57,4 +46,4 @@ With a javascript runtime available, whats next? Think about what else your app 
 
 * [Local Environment Variables](/php/laravel/next-steps/local-evars)
 * [Prepare for Production](/php/laravel/production/configure-laravel)
-* [Back to Laravel overview](/php/laravel)
+* [Back to Rails overview](/php/laravel)

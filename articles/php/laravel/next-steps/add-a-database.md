@@ -1,5 +1,4 @@
 # Add a Database
-
 The majority of Laravel apps will require a database of some kind. Databases are added in your boxfile.yml, then provisioned when deployed into an environment.
 
 ## Add a Data Component to Your boxfile.yml
