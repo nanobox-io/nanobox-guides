@@ -6,7 +6,7 @@ This guide will help you get an existing Sails app up-and-running with nanobox.
 ## Build a Ruby Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
-From within this environment you can develop and run your app as you normally would with things like `npm install` or `sails lift`.
+From within this environment you can develop and run your app as you normally would with things like *npm install* or *sails lift*.
 
 **IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
 

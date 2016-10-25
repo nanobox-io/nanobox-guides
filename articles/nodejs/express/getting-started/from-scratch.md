@@ -8,7 +8,7 @@ This guide outlines the process used to create the <a href="https://github.com/n
 ## Build a Ruby Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
-From within this environment you can develop and run your app as you normally would with things like `npm install` or `npm start`.
+From within this environment you can develop and run your app as you normally would with things like *npm install* or *npm start*.
 
 #### Create a Express project folder
 Decide where you want your project to live and create a folder there:
