@@ -5,18 +5,18 @@ articles:
   - {href: /first-steps/download-nanobox, title: Download Nanobox}
 
   # next steps
-  - {href: //add-components, title:Add App Components}
+  - {href: /add-components, title:Add App Components}
 
   # production
-  - {href: //launch-your-application, title: Launch your Application}
-  - {href: //add-encryption, title: Add SSL/TLS Encryption}
-  - {href: //point-your-domain, title: Point your Domain}
-  - {href: //custom-environment-variables, title: Custom Environment Variables}
+  - {href: /launch-your-application, title: Launch your Application}
+  - {href: /add-encryption, title: Add SSL/TLS Encryption}
+  - {href: /point-your-domain, title: Point your Domain}
+  - {href: /custom-environment-variables, title: Custom Environment Variables}
 
   # going further
-  - {href: //manage-platform-components, title: Manage Platform Components}
-  - {href: //optimize-your-environment, title: Optimize Your Environment}
-  - {href: //scale-your-app, title: Scale Your Application}
-  - {href: //understanding-stats, title: Understanding Stats}
-  - {href: //master-the-boxfile, title: Master the Boxfile}
-  - {href: //effective-logging, title: Effective Logging}
+  - {href: /manage-platform-components, title: Manage Platform Components}
+  - {href: /optimize-your-environment, title: Optimize Your Environment}
+  - {href: /scale-your-app, title: Scale Your Application}
+  - {href: /understanding-stats, title: Understanding Stats}
+  - {href: /master-the-boxfile, title: Master the Boxfile}
+  - {href: /effective-logging, title: Effective Logging}

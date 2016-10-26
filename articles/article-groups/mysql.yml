@@ -5,7 +5,7 @@ articles:
     articles:
       - {href: /mysql/create, title: Create a MySQL Database}
       - {href: /mysql/connect, title: Connect to MySQL}
-      - {href: '/mysql/configure', title: MySQL Config Options}
+      - {href: /mysql/configure, title: MySQL Config Options}
   - title: Managing Data
     articles:
       - {href: /mysql/manage/local, title: Managing Local Data}

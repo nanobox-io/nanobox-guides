@@ -5,7 +5,7 @@ articles:
     articles:
       - {href: /redis/create, title: Creating a Redis Component}
       - {href: /redis/connect, title: Connect to Redis}
-      - {href: '/redis/configure', title: Redis Config Options}
+      - {href: /redis/configure, title: Redis Config Options}
   - title: Managing Data
     articles:
       - {href: /redis/manage/local, title: Managing Local Data}
