@@ -14,8 +14,8 @@ articles:
 
   - title: Dependency Managment
     articles:
-    - {href: /php/deps-management/composer, title: Composer}
-    - {href: /php/deps-management/nodejs-npm, title: Using Node.js & npm}
+    - {href: /php/composer, title: Composer}
+    - {href: /php/nodejs-npm, title: Using Node.js & npm}
 
   - title: PHP Config Options
     articles:

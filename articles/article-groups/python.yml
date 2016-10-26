@@ -13,8 +13,8 @@ articles:
 
   - title: Dependency Management
     articles:
-      - {href: /python/deps-management/pip, title: Pip}
-      - {href: /python/deps-management/nodejs-npm, title: Using Node.js & npm}
+      - {href: /python/pip, title: Pip}
+      - {href: /python/nodejs-npm, title: Using Node.js & npm}
 
   - title: Production
     articles:

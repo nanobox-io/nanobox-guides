@@ -13,7 +13,7 @@ articles:
 
   - title: Dependency Management
     articles:
-      - {href: /nodejs/deps-management/npm, title: npm}
+      - {href: /nodejs/npm, title: npm}
 
   - title: Production
     articles:

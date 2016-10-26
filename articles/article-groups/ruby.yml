@@ -13,8 +13,8 @@ articles:
 
   - title: Dependency Management
     articles:
-      - {href: /ruby/deps-management/bundler, title: Bundler}
-      - {href: /ruby/deps-management/nodejs-npm, title: Using Node.js & npm}
+      - {href: /ruby/bundler, title: Bundler}
+      - {href: /ruby/nodejs-npm, title: Using Node.js & npm}
 
   - title: Production
     articles:

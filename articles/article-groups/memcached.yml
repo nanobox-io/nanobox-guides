@@ -8,5 +8,5 @@ articles:
       - {href: /memcached/configure, title: Memcached Config Options}
   - title: Managing Data
     articles:
-      - {href: /memcached/manage/local, title: Managing Local Data}
-      - {href: /memcached/manage/production, title: Managing Production Data}
+      - {href: /memcached/local, title: Managing Local Data}
+      - {href: /memcached/production, title: Managing Production Data}

@@ -1,3 +1,3 @@
 articles:
-  - {href: /mysql/manage/local, title: Managing Local Data}
-  - {href: /mysql/manage/production, title: Managing Production Data}
+  - {href: /mysql/local, title: Managing Local Data}
+  - {href: /mysql/production, title: Managing Production Data}

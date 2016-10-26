@@ -13,8 +13,8 @@ articles:
 
   - title: Dependency Management
     articles:
-      - {href: /golang/deps-management/deps, title: Go Dependency Management}
-      - {href: /golang/deps-management/nodejs-npm, title: Using Node.js & npm}
+      - {href: /golang/deps, title: Go Dependency Management}
+      - {href: /golang/nodejs-npm, title: Using Node.js & npm}
 
   - title: Production
     articles:

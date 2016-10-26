@@ -8,5 +8,5 @@ articles:
       - {href: /mongodb/configure, title: MongoDB Config Options}
   - title: Managing Mongo Data
     articles:
-      - {href: /mongodb/manage/local, title: Managing Local Data}
-      - {href: /mongodb/manage/production, title: Managing Production Data}
+      - {href: /mongodb/local, title: Managing Local Data}
+      - {href: /mongodb/production, title: Managing Production Data}
