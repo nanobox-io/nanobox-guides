@@ -4,31 +4,31 @@ articles:
 
   - title: Getting Started
     articles:
-      - {href: /php/codeigniter//install-nanobox, title: Install Nanobox}
-      - {href: /php/codeigniter//from-scratch, title: CodeIgniter from Scratch}
-      - {href: /php/codeigniter//existing-app, title: Existing CodeIgniter App}
+      - {href: /php/codeigniter/install-nanobox, title: Install Nanobox}
+      - {href: /php/codeigniter/from-scratch, title: CodeIgniter from Scratch}
+      - {href: /php/codeigniter/existing-app, title: Existing CodeIgniter App}
 
   - title: Next Steps
     articles:
-      - {href: /php/codeigniter//add-a-database, title: Add a Database}
-      - {href: /php/codeigniter//writable-permissions, title: Writable Permissions}
-      - {href: /php/codeigniter//local-evars, title: Local Environment Variables}
-      - {href: /php/codeigniter//javascript-runtime, title: Javascript Runtime}
+      - {href: /php/codeigniter/add-a-database, title: Add a Database}
+      - {href: /php/codeigniter/writable-permissions, title: Writable Permissions}
+      - {href: /php/codeigniter/local-evars, title: Local Environment Variables}
+      - {href: /php/codeigniter/javascript-runtime, title: Javascript Runtime}
 
   - title: Production
     articles:
-      - {href: /php/codeigniter//configure-codeigniter, title: Configure CodeIgniter}
-      - {href: /php/codeigniter//stage-your-app, title: Stage your App}
-      - {href: /php/codeigniter//launch-your-app, title: Launch your App}
-      - {href: /php/codeigniter//point-your-domain, title: Point your Domain}
-      - {href: /php/codeigniter//encryption, title: SSL/TLS Encryption}
-      - {href: /php/codeigniter//production-evars, title: Production Environment Variables}
+      - {href: /php/codeigniter/configure-codeigniter, title: Configure CodeIgniter}
+      - {href: /php/codeigniter/stage-your-app, title: Stage your App}
+      - {href: /php/codeigniter/launch-your-app, title: Launch your App}
+      - {href: /php/codeigniter/point-your-domain, title: Point your Domain}
+      - {href: /php/codeigniter/encryption, title: SSL/TLS Encryption}
+      - {href: /php/codeigniter/production-evars, title: Production Environment Variables}
 
   - title: Going Further
     articles:
-      - {href: /php/codeigniter//scale-your-app, title: Scale Your App}
-      - {href: /php/codeigniter//debugging, title: Debugging}
-      - {href: /php/codeigniter//app-health, title: App Health}
-      - {href: /php/codeigniter//remote-access, title: Remote Access}
-      - {href: /php/codeigniter//team-management, title: Team Management}
-      - {href: /php/codeigniter//manage-platform, title: Manage Platform}
+      - {href: /php/codeigniter/scale-your-app, title: Scale Your App}
+      - {href: /php/codeigniter/debugging, title: Debugging}
+      - {href: /php/codeigniter/app-health, title: App Health}
+      - {href: /php/codeigniter/remote-access, title: Remote Access}
+      - {href: /php/codeigniter/team-management, title: Team Management}
+      - {href: /php/codeigniter/manage-platform, title: Manage Platform}

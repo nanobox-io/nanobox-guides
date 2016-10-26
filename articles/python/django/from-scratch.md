@@ -56,7 +56,7 @@ Once the app has started you can visit it from your favorite browser at `django.
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/python/django//add-a-database)
-* [Javascript Runtime](/python/django//javascript-runtime)
-* [Local Environment Variables](/python/django//local-evars)
+* [Add a Database](/python/django/add-a-database)
+* [Javascript Runtime](/python/django/javascript-runtime)
+* [Local Environment Variables](/python/django/local-evars)
 * [Back to Django overview](/python/django)

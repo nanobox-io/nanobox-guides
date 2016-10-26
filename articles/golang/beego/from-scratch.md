@@ -75,7 +75,7 @@ Once the app has started you can visit it from your favorite browser at `beego.n
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/golang/beego//add-a-database)
-* [Javascript Runtime](/golang/beego//javascript-runtime)
-* [Local Environment Variables](/golang/beego//local-evars)
+* [Add a Database](/golang/beego/add-a-database)
+* [Javascript Runtime](/golang/beego/javascript-runtime)
+* [Local Environment Variables](/golang/beego/local-evars)
 * [Back to Beego overview](/golang/beego)

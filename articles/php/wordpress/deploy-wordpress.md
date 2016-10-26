@@ -23,7 +23,7 @@ Once deployed, you can access and test your sim app at `http://wordpress.nanobox
 
 
 ## Launch Your App with Nanobox
-Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io//launch-app/).
+Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io/production/launch-app/).
 
 ### Link Your Codebase to Your New App
 In order to deploy to your new app, you'll need to link it to your local WordPress codebase using the `nanobox link` command.
@@ -63,6 +63,6 @@ With your production app up and running, you can import your database and upload
 ## Enjoy Your Live WordPress App
 Congratulations. Your WordPress app is now live. The here's a few next steps you may want to go through:
 
-[Point Your Domain](/php/wordpress//point-your-domain)  
-[SSL/TLS Encryption](/php/wordpress//encryption)  
-[Force HTTPS](/php/wordpress//force-https)
+[Point Your Domain](/php/wordpress/point-your-domain)  
+[SSL/TLS Encryption](/php/wordpress/encryption)  
+[Force HTTPS](/php/wordpress/force-https)

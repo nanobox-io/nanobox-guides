@@ -4,7 +4,7 @@ Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc.
 
 The processed outlined in this guide was the same used to create the [nanobox-wordpress](https://github.com/nanobox-quickstarts/nanobox-wordpress) quickstart found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
-*If you don't have an existing WordPress project, the [WordPress from Scratch guide](/php/wordpress//from-scratch) is where you should start.*
+*If you don't have an existing WordPress project, the [WordPress from Scratch guide](/php/wordpress/from-scratch) is where you should start.*
 
 ## Prepare Your Codebase
 There are a few modifications you need make to WordPress to allow your app to connect to your database and create secure sessions.
@@ -87,7 +87,7 @@ define('LOGGED_IN_SALT',   $_ENV['LOGGED_IN_SALT']   ?: '');
 define('NONCE_SALT',       $_ENV['NONCE_SALT']       ?: '');
 ```
 
-*Generating these environment variables is covered in the [Deploy Wordpress](/php/wordpress//deploy-wordpress) guide.*
+*Generating these environment variables is covered in the [Deploy Wordpress](/php/wordpress/deploy-wordpress) guide.*
 
 ## Build a WordPress Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app and perform other tasks as you would normally.
@@ -118,4 +118,4 @@ Now that you have WordPress running with Nanobox, what's next? Hopefully the top
 [Importing Uploads](/php/wordpress/data-storage-management/importing-uploads)  
 [Installing & Updating Plugins](/php/wordpress/plugins-themes/installing-updating-plugins)  
 [Installing & Updating Themes](/php/wordpress/plugins-themes/installing-updating-themes)  
-[Deploying Wordpress](/php/wordpress//deploy-wordpress)
+[Deploying Wordpress](/php/wordpress/deploy-wordpress)

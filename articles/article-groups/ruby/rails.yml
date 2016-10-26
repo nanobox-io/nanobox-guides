@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /ruby/rails//install-nanobox, title: Install Nanobox}
-      - {href: /ruby/rails//from-scratch, title: Rails from Scratch}
-      - {href: /ruby/rails//existing-app, title: Existing Rails App}
+      - {href: /ruby/rails/install-nanobox, title: Install Nanobox}
+      - {href: /ruby/rails/from-scratch, title: Rails from Scratch}
+      - {href: /ruby/rails/existing-app, title: Existing Rails App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /ruby/rails//add-a-database, title: Add a Database}
-      - {href: /ruby/rails//local-evars, title: Local Environment Variables}
-      - {href: /ruby/rails//javascript-runtime, title: Javascript Runtime}
+      - {href: /ruby/rails/add-a-database, title: Add a Database}
+      - {href: /ruby/rails/local-evars, title: Local Environment Variables}
+      - {href: /ruby/rails/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /ruby/rails//configure-rails, title: Configure Rails}
-      - {href: /ruby/rails//stage-your-app, title: Stage your App}
-      - {href: /ruby/rails//launch-your-app, title: Launch your App}
-      - {href: /ruby/rails//point-your-domain, title: Point your Domain}
-      - {href: /ruby/rails//encryption, title: SSL/TLS Encryption}
-      - {href: /ruby/rails//production-evars, title: Production Environment Variables}
+      - {href: /ruby/rails/configure-rails, title: Configure Rails}
+      - {href: /ruby/rails/stage-your-app, title: Stage your App}
+      - {href: /ruby/rails/launch-your-app, title: Launch your App}
+      - {href: /ruby/rails/point-your-domain, title: Point your Domain}
+      - {href: /ruby/rails/encryption, title: SSL/TLS Encryption}
+      - {href: /ruby/rails/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /ruby/rails//scale-your-app, title: Scale Your App}
-      - {href: /ruby/rails//debugging, title: Debugging}
-      - {href: /ruby/rails//app-health, title: App Health}
-      - {href: /ruby/rails//remote-access, title: Remote Access}
-      - {href: /ruby/rails//team-management, title: Team Management}
-      - {href: /ruby/rails//manage-platform, title: Manage Platform}
+      - {href: /ruby/rails/scale-your-app, title: Scale Your App}
+      - {href: /ruby/rails/debugging, title: Debugging}
+      - {href: /ruby/rails/app-health, title: App Health}
+      - {href: /ruby/rails/remote-access, title: Remote Access}
+      - {href: /ruby/rails/team-management, title: Team Management}
+      - {href: /ruby/rails/manage-platform, title: Manage Platform}

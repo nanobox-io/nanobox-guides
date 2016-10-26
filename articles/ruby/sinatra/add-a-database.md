@@ -1,5 +1,5 @@
 # Add a Database
-Nanobox apps are comprised of <a href="https://docs.nanobox.io//add-components/" target="\_blank">components</a> (docker images configured for nanobox). Components are added to apps via the `boxfile.yml`, making adding a database for your app to connect to effortless.
+Nanobox apps are comprised of <a href="https://docs.nanobox.io/getting-started/add-components/" target="\_blank">components</a> (docker images configured for nanobox). Components are added to apps via the `boxfile.yml`, making adding a database for your app to connect to effortless.
 
 ## Add a data component
 To add a database to your app, simply add a data component to your `boxfile.yml`:
@@ -102,7 +102,7 @@ ruby myapp.rb
 ## Now what?
 With your app connected to a database, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Javascript Runtime](/ruby/sinatra//javascript-runtime)
-* [Local Environment Variables](/ruby/sinatra//local-evars)
-* [Prepare for Production](/ruby/sinatra//configure-sinatra)
+* [Javascript Runtime](/ruby/sinatra/javascript-runtime)
+* [Local Environment Variables](/ruby/sinatra/local-evars)
+* [Prepare for Production](/ruby/sinatra/configure-sinatra)
 * [Back to Sinatra overview](/ruby/sinatra)

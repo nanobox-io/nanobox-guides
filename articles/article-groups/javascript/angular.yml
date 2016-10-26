@@ -5,11 +5,11 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /javascript/angular//install-nanobox, title: Install Nanobox}
-      - {href: /javascript/angular//from-scratch, title: Angular from Scratch}
-      - {href: /javascript/angular//existing-app, title: Existing Angular App}
+      - {href: /javascript/angular/install-nanobox, title: Install Nanobox}
+      - {href: /javascript/angular/from-scratch, title: Angular from Scratch}
+      - {href: /javascript/angular/existing-app, title: Existing Angular App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /javascript/angular//launch-backend, title: Launch your backend}
+      - {href: /javascript/angular/launch-backend, title: Launch your backend}

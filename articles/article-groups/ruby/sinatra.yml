@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /ruby/sinatra//install-nanobox, title: Install Nanobox}
-      - {href: /ruby/sinatra//from-scratch, title: Sinatra from Scratch}
-      - {href: /ruby/sinatra//existing-app, title: Existing Sinatra App}
+      - {href: /ruby/sinatra/install-nanobox, title: Install Nanobox}
+      - {href: /ruby/sinatra/from-scratch, title: Sinatra from Scratch}
+      - {href: /ruby/sinatra/existing-app, title: Existing Sinatra App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /ruby/sinatra//add-a-database, title: Add a Database}
-      - {href: /ruby/sinatra//local-evars, title: Local Environment Variables}
-      - {href: /ruby/sinatra//javascript-runtime, title: Javascript Runtime}
+      - {href: /ruby/sinatra/add-a-database, title: Add a Database}
+      - {href: /ruby/sinatra/local-evars, title: Local Environment Variables}
+      - {href: /ruby/sinatra/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /ruby/sinatra//configure-sinatra, title: Configure Sinatra}
-      - {href: /ruby/sinatra//stage-your-app, title: Stage your App}
-      - {href: /ruby/sinatra//launch-your-app, title: Launch your App}
-      - {href: /ruby/sinatra//point-your-domain, title: Point your Domain}
-      - {href: /ruby/sinatra//encryption, title: SSL/TLS Encryption}
-      - {href: /ruby/sinatra//production-evars, title: Production Environment Variables}
+      - {href: /ruby/sinatra/configure-sinatra, title: Configure Sinatra}
+      - {href: /ruby/sinatra/stage-your-app, title: Stage your App}
+      - {href: /ruby/sinatra/launch-your-app, title: Launch your App}
+      - {href: /ruby/sinatra/point-your-domain, title: Point your Domain}
+      - {href: /ruby/sinatra/encryption, title: SSL/TLS Encryption}
+      - {href: /ruby/sinatra/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /ruby/sinatra//scale-your-app, title: Scale Your App}
-      - {href: /ruby/sinatra//debugging, title: Debugging}
-      - {href: /ruby/sinatra//app-health, title: App Health}
-      - {href: /ruby/sinatra//remote-access, title: Remote Access}
-      - {href: /ruby/sinatra//team-management, title: Team Management}
-      - {href: /ruby/sinatra//manage-platform, title: Manage Platform}
+      - {href: /ruby/sinatra/scale-your-app, title: Scale Your App}
+      - {href: /ruby/sinatra/debugging, title: Debugging}
+      - {href: /ruby/sinatra/app-health, title: App Health}
+      - {href: /ruby/sinatra/remote-access, title: Remote Access}
+      - {href: /ruby/sinatra/team-management, title: Team Management}
+      - {href: /ruby/sinatra/manage-platform, title: Manage Platform}

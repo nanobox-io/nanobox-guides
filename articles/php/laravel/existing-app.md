@@ -2,7 +2,7 @@
 
 Part of what makes Nanobox so useful is you don't have to have PHP installed on your local machine to run PHP apps. This guide walks through getting an existing Laravel app up and running with Nanobox.
 
-*If you don't have an existing Laravel project, the [Laravel from Scratch](/php/laravel//from-scratch) guide would be the best place to start.*
+*If you don't have an existing Laravel project, the [Laravel from Scratch](/php/laravel/from-scratch) guide would be the best place to start.*
 
 ## Build a PHP Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app, artisan commands, or other tasks as you would normally.

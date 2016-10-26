@@ -51,7 +51,7 @@ Once the app has started you can visit it from your favorite browser at `sinatra
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/ruby/sinatra//add-a-database)
-* [Javascript Runtime](/ruby/sinatra//javascript-runtime)
-* [Local Environment Variables](/ruby/sinatra//local-evars)
+* [Add a Database](/ruby/sinatra/add-a-database)
+* [Javascript Runtime](/ruby/sinatra/javascript-runtime)
+* [Local Environment Variables](/ruby/sinatra/local-evars)
 * [Back to Sinatra overview](/ruby/sinatra)

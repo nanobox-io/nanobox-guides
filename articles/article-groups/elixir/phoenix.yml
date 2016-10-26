@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /elixir/phoenix//install-nanobox, title: Install Nanobox}
-      - {href: /elixir/phoenix//from-scratch, title: Phoenix from Scratch}
-      - {href: /elixir/phoenix//existing-app, title: Existing Phoenix App}
+      - {href: /elixir/phoenix/install-nanobox, title: Install Nanobox}
+      - {href: /elixir/phoenix/from-scratch, title: Phoenix from Scratch}
+      - {href: /elixir/phoenix/existing-app, title: Existing Phoenix App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /elixir/phoenix//add-a-database, title: Add a Database}
-      - {href: /elixir/phoenix//local-evars, title: Local Environment Variables}
-      - {href: /elixir/phoenix//javascript-runtime, title: Javascript Runtime}
+      - {href: /elixir/phoenix/add-a-database, title: Add a Database}
+      - {href: /elixir/phoenix/local-evars, title: Local Environment Variables}
+      - {href: /elixir/phoenix/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /elixir/phoenix//configure-phoenix, title: Configure Phoenix}
-      - {href: /elixir/phoenix//stage-your-app, title: Stage your App}
-      - {href: /elixir/phoenix//launch-your-app, title: Launch your App}
-      - {href: /elixir/phoenix//point-your-domain, title: Point your Domain}
-      - {href: /elixir/phoenix//encryption, title: SSL/TLS Encryption}
-      - {href: /elixir/phoenix//production-evars, title: Production Environment Variables}
+      - {href: /elixir/phoenix/configure-phoenix, title: Configure Phoenix}
+      - {href: /elixir/phoenix/stage-your-app, title: Stage your App}
+      - {href: /elixir/phoenix/launch-your-app, title: Launch your App}
+      - {href: /elixir/phoenix/point-your-domain, title: Point your Domain}
+      - {href: /elixir/phoenix/encryption, title: SSL/TLS Encryption}
+      - {href: /elixir/phoenix/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /elixir/phoenix//scale-your-app, title: Scale Your App}
-      - {href: /elixir/phoenix//debugging, title: Debugging}
-      - {href: /elixir/phoenix//app-health, title: App Health}
-      - {href: /elixir/phoenix//remote-access, title: Remote Access}
-      - {href: /elixir/phoenix//team-management, title: Team Management}
-      - {href: /elixir/phoenix//manage-platform, title: Manage Platform}
+      - {href: /elixir/phoenix/scale-your-app, title: Scale Your App}
+      - {href: /elixir/phoenix/debugging, title: Debugging}
+      - {href: /elixir/phoenix/app-health, title: App Health}
+      - {href: /elixir/phoenix/remote-access, title: Remote Access}
+      - {href: /elixir/phoenix/team-management, title: Team Management}
+      - {href: /elixir/phoenix/manage-platform, title: Manage Platform}

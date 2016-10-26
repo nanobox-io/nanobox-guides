@@ -40,7 +40,7 @@ WIP
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/elixir/phoenix//add-a-database)
-* [Javascript Runtime](/elixir/phoenix//javascript-runtime)
-* [Local Environment Variables](/elixir/phoenix//local-evars)
+* [Add a Database](/elixir/phoenix/add-a-database)
+* [Javascript Runtime](/elixir/phoenix/javascript-runtime)
+* [Local Environment Variables](/elixir/phoenix/local-evars)
 * [Back to Phoenix overview](/elixir/phoenix)

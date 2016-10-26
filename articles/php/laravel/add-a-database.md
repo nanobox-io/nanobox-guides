@@ -2,7 +2,7 @@
 The majority of Laravel apps will require a database of some kind. Databases are added in your boxfile.yml, then provisioned when deployed into an environment.
 
 ## Add a Data Component to Your boxfile.yml
-Apps built with Nanobox are comprised of [components](https://docs.nanobox.io//add-components/) - supporting services that make your app work. To create a database, add a data component to your boxfile.yml. For this example, we'll use add a MySQL database.
+Apps built with Nanobox are comprised of [components](https://docs.nanobox.io/getting-started/add-components/) - supporting services that make your app work. To create a database, add a data component to your boxfile.yml. For this example, we'll use add a MySQL database.
 
 ```yaml
 code.build:

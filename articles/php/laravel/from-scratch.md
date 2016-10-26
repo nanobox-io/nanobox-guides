@@ -4,7 +4,7 @@ Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc.
 
 The process outlined here is the same process used to create the [nanobox-laravel](https://github.com/nanobox-quickstarts/nanobox-laravel) quickstart found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
-*If you have an existing Laravel project, the [Existing Laravel App guide](/php/laravel//existing-app) is where you should start.*
+*If you have an existing Laravel project, the [Existing Laravel App guide](/php/laravel/existing-app) is where you should start.*
 
 
 ## Build a PHP Dev Environment

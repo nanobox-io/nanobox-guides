@@ -48,7 +48,7 @@ Once the app has started you can visit it from your favorite browser at `hugo.na
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/golang/hugo//add-a-database)
-* [Javascript Runtime](/golang/hugo//javascript-runtime)
-* [Local Environment Variables](/golang/hugo//local-evars)
+* [Add a Database](/golang/hugo/add-a-database)
+* [Javascript Runtime](/golang/hugo/javascript-runtime)
+* [Local Environment Variables](/golang/hugo/local-evars)
 * [Back to Hugo overview](/golang/hugo)

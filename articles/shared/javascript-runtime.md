@@ -55,6 +55,6 @@ npm -v
 ## Now what?
 With a javascript runtime available, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Local Environment Variables](/ruby/sinatra//local-evars)
-* [Prepare for Production](/ruby/sinatra//configure-sinatra)
+* [Local Environment Variables](/ruby/sinatra/local-evars)
+* [Prepare for Production](/ruby/sinatra/configure-sinatra)
 * [Back to Sinatra overview](/ruby/sinatra)

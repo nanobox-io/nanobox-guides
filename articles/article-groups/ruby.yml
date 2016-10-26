@@ -3,13 +3,13 @@ href: /ruby
 articles:
   - title: Getting Started
     articles:
-      - {href: /ruby//create-dev-env, title: Create a Ruby Dev Environment}
-      - {href: /ruby//config, title: Configure Ruby}
+      - {href: /ruby/create-dev-env, title: Create a Ruby Dev Environment}
+      - {href: /ruby/config, title: Configure Ruby}
 
   - title: Next Steps
     articles:
-      - {href: /ruby//add-components, title: Add App Components}
-      - {href: /ruby//local-evars, title: Local Environment Variables}
+      - {href: /ruby/add-components, title: Add App Components}
+      - {href: /ruby/local-evars, title: Local Environment Variables}
 
   - title: Dependency Management
     articles:
@@ -18,17 +18,17 @@ articles:
 
   - title: Production
     articles:
-      - {href: /ruby//stage-your-app, title: Stage your App}
-      - {href: /ruby//launch-your-app, title: Launch your App}
-      - {href: /ruby//point-your-domain, title: Point your Domain}
-      - {href: /ruby//encryption, title: SSL/TLS Encryption}
-      - {href: /ruby//production-evars, title: Production Environment Variables}
+      - {href: /ruby/stage-your-app, title: Stage your App}
+      - {href: /ruby/launch-your-app, title: Launch your App}
+      - {href: /ruby/point-your-domain, title: Point your Domain}
+      - {href: /ruby/encryption, title: SSL/TLS Encryption}
+      - {href: /ruby/production-evars, title: Production Environment Variables}
 
   - title: Going Further
     articles:
-      - {href: /ruby//scale-your-app, title: Scale Your App}
-      - {href: /ruby//debugging, title: Debugging}
-      - {href: /ruby//app-health, title: App Health}
-      - {href: /ruby//remote-access, title: Remote Access}
-      - {href: /ruby//team-management, title: Team Management}
-      - {href: /ruby//manage-platform, title: Manage Platform}
+      - {href: /ruby/scale-your-app, title: Scale Your App}
+      - {href: /ruby/debugging, title: Debugging}
+      - {href: /ruby/app-health, title: App Health}
+      - {href: /ruby/remote-access, title: Remote Access}
+      - {href: /ruby/team-management, title: Team Management}
+      - {href: /ruby/manage-platform, title: Manage Platform}

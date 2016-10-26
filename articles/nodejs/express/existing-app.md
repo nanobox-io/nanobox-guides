@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need nodejs or express in
 
 This guide will help you get an existing Express app up-and-running with nanobox.
 
-*If you don't have an existing Express project, the [Express form Scratch guide](/php/express//from-scratch) is where you should start.*
+*If you don't have an existing Express project, the [Express form Scratch guide](/php/express/from-scratch) is where you should start.*
 
 ## Build a Nodejs Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
@@ -53,7 +53,7 @@ Once the app has started you can visit it from your favorite browser at `express
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/nodejs/express//add-a-database)
-* [Javascript Runtime](/nodejs/express//javascript-runtime)
-* [Local Environment Variables](/nodejs/express//local-evars)
+* [Add a Database](/nodejs/express/add-a-database)
+* [Javascript Runtime](/nodejs/express/javascript-runtime)
+* [Local Environment Variables](/nodejs/express/local-evars)
 * [Back to Express overview](/nodejs/express)

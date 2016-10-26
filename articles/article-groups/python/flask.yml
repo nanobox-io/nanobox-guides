@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /python/flask//install-nanobox, title: Install Nanobox}
-      - {href: /python/flask//from-scratch, title: Flask from Scratch}
-      - {href: /python/flask//existing-app, title: Existing Flask App}
+      - {href: /python/flask/install-nanobox, title: Install Nanobox}
+      - {href: /python/flask/from-scratch, title: Flask from Scratch}
+      - {href: /python/flask/existing-app, title: Existing Flask App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /python/flask//add-a-database, title: Add a Database}
-      - {href: /python/flask//local-evars, title: Local Environment Variables}
-      - {href: /python/flask//javascript-runtime, title: Javascript Runtime}
+      - {href: /python/flask/add-a-database, title: Add a Database}
+      - {href: /python/flask/local-evars, title: Local Environment Variables}
+      - {href: /python/flask/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /python/flask//configure-flask, title: Configure Flask}
-      - {href: /python/flask//stage-your-app, title: Stage your App}
-      - {href: /python/flask//launch-your-app, title: Launch your App}
-      - {href: /python/flask//point-your-domain, title: Point your Domain}
-      - {href: /python/flask//encryption, title: SSL/TLS Encryption}
-      - {href: /python/flask//production-evars, title: Production Environment Variables}
+      - {href: /python/flask/configure-flask, title: Configure Flask}
+      - {href: /python/flask/stage-your-app, title: Stage your App}
+      - {href: /python/flask/launch-your-app, title: Launch your App}
+      - {href: /python/flask/point-your-domain, title: Point your Domain}
+      - {href: /python/flask/encryption, title: SSL/TLS Encryption}
+      - {href: /python/flask/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /python/flask//scale-your-app, title: Scale Your App}
-      - {href: /python/flask//debugging, title: Debugging}
-      - {href: /python/flask//app-health, title: App Health}
-      - {href: /python/flask//remote-access, title: Remote Access}
-      - {href: /python/flask//team-management, title: Team Management}
-      - {href: /python/flask//manage-platform, title: Manage Platform}
+      - {href: /python/flask/scale-your-app, title: Scale Your App}
+      - {href: /python/flask/debugging, title: Debugging}
+      - {href: /python/flask/app-health, title: App Health}
+      - {href: /python/flask/remote-access, title: Remote Access}
+      - {href: /python/flask/team-management, title: Team Management}
+      - {href: /python/flask/manage-platform, title: Manage Platform}

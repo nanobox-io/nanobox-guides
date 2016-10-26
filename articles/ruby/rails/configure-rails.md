@@ -2,7 +2,7 @@
 With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io//add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io//add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -138,6 +138,6 @@ namespace :db do
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/ruby/rails//stage-your-app)
-* [Launch your App](/ruby/rails//launch-your-app)
+* [Stage your App](/ruby/rails/stage-your-app)
+* [Launch your App](/ruby/rails/launch-your-app)
 * [Back to rails overview](/ruby/rails)

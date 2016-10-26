@@ -4,7 +4,7 @@ With very little effort you can take your app from a local development app to a 
 Express has a [best practices](https://expressjs.com/en/advanced/best-practice-performance.html) guide when it comes to preparing your app for production. It is recommended that you review that document before using this guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io//add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the express server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io//add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the express server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -45,6 +45,6 @@ Since there is no standard tool for migrating data with nodejs, it's recommended
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/nodejs/express//stage-your-app)
-* [Launch your App](/nodejs/express//launch-your-app)
+* [Stage your App](/nodejs/express/stage-your-app)
+* [Launch your App](/nodejs/express/launch-your-app)
 * [Back to express overview](/nodejs/express)
