@@ -45,7 +45,7 @@ npm install pg-promise
 
 Then create a `database.js` at the root of your project with the following:
 
-```js
+```javascript
 var pgp = require("pg-promise")(/*options*/);
 var db = pgp("postgres://${process.env.DATA_DB_USER}:${process.env.DATA_DB_PASS}@${process.env.DATA_DB_HOST}:${}/db");
 ```

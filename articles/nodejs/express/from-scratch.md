@@ -59,7 +59,7 @@ npm install
 #### Configure Express
 To allow connections from the host machine into the app's container modify the `bin/www` telling express to listen on all available IP's at port 8080:
 
-```js
+```javascript
 var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 ```
