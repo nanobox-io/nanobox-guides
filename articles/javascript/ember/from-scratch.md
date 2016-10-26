@@ -5,39 +5,37 @@ Nanobox can be used for quickly testing ember in isolation, however, think about
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-ember" target="\_blank">nanobox-ember</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-## Build a Node Dev Environment
-Nanobox will create an isolated virtual environment and mount your local codebase inside of. From within this environment you can run the app, a ember console, or even rake tasks as you would normally.
+## Build a Ruby Dev Environment
+Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
+From within this environment you can develop and run your app as you normally would with things like *npm install* and *ember server*.
+
+#### Create a Ember project folder
 Decide where you want your project to live and create a folder there:
 
 ```bash
-# create a project folder
 mkdir nanobox-ember
 ```
 
+**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+
 #### Add a boxfile.yml
-The boxfile.yml tells nanobox how to build and configure these environments. Create a `boxfile.yml` at the root of your project that contains the following:
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
 
 ```yaml
-# tell nanobox to build a nodejs runtime
 code.build:
   engine: nodejs
 ```
 
-#### Build the Environment
+#### Start the Environment
+You can then start the dev environment:
 
 ```bash
-# build a nodejs runtime
-nanobox build
-
-# deploy the nodejs runtime into the dev environment
-nanobox dev deploy
-
-# add a convenient way to access your app from a browser
-nanobox dev dns add ember.nanobox.dev
+nanobox dev start
 ```
 
-## Create an Ember App
+## Create a Ember App
+Once the dev environment is started you can console into it and create a new ember application:
 
 ```bash
 # console into the dev environment
@@ -61,8 +59,8 @@ cd -
 cp -a /tmp/tmp-app/* .
 ```
 
-#### Make App Accessible
-We need to allow connections from the host into the app's container. To do this we need modify the `.ember-cli` telling ember to listen on all available IP's at port 8080:
+#### Configure Ember
+To allow connections from the host machine into the app's container modify the `.ember-cli` telling ember to listen on all available IP's at port 8080:
 
 ```javascript
 {
@@ -71,12 +69,25 @@ We need to allow connections from the host into the app's container. To do this 
 }
 ```
 
-## Ember up-and-running
-With the app configured the last thing to do is run it:
+Also, add a convenient way to access your app from a browser:
 
 ```bash
-# run the app from the nanobox dev console
+nanobox dev dns add ember.nanobox.dev
+```
+
+## Ember up-and-running
+Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+
+```bash
 ember server
 ```
 
-Visit the app from your favorite browser at: `ember.nanobox.dev`
+Once the app has started you can visit it from your favorite browser at `ember.nanobox.dev:8080`.
+
+## Now what?
+With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+
+* [Add a Database](/javascript/ember/add-a-database)
+* [Javascript Runtime](/javascript/ember/javascript-runtime)
+* [Local Environment Variables](/javascript/ember/local-evars)
+* [Back to Ember overview](/javascript/ember)
