@@ -186,7 +186,7 @@ minifyAndJoin = () ->
 
 # Livereload Server
 server = ->
-  port      = 3814
+  port      = 8080
   hostname  = null # allow to connect from anywhere
   base      = 'server'
   directory = 'server'
@@ -200,7 +200,7 @@ server = ->
 launch = ->
   console.log '-------------------------------'
   console.log 'Build Complete, visit : '
-  console.log "http://guides.nanobox.dev:3814/"
+  console.log "http://guides.nanobox.dev"
   # gulp.src("./server/index.html") # An actual file must be specified or gulp will overlook the task.
   #   .pipe(open("",
   #     url: "http://localhost:3814/index.html",
