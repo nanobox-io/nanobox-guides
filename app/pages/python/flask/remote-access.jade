@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Remote Access"
+    articles = "python/flask"
+    icons    = "python,flask"
+    
+block markdown
+  include:md /articles/shared//remote-access.md

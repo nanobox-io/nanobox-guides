@@ -5,32 +5,32 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /nodejs/express/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /nodejs/express/getting-started/from-scratch, title: Express from Scratch}
-      - {href: /nodejs/express/getting-started/existing-app, title: Existing Express App}
+      - {href: /nodejs/express//install-nanobox, title: Install Nanobox}
+      - {href: /nodejs/express//from-scratch, title: Express from Scratch}
+      - {href: /nodejs/express//existing-app, title: Existing Express App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /nodejs/express/next-steps/add-a-database, title: Add a Database}
-      - {href: /nodejs/express/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /nodejs/express//add-a-database, title: Add a Database}
+      - {href: /nodejs/express//local-evars, title: Local Environment Variables}
 
   #
   - title: "Production"
     articles:
-      - {href: /nodejs/express/production/configure-express, title: Configure Express}
-      - {href: /nodejs/express/production/stage-your-app, title: Stage your App}
-      - {href: /nodejs/express/production/launch-your-app, title: Launch your App}
-      - {href: /nodejs/express/production/point-your-domain, title: Point your Domain}
-      - {href: /nodejs/express/production/encryption, title: SSL/TLS Encryption}
-      - {href: /nodejs/express/production/production-evars, title: Production Environment Variables}
+      - {href: /nodejs/express//configure-express, title: Configure Express}
+      - {href: /nodejs/express//stage-your-app, title: Stage your App}
+      - {href: /nodejs/express//launch-your-app, title: Launch your App}
+      - {href: /nodejs/express//point-your-domain, title: Point your Domain}
+      - {href: /nodejs/express//encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/express//production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /nodejs/express/going-further/scale-your-app, title: Scale Your App}
-      - {href: /nodejs/express/going-further/debugging, title: Debugging}
-      - {href: /nodejs/express/going-further/app-health, title: App Health}
-      - {href: /nodejs/express/going-further/remote-access, title: Remote Access}
-      - {href: /nodejs/express/going-further/team-management, title: Team Management}
-      - {href: /nodejs/express/going-further/manage-platform, title: Manage Platform}
+      - {href: /nodejs/express//scale-your-app, title: Scale Your App}
+      - {href: /nodejs/express//debugging, title: Debugging}
+      - {href: /nodejs/express//app-health, title: App Health}
+      - {href: /nodejs/express//remote-access, title: Remote Access}
+      - {href: /nodejs/express//team-management, title: Team Management}
+      - {href: /nodejs/express//manage-platform, title: Manage Platform}

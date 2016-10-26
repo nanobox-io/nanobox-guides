@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Manage Platform"
+    articles = "ruby/rails"
+    icons    = "ruby,rails"
+    
+block markdown
+  include:md /articles/shared//manage-platform.md

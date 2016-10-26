@@ -5,11 +5,11 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /javascript/ember/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /javascript/ember/getting-started/from-scratch, title: Ember from Scratch}
-      - {href: /javascript/ember/getting-started/existing-app, title: Existing Ember App}
+      - {href: /javascript/ember//install-nanobox, title: Install Nanobox}
+      - {href: /javascript/ember//from-scratch, title: Ember from Scratch}
+      - {href: /javascript/ember//existing-app, title: Existing Ember App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /javascript/ember/next-steps/launch-backend, title: Launch your Backend}
+      - {href: /javascript/ember//launch-backend, title: Launch your Backend}

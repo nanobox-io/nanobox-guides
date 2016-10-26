@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Javascript Runtime"
+    articles = "golang/beego"
+    icons    = "golang,beego"
+    
+block markdown
+  include:md /articles/golang/beego//javascript-runtime.md

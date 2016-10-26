@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Writable Permissions"
+    articles = "php/laravel"
+    icons    = "php,laravel"
+    
+block markdown
+  include:md /articles/shared//writable-permissions.md

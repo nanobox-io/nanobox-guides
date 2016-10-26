@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Javascript Runtime"
+    articles = "php/laravel"
+    icons    = "php,laravel"
+    
+block markdown
+  include:md /articles/php/laravel//javascript-runtime.md

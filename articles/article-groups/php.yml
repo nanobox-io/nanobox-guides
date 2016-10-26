@@ -3,14 +3,14 @@ href: /php
 articles:
   - title: First Steps
     articles:
-      - {href: /php/getting-started/create-dev-env, title: Create a PHP Dev Environment}
-      - {href: /php/getting-started/working-in-dev, title: Working in Dev}
+      - {href: /php//create-dev-env, title: Create a PHP Dev Environment}
+      - {href: /php//working-in-dev, title: Working in Dev}
 
   - title: Next Steps
     articles:
-      - {href: /php/next-steps/add-components, title: Add App Components}
-      - {href: /php/next-steps/writable-permissions, title: Writable Permissions}
-      - {href: /php/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /php//add-components, title: Add App Components}
+      - {href: /php//writable-permissions, title: Writable Permissions}
+      - {href: /php//local-evars, title: Local Environment Variables}
 
   - title: Dependency Managment
     articles:
@@ -43,17 +43,17 @@ articles:
 
   - title: Production
     articles:
-      - {href: /php/production/stage-your-app, title: Stage your App}
-      - {href: /php/production/launch-your-app, title: Launch your App}
-      - {href: /php/production/point-your-domain, title: Point your Domain}
-      - {href: /php/production/encryption, title: SSL/TLS Encryption}
-      - {href: /php/production/production-evars, title: Production Environment Variables}
+      - {href: /php//stage-your-app, title: Stage your App}
+      - {href: /php//launch-your-app, title: Launch your App}
+      - {href: /php//point-your-domain, title: Point your Domain}
+      - {href: /php//encryption, title: SSL/TLS Encryption}
+      - {href: /php//production-evars, title: Production Environment Variables}
 
   - title: Going Further
     articles:
-      - {href: /php/going-further/scale-your-app, title: Scale Your App}
-      - {href: /php/going-further/debugging, title: Debugging}
-      - {href: /php/going-further/app-health, title: App Health}
-      - {href: /php/going-further/remote-access, title: Remote Access}
-      - {href: /php/going-further/team-management, title: Team Management}
-      - {href: /php/going-further/manage-platform, title: Manage Platform}
+      - {href: /php//scale-your-app, title: Scale Your App}
+      - {href: /php//debugging, title: Debugging}
+      - {href: /php//app-health, title: App Health}
+      - {href: /php//remote-access, title: Remote Access}
+      - {href: /php//team-management, title: Team Management}
+      - {href: /php//manage-platform, title: Manage Platform}

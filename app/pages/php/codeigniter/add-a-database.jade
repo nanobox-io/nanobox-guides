@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Add a Database"
+    articles = "php/codeigniter"
+    icons    = "php,codeigniter"
+    
+block markdown
+  include:md /articles/php/codeigniter//add-a-database.md

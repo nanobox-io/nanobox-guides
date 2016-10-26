@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Add a Database"
+    articles = "python/flask"
+    icons    = "python,flask"
+    
+block markdown
+  include:md /articles/python/flask//add-a-database.md

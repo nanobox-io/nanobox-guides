@@ -5,32 +5,32 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /nodejs/sails/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /nodejs/sails/getting-started/from-scratch, title: Sails from Scratch}
-      - {href: /nodejs/sails/getting-started/existing-app, title: Existing Sails App}
+      - {href: /nodejs/sails//install-nanobox, title: Install Nanobox}
+      - {href: /nodejs/sails//from-scratch, title: Sails from Scratch}
+      - {href: /nodejs/sails//existing-app, title: Existing Sails App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /nodejs/sails/next-steps/add-a-database, title: Add a Database}
-      - {href: /nodejs/sails/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /nodejs/sails//add-a-database, title: Add a Database}
+      - {href: /nodejs/sails//local-evars, title: Local Environment Variables}
 
   #
   - title: "Production"
     articles:
-      - {href: /nodejs/sails/production/configure-sails, title: Configure Sails}
-      - {href: /nodejs/sails/production/stage-your-app, title: Stage your App}
-      - {href: /nodejs/sails/production/launch-your-app, title: Launch your App}
-      - {href: /nodejs/sails/production/point-your-domain, title: Point your Domain}
-      - {href: /nodejs/sails/production/encryption, title: SSL/TLS Encryption}
-      - {href: /nodejs/sails/production/production-evars, title: Production Environment Variables}
+      - {href: /nodejs/sails//configure-sails, title: Configure Sails}
+      - {href: /nodejs/sails//stage-your-app, title: Stage your App}
+      - {href: /nodejs/sails//launch-your-app, title: Launch your App}
+      - {href: /nodejs/sails//point-your-domain, title: Point your Domain}
+      - {href: /nodejs/sails//encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/sails//production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /nodejs/sails/going-further/scale-your-app, title: Scale Your App}
-      - {href: /nodejs/sails/going-further/debugging, title: Debugging}
-      - {href: /nodejs/sails/going-further/app-health, title: App Health}
-      - {href: /nodejs/sails/going-further/remote-access, title: Remote Access}
-      - {href: /nodejs/sails/going-further/team-management, title: Team Management}
-      - {href: /nodejs/sails/going-further/manage-platform, title: Manage Platform}
+      - {href: /nodejs/sails//scale-your-app, title: Scale Your App}
+      - {href: /nodejs/sails//debugging, title: Debugging}
+      - {href: /nodejs/sails//app-health, title: App Health}
+      - {href: /nodejs/sails//remote-access, title: Remote Access}
+      - {href: /nodejs/sails//team-management, title: Team Management}
+      - {href: /nodejs/sails//manage-platform, title: Manage Platform}

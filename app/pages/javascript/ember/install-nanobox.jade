@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Install Nanobox"
+    articles = "javascript/ember"
+    icons    = "javascript,ember"
+    
+block markdown
+  include:md /articles/shared//install-nanobox.md

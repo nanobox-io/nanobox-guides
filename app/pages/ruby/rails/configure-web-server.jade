@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Web Server"
+    keywords    = "configure,ruby,rails,production"
+    description = "Configuring web server"
+    articles    = "ruby/rails"
+    icons       = "ruby,rails"
+    
+block markdown
+  include:md /articles/ruby/rails//configure-web-server.md

@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Debugging"
+    articles = "ruby"
+    icons    = "ruby"
+    
+block markdown
+  include:md /articles/shared//debugging.md

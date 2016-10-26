@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Point your Domain"
+    articles = "python/flask"
+    icons    = "python,flask"
+    
+block markdown
+  include:md /articles/shared//point-your-domain.md

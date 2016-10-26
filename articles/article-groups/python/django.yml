@@ -5,33 +5,33 @@ articles:
   #
   - title: Getting Started
     articles:
-      - {href: /python/django/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /python/django/getting-started/from-scratch, title: Django from Scratch}
-      - {href: /python/django/getting-started/existing-app, title: Existing Django App}
+      - {href: /python/django//install-nanobox, title: Install Nanobox}
+      - {href: /python/django//from-scratch, title: Django from Scratch}
+      - {href: /python/django//existing-app, title: Existing Django App}
 
   #
   - title: Next Steps
     articles:
-      - {href: /python/django/next-steps/add-a-database, title: Add a Database}
-      - {href: /python/django/next-steps/local-evars, title: Local Environment Variables}
-      - {href: /python/django/next-steps/javascript-runtime, title: Javascript Runtime}
+      - {href: /python/django//add-a-database, title: Add a Database}
+      - {href: /python/django//local-evars, title: Local Environment Variables}
+      - {href: /python/django//javascript-runtime, title: Javascript Runtime}
 
   #
   - title: Production
     articles:
-      - {href: /python/django/production/configure-django, title: Configure Django}
-      - {href: /python/django/production/stage-your-app, title: Stage your App}
-      - {href: /python/django/production/launch-your-app, title: Launch your App}
-      - {href: /python/django/production/point-your-domain, title: Point your Domain}
-      - {href: /python/django/production/encryption, title: SSL/TLS Encryption}
-      - {href: /python/django/production/production-evars, title: Production Environment Variables}
+      - {href: /python/django//configure-django, title: Configure Django}
+      - {href: /python/django//stage-your-app, title: Stage your App}
+      - {href: /python/django//launch-your-app, title: Launch your App}
+      - {href: /python/django//point-your-domain, title: Point your Domain}
+      - {href: /python/django//encryption, title: SSL/TLS Encryption}
+      - {href: /python/django//production-evars, title: Production Environment Variables}
 
   #
   - title: Going Further
     articles:
-      - {href: /python/django/going-further/scale-your-app, title: Scale Your App}
-      - {href: /python/django/going-further/debugging, title: Debugging}
-      - {href: /python/django/going-further/app-health, title: App Health}
-      - {href: /python/django/going-further/remote-access, title: Remote Access}
-      - {href: /python/django/going-further/team-management, title: Team Management}
-      - {href: /python/django/going-further/manage-platform, title: Manage Platform}
+      - {href: /python/django//scale-your-app, title: Scale Your App}
+      - {href: /python/django//debugging, title: Debugging}
+      - {href: /python/django//app-health, title: App Health}
+      - {href: /python/django//remote-access, title: Remote Access}
+      - {href: /python/django//team-management, title: Team Management}
+      - {href: /python/django//manage-platform, title: Manage Platform}

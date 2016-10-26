@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Javascript Runtime"
+    articles = "ruby/rails"
+    icons    = "ruby,rails"
+    
+block markdown
+  include:md /articles/ruby/rails//javascript-runtime.md

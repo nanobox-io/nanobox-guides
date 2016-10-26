@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Local Environment Variables"
+    articles = "python/django"
+    icons    = "python,django"
+    
+block markdown
+  include:md /articles/shared//local-evars.md

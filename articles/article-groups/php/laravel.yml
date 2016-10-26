@@ -4,31 +4,31 @@ articles:
 
   - title: Getting Started
     articles:
-      - {href: /php/laravel/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /php/laravel/getting-started/from-scratch, title: Laravel from Scratch}
-      - {href: /php/laravel/getting-started/existing-app, title: Existing Laravel App}
+      - {href: /php/laravel//install-nanobox, title: Install Nanobox}
+      - {href: /php/laravel//from-scratch, title: Laravel from Scratch}
+      - {href: /php/laravel//existing-app, title: Existing Laravel App}
 
   - title: Next Steps
     articles:
-      - {href: /php/laravel/next-steps/add-a-database, title: Add a Database}
-      - {href: /php/laravel/next-steps/writable-permissions, title: Writable Permissions}
-      - {href: /php/laravel/next-steps/local-evars, title: Local Environment Variables}
-      - {href: /php/laravel/next-steps/javascript-runtime, title: Javascript Runtime}
+      - {href: /php/laravel//add-a-database, title: Add a Database}
+      - {href: /php/laravel//writable-permissions, title: Writable Permissions}
+      - {href: /php/laravel//local-evars, title: Local Environment Variables}
+      - {href: /php/laravel//javascript-runtime, title: Javascript Runtime}
 
   - title: Production
     articles:
-      - {href: /php/laravel/production/configure-laravel, title: Configure Laravel}
-      - {href: /php/laravel/production/stage-your-app, title: Stage your App}
-      - {href: /php/laravel/production/launch-your-app, title: Launch your App}
-      - {href: /php/laravel/production/point-your-domain, title: Point your Domain}
-      - {href: /php/laravel/production/encryption, title: SSL/TLS Encryption}
-      - {href: /php/laravel/production/production-evars, title: Production Environment Variables}
+      - {href: /php/laravel//configure-laravel, title: Configure Laravel}
+      - {href: /php/laravel//stage-your-app, title: Stage your App}
+      - {href: /php/laravel//launch-your-app, title: Launch your App}
+      - {href: /php/laravel//point-your-domain, title: Point your Domain}
+      - {href: /php/laravel//encryption, title: SSL/TLS Encryption}
+      - {href: /php/laravel//production-evars, title: Production Environment Variables}
 
   - title: Going Further
     articles:
-      - {href: /php/laravel/going-further/scale-your-app, title: Scale Your App}
-      - {href: /php/laravel/going-further/debugging, title: Debugging}
-      - {href: /php/laravel/going-further/app-health, title: App Health}
-      - {href: /php/laravel/going-further/remote-access, title: Remote Access}
-      - {href: /php/laravel/going-further/team-management, title: Team Management}
-      - {href: /php/laravel/going-further/manage-platform, title: Manage Platform}
+      - {href: /php/laravel//scale-your-app, title: Scale Your App}
+      - {href: /php/laravel//debugging, title: Debugging}
+      - {href: /php/laravel//app-health, title: App Health}
+      - {href: /php/laravel//remote-access, title: Remote Access}
+      - {href: /php/laravel//team-management, title: Team Management}
+      - {href: /php/laravel//manage-platform, title: Manage Platform}

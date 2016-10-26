@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Point your Domain"
+    articles = "php"
+    icons    = "php"
+    
+block markdown
+  include:md /articles/shared//point-your-domain.md

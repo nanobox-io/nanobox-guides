@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Team Management"
+    articles = "nodejs/express"
+    icons    = "nodejs,express"
+    
+block markdown
+  include:md /articles/shared//team-management.md

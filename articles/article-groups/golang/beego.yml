@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/beego/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /golang/beego/getting-started/from-scratch, title: Beego from Scratch}
-      - {href: /golang/beego/getting-started/existing-app, title: Existing Beego App}
+      - {href: /golang/beego//install-nanobox, title: Install Nanobox}
+      - {href: /golang/beego//from-scratch, title: Beego from Scratch}
+      - {href: /golang/beego//existing-app, title: Existing Beego App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /golang/beego/next-steps/add-a-database, title: Add a Database}
-      - {href: /golang/beego/next-steps/local-evars, title: Local Environment Variables}
-      - {href: /golang/beego/next-steps/javascript-runtime, title: Javascript Runtime}
+      - {href: /golang/beego//add-a-database, title: Add a Database}
+      - {href: /golang/beego//local-evars, title: Local Environment Variables}
+      - {href: /golang/beego//javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/beego/production/configure-beego, title: Configure Beego}
-      - {href: /golang/beego/production/stage-your-app, title: Stage your App}
-      - {href: /golang/beego/production/launch-your-app, title: Launch your App}
-      - {href: /golang/beego/production/point-your-domain, title: Point your Domain}
-      - {href: /golang/beego/production/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/beego/production/production-evars, title: Production Environment Variables}
+      - {href: /golang/beego//configure-beego, title: Configure Beego}
+      - {href: /golang/beego//stage-your-app, title: Stage your App}
+      - {href: /golang/beego//launch-your-app, title: Launch your App}
+      - {href: /golang/beego//point-your-domain, title: Point your Domain}
+      - {href: /golang/beego//encryption, title: SSL/TLS Encryption}
+      - {href: /golang/beego//production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /golang/beego/going-further/scale-your-app, title: Scale Your App}
-      - {href: /golang/beego/going-further/debugging, title: Debugging}
-      - {href: /golang/beego/going-further/app-health, title: App Health}
-      - {href: /golang/beego/going-further/remote-access, title: Remote Access}
-      - {href: /golang/beego/going-further/team-management, title: Team Management}
-      - {href: /golang/beego/going-further/manage-platform, title: Manage Platform}
+      - {href: /golang/beego//scale-your-app, title: Scale Your App}
+      - {href: /golang/beego//debugging, title: Debugging}
+      - {href: /golang/beego//app-health, title: App Health}
+      - {href: /golang/beego//remote-access, title: Remote Access}
+      - {href: /golang/beego//team-management, title: Team Management}
+      - {href: /golang/beego//manage-platform, title: Manage Platform}

@@ -1,0 +1,10 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title    = "Manage Platform"
+    articles = "golang/beego"
+    icons    = "golang,beego"
+    
+block markdown
+  include:md /articles/shared//manage-platform.md

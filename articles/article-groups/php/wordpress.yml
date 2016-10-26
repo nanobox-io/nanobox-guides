@@ -4,9 +4,9 @@ articles:
 
   - title: Getting Started
     articles:
-      - {href: /php/wordpress/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /php/wordpress/getting-started/from-scratch, title: WordPress from Scratch}
-      - {href: /php/wordpress/getting-started/existing-app, title: Existing WordPress App}
+      - {href: /php/wordpress//install-nanobox, title: Install Nanobox}
+      - {href: /php/wordpress//from-scratch, title: WordPress from Scratch}
+      - {href: /php/wordpress//existing-app, title: Existing WordPress App}
 
   - title: Plugins & Themes
     articles:
@@ -20,10 +20,10 @@ articles:
 
   - title: Production
     articles:
-      - {href: /php/wordpress/production/deploy-wordpress, title: Deploy WordPress}
-      - {href: /php/wordpress/production/point-your-domain, title: Point Your Domain}
-      - {href: /php/wordpress/production/encryption, title: SSL/TLS Encryption}
-      - {href: /php/wordpress/production/force-https, title: Force HTTPS in WordPress}
+      - {href: /php/wordpress//deploy-wordpress, title: Deploy WordPress}
+      - {href: /php/wordpress//point-your-domain, title: Point Your Domain}
+      - {href: /php/wordpress//encryption, title: SSL/TLS Encryption}
+      - {href: /php/wordpress//force-https, title: Force HTTPS in WordPress}
 
   - title: Advanced
     articles:
