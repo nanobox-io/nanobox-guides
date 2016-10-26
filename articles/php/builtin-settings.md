@@ -12,7 +12,7 @@ code.build:
 ### builtin\_document\_root
 The public root of your web application. For instance, if you like to house your app in `/public` for security or organizational purposes, you can specify that here. The default is the `/`.
 
-**Note:** If both this setting and the [global `document_root`](/php/config/webserver/webserver-settings/#document_root) are set, the `builtin_document_root` will take precedence.
+**Note:** If both this setting and the [global `document_root`](/php/webserver-settings/#document_root) are set, the `builtin_document_root` will take precedence.
 
 ```yaml
 code.build:

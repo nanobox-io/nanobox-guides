@@ -19,27 +19,27 @@ articles:
 
   - title: PHP Config Options
     articles:
-      - {href: /php/config/overview, title: Config Options Overview}
-      - {href: /php/config/php-settings, title: PHP Settings}
-      - {href: /php/config/start-commands, title: Start Commands}
-      - {href: /php/config/extensions, title: Extensions}
+      - {href: /php/overview, title: Config Options Overview}
+      - {href: /php/php-settings, title: PHP Settings}
+      - {href: /php/start-commands, title: Start Commands}
+      - {href: /php/extensions, title: Extensions}
       - title: Webserver Settings
         articles:
-          - {href: /php/config/webserver/webserver-settings, title: General Webserver Settings}
-          - {href: /php/config/webserver/apache-settings, title: Apache Settings}
-          - {href: /php/config/webserver/nginx-settings, title: Nginx Settings}
-          - {href: /php/config/webserver/builtin-settings, title: Built-In Settings}
+          - {href: /php/webserver-settings, title: General Webserver Settings}
+          - {href: /php/apache-settings, title: Apache Settings}
+          - {href: /php/nginx-settings, title: Nginx Settings}
+          - {href: /php/builtin-settings, title: Built-In Settings}
       - title: Advanced Config Options
         articles:
-          - {href: /php/config/advanced/apc-settings, title: APC Settings}
-          - {href: /php/config/advanced/eaccelerator-settings, title: eAccelerator Settings}
-          - {href: /php/config/advanced/geoip-settings, title: GeoIP Settings}
-          - {href: /php/config/advanced/memcache-settings, title: Memcache Settings}
-          - {href: /php/config/advanced/mongo-settings, title: Mongo Settings}
-          - {href: /php/config/advanced/new-relic-settings, title: New Relic Settings}
-          - {href: /php/config/advanced/opcache-settings, title: Opcache Settings}
-          - {href: /php/config/advanced/php-fpm-settings, title: PHP-FPM Settings}
-          - {href: /php/config/advanced/xcache-settings, title: XCache Settings}
+          - {href: /php/apc-settings, title: APC Settings}
+          - {href: /php/eaccelerator-settings, title: eAccelerator Settings}
+          - {href: /php/geoip-settings, title: GeoIP Settings}
+          - {href: /php/memcache-settings, title: Memcache Settings}
+          - {href: /php/mongo-settings, title: Mongo Settings}
+          - {href: /php/new-relic-settings, title: New Relic Settings}
+          - {href: /php/opcache-settings, title: Opcache Settings}
+          - {href: /php/php-fpm-settings, title: PHP-FPM Settings}
+          - {href: /php/xcache-settings, title: XCache Settings}
 
   - title: Production
     articles:

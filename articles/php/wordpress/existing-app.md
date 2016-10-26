@@ -116,6 +116,6 @@ Now that you have WordPress running with Nanobox, what's next? Hopefully the top
 
 [Importing Data](/php/wordpress/data-storage-management/importing-data)  
 [Importing Uploads](/php/wordpress/data-storage-management/importing-uploads)  
-[Installing & Updating Plugins](/php/wordpress/plugins-themes/installing-updating-plugins)  
-[Installing & Updating Themes](/php/wordpress/plugins-themes/installing-updating-themes)  
+[Installing & Updating Plugins](/php/wordpress/installing-updating-plugins)  
+[Installing & Updating Themes](/php/wordpress/installing-updating-themes)  
 [Deploying Wordpress](/php/wordpress/deploy-wordpress)

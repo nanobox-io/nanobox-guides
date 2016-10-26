@@ -15,7 +15,7 @@ The quickest way to start your app in dev is to run:
 nanobox dev run
 ```
 
-This will start your dev environment if it's not running, then run the [start commands specified in your boxfile.yml](/php/wordpress/advanced/boxfile-explained/#start).
+This will start your dev environment if it's not running, then run the [start commands specified in your boxfile.yml](/php/wordpress/boxfile-explained/#start).
 
 ## Install & Update Plugins Like You Would Normally
 When using WordPress in dev, you can manage plugins the same way you normally would. You can either manually download plugins and include them in your `wp-content/plugins` directory or you can install/upgrade plugins through your WordPress admin panel in your dev app.

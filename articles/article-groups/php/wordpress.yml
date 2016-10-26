@@ -10,13 +10,13 @@ articles:
 
   - title: Plugins & Themes
     articles:
-      - {href: /php/wordpress/plugins-themes/installing-updating-plugins, title: Installing & Updating Plugins}
-      - {href: /php/wordpress/plugins-themes/installing-updating-themes, title: Installing & Updating Themes}
+      - {href: /php/wordpress/installing-updating-plugins, title: Installing & Updating Plugins}
+      - {href: /php/wordpress/installing-updating-themes, title: Installing & Updating Themes}
 
   - title: Data & Storage Management
     articles:
-      - {href: /php/wordpress/data-storage/importing-data, title: Importing Data}
-      - {href: /php/wordpress/data-storage/importing-uploads, title: Importing Uploads}
+      - {href: /php/wordpress/importing-data, title: Importing Data}
+      - {href: /php/wordpress/importing-uploads, title: Importing Uploads}
 
   - title: Production
     articles:
@@ -27,6 +27,6 @@ articles:
 
   - title: Advanced
     articles:
-      - {href: /php/wordpress/advanced/boxfile-explained, title: WordPress boxfile.yml Explained}
-      - {href: /php/wordpress/advanced/reduce-deploy-size, title: Reduce the Size of Your Deploy}
-      - {href: /php/wordpress/advanced/caching-plugins, title: Using Caching Plugins}
+      - {href: /php/wordpress/boxfile-explained, title: WordPress boxfile.yml Explained}
+      - {href: /php/wordpress/reduce-deploy-size, title: Reduce the Size of Your Deploy}
+      - {href: /php/wordpress/caching-plugins, title: Using Caching Plugins}

@@ -34,4 +34,4 @@ code.build:
       - pdo
 ```
 
-The [Extensions guide](/php/config/extensions) lists all extensions available for each PHP version.
+The [Extensions guide](/php/extensions) lists all extensions available for each PHP version.

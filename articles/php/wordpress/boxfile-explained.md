@@ -45,7 +45,7 @@ code.build:
 ```
 
 ### runtime
-The `runtime` defines the PHP version. WordPress doesn't officially support running on PHP 7+, but PHP 7.0 offers significant performance improvements over previous versions of PHP. If you're migrating an existing WordPress app to Nanobox, it may be better to stick with an earlier version of PHP. A list of available php version is available in the [PHP Settings guide](/php/config/php-settings/#runtime).
+The `runtime` defines the PHP version. WordPress doesn't officially support running on PHP 7+, but PHP 7.0 offers significant performance improvements over previous versions of PHP. If you're migrating an existing WordPress app to Nanobox, it may be better to stick with an earlier version of PHP. A list of available php version is available in the [PHP Settings guide](/php/php-settings/#runtime).
 
 ```yaml
 code.build:
@@ -90,8 +90,8 @@ web.wp:
 
 Other web servers and php interpreters are available and require different start commands. More information is provided in the following PHP guides:
 
-[PHP Web Server Settings](http://localhost:4567/php/config/web-server-settings/)  
-[PHP Start Commands](http://localhost:4567/php/config/start/)
+[PHP Web Server Settings](http://localhost:4567/php/web-server-settings/)  
+[PHP Start Commands](http://localhost:4567/php/start/)
 
 ### log_watch
 Nanobox's [`log_watch` config option](https://docs.nanobox.io/app-config/app-logs/) pipe log output that is typically written to a file into your app's log stream. This allows you to view those logs without having to inspect the actual log file. What log_watches you use depends on the Web Server and PHP interpreter you're using. More information is available in the [PHP Start Commands guide](#).

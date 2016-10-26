@@ -60,12 +60,12 @@ web.laravel:
 ```
 
 #### runtime
-Using PHP 7.0 is recommended, but other versions are available. The list of available PHP versions can be found in the [PHP Settings guide](/php/config/php-settings#runtime).
+Using PHP 7.0 is recommended, but other versions are available. The list of available PHP versions can be found in the [PHP Settings guide](/php/php-settings#runtime).
 
 #### extensions
 The [PHP engine](https://github.com/nanobox-io/nanobox-engine-php) takes a minimalist approach to including extensions in your PHP environment. Besides a few basic extensions, only extensions specified in your boxfile.yml are included in your PHP runtime.
 
-If you need other extensions, just include them in your boxfile.yml. A list of available extensions can be found in the [PHP Extensions guide](/php/config/extensions).
+If you need other extensions, just include them in your boxfile.yml. A list of available extensions can be found in the [PHP Extensions guide](/php/extensions).
 
 ### Build the Environment
 With the your boxfile.yml in place, you're ready to create your dev environment. From the project directory run the following commands:

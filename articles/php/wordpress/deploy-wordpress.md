@@ -19,7 +19,7 @@ nanobox sim deploy
 
 Once deployed, you can access and test your sim app at `http://wordpress.nanobox.sim`.
 
-*Dev and sim environments are completely isolated from each other so you may want/need to [import data](/php/wordpress/data-storage/importing-data) and [uploads](/php/wordpress/data-storage/importing-uploads) into your sim app.*
+*Dev and sim environments are completely isolated from each other so you may want/need to [import data](/php/wordpress/importing-data) and [uploads](/php/wordpress/importing-uploads) into your sim app.*
 
 
 ## Launch Your App with Nanobox
@@ -55,10 +55,10 @@ Your app's build package will be deployed to your app on Nanobox and all your ap
 ### Import Data & Uploads
 With your production app up and running, you can import your database and uploads if necessary.
 
-[Importing Data](/php/wordpress/data-storage/importing-data/#importing-data-into-a-production-database)  
-[Importing Uploads](/wordpress/data-storage/importing-uploads/)
+[Importing Data](/php/wordpress/importing-data/#importing-data-into-a-production-database)  
+[Importing Uploads](/wordpress/importing-uploads/)
 
-*If importing data, be sure to [update your baseurl in your database](/php/wordpress/data-storage/importing-data/#update-your-wordpress-baseurl).*
+*If importing data, be sure to [update your baseurl in your database](/php/wordpress/importing-data/#update-your-wordpress-baseurl).*
 
 ## Enjoy Your Live WordPress App
 Congratulations. Your WordPress app is now live. The here's a few next steps you may want to go through:

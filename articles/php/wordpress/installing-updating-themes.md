@@ -15,7 +15,7 @@ The quickest way to start your app in dev is to run:
 nanobox dev run
 ```
 
-This will start your dev environment if it's not running, then run the [start commands specified in your boxfile.yml](/wordpress/advanced/boxfile-explained/#start).
+This will start your dev environment if it's not running, then run the [start commands specified in your boxfile.yml](/wordpress/boxfile-explained/#start).
 
 ## Install & Update Themes Like You Would Normally
 When using WordPress in dev, you can manage themes the same way you normally would. You can either manually download themes and include them in your `wp-content/themes` directory or you can install themes through your WordPress admin panel in your dev app. Theme files can be updated in your local filesystem and changes will be reflected in your running dev app.
