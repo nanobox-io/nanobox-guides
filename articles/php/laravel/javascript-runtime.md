@@ -27,7 +27,7 @@ code.build:
 #### Using a Specific Version of Node.js
 Specifying the `nodejs` package in your `boxfile.yml` will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions [here](/nodejs/config.html#runtime).
 
-## Build a New Runtime
+#### Deploy Changes
 With these options added to your `boxfile.yml`, simply deploy the changes to the dev environment with `nanobox dev deploy`.
 
 #### Verify installation

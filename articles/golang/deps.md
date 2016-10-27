@@ -1,5 +1,4 @@
 # Go Dependency Management
-
 There are many Golang dependency managers available and which on you use is completely up to you. When [building your runtime](https://docs.nanobox.io/cli/build/), Nanobox loads your apps dependencies. In order to do this, you must provide Nanobox with with `fetch` and `build` commands to load your dependencies.
 
 
