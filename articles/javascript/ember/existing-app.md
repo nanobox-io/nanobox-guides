@@ -3,7 +3,7 @@ When using nanobox with ember, keep in mind that the ember will communicate with
 
 Nanobox can be used for quickly testing ember in isolation, however, think about the backend that your ember app will be communicating with and reference those guides to run your backend server with nanobox.
 
-## Build a Nodejs Dev Environment
+## Create a Nodejs Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *npm install* and *ember server*.
@@ -48,7 +48,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 ember server
 ```
 
-Once the app has started you can visit it from your favorite browser at `ember.nanobox.dev:8080`.
+Once the app has started you can visit it from your favorite browser at `ember.nanobox.dev`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

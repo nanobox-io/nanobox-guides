@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need python or flask inst
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-flask" target="\_blank">nanobox-flask</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-## Build a Ruby Dev Environment
+## Create a Ruby Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *pip install*.
@@ -73,7 +73,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 python hello.py
 ```
 
-Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev:8080`.
+Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

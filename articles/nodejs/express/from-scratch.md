@@ -5,7 +5,7 @@ This guide outlines the process used to create the <a href="https://github.com/n
 
 *If you have an existing Express project, the [Existing Express App guide](/php/express/existing-app) is where you should start.*
 
-## Build a Nodejs Dev Environment
+## Create a Nodejs Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *npm install* or *npm start*.
@@ -77,7 +77,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 express s
 ```
 
-Once the app has started you can visit it from your favorite browser at `express.nanobox.dev:8080`.
+Once the app has started you can visit it from your favorite browser at `express.nanobox.dev`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

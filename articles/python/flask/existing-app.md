@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need python or flask inst
 
 This guide will help you get an existing Flask app up-and-running with nanobox.
 
-## Build a Python Dev Environment
+## Create a Python Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *pip install*.
@@ -45,7 +45,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 flask s
 ```
 
-Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev:8080`.
+Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

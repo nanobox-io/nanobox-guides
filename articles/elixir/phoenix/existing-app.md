@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need elixir or phoenix in
 
 This guide will help you get an existing Phoenix app up-and-running with nanobox.
 
-## Build an Elixir Dev Environment
+## Create an Elixir Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *mix*.

@@ -23,13 +23,9 @@ data.redis:
     databases: 16
 ```
 
-## Build & Deploy
-With your Redis component included in your boxfile.yml, build a new runtime to apply the changes, then deploy your newly built runtime into your dev, sim, or production environment(s). In the deploy process, your Redis component will be created.
+## Deploy
+With your Redis component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your Redis component will be created.
 
 ```bash
-# build a new runtime
-nanobox build
-
-# deploy to your dev platform
 nanobox dev deploy
 ```

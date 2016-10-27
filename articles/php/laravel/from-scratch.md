@@ -7,7 +7,7 @@ The process outlined here is the same process used to create the [nanobox-larave
 *If you have an existing Laravel project, the [Existing Laravel App guide](/php/laravel/existing-app) is where you should start.*
 
 
-## Build a PHP Dev Environment
+## Create a PHP Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app, artisan commands, or other tasks as you would normally.
 
 Create a new project directory and cd into it.

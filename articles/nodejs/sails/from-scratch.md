@@ -78,7 +78,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 sails lift
 ```
 
-Once the app has started you can visit it from your favorite browser at `sails.nanobox.dev:8080`.
+Once the app has started you can visit it from your favorite browser at `sails.nanobox.dev`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

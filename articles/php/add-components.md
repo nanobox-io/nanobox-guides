@@ -60,15 +60,10 @@ data.storage:
 - [Memcached Guides](/memcached)
 - [Storage Guides](/storage)
 
-### Build & Deploy to Provision  Components
-To provision your components, build a new runtime and deploy it.
+### Deploy 
+To provision your components, simply deploy the changes to the dev environment.
 
 ```bash
-# build an updated runtime
-nanobox build
-
-# deploy the runtime into dev
-# and provision components
 nanobox dev deploy
 ```
 

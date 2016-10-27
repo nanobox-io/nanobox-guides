@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need golang or beego inst
 
 This guide will help you get an existing Beego app up-and-running with nanobox.
 
-## Build a Golang Dev Environment
+## Create a Golang Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *go get* or *go build*.
@@ -48,7 +48,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 beego run
 ```
 
-Once the app has started you can visit it from your favorite browser at `beego.nanobox.dev:8080`.
+Once the app has started you can visit it from your favorite browser at `beego.nanobox.dev`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

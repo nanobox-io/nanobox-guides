@@ -6,7 +6,7 @@ The process outlined in this guide is the same used to create the [nanobox-codei
 
 *If you have an existing CodeIgniter project, the [Existing CodeIgniter App guide](/php/codeigniter/existing-app) is where you should start.*
 
-## Build a PHP Dev Environment
+## Create a PHP Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app or other tasks as you would normally.
 
 ### Create Your CodeIgniter Project

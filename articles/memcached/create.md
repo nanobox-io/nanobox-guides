@@ -22,13 +22,9 @@ data.memcached:
     max_connections: 1024
 ```
 
-## Build & Deploy
-With your Memcached component included in your boxfile.yml, build a new runtime to apply the changes, then deploy your newly built runtime into your dev, sim, or production environment(s). In the deploy process, your Memcached component will be created.
+## Deploy Changes
+With your Memcached component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your Memcached component will be created.
 
 ```bash
-# build a new runtime
-nanobox build
-
-# deploy to your dev platform
 nanobox dev deploy
 ```

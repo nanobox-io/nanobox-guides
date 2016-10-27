@@ -22,13 +22,9 @@ data.postgres:
     version: 9.5
 ``` -->
 
-## Build & Deploy
-With your PostgreSQL component included in your boxfile.yml, build a new runtime to apply the changes, then deploy your newly built runtime into your dev, sim, or production environment(s). In the deploy process, your PostgreSQL database will be created.
+## Deploy Changes
+With your PostgreSQL component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your PostgreSQL component will be created.
 
 ```bash
-# build a new runtime
-nanobox build
-
-# deploy to your dev platform
 nanobox dev deploy
 ```

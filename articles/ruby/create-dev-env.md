@@ -17,14 +17,8 @@ code.build:
 ```
 
 ## Up and Running
-With your boxfile.yml in place, you're ready to build your runtime, start your development environment (dev), and console in.
+With your boxfile.yml in place, you can console into your dev environment. Inside the dev environment you can develop or run your app as you would normally. Your local codebase is mounted into the dev environment so any changes made to your code will be mirrored in the environment.
 
 ```yaml
-# build your runtime
-nanobox build
-
-# start your dev environment and console in
 nanobox dev console
 ```
-
-This will drop you into an interactive console inside your virtualized dev environment on your local machine. You can bundler or start your app. Your local codebase is mounted into your dev container so any changes made to your code will apply to your dev environment.
