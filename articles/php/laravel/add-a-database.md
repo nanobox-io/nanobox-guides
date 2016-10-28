@@ -64,14 +64,9 @@ In your `config/database.php`, update the database connection credentials to use
 ],
 ```
 
-## Build & Deploy
-With the data component and required php extension added to your boxfile.yml and the connection updated, build a new runtime and deploy to dev. Your database will be provisioned and connected to your app in the deploy process.
+#### Deploy Changes
+With the data component and required php extension added to your boxfile.yml and the connection updated, deploy the changes to the dev environment. Your database will be provisioned and connected to your app in the deploy process.
 
 ```bash
-# build a new runtime
-nanobox build
-
-# deploy the updated runtime into dev
-# to provision the database
 nanobox dev deploy
 ```

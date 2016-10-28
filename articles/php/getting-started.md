@@ -34,11 +34,11 @@ code.build:
 All PHP configuration options are detailed in the [Config Options guides](/php/config).
 
 ## Up and Running
-With your boxfile.yml in place, you're ready to build your runtime, start your development environment (dev), and console in.
+With your boxfile.yml in place, deploy the changes to the development environment (dev), and console in.
 
 ```yaml
-# build your runtime
-nanobox build
+# deploy changes
+nanobox dev deploy
 
 # start your dev environment and console in
 nanobox dev console

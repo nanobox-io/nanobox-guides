@@ -71,9 +71,6 @@ If you need other extensions, just include them in your boxfile.yml. A list of a
 With the your boxfile.yml in place, you're ready to create your dev environment. From the project directory run the following commands:
 
 ```bash
-# build the code
-nanobox build
-
 # start the dev environment
 nanobox dev start
 

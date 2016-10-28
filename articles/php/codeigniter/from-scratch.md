@@ -51,11 +51,8 @@ web.codeigniter:
 With your boxfile.yml in place , you're ready to get CodeIgniter up and running in your dev environment.
 
 ```bash
-# build the code
-nanobox build
-
-# start the dev environment and deploy your build
-nanobox dev deploy
+# start the dev environment
+nanobox dev start
 
 # add a convenient way to access your app from the browser
 nanobox dev dns add codeigniter.nanobox.dev

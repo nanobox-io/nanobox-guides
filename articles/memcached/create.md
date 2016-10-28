@@ -22,7 +22,7 @@ data.memcached:
     max_connections: 1024
 ```
 
-## Deploy Changes
+#### Deploy Changes
 With your Memcached component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your Memcached component will be created.
 
 ```bash

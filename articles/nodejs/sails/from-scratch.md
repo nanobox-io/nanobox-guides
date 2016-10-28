@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need nodejs or sails inst
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-sails" target="\_blank">nanobox-sails</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-## Build a Nodejs Dev Environment
+## Create a Nodejs Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *npm install* or *sails lift*

@@ -25,7 +25,7 @@ data.mysql:
     event_scheduler: 'Off'
 ```
 
-## Deploy Changes
+#### Deploy Changes
 With your MySQL component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your MySQL component will be created.
 
 ```bash

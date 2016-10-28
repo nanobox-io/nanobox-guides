@@ -12,7 +12,7 @@ data.storage:
 **Note:** *For purposes of these guides, we'll use* `data.storage` *as the component ID.* `storage` *is a unique identifier that can be whatever you'd like. More information about component IDs is available in the [boxfile.yml documentation](https://docs.nanobox.io/boxfile/#component-ids).*
 
 
-## Deploy Changes
+#### Deploy Changes
 With your storage component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your storage component will be created.
 
 ```bash

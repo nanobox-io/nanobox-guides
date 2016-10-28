@@ -89,18 +89,15 @@ define('NONCE_SALT',       $_ENV['NONCE_SALT']       ?: '');
 
 *Generating these environment variables is covered in the [Deploy Wordpress](/php/wordpress/deploy-wordpress) guide.*
 
-## Build a WordPress Dev Environment
+## Create a WordPress Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app and perform other tasks as you would normally.
 
 With your boxfile.yml in place and your wp-config.php updated, you're ready to get WordPress up and running in your dev environment.
 
 
 ```bash
-# build the code
-nanobox build
-
-# start the dev environment and deploy your build
-nanobox dev deploy
+# start the dev environment
+nanobox dev start
 
 # add a convenient way to access your app from the browser
 nanobox dev dns add wordpress.nanobox.dev
