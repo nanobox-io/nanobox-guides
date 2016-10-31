@@ -1,6 +1,6 @@
 # Using Node.js & npm
 
-Many handy tools for tasks such as dependency management, asset compilation, etc. require Node.js and npm. Including Node.js in your app can done through adding the following options to the `code.build` section of your boxfile.yml.
+Including Node.js in your app can done through adding the following options to the `code.build` section of your boxfile.yml.
 
 ## Include Node.js in Your boxfile.yml
 

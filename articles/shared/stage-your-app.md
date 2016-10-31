@@ -5,16 +5,13 @@ Setting up staging environments identical to your production environment can be 
 ## Deploy into Sim
 
 ```bash
-# compile your code
-nanobox compile
-
 # start your sim environment
 nanobox sim start
 
 # add a convenient way to access your sim app
 nanobox sim dns add app-name.nanobox.sim
 
-# deploy compiled code into sim
+# deploy the app into the sim environment
 nanobox sim deploy
 ```
 

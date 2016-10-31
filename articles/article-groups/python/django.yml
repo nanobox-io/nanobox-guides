@@ -8,13 +8,14 @@ articles:
       - {href: /python/django/install-nanobox, title: Install Nanobox}
       - {href: /python/django/from-scratch, title: Django from Scratch}
       - {href: /python/django/existing-app, title: Existing Django App}
+      - {href: /python/django/pip, title: Pip Packages}
 
   #
   - title: Next Steps
     articles:
+      - {href: /python/django/javascript-runtime, title: Javascript Runtime}
       - {href: /python/django/add-a-database, title: Add a Database}
       - {href: /python/django/local-evars, title: Local Environment Variables}
-      - {href: /python/django/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: Production

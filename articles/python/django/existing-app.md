@@ -26,16 +26,43 @@ nanobox dev start
 ```
 
 ## Configure Django
-WIP
+Once the dev environment is started you can console into it and configure your existing django application:
 
-Also, add a convenient way to access your app from a browser:
+```bash
+# console into the dev environment
+nanobox dev console
+
+```
+
+#### Install packages via pip
+If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies individually like this:
+
+```bash
+pip install DEPENDENCY
+```
+
+Once they've been installed, you'll need to freeze your pip installation:
+
+```bash
+pip freeze > requirements.txt
+```
+
+#### Run data migrations
+
+You may have some pending data migrations to be run. Let's run those now:
+
+```bash
+python manage.py migrate
+```
+
+## Django up-and-running
+Add a convenient way to access your app from a browser:
 
 ```bash
 nanobox dev dns add django.nanobox.dev
 ```
 
-## Django up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+Now console into the dev environment with `nanobox dev console` and run the app like you would normally:
 
 ```bash
 python manage.py runserver 0.0.0.0:8080
