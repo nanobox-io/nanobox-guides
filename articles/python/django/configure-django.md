@@ -279,7 +279,7 @@ Nanobox can run hooks at different points in the development process. We'll want
 code.deploy:
   before_deploy:
     web.main:
-      - python manage.py migrate
+      - python manage.py migrate --fake-initial
 ```
 
 ## Now what?

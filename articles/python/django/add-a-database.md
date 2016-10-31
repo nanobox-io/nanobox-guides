@@ -41,9 +41,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'gonano',
-        'USER': os.environ['DATA_DB_USER'],
-        'PASSWORD': os.environ['DATA_DB_PASS'],
-        'HOST': os.environ['DATA_DB_HOST'],
+        'USER': os.environ.get('DATA_DB_USER'),
+        'PASSWORD': os.environ.get('DATA_DB_PASS'),
+        'HOST': os.environ.get('DATA_DB_HOST'),
         'PORT': '',
     }
 }
