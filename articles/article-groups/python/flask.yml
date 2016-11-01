@@ -8,13 +8,14 @@ articles:
       - {href: /python/flask/install-nanobox, title: Install Nanobox}
       - {href: /python/flask/from-scratch, title: Flask from Scratch}
       - {href: /python/flask/existing-app, title: Existing Flask App}
+      - {href: /python/flask/pip, title: Pip Packages}
 
   #
   - title: "Next Steps"
     articles:
+      - {href: /python/flask/javascript-runtime, title: Javascript Runtime}
       - {href: /python/flask/add-a-database, title: Add a Database}
       - {href: /python/flask/local-evars, title: Local Environment Variables}
-      - {href: /python/flask/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"

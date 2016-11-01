@@ -36,6 +36,12 @@ You can then start the dev environment:
 nanobox dev start
 ```
 
+Also, add a convenient way to access your app from a browser:
+
+```bash
+nanobox dev dns add django.nanobox.dev
+```
+
 ## Create a Django App
 Once the dev environment is started you can console into it and create a new django application:
 
@@ -75,19 +81,14 @@ python manage.py migrate
 ```
 
 ## Django up-and-running
-Add a convenient way to access your app from a browser:
+
+From within the same `nanobox dev console` session, run the app as you would normally:
 
 ```bash
-nanobox dev dns add django.nanobox.dev
+python manage.py runserver 0.0.0.0:8000
 ```
 
-Now console into the dev environment with `nanobox dev console` and run the app like you would normally:
-
-```bash
-python manage.py runserver 0.0.0.0:8080
-```
-
-Once the app has started you can visit it from your favorite browser at `django.nanobox.dev`.
+Once the app has started you can visit it from your favorite browser at `django.nanobox.dev:8000`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

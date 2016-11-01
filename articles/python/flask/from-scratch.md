@@ -3,7 +3,7 @@ Part of what makes nanobox so useful is you don't even need python or flask inst
 
 This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-flask" target="\_blank">nanobox-flask</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
-## Create a Ruby Dev Environment
+## Create a Python Dev Environment
 Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
 
 From within this environment you can develop and run your app as you normally would with things like *pip install*.
@@ -13,6 +13,8 @@ Decide where you want your project to live and create a folder there:
 
 ```bash
 mkdir nanobox-flask
+
+cd nanobox-flask
 ```
 
 **IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
@@ -32,6 +34,12 @@ You can then start the dev environment:
 nanobox dev start
 ```
 
+Also, add a convenient way to access your app from a browser:
+
+```bash
+nanobox dev dns add flask.nanobox.dev
+```
+
 ## Create a Flask App
 Create a basic flask app named `hello.py` at the root of your project:
 
@@ -44,30 +52,24 @@ def hello():
   return "Hello nanobox!"
 
 if __name__ == "__main__":
-  app.run()
+  app.run(host='0.0.0.0')
 ```
 
-Also, create a `requirements.txt` that includes flask:
-
-```txt
-Flask
-```
-
-#### Configure Flask
-To allow connections from the host machine into the app's container modify the `hello.py` telling flask to listen on all available IP's at port 8080:
-
-```python
-app.run(host='0.0.0.0', port=8080)
-```
-
-Also, add a convenient way to access your app from a browser:
+#### Install flask
 
 ```bash
-nanobox dev dns add flask.nanobox.dev
+# console into the dev environment
+nanobox dev console
+
+# install flask via pip
+pip install Flask
+
+# freeze the dependencies into the requirements.txt file
+pip freeze > requirements.txt
 ```
 
 ## Flask up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+From within the same `nanobox dev console` session, run the app as you would normally:
 
 ```bash
 python hello.py

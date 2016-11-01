@@ -25,27 +25,51 @@ You can then start the dev environment:
 nanobox dev start
 ```
 
-#### Configure Flask
-To allow connections from the host machine into the app's container modify your app telling flask to listen on all available IP's at port 8080:
-
-```python
-app.run(host='0.0.0.0', port=8080)
-```
-
 Also, add a convenient way to access your app from a browser:
 
 ```bash
 nanobox dev dns add flask.nanobox.dev
 ```
 
-## Flask up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+## Configure Flask
+Once the dev environment is started you can console into it and configure your existing django application:
 
 ```bash
-flask s
+# console into the dev environment
+nanobox dev console
+
 ```
 
-Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev`.
+#### Install packages via pip
+If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Flask) individually like this:
+
+```bash
+pip install Flask
+pip install OTHER_DEPENDENCY
+```
+
+Once they've been installed, you'll need to freeze your pip installation:
+
+```bash
+pip freeze > requirements.txt
+```
+
+#### Listen on all interfaces
+Because nanobox runs inside containers, we need to tell flask to bind to all interfaces which will make the app accessible to host:
+
+```python
+if __name__ == "__main__":
+  app.run(host='0.0.0.0')
+```
+
+## Flask up-and-running
+From within the same `nanobox dev console` session, run the app as you would normally:
+
+```bash
+python APP_NAME.py
+```
+
+Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev:5000`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
