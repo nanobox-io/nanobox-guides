@@ -23,6 +23,7 @@ block js
     }
       
 block content
+  - var launchTime = "5"
   block configParams
   block jsParams
   .article-page.landing.framework 
@@ -34,5 +35,13 @@ block content
           img.shadow-icon(data-src="hex-#{icon}" scalable="true")
         .framework= formalName
         .sub with Nanobox
-    
+        .quickstart
+          img.shadow-icon(data-src="from-scratch")
+          .title Quickstart
+          .blurb Install and run a #{informalName} app from scratch in #{launchTime} mins
+          a(href="https://github.com/nanobox-quickstarts/nanobox-#{informalName}")
+            .txt Let's Go
+            .icon
+              img.shadow-icon(data-src="go-arrow")
+        .guides-title General #{informalName} Guides
       .article-groups#article-groups

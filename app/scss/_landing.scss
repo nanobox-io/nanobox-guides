@@ -38,6 +38,20 @@
           .icon                    {width:75px; }
           .framework               {@include main-title;}
           .sub                     {color:#5A7B8F; font-style:italic; font-wdith: $semibold; font-size:17px; margin-top:10px; }
+          .quickstart              {background:white; display: flex; width:100%; align-items: center; height:72px; font-size:15px; margin-top:35px; position: relative;
+            #from-scratch          {margin:-5px 15px 0 20px;;  }
+            .title                 {@include main-title; font-size:19px; border:none; margin:0 10px 0 0; }
+            .blurb                 {font-style:italic; color:#285875; margin-right:10px; }
+            a                      {display:flex; align-items: center; font-weight:$semibold; font-style:italic; margin:0 0px 0 auto; padding:20px 0;
+              .icon                {background: #00AEF7; width:20px; height:20px; border-radius:50%; justify-content: center; align-items: center; display: flex; margin-left:10px; }
+              &:hover              {color:#006793;
+                .icon              {background:#006793}
+              }
+            }
+            &:after                {position: absolute; right: -16px; content:""; display: block; width:16px; height:100%; background: white; }
+            &:before               {position: absolute; right: -16px; bottom:-16px; content:""; border-style: solid; border-width: 16px 16px 0 0; border-color: #C1CDD7 transparent transparent transparent; }
+          }
+          .guides-title            {@include main-title; border-top:none; font-size:14px; margin-top:40px; margin-bottom:-10px; padding-bottom:10px; }
         }
       }
     }

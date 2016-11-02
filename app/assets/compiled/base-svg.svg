@@ -36,6 +36,8 @@
 	.st30{fill:none;stroke:#418FDE;stroke-miterlimit:10;}
 	.st31{fill:#4D9AE8;}
 	.st32{fill:#589FE8;}
+	.st33{fill:none;stroke:#FFC25C;stroke-width:2;stroke-miterlimit:10;}
+	.st34{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
 </style>
 <g id="logo_x60_19x33">
 	<polygon class="st0" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/>
@@ -235,5 +237,20 @@
 	<polygon class="st31" points="26.214,35.373 34.953,40.419 34.953,50.509 26.214,45.463 	"/>
 	<polygon class="st29" points="43.691,35.373 34.953,40.419 34.953,50.509 43.691,45.463 	"/>
 	<polygon class="st32" points="34.953,30.328 43.691,35.373 34.953,40.419 26.214,35.373 	"/>
+</g>
+<g id="from-scratch_x60_34x31">
+	<path class="st33" d="M23.199,21.727c0,3.76-2.687,7.308-6.447,7.308s-6.447-3.547-6.447-7.308s2.687-10.336,6.447-10.336
+		S23.199,17.966,23.199,21.727z"/>
+	<line class="st33" x1="16.752" y1="8.479" x2="16.752" y2="0"/>
+	<line class="st33" x1="21.622" y1="9.537" x2="24.07" y2="4.168"/>
+	<line class="st33" x1="25.176" y1="12.9" x2="32.015" y2="6.962"/>
+	<line class="st33" x1="26.805" y1="17.245" x2="33.372" y2="15.307"/>
+	<line class="st33" x1="11.883" y1="9.537" x2="9.434" y2="4.168"/>
+	<line class="st33" x1="8.521" y1="13.066" x2="1.489" y2="6.962"/>
+	<line class="st33" x1="7.141" y1="17.376" x2="0.283" y2="15.351"/>
+</g>
+<g id="go-arrow_x60_14x11">
+	<line class="st34" x1="0" y1="5.077" x2="11.96" y2="5.077"/>
+	<polyline class="st34" points="7.646,0.53 12.192,5.077 7.646,9.624 	"/>
 </g>
 </svg>
