@@ -1,5 +1,5 @@
 # Javascript Runtime
-Many handy tools for tasks such as dependency management, asset compilation, etc. require Node.js, npm, and/or other javascript tools. Including Node.js in your app can done by adding the following options to the `code.build` section of your boxfile.yml.
+Including Node.js in your app can done by adding the following options to the `code.build` section of your boxfile.yml.
 
 ## Include Node.js in Your boxfile.yml
 
@@ -27,23 +27,7 @@ code.build:
 #### Using a Specific Version of Node.js
 Specifying the `nodejs` package in your boxfile.yml will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions in the [Node.js Settings guide](#).
 
-#### Verify installation
-With these options added to your `boxfile.yml`, you can console in and use *node*, and *npm* like you would normally.
 
-```bash
-# console into your dev environment
-nanobox dev console
+## Bower
 
-# check the node version
-node -v
-
-# check the npm version
-npm -v
-```
-
-## Now what?
-With a javascript runtime available, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
-
-* [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Prepare for Production](/ruby/sinatra/configure-sinatra)
-* [Back to Sinatra overview](/ruby/sinatra)
+If you need bower blablabla

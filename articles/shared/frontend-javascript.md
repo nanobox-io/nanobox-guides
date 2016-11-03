@@ -1,4 +1,4 @@
-# Using Node.js & npm
+# Frontend Javascript
 
 Including Node.js in your app can done through adding the following options to the `code.build` section of your boxfile.yml.
 
@@ -31,7 +31,13 @@ Specifying the `nodejs` package in your boxfile.yml will pull the most recent ve
 #### Apply Changes
 With these options added to your `boxfile.yml`, the next time you start a `nanobox dev console` nodejs will be available.
 
+
+## Package Managers
+
 * [Bower](/ruby/rails/add-a-database)
+* [Webpack](/ruby/rails)
+
+## Task Runners
+
 * [Gulp](/ruby/rails/javascript-runtime)
 * [Grunt](/ruby/rails/local-evars)
-* [Webpack](/ruby/rails)

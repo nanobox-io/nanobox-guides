@@ -4,6 +4,7 @@ articles:
 
   #
   - title: Getting Started
+    tribe: the_essentials
     articles:
       - {href: /python/django/from-scratch, title: Django from Scratch}
       - {href: /python/django/existing-app, title: Existing Django App}
@@ -11,13 +12,14 @@ articles:
 
   #
   - title: Next Steps
+    tribe: the_essentials
     articles:
       - {href: /python/django/javascript-runtime, title: Frontend Javascript}
       - {href: /python/django/add-a-database, title: Add a Database}
       - {href: /python/django/local-evars, title: Local Environment Variables}
 
   #
-  - title: Production
+  - title: Go Live
     articles:
       - {href: /python/django/configure-django, title: Configure Django}
       - {href: /python/django/stage-your-app, title: Stage your App}
@@ -25,6 +27,12 @@ articles:
       # - {href: /python/django/point-your-domain, title: Point your Domain}
       # - {href: /python/django/encryption, title: SSL/TLS Encryption}
       # - {href: /python/django/production-evars, title: Production Environment Variables}
+
+  - title: Production
+    articles:
+      - {href: /python/django/point-your-domain, title: Point your Domain}
+      - {href: /python/django/encryption, title: SSL/TLS Encryption}
+      - {href: /python/django/production-evars, title: Production Environment Variables}
 
   #
   - title: Going Further
