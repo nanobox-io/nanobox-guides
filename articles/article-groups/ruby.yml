@@ -5,16 +5,13 @@ articles:
     articles:
       - {href: /ruby/create-dev-env, title: Create a Ruby Dev Environment}
       - {href: /ruby/config, title: Configure Ruby}
+      - {href: /ruby/bundler, title: Bundler}
 
   - title: Next Steps
     articles:
+      - {href: /ruby/javascript-runtime, title: Javascript Runtime}
       - {href: /ruby/add-components, title: Add App Components}
       - {href: /ruby/local-evars, title: Local Environment Variables}
-
-  - title: Dependency Management
-    articles:
-      - {href: /ruby/bundler, title: Bundler}
-      - {href: /ruby/nodejs-npm, title: Using Node.js & npm}
 
   - title: Production
     articles:
