@@ -5,16 +5,13 @@ articles:
     articles:
       - {href: /python/create-dev-env, title: Create a Python Dev Environment}
       - {href: /python/config, title: Configure Python}
+      - {href: /python/pip, title: Pip Packages}
 
   - title: Next Steps
     articles:
+      - {href: /python/javascript-runtime, title: Javascript Runtime}
       - {href: /python/add-components, title: Add App Components}
       - {href: /python/local-evars, title: Local Environment Variables}
-
-  - title: Dependency Management
-    articles:
-      - {href: /python/pip, title: Pip}
-      - {href: /python/nodejs-npm, title: Using Node.js & npm}
 
   - title: Production
     articles:

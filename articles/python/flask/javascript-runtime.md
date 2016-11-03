@@ -1,5 +1,5 @@
 # Javascript Runtime
-Many handy tools for tasks such as dependency management, asset compilation, etc. require Node.js, npm, and/or other javascript tools. Including Node.js in your app can done by adding the following options to the `code.build` section of your `boxfile.yml`.
+Including Node.js in your app can done by adding the following options to the `code.build` section of your `boxfile.yml`.
 
 ## Include Node.js in Your boxfile.yml
 
@@ -7,8 +7,8 @@ Many handy tools for tasks such as dependency management, asset compilation, etc
 code.build:
   engine: python
 
-  # Includes the Node.js package in your runtime
-  extra_packages:
+  # Includes the Node.js package in your dev environment
+  dev_packages:
     - nodejs
 
   # Tells nanobox to cache & reuse the node_modules directory
@@ -27,11 +27,11 @@ code.build:
 #### Using a Specific Version of Node.js
 Specifying the `nodejs` package in your `boxfile.yml` will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions [here](/nodejs/config.html#runtime).
 
-#### Deploy Changes
-With these options added to your `boxfile.yml`, simply deploy the changes to the dev environment with `nanobox dev deploy`.
+#### Apply Changes
+With these options added to your `boxfile.yml`, the next time you enter in the dev console `nanobox dev console`, nodejs will be available.
 
 #### Verify installation
-Once the changes have been deployed, you can verify the javascript runtime from the `nanobox dev console`:
+You can verify the javascript runtime from the `nanobox dev console`:
 
 ```bash
 # check the node version
