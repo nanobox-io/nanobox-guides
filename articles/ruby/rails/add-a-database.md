@@ -15,12 +15,8 @@ data.db:
 
 In the above snippet `db` is the name of this component (and can be anything you choose); it is used as a unique identifier and when generating <a href="https://docs.nanobox.io/app-config/environment-variables/" target="\_blank">environment variables</a>. `image` can be any docker image configured for nanobox.
 
-#### Provision the database
-To provision your database, simply deploy the `boxfile.yml` changes to the dev environment:
-
-```bash
-`nanobox dev deploy`
-```
+#### Apply changes
+With these options added to your `boxfile.yml`, the next time you start a `nanobox dev console` the database will be running.
 
 ## Connect your app
 When a data component is provisioned with nanobox, environment variables are generated along with unique connection credentials.

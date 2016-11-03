@@ -13,6 +13,8 @@ Decide where you want your project to live and create a folder there:
 
 ```bash
 mkdir nanobox-rails
+
+cd nanobox-rails
 ```
 
 **IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
@@ -23,6 +25,9 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 ```yaml
 code.build:
   engine: ruby
+  
+  dev_packages:
+    - nodejs
 ```
 
 #### Start the Environment
@@ -30,6 +35,12 @@ You can then start the dev environment:
 
 ```bash
 nanobox dev start
+```
+
+Also, add a convenient way to access your app from a browser:
+
+```bash
+nanobox dev dns add rails.nanobox.dev
 ```
 
 ## Create a Rails App
@@ -47,7 +58,7 @@ rails new .
 ```
 
 #### Configure Rails
-To allow connections from the host machine into the app's container modify the `config/boot.rb` telling rails to listen on all available IP's at port 8080:
+To allow connections from the host machine into the app's container modify the `config/boot.rb` telling rails to listen on all available IP's:
 
 ```ruby
 require 'rails/commands/server'
@@ -55,16 +66,10 @@ module Rails
   class Server
     alias :_default_options :default_options
     def default_options
-      _default_options.merge!(Host:'0.0.0.0', Port:8080)
+      _default_options.merge!(Host:'0.0.0.0')
     end
   end
 end
-```
-
-Also, add a convenient way to access your app from a browser:
-
-```bash
-nanobox dev dns add rails.nanobox.dev
 ```
 
 ## Rails up-and-running
@@ -74,7 +79,7 @@ Console into the dev environment with `nanobox dev console` and run the app like
 rails s
 ```
 
-Once the app has started you can visit it from your favorite browser at `rails.nanobox.dev`.
+Once the app has started you can visit it from your favorite browser at `rails.nanobox.dev:3000`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
