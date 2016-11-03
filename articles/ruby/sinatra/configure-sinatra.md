@@ -21,6 +21,8 @@ In the above snippet `main` is the name of web component and can be anything you
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
+<div class="meta" data-method="snippet" data-params="worker.main" ></div>
+
 ```yaml
 code.build:
   engine: ruby

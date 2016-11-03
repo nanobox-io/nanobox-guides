@@ -3,12 +3,14 @@ href: /php/laravel
 articles:
 
   - title: Getting Started
+    tribe: the_essentials
     articles:
       - {href: /php/laravel/install-nanobox, title: Install Nanobox}
       - {href: /php/laravel/from-scratch, title: Laravel from Scratch}
       - {href: /php/laravel/existing-app, title: Existing Laravel App}
 
   - title: Next Steps
+    tribe: the_essentials
     articles:
       - {href: /php/laravel/add-a-database, title: Add a Database}
       - {href: /php/laravel/writable-permissions, title: Writable Permissions}

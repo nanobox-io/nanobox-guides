@@ -9,12 +9,21 @@ class Landing
 
   onNavLoad : (yaml)=>
     for group in yaml.articles
+      if group.tribe?
+        @createTribeHolder group.tribe
+        tribe = group.tribe
+      else
+        tribe = 'everything'
       $node = $ jadeTemplate['framework-overview/article-group']( group )
-      $("#article-groups").append $node
+      $("##{tribe}-tribe").append $node
 
     # Only applicable to local testing
     if window.isLocal
       window.localizeLinks()
 
+  createTribeHolder : (tribe) ->
+    if $("##{tribe}-tribe").length == 0
+      $node = $ jadeTemplate['framework-overview/tribe']( {id:"#{tribe}-tribe", title:tribe.replace("_", " ")} )
+      $("#article-groups").prepend $node
 
 window.Landing = Landing

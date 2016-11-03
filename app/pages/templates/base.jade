@@ -44,7 +44,7 @@ html(lang="en")
     script(src="/bower-libs/shadow-icons/rel/app.js")
     script(src="/bower-libs/velocity/velocity.js")
     script(src="/bower-libs/js-yaml/dist/js-yaml.js")
-    script(src="/bower-libs/prism/prism.js")
+    script(src="/bower-libs/prism/prism.js" data-manual)
     script(src="/bower-libs/prism/components/prism-yaml.js")
     script(src="/bower-libs/prism/components/prism-bash.js")
     script(src="/bower-libs/prism/components/prism-ruby.js")
@@ -63,7 +63,10 @@ html(lang="en")
     // endbuild
     
     // build:main /js/main.js
+    
+    //- Move this to only load on article pages
     script(src="/js/article.js")
+    script(src="/js/article-meta.js")
     // endbuild
     
     script(src="https://use.typekit.net/cqd5kth.js")
