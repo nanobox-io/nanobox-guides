@@ -57,7 +57,22 @@ code.build:
 
 ### apache_modules
 
-Specify which Apache modules to enable or disable. View the [full list of available Apache Modules](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/apache-modules.md). By default, all modules are enabled.
+Specify which Apache modules to enable or disable. View the [full list of available Apache Modules](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/apache-modules.md). By default, the following modules are loaded:
+
+- dir
+- env
+- expires
+- log_config
+- mime
+- rewrite
+- setenvif
+- deflate
+
+The following modules are enabled when using php_fpm:
+
+- actions
+- alias
+- fastcgi
 
 ```yaml
 code.build:
