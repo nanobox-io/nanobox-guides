@@ -14,7 +14,7 @@ articles:
     articles:
       - {href: /php/laravel/add-a-database, title: Add a Database}
       - {href: /php/laravel/writable-permissions, title: Writable Permissions}
-      - {href: /php/laravel/local-evars, title: Local Environment Variables}
+      - href: /php/laravel/local-evars, title: Local Environment Variables}
       - {href: /php/laravel/javascript-runtime, title: Javascript Runtime}
 
   - title: Production

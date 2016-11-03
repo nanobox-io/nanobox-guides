@@ -21,7 +21,7 @@ In the above snippet `main` is the name of web component and can be anything you
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
-<div class="meta" data-method="snippet" data-params="worker.main" ></div>
+<div class="meta expand" data-method="snippet" data-params="worker.main" ></div>
 
 ```yaml
 code.build:
@@ -38,6 +38,8 @@ In the above snippet `main` is the name of the worker component and can be anyth
 By default, each components container is a read only environment. Sinatra will need certain directories available to write to for things like log output, temporary files, etc.
 
 You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
+
+<div class="meta" data-method="snippet" data-params="web.main,worker.main" ></div>
 
 ```yaml
 code.build:
@@ -65,6 +67,8 @@ You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-
 
 ## Add Streaming Logs
 Although our app is now able to write it's logs to log files, if want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
+
+<div class="meta" data-method="snippet" ></div>
 
 ```yaml
 code.build:
@@ -120,6 +124,8 @@ code.deploy:
 
 #### Add a rake task
 You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could, for example, create a `config/db.rb` file that contained the following:
+
+<div class="meta" data-method="configFile" data-params="config/db.rb"></div>
 
 ```ruby
 # custom tasks in the db namespace

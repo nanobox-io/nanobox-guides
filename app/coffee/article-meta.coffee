@@ -1,7 +1,7 @@
 class ArticleMeta
 
   constructor: () ->
-    # @findMeta()
+    @findMeta()
     Prism.highlightAll()
 
   findMeta : () =>
@@ -12,27 +12,51 @@ class ArticleMeta
       if !params? then params = ""
       params = params.split(",")
       params.unshift $item.next()
+      params.unshift $item
       @[method].apply this, params
-      $item.next()
 
-  snippet : ($codeBlock, start="", end) ->
-    code       = $("code", $codeBlock[0])[0].innerHTML
+  configFile : ($item, $codeBlock, path) ->
+    $item.remove()
+    $codeBlock.addClass 'hidden'
+    $node = $ jadeTemplate['article/snippet']( {path:path} )
+    $node.insertBefore $codeBlock
+    codeIsOpen = false
+    $copyCodeBtn = $(".copy", $node)
+
+    $(".view", $node).on 'click', ()->
+      $codeBlock.toggleClass 'hidden'
+      codeIsOpen = !codeIsOpen
+    clipboard = new Clipboard $copyCodeBtn[0],
+      target:()->
+        $codeBlock.removeClass 'hidden'
+        return $codeBlock[0]
+
+    clipboard.on 'success', (e)->
+      e.clearSelection()
+      $copyCodeBtn.addClass 'copy-success'
+      if !codeIsOpen
+        $codeBlock.addClass 'hidden'
+
+  snippet : ($item, $codeBlock, start="", end) ->
+    if start.length == 0 then return
+
+    $item.addClass 'expand'
+    $code      = $("code", $codeBlock)
+    code       = $code[0].innerHTML
     startIndex = code.indexOf start
     endIndex   = code.lastIndexOf end
     if endIndex == -1
       matchedCode = code.substr startIndex
     else
       matchedCode = code.substr startIndex, endIndex - startIndex
+    $node = $ jadeTemplate['article/code']( code:matchedCode, klass:$code.attr('class') )
+    $node.insertBefore $codeBlock
+    $codeBlock.addClass 'hidden'
 
-    console.log "---------"
-    console.log matchedCode
-    console.log "+++++++++"
-    console.log start
-    console.log end
-    console.log endIndex
-    # Create the matched code as a new block
-    # Add `language-none` to the original block
-    # Create an element with the (...) expand +
-
+    $item.on 'click', ()->
+      $item.toggleClass 'expanded'
+      # $item.toggleClass 'hidden'
+      $codeBlock.toggleClass 'hidden'
+      $node.toggleClass 'hidden'
 
 new ArticleMeta()

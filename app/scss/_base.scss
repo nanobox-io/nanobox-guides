@@ -6,6 +6,7 @@ html           {box-sizing: border-box; }
 body           { margin:0; padding:0 0 80px 0; font-family: $proxima; background:#DBE1E6; overflow-x: hidden; }
 body *         { -webkit-font-smoothing:antialiased;  }
 a              { text-decoration: none; color: #26BBFF; }
+code           {font-size:15px; font-family:$code; }
 ::-webkit-input-placeholder {
    color: #d4dce2;
 }

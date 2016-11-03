@@ -1,0 +1,30 @@
+.meta          {min-height:10px; background: #F3F4F5; padding: 4px 0 0 10px; font-style:italic; font-weight: bold; color:#A3B3BF; font-family: $code; font-size: 13px;
+                display: flex; align-items: baseline; justify-content: flex-start;  margin-bottom:-10px;
+  &.expand     {cursor:pointer;
+    &:before   {content:"(...) expand"}
+    &:after    {content:"+"; color:#1CACEF; font-style:normal; font-size:15px; margin-left: 4px; line-height:2px  }
+    &:hover    {color:#1CACEF; }
+    &.expanded {
+      &:before {content:">...< collapse"; }
+      &:after  {content:"-";}
+    }
+  }
+  &:before     {content:"(...)"}
+}
+
+.code-snippet  {display:flex; background: #F3F4F5; border: solid #E8ECF2 3px;
+  .icon        {padding:10px 15px 10px 15px; border-right: solid #E8ECF2 3px;}
+  .details     {display:flex; flex-direction:column; align-items: flex-start; justify-content: flex-end; padding-left:15px;
+    .path      {font-family: $code; font-weight:bold; color:#195275; font-size:17px; margin-bottom:18px; }
+    .actions   {display:flex; align-items: center; margin-bottom:15px;
+      .btn     {display:flex; align-items: center; background:#1CACEF; color:white; font-weight: $semibold; font-size:16px; height: 30px; padding:0 15px; margin-right:20px; border-radius:3px; cursor:pointer;
+        svg    {margin-right:8px; }
+        .txt   {}
+        &:hover{background:#09A0E7;}
+        &.copy-success{position: relative;
+          &:after{content:" Copied!"; position: absolute; right: -60px; font-size:13px; color:#09A0E7; }
+        }
+      }
+    }
+  }
+}

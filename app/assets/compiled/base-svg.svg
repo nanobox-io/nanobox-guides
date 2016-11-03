@@ -38,6 +38,12 @@
 	.st32{fill:#589FE8;}
 	.st33{fill:none;stroke:#FFC25C;stroke-width:2;stroke-miterlimit:10;}
 	.st34{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
+	.st35{fill:#1CACEF;}
+	.st36{fill:#2479BD;}
+	.st37{fill:none;stroke:#1D6096;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st38{fill:none;stroke:#1D6096;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st39{fill:none;stroke:#1D6096;stroke-width:1.5;stroke-miterlimit:10;}
+	.st40{fill:#1D6096;}
 </style>
 <g id="logo_x60_19x33">
 	<polygon class="st0" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/>
@@ -252,5 +258,26 @@
 <g id="go-arrow_x60_14x11">
 	<line class="st34" x1="0" y1="5.077" x2="11.96" y2="5.077"/>
 	<polyline class="st34" points="7.646,0.53 12.192,5.077 7.646,9.624 	"/>
+</g>
+<g id="snippet-file_x60_56x76">
+	<polygon class="st35" points="18.618,0 0,18.775 0,75 55,75 55,0 	"/>
+	<polygon class="st36" points="0,18.881 18.513,18.881 18.513,0.263 	"/>
+	<polyline class="st36" points="16.051,45.333 44.419,75.197 55.062,75.197 55.169,48.234 39.012,32.077 	"/>
+	<polygon class="st19" points="16.051,32.077 27.531,25.449 39.012,32.077 39.012,45.333 27.531,51.962 16.051,45.333 	"/>
+</g>
+<g id="copy-snippet_x60_17x18">
+	<line class="st37" x1="12.745" y1="3.252" x2="12.745" y2="8.299"/>
+	<polyline class="st37" points="12.745,12.996 12.745,16.417 0.75,16.417 0.75,3.252 	"/>
+	<line class="st37" x1="16.062" y1="10.572" x2="4.742" y2="10.572"/>
+	<polyline class="st37" points="7.467,13.483 4.555,10.572 7.467,7.66 	"/>
+	<polygon class="st38" points="8.461,2.361 7.947,0.75 5.277,0.75 4.763,2.361 2.739,2.361 3.832,5.263 9.663,5.263 10.756,2.361 	
+		"/>
+</g>
+<g id="view-snippet_x60_22x9">
+	<path class="st39" d="M20.888,5.816C18.565,2.745,14.891,0.75,10.743,0.75c-4.148,0-7.821,1.995-10.144,5.066"/>
+	<path class="st39" d="M4.635,8.003C3.055,7.132,1.68,5.935,0.598,4.504"/>
+	<path class="st39" d="M20.888,4.504C19.727,6.04,18.227,7.306,16.5,8.189"/>
+	<path class="st39" d="M15.536,2.085c0,2.648-2.146,4.794-4.793,4.794S5.95,4.732,5.95,2.085"/>
+	<circle class="st40" cx="10.743" cy="2.603" r="1.863"/>
 </g>
 </svg>

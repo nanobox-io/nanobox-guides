@@ -14,7 +14,8 @@
     "top-nav": "nanobox-io/top-nav",
     "shadow-icons": "tolmark12/shadow-icons-js",
     "highlight": "^9.7.0",
-    "js-yaml": "^3.6.1"
+    "js-yaml": "^3.6.1",
+    "clipboard": "~1.5.15"
   },
   "ignore": [
     "app",
