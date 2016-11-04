@@ -4,23 +4,20 @@ With very little effort you can take your app from a local development app to a 
 ## Setup webserver
 Django runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into rails through puma.
 
-#### Install nginx package
+#### Nginx
 
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
 code.build:
-  
-  # ...
-  
   # to run the app, we'll need nginx as a reverse proxy
   extra_packages:
     - nginx
 ```
 
-#### Nginx configuration
+Now add the following nginx config file into your project, at `config/nginx.conf`:
 
-Now add the following nginx configuration into your project, at `config/nginx.conf`:
+<div class="meta" data-method="configFile" data-params="config/nginx.conf"></div>
 
 ```nginx
 worker_processes 1;
@@ -69,15 +66,16 @@ http {
 }
 ```
 
-#### Install puma
-Add puma to your Gemfile:
+#### Puma
+Add puma to your Gemfile (if it's not already):
 
 ```ruby
 gem 'puma', '~> 3.0'
 ```
 
-#### Configure puma
-Now add the following puma configuration into your project, at `config/puma.rb`:
+Now add the following puma config file into your project, at `config/puma.rb`:
+
+<div class="meta" data-method="configFile" data-params="config/puma.rb"></div>
 
 ```ruby
 # Puma can serve each request in a thread from an internal thread pool.
@@ -130,7 +128,7 @@ plugin :tmp_restart
 
 ```
 
-**IMPORTANT**: The puma configuration above is a minimal configuration sufficient to run your app. You should spend some time reading through the comments and configure puma to meet the specific needs of your app.
+**IMPORTANT**: The puma configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
