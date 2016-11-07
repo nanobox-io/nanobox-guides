@@ -4,12 +4,19 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /javascript/angular/install-nanobox, title: Install Nanobox}
       - {href: /javascript/angular/from-scratch, title: Angular from Scratch}
       - {href: /javascript/angular/existing-app, title: Existing Angular App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
       - {href: /javascript/angular/launch-backend, title: Launch your backend}
+      - title: Frontend Javascript
+        href: /javascript/angular/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}

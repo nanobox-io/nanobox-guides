@@ -27,7 +27,8 @@ articles:
     articles:
       - {href: /ruby/rails/configure-rails, title: Configure Rails}
       - {href: /ruby/rails/launch-your-app, title: Launch your App}
-      
+
+  #
   - title: "Production"
     articles:
       - {href: /ruby/rails/point-your-domain, title: Point your Domain}
@@ -43,9 +44,10 @@ articles:
       - {href: /ruby/rails/remote-access, title: Remote Access}
       - {href: /ruby/rails/team-management, title: Team Management}
       - {href: /ruby/rails/manage-platform, title: Manage Platform}
-      
+
+  #
   - title: "Advanced"
     articles:
       - {href: /ruby/rails/stage-your-app, title: Stage your App}
-      - {href: /ruby/rails/scale-your-app, title: Make rails scream}
+      - {href: /ruby/rails/scale-your-app, title: Make Rails scream}
       - {href: /ruby/rails/scale-your-app, title: New Relic}

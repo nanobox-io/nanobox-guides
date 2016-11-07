@@ -4,28 +4,36 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /python/flask/install-nanobox, title: Install Nanobox}
       - {href: /python/flask/from-scratch, title: Flask from Scratch}
       - {href: /python/flask/existing-app, title: Existing Flask App}
-      - {href: /python/flask/pip, title: Pip Packages}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
-      - {href: /python/flask/javascript-runtime, title: Javascript Runtime}
       - {href: /python/flask/add-a-database, title: Add a Database}
       - {href: /python/flask/local-evars, title: Local Environment Variables}
+      - title: Frontend Javascript
+        href: /python/flask/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /python/flask/configure-flask, title: Configure Flask}
+      - {href: /python/flask/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /python/flask/configure-flask, title: Configure Flask}
-      - {href: /python/flask/stage-your-app, title: Stage your App}
-      - {href: /python/flask/launch-your-app, title: Launch your App}
       - {href: /python/flask/point-your-domain, title: Point your Domain}
       - {href: /python/flask/encryption, title: SSL/TLS Encryption}
-      - {href: /python/flask/production-evars, title: Production Environment Variables}
+      - {href: /python/flask/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
@@ -36,3 +44,10 @@ articles:
       - {href: /python/flask/remote-access, title: Remote Access}
       - {href: /python/flask/team-management, title: Team Management}
       - {href: /python/flask/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /python/flask/stage-your-app, title: Stage your App}
+      - {href: /python/flask/scale-your-app, title: Make Flask scream}
+      - {href: /python/flask/scale-your-app, title: New Relic}

@@ -2,31 +2,41 @@ title: Laravel
 href: /php/laravel
 articles:
 
-  - title: Getting Started
+  #
+  - title: "Getting Started"
     tribe: the_essentials
     articles:
-      - {href: /php/laravel/install-nanobox, title: Install Nanobox}
       - {href: /php/laravel/from-scratch, title: Laravel from Scratch}
       - {href: /php/laravel/existing-app, title: Existing Laravel App}
 
-  - title: Next Steps
+  #
+  - title: "Next Steps"
     tribe: the_essentials
     articles:
       - {href: /php/laravel/add-a-database, title: Add a Database}
-      - {href: /php/laravel/writable-permissions, title: Writable Permissions}
-      - href: /php/laravel/local-evars, title: Local Environment Variables}
-      - {href: /php/laravel/javascript-runtime, title: Javascript Runtime}
+      - {href: /php/laravel/local-evars, title: Local Environment Variables}
+      - title: Frontend Javascript
+        href: /php/laravel/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
 
-  - title: Production
+  #
+  - title: "Go Live"
     articles:
       - {href: /php/laravel/configure-laravel, title: Configure Laravel}
-      - {href: /php/laravel/stage-your-app, title: Stage your App}
       - {href: /php/laravel/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
       - {href: /php/laravel/point-your-domain, title: Point your Domain}
       - {href: /php/laravel/encryption, title: SSL/TLS Encryption}
-      - {href: /php/laravel/production-evars, title: Production Environment Variables}
+      - {href: /php/laravel/production-evars, title: Environment Variables}
 
-  - title: Going Further
+  #
+  - title: "Going Further"
     articles:
       - {href: /php/laravel/scale-your-app, title: Scale Your App}
       - {href: /php/laravel/debugging, title: Debugging}
@@ -34,3 +44,10 @@ articles:
       - {href: /php/laravel/remote-access, title: Remote Access}
       - {href: /php/laravel/team-management, title: Team Management}
       - {href: /php/laravel/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/laravel/stage-your-app, title: Stage your App}
+      - {href: /php/laravel/scale-your-app, title: Make Laravel scream}
+      - {href: /php/laravel/scale-your-app, title: New Relic}
