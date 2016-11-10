@@ -1,4 +1,4 @@
-# Create a Ruby Dev Environment
+# Create a Ruby Environment
 
 Creating a Ruby environment and app with Nanobox is done in a few simple steps.
 

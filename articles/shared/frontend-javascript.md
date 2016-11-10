@@ -2,11 +2,13 @@
 
 Including Node.js in your app can done through adding the following options to the `code.build` section of your boxfile.yml.
 
-## Include Node.js in Your boxfile.yml
+## Install nodejs
 
 ```yaml
-code.build:
-  engine: #your-engine
+run.config:
+
+  extra_packages:
+    - nodejs
 
   # Includes the Node.js package in your runtime
   dev_packages:
@@ -31,6 +33,17 @@ Specifying the `nodejs` package in your boxfile.yml will pull the most recent ve
 #### Apply Changes
 With these options added to your `boxfile.yml`, the next time you start a `nanobox dev console` nodejs will be available.
 
+```
+package managers:
+npm, yarn, bower*,
+
+task runners:
+grunt, gulp*, broccoli, brunch
+
+module loaders:
+webpack*(2), browserfy, systemjs
+
+```
 
 ## Package Managers
 
