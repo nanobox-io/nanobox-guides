@@ -4,27 +4,36 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /golang/beego/install-nanobox, title: Install Nanobox}
       - {href: /golang/beego/from-scratch, title: Beego from Scratch}
       - {href: /golang/beego/existing-app, title: Existing Beego App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
       - {href: /golang/beego/add-a-database, title: Add a Database}
       - {href: /golang/beego/local-evars, title: Local Environment Variables}
-      - {href: /golang/beego/javascript-runtime, title: Javascript Runtime}
+      - title: Frontend Javascript
+        href: /golang/beego/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /golang/beego/configure-beego, title: Configure Beego}
+      - {href: /golang/beego/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/beego/configure-beego, title: Configure Beego}
-      - {href: /golang/beego/stage-your-app, title: Stage your App}
-      - {href: /golang/beego/launch-your-app, title: Launch your App}
       - {href: /golang/beego/point-your-domain, title: Point your Domain}
       - {href: /golang/beego/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/beego/production-evars, title: Production Environment Variables}
+      - {href: /golang/beego/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
@@ -35,3 +44,10 @@ articles:
       - {href: /golang/beego/remote-access, title: Remote Access}
       - {href: /golang/beego/team-management, title: Team Management}
       - {href: /golang/beego/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /golang/beego/stage-your-app, title: Stage your App}
+      - {href: /golang/beego/scale-your-app, title: Make Beego scream}
+      - {href: /golang/beego/scale-your-app, title: New Relic}

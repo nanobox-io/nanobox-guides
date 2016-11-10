@@ -4,27 +4,36 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /elixir/phoenix/install-nanobox, title: Install Nanobox}
       - {href: /elixir/phoenix/from-scratch, title: Phoenix from Scratch}
       - {href: /elixir/phoenix/existing-app, title: Existing Phoenix App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
       - {href: /elixir/phoenix/add-a-database, title: Add a Database}
       - {href: /elixir/phoenix/local-evars, title: Local Environment Variables}
-      - {href: /elixir/phoenix/javascript-runtime, title: Javascript Runtime}
+      - title: Frontend Javascript
+        href: /elixir/phoenix/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /elixir/phoenix/configure-phoenix, title: Configure Phoenix}
+      - {href: /elixir/phoenix/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /elixir/phoenix/configure-phoenix, title: Configure Phoenix}
-      - {href: /elixir/phoenix/stage-your-app, title: Stage your App}
-      - {href: /elixir/phoenix/launch-your-app, title: Launch your App}
       - {href: /elixir/phoenix/point-your-domain, title: Point your Domain}
       - {href: /elixir/phoenix/encryption, title: SSL/TLS Encryption}
-      - {href: /elixir/phoenix/production-evars, title: Production Environment Variables}
+      - {href: /elixir/phoenix/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
@@ -35,3 +44,10 @@ articles:
       - {href: /elixir/phoenix/remote-access, title: Remote Access}
       - {href: /elixir/phoenix/team-management, title: Team Management}
       - {href: /elixir/phoenix/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /elixir/phoenix/stage-your-app, title: Stage your App}
+      - {href: /elixir/phoenix/scale-your-app, title: Make Phoenix scream}
+      - {href: /elixir/phoenix/scale-your-app, title: New Relic}

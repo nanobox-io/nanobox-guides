@@ -3,39 +3,40 @@ href: /python/django
 articles:
 
   #
-  - title: Getting Started
+  - title: "Getting Started"
     tribe: the_essentials
     articles:
       - {href: /python/django/from-scratch, title: Django from Scratch}
       - {href: /python/django/existing-app, title: Existing Django App}
-      - {href: /python/django/pip, title: Pip Packages}
 
   #
-  - title: Next Steps
+  - title: "Next Steps"
     tribe: the_essentials
     articles:
-      - {href: /python/django/javascript-runtime, title: Frontend Javascript}
       - {href: /python/django/add-a-database, title: Add a Database}
       - {href: /python/django/local-evars, title: Local Environment Variables}
+      - title: Frontend Javascript
+        href: /python/django/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
 
   #
-  - title: Go Live
+  - title: "Go Live"
     articles:
       - {href: /python/django/configure-django, title: Configure Django}
-      - {href: /python/django/stage-your-app, title: Stage your App}
       - {href: /python/django/launch-your-app, title: Launch your App}
-      # - {href: /python/django/point-your-domain, title: Point your Domain}
-      # - {href: /python/django/encryption, title: SSL/TLS Encryption}
-      # - {href: /python/django/production-evars, title: Production Environment Variables}
 
-  - title: Production
+  #
+  - title: "Production"
     articles:
       - {href: /python/django/point-your-domain, title: Point your Domain}
       - {href: /python/django/encryption, title: SSL/TLS Encryption}
-      - {href: /python/django/production-evars, title: Production Environment Variables}
+      - {href: /python/django/production-evars, title: Environment Variables}
 
   #
-  - title: Going Further
+  - title: "Going Further"
     articles:
       - {href: /python/django/scale-your-app, title: Scale Your App}
       - {href: /python/django/debugging, title: Debugging}
@@ -43,3 +44,10 @@ articles:
       - {href: /python/django/remote-access, title: Remote Access}
       - {href: /python/django/team-management, title: Team Management}
       - {href: /python/django/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /python/django/stage-your-app, title: Stage your App}
+      - {href: /python/django/scale-your-app, title: Make Django scream}
+      - {href: /python/django/scale-your-app, title: New Relic}

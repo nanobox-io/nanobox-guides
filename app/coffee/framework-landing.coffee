@@ -30,7 +30,7 @@ class FrameworkLanding extends Landing
 
       yaml.service = serviceId
       yaml.name    = name
-      if !yaml.description? then yaml.description = "Add the following snippet to your boxfile.yml and redeploy to create a #{yaml.service} component"
+      if !yaml.description? then yaml.description = "Add the following snippet to your boxfile.yml: "
 
       @$serviceCard = $ jadeTemplate['framework-overview/service-card']( yaml )
       @$serviceCard.css opacity:0

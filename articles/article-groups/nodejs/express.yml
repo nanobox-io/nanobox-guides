@@ -4,26 +4,36 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /nodejs/express/install-nanobox, title: Install Nanobox}
       - {href: /nodejs/express/from-scratch, title: Express from Scratch}
       - {href: /nodejs/express/existing-app, title: Existing Express App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
       - {href: /nodejs/express/add-a-database, title: Add a Database}
       - {href: /nodejs/express/local-evars, title: Local Environment Variables}
+      - title: Frontend Javascript
+        href: /nodejs/express/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/express/configure-express, title: Configure Express}
+      - {href: /nodejs/express/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /nodejs/express/configure-express, title: Configure Express}
-      - {href: /nodejs/express/stage-your-app, title: Stage your App}
-      - {href: /nodejs/express/launch-your-app, title: Launch your App}
       - {href: /nodejs/express/point-your-domain, title: Point your Domain}
       - {href: /nodejs/express/encryption, title: SSL/TLS Encryption}
-      - {href: /nodejs/express/production-evars, title: Production Environment Variables}
+      - {href: /nodejs/express/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
@@ -34,3 +44,10 @@ articles:
       - {href: /nodejs/express/remote-access, title: Remote Access}
       - {href: /nodejs/express/team-management, title: Team Management}
       - {href: /nodejs/express/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/express/stage-your-app, title: Stage your App}
+      - {href: /nodejs/express/scale-your-app, title: Make Express scream}
+      - {href: /nodejs/express/scale-your-app, title: New Relic}

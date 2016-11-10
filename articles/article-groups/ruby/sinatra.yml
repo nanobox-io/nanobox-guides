@@ -4,27 +4,36 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /ruby/sinatra/install-nanobox, title: Install Nanobox}
       - {href: /ruby/sinatra/from-scratch, title: Sinatra from Scratch}
       - {href: /ruby/sinatra/existing-app, title: Existing Sinatra App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
       - {href: /ruby/sinatra/add-a-database, title: Add a Database}
       - {href: /ruby/sinatra/local-evars, title: Local Environment Variables}
-      - {href: /ruby/sinatra/javascript-runtime, title: Javascript Runtime}
+      - title: Frontend Javascript
+        href: /ruby/sinatra/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /ruby/sinatra/configure-sinatra, title: Configure Sinatra}
+      - {href: /ruby/sinatra/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /ruby/sinatra/configure-sinatra, title: Configure Sinatra}
-      - {href: /ruby/sinatra/stage-your-app, title: Stage your App}
-      - {href: /ruby/sinatra/launch-your-app, title: Launch your App}
       - {href: /ruby/sinatra/point-your-domain, title: Point your Domain}
       - {href: /ruby/sinatra/encryption, title: SSL/TLS Encryption}
-      - {href: /ruby/sinatra/production-evars, title: Production Environment Variables}
+      - {href: /ruby/sinatra/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
@@ -35,3 +44,10 @@ articles:
       - {href: /ruby/sinatra/remote-access, title: Remote Access}
       - {href: /ruby/sinatra/team-management, title: Team Management}
       - {href: /ruby/sinatra/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /ruby/sinatra/stage-your-app, title: Stage your App}
+      - {href: /ruby/sinatra/scale-your-app, title: Make Sinatra scream}
+      - {href: /ruby/sinatra/scale-your-app, title: New Relic}

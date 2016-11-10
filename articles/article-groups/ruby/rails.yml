@@ -14,20 +14,16 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /ruby/rails/add-a-database, title: Add a Database}
+      - {href: /ruby/rails/frontend-javascript, title: Frontend Javascript}
       - {href: /ruby/rails/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /ruby/rails/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
     articles:
       - {href: /ruby/rails/configure-rails, title: Configure Rails}
       - {href: /ruby/rails/launch-your-app, title: Launch your App}
-      
+
+  #
   - title: "Production"
     articles:
       - {href: /ruby/rails/point-your-domain, title: Point your Domain}
@@ -43,9 +39,12 @@ articles:
       - {href: /ruby/rails/remote-access, title: Remote Access}
       - {href: /ruby/rails/team-management, title: Team Management}
       - {href: /ruby/rails/manage-platform, title: Manage Platform}
-      
+
+  #
   - title: "Advanced"
     articles:
-      - {href: /ruby/rails/stage-your-app, title: Stage your App}
-      - {href: /ruby/rails/scale-your-app, title: Make rails scream}
-      - {href: /ruby/rails/scale-your-app, title: New Relic}
+      - {href: /ruby/rails/configure-ruby, title: Configure Ruby}
+      - {href: /ruby/rails/bundler, title: Bundler}
+      - {href: /ruby/rails/dry-run, title: Dry Run}
+      # - {href: /ruby/rails/scale-your-app, title: Make Rails scream}
+      # - {href: /ruby/rails/scale-your-app, title: New Relic}

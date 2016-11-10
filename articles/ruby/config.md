@@ -15,7 +15,9 @@ Specifies which Ruby runtime and version to use. The following runtimes are avai
 - jruby-9.0
 
 ```yaml
-code.build:
-  config:
+run.config:
+  engine: ruby
+  
+  engine.config:
     runtime: ruby-2.3
 ```

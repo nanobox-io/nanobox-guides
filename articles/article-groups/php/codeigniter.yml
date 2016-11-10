@@ -2,29 +2,41 @@ title: CodeIgniter
 href: /php/codeigniter
 articles:
 
-  - title: Getting Started
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /php/codeigniter/install-nanobox, title: Install Nanobox}
       - {href: /php/codeigniter/from-scratch, title: CodeIgniter from Scratch}
       - {href: /php/codeigniter/existing-app, title: Existing CodeIgniter App}
 
-  - title: Next Steps
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
     articles:
       - {href: /php/codeigniter/add-a-database, title: Add a Database}
-      - {href: /php/codeigniter/writable-permissions, title: Writable Permissions}
       - {href: /php/codeigniter/local-evars, title: Local Environment Variables}
-      - {href: /php/codeigniter/javascript-runtime, title: Javascript Runtime}
+      - title: Frontend Javascript
+        href: /php/codeigniter/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
 
-  - title: Production
+  #
+  - title: "Go Live"
     articles:
       - {href: /php/codeigniter/configure-codeigniter, title: Configure CodeIgniter}
-      - {href: /php/codeigniter/stage-your-app, title: Stage your App}
       - {href: /php/codeigniter/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
       - {href: /php/codeigniter/point-your-domain, title: Point your Domain}
       - {href: /php/codeigniter/encryption, title: SSL/TLS Encryption}
-      - {href: /php/codeigniter/production-evars, title: Production Environment Variables}
+      - {href: /php/codeigniter/production-evars, title: Environment Variables}
 
-  - title: Going Further
+  #
+  - title: "Going Further"
     articles:
       - {href: /php/codeigniter/scale-your-app, title: Scale Your App}
       - {href: /php/codeigniter/debugging, title: Debugging}
@@ -32,3 +44,10 @@ articles:
       - {href: /php/codeigniter/remote-access, title: Remote Access}
       - {href: /php/codeigniter/team-management, title: Team Management}
       - {href: /php/codeigniter/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/codeigniter/stage-your-app, title: Stage your App}
+      - {href: /php/codeigniter/scale-your-app, title: Make CodeIgniter scream}
+      - {href: /php/codeigniter/scale-your-app, title: New Relic}

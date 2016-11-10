@@ -1,27 +1,39 @@
 title: Hugo
 href: /golang/hugo
 articles:
+
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /golang/hugo/install-nanobox, title: Install Nanobox}
       - {href: /golang/hugo/from-scratch, title: Hugo from Scratch}
       - {href: /golang/hugo/existing-app, title: Existing Hugo App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
+      - {href: /golang/hugo/add-a-database, title: Add a Database}
       - {href: /golang/hugo/local-evars, title: Local Environment Variables}
+      - title: Frontend Javascript
+        href: /golang/hugo/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /golang/hugo/configure-hugo, title: Configure Hugo}
+      - {href: /golang/hugo/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/hugo/configure-hugo, title: Configure Hugo}
-      - {href: /golang/hugo/stage-your-app, title: Stage your App}
-      - {href: /golang/hugo/launch-your-app, title: Launch your App}
       - {href: /golang/hugo/point-your-domain, title: Point your Domain}
       - {href: /golang/hugo/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/hugo/production-evars, title: Production Environment Variables}
+      - {href: /golang/hugo/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
@@ -32,3 +44,10 @@ articles:
       - {href: /golang/hugo/remote-access, title: Remote Access}
       - {href: /golang/hugo/team-management, title: Team Management}
       - {href: /golang/hugo/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /golang/hugo/stage-your-app, title: Stage your App}
+      - {href: /golang/hugo/scale-your-app, title: Make Hugo scream}
+      - {href: /golang/hugo/scale-your-app, title: New Relic}

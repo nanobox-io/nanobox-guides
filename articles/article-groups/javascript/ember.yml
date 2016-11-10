@@ -4,12 +4,19 @@ articles:
 
   #
   - title: "Getting Started"
+    tribe: the_essentials
     articles:
-      - {href: /javascript/ember/install-nanobox, title: Install Nanobox}
       - {href: /javascript/ember/from-scratch, title: Ember from Scratch}
       - {href: /javascript/ember/existing-app, title: Existing Ember App}
 
   #
   - title: "Next Steps"
+    tribe: the_essentials
     articles:
-      - {href: /javascript/ember/launch-backend, title: Launch your Backend}
+      - {href: /javascript/ember/launch-backend, title: Launch your backend}
+      - title: Frontend Javascript
+        href: /javascript/ember/frontend-javascript
+        articles:
+          - {href: /some/link, title: Bower}
+          - {href: /some/link, title: Gulp}
+          - {href: /some/link, title: Broccoli}
