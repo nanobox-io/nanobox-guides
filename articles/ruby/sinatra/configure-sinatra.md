@@ -148,4 +148,4 @@ With your app configured for running in production, whats next? Think about what
 
 * [Stage your App](/ruby/sinatra/stage-your-app)
 * [Launch your App](/ruby/sinatra/launch-your-app)
-* [Back to sinatra overview](/ruby/sinatra)
+* [Back to Sinatra overview](/ruby/sinatra)

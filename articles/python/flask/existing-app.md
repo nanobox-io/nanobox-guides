@@ -1,44 +1,36 @@
 # Existing Flask App
-Part of what makes nanobox so useful is you don't even need python or flask installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need python or flask installed on your local machine to use them.
 
-This guide will help you get an existing Flask app up-and-running with nanobox.
+## Setup
 
-## Create a Python Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
+#### cd into your Flask app
 
-From within this environment you can develop and run your app as you normally would with things like *pip install*.
+```bash
+# change into your project folder
+cd my-flask-app
+```
 
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+
+<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
 
 ```yaml
-code.build:
+run.config:
+
   engine: python
-```
 
-#### Start the Environment
-You can then start the dev environment:
+  engine.config:
+    runtime: python-3.5
 
-```bash
-nanobox dev start
-```
+  extra_packages:
+    - nodejs
 
-Also, add a convenient way to access your app from a browser:
-
-```bash
-nanobox dev dns add flask.nanobox.dev
 ```
 
 ## Configure Flask
-Once the dev environment is started you can console into it and configure your existing django application:
-
-```bash
-# console into the dev environment
-nanobox dev console
-
-```
 
 #### Install packages via pip
 If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Flask) individually like this:
@@ -54,27 +46,55 @@ Once they've been installed, you'll need to freeze your pip installation:
 pip freeze > requirements.txt
 ```
 
-#### Listen on all interfaces
-Because nanobox runs inside containers, we need to tell flask to bind to all interfaces which will make the app accessible to host:
+#### Listen on 0.0.0.0
+
+To allow connections from the host machine into the app's container tell flask to listen on all available IP's:
 
 ```python
 if __name__ == "__main__":
   app.run(host='0.0.0.0')
 ```
 
-## Flask up-and-running
-From within the same `nanobox dev console` session, run the app as you would normally:
+#### Add a local DNS
 
 ```bash
-python APP_NAME.py
+# Add a convenient way to access your app from the browser
+nanobox dns add local flask.dev
 ```
 
-Once the app has started you can visit it from your favorite browser at `flask.nanobox.dev:5000`.
+## Run the app
+
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/flask/add-a-database) before your app will run.
+
+```bash
+nanobox run python myapp.py
+```
+
+## Explore
+
+With Nanobox, you have everything you need develop and run your flask app:
+
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where python is installed,
+python -v
+
+# your gems are available,
+pip list
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/flask/add-a-database)
-* [Javascript Runtime](/python/flask/javascript-runtime)
+* [Frontent Javascipt](/python/flask/frontend-javascript)
 * [Local Environment Variables](/python/flask/local-evars)
 * [Back to Flask overview](/python/flask)

@@ -1,9 +1,9 @@
 # Sinatra from Scratch
 Part of what makes Nanobox so useful is you don't even need ruby or sinatra installed on your local machine to use them.
 
-## Create a Rails project
+## Create a Sinatra project
 
-#### Create a Rails project folder
+#### Create a Sinatra project folder
 Decide where you want your project to live and create a folder there:
 
 ```bash
@@ -24,7 +24,6 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 ```yaml
 run.config:
 
-  #
   engine: ruby
 
   engine.config:
@@ -35,7 +34,33 @@ run.config:
 
 ```
 
-## Create a Sinatra App
+## Generate a Sinatra App
+
+#### Install Sinatra
+
+Create a `Gemfile` at the root of your project that includes sinatra:
+
+```ruby
+source "https://rubygems.org"
+
+#
+gem "sinatra"
+```
+
+Then install sinatra:
+
+```bash
+# drop into a nanobox console
+nanobox run
+
+# install the sinatra gem so we can use it to run our app
+bundle install
+
+# exit the console
+exit
+```
+
+#### Create a Sinatra App
 Create a basic sinatra app named `myapp.rb` at the root of your project:
 
 ```ruby
@@ -47,21 +72,11 @@ get "/" do
 end
 ```
 
-Also, create a `Gemfile` that includes sinatra:
-
-```ruby
-source "https://rubygems.org"
-
-#
-gem "sinatra"
-```
-
 #### Configre Sinatra
 To allow connections from the host machine into the app's container modify the `myapp.rb` telling sinatra to listen on all available IP's:
 
 ```ruby
 set :bind, "0.0.0.0"
-set :port, "8080"
 ```
 
 ## Run the app
@@ -106,4 +121,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 * [Add a Database](/ruby/sinatra/add-a-database)
 * [Frontent Javascipt](/ruby/sinatra/frontend-javascript)
 * [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Back to Rails overview](/ruby/sinatra)
+* [Back to Sinatra overview](/ruby/sinatra)
