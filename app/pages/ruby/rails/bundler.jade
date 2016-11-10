@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Bundler"
+    keywords    = "bundler,ruby,rails"
+    description = "Bundler"
+    articles    = "ruby/rails"
+    icons       = "ruby,rails"
+    
+block markdown
+  include:md /articles/ruby/bundler.md

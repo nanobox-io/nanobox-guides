@@ -1,56 +1,123 @@
 # Frontend Javascript
 
-Including Node.js in your app can done through adding the following options to the `code.build` section of your boxfile.yml.
+## Nodejs
 
-## Install nodejs
+#### Install
+
+Installing nodejs in your run environment is as simple as adding an extra package in your `boxfile.yml`:
 
 ```yaml
 run.config:
-
+  # add nodejs to the run environment
   extra_packages:
     - nodejs
+```
 
-  # Includes the Node.js package in your runtime
-  dev_packages:
-    - nodejs
+#### Dependencies
 
-  # Tells nanobox to cache & reuse the node_modules directory
+If you're using a package manager like `yarn` or `npm`, it is highly encouraged to add `node_modules` to the `lib_dirs` for enhanced performance:
+
+```yaml
+run.config:
+  # cache node_modules
   lib_dirs:
     - node_modules
+```
 
-  # Adds npm binaries to the $PATH
+#### CLI Tools
+
+Some packages include command line executables (bower, gulp, grunt, etc). To use these you'll need to add node_module's bin folder to your $PATH:
+
+```yaml
+run.config:
+  # add node_module bins to the $PATH
   paths:
     - node_modules/.bin
-
-  # Runs npm in the final step of your build process
-  after_build:
-    - npm install
-```
-
-#### Using a Specific Version of Node.js
-Specifying the `nodejs` package in your boxfile.yml will pull the most recent version of Node.js if you need a specific version of Node.js, you can append the major and minor version numbers to the package. For example: `node-4.4`. You can view the list of available node versions in the [Node.js Settings guide](#).
-
-#### Apply Changes
-With these options added to your `boxfile.yml`, the next time you start a `nanobox dev console` nodejs will be available.
-
-```
-package managers:
-npm, yarn, bower*,
-
-task runners:
-grunt, gulp*, broccoli, brunch
-
-module loaders:
-webpack*(2), browserfy, systemjs
-
 ```
 
 ## Package Managers
 
-* [Bower](/ruby/rails/add-a-database)
-* [Webpack](/ruby/rails)
+#### Yarn
+
+To use `yarn` you'll need to run `yarn` as an extra step in the run environment. We recommend using yarn over npm at this point.
+
+```yaml
+run.config:
+  # run yarn
+  extra_steps:
+    - yarn
+```
+
+#### NPM
+
+To use `npm` you'll need to add `npm install` as an extra step in the run environment.
+
+```yaml
+run.config:
+  # run npm install
+  extra_steps:
+    - npm install
+```
+
+#### Bower
+
+**HEADS UP**: Make sure `bower` is included in your `package.json` file as a dependency, and that you have configured [yarn](#yarn) or [npm](#npm) already as shown above.
+
+To use `bower` you'll need to add `bower install` as an extra step in the run environment.
+
+```yaml
+run.config:
+  # run bower install
+  extra_steps:
+    - bower install
+```
+
+It is highly encouraged to add `bower_components` to the `lib_dirs` for enhanced performance:
+
+```yaml
+run.config:
+  # cache bower_components
+  lib_dirs:
+    - bower_components
+```
 
 ## Task Runners
 
-* [Gulp](/ruby/rails/javascript-runtime)
-* [Grunt](/ruby/rails/local-evars)
+#### Gulp
+
+**HEADS UP**: Make sure `gulp` is included in your `package.json` file as a dependency, and that you have configured [yarn](#yarn) or [npm](#npm) already as shown above.
+
+To use gulp to generate a release that will be used during deployment, you can add an extra step to the deploy config:
+
+```yaml
+deploy.config:
+  # run gulp release command
+  extra_steps:
+    - gulp YOUR RELEASE COMMAND
+```
+
+#### Grunt
+
+**HEADS UP**: Make sure `grunt` is included in your `package.json` file as a dependency, and that you have configured [yarn](#yarn) or [npm](#npm) already as shown above.
+
+To use grunt to generate a release that will be used during deployment, you can add an extra step to the deploy config:
+
+```yaml
+deploy.config:
+  # run grunt release command
+  extra_steps:
+    - grunt YOUR RELEASE COMMAND
+```
+
+#### Brunch
+
+**HEADS UP**: Make sure `brunch` is included in your `package.json` file as a dependency, and that you have configured [yarn](#yarn) or [npm](#npm) already as shown above.
+
+To build a release that will be used during deployment, you can add an extra step to the deploy config:
+
+```yaml
+deploy.config:
+  # run brunch build
+  extra_steps:
+    - brunch build
+```

@@ -1,16 +1,15 @@
 # Configure Rails for Production
-With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 ## Setup webserver
-Django runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into rails through puma.
+Rails runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into rails through puma.
 
 #### Nginx
 
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
-code.build:
-  # to run the app, we'll need nginx as a reverse proxy
+run.config:
+  # add nginx package
   extra_packages:
     - nginx
 ```
@@ -131,14 +130,12 @@ plugin :tmp_restart
 **IMPORTANT**: The puma configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the rails server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-# ...
-
 # add a web component and give it a "start" command
 web.main:
   start:
@@ -146,40 +143,32 @@ web.main:
     puma: bundle exec puma -C /app/config/puma.rb
 ```
 
-In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command will be unique to the web server you're using within your app (unicorn, puma, etc.)
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
 
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-# ...
-
 # add a worker component and give it a "start" command
 worker.main:
   start: sidekiq
 ```
 
-In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier). The `start` command will be unique to the background processor you're using within your app (sidekiq, resque, etc.)
+In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier).
 
 ## Add Writable Directories
-By default, each components container is a read only environment. Rails will need certain directories available to write to for things like log output, temporary files, etc.
+By default, webs and workers run in a read only environment. Rails will need certain directories available to write to for things like log output, temporary files, etc.
 
 You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
 
 ```yaml
 web.main:
-
-  # ...
-
   # add writable dirs to your web component
   writable_dirs:
     - tmp
     - log
 
 worker.main:
-
-  # ...
-
   # add writable dirs to your worker component
   writable_dirs:
     - tmp
@@ -193,47 +182,36 @@ Although our app is now able to write it's logs to log files, if want it to stre
 
 ```yaml
 web.main:
-
-  # ...
-
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    key: 'log/production.log'
+    rails: 'log/production.log'
 
 worker.main:
-
-  # ...
-
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    key: 'path/to/log.file'
+    sidekiq: 'path/to/sidekiq/log.file'
 ```
 
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
 ## Compile Assets
-For Rails to run in production we'll need to compile all of our assets. To do that you can update your existing `boxfile.yml` with an after_compile [hook]():
+We can have rails compile assets during the deploy process by adding an extra step:
 
 ```yaml
-code.build:
-  
-  # ...
-
-  after_compile:
+deploy.config:
+  extra_steps:
     - rake assets:precompile
 ```
 
 ## Migrate Data
-The last step is to prepare any databases you might need. Just as you might `rake db:setup` locally, you'll need to have nanobox do that with each deploy incase you're modifying data with migrations as part of the deploy.
+To migrate data as part of the deploy process you can add a `before_live` hook, which will run just before the new instances are started.
 
 #### Add a deploy hook
-Nanobox can run hooks at different points in the development process. We'll want to tell nanobox to run a special rake task each time we deploy. In your existing boxfile.yml add the following code:
+Run a rake task each time we deploy. In your existing boxfile.yml add the following code:
 
 ```yaml
-# ...
-
-code.deploy:
-  before_deploy:
+deploy.config:
+  before_live:
     web.main:
       - rake db:setup_or_migrate
 ```
@@ -241,9 +219,11 @@ code.deploy:
 #### Add a rake task
 You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could, for example, create a `lib/tasks/db.rake` file that contained the following:
 
+<div class="meta" data-method="configFile" data-params="lib/tasks/db.rake"></div>
+
 ```ruby
 namespace :db do
-  desc 'either sets up the db or migrates it depending on state of db'
+  desc 'Setup the db or migrate depending on state of db'
   task setup_or_migrate: :environment do
     begin
       ActiveRecord::Base.connection

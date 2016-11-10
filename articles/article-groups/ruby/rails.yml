@@ -14,12 +14,7 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /ruby/rails/add-a-database, title: Add a Database}
-      - title: Frontend Javascript
-        href: /ruby/rails/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
+      - {href: /ruby/rails/frontend-javascript, title: Frontend Javascript}
       - {href: /ruby/rails/local-evars, title: Local Environment Variables}
 
   #
@@ -49,6 +44,7 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /ruby/rails/configure-ruby, title: Configure Ruby}
-      - {href: /ruby/rails/stage-your-app, title: Stage your App}
-      - {href: /ruby/rails/scale-your-app, title: Make Rails scream}
-      - {href: /ruby/rails/scale-your-app, title: New Relic}
+      - {href: /ruby/rails/bundler, title: Bundler}
+      - {href: /ruby/rails/dry-run, title: Dry Run}
+      # - {href: /ruby/rails/scale-your-app, title: Make Rails scream}
+      # - {href: /ruby/rails/scale-your-app, title: New Relic}
