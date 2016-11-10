@@ -1,17 +1,16 @@
 # Configure Django for Production
-With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 ## Setup webserver
 Django runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
 
-#### Install nginx package
+#### Nginx
 
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
 code.build:
   engine: python
-  
+
   # to run the app, we'll need nginx as a reverse proxy
   extra_packages:
     - nginx
@@ -54,7 +53,7 @@ http {
         # Listen on port 8080
         listen 8080;
 
-        # Settings to serve static files 
+        # Settings to serve static files
         location ^~ /static/  {
             root /app/static/;
         }
@@ -228,7 +227,7 @@ code.build:
   engine: python
 
 web.main:
-  start: 
+  start:
     nginx: nginx -c /app/etc/nginx.conf
     django: gunicorn -c /app/etc/gunicorn.py myapp.wsgi
 ```
@@ -241,7 +240,7 @@ You can have as many worker components as your app needs by simply adding them t
 ```yaml
 code.build:
   engine: python
-  
+
 worker.main:
   start: 'python jobs-worker.py'
 ```
@@ -249,7 +248,7 @@ worker.main:
 ## Collect static assets
 For django to run behind nginx in production, we'll need to ensure the assets get collected from all of the django apps and dropped into the `assets` directory (which was where we told nginx to serve them from). We also want nanobox to collect the assets just before deployment during the `compile-app` phase.
 
-#### Configure assets 
+#### Configure assets
 Set the following asset configuration within `myapp/settings.py`:
 
 ```python
@@ -263,7 +262,7 @@ We can update our `boxfile.yml` to include a hook into after_compile to collect 
 ```yaml
 code.build:
   engine: python
-  
+
   # collect static assets during compile-all phase
   after_compile:
     - python manage.py collectstatic --noinput --clear

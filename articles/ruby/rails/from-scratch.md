@@ -53,6 +53,7 @@ exit
 ```
 
 #### Configure Rails
+
 To allow connections from the host machine into the app's container modify the `config/boot.rb` telling rails to listen on all available IP's:
 
 <div class="meta" data-method="configFile" data-params="config/boot.rb"></div>
