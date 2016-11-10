@@ -1,6 +1,6 @@
 # Local Environment Variables
 
-Environment variables allow your app to run in multiple environments without modifying the code. They're also really handy for keeping sensitive information out of your codebase.
+Environment variables allow your app to run in multiple environments without modifying the code. They're also handy for keeping sensitive information out of your codebase.
 
 ### Add
 ```bash

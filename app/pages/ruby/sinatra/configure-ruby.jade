@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Ruby"
+    keywords    = "ruby,configure"
+    description = "configure ruby"
+    articles    = "ruby/sinatra"
+    icons       = "ruby,sinatra"
+    
+block markdown
+  include:md /articles/ruby/config.md

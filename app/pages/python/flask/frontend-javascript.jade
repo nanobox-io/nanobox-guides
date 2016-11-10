@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "python,flask,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in flask"
+    articles    = "python/flask"
+    icons       = "python,flask"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

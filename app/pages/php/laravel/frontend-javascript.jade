@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "php,laravel,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in laravel"
+    articles    = "php/laravel"
+    icons       = "php,laravel"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

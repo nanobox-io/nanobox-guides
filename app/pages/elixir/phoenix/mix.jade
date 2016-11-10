@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Mix"
+    keywords    = "elixir,phoenix,mix"
+    description = "mix with phoenix"
+    articles    = "elixir/phoenix"
+    icons       = "elixir,phoenix"
+    
+block markdown
+  include:md /articles/elixir/mix.md

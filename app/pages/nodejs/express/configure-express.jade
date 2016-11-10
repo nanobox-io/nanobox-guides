@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Express"
+    keywords    = "nodejs,express,configure,production"
+    description = "configuring express for production"
+    articles    = "nodejs/express"
+    icons       = "nodejs,express"
+    
+block markdown
+  include:md /articles/nodejs/express/configure-express.md

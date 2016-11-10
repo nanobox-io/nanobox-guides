@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "golang,beego,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in beego"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

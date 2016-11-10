@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "php,codeigniter,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in codeigniter"
+    articles    = "php/codeigniter"
+    icons       = "php,codeigniter"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

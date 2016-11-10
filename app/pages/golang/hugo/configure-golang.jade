@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Golang"
+    keywords    = "golang,configure"
+    description = "configure golang"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  include:md /articles/golang/config.md

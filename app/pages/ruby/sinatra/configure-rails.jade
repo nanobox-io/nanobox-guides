@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Sinatra"
+    keywords    = "ruby,sinatra,configure,production"
+    description = "configuring sinatra for production"
+    articles    = "ruby/sinatra"
+    icons       = "ruby,sinatra"
+    
+block markdown
+  include:md /articles/ruby/sinatra/configure-sinatra.md

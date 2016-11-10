@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /ruby/sinatra/add-a-database, title: Add a Database}
+      - {href: /ruby/sinatra/frontend-javascript, title: Frontend Javascript}
       - {href: /ruby/sinatra/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /ruby/sinatra/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,8 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /ruby/sinatra/stage-your-app, title: Stage your App}
-      - {href: /ruby/sinatra/scale-your-app, title: Make Sinatra scream}
-      - {href: /ruby/sinatra/scale-your-app, title: New Relic}
+      - {href: /ruby/sinatra/configure-ruby, title: Configure Ruby}
+      - {href: /ruby/sinatra/bundler, title: Bundler}
+      - {href: /ruby/sinatra/dry-run, title: Dry Run}
+      # - {href: /ruby/sinatra/scale-your-app, title: Make Sinatra scream}
+      # - {href: /ruby/sinatra/scale-your-app, title: New Relic}

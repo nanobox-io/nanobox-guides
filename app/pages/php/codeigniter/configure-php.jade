@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure php"
+    keywords    = "php,configure"
+    description = "configure php"
+    articles    = "php/codeigniter"
+    icons       = "php,codeigniter"
+    
+block markdown
+  include:md /articles/php/config.md

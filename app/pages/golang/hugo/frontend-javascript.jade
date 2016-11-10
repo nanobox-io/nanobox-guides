@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "golang,hugo,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in hugo"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

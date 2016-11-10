@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "nodejs,express,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in express"
+    articles    = "nodejs/express"
+    icons       = "nodejs,express"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

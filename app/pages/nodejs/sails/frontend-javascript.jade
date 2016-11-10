@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "nodejs,sails,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in sails"
+    articles    = "nodejs/sails"
+    icons       = "nodejs,sails"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

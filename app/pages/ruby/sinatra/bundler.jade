@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Bundler"
+    keywords    = "ruby,sinatra,bundler"
+    description = "bundler with sinatra"
+    articles    = "ruby/sinatra"
+    icons       = "ruby,sinatra"
+    
+block markdown
+  include:md /articles/ruby/bundler.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Elixir"
+    keywords    = "elixir,configure"
+    description = "configure elixir"
+    articles    = "elixir/phoenix"
+    icons       = "elixir,phoenix"
+    
+block markdown
+  include:md /articles/elixir/config.md
