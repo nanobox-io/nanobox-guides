@@ -3,7 +3,7 @@ Part of what makes Nanobox so useful is you don't even need ruby or sinatra inst
 
 ## Setup
 
-#### cd into your Rails app
+#### cd into your Sinatra app
 
 ```bash
 # change into your project folder
@@ -39,7 +39,6 @@ To allow connections from the host machine into the app's container modify the `
 
 ```ruby
 set :bind, "0.0.0.0"
-set :port, "8080"
 ```
 
 #### Add a local DNS
@@ -84,4 +83,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 * [Add a Database](/ruby/sinatra/add-a-database)
 * [Frontent Javascipt](/ruby/sinatra/frontend-javascript)
 * [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Back to Rails overview](/ruby/sinatra)
+* [Back to Sinatra overview](/ruby/sinatra)

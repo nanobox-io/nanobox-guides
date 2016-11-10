@@ -92,4 +92,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 
 * [Frontend Javascript](/ruby/sinatra/frontend-javascript)
 * [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Back to Rails overview](/ruby/sinatra)
+* [Back to Sinatra overview](/ruby/sinatra)

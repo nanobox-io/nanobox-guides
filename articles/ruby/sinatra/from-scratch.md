@@ -1,9 +1,9 @@
 # Sinatra from Scratch
 Part of what makes Nanobox so useful is you don't even need ruby or sinatra installed on your local machine to use them.
 
-## Create a Rails project
+## Create a Sinatra project
 
-#### Create a Rails project folder
+#### Create a Sinatra project folder
 Decide where you want your project to live and create a folder there:
 
 ```bash
@@ -61,7 +61,6 @@ To allow connections from the host machine into the app's container modify the `
 
 ```ruby
 set :bind, "0.0.0.0"
-set :port, "8080"
 ```
 
 ## Run the app
@@ -106,4 +105,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 * [Add a Database](/ruby/sinatra/add-a-database)
 * [Frontent Javascipt](/ruby/sinatra/frontend-javascript)
 * [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Back to Rails overview](/ruby/sinatra)
+* [Back to Sinatra overview](/ruby/sinatra)
