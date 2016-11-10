@@ -20,7 +20,6 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 ```yaml
 run.config:
 
-  #
   engine: ruby
 
   engine.config:
