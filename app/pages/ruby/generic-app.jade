@@ -1,0 +1,18 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Ruby"
+    informalName = "ruby"
+    icon         = "ruby"
+    iconCrumbs   = "ruby"
+    noQuickstart = true
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Ruby', icon:'ruby', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    articleGroups = "ruby/rails"
