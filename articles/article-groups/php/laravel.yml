@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /php/laravel/add-a-database, title: Add a Database}
+      - {href: /php/laravel/frontend-javascript, title: Frontend Javascript}
       - {href: /php/laravel/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /php/laravel/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,8 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /php/laravel/stage-your-app, title: Stage your App}
-      - {href: /php/laravel/scale-your-app, title: Make Laravel scream}
-      - {href: /php/laravel/scale-your-app, title: New Relic}
+      - {href: /php/laravel/configure-php, title: Configure PHP}
+      - {href: /php/laravel/composer, title: Composer}
+      - {href: /php/laravel/dry-run, title: Dry Run}
+      # - {href: /php/laravel/scale-your-app, title: Make Laravel scream}
+      # - {href: /php/laravel/scale-your-app, title: New Relic}

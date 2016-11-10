@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /nodejs/sails/add-a-database, title: Add a Database}
+      - {href: /nodejs/sails/frontend-javascript, title: Frontend Javascript}
       - {href: /nodejs/sails/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /nodejs/sails/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,7 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /nodejs/sails/stage-your-app, title: Stage your App}
-      - {href: /nodejs/sails/scale-your-app, title: Make Sails scream}
-      - {href: /nodejs/sails/scale-your-app, title: New Relic}
+      - {href: /nodejs/sails/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/sails/dry-run, title: Dry Run}
+      # - {href: /nodejs/sails/scale-your-app, title: Make Sails scream}
+      # - {href: /nodejs/sails/scale-your-app, title: New Relic}

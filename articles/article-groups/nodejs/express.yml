@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /nodejs/express/add-a-database, title: Add a Database}
+      - {href: /nodejs/express/frontend-javascript, title: Frontend Javascript}
       - {href: /nodejs/express/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /nodejs/express/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,7 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /nodejs/express/stage-your-app, title: Stage your App}
-      - {href: /nodejs/express/scale-your-app, title: Make Express scream}
-      - {href: /nodejs/express/scale-your-app, title: New Relic}
+      - {href: /nodejs/express/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/express/dry-run, title: Dry Run}
+      # - {href: /nodejs/express/scale-your-app, title: Make Express scream}
+      # - {href: /nodejs/express/scale-your-app, title: New Relic}

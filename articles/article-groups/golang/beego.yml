@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /golang/beego/add-a-database, title: Add a Database}
+      - {href: /golang/beego/frontend-javascript, title: Frontend Javascript}
       - {href: /golang/beego/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /golang/beego/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,7 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /golang/beego/stage-your-app, title: Stage your App}
-      - {href: /golang/beego/scale-your-app, title: Make Beego scream}
-      - {href: /golang/beego/scale-your-app, title: New Relic}
+      - {href: /golang/beego/configure-golang, title: Configure Golang}
+      - {href: /golang/beego/dry-run, title: Dry Run}
+      # - {href: /golang/beego/scale-your-app, title: Make Beego scream}
+      # - {href: /golang/beego/scale-your-app, title: New Relic}

@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /php/codeigniter/add-a-database, title: Add a Database}
+      - {href: /php/codeigniter/frontend-javascript, title: Frontend Javascript}
       - {href: /php/codeigniter/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /php/codeigniter/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,8 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /php/codeigniter/stage-your-app, title: Stage your App}
-      - {href: /php/codeigniter/scale-your-app, title: Make CodeIgniter scream}
-      - {href: /php/codeigniter/scale-your-app, title: New Relic}
+      - {href: /php/codeigniter/configure-php, title: Configure PHP}
+      - {href: /php/codeigniter/composer, title: Composer}
+      - {href: /php/codeigniter/dry-run, title: Dry Run}
+      # - {href: /php/codeigniter/scale-your-app, title: Make CodeIgniter scream}
+      # - {href: /php/codeigniter/scale-your-app, title: New Relic}

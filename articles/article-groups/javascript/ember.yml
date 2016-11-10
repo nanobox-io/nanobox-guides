@@ -14,9 +14,3 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /javascript/ember/launch-backend, title: Launch your backend}
-      - title: Frontend Javascript
-        href: /javascript/ember/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}

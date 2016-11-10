@@ -1,31 +1,31 @@
-title: Python
-href: /python
-articles:
-  - title: Getting Started
-    articles:
-      - {href: /python/create-dev-env, title: Create a Python Dev Environment}
-      - {href: /python/config, title: Configure Python}
-      - {href: /python/pip, title: Pip Packages}
-
-  - title: Next Steps
-    articles:
-      - {href: /python/javascript-runtime, title: Javascript Runtime}
-      - {href: /python/add-components, title: Add App Components}
-      - {href: /python/local-evars, title: Local Environment Variables}
-
-  - title: Production
-    articles:
-      - {href: /python/stage-your-app, title: Stage your App}
-      - {href: /python/launch-your-app, title: Launch your App}
-      - {href: /python/point-your-domain, title: Point your Domain}
-      - {href: /python/encryption, title: SSL/TLS Encryption}
-      - {href: /python/production-evars, title: Production Environment Variables}
-
-  - title: Going Further
-    articles:
-      - {href: /python/scale-your-app, title: Scale Your App}
-      - {href: /python/debugging, title: Debugging}
-      - {href: /python/app-health, title: App Health}
-      - {href: /python/remote-access, title: Remote Access}
-      - {href: /python/team-management, title: Team Management}
-      - {href: /python/manage-platform, title: Manage Platform}
+# title: Python
+# href: /python
+# articles:
+#   - title: Getting Started
+#     articles:
+#       - {href: /python/create-dev-env, title: Create a Python Dev Environment}
+#       - {href: /python/config, title: Configure Python}
+#       - {href: /python/pip, title: Pip Packages}
+#
+#   - title: Next Steps
+#     articles:
+#       - {href: /python/javascript-runtime, title: Javascript Runtime}
+#       - {href: /python/add-components, title: Add App Components}
+#       - {href: /python/local-evars, title: Local Environment Variables}
+#
+#   - title: Production
+#     articles:
+#       - {href: /python/stage-your-app, title: Stage your App}
+#       - {href: /python/launch-your-app, title: Launch your App}
+#       - {href: /python/point-your-domain, title: Point your Domain}
+#       - {href: /python/encryption, title: SSL/TLS Encryption}
+#       - {href: /python/production-evars, title: Production Environment Variables}
+#
+#   - title: Going Further
+#     articles:
+#       - {href: /python/scale-your-app, title: Scale Your App}
+#       - {href: /python/debugging, title: Debugging}
+#       - {href: /python/app-health, title: App Health}
+#       - {href: /python/remote-access, title: Remote Access}
+#       - {href: /python/team-management, title: Team Management}
+#       - {href: /python/manage-platform, title: Manage Platform}

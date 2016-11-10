@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /python/flask/add-a-database, title: Add a Database}
+      - {href: /python/flask/frontend-javascript, title: Frontend Javascript}
       - {href: /python/flask/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /python/flask/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,8 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /python/flask/stage-your-app, title: Stage your App}
-      - {href: /python/flask/scale-your-app, title: Make Flask scream}
-      - {href: /python/flask/scale-your-app, title: New Relic}
+      - {href: /python/flask/configure-python, title: Configure Flask}
+      - {href: /python/flask/pip, title: Pip}
+      - {href: /python/flask/dry-run, title: Dry Run}
+      # - {href: /python/flask/scale-your-app, title: Make Flask scream}
+      # - {href: /python/flask/scale-your-app, title: New Relic}

@@ -43,7 +43,7 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /ruby/sinatra/configure-ruby, title: Configure Ruby}
+      - {href: /ruby/sinatra/configure-ruby, title: Configure Sinatra}
       - {href: /ruby/sinatra/bundler, title: Bundler}
       - {href: /ruby/sinatra/dry-run, title: Dry Run}
       # - {href: /ruby/sinatra/scale-your-app, title: Make Sinatra scream}

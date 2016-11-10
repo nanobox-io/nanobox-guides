@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /golang/hugo/add-a-database, title: Add a Database}
+      - {href: /golang/hugo/frontend-javascript, title: Frontend Javascript}
       - {href: /golang/hugo/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /golang/hugo/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,7 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /golang/hugo/stage-your-app, title: Stage your App}
-      - {href: /golang/hugo/scale-your-app, title: Make Hugo scream}
-      - {href: /golang/hugo/scale-your-app, title: New Relic}
+      - {href: /golang/hugo/configure-golang, title: Configure Golang}
+      - {href: /golang/hugo/dry-run, title: Dry Run}
+      # - {href: /golang/hugo/scale-your-app, title: Make Hugo scream}
+      # - {href: /golang/hugo/scale-your-app, title: New Relic}

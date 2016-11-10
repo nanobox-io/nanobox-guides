@@ -14,13 +14,8 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /python/django/add-a-database, title: Add a Database}
+      - {href: /python/django/frontend-javascript, title: Frontend Javascript}
       - {href: /python/django/local-evars, title: Local Environment Variables}
-      - title: Frontend Javascript
-        href: /python/django/frontend-javascript
-        articles:
-          - {href: /some/link, title: Bower}
-          - {href: /some/link, title: Gulp}
-          - {href: /some/link, title: Broccoli}
 
   #
   - title: "Go Live"
@@ -48,6 +43,8 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /python/django/stage-your-app, title: Stage your App}
-      - {href: /python/django/scale-your-app, title: Make Django scream}
-      - {href: /python/django/scale-your-app, title: New Relic}
+      - {href: /python/django/configure-python, title: Configure PYTHON}
+      - {href: /python/django/pip, title: Pip}
+      - {href: /python/django/dry-run, title: Dry Run}
+      # - {href: /python/django/scale-your-app, title: Make Django scream}
+      # - {href: /python/django/scale-your-app, title: New Relic}
