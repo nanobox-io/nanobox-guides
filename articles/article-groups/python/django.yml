@@ -43,7 +43,7 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /python/django/configure-python, title: Configure PYTHON}
+      - {href: /python/django/configure-python, title: Configure Python}
       - {href: /python/django/pip, title: Pip}
       - {href: /python/django/dry-run, title: Dry Run}
       # - {href: /python/django/scale-your-app, title: Make Django scream}
