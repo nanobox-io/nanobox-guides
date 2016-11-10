@@ -1,53 +1,46 @@
 # Django from Scratch
-Part of what makes nanobox so useful is you don't even need python or django installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need python or django installed on your local machine to use them.
 
-This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-django" target="\_blank">nanobox-django</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
-
-## Create a Python Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
-
-From within this environment you can develop and run your app as you normally would with things like *pip install*.
+## Create a Python project
 
 #### Create a Django project folder
 Decide where you want your project to live and create a folder there:
 
 ```bash
-# create the project directory
+# create the folder
 mkdir nanobox-django
 
-# cd into the project
+# change into the newly created folder
 cd nanobox-django
 ```
 
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+
+<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
 
 ```yaml
-code.build:
+run.config:
+
   engine: python
+
+  engine.config:
+    runtime: python-3.5
+
+  extra_packages:
+    - nodejs
+
 ```
 
-#### Start the Environment
-You can then start the dev environment:
+## Generate a Django App
+
+#### Install Django
 
 ```bash
-nanobox dev start
-```
-
-Also, add a convenient way to access your app from a browser:
-
-```bash
-nanobox dev dns add django.nanobox.dev
-```
-
-## Create a Django App
-Once the dev environment is started you can console into it and create a new django application:
-
-```bash
-# console into the dev environment
-nanobox dev console
+# drop into a nanobox console
+nanobox run
 
 # install django so we can use it to generate our application
 pip install Django
@@ -66,6 +59,9 @@ cd -
 
 # copy the generated app into the project
 cp -a /tmp/myapp/* .
+
+# exit the console
+exit
 ```
 
 #### Configure Django
@@ -80,20 +76,46 @@ Unless you commented out all of the `INSTALLED_APPS`, you'll likely have pending
 python manage.py migrate
 ```
 
-## Django up-and-running
-
-From within the same `nanobox dev console` session, run the app as you would normally:
+## Run the app
 
 ```bash
 python manage.py runserver 0.0.0.0:8000
 ```
 
-Once the app has started you can visit it from your favorite browser at `django.nanobox.dev:8000`.
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local django.dev
+```
+
+Visit your app -> [django.dev:8000](http://django.dev:8000)
+
+## Explore
+
+With Nanobox, you have everything you need develop and run your django app:
+
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where python is installed,
+python -v
+
+# your gems are available,
+pip list
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/django/add-a-database)
-* [Javascript Runtime](/python/django/javascript-runtime)
+* [Frontent Javascipt](/python/django/frontend-javascript)
 * [Local Environment Variables](/python/django/local-evars)
 * [Back to Django overview](/python/django)
