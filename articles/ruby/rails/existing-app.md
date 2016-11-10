@@ -6,8 +6,8 @@ Part of what makes Nanobox so useful is you don't even need ruby or rails instal
 #### cd into your Rails app
 
 ```bash
-# change into the newly created folder
-cd nanobox-rails
+# change into your project folder
+cd my-rails-app
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
