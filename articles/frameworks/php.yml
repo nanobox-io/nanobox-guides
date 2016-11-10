@@ -4,4 +4,4 @@ home: /php
 frameworks:
   - {href: /php/laravel, name: Laravel, icon: laravel, devMode: true}
   - {href: /php/codeigniter, name: CodeIgniter, icon: codeigniter, devMode: true}
-  - {href: /php/wordpress, name: Wordpress, icon: wordpress, devMode: true}
+  # - {href: /php/wordpress, name: Wordpress, icon: wordpress, devMode: true}

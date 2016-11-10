@@ -1,16 +1,16 @@
-# Pip
+# Mix
 
-Pip is included in the [Python Engine](https://github.com/nanobox-io/nanobox-engine-ruby) making the `pip` executable available from your console. When building the runtime, the Python engine checks for a `requirements.txt` and, if found, runs `pip install -r requirements.txt` to install your python packages.
+<!-- Mix is included in the [Elixir Engine](https://github.com/nanobox-io/nanobox-engine-ruby) making the `mix` executable available from your console. When building the runtime, the Elixir engine checks for a `requirements.txt` and, if found, runs `mix install -r requirements.txt` to install your python packages. -->
 
 ## Adding a package
 
-```bash
+<!-- ```bash
 # Console into your dev container
 nanobox dev console
 
-# Run pip commands
-pip install gunicorn
+# Run mix commands
+mix install gunicorn
 
 # add the newly installed dependency to the requirements.txt
-pip freeze > requirements.txt
-```
+mix freeze > requirements.txt
+``` -->
