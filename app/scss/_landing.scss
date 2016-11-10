@@ -7,7 +7,7 @@
   }
 }
 
-@mixin main-title()                {font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #BAC8CF; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
+@mixin main-title()                {font-size:29px; color:$navy; text-transform: uppercase; font-weight:bold; white-space: no-wrap; letter-spacing: 0.06em; border: solid 1px #D0DCE2; border-right: none; border-left:none; padding:2px 0; margin:20px 0 0 0; }
 
 .article-page                      {
   &.landing                        {max-width:$app-width; margin:0 auto; margin-top:60px;
@@ -66,6 +66,13 @@
             a                      {width:130px; }
           }
           .main-title              {margin-top:0;}
+          .generic                 {margin-top:60px; font-size:17px; padding-bottom:7px; }
+          a.general-guides         {padding:0 30px 20px; display:flex; align-items: center; font-size:30px; color:#809CAD;
+            .txt                   {text-transform: uppercase; font-size:15px; font-weight:bold; margin-left:15px;  }
+            &:hover                {color:#356799;
+              svg *                {stroke:#356799; }
+            }
+          }
         }
         .main-title                {@include main-title(); border-top:none; margin:40px 25px 30px; font-size:24px; }
         .article-groups            {

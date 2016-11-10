@@ -1,0 +1,11 @@
+.github-icons {width:888px; background:white; margin:200px auto 0; text-align: center;
+  .header     {
+    .icons    {margin:0 auto; width:195px; height: 83px;
+      > *     {display:inline-block;  }
+      .icon   {width:70px; }
+      .plus   {margin:0 15px; }
+    }
+    .title    {font-size:29px; letter-spacing: 0.06em; color:#4F5969; text-transform:uppercase; border:solid 1px #B5BECD; border-right:none; border-left:none; margin:0 auto; font-weight:$bold; display: inline-block; margin:10px 0; padding:2px 0;  }
+    .sub      {font-size:17px; font-weight:$semibold; font-style:italic; color:#677B8D; }
+  }
+}

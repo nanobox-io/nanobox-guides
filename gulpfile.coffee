@@ -120,6 +120,10 @@ copyAssets = (destination, cb) ->
 copyImages = (cb)->
   copyAssets 'server/assets', cb
 
+copyGithubImages = ()->
+  gulp.src './quickstart-icons/*'
+    .pipe gulp.dest('rel/assets/quickstart-icons/')
+
 copyHtaccess = ()->
   gulp.src htaccessPath
     .pipe gulp.dest('./rel')
@@ -300,7 +304,8 @@ gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/*'
 gulp.task 'copy-htaccess',['rel:clean'],               ()    -> copyHtaccess()
 gulp.task 'bumpVersion', ['copy-htaccess'],            ()    -> bumpBowerVersion()
 gulp.task 'copyStatics', ['bowerLibs'],                ()    -> copyAssets('rel/assets', ->)
-gulp.task 'releaseCompile', ['copyStatics'],           (cb)  -> compileFiles(false, cb)
+gulp.task 'copyGithubImages', ['copyStatics'],         ()    -> copyGithubImages()
+gulp.task 'releaseCompile', ['copyGithubImages'],      (cb)  -> compileFiles(false, cb)
 gulp.task 'minify',['releaseCompile'],                 ()    -> minifyAndJoin();
 gulp.task 'copy-yaml', ['minify'],                     ()    -> copyFiles('./server/yaml/**/*', './rel/yaml/', ->)
 gulp.task 'pretty',['copy-yaml'],                      ()    -> prettyURLS()

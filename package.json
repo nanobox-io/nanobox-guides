@@ -26,7 +26,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-rev": "~1.1.0",
     "gulp-rimraf": "^0.1.1",
-    "gulp-sass": "~0.7.2",
+    "gulp-sass": "^2.3.2",
     "gulp-shadow-icons": "tolmark12/gulp-shadow-icons",
     "gulp-uglify": "~0.3.1",
     "gulp-usemin": "^0.3.14",
@@ -37,9 +37,10 @@
     "gulp-yaml": "^1.0.1",
     "jade": "^1.11.0",
     "marked": "^0.3.6",
+    "node-horseman": "^3.2.0",
+    "node-sass": "^3.11.2",
+    "phantomjs-prebuilt": "^2.1.13",
     "rimraf": "~2.2.8"
   },
-  "devDependencies": {
-    "node-sass": "^3.4.2"
-  }
+  "devDependencies": {}
 }
