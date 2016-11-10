@@ -2,5 +2,5 @@ name: Javascript
 icon: javascript
 home: /javascript
 frameworks:
-  - {href: /javascript/angular, name: Angular, icon: angular, devMode: true}
-  - {href: /javascript/ember, name: Ember, icon: ember, devMode: true}
+  - {href: /javascript/angular, name: Angular, icon: angular}
+  - {href: /javascript/ember, name: Ember, icon: ember}

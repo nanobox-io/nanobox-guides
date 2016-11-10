@@ -2,4 +2,4 @@ name: Elixir
 icon: elixir
 home: /elixir
 frameworks:
-  - {href: /elixir/phoenix, name: phoenix, icon: phoenix, devMode: true}
+  - {href: /elixir/phoenix, name: phoenix, icon: phoenix}
