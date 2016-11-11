@@ -4,14 +4,10 @@ Part of what makes Nanobox so useful is you don't even need ruby or rails instal
 ## Create a Rails project
 
 #### Create a Rails project folder
-Decide where you want your project to live and create a folder there:
+Create a project folder and change into it:
 
 ```bash
-# create the folder
-mkdir nanobox-rails
-
-# change into the newly created folder
-cd nanobox-rails
+mkdir nanobox-rails && cd nanobox-rails
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -19,19 +15,12 @@ cd nanobox-rails
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
-
   engine: ruby
-
-  engine.config:
-    runtime: ruby-2.3
 
   extra_packages:
     - nodejs
-
 ```
 
 ## Generate a Rails App

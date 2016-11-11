@@ -31,13 +31,19 @@ Before connecting to the database you'll need to create a few files.
 At the root of your project, create a `Rakefile` and a `config` folder with a `database.yml` and `environment.rb` inside.
 
 The `Rakefile` should look like this:
+
+<div class="meta" data-method="configFile" data-params="Rakefile"></div>
+
 ```rake
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require './myapp'
 ```
 
-The `database.yml` file should look like this:
+The `config/database.yml` file should look like this:
+
+<div class="meta" data-method="configFile" data-params="config/database.yml"></div>
+
 ```yaml
 development:
   adapter: postgresql
@@ -48,7 +54,10 @@ development:
   password: <%= ENV['DATA_DB_PASS'] %>
 ```
 
-The `environment.rb` file should look like this:
+The `config/environment.rb` file should look like this:
+
+<div class="meta" data-method="configFile" data-params="config/environment.rb"></div>
+
 ```ruby
 #The environment variable DATABASE_URL should be in the following format:
 # => postgres://{user}:{password}@{host}:{port}/path
@@ -80,7 +89,7 @@ gem "pg"
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With rake
+#### With sinatra
 Your can also test the connection with sinatra:
 
 ```bash

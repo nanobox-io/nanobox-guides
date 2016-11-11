@@ -1,13 +1,13 @@
-# Existing Sinatra App
-Part of what makes Nanobox so useful is you don't even need ruby or sinatra installed on your local machine to use them.
+# Existing uby App
+Part of what makes Nanobox so useful is you don't even need ruby installed on your local machine to use it.
 
 ## Setup
 
-#### cd into your Sinatra app
+#### cd into your Ruby app
 
 ```bash
 # change into your project folder
-cd my-sinatra-app
+cd my-ruby-app
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -20,11 +20,13 @@ run.config:
   engine: ruby
 ```
 
-## Configure Sinatra
+## Configure App
 
 #### Listen on 0.0.0.0
 
-To allow connections from the host machine into the app's container modify the `myapp.rb` telling sinatra to listen on all available IP's:
+To allow connections from the host machine into the app's container, you'll need to configure your app to bind to 0.0.0.0. 
+
+Here is an example with Sinatra:
 
 ```ruby
 set :bind, "0.0.0.0"
@@ -34,22 +36,22 @@ set :bind, "0.0.0.0"
 
 ```bash
 # Add a convenient way to access your app from the browser
-nanobox dns add local sinatra.dev
+nanobox dns add local ruby.dev
 ```
 
 ## Run the app
 
-**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/sinatra/add-a-database) before your app will run.
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/generic/add-a-database) before your app will run.
 
 ```bash
-nanobox run ruby myapp.rb
+nanobox run ruby YOURAPP.rb
 ```
 
-Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)
+Visit your app -> [ruby.dev:3000](http://ruby.dev:3000)
 
 ## Explore
 
-With Nanobox, you have everything you need develop and run your sinatra app:
+With Nanobox, you have everything you need develop and run your ruby app:
 
 ```bash
 # drop into a Nanobox console
@@ -71,7 +73,7 @@ exit
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/ruby/sinatra/add-a-database)
-* [Frontent Javascipt](/ruby/sinatra/frontend-javascript)
-* [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Back to Sinatra overview](/ruby/sinatra)
+* [Add a Database](/ruby/generic/add-a-database)
+* [Frontent Javascipt](/ruby/generic/frontend-javascript)
+* [Local Environment Variables](/ruby/generic/local-evars)
+* [Back to Ruby overview](/ruby/generic)
