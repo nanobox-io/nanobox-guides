@@ -30,19 +30,19 @@ To allow connections from the host machine into the app's container modify the `
 set :bind, "0.0.0.0"
 ```
 
-#### Add a local DNS
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local sinatra.dev
-```
-
 ## Run the app
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/sinatra/add-a-database) before your app will run.
 
 ```bash
 nanobox run ruby myapp.rb
+```
+
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local sinatra.dev
 ```
 
 Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)

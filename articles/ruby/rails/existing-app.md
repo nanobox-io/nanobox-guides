@@ -44,19 +44,19 @@ module Rails
 end
 ```
 
-#### Add a local DNS
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local rails.dev
-```
-
 ## Run the app
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/rails/add-a-database) before your app will run.
 
 ```bash
 nanobox run rails s
+```
+
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local rails.dev
 ```
 
 Visit your app -> [rails.dev:3000](http://rails.dev:3000)

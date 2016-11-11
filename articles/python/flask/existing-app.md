@@ -55,13 +55,6 @@ if __name__ == "__main__":
   app.run(host='0.0.0.0')
 ```
 
-#### Add a local DNS
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local flask.dev
-```
-
 ## Run the app
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/flask/add-a-database) before your app will run.
@@ -69,6 +62,15 @@ nanobox dns add local flask.dev
 ```bash
 nanobox run python myapp.py
 ```
+
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local flask.dev
+```
+
+Visit your app -> [flask.dev:3000](http://flask.dev:3000)
 
 ## Explore
 
@@ -81,7 +83,7 @@ nanobox run
 # where python is installed,
 python -v
 
-# your gems are available,
+# your packages are available,
 pip list
 
 # and your code is mounted
