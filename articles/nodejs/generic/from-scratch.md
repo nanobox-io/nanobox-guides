@@ -22,17 +22,18 @@ run.config:
 
 ## Generate a Node App
 
-#### Install Packages
-Create a `package.json` at the root of your project that includes whatever packages you will need:
-
-```json
-WIP
-```
-
-Then install your packages:
+#### Install packages via npm
+If you don't already have a package.json file, you'll need to install all of your app's dependencies individually and save them like this:
 
 ```bash
-nanobox run npm install
+# drop into a Nanobox console
+nanobox run
+
+# install npm packages
+npm install DEPENDENCY --save
+
+# exit nanobox
+exit
 ```
 
 #### Create a Basic App

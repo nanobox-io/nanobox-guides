@@ -28,7 +28,7 @@ run.config:
 #### Listen on 0.0.0.0
 To allow connections from the host machine into the app's container modify the `config/boot.rb` telling rails to listen on all available IP's:
 
-<div class="meta" data-method="configFile" data-params="config/boot.rb"></div>
+<div class="meta" data-class="configFile" data-run="config/boot.rb"></div>
 
 ```ruby
 require 'rails/commands/server'

@@ -16,7 +16,7 @@ run.config:
 #### Nginx configuration
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
   
-<div class="meta" data-method="configFile" data-params="etc/nginx.conf"></div>
+<div class="meta" data-class="configFile" data-run="etc/nginx.conf"></div>
 
 ```nginx
 worker_processes 1;
@@ -91,7 +91,7 @@ exit
 
 Now add the following gunicorn configuration into your project, at `etc/gunicorn.py`:
 
-<div class="meta" data-method="configFile" data-params="etc/gunicorn.py"></div>
+<div class="meta" data-class="configFile" data-run="etc/gunicorn.py"></div>
 
 ```python
 # Server mechanics

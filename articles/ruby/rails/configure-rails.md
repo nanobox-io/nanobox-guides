@@ -15,7 +15,7 @@ run.config:
 
 Now add the following nginx config file into your project, at `config/nginx.conf`:
 
-<div class="meta" data-method="configFile" data-params="config/nginx.conf"></div>
+<div class="meta" data-class="configFile" data-run="config/nginx.conf"></div>
 
 ```nginx
 worker_processes 1;
@@ -73,7 +73,7 @@ gem 'puma', '~> 3.0'
 
 Now add the following puma config file into your project, at `config/puma.rb`:
 
-<div class="meta" data-method="configFile" data-params="config/puma.rb"></div>
+<div class="meta" data-class="configFile" data-run="config/puma.rb"></div>
 
 ```ruby
 # Puma can serve each request in a thread from an internal thread pool.
@@ -218,7 +218,7 @@ deploy.config:
 #### Add a rake task
 You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could, for example, create a `lib/tasks/db.rake` file that contained the following:
 
-<div class="meta" data-method="configFile" data-params="lib/tasks/db.rake"></div>
+<div class="meta" data-class="configFile" data-run="lib/tasks/db.rake"></div>
 
 ```ruby
 namespace :db do

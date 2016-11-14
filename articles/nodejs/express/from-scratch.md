@@ -15,8 +15,6 @@ mkdir nanobox-express && cd nanobox-express
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
   engine: nodejs

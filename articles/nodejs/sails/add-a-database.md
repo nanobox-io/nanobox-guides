@@ -3,16 +3,7 @@
 ## Configure
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<div class="meta expand" data-method="snippet" data-params="data.db" ></div>
-
-```yaml
-run.config:
-  engine: nodejs
-
-# add a postgres database
-data.db:
-  image: nanobox/postgresql
-```
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
 In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
 
@@ -25,10 +16,10 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
-Before connecting to the database, you'll first need to install the `sails-postgresql` adapter from inside your `nanobox dev console`:
+Before connecting to the database, you'll first need to install the `sails-postgresql` adapter:
 
 ```bash
-npm install sails-postgresql
+nanobox run npm install sails-postgresql --save
 ```
 
 Then modify your `config/connections.js` to connect your app:

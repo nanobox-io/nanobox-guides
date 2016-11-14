@@ -36,6 +36,6 @@ Specifies which Node.js runtime and version to use. The following runtimes are a
 
 ```yaml
 run.config:
-  config:
+  engine.config:
     runtime: nodejs-4.4
 ```

@@ -15,8 +15,6 @@ cd my-sails-app
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
   engine: nodejs
@@ -45,7 +43,7 @@ nanobox dns add local sails.dev
 nanobox run sails lift
 ```
 
-Visit your app -> [sails.dev:3000](http://sails.dev:3000)
+Visit your app -> [sails.dev:1337](http://sails.dev:1337)
 
 ## Explore
 With Nanobox, you have everything you need develop and run your sails app:
