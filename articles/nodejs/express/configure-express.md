@@ -1,45 +1,119 @@
 # Configure Express for Production
 
-Express has a [best practices](https://expressjs.com/en/advanced/best-practice-performance.html) guide when it comes to preparing your app for production. It is recommended that you review that document before using this guide.
+## Setup webserver
+Express runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into express through node's builtin server.
+
+#### Nginx
+Add the following to your `boxfile.yml` to make nginx available to the runtime:
+
+```yaml
+run.config:
+  # add nginx package
+  extra_packages:
+    - nginx
+```
+
+Now add the following nginx config file into your project, at `config/nginx.conf`:
+
+<div class="meta" data-class="configFile" data-run="config/nginx.conf"></div>
+
+```nginx
+worker_processes 1;
+daemon off;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    sendfile on;
+
+    gzip              on;
+    gzip_http_version 1.0;
+    gzip_proxied      any;
+    gzip_min_length   500;
+    gzip_disable      "MSIE [1-6]\.";
+    gzip_types        text/plain text/xml text/css
+                      text/comma-separated-values
+                      text/javascript
+                      application/x-javascript
+                      application/atom+xml;
+
+    # Proxy upstream to the puma process
+    upstream express {
+        server 127.0.0.1:3000;
+    }
+
+    # Configuration for Nginx
+    server {
+
+        # Listen on port 8080
+        listen 8080;
+
+        root /app/public;
+
+        try_files $uri/index.html $uri @express;
+
+        # Proxy connections to express
+        location @express {
+            proxy_pass         http://express;
+            proxy_redirect     off;
+            proxy_set_header   Host $host;
+        }
+    }
+}
+```
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the express server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
-  engine: nodejs
-
 # add a web component and give it a "start" command
 web.main:
-  start: NODE_ENV=production npm start
+  start:
+    nginx: nginx -c /app/config/nginx.conf
+    node: npm start
 ```
 
-In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command is what tells nanobox how to start your app. Since we're going to be running in production we need to tell express to run in production mode by setting the `NODE_ENV` to `production` when starting our server.
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
 
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
-  engine: nodejs
-
 # add a worker component and give it a "start" command
 worker.main:
-  start: <start-worker>
+  start: node YOUR WORKER
 ```
 
-In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier). The `start` command will be unique to the background processor you're using within your app.
+In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier).
 
-You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
+You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
-## Logging
-By default express logs to the console which is exactly what we want. Anything that logs to stdout will automatically get picked up by the nanobox logger, and be displayed in the dashboard.
+## Compile Assets
+We can have express compile assets during the deploy process by adding an extra step:
+
+```yaml
+deploy.config:
+  extra_steps:
+    - COMMAND TO COMPILE ASSETS
+```
 
 ## Migrate Data
-Since there is no standard tool for migrating data with nodejs, it's recommended that you find one that works for your needs and follow their documentation. For a basic migration strategy you could simply import your database schema to the production database.
+To migrate data as part of the deploy process you can add a `before_live` hook, which will run just before the new instances are started.
+
+#### Add a deploy hook
+Run a task each time we deploy. In your existing boxfile.yml add the following code:
+
+```yaml
+deploy.config:
+  before_live:
+    web.main:
+      - COMMAND TO MIGRATE DB
+```
 
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

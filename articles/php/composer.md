@@ -14,7 +14,7 @@ composer install
 The PHP extensions required by Composer are pre-installed by the PHP engine. However, when loading some dependencies, other extensions may be required. PHP Extensions can be enabled in your boxfile.yml.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     extensions:

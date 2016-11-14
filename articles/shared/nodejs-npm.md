@@ -1,11 +1,11 @@
 # Using Node.js & npm
 
-Including Node.js in your app can done through adding the following options to the `code.build` section of your boxfile.yml.
+Including Node.js in your app can done through adding the following options to the `run.config` section of your boxfile.yml.
 
 ## Include Node.js in Your boxfile.yml
 
 ```yaml
-code.build:
+run.config:
   engine: #your-engine
 
   # Includes the Node.js package in your runtime
@@ -13,7 +13,7 @@ code.build:
     - nodejs
 
   # Tells nanobox to cache & reuse the node_modules directory
-  lib_dirs:
+  cache_dirs:
     - node_modules
 
   # Adds npm binaries to the $PATH

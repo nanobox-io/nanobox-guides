@@ -1,0 +1,48 @@
+title: Generic
+href: /nodejs/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/generic/from-scratch, title: Node App from Scratch}
+      - {href: /nodejs/generic/existing-app, title: Existing Node App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/generic/add-a-database, title: Add a Database}
+      - {href: /nodejs/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /nodejs/generic/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/generic/configure-generic, title: Configure your App}
+      - {href: /nodejs/generic/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/generic/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/generic/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/generic/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/generic/debugging, title: Debugging}
+      - {href: /nodejs/generic/app-health, title: App Health}
+      - {href: /nodejs/generic/remote-access, title: Remote Access}
+      - {href: /nodejs/generic/team-management, title: Team Management}
+      - {href: /nodejs/generic/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/generic/configure-nodejs, title: Configure Node}
+      - {href: /nodejs/generic/npm, title: NPM}
+      - {href: /nodejs/generic/dry-run, title: Dry Run}

@@ -3,12 +3,12 @@ There are many Golang dependency managers available and which on you use is comp
 
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     fetch: 'go get'
     build: 'go build'
-  lib_dirs:
+  cache_dirs:
     - vendor
 ```
 
@@ -16,7 +16,7 @@ code.build:
 Defines the command to run to load dependencies in the build process.
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     fetch: 'go get'
@@ -26,19 +26,19 @@ code.build:
 Defines the command to run to compile your code in the build process.
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     build: 'go build'
 ```
 
-### lib_dirs
-If your dependency manager vendors packages, you should include the library directories (`lib_dirs`) config in the `code.build` section of your boxfile.yml. Nanobox caches files written to lib_dirs and reuses them on subsequent builds.
+### cache_dirs
+If your dependency manager vendors packages, you should include the library directories (`cache_dirs`) config in the `run.config` section of your boxfile.yml. Nanobox caches files written to cache_dirs and reuses them on subsequent builds.
 
 ```yaml
-code.build:
+run.config:
   engine: golang
-  lib_dirs:
+  cache_dirs:
     - vendor
 ```
 

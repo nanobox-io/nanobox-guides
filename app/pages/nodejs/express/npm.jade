@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "NPM"
+    keywords    = "nodejs,express,npm,yarn"
+    description = "npm with nodejs"
+    articles    = "nodejs/express"
+    icons       = "nodejs,express"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

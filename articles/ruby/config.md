@@ -15,8 +15,6 @@ Specifies which Ruby runtime and version to use. The following runtimes are avai
 
 ```yaml
 run.config:
-  engine: ruby
-
   engine.config:
     runtime: ruby-2.3
 ```

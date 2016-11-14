@@ -4,14 +4,10 @@ Part of what makes Nanobox so useful is you don't even need python or django ins
 ## Create a Python project
 
 #### Create a Django project folder
-Decide where you want your project to live and create a folder there:
+Create a project folder and change into it
 
 ```bash
-# create the folder
-mkdir nanobox-django
-
-# change into the newly created folder
-cd nanobox-django
+mkdir nanobox-django && cd nanobox-django
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -19,19 +15,9 @@ cd nanobox-django
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
-
   engine: python
-
-  engine.config:
-    runtime: python-3.5
-
-  extra_packages:
-    - nodejs
-
 ```
 
 ## Generate a Django App
@@ -64,35 +50,32 @@ cp -a /tmp/myapp/* .
 exit
 ```
 
-#### Configure Django
-
+## Configure Django
 With a newly created django app, you'll need to decide which apps you'll want enabled by default. You can disable any default apps by commenting them out in the `INSTALLED_APPS` section of `myapps/settings.py` file.
 
 #### Run data migrations
-
 Unless you commented out all of the `INSTALLED_APPS`, you'll likely have pending data migrations to be run. Let's run those now:
 
 ```bash
 python manage.py migrate
 ```
 
+#### Add a local DNS
+Add a convenient way to access your app from the browser
+
+```bash
+nanobox dns add local django.dev
+```
+
 ## Run the app
 
 ```bash
-python manage.py runserver 0.0.0.0:8000
-```
-
-## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local django.dev
+nanobox run python manage.py runserver 0.0.0.0:8000
 ```
 
 Visit your app -> [django.dev:8000](http://django.dev:8000)
 
 ## Explore
-
 With Nanobox, you have everything you need develop and run your django app:
 
 ```bash

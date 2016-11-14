@@ -4,7 +4,7 @@ There are many config options available in the boxfile.yml for the PHP engine. B
 
 #### Overview of boxfile.yml PHP Configuration Options
 ```yaml
-code.build:
+run.config:
   config:
     # Web Server Settings
     webserver: 'apache'

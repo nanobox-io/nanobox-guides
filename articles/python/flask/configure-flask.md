@@ -1,10 +1,9 @@
 # Configure Flask for Production
 
 ## Setup webserver
-Flask runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into flask through gunicorn.
+Flask runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into flask through gunicorn.
 
 #### Nginx
-
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
@@ -15,8 +14,9 @@ run.config:
 ```
 
 #### Nginx configuration
-
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
+
+<div class="meta" data-class="configFile" data-run="etc/nginx.conf"></div>
 
 ```nginx
 worker_processes 1;
@@ -72,19 +72,26 @@ http {
 }
 ```
 
-#### Install gunicorn
+#### Gunicorn
 Gunicorn can be installed via pip:
 
 ```bash
+# drop into a nanobox console
+nanobox run
+
 # install gunicorn
 pip install gunicorn
 
 # freeze dependencies
 pip freeze > requirements.txt
+
+# exit nanobox
+exit
 ```
 
-#### Configure gunicorn
 Now add the following gunicorn configuration into your project, at `etc/gunicorn.py`:
+
+<div class="meta" data-class="configFile" data-run="etc/gunicorn.py"></div>
 
 ```python
 # Server mechanics
@@ -213,34 +220,87 @@ def worker_abort(worker):
 
 ```
 
+**IMPORTANT**: The gunicorn configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the flask server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
-You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`. We want to setup our main web component to run nginx and gunicorn with the configuration we just created:
+You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
-  engine: python
-
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
     flask: gunicorn -c /app/etc/gunicorn.py myproject:app
 ```
 
-In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command will determine what processes should run when the app is started.
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
 
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
-  engine: python
-
 worker.main:
   start: 'python jobs-worker.py'
+```
+
+## Add Writable Directories
+By default, webs and workers run in a read only environment. Your Flask app may need certain directories to be writable.
+
+You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
+
+```yaml
+web.main:
+  # add writable dirs to your web component
+  writable_dirs:
+    - tmp
+
+worker.main:
+  # add writable dirs to your worker component
+  writable_dirs:
+    - tmp
+```
+
+You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
+
+## Add Streaming Logs
+If Flask logs to custom file and you want to stream those logs to the nanobox dashboard, we'll need to add a `log_watch` path to the boxfile:
+
+```yaml
+web.main:
+  # the path to a logfile you want streamed to the nanobox dashboard
+  log_watch:
+    flask: 'log/custom.log'
+
+worker.main:
+  # the path to a logfile you want streamed to the nanobox dashboard
+  log_watch:
+    worker: 'path/to/worker/log.file'
+```
+
+You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
+
+## Compile Assets
+If Flask needs to compile or generate assets during a deploy, you can add an extra step:
+
+```yaml
+deploy.config:
+  extra_steps:
+    - python YOUR ASSET SCRIPT
+```
+
+## Migrate Data
+To migrate data as part of the deploy process you can add a `before_live` hook, which will run just before the new instances are started.
+
+#### Add a deploy hook
+Run a task each time we deploy. In your existing boxfile.yml add the following code:
+
+```yaml
+deploy.config:
+  before_live:
+    web.main:
+      - python YOUR MIGRATION SCRIPT
 ```
 
 ## Now what?
@@ -248,4 +308,4 @@ With your app configured for running in production, whats next? Think about what
 
 * [Stage your App](/python/flask/stage-your-app)
 * [Launch your App](/python/flask/launch-your-app)
-* [Back to flask overview](/python/flask)
+* [Back to Flask overview](/python/flask)

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "python,generic,remote-access"
+    description = "generic remote access"
+    articles    = "python/generic"
+    icons       = "python,generic"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Bundler"
+    keywords    = "python,generic,bundler"
+    description = "bundler with generic"
+    articles    = "python/generic"
+    icons       = "python,generic"
+    
+block markdown
+  include:md /articles/python/pip.md

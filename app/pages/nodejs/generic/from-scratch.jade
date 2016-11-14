@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "generic From Scratch"
+    keywords    = "nodejs,generic,new"
+    description = "new generic app"
+    articles    = "nodejs/generic"
+    icons       = "nodejs,generic"
+    
+block markdown
+  include:md /articles/nodejs/generic/from-scratch.md

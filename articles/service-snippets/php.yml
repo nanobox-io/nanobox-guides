@@ -1,5 +1,5 @@
 documentation: /php
 description: 'Add the following snippet to your boxfile.yml and redeploy to create a PHP runtime'
 boxfile: |
-  code.build:
+  run.config:
     engine: php

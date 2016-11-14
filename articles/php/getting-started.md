@@ -13,7 +13,7 @@ The [`boxfile.yml`](https://docs.nanobox.io/boxfile/) is a yaml config file used
 In your boxfile.yml, you'll need to set your `engine` to `php`. [Engines](https://docs.nanobox.io/engines) define your code's runtime environment. The PHP engine will install PHP and associated executables for you.
 
 ```yaml
-code.build:
+run.config:
   engine: php
 ```
 
@@ -21,7 +21,7 @@ code.build:
 All the configuration that would typically be done in your `php.ini` is handled through your boxfile.yml. The PHP engine automatically builds your `php.ini` based on settings specified in your boxfile.yml.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     runtime: php-7.0

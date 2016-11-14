@@ -1,19 +1,9 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<div class="meta expand" data-method="snippet" data-params="data.db" ></div>
-
-```yaml
-run.config:
-  engine: python
-
-# add a postgres database
-data.db:
-  image: nanobox/postgresql
-```
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
 In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
 
@@ -26,7 +16,6 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
-
 Flask is pretty free-form when it comes to configuring a database connection. However you choose to configure your connection, you can access the following environment variables:
 
 ```python
@@ -38,7 +27,9 @@ host    = os.environ.get('DATA_DB_HOST')
 ```
 
 #### Add dependency
-If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install. The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
+If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install. 
+
+The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
 
 ```bash
 # add psycopg2 package to pip installation

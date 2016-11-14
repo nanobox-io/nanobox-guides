@@ -3,7 +3,7 @@
 The boxfile.yml provided in this guide includes all config options required to get a basic WordPress install up and running. Each of the config options are explained below.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     runtime: php-7.0
@@ -33,14 +33,14 @@ data.storage:
   image: nanobox/unfs
 ```
 
-## code.build
-The `code.build` section of your boxfile.yml allows you to configure how your code and its runtime environment are built and prepared for deploy.
+## run.config
+The `run.config` section of your boxfile.yml allows you to configure how your code and its runtime environment are built and prepared for deploy.
 
 ### engine
-The `engine` specified in your `code.build` tells Nanobox which [engine](https://docs.nanobox.io/engines/) to use when building your app. Engines define the runtime/language to use and come with different configuration options. WordPress needs the `php` engine.
+The `engine` specified in your `run.config` tells Nanobox which [engine](https://docs.nanobox.io/engines/) to use when building your app. Engines define the runtime/language to use and come with different configuration options. WordPress needs the `php` engine.
 
 ```yaml
-code.build:
+run.config:
   engine: php
 ```
 
@@ -48,7 +48,7 @@ code.build:
 The `runtime` defines the PHP version. WordPress doesn't officially support running on PHP 7+, but PHP 7.0 offers significant performance improvements over previous versions of PHP. If you're migrating an existing WordPress app to Nanobox, it may be better to stick with an earlier version of PHP. A list of available php version is available in the [PHP Settings guide](/php/php-settings/#runtime).
 
 ```yaml
-code.build:
+run.config:
   config:
     runtime: php-7.0
 ```
@@ -64,7 +64,7 @@ The Nanobox PHP engine is designed to keep environments light, installing only t
 | `zlib`    | Handles gzip'd files, used to install/update plugins & themes |
 
 ```yaml
-code.build:
+run.config:
   config:
     extensions:
       - gd
@@ -74,7 +74,7 @@ code.build:
 ```
 
 ## Web Component
-Your web component will run WordPress and make it accessible over the public network. By including a web component in your boxfile.yml, Nanobox will automatically create it using settings specified in your [`code.build > config`](#code-build) as well as settings unique to your web component.
+Your web component will run WordPress and make it accessible over the public network. By including a web component in your boxfile.yml, Nanobox will automatically create it using settings specified in your [`run.config > config`](#code-build) as well as settings unique to your web component.
 
 Each component in your boxfile.yml has an ID. The ID tells Nanobox what type of component to create and provides unique identifier. In this case, we'll use `web.wp`. `web` tells Nanobox to create a web component and `wp` is the unique identifier.
 

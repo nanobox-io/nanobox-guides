@@ -13,7 +13,7 @@ Specifies which PHP runtime and version to use. The following runtimes are avail
 
 
 ```yaml
-code.build:
+run.config:
   config:
     runtime: 'php-5.6'
 ```
@@ -21,7 +21,7 @@ code.build:
 Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](../php-zend-extensions/).
 
 ```yaml
-code.build:
+run.config:
   config:
     extensions:
       - curl
@@ -47,7 +47,7 @@ dev_extensions:
 Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](../php-zend-extensions/#zend-extensions).
 
 ```yaml
-code.build:
+run.config:
   config:
     zend_extensions:
       - ioncube_loader
@@ -71,7 +71,7 @@ dev_zend_extensions:
 Sets the [`short_open_tag` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag).
 
 ```yaml
-code.build:
+run.config:
   config:
     short_open_tag: true
 ```
@@ -79,7 +79,7 @@ code.build:
 Sets the [`zlib.output_compression` PHP setting](http://php.net/manual/en/zlib.configuration.php#ini.zlib.output-compression).
 
 ```yaml
-code.build:
+run.config:
   config:
     zlib_output_compression: 'Off'
 ```
@@ -87,7 +87,7 @@ code.build:
 Sets the [`allow_url_fopen` PHP setting](http://php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen).
 
 ```yaml
-code.build:
+run.config:
   config:
     allow_url_fopen: 'On'
 ```
@@ -95,7 +95,7 @@ code.build:
 Sets the [`disable_fuctions` PHP setting](http://php.net/manual/en/ini.core.php#ini.disable-functions).
 
 ```yaml
-code.build:
+run.config:
   config:
     disable_functions:
       - exec
@@ -106,7 +106,7 @@ code.build:
 Sets the [`expose_php` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.expose-php).
 
 ```yaml
-code.build:
+run.config:
   config:
     expose_php: 'On'
 ```
@@ -114,7 +114,7 @@ code.build:
 Sets the [`max_execution_time` PHP setting](http://www.php.net/manual/en/info.configuration.php#ini.max-execution-time).
 
 ```yaml
-code.build:
+run.config:
   config:
     max_execution_time: 30
 ```
@@ -122,7 +122,7 @@ code.build:
 Sets the [`max_input_time` PHP setting](http://www.php.net/manual/en/info.configuration.php#ini.max-input-time).
 
 ```yaml
-code.build:
+run.config:
   config:
     max_input_time: 60
 ```
@@ -130,7 +130,7 @@ code.build:
 Sets the [`memory_limit` PHP setting](http://php.net/manual/en/ini.core.php#ini.memory-limit). **Note:** This setting should not exceed the memory available on your PHP server(s).
 
 ```yaml
-code.build:
+run.config:
   config:
     memory_limit: '128M'
 ```
@@ -138,7 +138,7 @@ code.build:
 Sets the [`error_reporting` PHP setting](http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting).
 
 ```yaml
-code.build:
+run.config:
   config:
     error_reporting: E_ALL
 ```
@@ -146,7 +146,7 @@ code.build:
 Sets the [`display_errors` PHP setting](http://us3.php.net/manual/en/errorfunc.configuration.php#ini.display-errors).
 
 ```yaml
-code.build:
+run.config:
   config:
     display_errors: 'stderr'
 ```
@@ -154,7 +154,7 @@ code.build:
 Sets the [`register_globals` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.register-globals)
 
 ```yaml
-code.build:
+run.config:
   config:
     register_globals: 'Off'
 ```
@@ -162,7 +162,7 @@ code.build:
 Sets the [`register_argc_argv` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.register-argc-argv).
 
 ```yaml
-code.build:
+run.config:
   config:
     register_argc_argv: 'Off'
 ```
@@ -170,7 +170,7 @@ code.build:
 Sets the [`post_max_size` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.post-max-size).
 
 ```yaml
-code.build:
+run.config:
   config:
     post_max_size: '8M'
 ```
@@ -178,7 +178,7 @@ code.build:
 Sets the [`upload_max_filesize` PHP setting](http://php.net/manual/en/ini.core.php#ini.upload-max-filesize).
 
 ```yaml
-code.build:
+run.config:
   config:
     upload_max_filesize: '2M'
 ```
@@ -186,7 +186,7 @@ code.build:
 Sets the [`file_uploads` PHP setting](http://php.net/manual/en/ini.core.php#ini.file-uploads).
 
 ```yaml
-code.build:
+run.config:
   config:
     file_uploads: true
 ```
@@ -194,7 +194,7 @@ code.build:
 Sets the [`max_file_uploads` PHP setting](http://php.net/manual/en/ini.core.php#ini.max-file-uploads).
 
 ```yaml
-code.build:
+run.config:
   config:
     max_file_uploads: 20
 ```
@@ -202,7 +202,7 @@ code.build:
 Sets the [`max_input_vars` PHP setting](http://php.net/manual/en/info.configuration.php#ini.max-input-vars).
 
 ```yaml
-code.build:
+run.config:
   config:
     max_input_vars: 1000
 ```
@@ -210,7 +210,7 @@ code.build:
 Sets the [`default_mime_type` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.default-mimetype).
 
 ```yaml
-code.build:
+run.config:
   config:
     default_mimetype: 'text/html'
 ```
@@ -218,7 +218,7 @@ code.build:
 Sets the [`intl.default_locale` PHP setting](http://php.net/manual/en/intl.configuration.php#ini.intl.default-locale).
 
 ```yaml
-code.build:
+run.config:
   config:
     default_locale: 'en_US'
 ```
@@ -229,7 +229,7 @@ This allows you to specify the filepath to your browser capabilities file (brows
 
 
 ```yaml
-code.build:
+run.config:
   config:
     browscap: 'app/browscap.ini'
 ```
@@ -237,7 +237,7 @@ code.build:
 Sets the [`session.save_handler` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.save-handler).
 
 ```yaml
-code.build:
+run.config:
   config:
     session_save_handler: 'files'
 ```
@@ -245,7 +245,7 @@ code.build:
 Sets the [`session.save_path` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.save-path).
 
 ```yaml
-code.build:
+run.config:
   config:
     session_save_path: '/tmp/nanobox/sessions'
 ```
@@ -253,7 +253,7 @@ code.build:
 Sets the [`session.gc_maxlifetime` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime).
 
 ```yaml
-code.build:
+run.config:
   config:
     session_length: 3600
 ```
@@ -261,7 +261,7 @@ code.build:
 Sets the [`session.autostart` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.auto-start).
 
 ```yaml
-code.build:
+run.config:
   config:
     session_autostart: 'false'
 ```
@@ -269,7 +269,7 @@ code.build:
 Sets the [`date.timezone` PHP setting](http://php.net/manual/en/datetime.configuration.php#ini.date.timezone).
 
 ```yaml
-code.build:
+run.config:
   config:
     date_timezone: 'US/central'
 ```
@@ -277,7 +277,7 @@ code.build:
 Sets the [`iconv.internal_encoding` PHP setting](http://www.php.net/manual/en/iconv.configuration.php#ini.iconv.internal-encoding).
 
 ```yaml
-code.build:
+run.config:
   config:
     iconv_internal_encoding: 'UTF-8'
 ```

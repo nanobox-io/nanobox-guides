@@ -1,19 +1,9 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<div class="meta expand" data-method="snippet" data-params="data.db" ></div>
-
-```yaml
-run.config:
-  engine: ruby
-
-# add a postgres database
-data.db:
-  image: nanobox/postgresql
-```
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
 In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
 
@@ -32,7 +22,7 @@ At the root of your project, create a `Rakefile` and a `config` folder with a `d
 
 The `Rakefile` should look like this:
 
-<div class="meta" data-method="configFile" data-params="Rakefile"></div>
+<div class="meta" data-class="configFile" data-run="Rakefile"></div>
 
 ```rake
 require 'sinatra/activerecord'
@@ -42,7 +32,7 @@ require './myapp'
 
 The `config/database.yml` file should look like this:
 
-<div class="meta" data-method="configFile" data-params="config/database.yml"></div>
+<div class="meta" data-class="configFile" data-run="config/database.yml"></div>
 
 ```yaml
 development:
@@ -56,7 +46,7 @@ development:
 
 The `config/environment.rb` file should look like this:
 
-<div class="meta" data-method="configFile" data-params="config/environment.rb"></div>
+<div class="meta" data-class="configFile" data-run="config/environment.rb"></div>
 
 ```ruby
 #The environment variable DATABASE_URL should be in the following format:

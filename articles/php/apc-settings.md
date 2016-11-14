@@ -6,7 +6,7 @@ The following settings are used to configure APC, a PHP byte-code caching engine
 Sets the [`apc.shm_size` PHP setting](http://php.net/manual/en/apc.configuration.php#ini.apc.shm-size).
 
 ```yaml
-code.build:
+run.config:
   config:
     apc_shm_size: '32M'
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the [`apc.num_files_hint` PHP setting](http://php.net/manual/en/apc.configuration.php#ini.apc.num-files-hint).
 
 ```yaml
-code.build:
+run.config:
   config:
     apc_num_files_hint: 1000
 ```
@@ -24,7 +24,7 @@ code.build:
 Sets the [`apc.user_entries_hint` PHP setting](http://php.net/manual/en/apc.configuration.php#ini.apc.user-entries-hint).
 
 ```yaml
-code.build:
+run.config:
   config:
     apc_user_entries_hint: 4096
 ```
@@ -33,7 +33,7 @@ code.build:
 Sets the [`apc.filters` PHP setting](http://php.net/manual/en/apc.configuration.php#ini.apc.filters).
 
 ```yaml
-code.build:
+run.config:
   config:
     apc_filters: ''
 ```

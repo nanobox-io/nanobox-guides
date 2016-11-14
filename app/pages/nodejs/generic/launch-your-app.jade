@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "nodejs,generic,launch"
+    description = "launch generic app"
+    articles    = "nodejs/generic"
+    icons       = "nodejs,generic"
+    
+block markdown
+  include:md /articles/shared/launch-your-app.md

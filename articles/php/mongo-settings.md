@@ -6,7 +6,7 @@ The following settings are used to configure the PHP Mongo driver.
 Sets the [`mongo.native_long` PHP setting](http://php.net/manual/en/mongo.configuration.php#ini.mongo.native-long).
 
 ```yaml
-code.build:
+run.config:
   config:
     mongo_native_long: 1
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the [`mongo.allow_empty_keys` PHP setting](http://php.net/manual/en/mongo.configuration.php#ini.mongo.allow-empty-keys)
 
 ```yaml
-code.build:
+run.config:
   config:
     mongo_allow_empty_keys: 0
 ```
@@ -24,7 +24,7 @@ code.build:
 Sets the [`mongo.cmd` PHP setting](http://php.net/manual/en/mongo.configuration.php#ini.mongo.cmd).
 
 ```yaml
-code.build:
+run.config:
   config:
     mongo_cmd: '$'
 ```
@@ -33,7 +33,7 @@ code.build:
 Sets the [`mongo.long_as_object` PHP setting](http://php.net/manual/en/mongo.configuration.php#ini.mongo.long-as-object).
 
 ```yaml
-code.build:
+run.config:
   config:
     mongo_long_as_object: 0
 ```

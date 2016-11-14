@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Team Management"
+    keywords    = "nodejs,generic,production,manage"
+    description = "how to manage generic"
+    articles    = "nodejs/generic"
+    icons       = "nodejs,generic"
+    
+block markdown
+  include:md /articles/shared/team-management.md

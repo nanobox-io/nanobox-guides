@@ -15,7 +15,7 @@ The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build a
 *For a detailed explanation of each of the WordPress boxfile.yml settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained).*
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     runtime: php-7.0

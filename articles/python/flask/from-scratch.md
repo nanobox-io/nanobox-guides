@@ -4,14 +4,10 @@ Part of what makes Nanobox so useful is you don't even need python or flask inst
 ## Create a Flask project
 
 #### Create a Flask project folder
-Decide where you want your project to live and create a folder there:
+Create a project folder and change into it
 
 ```bash
-# create the folder
-mkdir nanobox-flask
-
-# change into the newly created folder
-cd nanobox-flask
+mkdir nanobox-flask && cd nanobox-flask
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -19,19 +15,9 @@ cd nanobox-flask
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
-
   engine: python
-
-  engine.config:
-    runtime: python-3.5
-
-  extra_packages:
-    - nodejs
-
 ```
 
 ## Generate a Flask App
@@ -53,7 +39,6 @@ exit
 ```
 
 #### Create Flask App
-
 Create a basic flask app named `hello.py` at the root of your project:
 
 ```python
@@ -63,9 +48,23 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
   return "Hello nanobox!"
+```
 
+## Configure Flask
+
+#### Listen on 0.0.0.0
+To allow connections from the host machine into the app's container tell flask to listen on all available IP's:
+
+```python
 if __name__ == "__main__":
   app.run(host='0.0.0.0')
+```
+
+#### Add a local DNS
+Add a convenient way to access your app from the browser
+
+```bash
+nanobox dns add local flask.dev
 ```
 
 ## Run the app
@@ -74,17 +73,9 @@ if __name__ == "__main__":
 nanobox run python hello.py
 ```
 
-## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local flask.dev
-```
-
-Visit your app -> [flask.dev:3000](http://flask.dev:3000)
+Visit your app -> [flask.dev:5000](http://flask.dev:5000)
 
 ## Explore
-
 With Nanobox, you have everything you need develop and run your flask app:
 
 ```bash
@@ -110,4 +101,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 * [Add a Database](/python/flask/add-a-database)
 * [Frontent Javascipt](/python/flask/frontend-javascript)
 * [Local Environment Variables](/python/flask/local-evars)
-* [Back to Rails overview](/python/flask)
+* [Back to Flask overview](/python/flask)

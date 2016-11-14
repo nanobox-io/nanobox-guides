@@ -3,7 +3,7 @@
 The following settings are used to configure Apache. These only apply when using `apache` as your `webserver`.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     webserver: apache
@@ -17,7 +17,7 @@ The public root of your web application. For instance, if you like to house your
 **Note:** If both this setting and the [global `document_root`](/php/webserver-settings#document_root) are set, the `apache_document_root` will take precedence.
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_document_root: '/'
 ```
@@ -26,7 +26,7 @@ code.build:
 When a path is not specified in the url, these files are served in order in which they're listed.
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_index_list:
       - index.php
@@ -37,7 +37,7 @@ code.build:
 When a path is not specified in the url, this files is served. *This is similar to [`apache_index_list`](#apache_index_list) except it only accepts a single argument.*
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_default_gateway: "index.php"
 ```
@@ -50,7 +50,7 @@ Specify which PHP interpreter you would like Apache to use.
 - mod_php
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_php_interpreter: php_fpm
 ```
@@ -75,7 +75,7 @@ The following modules are enabled when using php_fpm:
 - fastcgi
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_modules
 ```
@@ -85,7 +85,7 @@ code.build:
 Sets Apaches [`MaxSpareServers` directive](http://httpd.apache.org/docs/2.2/mod/prefork.html#maxspareservers).
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_max_spares: 10
 ```
@@ -94,7 +94,7 @@ code.build:
 Sets Apache's [`MaxClients` directive](http://httpd.apache.org/docs/2.2/mod/mpm_common.html#maxclients). **Note:** This configuration must be less than or equal to the [`apache_server_limit`](#apache_server_limit).
 
 ```yaml
-code.build:
+run.config:
 config:
 apache_max_clients: 128
 ```
@@ -103,7 +103,7 @@ apache_max_clients: 128
 Sets Apaches [`ServerLimit` directive](http://httpd.apache.org/docs/2.2/mod/mpm_common.html#serverlimit). **Note:** This configuration must be greater than or equal to the [`apache_max_clients`](#apache_max_clients).
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_server_limit: 128
 ```
@@ -112,7 +112,7 @@ code.build:
 Sets Apache's [`MaxRequestsPerChild` directive](http://httpd.apache.org/docs/2.2/mod/mpm_common.html#maxrequestsperchild).
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_max_requests: 10000
 ```
@@ -121,7 +121,7 @@ code.build:
 Adds far future expires to your header, setting the number of seconds static assets are cached. By default, static asset caching is not enabled. We only recommend using this directive on apps whose static assets do not change often.
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_static_expire: 86400
 ```
@@ -130,7 +130,7 @@ code.build:
 Sets Apache's [`LogLevel` directive](http://httpd.apache.org/docs/2.2/mod/core.html#loglevel).
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_log_level: warn
 ```
@@ -139,7 +139,7 @@ code.build:
 Enables or disables the Apache Access log.
 
 ```yaml
-code.build:
+run.config:
   config:
     apache_access_log: false
 ```

@@ -1,0 +1,22 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Python"
+    informalName = "python"
+    icon         = "python"
+    iconCrumbs   = "python"
+    noQuickstart = true
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Python', icon:'python', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Postgres', icon:'postgres', href:'#'},
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "python/generic"

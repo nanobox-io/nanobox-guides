@@ -43,8 +43,6 @@ articles:
   #
   - title: "Advanced"
     articles:
-      - {href: /ruby/generic/configure-ruby, title: Configure Sinatra}
+      - {href: /ruby/generic/configure-ruby, title: Configure Ruby}
       - {href: /ruby/generic/bundler, title: Bundler}
       - {href: /ruby/generic/dry-run, title: Dry Run}
-      # - {href: /ruby/generic/scale-your-app, title: Make Sinatra scream}
-      # - {href: /ruby/generic/scale-your-app, title: New Relic}

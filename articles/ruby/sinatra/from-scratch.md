@@ -4,7 +4,7 @@ Part of what makes Nanobox so useful is you don't even need ruby or sinatra inst
 ## Create a Sinatra project
 
 #### Create a Sinatra project folder
-Create a project folder and change into it:
+Create a project folder and change into it
 
 ```bash
 mkdir nanobox-sinatra && cd nanobox-sinatra
@@ -23,7 +23,6 @@ run.config:
 ## Generate a Sinatra App
 
 #### Install Sinatra
-
 Create a `Gemfile` at the root of your project that includes sinatra:
 
 ```ruby
@@ -49,11 +48,20 @@ get "/" do
 end
 ```
 
-#### Configre Sinatra
+## Configre Sinatra
+
+#### Listen on 0.0.0.0
 To allow connections from the host machine into the app's container modify the `myapp.rb` telling sinatra to listen on all available IP's:
 
 ```ruby
 set :bind, "0.0.0.0"
+```
+
+#### Add a local DNS
+Add a convenient way to access your app from the browser
+
+```bash
+nanobox dns add local sinatra.dev
 ```
 
 ## Run the app
@@ -62,17 +70,9 @@ set :bind, "0.0.0.0"
 nanobox run ruby myapp.rb
 ```
 
-## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local sinatra.dev
-```
-
 Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)
 
 ## Explore
-
 With Nanobox, you have everything you need develop and run your sinatra app:
 
 ```bash

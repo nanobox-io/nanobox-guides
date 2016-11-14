@@ -10,7 +10,7 @@ The following web servers are available:
 - builtin ([PHP's built-in web server](http://php.net/manual/en/features.commandline.webserver.php) available in 5.4+)
 
 ```yaml
-code.build:
+run.config:
   config:
     webserver: 'apache'
 ```
@@ -21,7 +21,7 @@ code.build:
 The public root of your web application. For instance, if you like to house your app in `/public` for security or organizational purposes, you can specify that here. The default is the `/`.
 
 ```yaml
-code.build:
+run.config:
   config:
     document_root: '/'
 ```

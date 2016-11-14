@@ -1,19 +1,9 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<div class="meta expand" data-method="snippet" data-params="data.db" ></div>
-
-```yaml
-run.config:
-  engine: nodejs
-
-# add a postgres database
-data.db:
-  image: nanobox/postgresql
-```
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
 In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
 
@@ -26,13 +16,20 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
-Before connecting to the database, you'll first need to install the `pg-promise` adapter from inside your `nanobox dev console`:
+Before connecting to the database, you'll first need to install the `pg-promise` adapter:
 
 ```bash
-npm install pg-promise
+# drop into a nanobox console
+nanobox run
+
+# install npm package
+npm install pg-promise --save
+
+# exit the console
+exit
 ```
 
-Then create a `database.js` at the root of your project with the following:
+Then create a `database.js` with the following:
 
 ```javascript
 var pgp = require("pg-promise")(/*options*/);
@@ -48,7 +45,7 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 Your can also test the connection with express:
 
 ```bash
-nanobox run express s
+nanobox run npm start
 ```
 
 ## Now what?
@@ -56,4 +53,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 
 * [Frontend Javascript](/nodejs/express/frontend-javascript)
 * [Local Environment Variables](/nodejs/express/local-evars)
-* [Back to Rails overview](/nodejs/express)
+* [Back to Express overview](/nodejs/express)

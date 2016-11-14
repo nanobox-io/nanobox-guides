@@ -16,7 +16,7 @@ Download the CodeIgniter codebase to your local machine. Downloads are available
 The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
-code.build:
+run.config:
   # the php engine provides the php runtime
   # and associated executables
   engine: php

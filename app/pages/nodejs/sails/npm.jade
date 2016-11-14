@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "NPM"
+    keywords    = "nodejs,sails,npm,yarn"
+    description = "npm with nodejs"
+    articles    = "nodejs/sails"
+    icons       = "nodejs,sails"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

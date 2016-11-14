@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure generic"
+    keywords    = "python,generic,configure,production"
+    description = "configuring generic for production"
+    articles    = "python/generic"
+    icons       = "python,generic"
+    
+block markdown
+  include:md /articles/python/generic/configure-generic.md

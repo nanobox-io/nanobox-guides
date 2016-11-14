@@ -1,10 +1,9 @@
 # Configure Django for Production
 
 ## Setup webserver
-Django runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
+Django runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
 
 #### Nginx
-
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
@@ -15,8 +14,9 @@ run.config:
 ```
 
 #### Nginx configuration
-
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
+  
+<div class="meta" data-class="configFile" data-run="etc/nginx.conf"></div>
 
 ```nginx
 worker_processes 1;
@@ -72,19 +72,26 @@ http {
 }
 ```
 
-#### Install gunicorn
+#### Gunicorn
 Gunicorn can be installed via pip:
 
 ```bash
+# drop into a nanobox console
+nanobox run
+
 # install gunicorn
 pip install gunicorn
 
 # freeze dependencies
 pip freeze > requirements.txt
+
+# exit nanobox
+exit
 ```
 
-#### Configure gunicorn
 Now add the following gunicorn configuration into your project, at `etc/gunicorn.py`:
+
+<div class="meta" data-class="configFile" data-run="etc/gunicorn.py"></div>
 
 ```python
 # Server mechanics
@@ -213,41 +220,36 @@ def worker_abort(worker):
 
 ```
 
+**IMPORTANT**: The gunicorn configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). Up until now we've been running our app by consoling into the dev environment and starting the django server. In production you'll want this to happen automatically. There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify web components
-You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`. We want to setup our main web component to run nginx and gunicorn with the configuration we just created:
+You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
-  engine: python
-
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
     django: gunicorn -c /app/etc/gunicorn.py myapp.wsgi
 ```
 
-In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier). The `start` command will determine what processes should run when the app is started.
+In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
 
 #### Specify worker components
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
-  engine: python
-
 worker.main:
   start: 'python jobs-worker.py'
 ```
 
 ## Collect static assets
-For django to run behind nginx in production, we'll need to ensure the assets get collected from all of the django apps and dropped into the `assets` directory (which was where we told nginx to serve them from). We also want nanobox to collect the assets just before deployment during the `compile-app` phase.
+For django to run behind nginx in production, we'll need to ensure the assets get collected from all of the django apps and dropped into the `assets` directory (which was where we told nginx to serve them from).
 
 #### Configure assets
-Set the following asset configuration within `myapp/settings.py`:
+Set the following asset configuration within `settings.py`:
 
 ```python
 STATIC_URL = '/static/'
@@ -255,14 +257,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 ```
 
 #### Collectstatic
-We can update our `boxfile.yml` to include a hook into after_compile to collect the assets for us:
+We can update our `boxfile.yml` to collect the assets for us:
 
 ```yaml
-code.build:
-  engine: python
-
-  # collect static assets during compile-all phase
-  after_compile:
+deploy.config:
+  # collect static assets during deploy
+  extra_steps:
     - python manage.py collectstatic --noinput --clear
 ```
 
@@ -270,11 +270,10 @@ code.build:
 The last step is to prepare any databases you might need. Just as you might `python manage.py migrate` locally, you'll need to have nanobox do that with each deploy incase you're modifying data with migrations as part of the deploy.
 
 #### Add a deploy hook
-Nanobox can run hooks at different points in the development process. We'll want to tell nanobox to run a special task each time we deploy. In your existing boxfile.yml add the following code:
 
 ```yaml
-code.deploy:
-  before_deploy:
+deploy.config:
+  before_live:
     web.main:
       - python manage.py migrate --fake-initial
 ```
