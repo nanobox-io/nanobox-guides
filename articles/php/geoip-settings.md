@@ -8,7 +8,7 @@ Sets the [`geoip.custom_directory` PHP setting](http://php.net/manual/en/geoip.c
 **Note:** When using the `geoip` php extension, you need to provide your own GeoIP database. Free databases are [available for download from Maxmind](http://dev.maxmind.com/geoip/legacy/geolite/#Downloads). Maxmind also provides subscription databases that tend to be more accurate.
 
 ```yaml
-code.build:
+run.config:
   config:
     geoip_custom_directory: 'app/GeoIP/'
 ```

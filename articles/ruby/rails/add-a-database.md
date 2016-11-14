@@ -1,7 +1,6 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
 <div class="meta" data-class="snippet" data-compress="data.db" ></div>
@@ -29,7 +28,6 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
-
 Modify your `config/database.yml` to connect your app:
 
 <div class="meta" data-class="configFile" data-run="config/database.yml"></div>

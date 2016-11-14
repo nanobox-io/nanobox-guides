@@ -1,7 +1,6 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
 <div class="meta expand" data-method="snippet" data-params="data.db" ></div>

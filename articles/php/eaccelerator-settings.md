@@ -6,7 +6,7 @@ The following settings are used to configure eAccelerator, a PHP byte-code cachi
 Sets the [`eaccelerator.shm_max` setting](https://github.com/eaccelerator/eaccelerator/wiki/Settings#eacceleratorshm_max).
 
 ```yaml
-code.build:
+run.config:
   config:
     eaccelerator_shm_max: '0'
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the [`eaccelerator.shm_size` setting](https://github.com/eaccelerator/eaccelerator/wiki/Settings#eacceleratorshm_size).
 
 ```yaml
-code.build:
+run.config:
   config:
     eaccelerator_shm_size: '0'
 ```
@@ -24,7 +24,7 @@ code.build:
 Sets the [`eaccelerator.filter` setting](https://github.com/eaccelerator/eaccelerator/wiki/Settings#eacceleratorfilter).
 
 ```yaml
-code.build:
+run.config:
   config:
      eaccelerator_filter: ''
 ```

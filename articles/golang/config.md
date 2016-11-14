@@ -3,7 +3,7 @@
 The Golang engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/).
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     package: 'github.com/username/code'
@@ -16,7 +16,7 @@ code.build:
 Specifies the path to the directory in which your code is stored. This can be a local or remote directory.
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     package: 'github.com/username/code'
@@ -31,7 +31,7 @@ Specifies which Golang runtime to use. The following runtimes are available:
 - go-1.7 *(default)*
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     runtime: go-1.7
@@ -41,7 +41,7 @@ code.build:
 Defines the command to run to load dependencies in the build process.
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     fetch: 'go get'
@@ -51,7 +51,7 @@ code.build:
 Defines the command to run to compile your code in the build process.
 
 ```yaml
-code.build:
+run.config:
   engine: golang
   config:
     build: 'go build'

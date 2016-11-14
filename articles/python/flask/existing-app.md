@@ -4,9 +4,9 @@ Part of what makes Nanobox so useful is you don't even need python or flask inst
 ## Setup
 
 #### cd into your Flask app
+Change into an existing project folder
 
 ```bash
-# change into your project folder
 cd my-flask-app
 ```
 
@@ -19,15 +19,7 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 
 ```yaml
 run.config:
-
   engine: python
-
-  engine.config:
-    runtime: python-3.5
-
-  extra_packages:
-    - nodejs
-
 ```
 
 ## Configure Flask
@@ -47,7 +39,6 @@ pip freeze > requirements.txt
 ```
 
 #### Listen on 0.0.0.0
-
 To allow connections from the host machine into the app's container tell flask to listen on all available IP's:
 
 ```python
@@ -55,25 +46,23 @@ if __name__ == "__main__":
   app.run(host='0.0.0.0')
 ```
 
-## Run the app
+#### Add a local DNS
+Add a convenient way to access your app from the browser
 
+```bash
+nanobox dns add local flask.dev
+```
+
+## Run the app
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/flask/add-a-database) before your app will run.
 
 ```bash
 nanobox run python myapp.py
 ```
 
-## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local flask.dev
-```
-
 Visit your app -> [flask.dev:3000](http://flask.dev:3000)
 
 ## Explore
-
 With Nanobox, you have everything you need develop and run your flask app:
 
 ```bash
@@ -97,6 +86,5 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/flask/add-a-database)
-* [Frontent Javascipt](/python/flask/frontend-javascript)
 * [Local Environment Variables](/python/flask/local-evars)
 * [Back to Flask overview](/python/flask)

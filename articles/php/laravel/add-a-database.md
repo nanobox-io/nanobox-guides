@@ -5,7 +5,7 @@ The majority of Laravel apps will require a database of some kind. Databases are
 Apps built with Nanobox are comprised of [components](https://docs.nanobox.io/getting-started/add-components/) - supporting services that make your app work. To create a database, add a data component to your boxfile.yml. For this example, we'll use add a MySQL database.
 
 ```yaml
-code.build:
+run.config:
   engine: php
 
 data.db:
@@ -15,10 +15,10 @@ data.db:
 *You can view guides for other data components in the [Data Components guides](/components).*
 
 ### Include the DB Driver Extension
-In order for your app to communicate with your database, it will need a driver. Drivers are installed as PHP extensions. Add the required extension to the list of extensions in the `code.build > config` section of your boxfile.yml.
+In order for your app to communicate with your database, it will need a driver. Drivers are installed as PHP extensions. Add the required extension to the list of extensions in the `run.config > config` section of your boxfile.yml.
 
 ```yaml
-code.build:
+run.config:
   image: php
   config:
     extensions:

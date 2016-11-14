@@ -1,7 +1,6 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
 <div class="meta expand" data-method="snippet" data-params="data.db" ></div>
@@ -26,7 +25,6 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
-
 Flask is pretty free-form when it comes to configuring a database connection. However you choose to configure your connection, you can access the following environment variables:
 
 ```python

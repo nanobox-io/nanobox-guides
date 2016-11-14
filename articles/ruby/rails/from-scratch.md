@@ -4,7 +4,7 @@ Part of what makes Nanobox so useful is you don't even need ruby or rails instal
 ## Create a Rails project
 
 #### Create a Rails project folder
-Create a project folder and change into it:
+Create a project folder and change into it
 
 ```bash
 mkdir nanobox-rails && cd nanobox-rails
@@ -41,7 +41,9 @@ rails new .
 exit
 ```
 
-#### Configure Rails
+## Configure Rails
+
+#### Listen on 0.0.0.0
 
 To allow connections from the host machine into the app's container modify the `config/boot.rb` telling rails to listen on all available IP's:
 
@@ -59,23 +61,22 @@ module Rails
 end
 ```
 
+#### Add a local DNS
+Add a convenient way to access your app from the browser
+
+```bash
+nanobox dns add local rails.dev
+```
+
 ## Run the app
 
 ```bash
 nanobox run rails s
 ```
 
-## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local rails.dev
-```
-
 Visit your app -> [rails.dev:3000](http://rails.dev:3000)
 
 ## Explore
-
 With Nanobox, you have everything you need develop and run your rails app:
 
 ```bash

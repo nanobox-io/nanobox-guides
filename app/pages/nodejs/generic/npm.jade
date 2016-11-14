@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Bundler"
+    keywords    = "nodejs,generic,bundler"
+    description = "bundler with generic"
+    articles    = "nodejs/generic"
+    icons       = "nodejs,generic"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

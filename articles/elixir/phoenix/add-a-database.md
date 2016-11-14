@@ -5,7 +5,7 @@ Nanobox apps are comprised of <a href="https://docs.nanobox.io/getting-started/a
 To add a database to your app, simply add a data component to your `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: "elixir"
 
 # for this example we're going to add a postgres database

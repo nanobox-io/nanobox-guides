@@ -1,30 +1,22 @@
 # Laravel from Scratch
+Part of what makes Nanobox so useful is you don't even need PHP or laravel installed on your local machine to use them.
 
-Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run Laravel apps. This guide walks through creating a simple Laravel app from scratch with Nanobox.
+## Create a Laravel project
 
-The process outlined here is the same process used to create the [nanobox-laravel](https://github.com/nanobox-quickstarts/nanobox-laravel) quickstart found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
-
-*If you have an existing Laravel project, the [Existing Laravel App guide](/php/laravel/existing-app) is where you should start.*
-
-
-## Create a PHP Dev Environment
-Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app, artisan commands, or other tasks as you would normally.
-
-Create a new project directory and cd into it.
+#### Create a Laravel project folder
+Create a project folder and change into it
 
 ```bash
-# create a new project directory
-mkdir nanobox-laravel
-
-# navigate into the new directory
-cd nanobox-laravel
+mkdir nanobox-laravel && cd nanobox-laravel
 ```
 
-### Add a boxfile.yml
-The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
+
+#### Add a boxfile.yml
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the php <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
-code.build:
+run.config:
 
   # tells nanobox to install php and associated runtimes
   engine: php
@@ -71,46 +63,64 @@ web.laravel:
     laravel[error]: /app/storage/logs/laravel.log
 ```
 
-### Build the Environment
-With the your boxfile.yml in place, you're ready to create your development (dev) environment. From your project directory, run:
+## Generate a Laravel App
 
-```bash
-# start the dev environment
-nanobox dev start
-
-# add a convenient way to access your app from the browser
-nanobox dev dns add laravel.nanobox.dev
-```
-
-## Create a New Laravel App
+#### Install Laravel
 With your dev environment running, you can console into it and install Laravel.
 
 ```bash
-# console into the dev environment
-nanobox dev console
+# drop into a nanobox console
+nanobox run
 
 # download the laravel installer
 composer global require "laravel/installer"
 
 # create a new laravel app
 laravel new
+
+# exit the console
+exit
 ```
 
 ## Start PHP-FPM & Apache
-Either `exit` out of your dev console or open a new terminal window and run the following to start PHP-FPM and Apache.
 
 ```bash
 # run the start commands specified in your boxfile.yml
 nanobox dev run
 ```
 
-### View the App in Your Browser
-With your app running, you can access it at `laravel.nanobox.dev` in your browser of choice.
+## Run the app
 
-## Now What?
-Now that you have Laravel running on Nanobox, what's next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
+```bash
+nanobox run rails s
+```
 
-* Connecting to a database
-* Adding components
-* Preparing for production
-* Launching your app
+Visit your app -> [rails.dev:3000](http://rails.dev:3000)
+
+## Explore
+With Nanobox, you have everything you need develop and run your rails app:
+
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where php is installed,
+php -v
+
+# your gems are available,
+gem list
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
+
+## Now what?
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+
+* [Add a Database](/php/laravel/add-a-database)
+* [Frontent Javascipt](/php/laravel/frontend-javascript)
+* [Local Environment Variables](/php/laravel/local-evars)
+* [Back to Laravel overview](/php/laravel)

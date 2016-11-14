@@ -35,7 +35,7 @@ Specifies which Node.js runtime and version to use. The following runtimes are a
 - iojs-2.3
 
 ```yaml
-code.build:
+run.config:
   config:
     runtime: nodejs-4.4
 ```

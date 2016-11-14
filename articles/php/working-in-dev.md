@@ -40,7 +40,7 @@ Bytecode cachers (APC, EAccelerator, xCache and OPcache) provide significant per
 The PHP engines allows you to remove certain extensions while in dev using the [`dev_extenesions`](/php/php-settings/#dev_extensions) and [`dev_zend_extenesions`](/php/php-settings/#dev_zend_extensions) options.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     extensions:

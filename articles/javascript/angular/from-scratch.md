@@ -23,7 +23,7 @@ mkdir nanobox-angular
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
 
 ```yaml
-code.build:
+run.config:
   engine: nodejs
 ```
 

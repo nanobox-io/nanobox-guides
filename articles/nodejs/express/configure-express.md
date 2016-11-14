@@ -9,7 +9,7 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: nodejs
 
 # add a web component and give it a "start" command
@@ -23,7 +23,7 @@ In the above snippet `main` is the name of web component and can be anything you
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: nodejs
 
 # add a worker component and give it a "start" command

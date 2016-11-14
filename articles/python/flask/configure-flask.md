@@ -4,7 +4,6 @@
 Flask runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into flask through gunicorn.
 
 #### Nginx
-
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
@@ -15,7 +14,6 @@ run.config:
 ```
 
 #### Nginx configuration
-
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
 
 ```nginx
@@ -221,7 +219,7 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`. We want to setup our main web component to run nginx and gunicorn with the configuration we just created:
 
 ```yaml
-code.build:
+run.config:
   engine: python
 
 web.main:
@@ -236,7 +234,7 @@ In the above snippet `main` is the name of web component and can be anything you
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: python
 
 worker.main:
@@ -248,4 +246,4 @@ With your app configured for running in production, whats next? Think about what
 
 * [Stage your App](/python/flask/stage-your-app)
 * [Launch your App](/python/flask/launch-your-app)
-* [Back to flask overview](/python/flask)
+* [Back to Flask overview](/python/flask)

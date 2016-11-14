@@ -6,7 +6,7 @@ These settings only apply when using `php_fpm` as your `apache_php_interpreter`.
 Sets `events.mechanism` setting in the `php-fpm.conf` which specifies the events mechanism FPM will use. More information is available in [PHP's documentation](http://php.net/manual/en/install.fpm.configuration.php#events-mechanism).
 
 ```yaml
-code.build:
+run.config:
   config:
     php_fpm_events_mechanism: 'epoll'
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the maximum number of child processes that can be created by PHP.
 
 ```yaml
-code.build:
+run.config:
   config:
     php_fpm_max_children: 20
 ```
@@ -24,7 +24,7 @@ code.build:
 The desired maximum number of idle server processes.
 
 ```yaml
-code.build:
+run.config:
   config:
     php_fpm_max_spare_servers: 1
 ```
@@ -33,7 +33,7 @@ code.build:
 Sets the number of requests each child process should execute before respawning. This can be useful to work around memory leaks in 3rd party libraries.
 
 ```yaml
-code.build:
+run.config:
   config:
     php_fpm_max_requests: 128
 ```

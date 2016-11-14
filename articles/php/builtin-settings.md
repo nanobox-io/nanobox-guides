@@ -3,7 +3,7 @@
 The following setting is used to configure the built-in PHP web server available in PHP 5.4+. These settings only apply when using `builtin` as your `webserver`.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     webserver: builtin
@@ -15,7 +15,7 @@ The public root of your web application. For instance, if you like to house your
 **Note:** If both this setting and the [global `document_root`](/php/webserver-settings/#document_root) are set, the `builtin_document_root` will take precedence.
 
 ```yaml
-code.build:
+run.config:
   config:
     builtin_document_root: '/'
 ```

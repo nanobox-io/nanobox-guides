@@ -4,7 +4,6 @@
 Django runs best in production with a reverse-proxy configuration. Nginx is very fast and very stable. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
 
 #### Nginx
-
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
@@ -15,7 +14,6 @@ run.config:
 ```
 
 #### Nginx configuration
-
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
 
 ```nginx
@@ -221,7 +219,7 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`. We want to setup our main web component to run nginx and gunicorn with the configuration we just created:
 
 ```yaml
-code.build:
+run.config:
   engine: python
 
 web.main:
@@ -236,7 +234,7 @@ In the above snippet `main` is the name of web component and can be anything you
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: python
 
 worker.main:
@@ -258,7 +256,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 We can update our `boxfile.yml` to include a hook into after_compile to collect the assets for us:
 
 ```yaml
-code.build:
+run.config:
   engine: python
 
   # collect static assets during compile-all phase
@@ -273,8 +271,8 @@ The last step is to prepare any databases you might need. Just as you might `pyt
 Nanobox can run hooks at different points in the development process. We'll want to tell nanobox to run a special task each time we deploy. In your existing boxfile.yml add the following code:
 
 ```yaml
-code.deploy:
-  before_deploy:
+deploy.config:
+  before_live:
     web.main:
       - python manage.py migrate --fake-initial
 ```

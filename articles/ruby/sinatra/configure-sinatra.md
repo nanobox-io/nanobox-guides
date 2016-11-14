@@ -4,7 +4,6 @@
 Sinatra runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into sinatra through puma.
 
 #### Nginx
-
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml

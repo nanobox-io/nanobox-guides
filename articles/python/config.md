@@ -13,7 +13,7 @@ Specifies which Python runtime and version to use. The following runtimes are av
 - python-3.5
 
 ```yaml
-code.build:
+run.config:
   config:
     runtime: python-3.5
 ```

@@ -6,7 +6,7 @@ The following settings are used to configure the XCache PHP byte-code caching en
 Sets the [`xcache.size` setting](http://xcache.lighttpd.net/wiki/XcacheIni#XCacheCacher).
 
 ```yaml
-code.build:
+run.config:
   config:
     xcache_size: 0
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the [`xcache.var_size` setting](http://xcache.lighttpd.net/wiki/XcacheIni#XCacheCacher).
 
 ```yaml
-code.build:
+run.config:
   config:
     xcache_var_size: 0
 ```
@@ -24,7 +24,7 @@ code.build:
 Sets the [`xcache.admin.user` setting](http://xcache.lighttpd.net/wiki/XcacheIni#XCacheAdministration).
 
 ```yaml
-code.build:
+run.config:
   config:
     xcache_admin_user: 'mOo'
 ```
@@ -33,7 +33,7 @@ code.build:
 Sets the [`xcache_admin_pass` setting](http://xcache.lighttpd.net/wiki/XcacheIni#XCacheAdministration).
 
 ```yaml
-code.build:
+run.config:
   config:
     xcache_admin_pass: ''
 ```

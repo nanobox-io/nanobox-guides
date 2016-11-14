@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging generic"
+    keywords    = "python,generic,debug"
+    description = "debug generic app"
+    articles    = "python/generic"
+    icons       = "python,generic"
+    
+block markdown
+  include:md /articles/shared/debugging.md

@@ -3,7 +3,7 @@
 PHP and Zend extensions are enabled by adding them to your boxfile.yml.
 
 ```yaml
-code.build:
+run.config:
   engine: php
   config:
     extensions:

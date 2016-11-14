@@ -4,14 +4,10 @@ Part of what makes Nanobox so useful is you don't even need nodejs or express in
 ## Create a Express project
 
 #### Create a Express project folder
-Decide where you want your project to live and create a folder there:
+Create the project folder and change into it
 
 ```bash
-# create the folder
-mkdir nanobox-express
-
-# change into the newly created folder
-cd nanobox-express
+mkdir nanobox-express && cd nanobox-express
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -23,12 +19,7 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 
 ```yaml
 run.config:
-
   engine: nodejs
-
-  engine.config:
-    runtime: nodejs-4.4
-
 ```
 
 ## Generate an Express App
@@ -57,23 +48,31 @@ npm install
 exit
 ```
 
+## Configure Express
+
+#### Listen on 0.0.0.0
+To allow connections from the host machine into the app's container modify the `bin/www` file telling express to listen on all available IP's:
+
+```javascript
+server.listen(port, '0.0.0.0');
+```
+
+#### Add a local DNS
+Add a convenient way to access your app from the browser
+
+```bash
+nanobox dns add local express.dev
+```
+
 ## Run the app
 
 ```bash
 nanobox run express s
 ```
 
-## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local express.dev
-```
-
 Visit your app -> [express.dev:3000](http://express.dev:3000)
 
 ## Explore
-
 With Nanobox, you have everything you need develop and run your express app:
 
 ```bash

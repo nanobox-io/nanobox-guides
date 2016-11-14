@@ -6,7 +6,7 @@ The following settings are used to configure the [PHP New Relic Agent](https://d
 Sets the [`newrelic.capture_params` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-capture_params).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_capture_params: false
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the [`newrelic.ignored_params` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-ignored_params).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_ignored_params: ''
 ```
@@ -24,7 +24,7 @@ code.build:
 Sets the [`newrelic.loglevel` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-loglevel).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_loglevel: 'info'
 ```
@@ -33,7 +33,7 @@ code.build:
 Sets the [`newrelic.framework` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-framework).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_framework: 'laravel'
 ```
@@ -42,7 +42,7 @@ code.build:
 Sets the [`newrelic.framework.drupal.modules` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-framework-drupal-modules).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_framework_drupal_modules: true
 ```
@@ -51,7 +51,7 @@ code.build:
 Sets the [`newrelic.browser_monitoring_auto_instrument` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-autorum).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_browser_monitoring_auto_instrument: true
 ```
@@ -60,7 +60,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.enabled` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-enable).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_enabled: true
 ```
@@ -69,7 +69,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.detail` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-detail).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_detail: 1
 ```
@@ -78,7 +78,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.record_sql` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-sql).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_record_sql: 'obfuscated'
 ```
@@ -87,7 +87,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.threshold` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-threshold).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_threshold: 'apdex_f'
 ```
@@ -96,7 +96,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.explain_threshold` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-epthreshold).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_explain_threshold: '500'
 ```
@@ -105,7 +105,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.stack_trace_threshold` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-stthreshold).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_stack_trace_threshold: '500'
 ```
@@ -114,7 +114,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.slow_sql` setting](hhttps://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-slowsql).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_slow_sql: true
 ```
@@ -123,7 +123,7 @@ code.build:
 Sets the [`newrelic.transaction_tracer.custom` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-custom).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_transaction_tracer_custom: ''
 ```
@@ -132,7 +132,7 @@ code.build:
 Sets the [`newrelic.error_collector.enabled` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-enabled).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_error_collector_enabled: true
 ```
@@ -141,7 +141,7 @@ code.build:
 Sets the [`newrelic.error_collector.record_database_errors` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-db).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_error_collector_record_database_errors: true
 ```
@@ -150,7 +150,7 @@ code.build:
 Sets the [`newrelic.webtransaction.name.files` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-wt-files).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_webtransaction_name_files: ''
 ```
@@ -159,7 +159,7 @@ code.build:
 Sets the [`newrelic.webtransaction.name.functions` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-wt-funcs).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_webtransaction_name_functions: ''
 ```
@@ -168,7 +168,7 @@ code.build:
 Sets the [`newrelic.webtransaction.name_remove_trailing_path` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-wt-remove-path).
 
 ```yaml
-code.build:
+run.config:
   config:
     newrelic_webtransaction_name_remove_trailing_path: false
 ```

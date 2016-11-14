@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure python"
+    keywords    = "python,configure"
+    description = "configure python"
+    articles    = "python/generic"
+    icons       = "python,generic"
+    
+block markdown
+  include:md /articles/python/config.md

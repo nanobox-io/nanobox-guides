@@ -6,7 +6,7 @@ The following settings are used to configure the OPcache PHP byte-code caching e
 Sets the [`opcache.memory_consumption` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.memory-consumption).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_memory_consumption: 64
 ```
@@ -15,7 +15,7 @@ code.build:
 Sets the [`opcache.validate_timestamps` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.validate-timestamps).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_validate_timestamps: 1
 ```
@@ -24,7 +24,7 @@ code.build:
 Sets the [`opcache.revalidate_freq` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.revalidate-freq)
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_revalidate_freq: 2
 ```
@@ -33,7 +33,7 @@ code.build:
 Sets the [`opcache.revalidate_path` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.revalidate-path).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_revalidate_path: 0
 ```
@@ -42,7 +42,7 @@ code.build:
 Sets the [`opcache.save_comments` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_save_comments: 1
 ```
@@ -51,7 +51,7 @@ code.build:
 Sets the [`opcache_load_comments` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.load-comments).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_load_comments: 1
 ```
@@ -60,7 +60,7 @@ code.build:
 Sets the [`opcache.enable_file_override` PHP
 setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable-file-override).
 ```yaml
-code.build:
+run.config:
   config:
     opcache_enable_file_override: 0
 ```
@@ -69,7 +69,7 @@ code.build:
 Sets the [`opcache.optimization_level` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.optimization-level).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_optimization_level: '0xffffffff'
 ```
@@ -78,7 +78,7 @@ code.build:
 Sets the [`opcache.inherited_hack` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.inherited-hack).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_inherited_hack: 1
 ```
@@ -87,7 +87,7 @@ code.build:
 Sets the [`opcache.dups_fix` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.dups-fix).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_dups_fix: 0
 ```
@@ -96,7 +96,7 @@ code.build:
 Sets the [`opcache.blacklist_filename` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.blacklist-filename).
 
 ```yaml
-code.build:
+run.config:
   config:
     opcache_blacklist_filename: ''
 ```

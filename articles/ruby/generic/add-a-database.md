@@ -1,7 +1,6 @@
 # Add a Database
 
 ## Configure
-
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
 <div class="meta expand" data-method="snippet" data-params="data.db" ></div>
@@ -37,6 +36,10 @@ host = ENV['DATA_DB_HOST']
 #### Update dependencies
 You may need to add some gems to interact with the database. Update the `Gemfile` with the following gems and run `bundle install`:
 
+```bash
+WIP
+```
+
 ## Test
 
 #### From an external client
@@ -52,6 +55,6 @@ nanobox run ruby YOURAPP.rb
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Frontend Javascript](/ruby/sinatra/frontend-javascript)
-* [Local Environment Variables](/ruby/sinatra/local-evars)
-* [Back to Ruby overview](/ruby/sinatra)
+* [Frontend Javascript](/ruby/generic/frontend-javascript)
+* [Local Environment Variables](/ruby/generic/local-evars)
+* [Back to Ruby overview](/ruby/generic/)

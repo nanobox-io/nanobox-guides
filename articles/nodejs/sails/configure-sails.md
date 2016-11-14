@@ -1,5 +1,4 @@
 # Configure Sails for Production
-With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 Sails has a [best practices](http://sailsjs.org/documentation/concepts/deployment) guide when it comes to preparing your app for production. It is recommended that you review that document before using this guide.
 
@@ -10,7 +9,7 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: nodejs
 
 # add a web component and give it a "start" command
@@ -24,7 +23,7 @@ In the above snippet `main` is the name of web component and can be anything you
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-code.build:
+run.config:
   engine: nodejs
 
 # add a worker component and give it a "start" command

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Install Nanobox"
+    keywords    = "nodejs,generic,nanobox"
+    description = "nanobox for generic"
+    articles    = "nodejs/generic"
+    icons       = "nodejs,generic"
+    
+block markdown
+  include:md /articles/shared/install-nanobox.md
