@@ -4,8 +4,7 @@
 
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<!-- <div class="meta expand" data-method="snippet" data-params="data.db" ></div> -->
-<div class="meta expand" data-class="snippet" data-compress="data.db" data-optional-components="postgres,mysql,mongo" ></div>
+<div class="meta" data-class="snippet" data-compress="data.db" ></div>
 
 ```yaml
 run.config:
@@ -16,7 +15,10 @@ data.db:
   image: nanobox/postgresql
 ```
 
+
 In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
+
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
 Nanobox generates the following environment variables based off that name:
 
@@ -30,7 +32,7 @@ Nanobox generates the following environment variables based off that name:
 
 Modify your `config/database.yml` to connect your app:
 
-# <div class="meta" data-method="configFile" data-params="config/database.yml"></div>
+<div class="meta" data-class="configFile" data-run="config/database.yml"></div>
 
 ```yaml
 default: &default

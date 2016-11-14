@@ -1,0 +1,6 @@
+.chooser
+  .services
+    each service in services
+      .service(data-kind="#{service.id}")
+        img.shadow-icon(data-src="hex-#{service.icon}" scalable="true")
+.code-holder

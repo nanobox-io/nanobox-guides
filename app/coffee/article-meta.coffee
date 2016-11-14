@@ -7,20 +7,21 @@ class ArticleMeta
   findMeta : () =>
     $('.meta').each (i, item)=>
       $item  = $(item)
-      method = $item.attr 'data-method'
+      klass  = $item.attr 'data-class'
       params = $item.attr 'data-params'
+      data   = $item.data()
+
       if !params? then params = ""
-      params = params.split(",")
-      params.unshift $item.next()
-      params.unshift $item
-      @createHandler method, params
+      @createHandler data, $item, $item.next()
 
-  createHandler : (method, params) ->
-    switch method
-      when 'snippet'    then actor = new Snippet()
-      when 'configFile' then actor = new ConfigMachine()
+  createHandler : (data, $item, $target) ->
+    switch data.class
+      when 'snippet'    then actor = new Snippet $item, $target
+      when 'configFile' then actor = new ConfigMachine $item, $target
 
-    actor.run.apply actor, params
+    delete data.class
+    for method, params of data
+      actor[method].apply actor, params.split(',')
 
 
 new ArticleMeta()
