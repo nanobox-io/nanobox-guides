@@ -1,0 +1,21 @@
+.propose-framework   {position: absolute; top:10px; right:10px;  width:255px; background:white; box-shadow: 0 1px 4px #BABABA;
+  .btn               {display: flex; height:86px; cursor:pointer; color:#809CAD; align-items: center;
+    &:hover          {color:#00AEF7; border-left:solid 3px #00AEF7; margin-left:-3px; }
+    .icon            {margin:0 10px 0 15px; }
+    .title           {font-size:13px; text-transform:uppercase; font-weight:bold; letter-spacing: 0.06em; }
+    .sub             {font-size:12px; font-weight:$medium; font-style:italic; }
+    &#talk-to-us     {border-bottom:1px solid #ddd;
+      .icon          {
+        &:before     {content:""; display:block; background:url(/assets/sprite.png); width:47px; height:53px; background-position: -292px -2px; margin-left:-4px; }
+      }
+    }
+    &#launch-generic {
+      .icon          {width:55px;
+        svg *        {stroke-width:3px; }
+      }
+      &:hover        {
+        svg *        {stroke:#00AEF7; }
+      }
+    }
+  }
+}

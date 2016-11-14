@@ -65,7 +65,11 @@
           .frameworks-holder       {display:flex; flex-wrap:wrap;
             a                      {width:130px; }
           }
-          .main-title              {margin-top:0;}
+          .main-title              {margin-top:0; display: flex; align-items: baseline;
+            .sub                   {margin-left:auto; text-transform: none; letter-spacing: initial; font-size:13px; color:#809CAD; font-weight:$medium; font-style:italic; cursor:pointer;
+              &:hover              {color:#00AEF7;}
+            }
+          }
           .generic                 {margin-top:60px; font-size:17px; padding-bottom:7px; }
           a.general-guides         {padding:0 30px 20px; display:flex; align-items: center; font-size:30px; color:#809CAD;
             .txt                   {text-transform: uppercase; font-size:15px; font-weight:bold; margin-left:15px;  }

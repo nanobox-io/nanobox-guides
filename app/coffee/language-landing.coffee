@@ -2,8 +2,11 @@ class LanguageLanding extends Landing
 
   constructor: (articles, language) ->
     super()
-    @loadArticleGroups articles
     @loadFrameworks language
+    $("#dont-see").on 'click', ()=>
+      $node = $ jadeTemplate['propose-framework']()
+      $(".frameworks").append $node
+      castShadows $node
 
   loadArticleGroups : (articles) ->
     if articles.length == 0

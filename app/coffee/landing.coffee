@@ -8,6 +8,7 @@ class Landing
     nanobox.getYaml "/yaml/article-groups/#{articles}.yml", null, @onNavLoad
 
   onNavLoad : (yaml)=>
+    return if !yaml?
     for group in yaml.articles
       if group.tribe?
         @createTribeHolder group.tribe
