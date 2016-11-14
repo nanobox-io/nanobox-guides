@@ -1,7 +1,7 @@
-# Configure Sinatra for Production
+# Configure Ruby for Production
 
 ## Setup webserver
-Sinatra runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into sinatra through puma.
+Ruby apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into ruby through puma.
 
 #### Nginx
 
@@ -41,7 +41,7 @@ http {
                       application/atom+xml;
 
     # Proxy upstream to the puma process
-    upstream sinatra {
+    upstream ruby {
         server 127.0.0.1:3000;
     }
 
@@ -53,11 +53,11 @@ http {
 
         root /app/public;
 
-        try_files $uri/index.html $uri @sinatra;
+        try_files $uri/index.html $uri @ruby;
 
-        # Proxy connections to sinatra
-        location @sinatra {
-            proxy_pass         http://sinatra;
+        # Proxy connections to ruby
+        location @ruby {
+            proxy_pass         http://ruby;
             proxy_redirect     off;
             proxy_set_header   Host $host;
         }
@@ -83,7 +83,7 @@ Now add the following puma config file into your project, at `config/puma.rb`:
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum, this matches the default thread size of Active Record.
 #
-threads_count = ENV.fetch("SINATRA_MAX_THREADS") { 5 }.to_i
+threads_count = ENV.fetch("RUBY_MAX_THREADS") { 5 }.to_i
 threads threads_count, threads_count
 
 # Specifies the `port` that Puma will listen on to receive requests, default is 3000.
@@ -173,13 +173,13 @@ worker.main:
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
 ## Add Streaming Logs
-If you Sinatra logs to custom file and you want to stream those logs to the nanobox dashboard, we'll need to add a `log_watch` path to the boxfile:
+If you app logs to custom file and you want to stream those logs to the nanobox dashboard, we'll need to add a `log_watch` path to the boxfile:
 
 ```yaml
 web.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    sinatra: 'log/custom.log'
+    ruby: 'log/custom.log'
 
 worker.main:
   # the path to a logfile you want streamed to the nanobox dashboard
@@ -190,7 +190,7 @@ worker.main:
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
 ## Compile Assets
-If Sinatra needs to compile or generate assets during a deploy, you can add an extra step:
+If your app needs to compile or generate assets during a deploy, you can add an extra step:
 
 ```yaml
 deploy.config:
@@ -214,6 +214,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/ruby/sinatra/stage-your-app)
-* [Launch your App](/ruby/sinatra/launch-your-app)
-* [Back to sinatra overview](/ruby/sinatra)
+* [Stage your App](/ruby/generic/stage-your-app)
+* [Launch your App](/ruby/generic/launch-your-app)
+* [Back to ruby overview](/ruby/generic)

@@ -1,5 +1,4 @@
 # Configure Express for Production
-With very little effort you can take your app from a local development app to a full production ready app. Once your app has been configured to run in production not only will it still work locally, but you can then **guarantee** that if the dev environment works it will work in production also.
 
 Express has a [best practices](https://expressjs.com/en/advanced/best-practice-performance.html) guide when it comes to preparing your app for production. It is recommended that you review that document before using this guide.
 

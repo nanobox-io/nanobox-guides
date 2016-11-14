@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "ruby,generic,launch"
+    description = "launch generic app"
+    articles    = "ruby/generic"
+    icons       = "ruby,generic"
+    
+block markdown
+  include:md /articles/shared/launch-your-app.md

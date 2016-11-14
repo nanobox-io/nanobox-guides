@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "ruby,generic,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in generic"
+    articles    = "ruby/generic"
+    icons       = "ruby,generic"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

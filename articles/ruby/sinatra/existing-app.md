@@ -15,19 +15,9 @@ cd my-sinatra-app
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
-
   engine: ruby
-
-  engine.config:
-    runtime: ruby-2.3
-
-  extra_packages:
-    - nodejs
-
 ```
 
 ## Configure Sinatra
@@ -40,13 +30,6 @@ To allow connections from the host machine into the app's container modify the `
 set :bind, "0.0.0.0"
 ```
 
-#### Add a local DNS
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local sinatra.dev
-```
-
 ## Run the app
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/sinatra/add-a-database) before your app will run.
@@ -54,6 +37,15 @@ nanobox dns add local sinatra.dev
 ```bash
 nanobox run ruby myapp.rb
 ```
+
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local sinatra.dev
+```
+
+Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)
 
 ## Explore
 

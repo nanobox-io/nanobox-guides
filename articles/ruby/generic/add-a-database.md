@@ -8,7 +8,7 @@ You can add a database to your app by simply adding a data component to your `bo
 
 ```yaml
 run.config:
-  engine: nodejs
+  engine: ruby
 
 # add a postgres database
 data.db:
@@ -26,34 +26,32 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
-Before connecting to the database, you'll first need to install the `pg-promise` adapter from inside your `nanobox dev console`:
+However you choose to configure your connection within your ruby app, you can access the following environment variables:
 
-```bash
-npm install pg-promise
+```ruby
+user = ENV['DATA_DB_USER']
+pass = ENV['DATA_DB_PASS']
+host = ENV['DATA_DB_HOST']
 ```
 
-Then create a `database.js` at the root of your project with the following:
-
-```javascript
-var pgp = require("pg-promise")(/*options*/);
-var db = pgp("postgres://${process.env.DATA_DB_USER}:${process.env.DATA_DB_PASS}@${process.env.DATA_DB_HOST}:${}/db");
-```
+#### Update dependencies
+You may need to add some gems to interact with the database. Update the `Gemfile` with the following gems and run `bundle install`:
 
 ## Test
 
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With Express
-Your can also test the connection with express:
+#### With ruby
+Your can also test the connection directly from your app:
 
 ```bash
-nanobox run express s
+nanobox run ruby YOURAPP.rb
 ```
 
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Frontend Javascript](/nodejs/express/frontend-javascript)
-* [Local Environment Variables](/nodejs/express/local-evars)
-* [Back to Rails overview](/nodejs/express)
+* [Frontend Javascript](/ruby/sinatra/frontend-javascript)
+* [Local Environment Variables](/ruby/sinatra/local-evars)
+* [Back to Ruby overview](/ruby/sinatra)

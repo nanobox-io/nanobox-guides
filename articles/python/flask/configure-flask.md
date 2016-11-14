@@ -8,10 +8,8 @@ Flask runs best in production with a reverse-proxy configuration. Nginx is very 
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
-code.build:
-  engine: python
-
-  # to run the app, we'll need nginx as a reverse proxy
+run.config:
+  # add nginx package
   extra_packages:
     - nginx
 ```

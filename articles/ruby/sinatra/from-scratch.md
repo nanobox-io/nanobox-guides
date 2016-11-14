@@ -4,14 +4,10 @@ Part of what makes Nanobox so useful is you don't even need ruby or sinatra inst
 ## Create a Sinatra project
 
 #### Create a Sinatra project folder
-Decide where you want your project to live and create a folder there:
+Create a project folder and change into it:
 
 ```bash
-# create the folder
-mkdir nanobox-sinatra
-
-# change into the newly created folder
-cd nanobox-sinatra
+mkdir nanobox-sinatra && cd nanobox-sinatra
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -19,19 +15,9 @@ cd nanobox-sinatra
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
-
   engine: ruby
-
-  engine.config:
-    runtime: ruby-2.3
-
-  extra_packages:
-    - nodejs
-
 ```
 
 ## Generate a Sinatra App
@@ -43,21 +29,13 @@ Create a `Gemfile` at the root of your project that includes sinatra:
 ```ruby
 source "https://rubygems.org"
 
-#
 gem "sinatra"
 ```
 
 Then install sinatra:
 
 ```bash
-# drop into a nanobox console
-nanobox run
-
-# install the sinatra gem so we can use it to run our app
-bundle install
-
-# exit the console
-exit
+nanobox run bundle install
 ```
 
 #### Create a Sinatra App
@@ -66,7 +44,6 @@ Create a basic sinatra app named `myapp.rb` at the root of your project:
 ```ruby
 require "sinatra"
 
-#
 get "/" do
   "Hello nanobox!"
 end
@@ -92,7 +69,7 @@ nanobox run ruby myapp.rb
 nanobox dns add local sinatra.dev
 ```
 
-Visit your app -> [sinatra.dev:3000](http://sinatra.dev:3000)
+Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)
 
 ## Explore
 

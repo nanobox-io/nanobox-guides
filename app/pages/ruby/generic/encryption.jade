@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "SSL/TLS Encryption"
+    keywords    = "ruby,generic,ssl,tls,encryption"
+    description = "generic ssl/tls Encryption"
+    articles    = "ruby/generic"
+    icons       = "ruby,generic"
+    
+block markdown
+  include:md /articles/shared/encryption.md

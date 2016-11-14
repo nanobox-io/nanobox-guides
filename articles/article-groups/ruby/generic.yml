@@ -1,0 +1,50 @@
+title: Generic
+href: /ruby/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /ruby/generic/from-scratch, title: Ruby App from Scratch}
+      - {href: /ruby/generic/existing-app, title: Existing Ruby App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /ruby/generic/add-a-database, title: Add a Database}
+      - {href: /ruby/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /ruby/generic/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /ruby/generic/configure-generic, title: Configure your App}
+      - {href: /ruby/generic/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /ruby/generic/point-your-domain, title: Point your Domain}
+      - {href: /ruby/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /ruby/generic/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /ruby/generic/scale-your-app, title: Scale Your App}
+      - {href: /ruby/generic/debugging, title: Debugging}
+      - {href: /ruby/generic/app-health, title: App Health}
+      - {href: /ruby/generic/remote-access, title: Remote Access}
+      - {href: /ruby/generic/team-management, title: Team Management}
+      - {href: /ruby/generic/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /ruby/generic/configure-ruby, title: Configure Sinatra}
+      - {href: /ruby/generic/bundler, title: Bundler}
+      - {href: /ruby/generic/dry-run, title: Dry Run}
+      # - {href: /ruby/generic/scale-your-app, title: Make Sinatra scream}
+      # - {href: /ruby/generic/scale-your-app, title: New Relic}

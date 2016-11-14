@@ -1,59 +1,77 @@
 # Existing Express App
-Part of what makes nanobox so useful is you don't even need nodejs or express installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need nodejs or express installed on your local machine to use them.
 
-This guide will help you get an existing Express app up-and-running with nanobox.
+## Setup
 
-*If you don't have an existing Express project, the [Express form Scratch guide](/php/express/from-scratch) is where you should start.*
+#### cd into your Express app
 
-## Create a Nodejs Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
+```bash
+# change into your project folder
+cd my-express-app
+```
 
-From within this environment you can develop and run your app as you normally would with things like *npm install* or *npm start*.
-
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+
+<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
 
 ```yaml
-code.build:
+run.config:
+
   engine: nodejs
+
+  engine.config:
+    runtime: nodejs-4.4
+
+  extra_packages:
+    - nodejs
+
 ```
 
-#### Start the Environment
-You can then start the dev environment:
+## Run the app
+
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/nodejs/express/add-a-database) before your app will run.
 
 ```bash
-nanobox dev start
+nanobox run express s
 ```
 
-## Configure Express
-To allow connections from the host machine into the app's container modify the `bin/www` telling express to listen on all available IP's at port 8080:
-
-```javascript
-var port = normalizePort(process.env.PORT || '8080');
-app.set('port', port);
-```
-
-Also, add a convenient way to access your app from a browser:
+## Check it out
 
 ```bash
-nanobox dev dns add express.nanobox.dev
+# Add a convenient way to access your app from the browser
+nanobox dns add local express.dev
 ```
 
-## Express up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+Visit your app -> [express.dev:3000](http://express.dev:3000)
+
+## Explore
+
+With Nanobox, you have everything you need develop and run your express app:
 
 ```bash
-npm start
-```
+# drop into a Nanobox console
+nanobox run
 
-Once the app has started you can visit it from your favorite browser at `express.nanobox.dev`.
+# where nodejs is installed,
+node -v
+
+# npm is installed,
+npm -v
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/nodejs/express/add-a-database)
-* [Javascript Runtime](/nodejs/express/javascript-runtime)
+* [Frontent Javascipt](/nodejs/express/frontend-javascript)
 * [Local Environment Variables](/nodejs/express/local-evars)
 * [Back to Express overview](/nodejs/express)

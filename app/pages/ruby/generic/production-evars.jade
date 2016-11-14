@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "ruby,generic,environment-variables"
+    description = "generic environment variables"
+    articles    = "ruby/generic"
+    icons       = "ruby,generic"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

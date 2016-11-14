@@ -80,7 +80,7 @@ nanobox run
 # where python is installed,
 python -v
 
-# your gems are available,
+# your packages are available,
 pip list
 
 # and your code is mounted

@@ -15,15 +15,9 @@ cd my-rails-app
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
-
   engine: ruby
-
-  engine.config:
-    runtime: ruby-2.3
 
   extra_packages:
     - nodejs
@@ -50,13 +44,6 @@ module Rails
 end
 ```
 
-#### Add a local DNS
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local rails.dev
-```
-
 ## Run the app
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/rails/add-a-database) before your app will run.
@@ -64,6 +51,15 @@ nanobox dns add local rails.dev
 ```bash
 nanobox run rails s
 ```
+
+## Check it out
+
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local rails.dev
+```
+
+Visit your app -> [rails.dev:3000](http://rails.dev:3000)
 
 ## Explore
 

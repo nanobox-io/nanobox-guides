@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Bundler"
+    keywords    = "ruby,generic,bundler"
+    description = "bundler with generic"
+    articles    = "ruby/generic"
+    icons       = "ruby,generic"
+    
+block markdown
+  include:md /articles/ruby/bundler.md
