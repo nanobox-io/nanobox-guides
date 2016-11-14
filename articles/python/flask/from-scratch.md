@@ -15,8 +15,6 @@ mkdir nanobox-flask && cd nanobox-flask
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
   engine: python
@@ -75,7 +73,7 @@ nanobox dns add local flask.dev
 nanobox run python hello.py
 ```
 
-Visit your app -> [flask.dev:3000](http://flask.dev:3000)
+Visit your app -> [flask.dev:5000](http://flask.dev:5000)
 
 ## Explore
 With Nanobox, you have everything you need develop and run your flask app:

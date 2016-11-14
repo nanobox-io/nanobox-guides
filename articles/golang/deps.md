@@ -8,7 +8,7 @@ run.config:
   config:
     fetch: 'go get'
     build: 'go build'
-  lib_dirs:
+  cache_dirs:
     - vendor
 ```
 
@@ -32,13 +32,13 @@ run.config:
     build: 'go build'
 ```
 
-### lib_dirs
-If your dependency manager vendors packages, you should include the library directories (`lib_dirs`) config in the `run.config` section of your boxfile.yml. Nanobox caches files written to lib_dirs and reuses them on subsequent builds.
+### cache_dirs
+If your dependency manager vendors packages, you should include the library directories (`cache_dirs`) config in the `run.config` section of your boxfile.yml. Nanobox caches files written to cache_dirs and reuses them on subsequent builds.
 
 ```yaml
 run.config:
   engine: golang
-  lib_dirs:
+  cache_dirs:
     - vendor
 ```
 

@@ -13,7 +13,7 @@ run.config:
     - nodejs
 
   # Tells nanobox to cache & reuse the node_modules directory
-  lib_dirs:
+  cache_dirs:
     - node_modules
 
   # Adds npm binaries to the $PATH

@@ -6,11 +6,14 @@ Pip is included in the [Python Engine](https://github.com/nanobox-io/nanobox-eng
 
 ```bash
 # Console into your dev container
-nanobox dev console
+nanobox run
 
 # Run pip commands
 pip install gunicorn
 
 # add the newly installed dependency to the requirements.txt
 pip freeze > requirements.txt
+
+# exit the console
+exit
 ```

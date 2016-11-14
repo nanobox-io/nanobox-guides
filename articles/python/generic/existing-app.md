@@ -25,10 +25,11 @@ run.config:
 #### Listen on 0.0.0.0
 To allow connections from the host machine into the app's container, you'll need to configure your app to bind to 0.0.0.0.
 
-Here is an example with Sinatra:
+Here is an example with Flask:
 
 ```python
-set :bind, "0.0.0.0"
+if __name__ == "__main__":
+  app.run(host='0.0.0.0')
 ```
 
 #### Add a local DNS

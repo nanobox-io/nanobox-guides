@@ -13,12 +13,12 @@ run.config:
 ```
 
 #### Dependencies
-If you're using a package manager like `yarn` or `npm`, it is highly encouraged to add `node_modules` to the `lib_dirs` for enhanced performance:
+If you're using a package manager like `yarn` or `npm`, it is highly encouraged to add `node_modules` to the `cache_dirs` for enhanced performance:
 
 ```yaml
 run.config:
   # cache node_modules
-  lib_dirs:
+  cache_dirs:
     - node_modules
 ```
 
@@ -28,7 +28,7 @@ Some packages include command line executables (bower, gulp, grunt, etc). To use
 ```yaml
 run.config:
   # add node_module bins to the $PATH
-  paths:
+  extra_path_dirs:
     - node_modules/.bin
 ```
 
@@ -66,12 +66,12 @@ run.config:
     - bower install
 ```
 
-It is highly encouraged to add `bower_components` to the `lib_dirs` for enhanced performance:
+It is highly encouraged to add `bower_components` to the `cache_dirs` for enhanced performance:
 
 ```yaml
 run.config:
   # cache bower_components
-  lib_dirs:
+  cache_dirs:
     - bower_components
 ```
 

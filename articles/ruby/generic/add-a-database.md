@@ -3,16 +3,7 @@
 ## Configure
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<div class="meta expand" data-method="snippet" data-params="data.db" ></div>
-
-```yaml
-run.config:
-  engine: ruby
-
-# add a postgres database
-data.db:
-  image: nanobox/postgresql
-```
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
 In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
 

@@ -15,8 +15,6 @@ cd my-flask-app
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
   engine: python
@@ -25,17 +23,21 @@ run.config:
 ## Configure Flask
 
 #### Install packages via pip
-If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Flask) individually like this:
+If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Flask) individually and freeze them like this:
 
 ```bash
+# drop into a Nanobox console
+nanobox run
+
+# install pip packages
 pip install Flask
 pip install OTHER_DEPENDENCY
-```
 
-Once they've been installed, you'll need to freeze your pip installation:
-
-```bash
+# freeze your dependencies
 pip freeze > requirements.txt
+
+# exit nanobox
+exit
 ```
 
 #### Listen on 0.0.0.0

@@ -15,8 +15,6 @@ cd my-django-app
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
-<div class="meta" data-method="configFile" data-params="boxfile.yml"></div>
-
 ```yaml
 run.config:
   engine: python
@@ -25,24 +23,21 @@ run.config:
 ## Configure Django
 
 #### Install packages via pip
-If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Django) individually like this:
+If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Django) individually and freeze them like this:
 
 ```bash
+# drop into a Nanobox console
+nanobox run
+
+# install pip packages
 pip install Django
 pip install OTHER_DEPENDENCY
-```
 
-Once they've been installed, you'll need to freeze your pip installation:
-
-```bash
+# freeze your dependencies
 pip freeze > requirements.txt
-```
 
-#### Run data migrations
-You may have some pending data migrations to be run. Let's run those now:
-
-```bash
-python manage.py migrate
+# exit nanobox
+exit
 ```
 
 #### Add a local DNS
@@ -53,6 +48,8 @@ nanobox dns add local django.dev
 ```
 
 ## Run the app
+
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/django/add-a-database) before your app will run.
 
 ```bash
 nanobox run python manage.py runserver 0.0.0.0:8000

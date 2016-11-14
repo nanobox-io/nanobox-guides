@@ -13,9 +13,9 @@ run.config:
     - nginx
 ```
 
-Now add the following nginx config file into your project, at `config/nginx.conf`:
+Now add the following nginx config file into your project, at `etc/nginx.conf`:
 
-<div class="meta" data-method="configFile" data-params="config/nginx.conf"></div>
+<div class="meta" data-method="configFile" data-params="etc/nginx.conf"></div>
 
 ```nginx
 worker_processes 1;
@@ -64,66 +64,155 @@ http {
 }
 ```
 
-#### Puma
-Add puma to your Gemfile (if it's not already):
+#### Gunicorn
+Gunicorn can be installed via pip:
 
-```python
-gem 'puma', '~> 3.0'
+```bash
+# drop into a nanobox console
+nanobox run
+
+# install gunicorn
+pip install gunicorn
+
+# freeze dependencies
+pip freeze > requirements.txt
+
+# exit nanobox
+exit
 ```
 
-Now add the following puma config file into your project, at `config/puma.py`:
+Now add the following gunicorn configuration into your project, at `etc/gunicorn.py`:
 
-<div class="meta" data-method="configFile" data-params="config/puma.py"></div>
+<div class="meta" data-method="configFile" data-params="etc/gunicorn.py"></div>
 
 ```python
-# Puma can serve each request in a thread from an internal thread pool.
-# The `threads` method setting takes two numbers a minimum and maximum.
-# Any libraries that use thread pools should be configured to match
-# the maximum value specified for Puma. Default is set to 5 threads for minimum
-# and maximum, this matches the default thread size of Active Record.
-#
-threads_count = ENV.fetch("RUBY_MAX_THREADS") { 5 }.to_i
-threads threads_count, threads_count
+# Server mechanics
+bind = '0.0.0.0:8000'
+backlog = 2048
+daemon = False
+pidfile = None
+umask = 0
+user = None
+group = None
+tmp_upload_dir = None
+proc_name = None
 
-# Specifies the `port` that Puma will listen on to receive requests, default is 3000.
-#
-port        ENV.fetch("PORT") { 3000 }
+# Logging
+errorlog = '-'
+loglevel = 'info'
+accesslog = '-'
+access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 
-# Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+# Worker processes
+#
+#   workers - The number of worker processes that this server
+#       should keep alive for handling requests.
+#
+#       A positive integer generally in the 2-4 x $(NUM_CORES)
+#       range. You'll want to vary this a bit to find the best
+#       for your particular application's work load.
+#
+#   worker_class - The type of workers to use. The default
+#       sync class should handle most 'normal' types of work
+#       loads. You'll want to read
+#       http://docs.gunicorn.org/en/latest/design.html#choosing-a-worker-type
+#       for information on when you might want to choose one
+#       of the other worker classes.
+#
+#       An string referring to a 'gunicorn.workers' entry point
+#       or a python path to a subclass of
+#       gunicorn.workers.base.Worker. The default provided values
+#       are:
+#
+#           egg:gunicorn#sync
+#           egg:gunicorn#eventlet   - Requires eventlet >= 0.9.7
+#           egg:gunicorn#gevent     - Requires gevent >= 0.12.2 (?)
+#           egg:gunicorn#tornado    - Requires tornado >= 0.2
+#
+#   worker_connections - For the eventlet and gevent worker classes
+#       this limits the maximum number of simultaneous clients that
+#       a single process can handle.
+#
+#       A positive integer generally set to around 1000.
+#
+#   timeout - If a worker does not notify the master process in this
+#       number of seconds it is killed and a new worker is spawned
+#       to replace it.
+#
+#       Generally set to thirty seconds. Only set this noticeably
+#       higher if you're sure of the repercussions for sync workers.
+#       For the non sync workers it just means that the worker
+#       process is still communicating and is not tied to the length
+#       of time required to handle a single request.
+#
+#   keepalive - The number of seconds to wait for the next request
+#       on a Keep-Alive HTTP connection.
+#
+#       A positive integer. Generally set in the 1-5 seconds range.
+#
 
-# Specifies the number of `workers` to boot in clustered mode.
-# Workers are forked webserver processes. If using threads and workers together
-# the concurrency of the application would be max `threads` * `workers`.
-# Workers do not work on JPython or Windows (both of which do not support
-# processes).
-#
-# workers ENV.fetch("WEB_CONCURRENCY") { 2 }
+workers = 1
+worker_class = 'sync'
+worker_connections = 1000
+timeout = 30
+keepalive = 2
 
-# Use the `preload_app!` method when specifying a `workers` number.
-# This directive tells Puma to first boot the application and load code
-# before forking the application. This takes advantage of Copy On Write
-# process behavior so workers use less memory. If you use this option
-# you need to make sure to reconnect any threads in the `on_worker_boot`
-# block.
-#
-# preload_app!
+spew = False
 
-# The code in the `on_worker_boot` will be called if you are using
-# clustered mode by specifying a number of `workers`. After each worker
-# process is booted this block will be run, if you are using `preload_app!`
-# option you will want to use this block to reconnect to any threads
-# or connections that may have been created at application boot, Python
-# cannot share connections between processes.
 #
-# on_worker_boot do
-#   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
-# end
+# Server hooks
+#
+#   post_fork - Called just after a worker has been forked.
+#
+#       A callable that takes a server and worker instance
+#       as arguments.
+#
+#   pre_fork - Called just prior to forking the worker subprocess.
+#
+#       A callable that accepts the same arguments as after_fork
+#
+#   pre_exec - Called just prior to forking off a secondary
+#       master process during things like config reloading.
+#
+#       A callable that takes a server instance as the sole argument.
+#
+
+def post_fork(server, worker):
+    server.log.info("Worker spawned (pid: %s)", worker.pid)
+
+def pre_fork(server, worker):
+    pass
+
+def pre_exec(server):
+    server.log.info("Forked child, re-executing.")
+
+def when_ready(server):
+    server.log.info("Server is ready. Spawning workers")
+
+def worker_int(worker):
+    worker.log.info("worker received INT or QUIT signal")
+
+    ## get traceback info
+    import threading, sys, traceback
+    id2name = dict([(th.ident, th.name) for th in threading.enumerate()])
+    code = []
+    for threadId, stack in sys._current_frames().items():
+        code.append("\n# Thread: %s(%d)" % (id2name.get(threadId,""),
+            threadId))
+        for filename, lineno, name, line in traceback.extract_stack(stack):
+            code.append('File: "%s", line %d, in %s' % (filename,
+                lineno, name))
+            if line:
+                code.append("  %s" % (line.strip()))
+    worker.log.debug("\n".join(code))
+
+def worker_abort(worker):
+    worker.log.info("worker received SIGABRT signal")
 
 ```
 
-**IMPORTANT**: The puma configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
+**IMPORTANT**: The gunicorn configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
@@ -132,11 +221,10 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-# add a web component and give it a "start" command
 web.main:
   start:
-    nginx: nginx -c /app/config/nginx.conf
-    puma: bundle exec puma -C /app/config/puma.py
+    nginx: nginx -c /app/etc/nginx.conf
+    python: gunicorn -c /app/etc/gunicorn.py myproject:app
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
@@ -145,15 +233,12 @@ In the above snippet `main` is the name of web component and can be anything you
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
-# add a worker component and give it a "start" command
 worker.main:
-  start: python myworker.py
+  start: 'python jobs-worker.py'
 ```
 
-In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier).
-
 ## Add Writable Directories
-By default, webs and workers run in a read only environment. Your Sinatra app may need certain directories to be writable.
+By default, webs and workers run in a read only environment. Your Python app may need certain directories to be writable.
 
 You'll need to specify these writable directories **per component** by updating your existing `boxfile.yml`:
 
@@ -172,7 +257,7 @@ worker.main:
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
 ## Add Streaming Logs
-If you app logs to custom file and you want to stream those logs to the nanobox dashboard, we'll need to add a `log_watch` path to the boxfile:
+If your app logs to custom file and you want to stream those logs to the nanobox dashboard, we'll need to add a `log_watch` path to the boxfile:
 
 ```yaml
 web.main:
@@ -194,20 +279,20 @@ If your app needs to compile or generate assets during a deploy, you can add an 
 ```yaml
 deploy.config:
   extra_steps:
-    - rake YOUR RAKE TASK
+    - python YOUR ASSET SCRIPT
 ```
 
 ## Migrate Data
 To migrate data as part of the deploy process you can add a `before_live` hook, which will run just before the new instances are started.
 
 #### Add a deploy hook
-Run a rake task each time we deploy. In your existing boxfile.yml add the following code:
+Run a task each time we deploy. In your existing boxfile.yml add the following code:
 
 ```yaml
 deploy.config:
   before_live:
     web.main:
-      - rake YOUR MIGRATION TASK
+      - python YOUR MIGRATION SCRIPT
 ```
 
 ## Now what?
