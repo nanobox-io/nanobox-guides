@@ -4,9 +4,12 @@ class LanguageLanding extends Landing
     super()
     @loadFrameworks language
     $("#dont-see").on 'click', ()=>
-      $node = $ jadeTemplate['propose-framework']()
+      $node = $ jadeTemplate['propose-framework']({language:language})
       $(".frameworks").append $node
+      window.addChatter $('#talk-to-us')
       castShadows $node
+      if window.isLocal
+        localizeLinks()
 
   loadArticleGroups : (articles) ->
     if articles.length == 0

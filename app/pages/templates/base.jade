@@ -60,6 +60,7 @@ html(lang="en")
     script(src="/js/hexes-frameworks-svg.js")
     script(src="/js/base-svg.js")
     script(src="/js/top-nav.js")
+    script(src="/js/olark-groove.js")
     // endbuild
     
     // build:main /js/main.js
@@ -70,6 +71,7 @@ html(lang="en")
     script(src="/js/article/snippet.js")
     script(src="/js/article.js")
     script(src="/js/article-meta.js")
+    //- script(src="/js/olark-groove.js")
     // endbuild
     
     script(src="https://use.typekit.net/cqd5kth.js")
@@ -88,38 +90,6 @@ html(lang="en")
       $mainwrapper = $(".main-wrapper");
       castShadows( $('.main-wrapper') );
       topNav = new nanobox.TopNav( $(".top-nav") );
-      
-      //- olark/groove integration
-      $(document).ready(function() {
-        var $chat = $(".work-in-progress").find(".chat");
-        var $support = $(".support")
-
-        //- 
-        olark('api.box.hide');
-        //- olark('api.chat.onReady', function() {$chat.removeClass("groove"); $chat.addClass("olark")};
-        olark('api.chat.onOperatorsAvailable', function() {
-          $chat.removeClass("groove"); $chat.addClass("olark");
-          $support.removeClass("groove"); $support.addClass("olark");
-        });
-        olark('api.chat.onOperatorsAway', function() {
-          $chat.removeClass("olark"); $chat.addClass("groove");
-          $support.removeClass("olark"); $support.addClass("groove");
-        });
-        olark('api.box.onExpand', function() {$support.hide();});
-        olark('api.box.onShrink', function() {$support.show(); olark('api.box.hide')});
-        
-        //- 
-        $chat.click(function(e) {
-          if ($chat.hasClass("olark")) {olark('api.box.expand'); olark('api.box.show');}
-          if ($chat.hasClass("groove")) {groove.widget("open");}
-        });
-        
-        //- 
-        $support.click(function(e) {
-          if ($support.hasClass("olark")) {olark('api.box.expand'); olark('api.box.show');}
-          if ($support.hasClass("groove")) {groove.widget("open");}
-        });
-      });
       
     include ../shared/google-analytics.jade
     include ../shared/olark.jade
