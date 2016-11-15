@@ -1,34 +1,34 @@
-title: Golang
-href: /golang
-articles:
-  - title: First Steps
-    articles:
-      - {href: /golang/create-dev-env, title: Create a Golang Dev Environment}
-      - {href: /golang/config, title: Configure Golang}
-
-  - title: Next Steps
-    articles:
-      - {href: /golang/add-components, title: Add App Components}
-      - {href: /golang/local-evars, title: Local Environment Variables}
-
-  - title: Dependency Management
-    articles:
-      - {href: /golang/deps, title: Go Dependency Management}
-      - {href: /golang/nodejs-npm, title: Using Node.js & npm}
-
-  - title: Production
-    articles:
-      - {href: /golang/stage-your-app, title: Stage your App}
-      - {href: /golang/launch-your-app, title: Launch your App}
-      - {href: /golang/point-your-domain, title: Point your Domain}
-      - {href: /golang/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/production-evars, title: Production Environment Variables}
-
-  - title: Going Further
-    articles:
-      - {href: /golang/scale-your-app, title: Scale Your App}
-      - {href: /golang/debugging, title: Debugging}
-      - {href: /golang/app-health, title: App Health}
-      - {href: /golang/remote-access, title: Remote Access}
-      - {href: /golang/team-management, title: Team Management}
-      - {href: /golang/manage-platform, title: Manage Platform}
+# title: Golang
+# href: /golang
+# articles:
+#   - title: First Steps
+#     articles:
+#       - {href: /golang/create-dev-env, title: Create a Golang Dev Environment}
+#       - {href: /golang/config, title: Configure Golang}
+#
+#   - title: Next Steps
+#     articles:
+#       - {href: /golang/add-components, title: Add App Components}
+#       - {href: /golang/local-evars, title: Local Environment Variables}
+#
+#   - title: Dependency Management
+#     articles:
+#       - {href: /golang/deps, title: Go Dependency Management}
+#       - {href: /golang/nodejs-npm, title: Using Node.js & npm}
+#
+#   - title: Production
+#     articles:
+#       - {href: /golang/stage-your-app, title: Stage your App}
+#       - {href: /golang/launch-your-app, title: Launch your App}
+#       - {href: /golang/point-your-domain, title: Point your Domain}
+#       - {href: /golang/encryption, title: SSL/TLS Encryption}
+#       - {href: /golang/production-evars, title: Production Environment Variables}
+#
+#   - title: Going Further
+#     articles:
+#       - {href: /golang/scale-your-app, title: Scale Your App}
+#       - {href: /golang/debugging, title: Debugging}
+#       - {href: /golang/app-health, title: App Health}
+#       - {href: /golang/remote-access, title: Remote Access}
+#       - {href: /golang/team-management, title: Team Management}
+#       - {href: /golang/manage-platform, title: Manage Platform}

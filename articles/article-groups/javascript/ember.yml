@@ -13,5 +13,5 @@ articles:
   - title: "Advanced"
     tribe: the_essentials
     articles:
-      - {href: /javascript/angular/configure-nodejs, title: Configure Nodejs}
-      - {href: /javascript/angular/npm, title: Yarn & NPM}
+      - {href: /javascript/ember/configure-nodejs, title: Configure Nodejs}
+      - {href: /javascript/ember/package-managers, title: 'Yarn, NPM, & Bower'}
