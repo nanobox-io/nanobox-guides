@@ -13,7 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+**HEADS UP**: Your database will be provisioned the next time you `nanobox run`.
 
 ## Connect
 Modify your `settings.py` to connect to your app:
