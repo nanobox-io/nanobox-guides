@@ -1,98 +1,85 @@
-# Starting with an Existing Laravel App
+# Existing Laravel App
+Part of what makes Nanobox so useful is you don't even need php or laravel installed on your local machine to use them.
 
-Part of what makes Nanobox so useful is you don't have to have PHP installed on your local machine to run PHP apps. This guide walks through getting an existing Laravel app up and running with Nanobox.
+## Setup
 
-*If you don't have an existing Laravel project, the [Laravel from Scratch](/php/laravel/from-scratch) guide would be the best place to start.*
+#### cd into your Laravel app
+Change into an existing project folder
 
-## Create a PHP Dev Environment
-Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app, artisan commands, or other tasks as you would normally.
+```bash
+cd my-laravel-app
+```
 
-### Add a boxfile.yml
-The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
+
+#### Add a boxfile.yml
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the php <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
-
-  # tells nanobox to install php and associated runtimes
+  # install php and associated runtimes
   engine: php
-  config:
+  
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
 
-    # sets the php version
-    # you can use a difference version if you prefer
+    # sets the php version to 7.0
     runtime: php-7.0
-
-    # specifies the webserver document_root
-    document_root: public
 
     # enables php extensions
     extensions:
-
-      # required by laravel
       - pdo
       - mbstring
       - tokenizer
       - session
-
-      # required by composer
-      - phar
-      - filter
-      - json
-      - hash
       - zip
       - dom
       - xml
-
-# creates a web component in sim and production environments
-web.laravel:
-
-  # commands to start PHP-FPM and Apache
-  start:
-    fpm: start-php
-    apache: start-apache
-
-  # pipes log output in your app's log-stream
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
-    laravel[error]: /app/storage/logs/laravel.log
 ```
 
-#### runtime
-Using PHP 7.0 is recommended, but other versions are available. The list of available PHP versions can be found in the [PHP Settings guide](/php/php-settings#runtime).
+## Configure Laravel
 
-#### extensions
-The [PHP engine](https://github.com/nanobox-io/nanobox-engine-php) takes a minimalist approach to including extensions in your PHP environment. Besides a few basic extensions, only extensions specified in your boxfile.yml are included in your PHP runtime.
-
-If you need other extensions, just include them in your boxfile.yml. A list of available extensions can be found in the [PHP Extensions guide](/php/extensions).
-
-### Build the Environment
-With the your boxfile.yml in place, you're ready to create your dev environment. From the project directory run the following commands:
+#### Add a local DNS
+Add a convenient way to access your app from the browser
 
 ```bash
-# start the dev environment
-nanobox dev start
-
-# add a convenient way to access your app from the browser
-nanobox dev dns add laravel.nanobox.dev
+nanobox dns add local laravel.dev
 ```
 
-## Start PHP-FPM & Apache
-Either `exit` out of your dev console or open a new terminal window and run the following to start PHP-FPM and Apache.
+## Run the app
+
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/php/laravel/add-a-database) before your app will run.
 
 ```bash
-# run the start commands specified in your boxfile.yml
-nanobox dev run
+php artisan serve --host 0.0.0.0
 ```
 
-## View the App in Your Browser
-With your app running, you can access it at `laravel.nanobox.dev` in your browser of choice.
+Visit your app -> [laravel.dev:8000](http://laravel.dev:8000)
 
-## Now What?
-Now that you have Laravel running on Nanobox, what's next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
+## Explore
+With Nanobox, you have everything you need develop and run your laravel app:
 
-* Connecting to a database
-* Adding components
-* Preparing for production
-* Launching your app
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where php is installed,
+php -v
+
+# your packages are available,
+pip list
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
+
+## Now what?
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+
+* [Add a Database](/php/laravel/add-a-database)
+* [Frontent Javascipt](/php/laravel/frontend-javascript)
+* [Local Environment Variables](/php/laravel/local-evars)
+* [Back to Laravel overview](/php/laravel)

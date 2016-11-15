@@ -17,56 +17,29 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 
 ```yaml
 run.config:
-
-  # tells nanobox to install php and associated runtimes
+  # install php and associated runtimes
   engine: php
-  config:
+  
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
 
     # sets the php version to 7.0
     runtime: php-7.0
 
-    # specifies the webserver document_root
-    document_root: public
-
     # enables php extensions
     extensions:
-
-      # required by laravel
       - pdo
       - mbstring
       - tokenizer
       - session
-
-      # required by composer
-      - phar
-      - filter
-      - json
-      - hash
       - zip
       - dom
       - xml
-
-# creates a web component in sim and production environments
-web.laravel:
-
-  # commands to start PHP-FPM and Apache
-  start:
-    fpm: start-php
-    apache: start-apache
-
-  # pipes log output in your app's log-stream
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
-    laravel[error]: /app/storage/logs/laravel.log
 ```
 
 ## Generate a Laravel App
 
 #### Install Laravel
-With your dev environment running, you can console into it and install Laravel.
 
 ```bash
 # drop into a nanobox console
@@ -82,23 +55,23 @@ laravel new
 exit
 ```
 
-## Start PHP-FPM & Apache
+#### Add a local DNS
+Add a convenient way to access your app from the browser
 
 ```bash
-# run the start commands specified in your boxfile.yml
-nanobox dev run
+nanobox dns add local laravel.dev
 ```
 
 ## Run the app
 
 ```bash
-nanobox run rails s
+php artisan serve --host 0.0.0.0
 ```
 
-Visit your app -> [rails.dev:3000](http://rails.dev:3000)
+Visit your app -> [laravel.dev:8000](http://laravel.dev:8000)
 
 ## Explore
-With Nanobox, you have everything you need develop and run your rails app:
+With Nanobox, you have everything you need develop and run your laravel app:
 
 ```bash
 # drop into a Nanobox console
@@ -107,8 +80,8 @@ nanobox run
 # where php is installed,
 php -v
 
-# your gems are available,
-gem list
+# your packages are available,
+composer show
 
 # and your code is mounted
 ls
