@@ -1,9 +1,11 @@
 class Snippet
 
   serviceDictionary:
-    postgres: {image:'postgresql', icon:'postgres', serviceId:'data.db', category:'database' }
-    mongo   : {image:'mongodb',    icon:'mongo',    serviceId:'data.db', category:'database' }
-    mysql   : {image:'mysql',      icon:'mysql',    serviceId:'data.db', category:'database', name:'MySQL' }
+    postgres   : {image:'postgresql', icon:'postgres', serviceId:'data.db', category:'database' }
+    mongo      : {image:'mongodb',    icon:'mongo',    serviceId:'data.db', category:'database' }
+    mysql      : {image:'mysql',      icon:'mysql',    serviceId:'data.db', category:'database', name:'MySQL' }
+    redis      : {image:'redis',      icon:'redis',    serviceId:'data.db', category:'database' }
+    memcached  : {image:'memcached',  icon:'memcached',serviceId:'data.db', category:'database' }
 
   constructor : (@$item, @$codeBlock)->
 

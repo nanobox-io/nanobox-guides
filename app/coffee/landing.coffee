@@ -18,6 +18,11 @@ class Landing
       $node = $ jadeTemplate['framework-overview/article-group']( group )
       $("##{tribe}-tribe").append $node
 
+    # If there are nogeneral articles, remove that header
+    if $("#everything-tribe").children().length == 0
+      $("#everything-title").remove()
+      $("#everything-tribe").remove()
+
     # Only applicable to local testing
     if window.isLocal
       window.localizeLinks()
