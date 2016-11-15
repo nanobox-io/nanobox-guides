@@ -38,24 +38,26 @@ nanobox run bundle install
 ```
 
 #### Create a Sinatra App
-Create a basic sinatra app named `myapp.rb` at the root of your project:
+Create a basic sinatra app at the root of your project named `app.rb`:
 
 ```ruby
-require "sinatra"
+require 'sinatra/base'
 
-get "/" do
-  "Hello nanobox!"
+class App < Sinatra::Base
+  get '/' do
+    'Hello Nanobox!'
+  end
 end
 ```
 
-## Configre Sinatra
-
-#### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container modify the `myapp.rb` telling sinatra to listen on all available IP's:
+Next, add a `config.ru` file:
 
 ```ruby
-set :bind, "0.0.0.0"
+require './app'
+run App
 ```
+
+## Configre Sinatra
 
 #### Add a local DNS
 Add a convenient way to access your app from the browser
@@ -65,12 +67,15 @@ nanobox dns add local sinatra.dev
 ```
 
 ## Run the app
+To allow connections from the host machine into the app's container run the app so that it listens on all available IP's:
 
 ```bash
-nanobox run ruby myapp.rb
+nanobox run rackup --host 0.0.0.0
 ```
 
-Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)
+Visit your app -> <a href="http://sinatra.dev:9292" target="\_blank">sinatra.dev:9292</a>
+
+**HEADS UP**: You can stop your app with `ctrl + c`
 
 ## Explore
 With Nanobox, you have everything you need develop and run your sinatra app:
@@ -83,7 +88,7 @@ nanobox run
 ruby -v
 
 # your gems are available,
-gem list
+bundle exec gem list
 
 # and your code is mounted
 ls

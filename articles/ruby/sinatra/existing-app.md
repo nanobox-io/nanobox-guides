@@ -22,13 +22,6 @@ run.config:
 
 ## Configure Sinatra
 
-#### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container modify the `myapp.rb` telling sinatra to listen on all available IP's:
-
-```ruby
-set :bind, "0.0.0.0"
-```
-
 #### Add a local DNS
 Add a convenient way to access your app from the browser
 
@@ -39,11 +32,15 @@ nanobox dns add local sinatra.dev
 ## Run the app
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/sinatra/add-a-database) before your app will run.
 
+To allow connections from the host machine into the app's container run the app so that it listens on all available IP's:
+
 ```bash
-nanobox run ruby myapp.rb
+nanobox run rackup --host 0.0.0.0
 ```
 
-Visit your app -> [sinatra.dev:4567](http://sinatra.dev:4567)
+Visit your app -> <a href="http://sinatra.dev:9292" target="\_blank">sinatra.dev:9292</a>
+
+**HEADS UP**: You can stop your app with `ctrl + c`
 
 ## Explore
 With Nanobox, you have everything you need develop and run your sinatra app:
@@ -56,7 +53,7 @@ nanobox run
 ruby -v
 
 # your gems are available,
-gem list
+bundle exec gem list
 
 # and your code is mounted
 ls
