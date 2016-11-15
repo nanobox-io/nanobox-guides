@@ -64,12 +64,16 @@ parseSVG = (cb)->
     }
     .pipe gulp.dest('./server/')
     .on('end', cb)
+onError = (err) ->
+  console.log err
+  @emit 'end'
 
 html = (cb, src)->
   src    = if !src? then "" else "#{src}/"
   source = "#{jadePath}/#{src}**/*.jade"
   gulp.src source
     .pipe jade({jade:pug, basedir:'./' }).on('error', (err)-> console.log(err); this.emit('end') )
+    .on 'error', onError
     .pipe gulp.dest("./server/#{src}")
     .on 'end', ()->
       livereload.reload()
@@ -83,6 +87,7 @@ html = (cb, src)->
 jadeTemplates = (cb)->
   gulp.src( templatePath )
     .pipe jade(client: true)
+    .on 'error', onError
     .pipe wrap("jadeTemplate['<%= file.relative.split('.')[0] %>'] = <%= file.contents %>;\n")
     .pipe concat('jade-templates.js')
     .pipe wrap("jadeTemplate = {};\n<%= file.contents %>")
@@ -92,6 +97,7 @@ jadeTemplates = (cb)->
 css = (cb)->
   gulp.src( cssPath )
     .pipe sass({errLogToConsole: true})
+    .on 'error', onError
     .pipe autoprefixer( browsers: ['last 1 version'],cascade: false )
     .pipe gulp.dest('./server/css')
     .on('end', cb)
@@ -101,7 +107,7 @@ js = (cb)->
   gulp.src( coffeePath )
     .pipe plumber()
     .pipe coffee( bare: true ).on( 'error', gutil.log ) .on( 'error', gutil.beep )
-    # .pipe concat('app.js')
+    .on 'error', onError
     .pipe gulp.dest('server/js')
     .on 'end', ()->
       livereload.reload()
@@ -146,7 +152,7 @@ copyFilesToBuild = ->
 copyYaml = (cb)->
   gulp.src yamlPath
     .pipe gulp.dest('server/yaml')
-    .on 'end', ()->
+    .on 'error', onError
       livereload.reload()
       cb()
 
