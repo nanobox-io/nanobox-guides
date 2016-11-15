@@ -69,5 +69,6 @@ exit
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Launch an API](/nodejs/ember/launch-api)
+* [Configure Nodejs](/nodejs/ember/configure-nodejs)
+* [Yarn & NPM](/nodejs/ember/package-managers)
 * [Back to Ember overview](/nodejs/ember)

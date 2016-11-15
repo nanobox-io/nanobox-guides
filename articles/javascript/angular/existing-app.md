@@ -69,5 +69,6 @@ exit
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Launch an API](/nodejs/angular/launch-api)
+* [Configure Nodejs](/nodejs/angular/configure-nodejs)
+* [Yarn & NPM](/nodejs/angular/package-managers)
 * [Back to Angular overview](/nodejs/angular)

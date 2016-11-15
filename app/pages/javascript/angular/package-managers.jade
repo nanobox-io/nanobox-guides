@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Yarn & NPM"
+    keywords    = "javascript,angular,yarn,npm"
+    description = "yarn and npm with angular"
+    articles    = "javascript/angular"
+    icons       = "javascript,angular"
+    
+block markdown
+  include:md /articles/javascript/angular/package-managers.md
