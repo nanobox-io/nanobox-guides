@@ -152,7 +152,7 @@ copyFilesToBuild = ->
 copyYaml = (cb)->
   gulp.src yamlPath
     .pipe gulp.dest('server/yaml')
-    .on 'error', onError
+    .on 'end', ()->
       livereload.reload()
       cb()
 
