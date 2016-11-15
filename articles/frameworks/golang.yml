@@ -1,6 +1,0 @@
-name: Golang
-icon: golang
-home: /golang
-frameworks:
-  # - {href: /golang/hugo, name: Hugo, icon: hugo, devMode: true}
-  # - {href: /golang/beego, name: Beego, icon: beego, devMode: true}
