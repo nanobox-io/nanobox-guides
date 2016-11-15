@@ -10,7 +10,8 @@ articles:
       - {href: /javascript/angular/existing-app, title: Existing Angular App}
 
   #
-  - title: "Next Steps"
+  - title: "Advanced"
     tribe: the_essentials
     articles:
-      - {href: /javascript/angular/launch-api, title: Launch an API}
+      - {href: /javascript/angular/configure-nodejs, title: Configure Nodejs}
+      - {href: /javascript/angular/npm, title: Yarn & NPM}
