@@ -1,0 +1,50 @@
+title: Symfony
+href: /php/symfony
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/symfony/from-scratch, title: Symfony from Scratch}
+      - {href: /php/symfony/existing-app, title: Existing Symfony App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/symfony/add-a-database, title: Add a Database}
+      - {href: /php/symfony/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/symfony/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/symfony/configure-symfony, title: Configure Symfony}
+      - {href: /php/symfony/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/symfony/point-your-domain, title: Point your Domain}
+      - {href: /php/symfony/encryption, title: SSL/TLS Encryption}
+      - {href: /php/symfony/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/symfony/scale-your-app, title: Scale Your App}
+      - {href: /php/symfony/debugging, title: Debugging}
+      - {href: /php/symfony/app-health, title: App Health}
+      - {href: /php/symfony/remote-access, title: Remote Access}
+      - {href: /php/symfony/team-management, title: Team Management}
+      - {href: /php/symfony/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/symfony/configure-php, title: Configure PHP}
+      - {href: /php/symfony/composer, title: Composer}
+      - {href: /php/symfony/dry-run, title: Dry Run}
+      # - {href: /php/symfony/scale-your-app, title: Make Symfony scream}
+      # - {href: /php/symfony/scale-your-app, title: New Relic}

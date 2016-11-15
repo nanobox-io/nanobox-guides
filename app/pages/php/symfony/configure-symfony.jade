@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Symfony"
+    keywords    = "php,symfony,configure,production"
+    description = "configuring symfony for production"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/php/symfony/configure-symfony.md

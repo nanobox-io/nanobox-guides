@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "php,symfony,remote-access"
+    description = "symfony remote access"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

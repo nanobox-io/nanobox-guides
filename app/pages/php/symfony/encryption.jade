@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "SSL/TLS Encryption"
+    keywords    = "php,symfony,ssl,tls,encryption"
+    description = "symfony ssl/tls Encryption"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/shared/encryption.md

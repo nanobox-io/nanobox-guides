@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "php,symfony,launch"
+    description = "launch symfony app"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/shared/launch-your-app.md

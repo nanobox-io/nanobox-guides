@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "php,symfony,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "javascript in symfony"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/shared/frontend-javascript.md

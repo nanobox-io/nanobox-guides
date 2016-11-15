@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database"
+    keywords    = "php,symfony,add-a-database"
+    description = "add a database to symfony"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/php/symfony/add-a-database.md
