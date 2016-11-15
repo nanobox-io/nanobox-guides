@@ -13,4 +13,4 @@ articles:
   - title: "Next Steps"
     tribe: the_essentials
     articles:
-      - {href: /javascript/angular/launch-backend, title: Launch your backend}
+      - {href: /javascript/angular/launch-api, title: Launch an API}

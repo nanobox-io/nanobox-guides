@@ -13,4 +13,4 @@ articles:
   - title: "Next Steps"
     tribe: the_essentials
     articles:
-      - {href: /javascript/ember/launch-backend, title: Launch your backend}
+      - {href: /javascript/ember/launch-api, title: Launch an API}
