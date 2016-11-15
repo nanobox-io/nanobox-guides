@@ -1,0 +1,14 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Task Runners"
+    keywords    = "javascript,angular,gulp,grunt,brunch"
+    description = "task runners with angular"
+    articles    = "javascript/angular"
+    icons       = "javascript,angular"
+    
+block markdown
+  :md
+    # Yarn, NPM, & Bower
+  include:md /articles/shared/partials/task-runners.md
