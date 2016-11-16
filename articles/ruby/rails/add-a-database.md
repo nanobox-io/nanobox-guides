@@ -13,9 +13,16 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+#### Provision database
+Have nanobox provision the database by rebuilding the runtime:
+
+```bash
+nanobox build-runtime
+```
 
 ## Connect
+You can choose from any number of different database to add to your app. This example will show you a basic configuration for postgres.
+
 Modify your `config/database.yml` to connect your app:
 
 <div class="meta" data-class="configFile" data-run="config/database.yml"></div>
@@ -43,12 +50,23 @@ production:
   database: production
 ```
 
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
+
+#### Update dependencies
+Make sure your `Gemfile` has all the necessary dependencies for the database you're using. For postgres the following gems have been added:
+
+```ruby
+gem "pg"
+```
+
+Run `nanobox run bundle install` to install any new gems.
+
 ## Test
 
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With rake
+#### From Rails
 Your can also test the connection with rails:
 
 ```bash

@@ -30,7 +30,7 @@ run.config:
 #### Enable PHP Extensions
 
 Your app may need specific php extensions to function properly. You can include them in your environment simply by added them to your `boxfile.yml`:
-  
+
 ```yaml
 run.config:
   engine.config:

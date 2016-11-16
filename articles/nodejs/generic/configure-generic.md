@@ -1,6 +1,6 @@
 # Configure Nodejs for Production
 
-## Setup webserver
+## Setup a webserver
 Nodejs runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into nodejs through node's builtin server.
 
 #### Nginx

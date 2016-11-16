@@ -1,6 +1,6 @@
 # Configure Flask for Production
 
-## Setup webserver
+## Setup a webserver
 Flask runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into flask through gunicorn.
 
 #### Nginx
@@ -229,10 +229,11 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
+# add a web component and give it a "start" command
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
-    flask: gunicorn -c /app/etc/gunicorn.py myproject:app
+    flask: gunicorn -c /app/etc/gunicorn.py YOUR_FLASK_APP:app
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).

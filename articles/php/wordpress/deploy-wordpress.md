@@ -10,7 +10,7 @@ nanobox compile
 # Start your sim environment
 nanobox sim start
 
-# Add a convenient way to access your sim app from the browser
+# Add a convenient way to access your sim app from the browser:
 nanobox sim dns add wordpress.nanobox.sim
 
 # Deploy to your sim environment

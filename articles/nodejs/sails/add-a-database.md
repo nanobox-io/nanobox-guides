@@ -13,7 +13,12 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+#### Provision database
+Have nanobox provision the database by rebuilding the runtime:
+
+```bash
+nanobox build-runtime
+```
 
 ## Connect
 Before connecting to the database, you'll first need to install the `sails-postgresql` adapter:
@@ -39,7 +44,7 @@ somePostgresqlServer: {
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With Sails
+#### From Sails
 Your can also test the connection with sails:
 
 ```bash

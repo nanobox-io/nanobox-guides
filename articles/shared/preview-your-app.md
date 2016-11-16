@@ -3,7 +3,7 @@
 Nanobox allows you to test your app in a production environment, locally, before you actually launch it into production with `dry-run`.
 
 ## Add a preview DNS
-Add a convenient way to access your app from the browser
+Add a convenient way to access your app from the browser:
 
 ```bash
 nanobox dns add dry-run app.preview

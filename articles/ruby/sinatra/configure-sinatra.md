@@ -1,7 +1,7 @@
 # Configure Sinatra for Production
 
-## Setup webserver
-Sinatra runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into sinatra through puma.
+## Setup a webserver
+Sinatra runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into Sinatra through puma.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -65,7 +65,7 @@ http {
 ```
 
 #### Puma
-Add puma to your Gemfile (if it's not already):
+Add puma to your `Gemfile`:
 
 ```ruby
 gem 'puma', '~> 3.0'
@@ -147,7 +147,7 @@ You can have as many worker components as your app needs by simply adding them t
 ```yaml
 # add a worker component and give it a "start" command
 worker.main:
-  start: ruby myworker.rb
+  start: ruby worker.rb
 ```
 
 In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier).

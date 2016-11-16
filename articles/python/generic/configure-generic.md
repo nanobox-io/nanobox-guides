@@ -224,7 +224,7 @@ You can have as many web components as your app needs by simply adding them to y
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
-    python: gunicorn -c /app/etc/gunicorn.py myproject:app
+    python: gunicorn -c /app/etc/gunicorn.py YOUR_PYTHOIN_APP:app
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).

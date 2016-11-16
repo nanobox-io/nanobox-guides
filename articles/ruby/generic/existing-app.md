@@ -1,38 +1,40 @@
 # Existing Ruby App
-Part of what makes Nanobox so useful is you don't even need ruby installed on your local machine to use it.
+Part of what makes Nanobox so useful is you don't even need Ruby installed on your local machine to use it.
 
 ## Setup
 
 #### cd into your Ruby app
-Change into an existing project folder
+Change into an existing project folder:
 
 ```bash
-cd my-ruby-app
+cd your-ruby-app
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
-#### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+#### Build a Ruby runtime
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
   engine: ruby
 ```
 
+Then have nanobox build a Ruby runtime:
+
+```bash
+nanobox build-runtime
+```
+
 ## Configure App
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to bind to 0.0.0.0.
-
-Here is an example with Sinatra:
-
-```ruby
-set :bind, "0.0.0.0"
-```
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0).
 
 #### Add a local DNS
-Add a convenient way to access your app from the browser
+Add a convenient way to access your app from the browser:
 
 ```bash
 nanobox dns add local ruby.dev
@@ -42,13 +44,13 @@ nanobox dns add local ruby.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/ruby/generic/add-a-database) before your app will run.
 
 ```bash
-nanobox run ruby YOURAPP.rb
+nanobox run ruby your-app.rb
 ```
 
-Visit your app -> [ruby.dev:3000](http://ruby.dev:3000)
+Visit your app at <a href="http://ruby.dev:3000" target="\_blank">ruby.dev:3000</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your ruby app:
+With Nanobox, you have everything you need develop and run your Ruby app:
 
 ```bash
 # drop into a Nanobox console

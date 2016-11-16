@@ -19,13 +19,13 @@ The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> 
 run.config:
   # install php and associated runtimes
   engine: php
-  
+
   # php engine configuration (php version, extensions, etc)
   engine.config:
-    
+
     # sets the php version to 7.0
     runtime: php-7.0
-    
+
     # enables php extensions
     extensions:
       - ctype

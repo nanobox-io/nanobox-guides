@@ -1,6 +1,6 @@
 # Configure Django for Production
 
-## Setup webserver
+## Setup a webserver
 Django runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
 
 #### Nginx
@@ -15,7 +15,7 @@ run.config:
 
 #### Nginx configuration
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
-  
+
 <div class="meta" data-class="configFile" data-run="etc/nginx.conf"></div>
 
 ```nginx
@@ -232,7 +232,7 @@ You can have as many web components as your app needs by simply adding them to y
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
-    django: gunicorn -c /app/etc/gunicorn.py myapp.wsgi
+    django: gunicorn -c /app/etc/gunicorn.py YOUR_DJANGO_APP.wsgi
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).

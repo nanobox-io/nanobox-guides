@@ -1,7 +1,7 @@
 # Configure Ruby for Production
 
-## Setup webserver
-Ruby apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into ruby through puma.
+## Setup a webserver
+Ruby apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into Ruby through puma.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -65,7 +65,7 @@ http {
 ```
 
 #### Puma
-Add puma to your Gemfile (if it's not already):
+Add puma to your `Gemfile`:
 
 ```ruby
 gem 'puma', '~> 3.0'
@@ -91,7 +91,7 @@ port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("ENV") { "development" }
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
@@ -147,7 +147,7 @@ You can have as many worker components as your app needs by simply adding them t
 ```yaml
 # add a worker component and give it a "start" command
 worker.main:
-  start: ruby myworker.rb
+  start: ruby worker.rb
 ```
 
 In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier).

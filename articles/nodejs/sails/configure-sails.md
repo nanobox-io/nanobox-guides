@@ -1,6 +1,6 @@
 # Configure Sails for Production
 
-## Setup webserver
+## Setup a webserver
 Sails runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into sails through node's builtin server.
 
 #### Nginx

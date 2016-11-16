@@ -57,7 +57,7 @@ exit
 ```
 
 #### Add a local DNS
-Add a convenient way to access your app from the browser
+Add a convenient way to access your app from the browser:
 
 ```bash
 nanobox dns add local laravel.dev

@@ -1,6 +1,6 @@
 # Configure Rails for Production
 
-## Setup webserver
+## Setup a webserver
 Rails runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into rails through puma.
 
 #### Nginx
@@ -65,7 +65,7 @@ http {
 ```
 
 #### Puma
-Add puma to your Gemfile (if it's not already):
+Add puma to your `Gemfile`:
 
 ```ruby
 gem 'puma', '~> 3.0'

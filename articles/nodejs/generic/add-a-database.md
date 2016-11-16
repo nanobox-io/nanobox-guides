@@ -13,7 +13,12 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+#### Provision database
+Have nanobox provision the database by rebuilding the runtime:
+
+```bash
+nanobox build-runtime
+```
 
 ## Connect
 However you choose to configure your connection within your node app, you can access the following environment variables:
@@ -36,11 +41,11 @@ nanobox run npm install NPM_PACKAGE --save
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With node
+#### From Node
 Your can also test the connection directly from your app:
 
 ```bash
-nanobox run node YOURAPP.js
+nanobox run node your-app.js
 ```
 
 ## Now what?

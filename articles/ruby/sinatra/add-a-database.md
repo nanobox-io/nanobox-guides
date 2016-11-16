@@ -5,7 +5,7 @@ You can add a database to your app by simply adding a data component to your `bo
 
 <div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
-In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
+In the above snippet `db` is the `NAME` of the component, and can be anything you choose as long as it's unique.
 
 Nanobox generates the following environment variables based off that name:
 
@@ -13,10 +13,17 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be provisioned and running the next time you `nanobox run`.
+#### Provision database
+Have nanobox provision the database by rebuilding the runtime:
+
+```bash
+nanobox build-runtime
+```
 
 ## Connect
-A basic database setup needs at least a `Rakefile`, `config/database.yml`, and `config/environments.rb`.
+Sinatra is pretty free-form when it comes to configuring a database connection. This example will show you a basic configuration for postgres.
+
+Create a `Rakefile`, `config/database.yml`, and `config/environments.rb`.
 
 The `Rakefile` should look something like this:
 
@@ -37,16 +44,17 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 2
-  database: gonano
   host: <%= ENV['DATA_DB_HOST'] %>
   username: <%= ENV['DATA_DB_USER'] %>
   password: <%= ENV['DATA_DB_PASS'] %>
 
 development:
   <<: *default
+  database: development
 
 production:
   <<: *default
+  database: production
 ```
 
 **HEADS UP**: Any database created by nanobox will *always* be named `gonano`
@@ -74,15 +82,14 @@ configure :production, :development do
 end
 ```
 
-Finally, modify your app to include the `config/environments.rb`:
+Modify your app to include the `config/environments.rb` file:
 
 ```ruby
-require 'sinatra'
 require './config/environments'
 ```
 
 #### Update dependencies
-Make sure your `Gemfile` has all the necessary dependencies for the database you're using. This example uses postgres and includes the following gems in the `Gemfile`:
+Make sure your `Gemfile` has all the necessary dependencies for the database you're using. For postgres the following gems have been added:
 
 ```ruby
 gem "activerecord"
@@ -91,9 +98,7 @@ gem "rake"
 gem "pg"
 ```
 
-Make sure to run `nanobox run bundle install` to install any new gems.
-
-**HEADS UP**: This may take a little extra time as it's likely going to be provisioning your database as well.
+Run `nanobox run bundle install` to install any new gems.
 
 ## Test
 

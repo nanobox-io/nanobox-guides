@@ -13,7 +13,12 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be provisioned the next time you `nanobox run`.
+#### Provision database
+Have nanobox provision the database by rebuilding the runtime:
+
+```bash
+nanobox build-runtime
+```
 
 ## Connect
 Modify your `settings.py` to connect to your app:
@@ -32,7 +37,7 @@ DATABASES = {
 ```
 
 #### Add pip dependency
-If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install. 
+If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
 
 The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
 

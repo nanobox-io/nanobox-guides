@@ -13,6 +13,13 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
+#### Provision database
+Have nanobox provision the database by rebuilding the runtime:
+
+```bash
+nanobox build-runtime
+```
+
 **HEADS UP**: Your database will be running the next time you `nanobox run`.
 
 ## Connect
@@ -25,10 +32,12 @@ host = ENV['DATA_DB_HOST']
 ```
 
 #### Update dependencies
-You may need to add some gems to interact with the database. Update the `Gemfile` with the following gems and run `bundle install`:
+Regardless of what database you decide to use, you'll likely be adding some gems.
+
+Update your `Gemfile` with any gems you'll be using and have nanobox install them with `bundle install`:
 
 ```bash
-WIP
+nanobox run bundle install
 ```
 
 ## Test
@@ -36,11 +45,11 @@ WIP
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With ruby
+#### With Ruby
 Your can also test the connection directly from your app:
 
 ```bash
-nanobox run ruby YOURAPP.rb
+nanobox run ruby your-app.rb
 ```
 
 ## Now what?
