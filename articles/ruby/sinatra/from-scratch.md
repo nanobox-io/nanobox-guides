@@ -41,7 +41,7 @@ nanobox run bundle install
 Create a basic sinatra app at the root of your project named `app.rb`:
 
 ```ruby
-require 'sinatra/base'
+require 'sinatra'
 
 class App < Sinatra::Base
   get '/' do

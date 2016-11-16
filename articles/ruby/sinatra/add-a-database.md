@@ -13,7 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be installed and running the next time you `nanobox run`.
+**HEADS UP**: Your database will be provisioned and running the next time you `nanobox run`.
 
 ## Connect
 A basic database setup needs at least a `Rakefile`, `config/database.yml`, and `config/environments.rb`.
@@ -33,34 +33,35 @@ The `config/database.yml` should look something like this:
 <div class="meta" data-class="configFile" data-run="config/database.yml"></div>
 
 ```yaml
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: development
   pool: 2
+  database: gonano
   host: <%= ENV['DATA_DB_HOST'] %>
   username: <%= ENV['DATA_DB_USER'] %>
   password: <%= ENV['DATA_DB_PASS'] %>
+
+development:
+  <<: *default
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: production
-  pool: 2
-  host: <%= ENV['DATA_DB_HOST'] %>
-  username: <%= ENV['DATA_DB_USER'] %>
-  password: <%= ENV['DATA_DB_PASS'] %>
+  <<: *default
 ```
 
-The `config/environment.rb` file should look something like this:
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
-<div class="meta" data-class="configFile" data-run="config/environment.rb"></div>
+The `config/environments.rb` file should look something like this:
+
+<div class="meta" data-class="configFile" data-run="config/environments.rb"></div>
 
 ```ruby
+require 'sinatra/activerecord'
+
 #The environment variable DATABASE_URL should be in the following format:
 # => postgres://{user}:{password}@{host}:{port}/path
 configure :production, :development do
-  db = URI.parse(ENV['DATABASE_URL'] || "postgres://#{ENV['DATA_DB_HOST']}/db")
+  db = URI.parse(ENV['DATABASE_URL'] || "postgres://#{ENV['DATA_DB_USER']}:#{ENV['DATA_DB_PASS']}@#{ENV['DATA_DB_HOST']}/gonano")
 
   ActiveRecord::Base.establish_connection(
     :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
@@ -71,6 +72,13 @@ configure :production, :development do
     :encoding => 'utf8'
   )
 end
+```
+
+Finally, modify your app to include the `config/environments.rb`:
+
+```ruby
+require 'sinatra'
+require './config/environments'
 ```
 
 #### Update dependencies
@@ -85,14 +93,14 @@ gem "pg"
 
 Make sure to run `nanobox run bundle install` to install any new gems.
 
-**HEADS UP**: This may take a little extra time as it's likely going to be installing your database as well.
+**HEADS UP**: This may take a little extra time as it's likely going to be provisioning your database as well.
 
 ## Test
 
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
-#### With Rake
+#### From Sinatra
 Your can also test the connection with rake:
 
 ```bash

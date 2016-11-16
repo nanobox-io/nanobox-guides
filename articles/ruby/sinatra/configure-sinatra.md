@@ -91,7 +91,7 @@ port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("RACK_ENV") { "production" }
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
@@ -194,7 +194,7 @@ If Sinatra needs to compile or generate assets during a deploy, you can add an e
 ```yaml
 deploy.config:
   extra_steps:
-    - rake YOUR RAKE TASK
+    - bundle exec rake YOUR RAKE TASK
 ```
 
 ## Migrate Data
@@ -207,7 +207,7 @@ Run a rake task each time we deploy. In your existing boxfile.yml add the follow
 deploy.config:
   before_live:
     web.main:
-      - rake YOUR MIGRATION TASK
+      - bundle exec rake YOUR MIGRATION TASK
 ```
 
 ## Now what?
