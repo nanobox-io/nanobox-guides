@@ -21,7 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /php/laravel/configure-laravel, title: Configure Laravel}
-      - {href: /php/laravel/dry-run, title: Preview your App}
+      - {href: /php/laravel/preview-your-app, title: Preview your App}
       - {href: /php/laravel/launch-your-app, title: Launch your App}
 
   #
@@ -49,4 +49,3 @@ articles:
       - {href: /php/laravel/composer, title: Composer}
       - {href: /php/laravel/webserver-config, title: Webserver Config}
       - {href: /php/laravel/extensions-config, title: Extensions Config}
-  

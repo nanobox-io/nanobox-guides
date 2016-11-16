@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /ruby/rails/configure-rails, title: Configure Rails}
+      - {href: /ruby/rails/preview-your-app, title: Preview your App}
       - {href: /ruby/rails/launch-your-app, title: Launch your App}
 
   #
@@ -45,6 +46,5 @@ articles:
     articles:
       - {href: /ruby/rails/configure-ruby, title: Configure Ruby}
       - {href: /ruby/rails/bundler, title: Bundler}
-      - {href: /ruby/rails/dry-run, title: Dry Run}
       # - {href: /ruby/rails/scale-your-app, title: Make Rails scream}
       # - {href: /ruby/rails/scale-your-app, title: New Relic}

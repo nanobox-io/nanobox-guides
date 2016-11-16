@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /nodejs/generic/configure-generic, title: Configure your App}
+      - {href: /nodejs/generic/preview-your-app, title: Preview your App}
       - {href: /nodejs/generic/launch-your-app, title: Launch your App}
 
   #
@@ -45,4 +46,3 @@ articles:
     articles:
       - {href: /nodejs/generic/configure-nodejs, title: Configure Node}
       - {href: /nodejs/generic/npm, title: Yarn & NPM}
-      - {href: /nodejs/generic/dry-run, title: Dry Run}

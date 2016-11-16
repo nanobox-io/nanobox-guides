@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /nodejs/sails/configure-sails, title: Configure Sails}
+      - {href: /nodejs/sails/preview-your-app, title: Preview your App}
       - {href: /nodejs/sails/launch-your-app, title: Launch your App}
 
   #
@@ -45,6 +46,5 @@ articles:
     articles:
       - {href: /nodejs/sails/configure-nodejs, title: Configure Nodejs}
       - {href: /nodejs/sails/npm, title: Yarn & NPM}
-      - {href: /nodejs/sails/dry-run, title: Dry Run}
       # - {href: /nodejs/sails/scale-your-app, title: Make Sails scream}
       # - {href: /nodejs/sails/scale-your-app, title: New Relic}

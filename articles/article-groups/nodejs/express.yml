@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /nodejs/express/configure-express, title: Configure Express}
+      - {href: /nodejs/express/preview-your-app, title: Preview your App}
       - {href: /nodejs/express/launch-your-app, title: Launch your App}
 
   #
@@ -45,6 +46,5 @@ articles:
     articles:
       - {href: /nodejs/express/configure-nodejs, title: Configure Nodejs}
       - {href: /nodejs/express/npm, title: Yarn & NPM}
-      - {href: /nodejs/express/dry-run, title: Dry Run}
       # - {href: /nodejs/express/scale-your-app, title: Make Express scream}
       # - {href: /nodejs/express/scale-your-app, title: New Relic}

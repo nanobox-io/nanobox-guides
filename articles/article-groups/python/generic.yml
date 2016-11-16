@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /python/generic/configure-generic, title: Configure your App}
+      - {href: /python/generic/preview-your-app, title: Preview your App}
       - {href: /python/generic/launch-your-app, title: Launch your App}
 
   #
@@ -45,4 +46,3 @@ articles:
     articles:
       - {href: /python/generic/configure-python, title: Configure Python}
       - {href: /python/generic/pip, title: Pip}
-      - {href: /python/generic/dry-run, title: Dry Run}

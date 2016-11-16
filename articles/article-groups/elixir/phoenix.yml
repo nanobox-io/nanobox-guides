@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /elixir/phoenix/configure-phoenix, title: Configure Phoenix}
+      - {href: /elixir/phoenix/preview-your-app, title: Preview your App}
       - {href: /elixir/phoenix/launch-your-app, title: Launch your App}
 
   #
@@ -45,6 +46,5 @@ articles:
     articles:
       - {href: /elixir/phoenix/configure-elixir, title: Configure Elixir}
       - {href: /python/phoenix/mix, title: Mix}
-      - {href: /elixir/phoenix/dry-run, title: Dry Run}
       # - {href: /elixir/phoenix/scale-your-app, title: Make Phoenix scream}
       # - {href: /elixir/phoenix/scale-your-app, title: New Relic}

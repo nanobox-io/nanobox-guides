@@ -21,7 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /php/symfony/configure-symfony, title: Configure Symfony}
-      - {href: /php/symfony/dry-run, title: Preview your App}
+      - {href: /php/symfony/preview-your-app, title: Preview your App}
       - {href: /php/symfony/launch-your-app, title: Launch your App}
 
   #
@@ -47,6 +47,11 @@ articles:
       - {href: /php/symfony/configure-php, title: Configure PHP}
       - {href: /php/symfony/php-extensions, title: PHP Extensions}
       - {href: /php/symfony/composer, title: Composer}
+<<<<<<< b891168140fc71617c99b8137fc103a887f22bf5
       - {href: /php/symfony/webserver-config, title: Webserver Config}
       - {href: /php/symfony/extensions-config, title: Extensions Config}
-  
+
+=======
+      # - {href: /php/symfony/scale-your-app, title: Make Symfony scream}
+      # - {href: /php/symfony/scale-your-app, title: New Relic}
+>>>>>>> updated all landing pages to include 'preview your app' in 'go live' rather than 'dry-run' in 'advanced'
