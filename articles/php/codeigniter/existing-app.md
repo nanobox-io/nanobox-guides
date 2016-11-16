@@ -1,72 +1,86 @@
-# Starting with an Existing CodeIgniter App
+# Existing Codeigniter App
+Part of what makes Nanobox so useful is you don't even need php or codeigniter installed on your local machine to use them.
 
-Part of what makes Nanobox so useful is you don't have to have PHP, Apache, etc., installed on your local machine to run CodeIgniter apps. This guide walks through getting an existing CodeIgniter app up and running with Nanobox.
+## Setup
 
-*If you don't have an existing CodeIgniter project, the [CodeIgniter from Scratch guide](/php/codeigniter/from-scratch) is where you should start.*
+#### cd into your Codeigniter app
+Change into an existing project folder
 
-## Create a PHP Dev Environment
-Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app or other tasks as you would normally.
+```bash
+cd my-codeigniter-app
+```
 
-### Add a boxfile.yml
-The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build and configure your environment. Create a `boxfile.yml` at the root of your project that contains the following:
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
+
+#### Add a boxfile.yml
+The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the php <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
-  # the php engine provides the php runtime
-  # and associated executables
+  # install php and associated runtimes
   engine: php
-  config:
-    # tells nanobox to use php 7.0
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
+    # sets the php version to 7.0
     runtime: php-7.0
-    # enables php extensions
+```
+
+## Configure Codeigniter
+
+#### Enable PHP Extensions
+
+Your app may need specific php extensions to function properly. You can include them in your environment simply by added them to your `boxfile.yml`:
+  
+```yaml
+run.config:
+  engine.config:
     extensions:
-      # required by composer
-      - phar
-      - filter
-      - json
-      - hash
-      - zip
-      - dom
-
-# creates a web component in sim and production environments
-web.codeigniter:
-  # starts PHP-FPM and Apache
-  start:
-    fpm: start-php
-    apache: start-apache
-  # pipes log output into your app's log stream
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
+      - EXTENSION
 ```
 
-### Build the Environment
-With your boxfile.yml in place , you're ready to get CodeIgniter up and running in your dev environment.
+The full list of available extensions can be found [here](/php/codeigniter/php-extensions)
+
+#### Add a local DNS
+Add a convenient way to access your app from the browser
 
 ```bash
-# start the dev environment
-nanobox dev start
-
-# add a convenient way to access your app from the browser
-nanobox dev dns add codeigniter.nanobox.dev
+nanobox dns add local codeigniter.dev
 ```
 
-## Start PHP-FPM and Apache
-Run the following to start PHP-FPM and Apache.
+## Run the app
+
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/php/codeigniter/add-a-database) before your app will run.
 
 ```bash
-# run the start commands specified in your boxfile.yml
-nanobox dev run
+nanobox run php-server
 ```
 
-You can visit your running CodeIgniter app at `codeigniter.nanobox.dev`.
+Visit your app -> [codeigniter.dev](http://codeigniter.dev)
 
-## Now What?
-Now that you have CodeIgniter running in Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!
+## Explore
+With Nanobox, you have everything you need develop and run your codeigniter app:
 
-- Connecting to a database
-- Adding components
-- Preparing for production
-- Launching your app
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where php is installed,
+php -v
+
+# your packages are available,
+pip list
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
+
+## Now what?
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+
+* [Add a Database](/php/codeigniter/add-a-database)
+* [Frontent Javascipt](/php/codeigniter/frontend-javascript)
+* [Local Environment Variables](/php/codeigniter/local-evars)
+* [Back to Codeigniter overview](/php/codeigniter)

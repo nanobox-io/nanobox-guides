@@ -66,7 +66,7 @@ nanobox dns add local laravel.dev
 ## Run the app
 
 ```bash
-php artisan serve --host 0.0.0.0
+nanobox run php artisan serve --host 0.0.0.0
 ```
 
 Visit your app -> [laravel.dev:8000](http://laravel.dev:8000)

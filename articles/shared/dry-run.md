@@ -1,4 +1,4 @@
-# Dry run
+# Preview
 
 Nanobox allows you to test your app in a production environment, locally, before you actually launch it into production with `dry-run`.
 

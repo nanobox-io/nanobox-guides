@@ -52,7 +52,7 @@ nanobox dns add local laravel.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/php/laravel/add-a-database) before your app will run.
 
 ```bash
-php artisan serve --host 0.0.0.0
+nanobox run php artisan serve --host 0.0.0.0
 ```
 
 Visit your app -> [laravel.dev:8000](http://laravel.dev:8000)
