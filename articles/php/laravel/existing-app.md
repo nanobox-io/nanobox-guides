@@ -35,6 +35,7 @@ run.config:
       - zip
       - dom
       - xml
+      - ctype
 ```
 
 ## Configure Laravel

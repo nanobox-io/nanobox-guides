@@ -31,7 +31,7 @@ run.config:
 Modify your `config/database.php` to connect your app:
 
 **Port:** The port will always be the default port of the service you're using.  
-**Name:** The database name will always be `gonano`.    
+**Name:** The database name will always be `gonano`.
 
 ```php
 'connections' => [
@@ -66,6 +66,6 @@ php artisan migrate
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Frontend Javascript](/python/django/frontend-javascript)
-* [Local Environment Variables](/python/django/local-evars)
-* [Back to Django overview](/python/django)
+* [Frontend Javascript](/php/laravel/frontend-javascript)
+* [Local Environment Variables](/php/laravel/local-evars)
+* [Back to Laravel overview](/php/laravel)
