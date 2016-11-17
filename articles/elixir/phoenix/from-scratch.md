@@ -10,7 +10,7 @@ mkdir nanobox-phoenix && cd nanobox-phoenix
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
-#### Build an Elixir runtime
+#### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
 At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
@@ -18,15 +18,6 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 ```yaml
 run.config:
   engine: elixir
-
-  extra_packages:
-    - nodejs
-```
-
-Then have nanobox build an Elixir runtime:
-
-```bash
-nanobox build-runtime
 ```
 
 ## Generate a Phoenix App

@@ -13,14 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-#### Provision database
-Have nanobox provision the database by rebuilding the runtime:
-
-```bash
-nanobox build-runtime
-```
-
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+**HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
 However you choose to configure your connection within your ruby app, you can access the following environment variables:

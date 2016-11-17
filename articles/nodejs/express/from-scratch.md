@@ -10,7 +10,7 @@ mkdir nanobox-express && cd nanobox-express
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
-#### Build a Nodejs runtime
+#### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
 At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
@@ -18,12 +18,6 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 ```yaml
 run.config:
   engine: nodejs
-```
-
-Then have nanobox build a Nodejs runtime:
-
-```bash
-nanobox build-runtime
 ```
 
 ## Generate an Express App

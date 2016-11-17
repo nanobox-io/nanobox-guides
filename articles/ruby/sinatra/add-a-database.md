@@ -13,12 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-#### Provision database
-Have nanobox provision the database by rebuilding the runtime:
-
-```bash
-nanobox build-runtime
-```
+**HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
 Sinatra is pretty free-form when it comes to configuring a database connection. This example will show you a basic configuration for postgres.

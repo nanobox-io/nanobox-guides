@@ -10,7 +10,7 @@ mkdir nanobox-rails && cd nanobox-rails
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
-#### Build a Ruby runtime
+#### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
 At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
@@ -21,12 +21,6 @@ run.config:
 
   extra_packages:
     - nodejs
-```
-
-Then have nanobox build a Ruby runtime:
-
-```bash
-nanobox build-runtime
 ```
 
 ## Generate a Rails App
