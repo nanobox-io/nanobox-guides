@@ -14,7 +14,7 @@ run.config:
 ```
 
 Also we'll need to tell nginx where Laravel's document root is:
-  
+
 ```yaml
 run.config:
   engine.config:
@@ -88,7 +88,7 @@ You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) 
 ## Add Storage Component
 
 Laravel will need the `storage` directory to be shared among all laravel instances. We can do this easily with nanobox by adding a storage data component:
-  
+
 ```yaml
 run.config:
   network_dirs:
@@ -116,6 +116,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/php/laravel/stage-your-app)
+* [Preview your App](/php/laravel/preview-your-app)
 * [Launch your App](/php/laravel/launch-your-app)
 * [Back to laravel overview](/php/laravel)

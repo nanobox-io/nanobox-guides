@@ -154,31 +154,11 @@ deploy.config:
       - rake db:setup_or_migrate
 ```
 
-#### Add a rake task
-You'll need to add a custom rake task that will either setup your database on first deploy, or run migrations for subsequent deploys. You could, for example, create a `lib/tasks/db.rake` file that contained the following:
-
-<div class="meta" data-class="configFile" data-run="lib/tasks/db.rake"></div>
-
-```ruby
-namespace :db do
-  desc 'Setup the db or migrate depending on state of db'
-  task setup_or_migrate: :environment do
-    begin
-      ActiveRecord::Base.connection
-    rescue ActiveRecord::NoDatabaseError
-      Rake::Task["db:setup"].invoke
-    else
-      Rake::Task["db:migrate"].invoke
-    end
-  end
-end
-```
-
 **NOTE:** Your rake task may need to be modified to fit the database you're using.
 
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/ruby/rails/stage-your-app)
-* [Launch your App](/ruby/rails/launch-your-app)
-* [Back to rails overview](/ruby/rails)
+* [Preview your App](/elixir/phoenix/preview-your-app)
+* [Launch your App](/elixir/phoenix/launch-your-app)
+* [Back to Phoenix overview](/elixir/phoenix)

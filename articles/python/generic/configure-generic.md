@@ -298,6 +298,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/python/generic/stage-your-app)
+* [Preview your App](/python/generic/preview-your-app)
 * [Launch your App](/python/generic/launch-your-app)
 * [Back to python overview](/python/generic)

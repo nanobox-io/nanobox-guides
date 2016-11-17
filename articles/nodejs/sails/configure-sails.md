@@ -118,6 +118,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/nodejs/sails/stage-your-app)
+* [Preview your App](/nodejs/sails/preview-your-app)
 * [Launch your App](/nodejs/sails/launch-your-app)
 * [Back to sails overview](/nodejs/sails)

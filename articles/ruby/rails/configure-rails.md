@@ -240,6 +240,6 @@ end
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/ruby/rails/stage-your-app)
+* [Preview your App](/ruby/rails/preview-your-app)
 * [Launch your App](/ruby/rails/launch-your-app)
 * [Back to rails overview](/ruby/rails)

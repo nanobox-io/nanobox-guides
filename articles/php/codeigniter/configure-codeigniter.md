@@ -1,7 +1,7 @@
 # Configure Codeigniter for Production
 
 ## Add a web
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). 
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
 
 #### Specify a  web component
 You can add a web components in your `boxfile.yml`:
@@ -47,7 +47,7 @@ You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) 
 ## Add Storage Component
 
 You might also need certain directories to be shared among all codeigniter instances. We can do this easily with nanobox by adding a storage data component:
-  
+
 ```yaml
 run.config:
   network_dirs:
@@ -74,6 +74,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/php/codeigniter/stage-your-app)
+* [Preview your App](/php/codeigniter/preview-your-app)
 * [Launch your App](/php/codeigniter/launch-your-app)
 * [Back to codeigniter overview](/php/codeigniter)

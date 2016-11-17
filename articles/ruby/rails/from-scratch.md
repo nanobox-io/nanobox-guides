@@ -44,8 +44,6 @@ exit
 #### Listen on 0.0.0.0
 To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/boot.rb`:
 
-<div class="meta" data-class="configFile" data-params="config/boot.rb"></div>
-
 ```ruby
 require 'rails/commands/server'
 module Rails
