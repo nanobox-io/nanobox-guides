@@ -6,7 +6,7 @@ Nanobox allows you to test your app in a production environment, locally, before
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add dry-run app.preview
+nanobox dns add dry-run generic.preview
 ```
 
 ## dry-run the app
@@ -15,6 +15,6 @@ nanobox dns add dry-run app.preview
 nanobox deploy dry-run
 ```
 
-Visit your app -> <a href="http://app.preview" target="\_blank">app.preview</a>
+Visit your app at <a href="http://generic.preview" target="\_blank">generic.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
