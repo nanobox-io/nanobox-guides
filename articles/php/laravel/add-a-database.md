@@ -36,20 +36,22 @@ Modify your `config/database.php` to connect your app:
 ```php
 'connections' => [
   'mysql' => [
-      'driver' => 'mysql',
-      'host' => env('DATA_DB_HOST', ''),
-      'port' => '3306',
-      'database' => 'gonano',
-      'username' => env('DATA_DB_USER', ''),
-      'password' => env('DATA_DB_PASS', ''),
-      'charset' => 'utf8',
-      'collation' => 'utf8_unicode_ci',
-      'prefix' => '',
-      'strict' => true,
-      'engine' => null,
+    'driver' => 'mysql',
+    'host' => env('DATA_DB_HOST', ''),
+    'port' => '3306',
+    'database' => 'gonano',
+    'username' => env('DATA_DB_USER', ''),
+    'password' => env('DATA_DB_PASS', ''),
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix' => '',
+    'strict' => true,
+    'engine' => null,
   ],
 ],
 ```
+
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
 ## Test
 

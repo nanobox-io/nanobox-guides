@@ -1,5 +1,5 @@
 # Existing Laravel App
-Part of what makes Nanobox so useful is you don't even need php or laravel installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need php or Laravel installed on your local machine to use them.
 
 ## Setup
 
@@ -13,13 +13,15 @@ cd my-laravel-app
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the php <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the PHP <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
   # install php and associated runtimes
   engine: php
-  
+
   # php engine configuration (php version, extensions, etc)
   engine.config:
 
@@ -51,11 +53,13 @@ nanobox dns add local laravel.dev
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/php/laravel/add-a-database) before your app will run.
 
+To allow connections from the host machine into the app's container, you'll need to run your app so it listens on all available IP's (0.0.0.0).
+
 ```bash
 nanobox run php artisan serve --host 0.0.0.0
 ```
 
-Visit your app -> [laravel.dev:8000](http://laravel.dev:8000)
+Visit your app at <a href="http://laravel.dev:8000" target="\_blank">laravel.dev:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your laravel app:

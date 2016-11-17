@@ -23,16 +23,13 @@ run.config:
 ## Generate a Angular App
 **HEADS UP**:  You can quickly launch an angular app with the <a href="https://github.com/nanobox-quickstarts/nanobox-angular" target="\_blank">nanobox-angular</a> quickstart.
 
+#### Setup
 Angular requires some initial configuration before being able to create the application. Follow the steps outlined <a href="https://angular.io/docs/ts/latest/quickstart.html#!#add-config-files" target="\_blank">here</a> to create the necessary configuration files before continuing.
 
-**NOTE:** Ensure your project now has a `typings` folder. If it does not, you can try and manually create it:
+Once you've got the necessary config files in place run `nanobox run npm install`.
 
-```bash
-# from the nanobox console
-nanobox run npm run typings install
-```
-
-Due to the complexity of setting up a simple Angular application it is recommended that you <a href="https://angular.io/docs/ts/latest/quickstart.html#!#ngmodule" target="\_blank">follow their guide</a> steps 2 - 5. Once complete return here to get your app running with nanobox.
+#### Create the app
+Due to the complexity of creating a simple Angular application it is recommended that you follow their guide <a href="https://angular.io/docs/ts/latest/quickstart.html#!#ngmodule" target="\_blank">steps 2 - 5</a>. Once complete return here to get your app running with nanobox.
 
 ## Configure Angular
 

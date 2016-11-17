@@ -1,10 +1,10 @@
 # Existing Codeigniter App
-Part of what makes Nanobox so useful is you don't even need php or codeigniter installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need php or Codeigniter installed on your local machine to use them.
 
 ## Setup
 
 #### cd into your Codeigniter app
-Change into an existing project folder
+Change into an existing project folder:
 
 ```bash
 cd my-codeigniter-app
@@ -13,7 +13,9 @@ cd my-codeigniter-app
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the php <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the PHP <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
@@ -28,7 +30,6 @@ run.config:
 ## Configure Codeigniter
 
 #### Enable PHP Extensions
-
 Your app may need specific php extensions to function properly. You can include them in your environment simply by added them to your `boxfile.yml`:
 
 ```yaml
@@ -55,7 +56,7 @@ nanobox dns add local codeigniter.dev
 nanobox run php-server
 ```
 
-Visit your app -> [codeigniter.dev](http://codeigniter.dev)
+Visit your app at <a href="http://codeigniter.dev" target="\_blank">codeigniter.dev</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your codeigniter app:

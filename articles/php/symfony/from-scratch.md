@@ -2,9 +2,7 @@
 Part of what makes Nanobox so useful is you don't even need PHP or symfony installed on your local machine to use them.
 
 ## Create a Symfony project
-
-#### Create a Symfony project folder
-Create a project folder and change into it
+Create a project folder and change into it:
 
 ```bash
 mkdir nanobox-symfony && cd nanobox-symfony
@@ -13,19 +11,21 @@ mkdir nanobox-symfony && cd nanobox-symfony
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the php <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the PHP <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
   # install php and associated runtimes
   engine: php
-  
+
   # php engine configuration (php version, extensions, etc)
   engine.config:
-    
+
     # sets the php version to 7.0
     runtime: php-7.0
-    
+
     # enables php extensions
     extensions:
       - ctype
@@ -41,8 +41,6 @@ run.config:
 ```
 
 ## Generate a Symfony App
-
-#### Install Symfony
 
 ```bash
 # drop into a nanobox console
@@ -62,7 +60,7 @@ symfony new app
 
 # change back to the /app dir
 cd -
-  
+
 # copy the generated app into your project
 cp -a /tmp/app/* /app
 
