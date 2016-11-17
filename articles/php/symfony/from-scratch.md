@@ -84,7 +84,7 @@ nanobox dns add local symfony.dev
 nanobox run php bin/console server:run 0.0.0.0
 ```
 
-Visit your app -> [symfony.dev:8000](http://symfony.dev:8000)
+Visit your app at <a href="http://symfony.dev:8000" target="\_blank">symfony.dev:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your symfony app:

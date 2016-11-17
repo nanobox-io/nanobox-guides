@@ -90,7 +90,7 @@ You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) 
 Laravel will need the `storage` directory to be shared among all laravel instances. We can do this easily with nanobox by adding a storage data component:
 
 ```yaml
-run.config:
+web.main:
   network_dirs:
     data.storage:
       - storage

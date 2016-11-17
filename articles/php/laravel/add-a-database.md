@@ -62,7 +62,7 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 You can also test your connection by simply trying to run your app and see if it is able to connect.
 
 ```bash
-php artisan migrate
+nanobox run php artisan migrate
 ```
 
 ## Now what?
