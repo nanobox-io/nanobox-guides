@@ -67,6 +67,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/nodejs/generic/add-a-database)
-* [Frontent Javascipt](/nodejs/generic/frontend-javascript)
+* [Frontend Javascript](/nodejs/generic/frontend-javascript)
 * [Local Environment Variables](/nodejs/generic/local-evars)
 * [Back to Node overview](/nodejs/generic)

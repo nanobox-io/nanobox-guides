@@ -110,6 +110,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/php/symfony/add-a-database)
-* [Frontent Javascipt](/php/symfony/frontend-javascript)
+* [Frontend Javascript](/php/symfony/frontend-javascript)
 * [Local Environment Variables](/php/symfony/local-evars)
 * [Back to Symfony overview](/php/symfony)

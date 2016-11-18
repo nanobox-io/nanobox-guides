@@ -82,6 +82,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/ruby/generic/add-a-database)
-* [Frontent Javascipt](/ruby/generic/frontend-javascript)
+* [Frontend Javascript](/ruby/generic/frontend-javascript)
 * [Local Environment Variables](/ruby/generic/local-evars)
 * [Back to Ruby overview](/ruby/generic)

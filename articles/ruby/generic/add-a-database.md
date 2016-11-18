@@ -16,7 +16,7 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
-However you choose to configure your connection within your ruby app, you can access the following environment variables:
+However you choose to configure your connection within your Ruby app, you can access the following environment variables:
 
 ```ruby
 user = ENV['DATA_DB_USER']

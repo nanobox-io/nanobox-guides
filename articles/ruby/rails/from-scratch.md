@@ -95,6 +95,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/ruby/rails/add-a-database)
-* [Frontent Javascipt](/ruby/rails/frontend-javascript)
+* [Frontend Javascript](/ruby/rails/frontend-javascript)
 * [Local Environment Variables](/ruby/rails/local-evars)
 * [Back to Rails overview](/ruby/rails)

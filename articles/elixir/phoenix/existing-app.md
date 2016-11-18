@@ -67,6 +67,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/elixir/phoenix/add-a-database)
-* [Frontent Javascipt](/elixir/phoenix/frontend-javascript)
+* [Frontend Javascript](/elixir/phoenix/frontend-javascript)
 * [Local Environment Variables](/elixir/phoenix/local-evars)
 * [Back to Phoenix overview](/elixir/phoenix)

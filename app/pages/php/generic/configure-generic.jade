@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Generic"
+    keywords    = "php,generic,configure,production"
+    description = "configuring generic for production"
+    articles    = "php/generic"
+    icons       = "php,generic"
+    
+block markdown
+  include:md /articles/php/generic/configure-generic.md

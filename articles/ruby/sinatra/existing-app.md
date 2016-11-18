@@ -77,6 +77,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/ruby/sinatra/add-a-database)
-* [Frontent Javascipt](/ruby/sinatra/frontend-javascript)
+* [Frontend Javascript](/ruby/sinatra/frontend-javascript)
 * [Local Environment Variables](/ruby/sinatra/local-evars)
 * [Back to Sinatra overview](/ruby/sinatra)

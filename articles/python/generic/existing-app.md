@@ -65,6 +65,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/generic/add-a-database)
-* [Frontent Javascipt](/python/generic/frontend-javascript)
+* [Frontend Javascript](/python/generic/frontend-javascript)
 * [Local Environment Variables](/python/generic/local-evars)
 * [Back to Python overview](/python/generic)

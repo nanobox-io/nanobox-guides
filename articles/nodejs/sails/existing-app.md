@@ -71,6 +71,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/nodejs/sails/add-a-database)
-* [Frontent Javascipt](/nodejs/sails/frontend-javascript)
+* [Frontend Javascript](/nodejs/sails/frontend-javascript)
 * [Local Environment Variables](/nodejs/sails/local-evars)
 * [Back to Sails overview](/nodejs/sails)

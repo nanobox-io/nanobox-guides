@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "App Health"
+    keywords    = "php,generic,app-health"
+    description = "monitor generic app"
+    articles    = "php/generic"
+    icons       = "php,generic"
+    
+block markdown
+  include:md /articles/shared/app-health.md

@@ -71,6 +71,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/nodejs/express/add-a-database)
-* [Frontent Javascipt](/nodejs/express/frontend-javascript)
+* [Frontend Javascript](/nodejs/express/frontend-javascript)
 * [Local Environment Variables](/nodejs/express/local-evars)
 * [Back to Express overview](/nodejs/express)

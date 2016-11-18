@@ -94,6 +94,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/php/laravel/add-a-database)
-* [Frontent Javascipt](/php/laravel/frontend-javascript)
+* [Frontend Javascript](/php/laravel/frontend-javascript)
 * [Local Environment Variables](/php/laravel/local-evars)
 * [Back to Laravel overview](/php/laravel)

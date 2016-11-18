@@ -82,6 +82,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/django/add-a-database)
-* [Frontent Javascipt](/python/django/frontend-javascript)
+* [Frontend Javascript](/python/django/frontend-javascript)
 * [Local Environment Variables](/python/django/local-evars)
 * [Back to Django overview](/python/django)

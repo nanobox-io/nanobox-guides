@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "SSL/TLS Encryption"
+    keywords    = "php,generic,ssl,tls,encryption"
+    description = "generic ssl/tls Encryption"
+    articles    = "php/generic"
+    icons       = "php,generic"
+    
+block markdown
+  include:md /articles/shared/encryption.md
