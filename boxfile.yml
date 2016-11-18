@@ -3,5 +3,3 @@ run.config:
   extra_packages:
     - fontconfig
     - freetype2
-  # config:
-  #   nodejs_runtime: 'nodejs-0.12'

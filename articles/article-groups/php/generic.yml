@@ -1,4 +1,4 @@
-title: Codeigniter
+title: PHP
 href: /php/codeigniter
 articles:
 
@@ -6,8 +6,8 @@ articles:
   - title: "Getting Started"
     tribe: the_essentials
     articles:
-      - {href: /php/codeigniter/from-scratch, title: Codeigniter from Scratch}
-      - {href: /php/codeigniter/existing-app, title: Existing Codeigniter App}
+      - {href: /php/codeigniter/from-scratch, title: PHP from Scratch}
+      - {href: /php/codeigniter/existing-app, title: Existing PHP App}
 
   #
   - title: "Next Steps"
@@ -20,7 +20,7 @@ articles:
   #
   - title: "Go Live"
     articles:
-      - {href: /php/codeigniter/configure-codeigniter, title: Configure Codeigniter}
+      - {href: /php/codeigniter/configure-codeigniter, title: Configure PHP}
       - {href: /php/codeigniter/preview-your-app, title: Preview your App}
       - {href: /php/codeigniter/launch-your-app, title: Launch your App}
 
