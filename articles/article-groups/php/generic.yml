@@ -1,51 +1,51 @@
 title: PHP
-href: /php/codeigniter
+href: /php/generic
 articles:
 
   #
   - title: "Getting Started"
     tribe: the_essentials
     articles:
-      - {href: /php/codeigniter/from-scratch, title: PHP from Scratch}
-      - {href: /php/codeigniter/existing-app, title: Existing PHP App}
+      - {href: /php/generic/from-scratch, title: PHP from Scratch}
+      - {href: /php/generic/existing-app, title: Existing PHP App}
 
   #
   - title: "Next Steps"
     tribe: the_essentials
     articles:
-      - {href: /php/codeigniter/add-a-database, title: Add a Database}
-      - {href: /php/codeigniter/frontend-javascript, title: Frontend Javascript}
-      - {href: /php/codeigniter/local-evars, title: Local Environment Variables}
+      - {href: /php/generic/add-a-database, title: Add a Database}
+      - {href: /php/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/generic/local-evars, title: Local Environment Variables}
 
   #
   - title: "Go Live"
     articles:
-      - {href: /php/codeigniter/configure-codeigniter, title: Configure PHP}
-      - {href: /php/codeigniter/preview-your-app, title: Preview your App}
-      - {href: /php/codeigniter/launch-your-app, title: Launch your App}
+      - {href: /php/generic/configure-generic, title: Configure your App}
+      - {href: /php/generic/preview-your-app, title: Preview your App}
+      - {href: /php/generic/launch-your-app, title: Launch your App}
 
   #
   - title: "Production"
     articles:
-      - {href: /php/codeigniter/point-your-domain, title: Point your Domain}
-      - {href: /php/codeigniter/encryption, title: SSL/TLS Encryption}
-      - {href: /php/codeigniter/production-evars, title: Environment Variables}
+      - {href: /php/generic/point-your-domain, title: Point your Domain}
+      - {href: /php/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /php/generic/production-evars, title: Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /php/codeigniter/scale-your-app, title: Scale Your App}
-      - {href: /php/codeigniter/debugging, title: Debugging}
-      - {href: /php/codeigniter/app-health, title: App Health}
-      - {href: /php/codeigniter/remote-access, title: Remote Access}
-      - {href: /php/codeigniter/team-management, title: Team Management}
-      - {href: /php/codeigniter/manage-platform, title: Manage Platform}
+      - {href: /php/generic/scale-your-app, title: Scale Your App}
+      - {href: /php/generic/debugging, title: Debugging}
+      - {href: /php/generic/app-health, title: App Health}
+      - {href: /php/generic/remote-access, title: Remote Access}
+      - {href: /php/generic/team-management, title: Team Management}
+      - {href: /php/generic/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
-      - {href: /php/codeigniter/configure-php, title: Configure PHP}
-      - {href: /php/codeigniter/php-extensions, title: PHP Extensions}
-      - {href: /php/codeigniter/composer, title: Composer}
-      - {href: /php/codeigniter/webserver-config, title: Webserver Config}
-      - {href: /php/codeigniter/extensions-config, title: Extensions Config}
+      - {href: /php/generic/configure-php, title: Configure PHP}
+      - {href: /php/generic/php-extensions, title: PHP Extensions}
+      - {href: /php/generic/composer, title: Composer}
+      - {href: /php/generic/webserver-config, title: Webserver Config}
+      - {href: /php/generic/extensions-config, title: Extensions Config}
