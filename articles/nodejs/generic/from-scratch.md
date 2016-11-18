@@ -21,7 +21,7 @@ run.config:
 ```
 
 ## Create a Node App
-Since this is a generic app, you get to choose your own adventure!
+Since this is a generic Nodejs app, you get to choose your own adventure!
 
 #### Install packages via npm
 If you don't already have a `package.json` file, you'll need to install all of your app's dependencies individually and save them like this:

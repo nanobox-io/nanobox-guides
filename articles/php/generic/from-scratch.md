@@ -1,7 +1,7 @@
-# Codigniter from Scratch
+# PHP from Scratch
 Part of what makes Nanobox so useful is you don't even need PHP installed on your local machine to use it.
 
-## Create a Codigniter project
+## Create a PHP project
 Create a project folder and change into it:
 
 ```bash
@@ -25,8 +25,8 @@ run.config:
     runtime: php-7.0
 ```
 
-## Generate a Generic App
-Since this is a generic app, you get to choose your own adventure!
+## Generate a PHP App
+Since this is a generic PHP app, you get to choose your own adventure!
 
 #### Add a local DNS
 Add a convenient way to access your app from the browser

@@ -116,7 +116,7 @@ worker.main:
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
 ## Add Streaming Logs
-Although our app is now able to write it's logs to log files, if want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
+Although our app is now able to write it's logs to log files, if you want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
 
 ```yaml
 web.main:

@@ -1,4 +1,4 @@
-# Configure Generic for Production
+# Configure PHP for Production
 
 ## Add a web
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
@@ -30,7 +30,7 @@ web.main:
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
 ## Add Streaming Logs
-If want Generic to stream logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
+if you want PHP to stream logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
 
 ```yaml
 web.main:
@@ -46,7 +46,7 @@ You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) 
 
 ## Add Storage Component
 
-You might also need certain directories to be shared among all generic instances. We can do this easily with nanobox by adding a storage data component:
+You might also need certain directories to be shared among all PHP instances. We can do this easily with nanobox by adding a storage data component:
 
 ```yaml
 run.config:

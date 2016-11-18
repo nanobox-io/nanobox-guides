@@ -21,7 +21,7 @@ run.config:
 ```
 
 ## Create a Ruby App
-Since this is a generic app, you get to choose your own adventure!
+Since this is a generic Ruby app, you get to choose your own adventure!
 
 #### Install Gems
 Create a `Gemfile` at the root of your project that includes any gems your app will be using:

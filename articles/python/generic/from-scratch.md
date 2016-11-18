@@ -36,7 +36,7 @@ nanobox run pip install
 ```
 
 #### Create a Basic App
-Since this is a generic app, you get to choose your own adventure!
+Since this is a generic Python app, you get to choose your own adventure!
 
 ## Configure App
 

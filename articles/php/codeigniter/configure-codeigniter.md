@@ -30,7 +30,7 @@ web.main:
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
 ## Add Streaming Logs
-If want Codeigniter to stream logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
+if you want Codeigniter to stream logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
 
 ```yaml
 web.main:
