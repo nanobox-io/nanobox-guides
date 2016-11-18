@@ -1,4 +1,4 @@
-run.config:
+code.build:
   engine: nanobox-io/nanobox-engine-tolmark-gulp
   extra_packages:
     - fontconfig
