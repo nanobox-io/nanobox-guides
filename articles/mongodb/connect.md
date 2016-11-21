@@ -48,6 +48,6 @@ DATA_MONGODB_HOST
 To view the environment variables in your app, you can use the `evar ls` command.
 
 ```bash
-# View environment variables in dev environment
-nanobox dev evar ls
+# View environment variables in local environment
+nanobox evar local ls
 ```
