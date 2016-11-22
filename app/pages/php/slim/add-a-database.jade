@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database"
+    keywords    = "php,slim,add-a-database"
+    description = "add a database to slim"
+    articles    = "php/slim"
+    icons       = "php,slim"
+    
+block markdown
+  include:md /articles/php/slim/add-a-database.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "php,cakephp,stage,test"
+    description = "preview cakephp app"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  include:md /articles/php/cakephp/preview-your-app.md

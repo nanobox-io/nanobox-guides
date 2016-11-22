@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "PHP Extensions"
+    keywords    = "php,slim,extensions"
+    description = "Available PHP extensions configuration"
+    articles    = "php/slim"
+    icons       = "php,slim"
+    
+block markdown
+  include:md /articles/php/extensions.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Lumen App"
+    keywords    = "php,lumen"
+    description = "launch lumen app"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/php/lumen/existing-app.md

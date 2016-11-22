@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Slim App"
+    keywords    = "php,slim"
+    description = "launch slim app"
+    articles    = "php/slim"
+    icons       = "php,slim"
+    
+block markdown
+  include:md /articles/php/slim/existing-app.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Composer"
+    keywords    = "php,slim,composer"
+    description = "composer with slim"
+    articles    = "php/slim"
+    icons       = "php,slim"
+    
+block markdown
+  include:md /articles/php/composer.md

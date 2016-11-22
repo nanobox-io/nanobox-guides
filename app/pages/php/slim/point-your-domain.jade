@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Point your Domain"
+    keywords    = "php,slim,dns,domain"
+    description = "manage slim dns"
+    articles    = "php/slim"
+    icons       = "php,slim"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

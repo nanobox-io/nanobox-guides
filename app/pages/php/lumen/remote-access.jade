@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "php,lumen,remote-access"
+    description = "lumen remote access"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

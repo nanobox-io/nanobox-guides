@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure php"
+    keywords    = "php,configure"
+    description = "configure php"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/php/config.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "CakePHP From Scratch"
+    keywords    = "php,cakephp,new"
+    description = "new cakephp app"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  include:md /articles/php/cakephp/from-scratch.md

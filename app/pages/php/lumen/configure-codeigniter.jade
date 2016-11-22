@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Lumen"
+    keywords    = "php,lumen,configure,production"
+    description = "configuring lumen for production"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/php/lumen/configure-lumen.md

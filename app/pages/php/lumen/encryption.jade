@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "SSL/TLS Encryption"
+    keywords    = "php,lumen,ssl,tls,encryption"
+    description = "lumen ssl/tls Encryption"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/shared/encryption.md

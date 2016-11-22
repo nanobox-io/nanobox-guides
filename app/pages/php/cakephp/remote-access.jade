@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "php,cakephp,remote-access"
+    description = "cakephp remote access"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  include:md /articles/shared/remote-access.md
