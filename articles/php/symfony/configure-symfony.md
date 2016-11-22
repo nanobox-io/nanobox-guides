@@ -21,7 +21,7 @@ run.config:
 ```
 
 ## Add a web
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/).
 
 #### Specify a web component
 You can add a web components in your `boxfile.yml`:

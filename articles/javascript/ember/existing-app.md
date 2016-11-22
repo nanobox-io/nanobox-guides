@@ -72,6 +72,6 @@ exit
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Configure Nodejs](/nodejs/ember/configure-nodejs)
-* [Yarn & NPM](/nodejs/ember/package-managers)
-* [Back to Ember overview](/nodejs/ember)
+* [Configure Nodejs](/javascript/ember/configure-nodejs)
+* [Yarn & NPM](/javascript/ember/package-managers)
+* [Back to Ember overview](/javascript/ember)

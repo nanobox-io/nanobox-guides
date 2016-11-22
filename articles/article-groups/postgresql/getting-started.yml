@@ -1,3 +1,0 @@
-articles:
-  - {href: /postgresql/create, title: Create a PostgreSQL Database}
-  - {href: /postgresql/connect, title: Connect to PostgreSQL}

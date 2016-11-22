@@ -52,7 +52,7 @@ Listing nested network directories will invalidate the network mounts and preven
 ### Directories are Replaced by Network Mounts
 Because network directories are replaced with network mounts, the contents of network directories in your codebase won't be available after deploy.
 
-You can import and export data to and from your storage components using SSH and/or SFTP. Examples of this are covered in the [Managing Local Storage Components](/storage/local) and [Managing Production Storage Components](/storage/production) guides.
+You can import and export data to and from your storage components using SSH and/or SFTP. Examples of this are covered in the [Managing Production Storage Components](/storage/manage) guide.
 
 ### Add Network Directories to Your .nanoignore
 The [.nanoignore](https://docs.nanobox.io/local-config/nanoignore/) file allows you to omit files from your [compiled deploy package](https://docs.nanobox.io/cli/deploy/), reducing the size of your deploy and time it takes to upload. Since network directories are replaced by network mounts, it's recommend the contents of these directories be .nanoingore'd.

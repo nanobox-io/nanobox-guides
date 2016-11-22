@@ -71,6 +71,6 @@ exit
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Configure Nodejs](/nodejs/angular/configure-nodejs)
-* [Yarn & NPM](/nodejs/angular/package-managers)
-* [Back to Angular overview](/nodejs/angular)
+* [Configure Nodejs](/javascript/angular/configure-nodejs)
+* [Yarn & NPM](/javascript/angular/package-managers)
+* [Back to Angular overview](/javascript/angular)

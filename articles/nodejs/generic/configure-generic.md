@@ -65,7 +65,7 @@ http {
 ```
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/boxfile/worker/).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -120,4 +120,4 @@ With your app configured for running in production, whats next? Think about what
 
 * [Preview your App](/nodejs/generic/preview-your-app)
 * [Launch your App](/nodejs/generic/launch-your-app)
-* [Back to nodejs overview](/generic/nodejs)
+* [Back to nodejs overview](/nodejs/generic)

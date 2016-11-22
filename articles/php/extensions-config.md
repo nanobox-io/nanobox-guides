@@ -261,7 +261,7 @@ run.config:
 ```
 
 #### newrelic\_transaction\_tracer\_slow\_sql
-Sets the [`newrelic.transaction_tracer.slow_sql` setting](hhttps://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-slowsql).
+Sets the [`newrelic.transaction_tracer.slow_sql` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-slowsql).
 
 ```yaml
 run.config:

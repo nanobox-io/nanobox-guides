@@ -1,3 +1,0 @@
-articles:
-  - {href: /postgresql/local, title: Managing Local Data}
-  - {href: /postgresql/production, title: Managing Production Data}

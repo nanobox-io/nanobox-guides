@@ -56,7 +56,7 @@ Modify your `config/database.php` to connect your app:
 ## Test
 
 #### From an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
 #### From Laravel
 You can also test your connection by simply trying to run your app and see if it is able to connect.

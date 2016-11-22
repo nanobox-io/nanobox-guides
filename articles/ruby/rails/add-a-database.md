@@ -59,7 +59,7 @@ Run `nanobox run bundle install` to install any new gems.
 ## Test
 
 #### From an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
 #### From Rails
 Your can also test the connection with rails:

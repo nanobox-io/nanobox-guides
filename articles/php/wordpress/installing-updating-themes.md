@@ -4,15 +4,11 @@ WordPress themes provide a great way way to quickly and easily customize your Wo
 
 Installing and updating themes requires modifying the filesystem, which is why it's typically done through FTP. However this poses a problem since the filesystem is read-only in production and sim apps on Nanobox. Luckily, Nanobox allows you to launch a local dev environment that gives you full write access to your filesystem where you can install and update themes.
 
-## Run WordPress in Dev
-If you walked through the [Setting Up WordPress on Nanobox](/php/wordpress/getting-started) guide, that you've already created a dev environment in your local Nanobox virtual machine (VM). If you don't have a dev environment setup, the instructions are outlined in the
-[Up and Running](/php/wordpress//#up-and-running) section of that guide.
-
-### Start Your WordPress App in Dev
-The quickest way to start your app in dev is to run:
+### Start Your Local WordPress
+The quickest way to start your app locall is to run:
 
 ```bash
-nanobox dev run
+nanobox run php-server
 ```
 
 This will start your dev environment if it's not running, then run the [start commands specified in your boxfile.yml](/wordpress/boxfile-explained/#start).
