@@ -1,0 +1,51 @@
+title: PHP
+href: /php/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/generic/from-scratch, title: PHP from Scratch}
+      - {href: /php/generic/existing-app, title: Existing PHP App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/generic/add-a-database, title: Add a Database}
+      - {href: /php/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/generic/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/generic/configure-generic, title: Configure your App}
+      - {href: /php/generic/preview-your-app, title: Preview your App}
+      - {href: /php/generic/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/generic/point-your-domain, title: Point your Domain}
+      - {href: /php/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /php/generic/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/generic/scale-your-app, title: Scale Your App}
+      - {href: /php/generic/debugging, title: Debugging}
+      - {href: /php/generic/app-health, title: App Health}
+      - {href: /php/generic/remote-access, title: Remote Access}
+      - {href: /php/generic/team-management, title: Team Management}
+      - {href: /php/generic/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/generic/configure-php, title: Configure PHP}
+      - {href: /php/generic/php-extensions, title: PHP Extensions}
+      - {href: /php/generic/composer, title: Composer}
+      - {href: /php/generic/webserver-config, title: Webserver Config}
+      - {href: /php/generic/extensions-config, title: Extensions Config}

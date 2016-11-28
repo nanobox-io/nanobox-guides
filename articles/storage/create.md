@@ -11,10 +11,13 @@ data.storage:
 
 **Note:** *For purposes of these guides, we'll use* `data.storage` *as the component ID.* `storage` *is a unique identifier that can be whatever you'd like. More information about component IDs is available in the [boxfile.yml documentation](https://docs.nanobox.io/boxfile/#component-ids).*
 
+### Storage Components Aren't Created Locally
+Because your local filesystem is already writable and running in a single node, there's no need for storage components when running your app locally. Storage components are only created when deployed to live apps.
 
 #### Deploy Changes
-With your storage component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your storage component will be created.
+Storage components are only necessary in live apps and are not created when working locally. With your storage component included in your boxfile.yml, deploy the changes to live app. During the deploy process, your storage component will be created.
 
 ```bash
-nanobox dev deploy
+# Deploy changes to your live app
+nanobox deploy
 ```

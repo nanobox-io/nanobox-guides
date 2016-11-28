@@ -27,7 +27,7 @@ host    = os.environ.get('DATA_DB_HOST')
 ```
 
 #### Add dependency
-If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install. 
+If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
 
 The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
 
@@ -42,9 +42,9 @@ nanobox build-runtime
 ## Test
 
 #### From an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
-#### With python
+#### From Python
 Your can also test the connection directly from your app:
 
 ```bash

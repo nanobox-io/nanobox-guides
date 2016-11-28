@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Extensions Config"
+    keywords    = "php,codeigniter,extensions"
+    description = "PHP extensions configuration"
+    articles    = "php/codeigniter"
+    icons       = "php,codeigniter"
+    
+block markdown
+  include:md /articles/php/extensions-config.md

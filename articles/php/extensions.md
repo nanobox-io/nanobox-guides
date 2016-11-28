@@ -1,11 +1,10 @@
-# Extensions
+# PHP Extensions
 
 PHP and Zend extensions are enabled by adding them to your boxfile.yml.
 
 ```yaml
 run.config:
-  engine: php
-  config:
+  engine.config:
     extensions:
       - curl
       - pdo
@@ -15,9 +14,38 @@ run.config:
       - opcache
 ```
 
+## Dev Config
+
+#### dev_extensions
+Specifies what extensions should be added or removed when working in a development environment.
+
+**Note:** *Bytecode cachers should always be disabled when working in dev. If enabled, changes to php files will not appear in your running dev app because they will be cached.*
+
+```yaml
+dev_extensions:
+  add:
+    - svn
+  rm:
+    - xcache
+```
+
+#### dev_zend_extensions
+Specifies what Zend extensions should be added or removed when working in a development environment.
+
+**Note:** *Bytecode cachers should always be disabled when working in dev. If enabled, changes to php files will not appear in your running dev app because they will be cached.*
+
+```yaml
+dev_zend_extensions:
+  add:
+    - xdebug
+  rm:
+    - opcache
+```
+
+
 The following PHP/Zend extensions are available when using the Nanobox PHP engine, however not all extensions are available for all versions of PHP. The tables below show what PHP versions for which each extensions is available.
 
-#### PHP Extensions
+## PHP Extension List
 | extensions     | PHP 5.3 | PHP 5.4 | PHP 5.5 | PHP 5.6 | PHP 7.0 |
 |:---------------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | amqp           | ✅      | ✅      | ✅      | ✅      | ✅     |
@@ -125,7 +153,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | zip            | ✅      | ✅      | ✅      | ✅      | ✅     |
 | zlib           | ✅      | ✅      | ✅      | ✅      | ✅     |
 
-#### Zend Extensions
+## Zend Extension List
 | zend_extensions | PHP 5.3 | PHP 5.4 | PHP 5.5 | PHP 5.6 | PHP 7.0 |
 |:----------------|:-------:|:-------:|:-------:|:-------:|:------: |
 | ioncube_loader  | ✅      | ✅      | ✅      | ✅     | ❌      |

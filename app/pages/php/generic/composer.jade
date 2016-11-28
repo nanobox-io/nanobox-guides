@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Composer"
+    keywords    = "php,generic,composer"
+    description = "composer with generic"
+    articles    = "php/generic"
+    icons       = "php,generic"
+    
+block markdown
+  include:md /articles/php/composer.md

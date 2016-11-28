@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "python,flask,stage,test"
+    description = "preivew flask app"
+    articles    = "python/flask"
+    icons       = "python,flask"
+    
+block markdown
+  include:md /articles/python/flask/preview-your-app.md

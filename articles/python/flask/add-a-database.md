@@ -13,7 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+**HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
 Flask is pretty free-form when it comes to configuring a database connection. However you choose to configure your connection, you can access the following environment variables:
@@ -26,8 +26,8 @@ passwd  = os.environ.get('DATA_DB_PASS')
 host    = os.environ.get('DATA_DB_HOST')
 ```
 
-#### Add dependency
-If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install. 
+#### Add dependencies
+If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
 
 The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
 
@@ -41,14 +41,14 @@ nanobox build-runtime
 
 ## Test
 
-#### Connect an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+#### From an external client
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
-#### With Flask
+#### From Flask
 Your can also test the connection by running your app:
 
 ```bash
-nanobox run python myapp.py
+nanobox run python my-flask-app.py
 ```
 
 ## Now what?

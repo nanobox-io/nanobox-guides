@@ -25,9 +25,10 @@ data.mysql:
     event_scheduler: 'Off'
 ```
 
-#### Deploy Changes
-With your MySQL component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your MySQL component will be created.
+## Re-Run Your App
+With your MySQL component included in your boxfile.yml, re-run your app to create the database.
 
 ```bash
-nanobox dev deploy
+# Create a local MySQL database
+nanobox run
 ```

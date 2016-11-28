@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "PHP"
+    informalName = "php"
+    icon         = "php"
+    iconCrumbs   = "php"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'PHP', icon:'php', href:'#'},
+      {name:'MySQL', icon:'mysql', href:'#'},
+      {name:'Storage', icon:'storage', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'Mongo DB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'},
+      {name:'Memcached', icon:'memcached', href:'#'}
+    ]
+    articleGroups = "php/generic"

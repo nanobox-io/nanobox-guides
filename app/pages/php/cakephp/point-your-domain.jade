@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Point your Domain"
+    keywords    = "php,cakephp,dns,domain"
+    description = "manage cakephp dns"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

@@ -1,7 +1,7 @@
 # Configure Ruby for Production
 
-## Setup webserver
-Ruby apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into ruby through puma.
+## Setup a webserver
+Ruby apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into Ruby through puma.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -65,7 +65,7 @@ http {
 ```
 
 #### Puma
-Add puma to your Gemfile (if it's not already):
+Add puma to your `Gemfile`:
 
 ```ruby
 gem 'puma', '~> 3.0'
@@ -91,7 +91,7 @@ port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("ENV") { "development" }
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
@@ -126,7 +126,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 **IMPORTANT**: The puma configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/boxfile/worker/).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -147,7 +147,7 @@ You can have as many worker components as your app needs by simply adding them t
 ```yaml
 # add a worker component and give it a "start" command
 worker.main:
-  start: ruby myworker.rb
+  start: ruby worker.rb
 ```
 
 In the above snippet `main` is the name of the worker component and can be anything you choose (it is only used as a unique identifier).
@@ -213,6 +213,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/ruby/generic/stage-your-app)
+* [Preview your App](/ruby/generic/preview-your-app)
 * [Launch your App](/ruby/generic/launch-your-app)
 * [Back to ruby overview](/ruby/generic)

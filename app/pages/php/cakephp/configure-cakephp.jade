@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure CakePHP"
+    keywords    = "php,cakephp,configure,production"
+    description = "configuring cakephp for production"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  include:md /articles/php/cakephp/configure-cakephp.md

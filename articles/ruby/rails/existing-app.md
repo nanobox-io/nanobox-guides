@@ -1,19 +1,21 @@
 # Existing Rails App
-Part of what makes Nanobox so useful is you don't even need ruby or rails installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need Ruby or Rails installed on your local machine to use them.
 
 ## Setup
 
 #### cd into your Rails app
-Change into an existing project folder
+Change into an existing project folder:
 
 ```bash
-cd my-rails-app
+cd your-rails-app
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells Nanobox how to configure your app's environment. At the root of your project create a `boxfile.yml` telling Nanobox you want to use the ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Ruby <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
@@ -26,7 +28,7 @@ run.config:
 ## Configure Rails
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container modify the `config/boot.rb` telling rails to listen on all available IP's:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/boot.rb`:
 
 <div class="meta" data-class="configFile" data-run="config/boot.rb"></div>
 
@@ -43,7 +45,7 @@ end
 ```
 
 #### Add a local DNS
-Add a convenient way to access your app from the browser
+Add a convenient way to access your app from the browser:
 
 ```bash
 nanobox dns add local rails.dev
@@ -56,10 +58,10 @@ nanobox dns add local rails.dev
 nanobox run rails s
 ```
 
-Visit your app -> [rails.dev:3000](http://rails.dev:3000)
+Visit your app at <a href="http://rails.dev:3000" target="\_blank">rails.dev:3000</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your rails app:
+With Nanobox, you have everything you need develop and run your Rails app:
 
 ```bash
 # drop into a Nanobox console
@@ -82,6 +84,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/ruby/rails/add-a-database)
-* [Frontent Javascipt](/ruby/rails/frontend-javascript)
+* [Frontend Javascript](/ruby/rails/frontend-javascript)
 * [Local Environment Variables](/ruby/rails/local-evars)
 * [Back to Rails overview](/ruby/rails)

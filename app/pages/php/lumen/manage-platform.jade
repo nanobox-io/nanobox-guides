@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Platform"
+    keywords    = "php,lumen,manage,production"
+    description = "manage lumen in production"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

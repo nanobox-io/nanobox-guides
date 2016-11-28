@@ -13,7 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+**HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
 Modify your `settings.py` to connect to your app:
@@ -32,7 +32,7 @@ DATABASES = {
 ```
 
 #### Add pip dependency
-If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install. 
+If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
 
 The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
 
@@ -47,7 +47,7 @@ nanobox build-runtime
 ## Test
 
 #### From an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
 #### From Django
 You can also test your connection by simply trying to run your app and see if it is able to connect.

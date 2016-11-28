@@ -1,6 +1,6 @@
 # Configure Rails for Production
 
-## Setup webserver
+## Setup a webserver
 Rails runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into rails through puma.
 
 #### Nginx
@@ -65,7 +65,7 @@ http {
 ```
 
 #### Puma
-Add puma to your Gemfile (if it's not already):
+Add puma to your `Gemfile`:
 
 ```ruby
 gem 'puma', '~> 3.0'
@@ -129,7 +129,7 @@ plugin :tmp_restart
 **IMPORTANT**: The puma configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/boxfile/worker/).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -177,7 +177,7 @@ worker.main:
 You can visit the [writable_dirs](https://docs.nanobox.io/boxfile/web/#writable-directories) doc for more information about this node.
 
 ## Add Streaming Logs
-Although our app is now able to write it's logs to log files, if want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
+Although our app is now able to write it's logs to log files, if you want it to stream those logs to the nanobox dashboard we'll need to add a `log_watch` path to the boxfile:
 
 ```yaml
 web.main:
@@ -240,6 +240,6 @@ end
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/ruby/rails/stage-your-app)
+* [Preview your App](/ruby/rails/preview-your-app)
 * [Launch your App](/ruby/rails/launch-your-app)
 * [Back to rails overview](/ruby/rails)

@@ -5,7 +5,7 @@ You can add a database to your app by simply adding a data component to your `bo
 
 <div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
-In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
+In the above snippet `db` is the `NAME` of the component, and can be anything you choose as long as it's unique.
 
 Nanobox generates the following environment variables based off that name:
 
@@ -13,78 +13,101 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+**HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
-Before connecting to the database you'll need to create a few files.
+Sinatra is pretty free-form when it comes to configuring a database connection. This example will show you a basic configuration for postgres.
 
-At the root of your project, create a `Rakefile` and a `config` folder with a `database.yml` and `environment.rb` inside.
+Create a `Rakefile`, `config/database.yml`, and `config/environments.rb`.
 
-The `Rakefile` should look like this:
+The `Rakefile` should look something like this:
 
 <div class="meta" data-class="configFile" data-run="Rakefile"></div>
 
 ```rake
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
-require './myapp'
+require './app'
 ```
 
-The `config/database.yml` file should look like this:
+The `config/database.yml` should look something like this:
 
 <div class="meta" data-class="configFile" data-run="config/database.yml"></div>
 
 ```yaml
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: development
+  pool: 2
   host: <%= ENV['DATA_DB_HOST'] %>
   username: <%= ENV['DATA_DB_USER'] %>
   password: <%= ENV['DATA_DB_PASS'] %>
+
+development:
+  <<: *default
+  database: development
+
+production:
+  <<: *default
+  database: production
 ```
 
-The `config/environment.rb` file should look like this:
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
-<div class="meta" data-class="configFile" data-run="config/environment.rb"></div>
+The `config/environments.rb` file should look something like this:
+
+<div class="meta" data-class="configFile" data-run="config/environments.rb"></div>
 
 ```ruby
+require 'sinatra/activerecord'
+
 #The environment variable DATABASE_URL should be in the following format:
 # => postgres://{user}:{password}@{host}:{port}/path
 configure :production, :development do
-	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://<component-ip>/db')
+  db = URI.parse(ENV['DATABASE_URL'] || "postgres://#{ENV['DATA_DB_USER']}:#{ENV['DATA_DB_PASS']}@#{ENV['DATA_DB_HOST']}/gonano")
 
-	ActiveRecord::Base.establish_connection(
-		:adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-		:host     => db.host,
-		:username => db.user,
-		:password => db.password,
-		:database => db.path[1..-1],
-		:encoding => 'utf8'
-	)
+  ActiveRecord::Base.establish_connection(
+    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :host     => db.host,
+    :username => db.user,
+    :password => db.password,
+    :database => db.path[1..-1],
+    :encoding => 'utf8'
+  )
 end
 ```
 
+Modify your app to include the `config/environments.rb` file:
+
+```ruby
+require './config/environments'
+```
+
 #### Update dependencies
-There are a few more dependencies our app has how that we're connecting a database. Update the `Gemfile` with the following gems and run `bundle install`:
+Make sure your `Gemfile` has all the necessary dependencies for the database you're using. For postgres the following gems have been added:
 
 ```ruby
 gem "activerecord"
 gem "sinatra-activerecord"
+gem "rake"
 gem "pg"
 ```
+
+Run `nanobox run bundle install` to install any new gems.
 
 ## Test
 
 #### From an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
-#### With sinatra
-Your can also test the connection with sinatra:
+#### From Sinatra
+Your can also test the connection with rake:
 
 ```bash
-nanobox run ruby myapp.rb
+nanobox run bundle exec rake db:create
 ```
+
+You'll see that your database has already been created and is ready to use!
 
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

@@ -1,0 +1,14 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Yarn, NPM, & Bower"
+    keywords    = "javascript,ember,yarn,npm,bower"
+    description = "yarn, npm, and bower with ember"
+    articles    = "javascript/ember"
+    icons       = "javascript,ember"
+    
+block markdown
+  :md
+    # Yarn, NPM, & Bower
+  include:md /articles/shared/partials/package-managers.md

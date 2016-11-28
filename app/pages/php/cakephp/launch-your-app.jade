@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "php,cakephp,launch"
+    description = "launch cakephp app"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/php/cakephp/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

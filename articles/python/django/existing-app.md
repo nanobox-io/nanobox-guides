@@ -7,7 +7,7 @@ Part of what makes Nanobox so useful is you don't even need python or django ins
 Change into an existing project folder
 
 ```bash
-cd my-django-app
+cd your-django-app
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -41,24 +41,25 @@ exit
 ```
 
 #### Add a local DNS
-Add a convenient way to access your app from the browser
+Add a convenient way to access your app from the browser:
 
 ```bash
 nanobox dns add local django.dev
 ```
 
 ## Run the app
-
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/django/add-a-database) before your app will run.
+
+To allow connections from the host machine into the app's container, you'll need to run your app so it listens on all available IP's (0.0.0.0).
 
 ```bash
 nanobox run python manage.py runserver 0.0.0.0:8000
 ```
 
-Visit your app -> [django.dev:8000](http://django.dev:8000)
+Visit your app -> <a href="http://django.dev:8000" target="\_blank">django.dev:8000</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your django app:
+With Nanobox, you have everything you need develop and run your Django app:
 
 ```bash
 # drop into a Nanobox console
@@ -81,6 +82,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/django/add-a-database)
-* [Frontent Javascipt](/python/django/frontend-javascript)
+* [Frontend Javascript](/python/django/frontend-javascript)
 * [Local Environment Variables](/python/django/local-evars)
 * [Back to Django overview](/python/django)

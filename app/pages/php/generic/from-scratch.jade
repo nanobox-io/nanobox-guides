@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Generic From Scratch"
+    keywords    = "php,generic,new"
+    description = "new generic app"
+    articles    = "php/generic"
+    icons       = "php,generic"
+    
+block markdown
+  include:md /articles/php/generic/from-scratch.md

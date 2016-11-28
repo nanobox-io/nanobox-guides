@@ -22,9 +22,10 @@ data.postgres:
     version: 9.5
 ``` -->
 
-#### Deploy Changes
-With your PostgreSQL component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your PostgreSQL component will be created.
+## Re-Run Your App
+With your PostgreSQL component included in your boxfile.yml, re-run your app to create the database.
 
 ```bash
-nanobox dev deploy
+# Create a local Postgres database
+nanobox run
 ```

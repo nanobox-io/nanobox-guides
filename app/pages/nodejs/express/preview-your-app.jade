@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "nodejs,express,stage,test"
+    description = "preview express app"
+    articles    = "nodejs/express"
+    icons       = "nodejs,express"
+    
+block markdown
+  include:md /articles/nodejs/express/preview-your-app.md

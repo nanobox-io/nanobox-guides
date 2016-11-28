@@ -1,0 +1,51 @@
+title: Slim
+href: /php/slim
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/slim/from-scratch, title: Slim from Scratch}
+      - {href: /php/slim/existing-app, title: Existing Slim App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/slim/add-a-database, title: Add a Database}
+      - {href: /php/slim/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/slim/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/slim/configure-slim, title: Configure Slim}
+      - {href: /php/slim/preview-your-app, title: Preview your App}
+      - {href: /php/slim/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/slim/point-your-domain, title: Point your Domain}
+      - {href: /php/slim/encryption, title: SSL/TLS Encryption}
+      - {href: /php/slim/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/slim/scale-your-app, title: Scale Your App}
+      - {href: /php/slim/debugging, title: Debugging}
+      - {href: /php/slim/app-health, title: App Health}
+      - {href: /php/slim/remote-access, title: Remote Access}
+      - {href: /php/slim/team-management, title: Team Management}
+      - {href: /php/slim/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/slim/configure-php, title: Configure PHP}
+      - {href: /php/slim/php-extensions, title: PHP Extensions}
+      - {href: /php/slim/composer, title: Composer}
+      - {href: /php/slim/webserver-config, title: Webserver Config}
+      - {href: /php/slim/extensions-config, title: Extensions Config}

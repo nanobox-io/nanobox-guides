@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Webserver Config"
+    keywords    = "php,lumen,webserver,apache,nginx"
+    description = "Apache and Nginx webserver configurations"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/php/webserver-config.md

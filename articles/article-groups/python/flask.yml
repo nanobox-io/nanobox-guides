@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /python/flask/configure-flask, title: Configure Flask}
+      - {href: /python/flask/preview-your-app, title: Preview your App}
       - {href: /python/flask/launch-your-app, title: Launch your App}
 
   #
@@ -45,6 +46,5 @@ articles:
     articles:
       - {href: /python/flask/configure-python, title: Configure Flask}
       - {href: /python/flask/pip, title: Pip}
-      - {href: /python/flask/dry-run, title: Dry Run}
       # - {href: /python/flask/scale-your-app, title: Make Flask scream}
       # - {href: /python/flask/scale-your-app, title: New Relic}

@@ -1,0 +1,51 @@
+title: CakePHP
+href: /php/cakephp
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/cakephp/from-scratch, title: CakePHP from Scratch}
+      - {href: /php/cakephp/existing-app, title: Existing CakePHP App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/cakephp/add-a-database, title: Add a Database}
+      - {href: /php/cakephp/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/cakephp/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/cakephp/configure-cakephp, title: Configure CakePHP}
+      - {href: /php/cakephp/preview-your-app, title: Preview your App}
+      - {href: /php/cakephp/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/cakephp/point-your-domain, title: Point your Domain}
+      - {href: /php/cakephp/encryption, title: SSL/TLS Encryption}
+      - {href: /php/cakephp/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/cakephp/scale-your-app, title: Scale Your App}
+      - {href: /php/cakephp/debugging, title: Debugging}
+      - {href: /php/cakephp/app-health, title: App Health}
+      - {href: /php/cakephp/remote-access, title: Remote Access}
+      - {href: /php/cakephp/team-management, title: Team Management}
+      - {href: /php/cakephp/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/cakephp/configure-php, title: Configure PHP}
+      - {href: /php/cakephp/php-extensions, title: PHP Extensions}
+      - {href: /php/cakephp/composer, title: Composer}
+      - {href: /php/cakephp/webserver-config, title: Webserver Config}
+      - {href: /php/cakephp/extensions-config, title: Extensions Config}

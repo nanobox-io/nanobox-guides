@@ -24,8 +24,9 @@ data.redis:
 ```
 
 ## Deploy
-With your Redis component included in your boxfile.yml, deploy the changes to your dev, sim, or production environment(s). During the deploy process, your Redis component will be created.
+With your Redis component included in your boxfile.yml, re-run your app to create the component.
 
 ```bash
-nanobox dev deploy
+# Create a local redis component
+nanobox run
 ```

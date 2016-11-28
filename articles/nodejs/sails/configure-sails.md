@@ -1,6 +1,6 @@
 # Configure Sails for Production
 
-## Setup webserver
+## Setup a webserver
 Sails runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into sails through node's builtin server.
 
 #### Nginx
@@ -65,7 +65,7 @@ http {
 ```
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/boxfile/worker/).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -118,6 +118,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/nodejs/sails/stage-your-app)
+* [Preview your App](/nodejs/sails/preview-your-app)
 * [Launch your App](/nodejs/sails/launch-your-app)
 * [Back to sails overview](/nodejs/sails)

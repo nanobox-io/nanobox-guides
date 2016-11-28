@@ -10,7 +10,7 @@ nanobox compile
 # Start your sim environment
 nanobox sim start
 
-# Add a convenient way to access your sim app from the browser
+# Add a convenient way to access your sim app from the browser:
 nanobox sim dns add wordpress.nanobox.sim
 
 # Deploy to your sim environment
@@ -23,7 +23,7 @@ Once deployed, you can access and test your sim app at `http://wordpress.nanobox
 
 
 ## Launch Your App with Nanobox
-Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io/production/launch-app/).
+Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io/workflow/launch-app/).
 
 ### Link Your Codebase to Your New App
 In order to deploy to your new app, you'll need to link it to your local WordPress codebase using the `nanobox link` command.

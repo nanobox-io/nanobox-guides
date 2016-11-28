@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Slim"
+    keywords    = "php,slim,configure,production"
+    description = "configuring slim for production"
+    articles    = "php/slim"
+    icons       = "php,slim"
+    
+block markdown
+  include:md /articles/php/slim/configure-slim.md

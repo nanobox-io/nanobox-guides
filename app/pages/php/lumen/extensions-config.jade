@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Extensions Config"
+    keywords    = "php,lumen,extensions"
+    description = "PHP extensions configuration"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/php/extensions-config.md

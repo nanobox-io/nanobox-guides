@@ -1,180 +1,235 @@
-# PHP Config Options Overview
+# Configure PHP
 
-There are many config options available in the boxfile.yml for the PHP engine. Below is an overview of all the available options. Each is covered in more detail in the linked guides.
+The PHP engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/).
 
-#### Overview of boxfile.yml PHP Configuration Options
+## Runtime
+Specifies which PHP runtime and version to use. The following runtimes are available:
+
+- php-5.3
+- php-5.4
+- php-5.5
+- php-5.6
+- php-7.0
+
 ```yaml
 run.config:
-  config:
-    # Web Server Settings
-    webserver: 'apache'
-    document_root: '/'
+  engine.config:
+    runtime: php-7.0
+```
 
-    # PHP Settings
-    runtime: 'php-5.6'
-    extensions:
-      - curl
-      - gd
-      - mbstring
-      - pdo_mysql
-    zend_extensions:
-      - ioncube_loader
-      - opcache
-    dev_extensions:
-      add: ['svn']
-      rm: ['xcache']
-    dev_zend_extensions:
-      add: ['xdebug']
-      rm: ['opcache']
+## PHP Configuration
+
+#### short\_open\_tag
+Sets the [`short_open_tag` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.short-open-tag).
+
+```yaml
+run.config:
+  engine.config:
     short_open_tag: true
+```
+#### zlib\_output\_compression
+Sets the [`zlib.output_compression` PHP setting](http://php.net/manual/en/zlib.configuration.php#ini.zlib.output-compression).
+
+```yaml
+run.config:
+  engine.config:
     zlib_output_compression: 'Off'
+```
+#### allow\_url\_fopen
+Sets the [`allow_url_fopen` PHP setting](http://php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen).
+
+```yaml
+run.config:
+  engine.config:
     allow_url_fopen: 'On'
+```
+#### disable_functions
+Sets the [`disable_fuctions` PHP setting](http://php.net/manual/en/ini.core.php#ini.disable-functions).
+
+```yaml
+run.config:
+  engine.config:
     disable_functions:
       - exec
       - shell_exec
       - system
-    expose_php: 'On'
-    max_execution_time: 30
-    max_input_time: 30
-    memory_limit: '128M'
-    error_reporting: E_ALL
-    display_errors: 'stderr'
-    register_globals: 'Off'
-    register_argc_argv: 'Off'
-    post_max_size: '8M'
-    upload_max_filesize: '2M'
-    file_uploads: true
-    max_file_uploads: 20
-    max_input_vars: 1000
-    default_mimetype: 'text/html'
-    default_locale: 'en_US'
-    browscap: 'app/browscap.ini'
-    session_save_handler: 'files'
-    session_save_path: 'app/sessions'
-    session_length: 3600
-    session_autostart: false
-    date_timezone: 'US/central'
-    iconv_internal_encoding: 'UTF-8'
-
-    # Apache Settings
-    apache_document_root: '/'
-    apache_index_list:
-      - index.php
-      - index.html
-    apache_default_gateway: 'index.php'
-    apache_php_interpreter: php_fpm
-    apache_modules:
-      - actions
-      - alias
-      - rewrite
-    apache_max_spares: 10
-    apache_max_clients: 128
-    apache_server_limit: 128
-    apache_max_requests: 10000
-    apache_static_expire: 86400
-    apache_log_level: warn
-    apache_access_log: false
-
-    # Nginx Settings
-    nginx_document_root: '/'
-    nginx_index_list:
-      - index.php
-      - index.html
-    nginx_default_gateway: 'index.php'
-
-    # Built-In PHP Web Server Settings
-    builtin_document_root: '/'
-
-    # PHP-FPM Settings
-    php_fpm_events_mechanism: 'epoll'
-    php_fpm_max_children: 20
-    php_fpm_max_spare_servers: 1
-    php_fpm_max_requests: 128
-
-    # PHP GeoIP Settings
-    geoip_custom_directory: 'app/GeoIP/'
-
-    # PHP Memcache Settings
-    memcache_chunk_size: 8192
-    memcache_hash_strategy: 'standard'
-
-    # PHP Mongo Settings
-    mongo_native_long: 1
-    mongo_allow_empty_keys: 0
-    mongo_cmd: '$'
-    mongo_long_as_object: 0
-
-    # PHP APC Settings
-    apc_shm_size: '32M'
-    apc_num_files_hint: 1000
-    apc_user_entries_hint: 4096
-    apc_filters: ''
-
-    # PHP eAccelerator Settings
-    eaccelerator_shm_max: '0'
-    eaccelerator_shm_size: '0'
-    eaccelerator_filter: ''
-
-    # PHP OPcache Settings
-    opcache_memory_consumption: 64
-    opcache_validate_timestamps: 1
-    opcache_revalidate_freq: 2
-    opcache_revalidate_path: 0
-    opcache_save_comments: 1
-    opcache_load_comments: 1
-    opcache_enable_file_override: 0
-    opcache_optimization_level: '0xffffffff'
-    opcache_inherited_hack: 1
-    opcache_dups_fix: 0
-    opcache_blacklist_filename: ''
-
-    # PHP XCache Settings
-    xcache_size: 0
-    xcache_var_size: 0
-    xcache_admin_user: 'mOo'
-    xcache_admin_pass: ''
-
-    # PHP New Relic Settings
-    newrelic_capture_params: false
-    newrelic_ignored_params: ''
-    newrelic_loglevel: info
-    newrelic_framework: 'laravel'
-    newrelic_framework_drupal_modules: true
-    newrelic_browser_monitoring_auto_instrument: true
-    newrelic_transaction_tracer_enabled: true
-    newrelic_transaction_tracer_detail: 1
-    newrelic_transaction_tracer_record_sql: 'obfuscated'
-    newrelic_transaction_tracer_threshold: 'apdex_f'
-    newrelic_transaction_tracer_stack_trace_threshold: '500'
-    newrelic_transaction_tracer_explain_threshold: '500'
-    newrelic_transaction_tracer_slow_sql: true
-    newrelic_transaction_tracer_custom: ''
-    newrelic_error_collector_enabled: true
-    newrelic_error_collector_record_database_errors: true
-    newrelic_webtransaction_name_files: ''
-    newrelic_webtransaction_name_functions: ''
-    newrelic_webtransaction_name_remove_trailing_path: false
 ```
+#### expose_php
+Sets the [`expose_php` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.expose-php).
 
-#### Quick Links
-**General PHP Settings**  
-[PHP Settings](/php/php-settings)  
-[Start Commands](/php/start-commands)   
-[Extensions](/php/extensions)  
+```yaml
+run.config:
+  engine.config:
+    expose_php: 'On'
+```
+#### max\_execution\_time
+Sets the [`max_execution_time` PHP setting](http://www.php.net/manual/en/info.configuration.php#ini.max-execution-time).
 
-**Webserver Settings**  
-[General Webserver Settings](/php/webserver-settings)  
-[Apache Settings](/php/apache-settings)  
-[Nginx Settings](/php/nginx-settings)  
-[Built-In Settings](/php/builtin-settings)  
+```yaml
+run.config:
+  engine.config:
+    max_execution_time: 30
+```
+#### max\_input\_time
+Sets the [`max_input_time` PHP setting](http://www.php.net/manual/en/info.configuration.php#ini.max-input-time).
 
-**Advanced PHP Settings**  
-[APC Settings](/php/apc-settings)  
-[eAccelerator Settings](/php/eaccelerator-settings)  
-[GeoIP Settings](/php/geoip-settings)  
-[Memcache Settings](/php/memcache-settings)  
-[Mongo Settings](/php/mongo-settings)  
-[New Relic Settings](/php/new-relic-settings)  
-[Opcache Settings](/php/opcache-settings)  
-[PHP-FPM Settings](/php/php-fpm-settings)  
-[XCache Settings](/php/xcache-settings)  
+```yaml
+run.config:
+  engine.config:
+    max_input_time: 60
+```
+#### memory_limit
+Sets the [`memory_limit` PHP setting](http://php.net/manual/en/ini.core.php#ini.memory-limit). **Note:** This setting should not exceed the memory available on your PHP server(s).
+
+```yaml
+run.config:
+  engine.config:
+    memory_limit: '128M'
+```
+#### error_reporting
+Sets the [`error_reporting` PHP setting](http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting).
+
+```yaml
+run.config:
+  engine.config:
+    error_reporting: E_ALL
+```
+#### display_errors
+Sets the [`display_errors` PHP setting](http://us3.php.net/manual/en/errorfunc.configuration.php#ini.display-errors).
+
+```yaml
+run.config:
+  engine.config:
+    display_errors: 'stderr'
+```
+#### register_globals
+Sets the [`register_globals` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.register-globals)
+
+```yaml
+run.config:
+  engine.config:
+    register_globals: 'Off'
+```
+#### register\_argc\_argv
+Sets the [`register_argc_argv` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.register-argc-argv).
+
+```yaml
+run.config:
+  engine.config:
+    register_argc_argv: 'Off'
+```
+#### post\_max\_size
+Sets the [`post_max_size` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.post-max-size).
+
+```yaml
+run.config:
+  engine.config:
+    post_max_size: '8M'
+```
+#### upload\_max\_filesize
+Sets the [`upload_max_filesize` PHP setting](http://php.net/manual/en/ini.core.php#ini.upload-max-filesize).
+
+```yaml
+run.config:
+  engine.config:
+    upload_max_filesize: '2M'
+```
+#### file_uploads
+Sets the [`file_uploads` PHP setting](http://php.net/manual/en/ini.core.php#ini.file-uploads).
+
+```yaml
+run.config:
+  engine.config:
+    file_uploads: true
+```
+#### max\_file\_uploads
+Sets the [`max_file_uploads` PHP setting](http://php.net/manual/en/ini.core.php#ini.max-file-uploads).
+
+```yaml
+run.config:
+  engine.config:
+    max_file_uploads: 20
+```
+#### max\_input\_vars
+Sets the [`max_input_vars` PHP setting](http://php.net/manual/en/info.configuration.php#ini.max-input-vars).
+
+```yaml
+run.config:
+  engine.config:
+    max_input_vars: 1000
+```
+#### default_mimetype
+Sets the [`default_mime_type` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.default-mimetype).
+
+```yaml
+run.config:
+  engine.config:
+    default_mimetype: 'text/html'
+```
+#### default_locale
+Sets the [`intl.default_locale` PHP setting](http://php.net/manual/en/intl.configuration.php#ini.intl.default-locale).
+
+```yaml
+run.config:
+  engine.config:
+    default_locale: 'en_US'
+```
+#### browscap
+This allows you to specify the filepath to your browser capabilities file (browscap.ini). See [PHP.net Docs](http://php.net/manual/en/misc.configuration.php#ini.browscap) for definition & configuration options. When specifying the path to your browscap.ini in your boxfile.yml, it should relative to the root of your repo.
+
+***Note:*** You must include your own browscap.ini in your app's repo. They are available for free from [browscap.org](http://browscap.org/).
+
+
+```yaml
+run.config:
+  engine.config:
+    browscap: 'app/browscap.ini'
+```
+#### session\_save\_handler
+Sets the [`session.save_handler` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.save-handler).
+
+```yaml
+run.config:
+  engine.config:
+    session_save_handler: 'files'
+```
+#### session\_save\_path
+Sets the [`session.save_path` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.save-path).
+
+```yaml
+run.config:
+  engine.config:
+    session_save_path: '/tmp/nanobox/sessions'
+```
+#### session_length
+Sets the [`session.gc_maxlifetime` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime).
+
+```yaml
+run.config:
+  engine.config:
+    session_length: 3600
+```
+#### session_autostart
+Sets the [`session.autostart` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.auto-start).
+
+```yaml
+run.config:
+  engine.config:
+    session_autostart: 'false'
+```
+#### date_timezone
+Sets the [`date.timezone` PHP setting](http://php.net/manual/en/datetime.configuration.php#ini.date.timezone).
+
+```yaml
+run.config:
+  engine.config:
+    date_timezone: 'US/central'
+```
+#### iconv\_internal\_encoding
+Sets the [`iconv.internal_encoding` PHP setting](http://www.php.net/manual/en/iconv.configuration.php#ini.iconv.internal-encoding).
+
+```yaml
+run.config:
+  engine.config:
+    iconv_internal_encoding: 'UTF-8'
+```

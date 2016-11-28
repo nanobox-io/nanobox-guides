@@ -36,22 +36,15 @@ nanobox run pip install
 ```
 
 #### Create a Basic App
-Since this is a generic app, you get to choose your own adventure!
+Since this is a generic Python app, you get to choose your own adventure!
 
 ## Configure App
 
 #### Listen on 0.0.0.0
-You'll need to configure your app to bind to 0.0.0.0.
-
-Here is an example with Flask:
-
-```python
-if __name__ == "__main__":
-  app.run(host='0.0.0.0')
-```
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0).
 
 #### Add a local DNS
-Add a convenient way to access your app from the browser
+Add a convenient way to access your app from the browser:
 
 ```bash
 nanobox dns add local python.dev
@@ -63,10 +56,10 @@ nanobox dns add local python.dev
 nanobox run python YOURAPP.py
 ```
 
-Visit your app -> [python.dev:8080](http://python.dev:8080)
+Visit your app -> <a href="http://python.dev:8080" target="\_blank">python.dev:8080</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your python app:
+With Nanobox, you have everything you need develop and run your Python app:
 
 ```bash
 # drop into a Nanobox console
@@ -89,6 +82,6 @@ exit
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/python/generic/add-a-database)
-* [Frontent Javascipt](/python/generic/frontend-javascript)
+* [Frontend Javascript](/python/generic/frontend-javascript)
 * [Local Environment Variables](/python/generic/local-evars)
 * [Back to Python overview](/python/generic)

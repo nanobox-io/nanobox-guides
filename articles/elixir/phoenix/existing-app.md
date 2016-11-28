@@ -1,46 +1,72 @@
 # Existing Phoenix App
-Part of what makes nanobox so useful is you don't even need elixir or phoenix installed on your local machine to use them.
+Part of what makes nanobox so useful is you don't even need Elixir or Phoenix installed on your local machine to use them.
 
-This guide will help you get an existing Phoenix app up-and-running with nanobox.
+## Setup
 
-## Create an Elixir Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
+#### cd into your Phoenix app
+Change into an existing project folder:
 
-From within this environment you can develop and run your app as you normally would with things like *mix*.
+```bash
+cd your-phoenix-app
+```
 
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
   engine: elixir
 ```
 
-#### Start the Environment
-You can then start the dev environment:
-
-```bash
-nanobox dev start
-```
-
 ## Configure Phoenix
-WIP
 
-Also, add a convenient way to access your app from a browser:
+#### Listen on 0.0.0.0
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the ...:
+
+#### Add a local DNS
+Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dev dns add phoenix.nanobox.dev
+nanobox dns add local phoenix.dev
 ```
 
-## Phoenix up-and-running
+## Run the app
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/elixir/phoenix/add-a-database) before your app will run.
+
+```bash
 WIP
+```
+
+Visit your app at <a href="http://phoenix.dev:3000" target="\_blank">phoenix.dev:3000</a>
+
+## Explore
+With Nanobox, you have everything you need develop and run your Phoenix app:
+
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where elixir is installed,
+elixir -v
+
+# your packages are available,
+mix list
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Add a Database](/elixir/phoenix/add-a-database)
-* [Javascript Runtime](/elixir/phoenix/javascript-runtime)
+* [Frontend Javascript](/elixir/phoenix/frontend-javascript)
 * [Local Environment Variables](/elixir/phoenix/local-evars)
 * [Back to Phoenix overview](/elixir/phoenix)

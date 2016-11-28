@@ -45,7 +45,7 @@ data.storage:
   image: nanobox/unfs:0.9
 ```
 
-More information about the `network_dirs` config is available in the [Network Storage documentation](https://docs.nanobox.io/app-config/writable-storage/).
+More information about the `network_dirs` config is available in the [Network Storage documentation](https://docs.nanobox.io/app-config/network-storage/).
 
 ##### Caveats with Network Directories
 There are some caveats to know about when using network_dirs to store logs:

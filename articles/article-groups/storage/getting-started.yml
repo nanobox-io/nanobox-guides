@@ -1,4 +1,0 @@
-articles:
-  - {href: /storage/create, title: Create a Storage Component}
-  - {href: /storage/configure, title: Storage Config Options}
-  - {href: /storage/storing-files, title: Storing Files in a Storage Component}

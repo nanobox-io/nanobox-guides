@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /php/laravel/configure-laravel, title: Configure Laravel}
+      - {href: /php/laravel/preview-your-app, title: Preview your App}
       - {href: /php/laravel/launch-your-app, title: Launch your App}
 
   #
@@ -44,7 +45,7 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /php/laravel/configure-php, title: Configure PHP}
+      - {href: /php/laravel/php-extensions, title: PHP Extensions}
       - {href: /php/laravel/composer, title: Composer}
-      - {href: /php/laravel/dry-run, title: Dry Run}
-      # - {href: /php/laravel/scale-your-app, title: Make Laravel scream}
-      # - {href: /php/laravel/scale-your-app, title: New Relic}
+      - {href: /php/laravel/webserver-config, title: Webserver Config}
+      - {href: /php/laravel/extensions-config, title: Extensions Config}

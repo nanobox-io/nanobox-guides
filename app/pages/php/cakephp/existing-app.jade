@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing CakePHP App"
+    keywords    = "php,cakephp"
+    description = "launch cakephp app"
+    articles    = "php/cakephp"
+    icons       = "php,cakephp"
+    
+block markdown
+  include:md /articles/php/cakephp/existing-app.md

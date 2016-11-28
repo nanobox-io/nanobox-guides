@@ -1,9 +1,9 @@
 # Managing Local Data
-When working in local dev or sim environments, your PostgreSQL component is given it's own virtual IP and port to which you can connect. To view these credentials, use the Nanobox CLI's `info` command.
+When working in your local Nanobox environment, your PostgreSQL component is given it's own virtual IP and port to which you can connect. To view these credentials, use the Nanobox CLI's `info` command.
 
 ```bash
-# View app/component info in dev
-nanobox dev info
+# View local app/component
+nanobox info local
 
 # ...
 

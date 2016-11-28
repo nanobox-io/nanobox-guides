@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /ruby/sinatra/configure-sinatra, title: Configure Sinatra}
+      - {href: /ruby/sinatra/preview-your-app, title: Preview your App}
       - {href: /ruby/sinatra/launch-your-app, title: Launch your App}
 
   #
@@ -45,6 +46,5 @@ articles:
     articles:
       - {href: /ruby/sinatra/configure-ruby, title: Configure Sinatra}
       - {href: /ruby/sinatra/bundler, title: Bundler}
-      - {href: /ruby/sinatra/dry-run, title: Dry Run}
       # - {href: /ruby/sinatra/scale-your-app, title: Make Sinatra scream}
       # - {href: /ruby/sinatra/scale-your-app, title: New Relic}

@@ -99,7 +99,7 @@ With your boxfile.yml in place and your wp-config.php updated, you're ready to g
 # start the dev environment
 nanobox dev start
 
-# add a convenient way to access your app from the browser
+# add a convenient way to access your app from the browser:
 nanobox dev dns add wordpress.nanobox.dev
 
 # start PHP-FPM and Apache

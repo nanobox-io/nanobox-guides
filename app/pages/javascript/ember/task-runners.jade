@@ -1,0 +1,14 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Task Runners"
+    keywords    = "javascript,ember,gulp,grunt,brunch"
+    description = "task runners with ember"
+    articles    = "javascript/ember"
+    icons       = "javascript,ember"
+    
+block markdown
+  :md
+    # Yarn, NPM, & Bower
+  include:md /articles/shared/partials/task-runners.md

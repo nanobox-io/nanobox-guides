@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /php/symfony/configure-symfony, title: Configure Symfony}
+      - {href: /php/symfony/preview-your-app, title: Preview your App}
       - {href: /php/symfony/launch-your-app, title: Launch your App}
 
   #
@@ -44,7 +45,7 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /php/symfony/configure-php, title: Configure PHP}
+      - {href: /php/symfony/php-extensions, title: PHP Extensions}
       - {href: /php/symfony/composer, title: Composer}
-      - {href: /php/symfony/dry-run, title: Dry Run}
-      # - {href: /php/symfony/scale-your-app, title: Make Symfony scream}
-      # - {href: /php/symfony/scale-your-app, title: New Relic}
+      - {href: /php/symfony/webserver-config, title: Webserver Config}
+      - {href: /php/symfony/extensions-config, title: Extensions Config}

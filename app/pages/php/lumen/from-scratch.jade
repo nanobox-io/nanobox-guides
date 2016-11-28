@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Lumen From Scratch"
+    keywords    = "php,lumen,new"
+    description = "new lumen app"
+    articles    = "php/lumen"
+    icons       = "php,lumen"
+    
+block markdown
+  include:md /articles/php/lumen/from-scratch.md

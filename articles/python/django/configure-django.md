@@ -1,6 +1,6 @@
 # Configure Django for Production
 
-## Setup webserver
+## Setup a webserver
 Django runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
 
 #### Nginx
@@ -15,7 +15,7 @@ run.config:
 
 #### Nginx configuration
 Now add the following nginx configuration into your project, at `etc/nginx.conf`:
-  
+
 <div class="meta" data-class="configFile" data-run="etc/nginx.conf"></div>
 
 ```nginx
@@ -223,7 +223,7 @@ def worker_abort(worker):
 **IMPORTANT**: The gunicorn configuration above is a minimal configuration sufficient to run your app. We will cover advanced configuration tuning in a later guide.
 
 ## Add webs and workers
-For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/getting-started/add-components/#web-amp-worker-components).
+For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/). There is also a good chance you'll want some sort of job queue to send emails, process jobs, etc. These would all be ideal tasks for a [worker component](https://docs.nanobox.io/boxfile/worker/).
 
 #### Specify web components
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
@@ -232,7 +232,7 @@ You can have as many web components as your app needs by simply adding them to y
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
-    django: gunicorn -c /app/etc/gunicorn.py myapp.wsgi
+    django: gunicorn -c /app/etc/gunicorn.py YOUR_DJANGO_APP.wsgi
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
@@ -281,6 +281,6 @@ deploy.config:
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Stage your App](/python/django/stage-your-app)
+* [Preview your App](/python/django/preview-your-app)
 * [Launch your App](/python/django/launch-your-app)
 * [Back to django overview](/python/django)

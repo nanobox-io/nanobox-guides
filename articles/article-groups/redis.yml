@@ -3,7 +3,7 @@ href: /redis
 articles:
   - title: Getting Started
     articles:
-      - {href: /redis/create, title: Creating a Redis Component}
+      - {href: /redis/create, title: Create a Redis Component}
       - {href: /redis/connect, title: Connect to Redis}
       - {href: /redis/configure, title: Redis Config Options}
   - title: Managing Data

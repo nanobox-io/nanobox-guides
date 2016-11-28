@@ -13,7 +13,7 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
-**HEADS UP**: Your database will be running the next time you `nanobox run`.
+**HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
 Before connecting to the database, you'll first need to install the `pg-promise` adapter:
@@ -33,15 +33,17 @@ Then create a `database.js` with the following:
 
 ```javascript
 var pgp = require("pg-promise")(/*options*/);
-var db = pgp("postgres://${process.env.DATA_DB_USER}:${process.env.DATA_DB_PASS}@${process.env.DATA_DB_HOST}:${}/db");
+var db = pgp("postgres://${process.env.DATA_DB_USER}:${process.env.DATA_DB_PASS}@${process.env.DATA_DB_HOST}/gonano");
 ```
+
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
 ## Test
 
 #### From an external client
-You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
+You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
-#### With Express
+#### From Express
 Your can also test the connection with express:
 
 ```bash

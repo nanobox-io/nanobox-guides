@@ -1,0 +1,51 @@
+title: Lumen
+href: /php/lumen
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/lumen/from-scratch, title: Lumen from Scratch}
+      - {href: /php/lumen/existing-app, title: Existing Lumen App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/lumen/add-a-database, title: Add a Database}
+      - {href: /php/lumen/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/lumen/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/lumen/configure-lumen, title: Configure Lumen}
+      - {href: /php/lumen/preview-your-app, title: Preview your App}
+      - {href: /php/lumen/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/lumen/point-your-domain, title: Point your Domain}
+      - {href: /php/lumen/encryption, title: SSL/TLS Encryption}
+      - {href: /php/lumen/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/lumen/scale-your-app, title: Scale Your App}
+      - {href: /php/lumen/debugging, title: Debugging}
+      - {href: /php/lumen/app-health, title: App Health}
+      - {href: /php/lumen/remote-access, title: Remote Access}
+      - {href: /php/lumen/team-management, title: Team Management}
+      - {href: /php/lumen/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/lumen/configure-php, title: Configure PHP}
+      - {href: /php/lumen/php-extensions, title: PHP Extensions}
+      - {href: /php/lumen/composer, title: Composer}
+      - {href: /php/lumen/webserver-config, title: Webserver Config}
+      - {href: /php/lumen/extensions-config, title: Extensions Config}

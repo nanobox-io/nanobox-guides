@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Team Management"
+    keywords    = "php,generic,production,manage"
+    description = "how to manage generic"
+    articles    = "php/generic"
+    icons       = "php,generic"
+    
+block markdown
+  include:md /articles/shared/team-management.md

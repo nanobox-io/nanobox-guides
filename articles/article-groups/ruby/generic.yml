@@ -21,6 +21,7 @@ articles:
   - title: "Go Live"
     articles:
       - {href: /ruby/generic/configure-generic, title: Configure your App}
+      - {href: /ruby/generic/preview-your-app, title: Preview your App}
       - {href: /ruby/generic/launch-your-app, title: Launch your App}
 
   #
@@ -45,4 +46,3 @@ articles:
     articles:
       - {href: /ruby/generic/configure-ruby, title: Configure Ruby}
       - {href: /ruby/generic/bundler, title: Bundler}
-      - {href: /ruby/generic/dry-run, title: Dry Run}
