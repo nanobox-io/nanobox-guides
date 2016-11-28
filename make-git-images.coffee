@@ -1,3 +1,7 @@
+console.log """Reminder:
+1) Make sure gulp is running
+2) run `sudo ldconfig /data/lib` before running this app
+"""
 Horseman  = require 'node-horseman'
 phantomjs = require('phantomjs-prebuilt')
 
@@ -32,7 +36,9 @@ generatedIcons = [
 ]
 
 newIcons = [
-
+  {icon:'lumen', title:'Lumen'}
+  {icon:'slim', title:'Slim'}
+  {icon:'cakephp', title:'CakePHP'}
 ]
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )
