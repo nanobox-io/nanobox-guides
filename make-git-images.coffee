@@ -33,11 +33,11 @@ generatedIcons = [
   {icon:'angular', title:'angular'}
   {icon:'ember', title:'ember'}
   {icon:'phoenix', title:'phoenix'}
+  {icon:'lumen', title:'Lumen'}
+  {icon:'slim', title:'Slim'}
 ]
 
 newIcons = [
-  {icon:'lumen', title:'Lumen'}
-  {icon:'slim', title:'Slim'}
   {icon:'cakephp', title:'CakePHP'}
 ]
 
