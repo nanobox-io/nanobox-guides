@@ -35,11 +35,11 @@ generatedIcons = [
   {icon:'phoenix', title:'phoenix'}
   {icon:'lumen', title:'Lumen'}
   {icon:'slim', title:'Slim'}
+  {icon:'cakephp', title:'CakePHP'}
+  {icon:'symfony', title:'Symfony'}
 ]
 
-newIcons = [
-  {icon:'cakephp', title:'CakePHP'}
-]
+newIcons = []
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )
   .open('http://localhost:8080/github-icons/index.html')
