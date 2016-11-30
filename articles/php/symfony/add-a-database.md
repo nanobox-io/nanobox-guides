@@ -29,12 +29,12 @@ run.config:
 
 #### Configure Symfony
 
-Symfony configuration is applied in layers, and by default an `app/config/parameters.yml` file is generated for database configuration. We will need to replace this with a `parameters.php` file so we can pull connection information from environment variables.
+By default Symfony generates a `app/config/parameters.yml` file for database configuration.
 
-Create a `parameters.php` file with the connection information:
-  
+Instead, create an `app/config/parameters.php` where the nanobox environment variables will be used to connect.
+
 <div class="meta" data-class="configFile" data-run="app/config/parameters.php"></div>
-  
+
 ```php
 <?php
 
@@ -61,10 +61,10 @@ $container->setParameter('mailer_password', null);
 ```
 
 Now open your `app/config/config.yml` file and modify your imports at the top to include the new `parameters.php` file instead of the `parameters.yml`. It should look something like this:
-  
+
 ```yaml
 imports:
-    # - { resource: parameters.yml } (this line can be deleted)
+    # - { resource: parameters.yml }
     - { resource: parameters.php }
     - { resource: security.yml }
     - { resource: services.yml }

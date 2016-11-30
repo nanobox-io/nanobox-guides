@@ -15,6 +15,6 @@ nanobox dns add dry-run ruby.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://ruby.preview" target="\_blank">ruby.preview</a>
+Visit your app at <a href="http://ruby.preview" target="\_blank">http://ruby.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
