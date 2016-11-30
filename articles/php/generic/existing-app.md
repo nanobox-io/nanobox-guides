@@ -39,7 +39,7 @@ run.config:
       - EXTENSION
 ```
 
-The full list of available extensions can be found [here](/php/generic/php-extensions)
+View the [full list of available extensions](/php/generic/php-extensions).
 
 #### Add a local DNS
 Add a convenient way to access your app from the browser
