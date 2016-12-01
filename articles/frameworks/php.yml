@@ -5,7 +5,7 @@ frameworks:
   - {href: /php/laravel, name: Laravel, icon: laravel}
   - {href: /php/codeigniter, name: CodeIgniter, icon: codeigniter}
   - {href: /php/symfony, name: Symfony, icon: symfony}
-  - {href: /php/cakephp, name: CakePHP, icon: cakephp}
-  - {href: /php/slim, name: Slim, icon: slim}
-  - {href: /php/lumen, name: Lumen, icon: lumen}
+  - {href: /php/cakephp, name: CakePHP, icon: cakephp, devMode: true}
+  - {href: /php/slim, name: Slim, icon: slim, devMode: true}
+  - {href: /php/lumen, name: Lumen, icon: lumen, devMode: true}
   # - {href: /php/wordpress, name: Wordpress, icon: wordpress}
