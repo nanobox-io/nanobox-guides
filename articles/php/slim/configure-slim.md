@@ -40,6 +40,7 @@ web.main:
     apache[error]: /data/var/log/apache/error.log
     php[error]: /data/var/log/php/php_error.log
     php[fpm]: /data/var/log/php/php_fpm.log
+    slim[app]: logs/app.log
 ```
 
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
@@ -68,7 +69,7 @@ In your existing boxfile.yml add the following code:
 deploy.config:
   before_live:
     web.main:
-      - php index.php migrate
+      - SOME MIGRATE COMMAND
 ```
 
 ## Now what?
