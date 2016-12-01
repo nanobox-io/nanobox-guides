@@ -6,6 +6,6 @@ frameworks:
   - {href: /php/codeigniter, name: CodeIgniter, icon: codeigniter}
   - {href: /php/symfony, name: Symfony, icon: symfony}
   - {href: /php/cakephp, name: CakePHP, icon: cakephp, devMode: true}
-  - {href: /php/slim, name: Slim, icon: slim, devMode: true}
+  - {href: /php/slim, name: Slim, icon: slim}
   - {href: /php/lumen, name: Lumen, icon: lumen, devMode: true}
   # - {href: /php/wordpress, name: Wordpress, icon: wordpress}
