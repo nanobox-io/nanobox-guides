@@ -25,6 +25,15 @@ run.config:
   engine.config:
     # sets the php version to 7.0
     runtime: php-7.0
+    # set the apache/nginx document root to public
+    document_root: public
+    # php extensions required for slim to run
+    extensions:
+      - dom
+      - mbstring
+      - session
+      - tokenizer
+      - zip
 ```
 
 ## Configure Slim
