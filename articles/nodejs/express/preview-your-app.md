@@ -15,6 +15,6 @@ nanobox dns add dry-run express.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://express.preview" target="\_blank">express.preview</a>
+Visit your app at <a href="http://express.preview" target="\_blank">http://express.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.

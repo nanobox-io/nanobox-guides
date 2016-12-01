@@ -36,26 +36,26 @@ pip freeze > requirements.txt
 cd /tmp
 
 # generate the django app
-django-admin startproject your-django-app
+django-admin startproject app
 
 # cd back into the /app dir
 cd -
 
 # copy the generated app into the project
-cp -a /tmp/your-django-app/* .
+cp -a /tmp/app/* .
 
 # exit the console
 exit
 ```
 
 ## Configure Django
-You'll need to decide which apps you want enabled by default. You can disable any default apps by commenting them out in the `INSTALLED_APPS` section of `your-django-apps/settings.py` file.
+You'll need to decide which apps you want enabled by default. You can disable any default apps by commenting them out in the `INSTALLED_APPS` section of `app/settings.py` file.
 
 #### Run data migrations
-Unless you commented out all of the `INSTALLED_APPS`, you'll likely have pending data migrations to be run. Let's run those now:
+Run a data migration for any remaining `INSTALLED_APPS`:
 
 ```bash
-python manage.py migrate
+nanobox run python manage.py migrate
 ```
 
 #### Add a local DNS
@@ -64,6 +64,8 @@ Add a convenient way to access your app from the browser:
 ```bash
 nanobox dns add local django.dev
 ```
+
+**HEADS UP**: You'll need to add `django.dev` to the list of `ALLOWED_HOSTS` in `app/settings.py`
 
 ## Run the app
 To allow connections from the host machine into the app's container, you'll need to run your app so it listens on all available IP's (0.0.0.0).

@@ -15,6 +15,6 @@ nanobox dns add dry-run codeigniter.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://codeigniter.preview" target="\_blank">codeigniter.preview</a>
+Visit your app at <a href="http://codeigniter.preview" target="\_blank">http://codeigniter.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.

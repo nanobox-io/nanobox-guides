@@ -17,6 +17,18 @@ Nanobox generates the following environment variables based off that name:
 
 ## Connect
 
+#### Include the DB Driver Extension
+Add the required extension to the list of extensions in your `boxfile.yml`.
+
+```yaml
+run.config:
+  engine.config:
+    extensions:
+      - pdo_mysql
+```
+
+#### Configure app
+
 However you choose to configure your connection within your PHP app, you can access the following environment variables:
 
 ```php
@@ -24,9 +36,6 @@ user = $_ENV["DATA_DB_USER"]
 pass = $_ENV["DATA_DB_PASS"]
 host = $_ENV["DATA_DB_HOST"]
 ```
-
-#### Update dependencies
-Regardless of what database you decide to use, you'll likely be adding some dependencies. Make sure once they are all added you update them in the environment as well.
 
 ## Test
 

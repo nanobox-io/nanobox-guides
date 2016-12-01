@@ -15,6 +15,6 @@ nanobox dns add dry-run sails.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://sails.preview" target="\_blank">sails.preview</a>
+Visit your app at <a href="http://sails.preview" target="\_blank">http://sails.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.

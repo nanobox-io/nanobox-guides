@@ -10,15 +10,11 @@ Add the following to you `boxfile.yml` to make the php engine setup and configur
 ```yaml
 run.config:
   engine.config:
+    # use nginx
     webserver: nginx
-```
 
-Also we'll need to tell nginx where Laravel's document root is:
-
-```yaml
-run.config:
-  engine.config:
-    document_root: public
+    # public directory
+    document_root: web
 ```
 
 ## Add webs and workers

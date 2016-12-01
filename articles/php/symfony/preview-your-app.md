@@ -15,6 +15,6 @@ nanobox dns add dry-run symfony.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://symfony.preview" target="\_blank">symfony.preview</a>
+Visit your app at <a href="http://symfony.preview" target="\_blank">http://symfony.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.

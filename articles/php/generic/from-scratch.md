@@ -25,6 +25,18 @@ run.config:
     runtime: php-7.0
 ```
 
+#### Enable PHP Extensions
+Your app may need specific php extensions to function properly. You can include them in your environment simply by added them to your `boxfile.yml`:
+
+```yaml
+run.config:
+  engine.config:
+    extensions:
+      - EXTENSION
+```
+
+View the [full list of available extensions](/php/generic/php-extensions).
+
 ## Generate a PHP App
 Since this is a generic PHP app, you get to choose your own adventure!
 

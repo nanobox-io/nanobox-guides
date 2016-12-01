@@ -31,16 +31,18 @@ DATABASES = {
 }
 ```
 
-#### Add pip dependency
-If you are connecting to a third party service, you'll need a python extension to connect to the service. During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
+#### Install additional packages
+During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
 
-The easiest way to install a dependency, is to add it to your `requirements.txt` and then running `nanobox build-runtime`, like this:
+The easiest way to install additional packages, is to add them to your `requirements.txt` and then run `nanobox build-runtime`.
+
+This example is using postgres so you'll need to install the `psycopg2` package:
 
 ```bash
 # add psycopg2 package to pip installation
 echo "psycopg2==2.6.2" >> requirements.txt
 
-# rebuild the runtime with the postgres client
+#
 nanobox build-runtime
 ```
 

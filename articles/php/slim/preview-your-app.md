@@ -15,6 +15,6 @@ nanobox dns add dry-run slim.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://slim.preview" target="\_blank">slim.preview</a>
+Visit your app at <a href="http://slim.preview" target="\_blank">http://slim.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
