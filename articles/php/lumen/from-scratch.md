@@ -23,6 +23,12 @@ run.config:
   engine.config:
     # sets the php version to 7.0
     runtime: php-7.0
+    # set the apache/nginx document root to public
+    document_root: public
+    # enables php extensions
+    extensions:
+      - pdo
+      - mbstring
 ```
 
 ## Generate a Lumen App
@@ -31,23 +37,20 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install unzip package
-pkgin in -y unzip
+# download the lumen installer
+composer global require "laravel/lumen-installer"
 
 # cd into a temporary directory
 cd /tmp
 
-# download lumen
-wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.2.zip
-
-# unzip lumen
-unzip 3.1.2.zip
+# create a new lumen app
+lumen new app
 
 # cd back into the /app dir
 cd -
 
 # copy the framework into the project
-cp -a /tmp/CodeIgniter-3.1.2/* .
+cp -a /tmp/app/* .
 
 # exit the console
 exit

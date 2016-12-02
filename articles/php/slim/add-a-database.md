@@ -30,11 +30,13 @@ run.config:
 #### Modify Your app
 Slim is pretty free-form when it comes to configuring a database connection. However you choose to configure your connection, you can access the following environment variables:
 
-  ```php
-  user = $_ENV["DATA_DB_USER"]
-  pass = $_ENV["DATA_DB_PASS"]
-  host = $_ENV["DATA_DB_HOST"]
-  ```
+```php
+user = $_ENV["DATA_DB_USER"]
+pass = $_ENV["DATA_DB_PASS"]
+host = $_ENV["DATA_DB_HOST"]
+```
+
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
 ## Test
 

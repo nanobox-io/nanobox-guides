@@ -68,7 +68,7 @@ In your existing boxfile.yml add the following code:
 deploy.config:
   before_live:
     web.main:
-      - php index.php migrate
+      - SOME MIGRATE COMMAND
 ```
 
 ## Now what?
