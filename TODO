@@ -1,13 +1,12 @@
-☐ Make left nav title clickable
-☐ Make left nav parent items clickable
-☐ Add Docs link
-☐ Add Services link
+☐ Add (db) versioning to database js component
+☐ Figure out if we want CMS / generators sections
+✔ Make left nav title clickable     done(√)
+✔ Make left nav parent items clickable     done(√)
+✔ Add Docs link     done(√)
+✔ Add Services link     done(√)
 ✔ Add "In Beta" overarching message     done(√)
 ✔ Add in depth "Let us know you're interested / help us" messaging on alpha pages     done(√)
 ✔ Add lua page     done(√)
 ✔ Add lisp page     done(√)
-☐ Maintain ordering of grouped articles
-☐ Change "additional components" -> "optional components"
-
-width:47px; height:53px; background-position:-292px -2px;
-width:47px; height:53px; background-position:-246px -2px;
+✔ Maintain ordering of grouped articles     done(√)
+✔ Change "additional components" -> "optional components"     done(√)

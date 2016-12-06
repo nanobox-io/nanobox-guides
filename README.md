@@ -72,6 +72,14 @@ Sample Article Group File:
       articles:
         - {href: '#', title: Lower Article}
         - {href: '#', title: Another}
-
-
 ```
+
+# Generating github quickstart images
+
+We generate the github quickstart headers by launching a headless browser (phantomjs), forming the image in html and saving as a png. 
+
+1. `nanobox run gulp`
+1. Edit `make-git-images.coffee` to add the new icons you want to generate an image for to the `newIcons` array. Also make sure that we have svg icons for that icon.
+1. In a new terminal `nanobox run`
+1. Run `sudo ldconfig /data/lib` (in nanobox)
+1. Run `coffee make-git-images.coffee` (in nanobox)

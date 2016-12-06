@@ -18,7 +18,7 @@ Horseman.registerAction 'createIcons', (icons)->
       .crop('.github-icons', "./quickstart-icons/#{item.icon}.png")
   , Promise.resolve()
 
-
+# Storing these in case we ever make a change and want to generate again
 generatedIcons = [
   {icon:'rails', title:'Ruby on Rails'}
   {icon:'sinatra', title:'Sinatra'}
@@ -41,8 +41,9 @@ generatedIcons = [
   {icon:'vue', title:'Vue'}
 ]
 
+# Add new icons to generate here:
 newIcons = [
-
+  # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )
