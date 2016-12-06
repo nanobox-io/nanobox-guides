@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Vue From Scratch"
+    keywords    = "javascript,vue,new"
+    description = "new vue app"
+    articles    = "javascript/vue"
+    icons       = "javascript,vue"
+    
+block markdown
+  include:md /articles/javascript/vue/from-scratch.md

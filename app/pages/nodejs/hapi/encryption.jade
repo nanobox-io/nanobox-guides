@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "SSL/TLS Encryption"
+    keywords    = "nodejs,hapi,ssl,tls,encryption"
+    description = "hapi ssl/tls Encryption"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  include:md /articles/shared/encryption.md

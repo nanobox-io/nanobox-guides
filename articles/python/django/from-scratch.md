@@ -58,7 +58,7 @@ Run a data migration for any remaining `INSTALLED_APPS`:
 nanobox run python manage.py migrate
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

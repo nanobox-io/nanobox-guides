@@ -27,34 +27,15 @@ run.config:
       - mysqli
 ```
 
-#### Modify Your database.php
-Modify your `application/config/database.php` to connect your app:
-
-**Port:** The port will always be the default port of the service you're using.  
-**Name:** The database name will always be `gonano`.
+#### Modify Your app
+Slim is pretty free-form when it comes to configuring a database connection. However you choose to configure your connection, you can access the following environment variables:
 
 ```php
-$db['default'] = array(
-  'dsn'   => '',
-  'hostname' => $_ENV["DATA_DB_HOST"],
-  'username' => $_ENV["DATA_DB_USER"],
-  'password' => $_ENV["DATA_DB_PASS"],
-  'database' => 'gonano',
-  'dbdriver' => 'mysqli',
-  'dbprefix' => '',
-  'pconnect' => TRUE,
-  'db_debug' => TRUE,
-  'cache_on' => FALSE,
-  'cachedir' => '',
-  'char_set' => 'utf8',
-  'dbcollat' => 'utf8_general_ci',
-  'swap_pre' => '',
-  'encrypt' => FALSE,
-  'compress' => FALSE,
-  'stricton' => FALSE,
-  'failover' => array()
-);
+user = $_ENV["DATA_DB_USER"]
+pass = $_ENV["DATA_DB_PASS"]
+host = $_ENV["DATA_DB_HOST"]
 ```
+
 **HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
 ## Test
@@ -64,12 +45,6 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 
 #### From Slim
 You can also test your connection by simply trying to run your app and see if it is able to connect.
-
-Assuming you have migrations setup according to the [official guide](https://slim.com/user_guide/libraries/migration.html), you can run them directly.
-
-```bash
-nanobox run php index.php migrate
-```
 
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

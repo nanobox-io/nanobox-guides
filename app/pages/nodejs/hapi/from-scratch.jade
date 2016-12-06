@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "hapi From Scratch"
+    keywords    = "nodejs,hapi,new"
+    description = "new hapi app"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  include:md /articles/nodejs/hapi/from-scratch.md

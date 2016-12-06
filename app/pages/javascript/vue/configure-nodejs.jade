@@ -1,0 +1,14 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nodejs"
+    keywords    = "javascript,vue,nodejs"
+    description = "configure nodejs with vue"
+    articles    = "javascript/vue"
+    icons       = "javascript,vue"
+    
+block markdown
+  :md
+    # Configure Nodejs
+  include:md /articles/shared/partials/nodejs.md

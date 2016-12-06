@@ -53,7 +53,7 @@ cp -a /tmp/CodeIgniter-3.1.2/* .
 exit
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser
 
 ```bash

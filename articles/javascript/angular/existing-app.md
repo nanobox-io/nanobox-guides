@@ -33,7 +33,7 @@ To allow connections from the host machine into the app's container, you'll need
 }
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

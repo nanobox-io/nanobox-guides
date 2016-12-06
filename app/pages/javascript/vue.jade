@@ -1,0 +1,18 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Vue"
+    informalName = "vue"
+    icon         = "vue"
+    iconCrumbs   = "javascript,vue"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+    ]
+    optionalComponents = []
+    articleGroups = "javascript/vue"
