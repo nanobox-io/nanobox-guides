@@ -37,11 +37,12 @@ generatedIcons = [
   {icon:'slim', title:'Slim'}
   {icon:'cakephp', title:'CakePHP'}
   {icon:'symfony', title:'Symfony'}
+  {icon:'hapi', title:'Hapi'}
+  {icon:'vue', title:'Vue'}
 ]
 
 newIcons = [
-  {icon:'hapi', title:'Hapi'}
-  {icon:'vue', title:'Vue'}
+
 ]
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )

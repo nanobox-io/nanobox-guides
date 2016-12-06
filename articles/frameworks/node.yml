@@ -4,5 +4,5 @@ home: /nodejs
 frameworks:
   - {href: /nodejs/express, name: Express, icon: express}
   - {href: /nodejs/sails, name: Sails, icon: sails}
-  - {href: /nodejs/hapi, name: Hapi, icon: hapi}
+  # - {href: /nodejs/hapi, name: Hapi, icon: hapi}
   # - {href: /nodejs/meteor, name: Meteor, icon: meteor}

@@ -26,22 +26,7 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install hapi so we can use it to generate our application
-npm install -g hapi
-
-# generate our new hapi application; due to a limitation in hapi we'll have to generate our app in another folder and move it where we want it
-
-# cd into the /tmp dir to create an app
-cd /tmp
-
-# generate the hapi app
-hapi new app
-
-# cd back into the /app dir
-cd -
-
-# copy the generated app into the project
-cp -a /tmp/app/* .
+WIP
 
 # exit the console
 exit
@@ -50,10 +35,10 @@ exit
 ## Configure hapi
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `WIP`:
 
 ```javascript
-host: '0.0.0.0'
+WIP
 ```
 
 ## Add a local DNS
@@ -66,10 +51,10 @@ nanobox dns add local hapi.dev
 ## Run the app
 
 ```bash
-nanobox run hapi lift
+WIP
 ```
 
-Visit your app at <a href="http://hapi.dev:1337" target="\_blank">hapi.dev:1337</a>
+Visit your app at <a href="http://hapi.dev:WIP" target="\_blank">hapi.dev:WIP</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your hapi app:

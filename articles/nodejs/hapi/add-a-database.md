@@ -16,23 +16,7 @@ Nanobox generates the following environment variables based off that name:
 **HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
-Before connecting to the database, you'll first need to install the `hapi-postgresql` adapter:
-
-```bash
-nanobox run npm install hapi-postgresql --save
-```
-
-Then modify your `config/connections.js` to connect your app:
-
-```javascript
-somePostgresqlServer: {
-  adapter: 'hapi-postgresql',
-  host: process.env.DATA_DB_HOST,
-  user: process.env.DATA_DB_USER,
-  password: process.env.DATA_DB_PASS,
-  database: 'db'
-  }
-```
+WIP
 
 ## Test
 
@@ -43,7 +27,7 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 Your can also test the connection with hapi:
 
 ```bash
-nanobox run hapi lift
+WIP
 ```
 
 ## Now what?

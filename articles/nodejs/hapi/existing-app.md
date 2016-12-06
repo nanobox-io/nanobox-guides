@@ -25,10 +25,10 @@ run.config:
 ## Configure hapi
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `WIP`:
 
 ```javascript
-host: '0.0.0.0'
+WIP
 ```
 
 #### Add local DNS
@@ -42,10 +42,10 @@ nanobox dns add local hapi.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/nodejs/hapi/add-a-database) before your app will run.
 
 ```bash
-nanobox run hapi lift
+WIP
 ```
 
-Visit your app at <a href="http://hapi.dev:1337" target="\_blank">hapi.dev:1337</a>
+Visit your app at <a href="http://hapi.dev:WIP" target="\_blank">hapi.dev:WIP</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your hapi app:
