@@ -2,9 +2,11 @@ extends /app/pages/templates/framework-landing
 
 block configParams
   -
+    title        = "Node.js with Nanobox"
+    description  = "Get Node.js up and running with Nanobox"
     formalName   = "Nodejs"
     informalName = "nodejs"
-    icon         = "nodejs"
+    icon         = "node"
     iconCrumbs   = "nodejs"
     noQuickstart = true
 
@@ -12,7 +14,7 @@ block jsParams
   script.
     //- This is javascript
     requiredComponents = [
-      {name:'Nodejs', icon:'nodejs', href:'#'}
+      {name:'Nodejs', icon:'node', href:'#'}
     ]
     optionalComponents = [
       {name:'Postgres', icon:'postgres', href:'#'},
