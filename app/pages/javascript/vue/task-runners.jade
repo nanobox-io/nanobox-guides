@@ -1,0 +1,14 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Task Runners"
+    keywords    = "javascript,vue,gulp,grunt,brunch"
+    description = "task runners with vue"
+    articles    = "javascript/vue"
+    icons       = "javascript,vue"
+    
+block markdown
+  :md
+    # Yarn, NPM, & Bower
+  include:md /articles/shared/partials/task-runners.md

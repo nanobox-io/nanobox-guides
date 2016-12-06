@@ -43,7 +43,7 @@ Since this is a generic Python app, you get to choose your own adventure!
 #### Listen on 0.0.0.0
 To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0).
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

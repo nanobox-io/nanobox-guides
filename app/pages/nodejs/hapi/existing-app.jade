@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing hapi App"
+    keywords    = "nodejs,hapi"
+    description = "launch hapi app"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  include:md /articles/nodejs/hapi/existing-app.md

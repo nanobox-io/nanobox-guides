@@ -56,7 +56,7 @@ module Rails
 end
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

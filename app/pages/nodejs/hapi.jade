@@ -1,0 +1,22 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    formalName   = "Hapi"
+    informalName = "hapi"
+    icon         = "hapi"
+    iconCrumbs   = "node,hapi"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "nodejs/hapi"

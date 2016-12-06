@@ -1,0 +1,50 @@
+title: Hapi
+href: /nodejs/hapi
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/hapi/from-scratch, title: Hapi from Scratch}
+      - {href: /nodejs/hapi/existing-app, title: Existing Hapi App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/hapi/add-a-database, title: Add a Database}
+      - {href: /nodejs/hapi/frontend-javascript, title: Frontend Javascript}
+      - {href: /nodejs/hapi/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/hapi/configure-hapi, title: Configure Hapi}
+      - {href: /nodejs/hapi/preview-your-app, title: Preview your App}
+      - {href: /nodejs/hapi/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/hapi/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/hapi/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/hapi/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/hapi/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/hapi/debugging, title: Debugging}
+      - {href: /nodejs/hapi/app-health, title: App Health}
+      - {href: /nodejs/hapi/remote-access, title: Remote Access}
+      - {href: /nodejs/hapi/team-management, title: Team Management}
+      - {href: /nodejs/hapi/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/hapi/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/hapi/npm, title: Yarn & NPM}
+      # - {href: /nodejs/hapi/scale-your-app, title: Make Hapi scream}
+      # - {href: /nodejs/hapi/scale-your-app, title: New Relic}

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "App Health"
+    keywords    = "nodejs,hapi,app-health"
+    description = "monitor hapi app"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  include:md /articles/shared/app-health.md

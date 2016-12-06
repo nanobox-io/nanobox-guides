@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "nodejs,hapi,launch"
+    description = "launch hapi app"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/hapi/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

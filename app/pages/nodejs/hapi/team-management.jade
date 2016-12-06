@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Team Management"
+    keywords    = "nodejs,hapi,production,manage"
+    description = "how to manage hapi"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  include:md /articles/shared/team-management.md

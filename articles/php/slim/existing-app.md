@@ -50,7 +50,7 @@ run.config:
 
 The full list of available extensions can be found [here](/php/slim/php-extensions)
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser
 
 ```bash

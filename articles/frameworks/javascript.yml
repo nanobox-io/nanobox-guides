@@ -4,3 +4,4 @@ home: /javascript
 frameworks:
   - {href: /javascript/angular, name: Angular, icon: angular}
   - {href: /javascript/ember, name: Ember, icon: ember}
+  - {href: /nodejs/vue, name: Vue, icon: vue}

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging hapi"
+    keywords    = "nodejs,hapi,debug"
+    description = "debug hapi app"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    
+block markdown
+  include:md /articles/shared/debugging.md

@@ -33,7 +33,7 @@ To allow connections from the host machine into the app's container, you'll need
 }
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash
@@ -41,7 +41,6 @@ nanobox dns add local ember.dev
 ```
 
 ## Run the app
-**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/nodejs/sails/add-a-database) before your app will run.
 
 ```bash
 nanobox run ember server

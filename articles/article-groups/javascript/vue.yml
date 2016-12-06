@@ -1,0 +1,18 @@
+title: Vue
+href: /javascript/vue
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /javascript/vue/from-scratch, title: Vue from Scratch}
+      - {href: /javascript/vue/existing-app, title: Existing Vue App}
+
+  #
+  - title: "Advanced"
+    tribe: the_essentials
+    articles:
+      - {href: /javascript/vue/configure-nodejs, title: Configure Nodejs}
+      - {href: /javascript/vue/package-managers, title: 'Yarn, NPM, & Bower'}
+      - {href: /javascript/vue/task-runners, title: 'Task Runners'}

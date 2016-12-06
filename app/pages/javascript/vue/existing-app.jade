@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing vue App"
+    keywords    = "nodejs,vue"
+    description = "launch vue app"
+    articles    = "nodejs/vue"
+    icons       = "nodejs,vue"
+    
+block markdown
+  include:md /articles/nodejs/vue/existing-app.md

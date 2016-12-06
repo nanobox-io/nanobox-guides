@@ -39,7 +39,10 @@ generatedIcons = [
   {icon:'symfony', title:'Symfony'}
 ]
 
-newIcons = []
+newIcons = [
+  {icon:'hapi', title:'Hapi'}
+  {icon:'vue', title:'Vue'}
+]
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )
   .open('http://localhost:8080/github-icons/index.html')

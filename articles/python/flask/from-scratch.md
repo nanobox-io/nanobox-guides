@@ -58,7 +58,7 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0')
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash
