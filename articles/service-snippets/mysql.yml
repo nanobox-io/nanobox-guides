@@ -1,4 +1,4 @@
 documentation: /mysql
 boxfile: |
   data.mysql:
-    image: nanobox/mysql
+    image: nanobox/mysql:5.6

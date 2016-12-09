@@ -1,4 +1,4 @@
 documentation: /memcached
 boxfile: |
   data.memcached:
-    image: nanobox/memcached
+    image: nanobox/memcached:1.4
