@@ -25,9 +25,9 @@ run.config:
 ## Configure Hapi
 
 #### Listen on 0.0.0.0
-Hapi allows connections on all available IP's (0.0.0.0) by default.
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Hapi does this by default, and so no additional configuration is needed.
 
-#### Add local DNS
+## Add local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

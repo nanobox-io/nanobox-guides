@@ -26,7 +26,7 @@ exit
 ## Configure Hapi
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0). Hapi does this by default.
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Hapi does this by default, and so no additional configuration is needed.
 
 ## Add a local DNS
 Add a convenient way to access your app from the browser:
