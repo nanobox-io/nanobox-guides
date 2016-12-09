@@ -18,18 +18,38 @@ For databases that require a name, the name will always be `gonano`.
 **HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
-WIP
+Before connecting to the database, you'll first need to install the `pg-promise` adapter:
+
+```bash
+# drop into a nanobox console
+nanobox run
+
+# install npm package
+npm install pg-promise --save
+
+# exit the console
+exit
+```
+
+Then create a `database.js` with the following:
+
+```javascript
+var pgp = require("pg-promise")(/*options*/);
+var db = pgp("postgres://${process.env.DATA_DB_USER}:${process.env.DATA_DB_PASS}@${process.env.DATA_DB_HOST}/gonano");
+```
+
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
 ## Test
 
 #### From an external client
 You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
-#### From hapi
-Your can also test the connection with hapi:
+#### From Hapi
+Your can also test the connection with Hapi:
 
 ```bash
-WIP
+nanobox run npm start
 ```
 
 ## Now what?
@@ -37,4 +57,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 
 * [Frontend Javascript](/nodejs/hapi/frontend-javascript)
 * [Local Environment Variables](/nodejs/hapi/local-evars)
-* [Back to hapi overview](/nodejs/hapi)
+* [Back to Hapi overview](/nodejs/hapi)

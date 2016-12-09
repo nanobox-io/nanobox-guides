@@ -36,6 +36,8 @@ somePostgresqlServer: {
   }
 ```
 
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
+
 ## Test
 
 #### From an external client

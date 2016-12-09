@@ -1,9 +1,9 @@
-# Existing hapi App
-Part of what makes Nanobox so useful is you don't even need Nodejs or hapi installed on your local machine to use them.
+# Existing Hapi App
+Part of what makes Nanobox so useful is you don't even need Nodejs or Hapi installed on your local machine to use them.
 
 ## Setup
 
-#### cd into your hapi app
+#### cd into your Hapi app
 Change into an existing project folder:
 
 ```bash
@@ -22,16 +22,12 @@ run.config:
   engine: nodejs
 ```
 
-## Configure hapi
+## Configure Hapi
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `WIP`:
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Hapi does this by default, and so no additional configuration is needed.
 
-```javascript
-WIP
-```
-
-#### Add local DNS
+## Add local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash
@@ -42,13 +38,13 @@ nanobox dns add local hapi.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/nodejs/hapi/add-a-database) before your app will run.
 
 ```bash
-WIP
+nanobox run npm start
 ```
 
-Visit your app at <a href="http://hapi.dev:WIP" target="\_blank">hapi.dev:WIP</a>
+Visit your app at <a href="http://hapi.dev:3000" target="\_blank">hapi.dev:3000</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your hapi app:
+With Nanobox, you have everything you need develop and run your Hapi app:
 
 ```bash
 # drop into a Nanobox console
@@ -73,4 +69,4 @@ Whats next? Think about what else your app might need and hopefully the topics b
 * [Add a Database](/nodejs/hapi/add-a-database)
 * [Frontend Javascript](/nodejs/hapi/frontend-javascript)
 * [Local Environment Variables](/nodejs/hapi/local-evars)
-* [Back to hapi overview](/nodejs/hapi)
+* [Back to Hapi overview](/nodejs/s)

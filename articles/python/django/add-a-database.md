@@ -33,6 +33,8 @@ DATABASES = {
 }
 ```
 
+**HEADS UP**: Any database created by nanobox will *always* be named `gonano`
+
 #### Install additional packages
 During the `build-runtime` phase, nanobox detects the development libraries your pip packages will need to properly install.
 
