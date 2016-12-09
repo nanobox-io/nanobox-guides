@@ -32,7 +32,7 @@ def hello():
     return "Hello nanobox!"
 ```
 
-#### Install flask
+#### Install Flask
 
 ```bash
 # drop into a nanobox console

@@ -1,7 +1,7 @@
 # Express from Scratch
 Part of what makes Nanobox so useful is you don't even need Nodejs or Express installed on your local machine to use them.
 
-## Create a Express project
+## Create an Express project
 Create the project folder and change into it:
 
 ```bash

@@ -2,22 +2,58 @@
 Part of what makes Nanobox so useful is you don't even need Nodejs or Hapi installed on your local machine to use them.
 
 ## Create a Hapi project
-Clone the quickstart project folder and change into it:
+Create the project folder and change into it:
 
 ```bash
-git clone https://github.com/nanobox-quickstarts/nanobox-hapi.git && cd nanobox-hapi
+mkdir nanobox-hapi && cd nanobox-hapi
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
-## Initialise a Hapi App
+#### Add a boxfile.yml
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+
+```yaml
+run.config:
+  engine: nodejs
+```
+
+## Create a Hapi App
+Create a basic Hapi app at the root of your project named `server.js`:
+
+```javascript
+'use strict';
+
+const Hapi = require('hapi');
+
+const server = new Hapi.Server();
+server.connection({ port: 3000 });
+
+server.route({
+  method: 'GET',
+  path: '/',
+  handler: function (request, reply) {
+      reply('Hello, nanobox!');
+  }
+});
+
+server.start((err) => {
+  if (err) {
+      throw err;
+  }
+  console.log(`Server running at: ${server.info.uri}`);
+});
+```
+#### Install Hapi
 
 ```bash
 # drop into a nanobox console
 nanobox run
 
-# install dependencies
-npm install
+# install hapi.js and save to package.json
+npm install hapi --save
 
 # exit the console
 exit
