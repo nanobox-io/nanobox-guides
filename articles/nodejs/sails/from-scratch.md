@@ -26,10 +26,12 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install sails so we can use it to generate our application
+# install sails so you can use it to generate your application
 npm install -g sails
 
-# generate our new sails application; due to a limitation in sails we'll have to generate our app in another folder and move it where we want it
+# generate your new sails application; due to a limitation in
+# sails you'll have to generate your app in another folder and
+# move it
 
 # cd into the /tmp dir to create an app
 cd /tmp

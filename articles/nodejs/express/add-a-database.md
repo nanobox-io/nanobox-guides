@@ -19,14 +19,7 @@ Nanobox generates the following environment variables based off that name:
 Before connecting to the database, you'll first need to install the `pg-promise` adapter:
 
 ```bash
-# drop into a nanobox console
-nanobox run
-
-# install npm package
-npm install pg-promise --save
-
-# exit the console
-exit
+nanobox run npm install pg-promise --save
 ```
 
 Then create a `database.js` with the following:

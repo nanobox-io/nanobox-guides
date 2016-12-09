@@ -47,7 +47,15 @@ Add a convenient way to access your app from the browser:
 nanobox dns add local django.dev
 ```
 
-**HEADS UP**: You'll need to add `django.dev` to the list of `ALLOWED_HOSTS` in `app/settings.py`
+To use the DNS route you'll need to update the `ALLOWED_HOSTS` section of `app/settings.py`:
+
+```python
+ALLOWED_HOSTS = [
+  'django.dev'
+]
+```
+
+**HEADS UP**: If you want to access your app from the IP that nanobox generates for it, you'll have to add it to the `ALLOWED_HOSTS` as well. That IP can be found when dropping into a nanobox console.
 
 ## Run the app
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/django/add-a-database) before your app will run.
