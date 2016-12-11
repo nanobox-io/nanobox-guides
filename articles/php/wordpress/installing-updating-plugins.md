@@ -23,7 +23,7 @@ When using WordPress in dev, you can manage plugins the same way you normally wo
 ![Install Plugins](/assets/php/wordpress/wp-plugins.png)
 
 ## Don't Store Plugins in a Network Directory
-Network directories are stored in your persistent network file-storage and are shared between all web nodes. It can be tempting to specify `wp-content/plugins` or `wp-conent` as a `network_dirs` in your boxfile.yml, but this is a bad idea. Here's why:
+Network directories are stored in your persistent network file-storage and are shared between all web nodes. It can be tempting to specify `wp-content/plugins` or `wp-content` as a `network_dirs` in your boxfile.yml, but this is a bad idea. Here's why:
 
 ### Slow Performance
 Requests to network directories must traverse your app's network, adding latency to every request. While this latency is minimal, it can add up very quickly.
