@@ -32,10 +32,16 @@ Specifies which Node.js runtime and version to use. The following runtimes are a
 - nodejs-6.3
 - nodejs-6.4
 - nodejs-6.5
+- nodejs-6.6
+- nodejs-6.7
+- nodejs-6.8
+- nodejs-6.9
+- nodejs-7.0
 - iojs-2.3
 
 ```yaml
 run.config:
+  engine: nodejs
   engine.config:
     runtime: nodejs-4.4
 ```
