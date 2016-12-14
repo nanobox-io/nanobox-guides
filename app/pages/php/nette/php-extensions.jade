@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "PHP Extensions"
+    keywords    = "php,nette,extensions"
+    description = "Available PHP extensions with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/php/extensions.md

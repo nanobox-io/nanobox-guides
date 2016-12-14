@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "App Health"
+    keywords    = "php,nette,app-health"
+    description = "Monitor the health of your Nette app with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/shared/app-health.md

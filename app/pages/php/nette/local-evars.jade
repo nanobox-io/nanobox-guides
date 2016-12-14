@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Local Environment Variables"
+    keywords    = "php,nette,environment-variables"
+    description = "Nette environment variables with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

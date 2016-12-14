@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Nette From Scratch"
+    keywords    = "php,nette,new"
+    description = "Launch a new Nette app with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/php/nette/from-scratch.md

@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "php,nette,launch"
+    description = "Launch your Nette app on live servers with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/php/nette/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

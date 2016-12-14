@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Webserver Config"
+    keywords    = "php,nette,webserver,apache,nginx"
+    description = "Apache and Nginx webserver configuration with PHP and Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/php/webserver-config.md

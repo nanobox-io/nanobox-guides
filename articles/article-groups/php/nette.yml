@@ -1,0 +1,51 @@
+title: Nette
+href: /php/nette
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/nette/from-scratch, title: Nette from Scratch}
+      - {href: /php/nette/existing-app, title: Existing Nette App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/nette/add-a-database, title: Add a Database}
+      - {href: /php/nette/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/nette/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/nette/configure-nette, title: Configure Nette}
+      - {href: /php/nette/preview-your-app, title: Preview your App}
+      - {href: /php/nette/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/nette/point-your-domain, title: Point your Domain}
+      - {href: /php/nette/encryption, title: SSL/TLS Encryption}
+      - {href: /php/nette/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/nette/scale-your-app, title: Scale Your App}
+      - {href: /php/nette/debugging, title: Debugging}
+      - {href: /php/nette/app-health, title: App Health}
+      - {href: /php/nette/remote-access, title: Remote Access}
+      - {href: /php/nette/team-management, title: Team Management}
+      - {href: /php/nette/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/nette/configure-php, title: Configure PHP}
+      - {href: /php/nette/php-extensions, title: PHP Extensions}
+      - {href: /php/nette/composer, title: Composer}
+      - {href: /php/nette/webserver-config, title: Webserver Config}
+      - {href: /php/nette/extensions-config, title: Extensions Config}

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nette for Production"
+    keywords    = "php,nette,configure,production"
+    description = "Configure your Nette app for production with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/php/nette/configure-nette.md

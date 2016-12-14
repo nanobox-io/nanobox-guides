@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Platform"
+    keywords    = "php,nette,manage,production"
+    description = "Manage your Nette app in production with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

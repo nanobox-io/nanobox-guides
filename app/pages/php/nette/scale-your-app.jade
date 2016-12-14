@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Your App"
+    keywords    = "php,nette,production,scale"
+    description = "Scaling your Nette app with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

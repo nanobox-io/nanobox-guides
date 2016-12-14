@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database"
+    keywords    = "php,nette,add-a-database"
+    description = "Add a database to your Nette app with Nanobox"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    
+block markdown
+  include:md /articles/php/nette/add-a-database.md
