@@ -2,10 +2,10 @@
 Part of what makes Nanobox so useful is you don't even need PHP or nette installed on your local machine to use them.
 
 ## Create a Nette project
-Create a project folder and change into it:
+Create Nette project using composer:
 
 ```bash
-mkdir nanobox-nette && cd nanobox-nette
+composer create-project nanobox-guides/nanobox-nette && cd nanobox-nette
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -28,19 +28,23 @@ run.config:
 
     # enables php extensions
     extensions:
-      WIP
-```
-
-## Generate a Nette App
-
-```bash
-# drop into a nanobox console
-nanobox run
-
-WIP
-
-# exit the console
-exit
+      - bcmath
+      - ctype
+      - dom
+      - fileinfo
+      - gd
+      - json
+      - iconv
+      - intl
+      - mbstring
+      - pdo
+      - pdo_mysql
+      - pdo_sqlite
+      - session
+      - simplexml
+      - tokenizer
+      - xml
+      - zlib
 ```
 
 ## Add a local DNS
@@ -53,10 +57,10 @@ nanobox dns add local nette.dev
 ## Run the app
 
 ```bash
-WIP
+nanobox run php bin/console server:run 0.0.0.0
 ```
 
-Visit your app at <a href="http://nette.dev:WIP" target="\_blank">nette.dev:WIP</a>
+Visit your app at <a href="http://nette.dev:8000" target="\_blank">nette.dev:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your nette app:

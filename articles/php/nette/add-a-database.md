@@ -30,8 +30,20 @@ run.config:
 ```
 
 #### Configure Nette
+Update your `config.local.neon` to use environment variables.
 
-WIP
+```yaml
+parameters:
+    database:
+        host: ::getenv(DATA_DB_HOST)
+        user: ::getenv(DATA_DB_USER)
+        password: ::getenv(DATA_DB_PASS)
+
+database:
+    dsn: 'mysql:host=%database.host%;dbname=test'
+    user: %database.user%
+    password: %database.password%
+```
 
 ## Test
 
@@ -39,7 +51,8 @@ WIP
 You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
 #### From Nette
-WIP
+
+You can also test your connection by simply trying to load application from your browser.
 
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
