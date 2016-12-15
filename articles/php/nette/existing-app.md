@@ -28,7 +28,23 @@ run.config:
 
     # enables php extensions
     extensions:
-      WIP
+      - bcmath
+      - ctype
+      - dom
+      - fileinfo
+      - gd
+      - json
+      - iconv
+      - intl
+      - mbstring
+      - pdo
+      - pdo_mysql
+      - pdo_sqlite
+      - session
+      - simplexml
+      - tokenizer
+      - xml
+      - zlib
 ```
 
 ## Add a local DNS
@@ -43,10 +59,10 @@ nanobox dns add local nette.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/php/nette/add-a-database) before your app will run.
 
 ```bash
-WIP
+nanobox run php bin/console server:run 0.0.0.0
 ```
 
-Visit your app at <a href="http://nette.dev:WIP" target="\_blank">nette.dev:WIP</a>
+Visit your app at <a href="http://nette.dev:8000" target="\_blank">nette.dev:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your nette app:
