@@ -1,7 +1,7 @@
-# Configure hapi for Production
+# Configure Hapi for Production
 
 ## Setup a webserver
-hapi runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into hapi through node's builtin server.
+Hapi runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into Hapi through node's builtin server.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -54,7 +54,7 @@ http {
 
         try_files $uri/index.html $uri @hapi;
 
-        # Proxy connections to hapi
+        # Proxy connections to Hapi
         location @hapi {
             proxy_pass         http://hapi;
             proxy_redirect     off;
@@ -94,7 +94,7 @@ In the above snippet `main` is the name of the worker component and can be anyth
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
 
 ## Compile Assets
-We can have hapi compile assets during the deploy process by adding an extra step:
+We can have Hapi compile assets during the deploy process by adding an extra step:
 
 ```yaml
 deploy.config:
@@ -120,4 +120,4 @@ With your app configured for running in production, whats next? Think about what
 
 * [Preview your App](/nodejs/hapi/preview-your-app)
 * [Launch your App](/nodejs/hapi/launch-your-app)
-* [Back to hapi overview](/nodejs/hapi)
+* [Back to Hapi overview](/nodejs/hapi)
