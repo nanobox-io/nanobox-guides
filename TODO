@@ -2,7 +2,5 @@
 contributors       = [
   // General Guides
   {name:"Ian Walter", gravatarHash:'9EABE5CD9EF43BAD75D08839E01B0A38', href:"https://iankwalter.com"}
-  // Nette
-  {name:"foxycode", gravatarHash:'D4B346EA555E0044D81E688A748E5445', href:"http://tomasjacik.cz"}
 ]
 ☐ Figure out if we want CMS / generators sections
