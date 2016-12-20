@@ -1,9 +1,10 @@
 class FrameworkLanding extends Landing
 
-  constructor: (requiredComponents, optionalComponents, informalName, articles) ->
+  constructor: (requiredComponents, optionalComponents, informalName, articles, contributors) ->
     super()
     @buildLeftSection requiredComponents, optionalComponents, informalName
     @loadArticleGroups articles
+    @addContributors contributors
 
   buildLeftSection : (requiredComponents=[], optionalComponents=[], informalName) ->
     return if requiredComponents.length == 0
@@ -44,6 +45,12 @@ class FrameworkLanding extends Landing
       # Only applicable to local testing
       if window.isLocal
         window.localizeLinks()
+
+  addContributors : (contributors) ->
+    if contributors?
+      if contributors.length > 0
+        $contributors = $ jadeTemplate['framework-overview/contributors']( {contributors:contributors} )
+        $("#article-groups").append $contributors
 
 
 window.FrameworkLanding = FrameworkLanding

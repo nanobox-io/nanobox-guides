@@ -14,7 +14,7 @@ block js
     var requiredComponents = (requiredComponents === null) ? [] : requiredComponents
     var optionalComponents = (optionalComponents === null) ? [] : optionalComponents
     var articleGroups      = (articleGroups === null)      ? [] : articleGroups
-    article = new FrameworkLanding(requiredComponents, optionalComponents, "#{informalName}", articleGroups )
+    article = new FrameworkLanding(requiredComponents, optionalComponents, "#{informalName}", articleGroups, contributors )
     $main = $('.main')
     nanobox.addBreadcrumb( $main )
     //- nanobox.addIcons( $main, "#{iconCrumbs}" )

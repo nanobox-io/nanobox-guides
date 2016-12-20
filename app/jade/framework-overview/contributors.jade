@@ -1,0 +1,8 @@
+.guides-title.contrib Community Contributors
+.contrib-heart
+  img.shadow-icon(data-src="heart" scalable="true")
+.contributors
+  each contributor in contributors
+    a.contributor(href="#{contributor.href}")
+      img(src="https://secure.gravatar.com/avatar/#{contributor.gravatarHash.toLowerCase()}?d=retro&r=pg&size=60")
+      .name= contributor.name
