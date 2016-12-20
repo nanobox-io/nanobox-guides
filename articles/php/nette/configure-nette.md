@@ -61,32 +61,18 @@ web.main:
     nginx[error]: /data/var/log/nginx/error.log
     php[error]: /data/var/log/php/php_error.log
     php[fpm]: /data/var/log/php/php_fpm.log
-    nette[error]: /app/storage/logs/nette.log
-    nette[exception]: /app/storage/logs/exception.log
+    nette[error]: /app/log/nette.log
+    nette[exception]: /app/log/exception.log
 
 worker.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
     php[error]: /data/var/log/php/php_error.log
-    nette[error]: /app/storage/logs/nette.log
-    nette[exception]: /app/storage/logs/exception.log
+    nette[error]: /app/log/nette.log
+    nette[exception]: /app/log/exception.log
 ```
 
 You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) doc for more information about this node.
-
-## Migrate Schema
-To migrate your schema you can add a `before_live` hook, which will run just before the new instances are started.
-You can use for example package [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) to use migrations in Nette.
-
-#### Add a deploy hook
-In your existing boxfile.yml add the following code:
-
-```yaml
-deploy.config:
-  before_live:
-    web.main:
-      - php bin/console orm:schema-tool:update --force
-```
 
 ## Now what?
 With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

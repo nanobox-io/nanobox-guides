@@ -54,6 +54,13 @@ Add a convenient way to access your app from the browser
 nanobox dns add local nette.dev
 ```
 
+## Turn on nette debug mode
+You can optinally turn on debug mode. Debug/production mode is handled using environment variable `NETTE_DEVEL`.
+
+```bash
+nanobox evar add local NETTE_DEVEL=1
+```
+
 ## Run the app
 
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/php/nette/add-a-database) before your app will run.
