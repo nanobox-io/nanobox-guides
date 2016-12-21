@@ -88,7 +88,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | magickwand     | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
 | mbstring       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | mcrypt         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| memcache       | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
+| memcache       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | memcached      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | mogilefs       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | mongo          | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
