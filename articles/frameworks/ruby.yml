@@ -4,3 +4,4 @@ home: /ruby
 frameworks:
   - {href: /ruby/rails, name: rails, icon: rails}
   - {href: /ruby/sinatra, name: sinatra, icon: sinatra}
+  # - {href: /ruby/hanami, name: hanami, icon: hanami, devMode: true}

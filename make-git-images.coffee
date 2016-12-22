@@ -39,6 +39,8 @@ generatedIcons = [
   {icon:'symfony', title:'Symfony'}
   {icon:'hapi', title:'Hapi'}
   {icon:'vue', title:'Vue'}
+  {icon:'nette', title:'Nette'}
+  {icon:'hanami', title:'Hanami'}
 ]
 
 # Add new icons to generate here:
