@@ -38,6 +38,7 @@ livereload.listen()
 # new
 inject       = require 'gulp-inject'
 foreach      = require 'gulp-foreach'
+rev          = require 'gulp-rev'
 # Paths to source files
 
 articlePath       = 'articles/**/*.md'
@@ -184,9 +185,9 @@ minifyAndJoin = () ->
   gulp.src('./server/**/*.html').pipe foreach((stream, file) ->
     stream.pipe(
       usemin
-        css                  : [ minifyCss(), 'concat']
+        css                  : [ minifyCss(), 'concat', rev()]
         html                 : [ minifyHtml({empty: true})]
-        js                   : [ uglify()]
+        js                   : [ uglify(), rev()]
         path                 : './server'
         skipMissingResources : true
         # assetsDir            : 'rel/'
