@@ -41,6 +41,14 @@ generatedIcons = [
   {icon:'vue', title:'Vue'}
   {icon:'nette', title:'Nette'}
   {icon:'hanami', title:'Hanami'}
+  {icon:'ghost', title:'Ghost'}
+  {icon:'phalcon', title:'Phalcon'}
+  {icon:'silex', title:'Silex'}
+  {icon:'react', title:'React'}
+  {icon:'pyramid', title:'Pyramid'}
+  {icon:'bottle', title:'Bottle'}
+  {icon:'denali', title:'Denali'}
+  {icon:'backbone', title:'Backbone'}
 ]
 
 # Add new icons to generate here:
