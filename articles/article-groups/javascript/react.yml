@@ -1,0 +1,18 @@
+title: React
+href: /javascript/react
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /javascript/react/from-scratch, title: React from Scratch}
+      - {href: /javascript/react/existing-app, title: Existing React App}
+
+  #
+  - title: "Advanced"
+    tribe: the_essentials
+    articles:
+      - {href: /javascript/react/configure-nodejs, title: Configure Nodejs}
+      - {href: /javascript/react/package-managers, title: 'Yarn, NPM, & Bower'}
+      - {href: /javascript/react/task-runners, title: 'Task Runners'}

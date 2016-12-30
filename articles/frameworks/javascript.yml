@@ -5,4 +5,4 @@ frameworks:
   - {href: /javascript/angular, name: Angular, icon: angular}
   - {href: /javascript/ember, name: Ember, icon: ember}
   - {href: /javascript/vue, name: Vue, icon: vue}
-  # - {href: /javascript/react, name: React, icon: react, devMode: true}
+  - {href: /javascript/react, name: React, icon: react, devMode: true}

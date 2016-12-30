@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing React App"
+    keywords    = "javascript,react"
+    description = "Launch your existing React app with Nanobox"
+    articles    = "javascript/react"
+    icons       = "javascript,react"
+    
+block markdown
+  include:md /articles/javascript/react/existing-app.md

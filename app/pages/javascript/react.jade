@@ -1,0 +1,20 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "React with Nanobox"
+    description  = "Get your React app up and running with Nanobox"
+    formalName   = "React"
+    informalName = "react"
+    icon         = "react"
+    iconCrumbs   = "javascript,react"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+    ]
+    optionalComponents = []
+    articleGroups = "javascript/react"
