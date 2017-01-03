@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Phalcon for Production"
+    keywords    = "php,phalcon,configure,production"
+    description = "Configure your Phalcon app for production with Nanobox"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    
+block markdown
+  include:md /articles/php/phalcon/configure-phalcon.md

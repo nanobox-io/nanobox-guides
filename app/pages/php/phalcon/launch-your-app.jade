@@ -1,0 +1,15 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "php,phalcon,launch"
+    description = "Launch your Phalcon app on live servers with Nanobox"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

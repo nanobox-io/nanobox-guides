@@ -1,0 +1,51 @@
+title: Phalcon
+href: /php/phalcon
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/phalcon/from-scratch, title: Phalcon from Scratch}
+      - {href: /php/phalcon/existing-app, title: Existing Phalcon App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/phalcon/add-a-database, title: Add a Database}
+      - {href: /php/phalcon/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/phalcon/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/phalcon/configure-phalcon, title: Configure Phalcon}
+      - {href: /php/phalcon/preview-your-app, title: Preview your App}
+      - {href: /php/phalcon/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/phalcon/point-your-domain, title: Point your Domain}
+      - {href: /php/phalcon/encryption, title: SSL/TLS Encryption}
+      - {href: /php/phalcon/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/phalcon/scale-your-app, title: Scale Your App}
+      - {href: /php/phalcon/debugging, title: Debugging}
+      - {href: /php/phalcon/app-health, title: App Health}
+      - {href: /php/phalcon/remote-access, title: Remote Access}
+      - {href: /php/phalcon/team-management, title: Team Management}
+      - {href: /php/phalcon/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/phalcon/configure-php, title: Configure PHP}
+      - {href: /php/phalcon/php-extensions, title: PHP Extensions}
+      - {href: /php/phalcon/composer, title: Composer}
+      - {href: /php/phalcon/webserver-config, title: Webserver Config}
+      - {href: /php/phalcon/extensions-config, title: Extensions Config}

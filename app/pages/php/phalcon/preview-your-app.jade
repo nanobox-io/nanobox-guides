@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "php,phalcon,stage,test"
+    description = "Preview your Phalcon app with Nanobox"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    
+block markdown
+  include:md /articles/php/phalcon/preview-your-app.md

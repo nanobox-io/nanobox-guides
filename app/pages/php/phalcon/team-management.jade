@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Team Management"
+    keywords    = "php,phalcon,production,manage"
+    description = "Managing your team with Nanobox"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    
+block markdown
+  include:md /articles/shared/team-management.md

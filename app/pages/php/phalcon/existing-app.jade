@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Phalcon App"
+    keywords    = "php,phalcon"
+    description = "Launch your existing Phalcon app with Nanobox"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    
+block markdown
+  include:md /articles/php/phalcon/existing-app.md

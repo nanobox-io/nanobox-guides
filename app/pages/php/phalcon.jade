@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Phalcon with Nanobox"
+    description  = "Get Phalcon up and running with Nanobox"
+    formalName   = "Phalcon"
+    informalName = "Phalcon"
+    icon         = "phalcon"
+    iconCrumbs   = "php,phalcon"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'PHP', icon:'php', href:'#'},
+      {name:'MySQL', icon:'mysql', href:'#'},
+      {name:'Storage', icon:'storage', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "php/phalcon"

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging Phalcon"
+    keywords    = "php,symfony,debug"
+    description = "Debugging your Phalcon app with Nanobox"
+    articles    = "php/symfony"
+    icons       = "php,symfony"
+    
+block markdown
+  include:md /articles/shared/debugging.md

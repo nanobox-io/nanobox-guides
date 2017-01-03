@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Webserver Config"
+    keywords    = "php,phalcon,webserver,apache,nginx"
+    description = "Apache and Nginx webserver configuration with PHP and Nanobox"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    
+block markdown
+  include:md /articles/php/webserver-config.md
