@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Your App"
+    keywords    = "golang,revel,production,scale"
+    description = "Scaling your Revel app with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

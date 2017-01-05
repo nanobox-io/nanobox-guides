@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database"
+    keywords    = "golang,beego,add-a-database"
+    description = "Add a database to Beego with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/golang/beego/add-a-database.md

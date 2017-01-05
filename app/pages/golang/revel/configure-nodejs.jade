@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Golang"
+    keywords    = "golang,configure"
+    description = "Configure Node.js and Revel with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/golang/config.md

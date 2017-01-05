@@ -1,0 +1,10 @@
+name: Golang
+icon: golang
+home: /golang
+frameworks:
+  - {href: /golang/beego, name: beego, icon: beego}
+  - {href: /golang/echo, name: echo, icon: echo}
+  - {href: /golang/gin, name: gin, icon: gin}
+  # - {href: /golang/hugo, name: hugo, icon: hugo}
+  - {href: /golang/iris, name: iris, icon: iris}
+  - {href: /golang/revel, name: revel, icon: revel}

@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Revel with Nanobox"
+    description  = "Get Revel up and running with Nanobox"
+    formalName   = "Revel"
+    informalName = "revel"
+    icon         = "revel"
+    iconCrumbs   = "golang,revel"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/revel"
+    devMode = true

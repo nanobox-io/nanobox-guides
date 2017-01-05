@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "golang,hugo,environment-variables"
+    description = "Hugo environment variables in production with Nanobox"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

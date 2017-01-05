@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Beego App"
+    keywords    = "golang,beego"
+    description = "Launch your existing Beego app with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/golang/beego/existing-app.md

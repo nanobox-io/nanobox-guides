@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "golang,echo,stage,test"
+    description = "Preview your Echo app with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/echo/preview-your-app.md

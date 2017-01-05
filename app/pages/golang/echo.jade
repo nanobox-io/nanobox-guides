@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Echo with Nanobox"
+    description  = "Get Echo up and running with Nanobox"
+    formalName   = "Echo"
+    informalName = "echo"
+    icon         = "echo"
+    iconCrumbs   = "golang,echo"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/echo"
+    devMode = true

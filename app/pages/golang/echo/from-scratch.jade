@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Echo From Scratch"
+    keywords    = "golang,echo,new"
+    description = "Launch a new Echo app with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/echo/from-scratch.md

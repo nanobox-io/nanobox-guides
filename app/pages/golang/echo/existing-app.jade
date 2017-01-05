@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Echo App"
+    keywords    = "golang,echo"
+    description = "Launch your existing Echo app with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/echo/existing-app.md

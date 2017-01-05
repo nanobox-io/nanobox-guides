@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Revel From Scratch"
+    keywords    = "golang,revel,new"
+    description = "Launch a new Revel app with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/golang/revel/from-scratch.md

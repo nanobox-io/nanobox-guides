@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "golang,beego,launch"
+    description = "Launch your Beego app with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/beego/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

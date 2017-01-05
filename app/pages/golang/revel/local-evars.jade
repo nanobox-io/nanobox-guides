@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Local Environment Variables"
+    keywords    = "golang,revel,environment-variables"
+    description = "Revel environment variables with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

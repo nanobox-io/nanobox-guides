@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database"
+    keywords    = "golang,iris,add-a-database"
+    description = "Add a database to Iris with Nanobox"
+    articles    = "golang/iris"
+    icons       = "golang,iris"
+    
+block markdown
+  include:md /articles/golang/iris/add-a-database.md

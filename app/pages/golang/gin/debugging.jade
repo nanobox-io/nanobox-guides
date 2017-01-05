@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging Gin"
+    keywords    = "golang,gin,debug"
+    description = "Debug your Gin app with Nanobox"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/shared/debugging.md

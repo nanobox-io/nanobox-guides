@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Revel for Production"
+    keywords    = "golang,revel,configure,production"
+    description = "Configuring Revel for production with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/golang/revel/configure-revel.md

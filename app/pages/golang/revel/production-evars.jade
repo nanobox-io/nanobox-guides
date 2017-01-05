@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "golang,revel,environment-variables"
+    description = "Revel environment variables in production with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

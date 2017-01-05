@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Beego From Scratch"
+    keywords    = "golang,beego,new"
+    description = "Launch a new Beego app with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/golang/beego/from-scratch.md

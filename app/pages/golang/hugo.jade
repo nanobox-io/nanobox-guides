@@ -1,0 +1,20 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Hugo with Nanobox"
+    description  = "Get Hugo up and running with Nanobox"
+    formalName   = "Hugo"
+    informalName = "hugo"
+    icon         = "hugo"
+    iconCrumbs   = "golang,hugo"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'}
+    ]
+    optionalComponents = []
+    articleGroups = "golang/hugo"
+    devMode = true

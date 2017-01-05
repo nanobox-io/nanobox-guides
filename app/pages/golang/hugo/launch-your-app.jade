@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "golang,hugo,launch"
+    description = "Launch your Hugo app with Nanobox"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/hugo/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "golang,beego,stage,test"
+    description = "Preview your Beego app with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/golang/beego/preview-your-app.md

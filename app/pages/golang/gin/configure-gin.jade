@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Gin for Production"
+    keywords    = "golang,gin,configure,production"
+    description = "Configuring Gin for production with Nanobox"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/golang/gin/configure-gin.md

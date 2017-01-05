@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Golang"
+    keywords    = "golang,configure"
+    description = "Configure Node.js and Echo with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/config.md

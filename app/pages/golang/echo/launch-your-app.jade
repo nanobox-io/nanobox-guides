@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "golang,echo,launch"
+    description = "Launch your Echo app with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/echo/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

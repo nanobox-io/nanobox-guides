@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "golang,echo,environment-variables"
+    description = "Echo environment variables in production with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

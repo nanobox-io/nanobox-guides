@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Echo for Production"
+    keywords    = "golang,echo,configure,production"
+    description = "Configuring Echo for production with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/echo/configure-echo.md

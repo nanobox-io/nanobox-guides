@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "golang,beego,environment-variables"
+    description = "Beego environment variables in production with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Frontend Javascript"
+    keywords    = "golang,revel,javascript,node,yarn,npm,bower,gulp,grunt,brunch,broccoli"
+    description = "Frontend javascript in Revel with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  :md
+    # Frontend Javascript
+  include:md /articles/shared/partials/nodejs.md
+  include:md /articles/shared/partials/package-managers.md
+  include:md /articles/shared/partials/task-runners.md

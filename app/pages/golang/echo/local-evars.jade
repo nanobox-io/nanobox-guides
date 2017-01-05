@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Local Environment Variables"
+    keywords    = "golang,echo,environment-variables"
+    description = "Echo environment variables with Nanobox"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Beego with Nanobox"
+    description  = "Get Beego up and running with Nanobox"
+    formalName   = "Beego"
+    informalName = "beego"
+    icon         = "beego"
+    iconCrumbs   = "golang,beego"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/beego"
+    devMode = true

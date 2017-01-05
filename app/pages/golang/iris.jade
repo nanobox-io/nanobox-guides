@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Iris with Nanobox"
+    description  = "Get Iris up and running with Nanobox"
+    formalName   = "Iris"
+    informalName = "iris"
+    icon         = "iris"
+    iconCrumbs   = "golang,iris"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/iris"
+    devMode = true

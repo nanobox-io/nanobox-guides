@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "golang,gin,remote-access"
+    description = "Remotely accessing your Gin app with Nanobox"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

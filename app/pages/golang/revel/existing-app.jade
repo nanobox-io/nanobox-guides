@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Revel App"
+    keywords    = "golang,revel"
+    description = "Launch your existing Revel app with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/golang/revel/existing-app.md

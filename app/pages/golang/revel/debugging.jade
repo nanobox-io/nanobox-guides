@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging Revel"
+    keywords    = "golang,revel,debug"
+    description = "Debug your Revel app with Nanobox"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/debugging.md

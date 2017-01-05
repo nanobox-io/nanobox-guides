@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "golang,gin,stage,test"
+    description = "Preview your Gin app with Nanobox"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/golang/gin/preview-your-app.md

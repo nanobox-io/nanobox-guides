@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Platform"
+    keywords    = "golang,iris,manage,production"
+    description = "Manage Iris in production with Nanobox"
+    articles    = "golang/iris"
+    icons       = "golang,iris"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

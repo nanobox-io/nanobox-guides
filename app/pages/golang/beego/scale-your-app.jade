@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Your App"
+    keywords    = "golang,beego,production,scale"
+    description = "Scaling your Beego app with Nanobox"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

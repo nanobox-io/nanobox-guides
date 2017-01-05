@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Gin App"
+    keywords    = "golang,gin"
+    description = "Launch your existing Gin app with Nanobox"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/golang/gin/existing-app.md

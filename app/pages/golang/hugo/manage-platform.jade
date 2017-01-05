@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Platform"
+    keywords    = "golang,hugo,manage,production"
+    description = "Manage Hugo in production with Nanobox"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md
