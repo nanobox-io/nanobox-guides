@@ -18,3 +18,5 @@ nanobox deploy dry-run
 Visit your app at <a href="http://flask.preview" target="\_blank">http://flask.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
+
+**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/python/flask/local-evars) with `nanobox add evar dry-run KEY=VALUE`.
