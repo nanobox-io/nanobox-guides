@@ -51,14 +51,16 @@ generatedIcons = [
   {icon:'denali', title:'Denali'}
   {icon:'zf', title:'Zend Framework'}
   {icon:'yii', title:'Yii'}
-]
-
-# Add new icons to generate here:
-newIcons = [
   {icon:'revel', title:'Revel'}
   {icon:'echo', title:'Echo'}
   {icon:'iris', title:'Iris'}
   {icon:'gin', title:'Gin'}
+]
+
+# Add new icons to generate here:
+newIcons = [
+  {icon:'beego', title:'Beego'}
+  {icon:'hugo', title:'Hugo'}
   # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
