@@ -47,12 +47,18 @@ generatedIcons = [
   {icon:'react', title:'React'}
   {icon:'pyramid', title:'Pyramid'}
   {icon:'bottle', title:'Bottle'}
-  {icon:'denali', title:'Denali'}
   {icon:'backbone', title:'Backbone'}
+  {icon:'denali', title:'Denali'}
+  {icon:'zf', title:'Zend Framework'}
+  {icon:'yii', title:'Yii'}
 ]
 
 # Add new icons to generate here:
 newIcons = [
+  {icon:'revel', title:'Revel'}
+  {icon:'echo', title:'Echo'}
+  {icon:'iris', title:'Iris'}
+  {icon:'gin', title:'Gin'}
   # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
