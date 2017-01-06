@@ -55,12 +55,12 @@ generatedIcons = [
   {icon:'echo', title:'Echo'}
   {icon:'iris', title:'Iris'}
   {icon:'gin', title:'Gin'}
+  {icon:'beego', title:'Beego'}
+  {icon:'hugo', title:'Hugo'}
 ]
 
 # Add new icons to generate here:
 newIcons = [
-  {icon:'beego', title:'Beego'}
-  {icon:'hugo', title:'Hugo'}
   # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
