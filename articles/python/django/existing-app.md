@@ -66,7 +66,7 @@ To allow connections from the host machine into the app's container, you'll need
 nanobox run python manage.py runserver 0.0.0.0:8000
 ```
 
-Visit your app -> <a href="http://django.dev:8000" target="\_blank">django.dev:8000</a>
+Visit your app at <a href="http://django.dev:8000" target="\_blank">django.dev:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Django app:

@@ -1,0 +1,24 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Golang with Nanobox"
+    description  = "Get Golang up and running with Nanobox"
+    formalName   = "Golang"
+    informalName = "golang"
+    icon         = "golang"
+    iconCrumbs   = "golang"
+    noQuickstart = true
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Postgres', icon:'postgres', href:'#'},
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/generic"

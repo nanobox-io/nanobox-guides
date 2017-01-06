@@ -40,12 +40,12 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 Your can also test the connection directly from your app:
 
 ```bash
-nanobox run revel run YOURAPP.go
+nanobox run go run YOURAPP.go
 ```
 
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Frontend Javascript](/golang/revel/frontend-javascript)
-* [Local Environment Variables](/golang/revel/local-evars)
-* [Back to Golang overview](/golang/revel/)
+* [Frontend Javascript](/golang/generic/frontend-javascript)
+* [Local Environment Variables](/golang/generic/local-evars)
+* [Back to Golang overview](/golang/generic/)

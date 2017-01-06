@@ -1,59 +1,74 @@
 # Existing Revel App
-Part of what makes nanobox so useful is you don't even need golang or revel installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need Golang or Revel installed on your local machine to use them.
 
-This guide will help you get an existing Revel app up-and-running with nanobox.
+## Setup
 
-## Build a Ruby Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
+#### cd into your Revel app
+Change into an existing project folder:
 
-From within this environment you can develop and run your app as you normally would with things like `go get` or `go build`.
+```bash
+cd my-revel-app
+```
 
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the golang <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Golang <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
-code.build:
+run.config:
   engine: golang
-  config:
+  engine.config:
     package: nanobox-revel
 ```
 
-#### Start the Environment
-You can then start the dev environment:
+## Configure Revel
+
+#### Listen on 0.0.0.0
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Revel does this by default, and so no additional configuration is needed.
+
+#### Add local DNS
+Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dev start
+nanobox dns add local revel.dev
 ```
 
-## Configure your Revel App
-To allow connections from the host machine into the app's container modify the `conf/app.conf` telling revel to listen on all available IP's at port 8080:
-
-```conf
-httpaddr = "0.0.0.0"
-httpport = 8080
-```
-
-Also, add a convenient way to access your app from a browser:
+## Run the app
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/golang/revel/add-a-database) before your app will run.
 
 ```bash
-nanobox dev dns add revel.nanobox.dev
+nanobox run revel run my-revel-app
 ```
 
-## Revel up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+Visit your app at <a href="http://revel.dev:9000" target="\_blank">revel.dev:9000</a>
+
+## Explore
+With Nanobox, you have everything you need develop and run your revel app:
 
 ```bash
-revel run
-```
+# drop into a Nanobox console
+nanobox run
 
-Once the app has started you can visit it from your favorite browser at `revel.nanobox.dev:8080`.
+# where golang is installed,
+go version
+
+# git is installed,
+git --version
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/golang/revel/next-steps/add-a-database)
-* [Javascript Runtime](/golang/revel/next-steps/javascript-runtime)
-* [Local Environment Variables](/golang/revel/next-steps/local-evars)
+* [Add a Database](/golang/revel/add-a-database)
+* [Frontend Javascript](/golang/revel/frontend-javascript)
+* [Local Environment Variables](/golang/revel/local-evars)
 * [Back to Revel overview](/golang/revel)

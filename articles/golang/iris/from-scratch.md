@@ -1,81 +1,113 @@
 # Iris from Scratch
-Part of what makes nanobox so useful is you don't even need golang or iris installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need Nodejs or Iris installed on your local machine to use them.
 
-This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-iris" target="\_blank">nanobox-iris</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
-
-## Build a Ruby Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
-
-From within this environment you can develop and run your app as you normally would with things like `go get` or `go build`.
-
-#### Create a Iris project folder
-Decide where you want your project to live and create a folder there:
+## Create a Iris project
+Create the project folder and change into it:
 
 ```bash
-mkdir nanobox-iris
+mkdir nanobox-iris && cd nanobox-iris
 ```
 
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the golang <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
-code.build:
+run.config:
   engine: golang
-  config:
+  engine.config:
     package: nanobox-iris
 ```
 
-#### Start the Environment
-You can then start the dev environment:
+## Create an Iris App
+
+#### Install Iris
 
 ```bash
-nanobox dev start
+# drop into a nanobox console
+nanobox run
+
+# install iris so you can use it to generate your application
+go get -u github.com/kataras/iris/iris
+
+# exit the console
+exit
 ```
 
-## Create a Iris App
-Once the dev environment is started you can console into it and create a new iris application:
+Create a basic Iris app at the root of your project named `main.go`:
+
+```golang
+package main
+
+import "github.com/kataras/iris"
+
+func main() {
+  iris.Get("/hi", hi)
+  iris.Listen(":8080")
+}
+
+func hi(ctx *iris.Context){
+  ctx.Render("hi.html", struct { Name string }{ Name: "iris" })
+}
+```
+
+Create a new html page for your application at `./templates/hi.html`:
+
+```html
+<html><head> <title> Hi Iris</title> </head>
+  <body>
+    <h1> Hi {{.Name}} </h1>
+  </body>
+</html>
+```
+
+## Configure Iris
+
+#### Listen on 0.0.0.0
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Iris does this by default, and so no additional configuration is needed.
+
+## Add a local DNS
+Add a convenient way to access your app from the browser:
 
 ```bash
-# console into the dev environment
-nanobox dev console
-
-# install iris so we can use it to generate our application
-go get github.com/astaxie/iris
-go get github.com/iris/bee
-
-# generate the iris app
-iris new .
+nanobox dns add local iris.dev
 ```
 
-#### Configure your Iris app
-To allow connections from the host machine into the app's container modify the `conf/app.conf` telling iris to listen on all available IP's at port 8080:
-
-```conf
-httpaddr = "0.0.0.0"
-httpport = 8080
-```
-
-Also, add a convenient way to access your app from a browser:
+## Run the app
 
 ```bash
-nanobox dev dns add iris.nanobox.dev
+nanobox run go run main.go
 ```
 
-## Iris up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+Visit your app at <a href="http://iris.dev:8080/hi" target="\_blank">iris.dev:8080/hi</a>
+
+## Explore
+With Nanobox, you have everything you need develop and run your iris app:
 
 ```bash
-iris run
-```
+# drop into a Nanobox console
+nanobox run
 
-Once the app has started you can visit it from your favorite browser at `iris.nanobox.dev:8080`.
+# where go is installed,
+go version
+
+# git is installed,
+git --version
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/golang/iris/next-steps/add-a-database)
-* [Javascript Runtime](/golang/iris/next-steps/javascript-runtime)
-* [Local Environment Variables](/golang/iris/next-steps/local-evars)
+* [Add a Database](/golang/iris/add-a-database)
+* [Frontend Javascript](/golang/iris/frontend-javascript)
+* [Local Environment Variables](/golang/iris/local-evars)
 * [Back to Iris overview](/golang/iris)

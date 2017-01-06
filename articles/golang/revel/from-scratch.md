@@ -1,81 +1,98 @@
 # Revel from Scratch
-Part of what makes nanobox so useful is you don't even need golang or revel installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need Nodejs or Revel installed on your local machine to use them.
 
-This guide outlines the process used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-revel" target="\_blank">nanobox-revel</a> quickstart app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
-
-## Build a Ruby Dev Environment
-Nanobox creates an isolated virtual environment for your app, mounting the app's codebase inside.
-
-From within this environment you can develop and run your app as you normally would with things like `go get` or `go build`.
-
-#### Create a Revel project folder
-Decide where you want your project to live and create a folder there:
+## Create a Revel project
+Create the project folder and change into it:
 
 ```bash
-mkdir nanobox-revel
+mkdir nanobox-revel && cd nanobox-revel
 ```
 
-**IMPORTANT**: Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+**HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
 
 #### Add a boxfile.yml
-The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the golang <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
+Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
+
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
-code.build:
+run.config:
   engine: golang
-  config:
+  engine.config:
     package: nanobox-revel
 ```
 
-#### Start the Environment
-You can then start the dev environment:
+## Generate an Revel App
 
 ```bash
-nanobox dev start
-```
+# drop into a nanobox console
+nanobox run
 
-## Create a Revel App
-Once the dev environment is started you can console into it and create a new revel application:
+# install revel so you can use it to generate your application
+go get github.com/revel/revel
+go get github.com/revel/cmd/revel
 
-```bash
-# console into the dev environment
-nanobox dev console
+# generate your new revel application; due to a limitation in
+# revel you'll have to generate your app in another folder and
+# move it
 
-# install revel so we can use it to generate our application
-go get github.com/astaxie/revel
-go get github.com/revel/bee
+# cd into the /src directory on your gopath
+cd ..
 
 # generate the revel app
-revel new .
+revel new myapp
+
+# copy the generated app into the project
+cp -a ./myapp/* ./nanobox-revel
+
+# exit the console
+exit
 ```
 
-#### Configure your Revel app
-To allow connections from the host machine into the app's container modify the `conf/app.conf` telling revel to listen on all available IP's at port 8080:
+## Configure Revel
 
-```conf
-httpaddr = "0.0.0.0"
-httpport = 8080
-```
+#### Listen on 0.0.0.0
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Revel does this by default, and so no additional configuration is needed.
 
-Also, add a convenient way to access your app from a browser:
+## Add a local DNS
+Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dev dns add revel.nanobox.dev
+nanobox dns add local revel.dev
 ```
 
-## Revel up-and-running
-Console into the dev environment with `nanobox dev console` and run the app like you would normally:
+## Run the app
 
 ```bash
-revel run
+nanobox run revel run nanobox-revel
 ```
 
-Once the app has started you can visit it from your favorite browser at `revel.nanobox.dev:8080`.
+Visit your app at <a href="http://revel.dev:9000" target="\_blank">revel.dev:9000</a>
+
+## Explore
+With Nanobox, you have everything you need develop and run your revel app:
+
+```bash
+# drop into a Nanobox console
+nanobox run
+
+# where go is installed,
+go version
+
+# git is installed,
+git --version
+
+# and your code is mounted
+ls
+
+# exit the console
+exit
+```
 
 ## Now what?
-With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/golang/revel/next-steps/add-a-database)
-* [Javascript Runtime](/golang/revel/next-steps/javascript-runtime)
-* [Local Environment Variables](/golang/revel/next-steps/local-evars)
+* [Add a Database](/golang/revel/add-a-database)
+* [Frontend Javascript](/golang/revel/frontend-javascript)
+* [Local Environment Variables](/golang/revel/local-evars)
 * [Back to Revel overview](/golang/revel)
