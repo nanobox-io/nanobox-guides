@@ -18,3 +18,5 @@ nanobox deploy dry-run
 Visit your app at <a href="http://lumen.preview" target="\_blank">http://lumen.preview</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
+
+**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/php/lumen/local-evars) with `nanobox add evar dry-run KEY=VALUE`.
