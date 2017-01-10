@@ -61,6 +61,7 @@ generatedIcons = [
 
 # Add new icons to generate here:
 newIcons = [
+  {icon:'trails', title:'Trails'}
   # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
