@@ -55,6 +55,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | apm            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | bcmath         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | bcompiler      | ✅  | ❌  | ❌  | ❌  | ❌  | ❌  |
+| blackfire      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | bz2            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | calendar       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | ctype          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
@@ -129,6 +130,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | sockets        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | sphinx         | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
 | sqlite         | ✅  | ❌  | ❌  | ❌  | ❌  | ❌  |
+| sqlite3        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | ssh2           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | stats          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | stomp          | ✅  | ✅  | ✅  | ✅  | ✅  | ❌  |
