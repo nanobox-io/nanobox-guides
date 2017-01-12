@@ -14,6 +14,8 @@ run.config:
       - opcache
 ```
 
+**Note:** Extensions are loaded in the order in which they're listed. Some extensions must be loaded first in order for other extensions to work.
+
 ## Dev Config
 
 #### dev_extensions

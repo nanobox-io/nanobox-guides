@@ -60,16 +60,16 @@ generatedIcons = [
   {icon:'trails', title:'Trails'}
   {icon:'adonis', title:'Adonis'}
   {icon:'totaljs', title:'Total.js'}
-  {icon:'keystonejs', title:'KeystoneJS'}  
+  {icon:'keystonejs', title:'KeystoneJS'}
   {icon:'feathers', title:'Feathers'}
   {icon:'donejs', title:'DoneJS'}
   {icon:'horizon', title:'Horizon'}
   {icon:'koa', title:'Koa'}
+  {icon:'nodal', title:'Nodal'}
 ]
 
 # Add new icons to generate here:
 newIcons = [
-  {icon:'nodal', title:'Nodal'}
   # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
