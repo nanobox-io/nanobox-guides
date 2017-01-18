@@ -1,0 +1,20 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Javascript with Nanobox"
+    description  = "Get your Javascript up and running with Nanobox"
+    formalName   = "Javascript"
+    informalName = "JS"
+    icon         = "javascript"
+    iconCrumbs   = "javascript"
+    launchTime   = "5"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+    ]
+    optionalComponents = []
+    articleGroups = "javascript/generic"

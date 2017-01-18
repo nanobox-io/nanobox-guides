@@ -1,0 +1,17 @@
+title: React
+href: /javascript/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /javascript/generic/create, title: Create a Javascript App}
+
+  #
+  - title: "Advanced"
+    tribe: the_essentials
+    articles:
+      - {href: /javascript/generic/configure-nodejs, title: Configure Nodejs}
+      - {href: /javascript/generic/package-managers, title: 'Yarn, NPM, & Bower'}
+      - {href: /javascript/generic/task-runners, title: 'Task Runners'}
