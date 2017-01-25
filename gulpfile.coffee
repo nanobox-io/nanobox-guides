@@ -39,6 +39,7 @@ livereload.listen()
 inject       = require 'gulp-inject'
 foreach      = require 'gulp-foreach'
 rev          = require 'gulp-rev'
+del          = require 'del'
 # Paths to source files
 
 articlePath       = 'articles/**/*.md'
@@ -51,7 +52,7 @@ assetPath         = ['app/images/**/*', 'app/fonts/*']
 miscJsPath        = 'app/js/*'
 yamlPath          = 'articles/**/*.yml'
 svgPath           = ['lib/assets/core-styles/svg/compiled/*.svg','app/assets/compiled/*.svg']
-htaccessPath      = 'app/misc/.htaccess'
+htaccessPath      = 'app/misc/*'
 
 parseSVG = (cb)->
   gulp.src svgPath
@@ -131,10 +132,12 @@ copyGithubImages = ()->
   gulp.src './quickstart-icons/*'
     .pipe gulp.dest('rel/assets/quickstart-icons/')
 
-copyHtaccess = ()->
+copyMiscRootFiles = ()->
   gulp.src htaccessPath
     .pipe gulp.dest('./rel')
-gulp.task 'copy-yaml', ['minify']
+
+
+# gulp.task 'copy-yaml', ['minify']
     # .on('end', cb)
 
 copyFiles = (path, destination, cb) ->
@@ -187,13 +190,17 @@ minifyAndJoin = () ->
       usemin
         css                  : [ minifyCss(), 'concat', rev()]
         html                 : [ minifyHtml({empty: true})]
-        js                   : [ uglify(), rev()]
+        # js                   : [ uglify, rev]
+        js                   : [ rev]
         path                 : './server'
         skipMissingResources : true
         # assetsDir            : 'rel/'
     ).pipe gulp.dest('rel/')
   )
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+gulp.task 'minii', () -> minifyAndJoin()
+
 
 # Livereload Server
 server = ->
@@ -299,7 +306,7 @@ gulp.task 'new-framework', ()->
 
 # ----------- MAIN ----------- #
 
-gulp.task 'clean',                  (cb) -> rimraf './server/*', cb
+gulp.task 'clean',                  (cb) -> del ['./server/**/*']
 gulp.task 'bowerLibs', ['clean'],   (cb) -> copyBowerLibs()
 gulp.task 'compile', ['bowerLibs'], (cb) -> compileFiles(true, cb)
 gulp.task 'server', ['compile'],    (cb) -> server(); launch(); #process.exit()
@@ -307,9 +314,8 @@ gulp.task 'default', ['server']
 
 # ----------- BUILD (rel) ----------- #
 
-gulp.task 'rel:clean',                                 (cb)  -> rimraf './rel/*', cb
-gulp.task 'copy-htaccess',['rel:clean'],               ()    -> copyHtaccess()
-gulp.task 'bumpVersion', ['copy-htaccess'],            ()    -> bumpBowerVersion()
+gulp.task 'rel:clean',                                 ()    -> del ['./rel/**/*']
+gulp.task 'bumpVersion', ['rel:clean'],                ()    -> bumpBowerVersion()
 gulp.task 'copyStatics', ['bowerLibs'],                ()    -> copyAssets('rel/assets', ->)
 gulp.task 'copyGithubImages', ['copyStatics'],         ()    -> copyGithubImages()
 gulp.task 'releaseCompile', ['copyGithubImages'],      (cb)  -> compileFiles(false, cb)
@@ -317,4 +323,5 @@ gulp.task 'minify',['releaseCompile'],                 ()    -> minifyAndJoin();
 gulp.task 'copy-yaml', ['minify'],                     ()    -> copyFiles('./server/yaml/**/*', './rel/yaml/', ->)
 gulp.task 'pretty',['copy-yaml'],                      ()    -> prettyURLS()
 gulp.task 'cleanhtml', ['pretty'],                     ()    -> deleteUneededFiles()
-gulp.task 'rel', ['rel:clean', 'bumpVersion', 'cleanhtml'],  -> process.exit()
+gulp.task 'copy-misc-root-files',['cleanhtml'],        ()    -> copyMiscRootFiles()
+gulp.task 'rel', ['rel:clean', 'bumpVersion', 'copy-misc-root-files'],  -> process.exit()
