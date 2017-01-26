@@ -44,8 +44,6 @@ nanobox dev console
 # install hugo so we can use it to generate our application
 go get -v github.com/spf13/hugo
 
-# generate our new hugo application; due to a limitation in hugo we'll have to generate our app in another folder and move it where we want it
-
 # cd into the /tmp dir to create an app
 cd /tmp
 

@@ -29,21 +29,14 @@ nanobox run
 # install nodal so you can use it to generate your application
 npm install -g nodal
 
-# generate your new nodal application; due to a limitation in
-# nodal you'll have to generate your app in another folder and
-# move it
-
 # cd into the /tmp dir to create an app
 cd /tmp
 
 # generate the nodal app
-nodal new app
-
-# cd back into the /app dir
-cd -
+nodal new
 
 # copy the generated app into the project
-cp -a /tmp/app/* .
+cp -ar ./my-nodal-project/. /app
 
 # exit the console
 exit
@@ -52,11 +45,7 @@ exit
 ## Configure Nodal
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
-
-```javascript
-host: '0.0.0.0'
-```
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Nodal does this by default, and so no additional configuration is needed.
 
 ## Add a local DNS
 Add a convenient way to access your app from the browser:
@@ -68,10 +57,10 @@ nanobox dns add local nodal.dev
 ## Run the app
 
 ```bash
-nanobox run nodal lift
+nanobox run nodal s
 ```
 
-Visit your app at <a href="http://nodal.dev:1337" target="\_blank">nodal.dev:1337</a>
+Visit your app at <a href="http://nodal.dev:3000" target="\_blank">nodal.dev:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your nodal app:

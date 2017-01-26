@@ -25,11 +25,7 @@ run.config:
 ## Configure Feathers
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
-
-```javascript
-host: '0.0.0.0'
-```
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Feathers does this by default, and so no additional configuration is needed.
 
 #### Add local DNS
 Add a convenient way to access your app from the browser:
@@ -42,10 +38,10 @@ nanobox dns add local feathers.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/nodejs/feathers/add-a-database) before your app will run.
 
 ```bash
-nanobox run feathers lift
+nanobox run npm start
 ```
 
-Visit your app at <a href="http://feathers.dev:1337" target="\_blank">feathers.dev:1337</a>
+Visit your app at <a href="http://feathers.dev:3030" target="\_blank">feathers.dev:3030</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your feathers app:

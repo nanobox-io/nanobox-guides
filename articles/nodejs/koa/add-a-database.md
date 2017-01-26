@@ -18,23 +18,7 @@ For databases that require a name, the name will always be `gonano`.
 **HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
-Before connecting to the database, you'll first need to install the `koa-postgresql` adapter:
-
-```bash
-nanobox run npm install koa-postgresql --save
-```
-
-Then modify your `config/connections.js` to connect your app:
-
-```javascript
-somePostgresqlServer: {
-  adapter: 'koa-postgresql',
-  host: process.env.DATA_DB_HOST,
-  user: process.env.DATA_DB_USER,
-  password: process.env.DATA_DB_PASS,
-  database: 'db'
-  }
-```
+WIP
 
 **HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
@@ -47,7 +31,7 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 Your can also test the connection with koa:
 
 ```bash
-nanobox run koa lift
+nanobox run node app.js
 ```
 
 ## Now what?

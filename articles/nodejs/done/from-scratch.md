@@ -27,23 +27,16 @@ run.config:
 nanobox run
 
 # install done so you can use it to generate your application
-npm install -g done
-
-# generate your new done application; due to a limitation in
-# done you'll have to generate your app in another folder and
-# move it
+npm install -g donejs
 
 # cd into the /tmp dir to create an app
 cd /tmp
 
 # generate the done app
-done new app
-
-# cd back into the /app dir
-cd -
+donejs add app myapp
 
 # copy the generated app into the project
-cp -a /tmp/app/* .
+cp -ar ./myapp/. /app
 
 # exit the console
 exit
@@ -52,11 +45,7 @@ exit
 ## Configure DoneJS
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
-
-```javascript
-host: '0.0.0.0'
-```
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). DoneJS does this by default, and so no additional configuration is needed.
 
 ## Add a local DNS
 Add a convenient way to access your app from the browser:
@@ -68,10 +57,10 @@ nanobox dns add local done.dev
 ## Run the app
 
 ```bash
-nanobox run done lift
+nanobox run npm start
 ```
 
-Visit your app at <a href="http://done.dev:1337" target="\_blank">done.dev:1337</a>
+Visit your app at <a href="http://done.dev:8080" target="\_blank">done.dev:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your done app:

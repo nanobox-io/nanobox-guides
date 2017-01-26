@@ -29,10 +29,6 @@ nanobox run
 # install ember so we can use it to generate our application
 npm install -g ember-cli
 
-# generate a new ember application; due to a limitation in
-# ember we'll have to generate the app in another folder and
-# move afterwards
-
 # cd into the /tmp dir to create an app
 cd /tmp
 

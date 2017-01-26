@@ -18,23 +18,7 @@ For databases that require a name, the name will always be `gonano`.
 **HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
-Before connecting to the database, you'll first need to install the `feathers-postgresql` adapter:
-
-```bash
-nanobox run npm install feathers-postgresql --save
-```
-
-Then modify your `config/connections.js` to connect your app:
-
-```javascript
-somePostgresqlServer: {
-  adapter: 'feathers-postgresql',
-  host: process.env.DATA_DB_HOST,
-  user: process.env.DATA_DB_USER,
-  password: process.env.DATA_DB_PASS,
-  database: 'db'
-  }
-```
+WIP
 
 **HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
@@ -47,7 +31,7 @@ You can connect directly to your database from an <a href="https://docs.nanobox.
 Your can also test the connection with feathers:
 
 ```bash
-nanobox run feathers lift
+nanobox run npm start
 ```
 
 ## Now what?

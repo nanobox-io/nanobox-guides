@@ -32,10 +32,6 @@ nanobox run
 go get github.com/revel/revel
 go get github.com/revel/cmd/revel
 
-# generate your new revel application; due to a limitation in
-# revel you'll have to generate your app in another folder and
-# move it
-
 # cd into the /src directory on your gopath
 cd ..
 

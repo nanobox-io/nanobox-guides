@@ -59,10 +59,6 @@ Generate a Phalcon app with the following:
 # drop into a nanobox console
 nanobox run
 
-# generate a new phalcon application; due to a limitation in
-# phalcon, we'll have to generate the app in another folder
-# and move it afterwards
-
 # cd into a tmp folder
 cd /tmp
 

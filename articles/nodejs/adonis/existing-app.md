@@ -25,10 +25,10 @@ run.config:
 ## Configure Adonis
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `.env`:
 
 ```javascript
-host: '0.0.0.0'
+HOST=0.0.0.0
 ```
 
 #### Add local DNS
@@ -42,10 +42,10 @@ nanobox dns add local adonis.dev
 **HEADS UP**: If your app uses a database, you'll need to [add and configure it](/nodejs/adonis/add-a-database) before your app will run.
 
 ```bash
-nanobox run adonis lift
+nanobox run npm run dev
 ```
 
-Visit your app at <a href="http://adonis.dev:1337" target="\_blank">adonis.dev:1337</a>
+Visit your app at <a href="http://adonis.dev:3333" target="\_blank">adonis.dev:3333</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your adonis app:

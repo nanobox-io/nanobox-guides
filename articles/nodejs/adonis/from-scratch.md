@@ -29,21 +29,14 @@ nanobox run
 # install adonis so you can use it to generate your application
 npm install -g adonis
 
-# generate your new adonis application; due to a limitation in
-# adonis you'll have to generate your app in another folder and
-# move it
-
 # cd into the /tmp dir to create an app
 cd /tmp
 
 # generate the adonis app
-adonis new app
-
-# cd back into the /app dir
-cd -
+adonis new myapp
 
 # copy the generated app into the project
-cp -a /tmp/app/* .
+cp -ar ./myapp/. /app
 
 # exit the console
 exit
@@ -52,10 +45,10 @@ exit
 ## Configure Adonis
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `.env`:
 
 ```javascript
-host: '0.0.0.0'
+HOST=0.0.0.0
 ```
 
 ## Add a local DNS
@@ -68,10 +61,10 @@ nanobox dns add local adonis.dev
 ## Run the app
 
 ```bash
-nanobox run adonis lift
+nanobox run npm run dev
 ```
 
-Visit your app at <a href="http://adonis.dev:1337" target="\_blank">adonis.dev:1337</a>
+Visit your app at <a href="http://adonis.dev:3333" target="\_blank">adonis.dev:3333</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your adonis app:
