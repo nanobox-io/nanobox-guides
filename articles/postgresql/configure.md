@@ -17,4 +17,4 @@ data.db:
 ```
 
 ### Request PostgreSQL boxfile.yml Configs
-One of the many benefits of using PostgreSQL is that it doesn't require much configuration. The project itself is finely tuned. However we know there are settings that users may want to tweak. If there's a setting you'd like to modify that is typically handled in the `postresql.conf`, let us know by creating a [new issue on the PostgreSQL image project on Github](https://github.com/nanobox-io/nanobox-docker-postgresql/issues/new).
+One of the many benefits of using PostgreSQL is that it doesn't require much configuration. The project itself is finely tuned. However we know there are settings that users may want to tweak. If there's a setting you'd like to modify that is typically handled in the `postgresql.conf`, let us know by creating a [new issue on the PostgreSQL image project on Github](https://github.com/nanobox-io/nanobox-docker-postgresql/issues/new).
