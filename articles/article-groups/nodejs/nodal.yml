@@ -1,0 +1,50 @@
+title: Nodal
+href: /nodejs/nodal
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/nodal/from-scratch, title: Nodal from Scratch}
+      - {href: /nodejs/nodal/existing-app, title: Existing Nodal App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/nodal/add-a-database, title: Add a Database}
+      - {href: /nodejs/nodal/frontend-javascript, title: Frontend Javascript}
+      - {href: /nodejs/nodal/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/nodal/configure-nodal, title: Configure Nodal}
+      - {href: /nodejs/nodal/preview-your-app, title: Preview your App}
+      - {href: /nodejs/nodal/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/nodal/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/nodal/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/nodal/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/nodal/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/nodal/debugging, title: Debugging}
+      - {href: /nodejs/nodal/app-health, title: App Health}
+      - {href: /nodejs/nodal/remote-access, title: Remote Access}
+      - {href: /nodejs/nodal/team-management, title: Team Management}
+      - {href: /nodejs/nodal/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/nodal/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/nodal/npm, title: Yarn & NPM}
+      # - {href: /nodejs/nodal/scale-your-app, title: Make Nodal scream}
+      # - {href: /nodejs/nodal/scale-your-app, title: New Relic}
