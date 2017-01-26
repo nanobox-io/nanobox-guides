@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Koa to run in Production | Nanobox"
+    description = "Learn how to configure a Koa application to run in production"
+    keywords    = "nodejs, koa production application, manage koa application, configure koa, production koa, koa in production"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/nodejs/koa/configure-koa.md
