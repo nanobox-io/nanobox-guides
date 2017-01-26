@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure DoneJS for Production"
+    keywords    = "nodejs,done,configure,production"
+    description = "Configuring DoneJS for production with Nanobox"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/nodejs/done/configure-done.md

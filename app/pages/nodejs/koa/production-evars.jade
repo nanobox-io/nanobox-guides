@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "nodejs,koa,environment-variables"
+    description = "Koa environment variables in production with Nanobox"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

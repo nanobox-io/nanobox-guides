@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Yarn & NPM"
+    keywords    = "nodejs,nodal,npm,yarn"
+    description = "Yarn, npm, and Nodal with Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

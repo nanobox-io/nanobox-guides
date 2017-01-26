@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Yarn & NPM"
+    keywords    = "nodejs,adonis,npm,yarn"
+    description = "Yarn, npm, and Adonis with Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

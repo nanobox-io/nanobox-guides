@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "nodejs,adonis,remote-access"
+    description = "Remotely access your Adonis app with Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

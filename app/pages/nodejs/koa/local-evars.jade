@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Local Environment Variables"
+    keywords    = "nodejs,koa,environment-variables"
+    description = "Koa environment variables with Nanobox"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

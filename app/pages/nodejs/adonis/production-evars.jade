@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "nodejs,adonis,environment-variables"
+    description = "Adonis environment variables in production with Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

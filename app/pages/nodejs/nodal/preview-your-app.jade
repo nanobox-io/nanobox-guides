@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "nodejs,nodal,stage,test"
+    description = "Preview your Nodal app with Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/nodejs/nodal/preview-your-app.md

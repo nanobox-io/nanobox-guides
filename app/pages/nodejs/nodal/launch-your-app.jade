@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch your App"
+    keywords    = "nodejs,nodal,launch"
+    description = "Launch your Nodal app to live servers with Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/nodal/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

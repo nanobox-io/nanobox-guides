@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Production Environment Variables"
+    keywords    = "nodejs,feathers,environment-variables"
+    description = "Feathers environment variables in production with Nanobox"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

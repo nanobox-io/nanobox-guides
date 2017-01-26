@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nodejs"
+    keywords    = "nodejs,configure"
+    description = "Configure Node.js with Koa and Nanobox"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/nodejs/config.md

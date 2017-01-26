@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "nodejs,nodal,remote-access"
+    description = "Remotely access your Nodal app with Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

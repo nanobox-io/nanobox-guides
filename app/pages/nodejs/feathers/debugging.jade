@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging Feathers"
+    keywords    = "nodejs,feathers,debug"
+    description = "Debug your Feathers app with Nanobox"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/debugging.md

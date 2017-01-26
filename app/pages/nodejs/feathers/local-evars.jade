@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Local Environment Variables"
+    keywords    = "nodejs,feathers,environment-variables"
+    description = "Feathers environment variables with Nanobox"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

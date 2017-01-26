@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "DoneJS From Scratch"
+    keywords    = "nodejs,done,new"
+    description = "Launch a new DoneJS app with Nanobox"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/nodejs/done/from-scratch.md

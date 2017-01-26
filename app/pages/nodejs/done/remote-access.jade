@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access"
+    keywords    = "nodejs,done,remote-access"
+    description = "Remotely access your DoneJS app with Nanobox"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

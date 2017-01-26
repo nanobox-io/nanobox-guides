@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nodal for Production"
+    keywords    = "nodejs,nodal,configure,production"
+    description = "Configuring Nodal for production with Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/nodejs/nodal/configure-nodal.md

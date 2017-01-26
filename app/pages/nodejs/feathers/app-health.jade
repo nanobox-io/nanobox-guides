@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "App Health"
+    keywords    = "nodejs,feathers,app-health"
+    description = "Monitor the health of your Feathers app with Nanobox"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/app-health.md

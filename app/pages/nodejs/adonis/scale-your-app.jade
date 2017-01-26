@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Your App"
+    keywords    = "nodejs,adonis,production,scale"
+    description = "Scaling your Adonis app with Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

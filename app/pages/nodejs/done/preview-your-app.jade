@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Dry Run"
+    keywords    = "nodejs,done,stage,test"
+    description = "Preview your DoneJS app with Nanobox"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/nodejs/done/preview-your-app.md

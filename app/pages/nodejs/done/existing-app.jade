@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing DoneJS App"
+    keywords    = "nodejs,done"
+    description = "Launch your existing DoneJS app with Nanobox"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/nodejs/done/existing-app.md

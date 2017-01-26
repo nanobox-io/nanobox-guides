@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debugging Koa"
+    keywords    = "nodejs,koa,debug"
+    description = "Debug your Koa app with Nanobox"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/shared/debugging.md

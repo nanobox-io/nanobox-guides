@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nodejs"
+    keywords    = "nodejs,configure"
+    description = "Configure Node.js with Nodal and Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/nodejs/config.md

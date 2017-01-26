@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Your App"
+    keywords    = "nodejs,done,production,scale"
+    description = "Scaling your DoneJS app with Nanobox"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

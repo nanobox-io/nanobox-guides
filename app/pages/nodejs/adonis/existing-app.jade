@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Adonis App"
+    keywords    = "nodejs,adonis"
+    description = "Launch your existing Adonis app with Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/nodejs/adonis/existing-app.md

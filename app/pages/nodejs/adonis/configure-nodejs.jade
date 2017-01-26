@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nodejs"
+    keywords    = "nodejs,configure"
+    description = "Configure Node.js with Adonis and Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/nodejs/config.md

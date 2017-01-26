@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "SSL/TLS Encryption"
+    keywords    = "nodejs,nodal,ssl,tls,encryption"
+    description = "Nodal SSL/TLS Encryption with Nanobox"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/shared/encryption.md

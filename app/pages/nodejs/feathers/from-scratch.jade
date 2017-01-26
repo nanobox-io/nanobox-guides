@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Feathers From Scratch"
+    keywords    = "nodejs,feathers,new"
+    description = "Launch a new Feathers app with Nanobox"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/nodejs/feathers/from-scratch.md

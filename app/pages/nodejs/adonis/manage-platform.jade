@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Platform"
+    keywords    = "nodejs,adonis,manage,production"
+    description = "Manage your Adonis app in production with Nanobox"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md
