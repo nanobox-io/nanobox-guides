@@ -1,7 +1,7 @@
 # Configure Python for Production
 
 ## Setup webserver
-Python apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into python through puma.
+Python apps run best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into python.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -39,7 +39,7 @@ http {
                       application/x-javascript
                       application/atom+xml;
 
-    # Proxy upstream to the puma process
+    # Proxy upstream to the python process
     upstream python {
         server 127.0.0.1:3000;
     }

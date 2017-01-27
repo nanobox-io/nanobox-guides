@@ -39,7 +39,7 @@ http {
                       application/x-javascript
                       application/atom+xml;
 
-    # Proxy upstream to the puma process
+    # Proxy upstream to the node process
     upstream express {
         server 127.0.0.1:3000;
     }
