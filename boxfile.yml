@@ -1,5 +1,5 @@
 run.config:
-  engine: nanobox-io/nanobox-engine-tolmark-gulp#feature/errors_and_rewrites
+  engine: nanobox-io/nanobox-engine-tolmark-gulp
   engine.config:
     error_pages:
       - errors: 404
