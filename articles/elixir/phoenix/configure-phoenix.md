@@ -1,7 +1,7 @@
 # Configure Phoenix for Production
 
 ## Setup a webserver
-Phoenix runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into rails through puma.
+Phoenix runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into phoenix.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -39,7 +39,7 @@ http {
                       application/x-javascript
                       application/atom+xml;
 
-    # Proxy upstream to the puma process
+    # Proxy upstream to the phoenix process
     upstream rails {
         server 127.0.0.1:3000;
     }
@@ -78,7 +78,6 @@ You can have as many web components as your app needs by simply adding them to y
 web.main:
   start:
     nginx: nginx -c /app/config/nginx.conf
-    puma: bundle exec puma -C /app/config/puma.rb
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
