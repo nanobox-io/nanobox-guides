@@ -4,31 +4,31 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/hugo/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /golang/hugo/getting-started/from-scratch, title: Hugo from Scratch}
-      - {href: /golang/hugo/getting-started/existing-app, title: Existing Hugo App}
+      - {href: /golang/hugo/install-nanobox, title: Install Nanobox}
+      - {href: /golang/hugo/from-scratch, title: Hugo from Scratch}
+      - {href: /golang/hugo/existing-app, title: Existing Hugo App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /golang/hugo/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /golang/hugo/local-evars, title: Local Environment Variables}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/hugo/production/configure-hugo, title: Configure Hugo}
-      - {href: /golang/hugo/production/stage-your-app, title: Stage your App}
-      - {href: /golang/hugo/production/launch-your-app, title: Launch your App}
-      - {href: /golang/hugo/production/point-your-domain, title: Point your Domain}
-      - {href: /golang/hugo/production/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/hugo/production/production-evars, title: Production Environment Variables}
+      - {href: /golang/hugo/configure-hugo, title: Configure Hugo}
+      - {href: /golang/hugo/stage-your-app, title: Stage your App}
+      - {href: /golang/hugo/launch-your-app, title: Launch your App}
+      - {href: /golang/hugo/point-your-domain, title: Point your Domain}
+      - {href: /golang/hugo/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/hugo/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /golang/hugo/going-further/scale-your-app, title: Scale Your App}
-      - {href: /golang/hugo/going-further/debugging, title: Debugging}
-      - {href: /golang/hugo/going-further/app-health, title: App Health}
-      - {href: /golang/hugo/going-further/remote-access, title: Remote Access}
-      - {href: /golang/hugo/going-further/team-management, title: Team Management}
-      - {href: /golang/hugo/going-further/manage-platform, title: Manage Platform}
+      - {href: /golang/hugo/scale-your-app, title: Scale Your App}
+      - {href: /golang/hugo/debugging, title: Debugging}
+      - {href: /golang/hugo/app-health, title: App Health}
+      - {href: /golang/hugo/remote-access, title: Remote Access}
+      - {href: /golang/hugo/team-management, title: Team Management}
+      - {href: /golang/hugo/manage-platform, title: Manage Platform}
