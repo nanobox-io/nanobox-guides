@@ -1,5 +1,9 @@
 run.config:
-  engine: nanobox-io/nanobox-engine-tolmark-gulp
+  engine: nanobox-io/nanobox-engine-tolmark-gulp#feature/errors_and_rewrites
+  engine.config:
+    error_pages:
+      - errors: 404
+        page: errors/404/index.html
   extra_packages:
     - fontconfig
     - freetype2

@@ -1,0 +1,12 @@
+extends /app/pages/templates/base 
+
+block configParams
+  -
+    title        = "Guide Not Found | Nanobox"
+    description  = "This guides is still in the works, but check back soon."
+
+block content
+  .error-page.not-found
+    h2 Looks like this guide doesn't exist yet.
+    p But it's coming. If you'd like to contribute, let us know! Submit or update an issue on the #[a(href="https://github.com/nanobox-io/nanobox-guides" target="_blank") Nanobox Guides project on Github].
+    p #[a(href="javascript:history.back()") Go back] or go to the #[a(href="/") Nanobox Guides homepage].
