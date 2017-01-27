@@ -45,7 +45,7 @@ exit
 ## Configure Adonis
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `.env`:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `.env.exmaple`:
 
 ```javascript
 HOST=0.0.0.0
