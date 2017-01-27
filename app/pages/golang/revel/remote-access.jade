@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access to Revel Applications | Nanobox"
+    description = "Securely manage running Revel application with SSH remote access"
+    keywords    = "golang, revel production application, manage revel application, ssh access, remote access, server management, secure access"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

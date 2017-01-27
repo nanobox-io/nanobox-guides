@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Nodal application | Nanobox"
+    description = "Easily stage a Nodal application before deplying to production"
+    keywords    = "nodejs, nodal production application, manage nodal application, test nodal application, stage nodal application"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/nodejs/nodal/preview-your-app.md

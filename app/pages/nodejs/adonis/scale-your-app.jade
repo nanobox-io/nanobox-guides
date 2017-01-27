@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Adonis Applications | Nanobox"
+    description = "Easily scale production Adonis applications with zero downtime"
+    keywords    = "nodejs, adonis production application, manage adonis application, scale adonis application, zero downtime"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

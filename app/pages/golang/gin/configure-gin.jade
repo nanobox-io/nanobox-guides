@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Gin to run in Production | Nanobox"
+    description = "Learn how to configure a Gin application to run in production"
+    keywords    = "golang, gin production application, manage gin application, configure gin, production gin, gin in production"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/golang/gin/configure-gin.md

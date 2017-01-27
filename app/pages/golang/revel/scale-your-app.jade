@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Revel Applications | Nanobox"
+    description = "Easily scale production Revel applications with zero downtime"
+    keywords    = "golang, revel production application, manage revel application, scale revel application, zero downtime"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

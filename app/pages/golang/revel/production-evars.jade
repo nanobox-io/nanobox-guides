@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Revel Application | Nanobox"
+    description = "Learn how to add environment variable to a production Revel application"
+    keywords    = "golang, revel production application, manage revel application, revel environment variables, environment variables"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

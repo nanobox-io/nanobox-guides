@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Revel Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Revel production application"
+    keywords    = "nodejs, revel production application, manage revel application, ssl, tls, encryption"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/encryption.md

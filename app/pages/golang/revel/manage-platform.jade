@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Revel Application | Nanobox"
+    description = "Manage a Revel application's logs, traffic, health, and storage"
+    keywords    = "golang, revel production application, manage revel application, monitor revel, revel logging, load balancer, revel monitoring, production logs"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Golang Versions | Nanobox"
+    description = "How to update or change golang versions in development and production environments"
+    keywords    = "golang, echo production application, manage echo application, configure echo, production echo, echo in production, golang version, manage golang versions"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/config.md

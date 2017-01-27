@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production Beego Applications | Nanobox"
+    description = "Monitor a production Beego application with live and historical stats"
+    keywords    = "golang, beego production application, manage beego application, stats, golang stats, beego stats, monitor beego, beego app health"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/shared/app-health.md

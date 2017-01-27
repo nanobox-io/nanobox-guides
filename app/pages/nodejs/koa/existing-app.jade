@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Koa Applicatin in Docker | Nanobox"
+    description = "Learn how to take an existing Koa application and run it using Docker"
+    keywords    = "nodejs, koa production application, manage koa application, docker, koa on docker, containers"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/nodejs/koa/existing-app.md

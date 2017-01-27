@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Beego App | Nanobox"
+    description  = "Learn how to setup a Beego development environment and configure it to deploy to production."
+    keywords     = "beego, beego framework, golang frameworks, beego config, beego development environment, beego production app, beego app, deploy beego, create beego app, config beego app"
+    formalName   = "Beego"
+    informalName = "beego"
+    icon         = "beego"
+    iconCrumbs   = "golang,beego"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/beego"
+    devMode = true

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Koa Application from Scratch | Nanobox"
+    description = "Learn how to create a new Koa application and local development environment"
+    keywords    = "nodejs, koa application, koa application, nodejs dev environment, dev environment, koa dev environemnt, koa dev, docker, containers"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/nodejs/koa/from-scratch.md

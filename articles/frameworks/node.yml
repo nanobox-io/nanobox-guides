@@ -6,11 +6,11 @@ frameworks:
   - {href: /nodejs/sails, name: Sails, icon: sails}
   - {href: /nodejs/hapi, name: Hapi, icon: hapi}
   # - {href: /nodejs/adonis, name: Adonis, icon: adonis, devMode: true}
-  # - {href: /nodejs/totaljs, name: Total.js, icon: totaljs, devMode: true}
-  # - {href: /nodejs/keystonejs, name: KeystoneJS, icon: keystonejs, devMode: true}
   # - {href: /nodejs/nodal, name: Nodal, icon: nodal, devMode: true}
   # - {href: /nodejs/feathers, name: Feathers, icon: feathers, devMode: true}
   # - {href: /nodejs/donejs, name: DoneJS, icon: donejs, devMode: true}
-  # - {href: /nodejs/horizon, name: Horizon, icon: horizon, devMode: true}
   # - {href: /nodejs/koa, name: Koa, icon: koa, devMode: true}
+  # - {href: /nodejs/horizon, name: Horizon, icon: horizon, devMode: true}
+  # - {href: /nodejs/keystonejs, name: KeystoneJS, icon: keystonejs, devMode: true}
+  # - {href: /nodejs/totaljs, name: Total.js, icon: totaljs, devMode: true}
   # - {href: /nodejs/meteor, name: Meteor, icon: meteor}

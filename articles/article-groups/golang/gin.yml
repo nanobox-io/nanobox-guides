@@ -1,0 +1,37 @@
+title: Gin
+href: /golang/gin
+articles:
+
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /golang/gin/getting-started/install-nanobox, title: Install Nanobox}
+      - {href: /golang/gin/getting-started/from-scratch, title: Gin from Scratch}
+      - {href: /golang/gin/getting-started/existing-app, title: Existing Gin App}
+
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /golang/gin/next-steps/add-a-database, title: Add a Database}
+      - {href: /golang/gin/next-steps/local-evars, title: Local Environment Variables}
+      - {href: /golang/gin/next-steps/javascript-runtime, title: Javascript Runtime}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /golang/gin/production/configure-gin, title: Configure Gin}
+      - {href: /golang/gin/production/stage-your-app, title: Stage your App}
+      - {href: /golang/gin/production/launch-your-app, title: Launch your App}
+      - {href: /golang/gin/production/point-your-domain, title: Point your Domain}
+      - {href: /golang/gin/production/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/gin/production/production-evars, title: Production Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /golang/gin/going-further/scale-your-app, title: Scale Your App}
+      - {href: /golang/gin/going-further/debugging, title: Debugging}
+      - {href: /golang/gin/going-further/app-health, title: App Health}
+      - {href: /golang/gin/going-further/remote-access, title: Remote Access}
+      - {href: /golang/gin/going-further/team-management, title: Team Management}
+      - {href: /golang/gin/going-further/manage-platform, title: Manage Platform}

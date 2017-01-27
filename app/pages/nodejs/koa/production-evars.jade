@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Koa Application | Nanobox"
+    description = "Learn how to add environment variable to a production Koa application"
+    keywords    = "nodejs, koa production application, manage koa application, koa environment variables, environment variables"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

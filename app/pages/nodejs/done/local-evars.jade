@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to DoneJS Application in Development| Nanobox"
+    description = "Learn how to add environment variable to a DoneJS applicationin development"
+    keywords    = "nodejs, done application, manage done application, done environment variables, environment variables"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

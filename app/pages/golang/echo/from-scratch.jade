@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Echo Application from Scratch | Nanobox"
+    description = "Learn how to create a new Echo application and local development environment"
+    keywords    = "golang, echo application, echo application, golang dev environment, dev environment, echo dev environemnt, echo dev, docker, containers"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/echo/from-scratch.md

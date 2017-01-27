@@ -30,10 +30,6 @@ nanobox run
 # our application
 yarn global add create-react-app
 
-# generate a new react application; due to a limitation in
-# react we'll have to generate the app in another folder and
-# move afterwards
-
 # cd into the /tmp dir to create an app
 cd /tmp
 

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Adonis Application | Nanobox"
+    description = "Learn how to add environment variable to a production Adonis application"
+    keywords    = "nodejs, adonis production application, manage adonis application, adonis environment variables, environment variables"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Revel application | Nanobox"
+    description = "Easily stage a Revel application before deplying to production"
+    keywords    = "golang, revel production application, manage revel application, test revel application, stage revel application"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/golang/revel/preview-your-app.md

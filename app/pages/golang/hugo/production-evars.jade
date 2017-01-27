@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Hugo Application | Nanobox"
+    description = "Learn how to add environment variable to a production Hugo application"
+    keywords    = "golang, hugo production application, manage hugo application, hugo environment variables, environment variables"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

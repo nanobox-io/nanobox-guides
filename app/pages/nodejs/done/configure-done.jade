@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure DoneJS to run in Production | Nanobox"
+    description = "Learn how to configure a DoneJS application to run in production"
+    keywords    = "nodejs, done production application, manage done application, configure done, production done, done in production"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/nodejs/done/configure-done.md

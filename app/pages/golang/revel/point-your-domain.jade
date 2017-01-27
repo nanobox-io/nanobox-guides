@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Revel Application | Nanobox"
+    description = "How to point an existing domain name to a Revel application"
+    keywords    = "golang, revel production application, manage revel application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

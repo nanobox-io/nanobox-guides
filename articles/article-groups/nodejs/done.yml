@@ -1,0 +1,50 @@
+title: DoneJS
+href: /nodejs/done
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/done/from-scratch, title: DoneJS from Scratch}
+      - {href: /nodejs/done/existing-app, title: Existing DoneJS App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/done/add-a-database, title: Add a Database}
+      - {href: /nodejs/done/frontend-javascript, title: Frontend Javascript}
+      - {href: /nodejs/done/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/done/configure-done, title: Configure DoneJS}
+      - {href: /nodejs/done/preview-your-app, title: Preview your App}
+      - {href: /nodejs/done/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/done/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/done/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/done/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/done/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/done/debugging, title: Debugging}
+      - {href: /nodejs/done/app-health, title: App Health}
+      - {href: /nodejs/done/remote-access, title: Remote Access}
+      - {href: /nodejs/done/team-management, title: Team Management}
+      - {href: /nodejs/done/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/done/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/done/npm, title: Yarn & NPM}
+      # - {href: /nodejs/done/scale-your-app, title: Make DoneJS scream}
+      # - {href: /nodejs/done/scale-your-app, title: New Relic}

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Revel Application in Production | Nanobox"
+    description = "Learn how to debug a production Revel application"
+    keywords    = "golang, revel production application, manage revel application, revel logging, revel monitoring, debug revel, debugging revel"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/debugging.md

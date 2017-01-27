@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Revel Application in Development| Nanobox"
+    description = "Learn how to add environment variable to a Revel applicationin development"
+    keywords    = "golang, revel application, manage revel application, revel environment variables, environment variables"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

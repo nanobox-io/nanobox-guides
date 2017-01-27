@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Nodal Application from Scratch | Nanobox"
+    description = "Learn how to create a new Nodal application and local development environment"
+    keywords    = "nodejs, nodal application, nodal application, nodejs dev environment, dev environment, nodal dev environemnt, nodal dev, docker, containers"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/nodejs/nodal/from-scratch.md

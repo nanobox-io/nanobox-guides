@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Beego Application in Development| Nanobox"
+    description = "Learn how to add environment variable to a Beego applicationin development"
+    keywords    = "golang, beego application, manage beego application, beego environment variables, environment variables"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

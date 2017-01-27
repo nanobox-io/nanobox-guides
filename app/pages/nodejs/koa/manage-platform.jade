@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Koa Application | Nanobox"
+    description = "Manage a Koa application's logs, traffic, health, and storage"
+    keywords    = "nodejs, koa production application, manage koa application, monitor koa, koa logging, load balancer, koa monitoring, production logs"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

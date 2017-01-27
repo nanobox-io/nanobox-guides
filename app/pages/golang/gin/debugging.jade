@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Gin Application in Production | Nanobox"
+    description = "Learn how to debug a production Gin application"
+    keywords    = "golang, gin production application, manage gin application, gin logging, gin monitoring, debug gin, debugging gin"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/shared/debugging.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create an Adonis Application from Scratch | Nanobox"
+    description = "Learn how to create a new Adonis application and local development environment"
+    keywords    = "nodejs, adonis application, adonis application, nodejs dev environment, dev environment, adonis dev environemnt, adonis dev, docker, containers"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/nodejs/adonis/from-scratch.md

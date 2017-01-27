@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Feathers Application to Production | Nanobox"
+    description = "Learn how to deploy a Feathers application to production servers"
+    keywords    = "nodejs, feathers production application, manage feathers application, deploy feathers, launch feathers, feathers in production, feathers production servers"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/feathers/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

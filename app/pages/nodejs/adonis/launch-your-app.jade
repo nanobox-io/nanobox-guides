@@ -1,0 +1,16 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch an Adonis Application to Production | Nanobox"
+    description = "Learn how to deploy an Adonis application to production servers"
+    keywords    = "nodejs, adonis production application, manage adonis application, deploy adonis, launch adonis, adonis in production, adonis production servers"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/adonis/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

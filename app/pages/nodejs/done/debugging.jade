@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug DoneJS Application in Production | Nanobox"
+    description = "Learn how to debug a production DoneJS application"
+    keywords    = "nodejs, done production application, manage done application, done logging, done monitoring, debug done, debugging done"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/shared/debugging.md

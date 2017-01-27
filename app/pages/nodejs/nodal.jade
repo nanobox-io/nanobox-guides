@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Nodal App | Nanobox"
+    description  = "Learn how to setup a Nodal development environment and configure it to deploy to production."
+    keywords     = "nodal, nodal framework, node js frameworks, nodal config, nodal development environment, nodal production app, nodal app, deploy nodal, create nodal app, config nodal app"
+    formalName   = "Nodal"
+    informalName = "nodal"
+    icon         = "nodal"
+    iconCrumbs   = "node,nodal"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "nodejs/nodal"

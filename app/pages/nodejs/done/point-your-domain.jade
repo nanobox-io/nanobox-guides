@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a DoneJS Application | Nanobox"
+    description = "How to point an existing domain name to a DoneJS application"
+    keywords    = "nodejs, done production application, manage done application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

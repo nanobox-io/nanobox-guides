@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Gin application | Nanobox"
+    description = "Easily stage a Gin application before deplying to production"
+    keywords    = "golang, gin production application, manage gin application, test gin application, stage gin application"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/golang/gin/preview-your-app.md

@@ -1,0 +1,48 @@
+title: Generic
+href: /golang/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /golang/generic/from-scratch, title: Golang App from Scratch}
+      - {href: /golang/generic/existing-app, title: Existing Golang App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /golang/generic/add-a-database, title: Add a Database}
+      - {href: /golang/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /golang/generic/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /golang/generic/configure-generic, title: Configure your App}
+      - {href: /golang/generic/preview-your-app, title: Preview your App}
+      - {href: /golang/generic/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /golang/generic/point-your-domain, title: Point your Domain}
+      - {href: /golang/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/generic/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /golang/generic/scale-your-app, title: Scale Your App}
+      - {href: /golang/generic/debugging, title: Debugging}
+      - {href: /golang/generic/app-health, title: App Health}
+      - {href: /golang/generic/remote-access, title: Remote Access}
+      - {href: /golang/generic/team-management, title: Team Management}
+      - {href: /golang/generic/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /golang/generic/configure-golang, title: Configure Golang}
+      - {href: /golang/generic/pip, title: Pip}

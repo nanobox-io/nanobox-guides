@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Feathers Applicatin in Docker | Nanobox"
+    description = "Learn how to take an existing Feathers application and run it using Docker"
+    keywords    = "nodejs, feathers production application, manage feathers application, docker, feathers on docker, containers"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/nodejs/feathers/existing-app.md

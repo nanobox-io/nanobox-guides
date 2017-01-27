@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Adonis Applicatin in Docker | Nanobox"
+    description = "Learn how to take an existing Adonis application and run it using Docker"
+    keywords    = "nodejs, adonis production application, manage adonis application, docker, adonis on docker, containers"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    
+block markdown
+  include:md /articles/nodejs/adonis/existing-app.md

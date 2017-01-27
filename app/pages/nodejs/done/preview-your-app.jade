@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a DoneJS application | Nanobox"
+    description = "Easily stage a DoneJS application before deplying to production"
+    keywords    = "nodejs, done production application, manage done application, test done application, stage done application"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    
+block markdown
+  include:md /articles/nodejs/done/preview-your-app.md

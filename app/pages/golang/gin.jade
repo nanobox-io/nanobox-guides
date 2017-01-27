@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Gin App | Nanobox"
+    description  = "Learn how to setup a Gin development environment and configure it to deploy to production."
+    keywords     = "gin, gin framework, golang frameworks, gin config, gin development environment, gin production app, gin app, deploy gin, create gin app, config gin app"
+    formalName   = "gin"
+    informalName = "gin"
+    icon         = "gin"
+    iconCrumbs   = "golang,gin"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/gin"
+    devMode = true

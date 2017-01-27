@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Feathers Application | Nanobox"
+    description = "Learn how to add environment variable to a production Feathers application"
+    keywords    = "nodejs, feathers production application, manage feathers application, feathers environment variables, environment variables"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

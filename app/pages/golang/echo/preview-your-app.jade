@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Echo application | Nanobox"
+    description = "Easily stage a Echo application before deplying to production"
+    keywords    = "golang, echo production application, manage echo application, test echo application, stage echo application"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/golang/echo/preview-your-app.md

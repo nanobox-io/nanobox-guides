@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Hugo Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Hugo production application"
+    keywords    = "nodejs, hugo production application, manage hugo application, ssl, tls, encryption"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    
+block markdown
+  include:md /articles/shared/encryption.md

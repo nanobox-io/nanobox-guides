@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Gin Application | Nanobox"
+    description = "How to add and connect to a database with a Gin applciation"
+    keywords    = "golang, gin production application, manage gin application, gin database, gin and mongodb, gin and postgres, mongodb, postgres"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    
+block markdown
+  include:md /articles/golang/gin/add-a-database.md

@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Nodal Applications | Nanobox"
+    description = "Easily scale production Nodal applications with zero downtime"
+    keywords    = "nodejs, nodal production application, manage nodal application, scale nodal application, zero downtime"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

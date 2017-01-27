@@ -39,7 +39,7 @@ nanobox dns add local python.dev
 nanobox run python YOURAPP.py
 ```
 
-Visit your app -> <a href="http://python.dev:8080" target="\_blank">python.dev:8080</a>
+Visit your app at <a href="http://python.dev:8080" target="\_blank">python.dev:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Python app:

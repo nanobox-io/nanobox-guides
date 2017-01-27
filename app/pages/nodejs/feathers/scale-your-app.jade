@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Feathers Applications | Nanobox"
+    description = "Easily scale production Feathers applications with zero downtime"
+    keywords    = "nodejs, feathers production application, manage feathers application, scale feathers application, zero downtime"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

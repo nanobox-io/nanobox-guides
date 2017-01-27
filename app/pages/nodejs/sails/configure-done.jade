@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Sails to run in Production | Nanobox"
+    description = "Learn how to configure a Sails application to run in production"
+    keywords    = "nodejs, sails production application, manage sails application, configure sails, production sails, sails in production"
+    articles    = "nodejs/sails"
+    icons       = "nodejs,sails"
+    
+block markdown
+  include:md /articles/nodejs/sails/configure-sails.md

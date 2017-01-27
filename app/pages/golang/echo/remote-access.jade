@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access to Echo Applications | Nanobox"
+    description = "Securely manage running Echo application with SSH remote access"
+    keywords    = "golang, echo production application, manage echo application, ssh access, remote access, server management, secure access"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

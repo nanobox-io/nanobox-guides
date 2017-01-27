@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production Echo Applications | Nanobox"
+    description = "Monitor a production Echo application with live and historical stats"
+    keywords    = "golang, echo production application, manage echo application, stats, golang stats, echo stats, monitor echo, echo app health"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    
+block markdown
+  include:md /articles/shared/app-health.md

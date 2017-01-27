@@ -1,0 +1,21 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Hugo App | Nanobox"
+    description  = "Learn how to setup a Hugo development environment and configure it to deploy to production."
+    keywords     = "hugo, hugo framework, golang frameworks, hugo config, hugo development environment, hugo production app, hugo app, deploy hugo, create hugo app, config hugo app"
+    formalName   = "Hugo"
+    informalName = "hugo"
+    icon         = "hugo"
+    iconCrumbs   = "golang,hugo"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'}
+    ]
+    optionalComponents = []
+    articleGroups = "golang/hugo"
+    devMode = true

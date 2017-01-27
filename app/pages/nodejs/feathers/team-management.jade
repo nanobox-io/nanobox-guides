@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Feathers Application Teams | Nanobox"
+    description = "Easily manage Feathers development teams and application collaborators"
+    keywords    = "nodejs, feathers production application, manage feathers application, feathers collaboration, team management"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/team-management.md

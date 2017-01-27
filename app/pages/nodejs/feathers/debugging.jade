@@ -1,0 +1,12 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Feathers Application in Production | Nanobox"
+    description = "Learn how to debug a production Feathers application"
+    keywords    = "nodejs, feathers production application, manage feathers application, feathers logging, feathers monitoring, debug feathers, debugging feathers"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    
+block markdown
+  include:md /articles/shared/debugging.md
