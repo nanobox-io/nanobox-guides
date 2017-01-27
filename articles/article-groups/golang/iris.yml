@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/iris/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /golang/iris/getting-started/from-scratch, title: Iris from Scratch}
-      - {href: /golang/iris/getting-started/existing-app, title: Existing Iris App}
+      - {href: /golang/iris/install-nanobox, title: Install Nanobox}
+      - {href: /golang/iris/from-scratch, title: Iris from Scratch}
+      - {href: /golang/iris/existing-app, title: Existing Iris App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /golang/iris/next-steps/add-a-database, title: Add a Database}
-      - {href: /golang/iris/next-steps/local-evars, title: Local Environment Variables}
-      - {href: /golang/iris/next-steps/javascript-runtime, title: Javascript Runtime}
+      - {href: /golang/iris/add-a-database, title: Add a Database}
+      - {href: /golang/iris/local-evars, title: Local Environment Variables}
+      - {href: /golang/iris/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/iris/production/configure-iris, title: Configure Iris}
-      - {href: /golang/iris/production/stage-your-app, title: Stage your App}
-      - {href: /golang/iris/production/launch-your-app, title: Launch your App}
-      - {href: /golang/iris/production/point-your-domain, title: Point your Domain}
-      - {href: /golang/iris/production/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/iris/production/production-evars, title: Production Environment Variables}
+      - {href: /golang/iris/configure-iris, title: Configure Iris}
+      - {href: /golang/iris/stage-your-app, title: Stage your App}
+      - {href: /golang/iris/launch-your-app, title: Launch your App}
+      - {href: /golang/iris/point-your-domain, title: Point your Domain}
+      - {href: /golang/iris/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/iris/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /golang/iris/going-further/scale-your-app, title: Scale Your App}
-      - {href: /golang/iris/going-further/debugging, title: Debugging}
-      - {href: /golang/iris/going-further/app-health, title: App Health}
-      - {href: /golang/iris/going-further/remote-access, title: Remote Access}
-      - {href: /golang/iris/going-further/team-management, title: Team Management}
-      - {href: /golang/iris/going-further/manage-platform, title: Manage Platform}
+      - {href: /golang/iris/scale-your-app, title: Scale Your App}
+      - {href: /golang/iris/debugging, title: Debugging}
+      - {href: /golang/iris/app-health, title: App Health}
+      - {href: /golang/iris/remote-access, title: Remote Access}
+      - {href: /golang/iris/team-management, title: Team Management}
+      - {href: /golang/iris/manage-platform, title: Manage Platform}

@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/echo/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /golang/echo/getting-started/from-scratch, title: Echo from Scratch}
-      - {href: /golang/echo/getting-started/existing-app, title: Existing Echo App}
+      - {href: /golang/echo/install-nanobox, title: Install Nanobox}
+      - {href: /golang/echo/from-scratch, title: Echo from Scratch}
+      - {href: /golang/echo/existing-app, title: Existing Echo App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /golang/echo/next-steps/add-a-database, title: Add a Database}
-      - {href: /golang/echo/next-steps/local-evars, title: Local Environment Variables}
-      - {href: /golang/echo/next-steps/javascript-runtime, title: Javascript Runtime}
+      - {href: /golang/echo/add-a-database, title: Add a Database}
+      - {href: /golang/echo/local-evars, title: Local Environment Variables}
+      - {href: /golang/echo/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/echo/production/configure-echo, title: Configure Echo}
-      - {href: /golang/echo/production/stage-your-app, title: Stage your App}
-      - {href: /golang/echo/production/launch-your-app, title: Launch your App}
-      - {href: /golang/echo/production/point-your-domain, title: Point your Domain}
-      - {href: /golang/echo/production/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/echo/production/production-evars, title: Production Environment Variables}
+      - {href: /golang/echo/configure-echo, title: Configure Echo}
+      - {href: /golang/echo/stage-your-app, title: Stage your App}
+      - {href: /golang/echo/launch-your-app, title: Launch your App}
+      - {href: /golang/echo/point-your-domain, title: Point your Domain}
+      - {href: /golang/echo/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/echo/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /golang/echo/going-further/scale-your-app, title: Scale Your App}
-      - {href: /golang/echo/going-further/debugging, title: Debugging}
-      - {href: /golang/echo/going-further/app-health, title: App Health}
-      - {href: /golang/echo/going-further/remote-access, title: Remote Access}
-      - {href: /golang/echo/going-further/team-management, title: Team Management}
-      - {href: /golang/echo/going-further/manage-platform, title: Manage Platform}
+      - {href: /golang/echo/scale-your-app, title: Scale Your App}
+      - {href: /golang/echo/debugging, title: Debugging}
+      - {href: /golang/echo/app-health, title: App Health}
+      - {href: /golang/echo/remote-access, title: Remote Access}
+      - {href: /golang/echo/team-management, title: Team Management}
+      - {href: /golang/echo/manage-platform, title: Manage Platform}

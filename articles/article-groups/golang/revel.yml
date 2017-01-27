@@ -5,33 +5,33 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/revel/getting-started/install-nanobox, title: Install Nanobox}
-      - {href: /golang/revel/getting-started/from-scratch, title: Revel from Scratch}
-      - {href: /golang/revel/getting-started/existing-app, title: Existing Revel App}
+      - {href: /golang/revel/install-nanobox, title: Install Nanobox}
+      - {href: /golang/revel/from-scratch, title: Revel from Scratch}
+      - {href: /golang/revel/existing-app, title: Existing Revel App}
 
   #
   - title: "Next Steps"
     articles:
-      - {href: /golang/revel/next-steps/add-a-database, title: Add a Database}
-      - {href: /golang/revel/next-steps/local-evars, title: Local Environment Variables}
-      - {href: /golang/revel/next-steps/javascript-runtime, title: Javascript Runtime}
+      - {href: /golang/revel/add-a-database, title: Add a Database}
+      - {href: /golang/revel/local-evars, title: Local Environment Variables}
+      - {href: /golang/revel/javascript-runtime, title: Javascript Runtime}
 
   #
   - title: "Production"
     articles:
-      - {href: /golang/revel/production/configure-revel, title: Configure Revel}
-      - {href: /golang/revel/production/stage-your-app, title: Stage your App}
-      - {href: /golang/revel/production/launch-your-app, title: Launch your App}
-      - {href: /golang/revel/production/point-your-domain, title: Point your Domain}
-      - {href: /golang/revel/production/encryption, title: SSL/TLS Encryption}
-      - {href: /golang/revel/production/production-evars, title: Production Environment Variables}
+      - {href: /golang/revel/configure-revel, title: Configure Revel}
+      - {href: /golang/revel/stage-your-app, title: Stage your App}
+      - {href: /golang/revel/launch-your-app, title: Launch your App}
+      - {href: /golang/revel/point-your-domain, title: Point your Domain}
+      - {href: /golang/revel/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/revel/production-evars, title: Production Environment Variables}
 
   #
   - title: "Going Further"
     articles:
-      - {href: /golang/revel/going-further/scale-your-app, title: Scale Your App}
-      - {href: /golang/revel/going-further/debugging, title: Debugging}
-      - {href: /golang/revel/going-further/app-health, title: App Health}
-      - {href: /golang/revel/going-further/remote-access, title: Remote Access}
-      - {href: /golang/revel/going-further/team-management, title: Team Management}
-      - {href: /golang/revel/going-further/manage-platform, title: Manage Platform}
+      - {href: /golang/revel/scale-your-app, title: Scale Your App}
+      - {href: /golang/revel/debugging, title: Debugging}
+      - {href: /golang/revel/app-health, title: App Health}
+      - {href: /golang/revel/remote-access, title: Remote Access}
+      - {href: /golang/revel/team-management, title: Team Management}
+      - {href: /golang/revel/manage-platform, title: Manage Platform}
