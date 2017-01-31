@@ -4,7 +4,6 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/hugo/install-nanobox, title: Install Nanobox}
       - {href: /golang/hugo/from-scratch, title: Hugo from Scratch}
       - {href: /golang/hugo/existing-app, title: Existing Hugo App}
 

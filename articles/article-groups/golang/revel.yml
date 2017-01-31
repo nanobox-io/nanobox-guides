@@ -5,7 +5,6 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/revel/install-nanobox, title: Install Nanobox}
       - {href: /golang/revel/from-scratch, title: Revel from Scratch}
       - {href: /golang/revel/existing-app, title: Existing Revel App}
 
