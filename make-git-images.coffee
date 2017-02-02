@@ -66,6 +66,7 @@ generatedIcons = [
   {icon:'horizon', title:'Horizon'}
   {icon:'koa', title:'Koa'}
   {icon:'nodal', title:'Nodal'}
+  {icon:'buffalo', title:'Buffalo'}
 ]
 
 # Add new icons to generate here:
