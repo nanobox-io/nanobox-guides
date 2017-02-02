@@ -5,7 +5,6 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/iris/install-nanobox, title: Install Nanobox}
       - {href: /golang/iris/from-scratch, title: Iris from Scratch}
       - {href: /golang/iris/existing-app, title: Existing Iris App}
 

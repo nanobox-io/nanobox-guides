@@ -4,7 +4,6 @@ articles:
 
   - title: Getting Started
     articles:
-      - {href: /php/wordpress/install-nanobox, title: Install Nanobox}
       - {href: /php/wordpress/from-scratch, title: WordPress from Scratch}
       - {href: /php/wordpress/existing-app, title: Existing WordPress App}
 

@@ -5,7 +5,6 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/gin/install-nanobox, title: Install Nanobox}
       - {href: /golang/gin/from-scratch, title: Gin from Scratch}
       - {href: /golang/gin/existing-app, title: Existing Gin App}
 

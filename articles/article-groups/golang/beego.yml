@@ -5,7 +5,6 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/beego/install-nanobox, title: Install Nanobox}
       - {href: /golang/beego/from-scratch, title: Beego from Scratch}
       - {href: /golang/beego/existing-app, title: Existing Beego App}
 

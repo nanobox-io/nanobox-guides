@@ -5,7 +5,6 @@ articles:
   #
   - title: "Getting Started"
     articles:
-      - {href: /golang/echo/install-nanobox, title: Install Nanobox}
       - {href: /golang/echo/from-scratch, title: Echo from Scratch}
       - {href: /golang/echo/existing-app, title: Existing Echo App}
 
