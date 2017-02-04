@@ -13,11 +13,12 @@ mkdir nanobox-react && cd nanobox-react
 #### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
-At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> and enable file-watching:
 
 ```yaml
 run.config:
   engine: nodejs
+  fs_watch: true
 ```
 
 ## Generate a React App
