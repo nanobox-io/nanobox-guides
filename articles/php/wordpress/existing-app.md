@@ -26,14 +26,7 @@ run.config:
       - zlib
 
 web.wp:
-  start:
-    fpm: start-php
-    apache: start-apache
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
+  start: php-server
   network_dirs:
     data.storage:
       - wp-content/uploads/
@@ -74,7 +67,7 @@ define('DB_HOST', $_ENV['DATA_DB_HOST']);
 ### Setup Auth Keys & Salts
 WordPress uses authentication keys and salts to securely create sessions. If these don't exist, WordPress will automatically create and reference them in the database, so they don't need to be defined when developing locally.
 
-However, for security purposes, auth keys and salts should be explicitly defined in a production environment, but never committed to your codebase. Instead, you can use environment variables. Replace the auth key and salts definitions in your wp-config.php with the following:
+However, for security purposes, auth keys and salts should be explicitly defined in a production environment, but never committed to your codebase. Instead, you can use environment variables. Replace the auth key and salts definitions in your `wp-config.php` with the following:
 
 ```php?start_inline=1
 define('AUTH_KEY',         $_ENV['AUTH_KEY']         ?: '');
@@ -92,21 +85,18 @@ define('NONCE_SALT',       $_ENV['NONCE_SALT']       ?: '');
 ## Create a WordPress Dev Environment
 Nanobox will create an isolated virtual environment and mount your local codebase inside it. From within this environment you can run the app and perform other tasks as you would normally.
 
-With your boxfile.yml in place and your wp-config.php updated, you're ready to get WordPress up and running in your dev environment.
+With your `boxfile.yml` in place and your `wp-config.php` updated, you're ready to get WordPress up and running in your dev environment.
 
 
 ```bash
-# start the dev environment
-nanobox dev start
-
 # add a convenient way to access your app from the browser:
-nanobox dev dns add wordpress.nanobox.dev
+nanobox dns add local wordpress.dev
 
-# start PHP-FPM and Apache
-nanobox dev run
+# start nanobox and run the app
+nanobox run php-server
 ```
 
-You can visit your running WordPress app at `wordpress.nanobox.dev`.
+You can visit your running WordPress app at `wordpress.dev`.
 
 ## Now What?
 Now that you have WordPress running with Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!

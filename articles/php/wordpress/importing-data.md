@@ -1,28 +1,28 @@
 # Importing Data
 
-## Into a Dev or Sim Database
+## Into a Local Database
 Nanobox makes MySQL databases running in dev and sim environments accessible to your local machine through a specific IP and port. You can use these along with the database's username(s) and password(s) to connect.
 
-### Make Sure Dev/Sim is Running
-Whatever environment you'd like to import data needs to be running before you'll be able to connect to MySQL. If it's not, simply run the `start` command.
+### Make Sure Your App is Running
+There are two types of local environments: development (for active development) or dry-run (for testing). Whatever environment you'd like to import data needs to be running before you'll be able to connect to MySQL.
 
 ```bash
 # Starts a dev environment
-nanobox dev start
+nanobox run
 
-# Starts a sim environment
-nanobox sim start
+# Deploys to and starts a dry-run environment
+nanobox deploy dry-run
 ```
 
 ### Get Your Database Credentials
 To get the credentials of your MySQL database, run the `info` command. This will output information for each of your app's components.
 
 ```bash
-# List dev app info
-nanobox dev info
+# List local dev app info
+nanobox info local
 
-# List sim app info
-nanobox sim info
+# List dry-run app info
+nanobox info dry-run
 ```
 
 Find your MySQL data component in the info output.
@@ -46,7 +46,7 @@ data.db
 **Password:** The password provided for whichever user you use.
 
 ### Connect to MySQL Using the Provided Credentials
-With the database credentials you can use your MySQL client of choice to import your data. These include but are not limited to the MySQL CLI, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.
+With the database credentials you can use your MySQL client of choice to import your data. These include but are not limited to the [MySQL CLI](https://dev.mysql.com/doc/refman/5.6/en/mysql.html), [Sequel Pro](https://www.sequelpro.com/), [MySQL Workbench](https://www.mysql.com/products/workbench/), [HeidiSQL](http://www.heidisql.com/), etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.
 
 Below is an example of importing data using the MySQL CLI.
 
@@ -66,7 +66,7 @@ To view your tunnel connection credentials, go to your dashboard and click the "
 ![Tunnel Credentials](/assets/php/wordpress/wordpress-tunnel-credentials.png)
 
 ### Connect to MySQL Using the Tunnel Credentials
-Use the credentials provided in your dashboard and the port on which the tunnel is listening to connect with your MySQL client of choice to import your data. These include, but are not limited to, the MySQL CLI, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.
+Use the credentials provided in your dashboard and the port on which the tunnel is listening to connect with your MySQL client of choice to import your data. These include, but are not limited to, the [MySQL CLI](https://dev.mysql.com/doc/refman/5.6/en/mysql.html), [Sequel Pro](https://www.sequelpro.com/), [MySQL Workbench](https://www.mysql.com/products/workbench/), [HeidiSQL](http://www.heidisql.com/), etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.
 
 Below is an example of importing data using the MySQL CLI.
 

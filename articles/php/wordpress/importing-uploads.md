@@ -4,12 +4,15 @@ When using WordPress with Nanobox, `wp-content/uploads` should be specified as a
 
 The contents of network directories are stored outside your code's read-only filesystem in your app's storage component. To import data into your storage component, you need to connect with SSH or SFTP and upload the files. How this is done depends on which environment you're in.
 
-## In Dev & Sim
-When working in local dev or sim environments, your storage component is given it's own virtual IP and port to which you can connect. To view these credentials, use the Nanobox CLI's info command.
+## In a Local Dev App
+Storage components are not created when in development, so anything written to `wp-content/uploads` will be written to your local codebase.
+
+## In a Local Dry-Run App
+When working in a dry-run environments, your storage component is given it's own virtual IP and port to which you can connect. To view these credentials, use the Nanobox CLI's info command.
 
 ```bash
 # View app/component info in dev
-nanobox dev info
+nanobox info local
 
 # ...
 

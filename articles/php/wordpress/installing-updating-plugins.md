@@ -2,23 +2,19 @@
 
 WordPress plugins are a major reason WordPress is so widely used. They provide a really simple way to quickly and easily extend WordPress to fit your specific needs.
 
-Installing and updating plugins requires modifying the filesystem, which is why it's typically done through FTP. However this poses a problem since the filesystem is read-only in production and sim apps on Nanobox. Luckily, Nanobox allows you to launch a local dev environment that gives you full write access to your filesystem where you can install and update plugins.
+Installing and updating plugins requires modifying the filesystem, which is why it's typically done through FTP. However this poses a problem since the filesystem is read-only for apps deployed with Nanobox. Nanobox allows you to launch a local development environment that gives you full write access to your filesystem where you can install and update plugins.
 
-## Run WordPress in Dev
-If you walked through the [Setting Up WordPress on Nanobox](/php/wordpress/getting-started) guide, that you've already created a dev environment in your local Nanobox virtual machine (VM). If you don't have a dev environment setup, the instructions are outlined in the
-[Up and Running](/php/wordpress//#up-and-running) section of that guide.
-
-### Start Your WordPress App in Dev
-The quickest way to start your app in dev is to run:
+## Start Your WordPress App
+The quickest way to start your app to run:
 
 ```bash
-nanobox dev run
+nanobox run php-server
 ```
 
-This will start your dev environment if it's not running, then run the [start commands specified in your boxfile.yml](/php/wordpress/boxfile-explained/#start).
+This will start your local dev environment and run WordPress.
 
 ## Install & Update Plugins Like You Would Normally
-When using WordPress in dev, you can manage plugins the same way you normally would. You can either manually download plugins and include them in your `wp-content/plugins` directory or you can install/upgrade plugins through your WordPress admin panel in your dev app.
+When using WordPress locally, you can manage plugins the same way you normally would. You can either manually download plugins and include them in your `wp-content/plugins` directory or you can install/upgrade plugins through your WordPress admin panel in your dev app.
 
 ![Install Plugins](/assets/php/wordpress/wp-plugins.png)
 
