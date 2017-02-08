@@ -1,6 +1,7 @@
 run.config:
   engine: nanobox-io/nanobox-engine-tolmark-gulp
   engine.config:
+    force_https: true
     error_pages:
       - errors: 404
         page: errors/404/index.html
