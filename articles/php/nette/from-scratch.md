@@ -37,6 +37,7 @@ run.config:
       - iconv
       - intl
       - mbstring
+      - memcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -64,7 +65,7 @@ nanobox evar add local NETTE_DEVEL=1
 ## Run the app
 
 ```bash
-nanobox run php bin/console server:run 0.0.0.0
+nanobox run php -S 0.0.0.0:8000 -t www
 ```
 
 Visit your app at <a href="http://nette.dev:8000" target="\_blank">nette.dev:8000</a>
