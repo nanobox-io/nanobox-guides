@@ -13,35 +13,72 @@ mkdir nanobox-phoenix && cd nanobox-phoenix
 #### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
-At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>. You'll also want to add `inotify-tools` as a development package so it'll be available in your local dev environment:
 
 ```yaml
 run.config:
   engine: elixir
+  dev_packages:
+    - inotify-tools
 ```
 
 ## Generate a Phoenix App
-WIP
+To generate a new Phoenix app, spin up a development environment using `nanobox run`, then use mix to install it.
+
+```bash
+# add a convenient way to access your app from the browser
+nanobox dns add local phoenix.dev
+
+# start an elixir development environment
+nanobox run
+
+# install Phoenix
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+
+# generate the project and copy it in
+cd /tmp
+mix phoenix.new myapp --no-brunch --no-ecto
+cp -a /tmp/myapp/* /app
+cd -
+```
 
 ## Configure Phoenix
 
-#### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the ...:
+#### Update to Port 8080
+To connect to the public network, you need to configure your app to listen on port 8080 by modifying your `config/dev.exs` and `config/prod.exs`:
 
-## Add a local DNS
-Add a convenient way to access your app from the browser:
+```elixir
+# /config/dev.exs
+config :myapp, Myapp.Endpoint,
+  http: [port: 8080],
+  debug_errors: true,
+  code_reloader: true,
+  check_origin: false,
+  watchers: []
+```
+
+```elixir
+# /config/prod.exs
+config :myapp, Myapp.Endpoint,
+  http: [port: 8080],
+  url: [host: "example.com", port: 8080],
+  cache_static_manifest: "priv/static/manifest.json"
+```
+
+## Fetch your Dependencies
+Inside of your Nanobox console, fetch your app's dependencies:
 
 ```bash
-nanobox dns add local phoenix.dev
+mix deps.get
 ```
 
 ## Run the app
 
 ```bash
-nanobox run phoenix s
+mix phoenix.server
 ```
 
-Visit your app at <a href="http://phoenix.dev:3000" target="\_blank">phoenix.dev:3000</a>
+Visit your app at <a href="http://phoenix.dev" target="\_blank">phoenix.dev</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Phoenix app:
