@@ -99,6 +99,7 @@ block jsParams
     ]
     /*
     @name         : Their name or username, ask which they prefer
+    @twitter      : We use twitter to pull their twitter profile image (vs gravatar)
     @gravatarHash : We use gravatar to show an image, get an email connected to gravatar and generate a MD5 hash. ex : http://onlinemd5.com/
     @href         : Link to their site, twitter profile, github profile, etc. whatever they want. We probably prefer github.
     */
