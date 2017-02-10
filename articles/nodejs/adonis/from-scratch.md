@@ -27,7 +27,7 @@ run.config:
 nanobox run
 
 # install adonis so you can use it to generate your application
-npm install -g adonis
+npm install -g adonis-cli
 
 # cd into the /tmp dir to create an app
 cd /tmp
