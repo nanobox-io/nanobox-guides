@@ -20,6 +20,9 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 ```yaml
 run.config:
   engine: nodejs
+
+web.adonis:
+  start: node server.js
 ```
 
 ## Configure Adonis
@@ -54,11 +57,11 @@ With Nanobox, you have everything you need develop and run your adonis app:
 # drop into a Nanobox console
 nanobox run
 
-# where nodejs is installed,
+# where nodejs is installed
 node -v
 
-# npm is installed,
-npm -v
+# npm/yarn are installed
+npm -v && yarn --version
 
 # and your code is mounted
 ls

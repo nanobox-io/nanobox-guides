@@ -18,6 +18,9 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 ```yaml
 run.config:
   engine: nodejs
+
+web.adonis:
+  start: node server.js
 ```
 
 ## Generate an Adonis App
@@ -27,13 +30,13 @@ run.config:
 nanobox run
 
 # install adonis so you can use it to generate your application
-npm install -g adonis
+yarn add adonis-cli
 
 # cd into the /tmp dir to create an app
 cd /tmp
 
 # generate the adonis app
-adonis new myapp
+adonis new myapp --yarn
 
 # copy the generated app into the project
 cp -ar ./myapp/. /app
@@ -45,7 +48,7 @@ exit
 ## Configure Adonis
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `.env.exmaple`:
+To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `.env`:
 
 ```javascript
 HOST=0.0.0.0
@@ -61,7 +64,7 @@ nanobox dns add local adonis.dev
 ## Run the app
 
 ```bash
-nanobox run npm run dev
+nanobox run yarn run dev
 ```
 
 Visit your app at <a href="http://adonis.dev:3333" target="\_blank">adonis.dev:3333</a>
@@ -73,11 +76,11 @@ With Nanobox, you have everything you need develop and run your adonis app:
 # drop into a Nanobox console
 nanobox run
 
-# where node is installed,
+# where node is installed
 node -v
 
-# npm is installed,
-npm -v
+# npm/yarn are installed
+npm -v && yarn --version
 
 # and your code is mounted
 ls

@@ -8,6 +8,7 @@ Add the following to your `boxfile.yml` to make nginx available to the runtime:
 
 ```yaml
 run.config:
+
   # add nginx package
   extra_packages:
     - nginx
@@ -41,7 +42,7 @@ http {
 
     # Proxy upstream to the node process
     upstream adonis {
-        server 127.0.0.1:1337;
+        server 127.0.0.1:3333;
     }
 
     # Configuration for Nginx
@@ -50,7 +51,7 @@ http {
         # Listen on port 8080
         listen 8080;
 
-        root /app/public;
+        root /app;
 
         try_files $uri/index.html $uri @adonis;
 
