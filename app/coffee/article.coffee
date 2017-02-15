@@ -1,6 +1,6 @@
 class Article
 
-  constructor: (@title, @clusters) ->
+  constructor: (@title, @clusters, @id) ->
     @$main    = $ ".main"
     @$leftNav = $ "#left-nav"
     @buildRelatedPagesNav()
@@ -39,7 +39,7 @@ class Article
     shouldBeOpen = false
     foundActiveArticle = false
     for article in articles
-      if article.title.toLowerCase() == @title.toLowerCase()
+      if article.title.toLowerCase() == @id.toLowerCase()
         article.active = true
         foundActiveArticle = true
       if article.articles?
