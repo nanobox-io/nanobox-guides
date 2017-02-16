@@ -66,14 +66,14 @@ Connection credentials for the tunnel are provided in your app dashboard under t
 ### Connect with SSH or SFTP
 Use the tunnel-bound port on your local machine and the tunnel credentials provided in your dashboard to connect with SSH or SFTP.
 
-Network directories are housed in the `data` directory in the home directory of your storage component.
+Network directories are housed in the `/data/var/db/unfs/` directory of your storage component.
 
 #### Copy files with SCP
 ```bash
 # copy files from your local code filesystem
 # into to your storage component at the data/path
 
-scp -P 22 -r wp-content/uploads/* gonano@127.0.0.1:data/wp-content/uploads
+scp -P 22 -r wp-content/uploads/* gonano@127.0.0.1:/data/var/db/unfs/wp-content/uploads
 
 # This will prompt for your storage password
 ```
