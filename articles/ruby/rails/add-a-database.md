@@ -5,6 +5,8 @@ You can add a database to your app by simply adding a data component to your `bo
 
 <div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
+<!-- <div class="meta" data-class="snippet" data-snippet-toggler="postgres,mysql,mongo" ></div> -->
+
 In the above snippet `db` is the unique identifier of this component. It can be anything you choose as long as it is unique.
 
 Nanobox generates the following environment variables based off that name:

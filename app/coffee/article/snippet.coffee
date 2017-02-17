@@ -35,6 +35,9 @@ class Snippet
     $($serviceBtn[0]).trigger 'click'
     castShadows $node
 
+  snippetToggler : () ->
+    console.log "hahah"
+
   replaceComments : () ->
 
 
