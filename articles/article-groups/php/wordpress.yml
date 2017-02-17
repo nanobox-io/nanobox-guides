@@ -9,8 +9,8 @@ articles:
 
   - title: Plugins & Themes
     articles:
-      - {href: /php/wordpress/installing-updating-plugins, title: Installing & Updating Plugins}
-      - {href: /php/wordpress/installing-updating-themes, title: Installing & Updating Themes}
+      - {href: /php/wordpress/installing-updating-plugins, title: Installing/Updating Plugins}
+      - {href: /php/wordpress/installing-updating-themes, title: Installing/Updating Themes}
 
   - title: Data & Storage Management
     articles:
