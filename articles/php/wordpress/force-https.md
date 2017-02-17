@@ -5,6 +5,6 @@ Your WordPress app running on Nanobox sits behind a load balancer that forwards 
 #### Forcing HTTPS in the .htaccess
 ```apacheconf
 RewriteEngine On
-RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^(.*)https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ```
