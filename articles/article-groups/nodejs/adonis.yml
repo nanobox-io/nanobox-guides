@@ -45,6 +45,6 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/adonis/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/adonis/npm, title: Yarn & NPM}
+      - {href: /nodejs/adonis/npm, title: Yarn &amp; NPM}
       # - {href: /nodejs/adonis/scale-your-app, title: Make Adonis scream}
       # - {href: /nodejs/adonis/scale-your-app, title: New Relic}

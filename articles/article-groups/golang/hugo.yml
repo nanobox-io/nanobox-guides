@@ -25,6 +25,7 @@ articles:
   #
   - title: "Going Further"
     articles:
+      - {href: /golang/hugo/configure-golang, title: Configure Golang}
       - {href: /golang/hugo/scale-your-app, title: Scale Your App}
       - {href: /golang/hugo/debugging, title: Debugging}
       - {href: /golang/hugo/app-health, title: App Health}

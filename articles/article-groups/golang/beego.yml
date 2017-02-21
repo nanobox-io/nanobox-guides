@@ -28,6 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
+      - {href: /golang/beego/configure-golang, title: Configure Golang}
       - {href: /golang/beego/scale-your-app, title: Scale Your App}
       - {href: /golang/beego/debugging, title: Debugging}
       - {href: /golang/beego/app-health, title: App Health}

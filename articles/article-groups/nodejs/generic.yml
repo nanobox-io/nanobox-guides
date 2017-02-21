@@ -45,4 +45,4 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/generic/configure-nodejs, title: Configure Node}
-      - {href: /nodejs/generic/npm, title: Yarn & NPM}
+      - {href: /nodejs/generic/npm, title: Yarn &amp; NPM}

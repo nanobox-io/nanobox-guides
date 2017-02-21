@@ -45,6 +45,6 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/koa/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/koa/npm, title: Yarn & NPM}
+      - {href: /nodejs/koa/npm, title: Yarn &amp; NPM}
       # - {href: /nodejs/koa/scale-your-app, title: Make Koa scream}
       # - {href: /nodejs/koa/scale-your-app, title: New Relic}

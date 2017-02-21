@@ -45,6 +45,6 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/hapi/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/hapi/npm, title: Yarn & NPM}
+      - {href: /nodejs/hapi/npm, title: Yarn &amp; NPM}
       # - {href: /nodejs/hapi/scale-your-app, title: Make Hapi scream}
       # - {href: /nodejs/hapi/scale-your-app, title: New Relic}

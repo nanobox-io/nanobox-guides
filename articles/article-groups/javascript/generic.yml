@@ -13,5 +13,5 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /javascript/generic/configure-nodejs, title: Configure Nodejs}
-      - {href: /javascript/generic/package-managers, title: 'Yarn, NPM, & Bower'}
+      - {href: /javascript/generic/package-managers, title: 'Yarn, NPM, &amp; Bower'}
       - {href: /javascript/generic/task-runners, title: 'Task Runners'}

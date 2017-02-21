@@ -45,6 +45,6 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/done/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/done/npm, title: Yarn & NPM}
+      - {href: /nodejs/done/npm, title: Yarn &amp; NPM}
       # - {href: /nodejs/done/scale-your-app, title: Make DoneJS scream}
       # - {href: /nodejs/done/scale-your-app, title: New Relic}

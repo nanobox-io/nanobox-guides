@@ -28,6 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
+      - {href: /golang/gin/configure-golang, title: Configure Golang}
       - {href: /golang/gin/scale-your-app, title: Scale Your App}
       - {href: /golang/gin/debugging, title: Debugging}
       - {href: /golang/gin/app-health, title: App Health}

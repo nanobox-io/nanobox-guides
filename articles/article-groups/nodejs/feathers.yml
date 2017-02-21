@@ -45,6 +45,6 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/feathers/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/feathers/npm, title: Yarn & NPM}
+      - {href: /nodejs/feathers/npm, title: Yarn &amp; NPM}
       # - {href: /nodejs/feathers/scale-your-app, title: Make Feathers scream}
       # - {href: /nodejs/feathers/scale-your-app, title: New Relic}

@@ -28,6 +28,7 @@ articles:
   #
   - title: "Going Further"
     articles:
+      - {href: /golang/iris/configure-golang, title: Configure Golang}
       - {href: /golang/iris/scale-your-app, title: Scale Your App}
       - {href: /golang/iris/debugging, title: Debugging}
       - {href: /golang/iris/app-health, title: App Health}
