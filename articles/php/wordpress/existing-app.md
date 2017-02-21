@@ -17,7 +17,7 @@ The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build a
 ```yaml
 run.config:
   engine: php
-  config:
+  engine.config:
     runtime: php-7.0
     extensions:
       - gd

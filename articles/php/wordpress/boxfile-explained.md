@@ -5,7 +5,7 @@ The boxfile.yml provided in this guide includes all config options required to g
 ```yaml
 run.config:
   engine: php
-  config:
+  engine.config:
     runtime: php-7.0
     extensions:
       - gd
