@@ -1,18 +1,40 @@
 .top-nav-wrapper(style="height:49px;")
+  input(type="checkbox")
+  .hamburg-icon
+    .line.top
+    .line.mid
+    .line.btm
   .top-nav
-    a.logo(href="/")
-      .img
-      .company Nanobox
-    //- .index-items
-    //-   .jumper#local-link.active(data-target="#local") Local
-    //-   .jumper#deploy-link(data-target="#deploy") Deploy
-    //-   .jumper#live-link(data-target="#live") Live
+    .logo
+      a.icon(href="//nanobox.io")
+        img.shadow-icon(data-src="logo")
+      a.company(href="/") Nanobox
     .menu
       .nav
-        a(href="https://nanobox.io/pricing") Pricing
-        a(href="http://dashboard.nanobox.io") Sign Up
-        //- a(href="#") 
-        //-   .txt More
-        //-   img.shadow-icon(data-src="more-arrow")
-    .hamburg-icon
-      img.shadow-icon(data-src="hamburg-menu")
+        .left-items
+          .more.what-is-nanobox
+            a(href="//nanobox.io/what-is-nanobox")
+              .txt What is Nanobox
+              img.shadow-icon(data-src="more-arrow")
+            .sub-menu
+              .shadow
+                a(href="//nanobox.io/app-development-environment")
+                  .icon
+                    img.shadow-icon(data-src="nav-local")
+                  .txt Local Dev Environment
+                a(href="//nanobox.io/app-deployment-tool")
+                  .icon
+                    img.shadow-icon(data-src="nav-deploy")
+                  .txt App Deployment Platform
+                a(href="//nanobox.io/app-server-management-system")
+                  .icon
+                    img.shadow-icon(data-src="nav-production")
+                  .txt Production Management Tool
+          a.get-started(href="http://guides.nanobox.io") Get Started
+          a(href="//nanobox.io/pricing") Pricing
+          //- a.more(href="#") 
+          //-   .txt More
+          //-   img.shadow-icon(data-src="more-arrow")
+        .right-items
+          a(href="https://dashboard.nanobox.io/users/login") Login
+          a.sign-up(href="https://dashboard.nanobox.io/users/register") Sign Up

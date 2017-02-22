@@ -50,6 +50,8 @@
 	.st44{fill:#ADB1B9;}
 	.st45{fill:none;stroke:#B4C5CF;stroke-width:1.5;stroke-miterlimit:10;}
 	.st46{fill:none;stroke:#11A7ED;stroke-width:2.1377;stroke-miterlimit:10;}
+	.st47{fill:none;stroke:#3DB8FF;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st48{fill:none;stroke:#3DB8FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g id="logo_x60_19x33">
 	<polygon class="st0" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/>
@@ -332,5 +334,30 @@
 	<polyline class="st46" points="14.345,25.859 14.345,15.574 1.672,6.309 	"/>
 	<polyline class="st46" points="20.653,21.29 20.653,11.005 6.751,1.234 	"/>
 	<line class="st46" x1="14.345" y1="15.574" x2="27.775" y2="5.616"/>
+</g>
+<g id="nav-local_x60_20x14">
+	<g>
+		<rect x="1" y="1" class="st47" width="17.809" height="11.461"/>
+	</g>
+	<line class="st48" x1="4.516" y1="5.272" x2="6.579" y2="5.272"/>
+</g>
+<g id="nav-deploy_x60_15x17">
+	<g>
+		<polyline class="st47" points="13.977,7.635 7.342,1 0.707,7.635 		"/>
+	</g>
+	<g>
+		<line class="st47" x1="7.342" y1="1" x2="7.342" y2="16.183"/>
+	</g>
+</g>
+<g id="nav-production_x60_17x20">
+	<g>
+		<polygon class="st47" points="15.846,13.856 8.423,18.142 1.001,13.856 1.001,5.285 8.423,1 15.846,5.285 		"/>
+	</g>
+	<g>
+		<polygon class="st47" points="15.846,5.285 8.423,9.571 8.423,18.142 15.846,13.856 		"/>
+	</g>
+	<g>
+		<polyline class="st47" points="8.423,18.142 1,13.856 1,5.285 		"/>
+	</g>
 </g>
 </svg>

@@ -1,66 +1,95 @@
-.top-nav                 {display: flex; align-items: center; max-width:996px; margin: 0 auto; padding-top: 15px;
-  .logo                  {display:flex; align-items: center; margin-left:-8px;
-    .img                 {background:url(/assets/sprite.png); width:45px; height:51px; background-position:-7px -1px;}
-  }
-  .company               {margin-left:18px; text-transform: uppercase; font-weight: $semibold; font-size:21px; color:$navy; letter-spacing: 0.1em;
-    &:after              {content:"/ Guides /"; color:#94ACBA; font-size:12px; letter-spacing: 0.06em; margin-left:15px; }
-  }
-  .index-items           {display:none;}
-  .menu                  {margin-left:auto;
-    .nav                 {display:flex;  font-size:12px; letter-spacing: 0.06em; font-weight: $bold; text-transform: uppercase;
-      a                  {color:#94ACBA; margin-left:32px; display:flex; align-items: center;
-        svg              {margin-left:5px; margin-bottom:-1px;}
-        &:hover          {color:#0091D5;
-          svg *          {fill:#0091D5; }
-        }
+.top-nav-wrapper              {
+  .top-nav                    {display: flex; align-items: center; max-width:996px; margin: 0 auto; padding-top: 15px; justify-content: flex-start; position:relative; // transform: translateZ(0);
+    .logo                     {display:flex; align-items: center; position: relative;
+      .icon                   {position: relative;
+        &:hover:after         {position: absolute; bottom:-15px; content:"Home"; letter-spacing: 0.06em; font-size:13px; text-transform: uppercase; color:#0D69B4; left:-9px; }
       }
     }
-  }
-  .hamburg-icon          {display:none; }
+    .company                  {margin-left:25px; margin-top: -6px; text-transform: uppercase; font-weight: $semibold; font-size:21px; color:#94ACBA; letter-spacing: 0.1em;
+      &:after                 {content:"/ Guides /"; color:#94ACBA; font-size:12px; letter-spacing: 0.06em; margin-left:15px; }
+      &:hover                 {color:#0091D5}
+    }
+    .index-items              {display:none;}
+    .menu                     {flex-grow: 2; margin-top: 3px;
+      .nav                    {display:flex;  font-size:12px; letter-spacing: 0.06em; font-weight: $bold; text-transform: uppercase; justify-content: space-between;
+        .left-items,
+        .right-items          {display: flex; align-items: baseline;}
+        a                     {color:#94ACBA; margin-left:32px; display:flex; align-items: center;
+          &:hover             {color:#0091D5;}
+          &.sign-up           {color:#19abf5; border-bottom:solid 3px; padding-bottom: 2px; }
+        }
 
-  // FIXED - only used on the index page
-  @media screen and (min-width:540px )
-                         {
-    &.fixed              {position:fixed; max-width: initial; width: 100%; background: rgba(#19242b, 0.8); margin:0; z-index:10; filter : drop-shadow(0px 2px 1px rgba(#000, 0.16)); padding-top: 0px;
-      .logo              {display:none; }
-      .index-items       {display: flex; background:#f27e8f; padding: 12px 15px; align-items: center; justify-content: space-between; min-width: 260px;
-        .jumper          {padding:4px 8px; cursor:pointer; color: white; font-weight: $bold; font-size:12px; text-transform: uppercase;
-          &.active,
-          &.active:hover {outline:solid white 2px;  }
-          &:hover        {outline:solid #F0909E 2px;  }
-          &.active       {position:relative;
-            &:after      {top: 30px; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-top-color: #f27e8f; border-width: 15px; margin-left: -15px;
+        // Trigger for submenu
+        .more                 {position: relative;
+          svg                 {margin-left:5px; margin-bottom:-1px;}
+          &:hover             {
+            svg#more-arrow *  {fill:#0091D5; }
+          }
+
+          // Submenu
+          .sub-menu           {position: absolute; visibility: hidden; opacity:0; transition: visibility 0.2s, opacity 0.1s linear; padding-top:10px; z-index: 1000;
+            .shadow           {box-shadow: 0px 3px 12px rgba(#000, 0.15);}
+            a                 {color:#0D69B4; background: white; font-style:italic; font-size:16px; font-weight: $bold; text-transform: none; margin:0; padding:10px 26px 10px 20px; letter-spacing: 0; white-space: nowrap;
+              .icon           {width:25px; text-align: center; margin-right:10px; margin-bottom: -5px;
+                svg           {margin:0 auto;}
+              }
+              &:hover         {color:#002177;
+                svg *         {stroke:#002177; }
+              }
+              &:first-of-type {padding-top:20px;}
+              &:last-of-type  {padding-bottom:22px;}
             }
           }
-        }
-      }
-      .nav               {padding-right:15px;
-        a                {
-          &:hover        {color:white;
-            svg *        {fill:white; }
+          &:hover, &:active   {
+            .sub-menu         {visibility: visible; opacity:1; }
           }
         }
       }
     }
   }
-
-
-  @media screen and (max-width:540px )
-                         {background: white;
-    .menu                {display:none;}
-    .hamburg-icon        {display:block; cursor:pointer; position: absolute; right:10px; top:20px;
-      &:hover            {
-        svg *            {stroke:#F27E8F}
+  .hamburg-icon, input        {display: none; position: absolute; right:9px; top:10px; }
+  .hamburg-icon               {flex-direction: column; padding:10px; pointer-events: none;
+    .line                     {width:22px; height: 3px; background: #19abf5; margin-bottom: 3px; border-radius: 2px; transform-origin: 4px 0px; transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.3s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+      &:first-child           {transform-origin: 0% 0%;}
+      &:last-child            {transform-origin: 0% 100%;}
+    }
+  }
+  input                       {width:35px; height:35px; z-index: 10; background:red; cursor: pointer; display: block; opacity: 0; }
+  // When screen gets narrow
+  @media screen and (max-width:800px )
+                              {
+    .hamburg-icon, input      {display: initial;z-index: 1001;}
+    .hamburg-icon             {display: flex; margin-right:0; transition:all 0.2s; }
+    input                     {user-select: none; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-touch-callout: none;}
+    .menu                     {opacity:0;}
+    .logo                     {padding-left:15px; }
+    .top-nav                  {align-items: flex-start; background: rgba(white,0); padding-bottom:10px;  z-index: 1000; transition: all 0.3s; }
+    input:checked ~           {
+      .top-nav                {background: rgba(white,0.9); box-shadow:0px 4px 28px rgba(#000, 0.3);
+        .menu                 {opacity:1;
+          .nav                {flex-direction:column; font-size:17px; padding:40px 0 30px;
+            a                 {color:#0777b2; padding:5px 0;
+              &:hover         {color:#00537E}
+            }
+            .left-items,
+            .right-items      {flex-direction:column; }
+            .left-items       {
+              .get-started    {order: -1}
+            }
+            .more             {
+              > svg{display: none; }
+            }
+            // .more > a         {pointer-events: none}
+          }
+        }
+        a.logo                {
+          .company            {display: none; }
+        }
       }
-    }
-    .logo                {margin:0 8px;}
-    .company             {margin-left:8px; font-size:16px;
-      &:after            {margin-left:5px; font-size:11px;}
-    }
-    &.open               {background: rgba(#FCFCFC, 0.8); position:relative; flex-direction:column; align-items: flex-start; padding-bottom:10px;
-      .menu              {display:flex; align-self:flex-start; margin-left:initial;
-        .nav             {flex-direction:column;
-
+      .hamburg-icon           {margin-right:-4px;
+        .line                 {transform: rotate(0deg); opacity:0 ;
+          &:first-child       {transform: rotate(45deg) translate(-3px, -1px); opacity:1; }
+          &:last-child        {transform: rotate(-45deg) translate(-1px, -1px); opacity:1 }
         }
       }
     }
