@@ -49,3 +49,4 @@ articles:
       - {href: /php/codeigniter/composer, title: Composer}
       - {href: /php/codeigniter/webserver-config, title: Webserver Config}
       - {href: /php/codeigniter/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

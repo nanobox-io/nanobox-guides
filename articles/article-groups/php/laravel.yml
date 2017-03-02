@@ -49,3 +49,4 @@ articles:
       - {href: /php/laravel/composer, title: Composer}
       - {href: /php/laravel/webserver-config, title: Webserver Config}
       - {href: /php/laravel/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

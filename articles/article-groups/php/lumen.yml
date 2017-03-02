@@ -49,3 +49,4 @@ articles:
       - {href: /php/lumen/composer, title: Composer}
       - {href: /php/lumen/webserver-config, title: Webserver Config}
       - {href: /php/lumen/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

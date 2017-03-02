@@ -49,3 +49,4 @@ articles:
       - {href: /php/nette/composer, title: Composer}
       - {href: /php/nette/webserver-config, title: Webserver Config}
       - {href: /php/nette/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

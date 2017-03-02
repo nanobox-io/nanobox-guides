@@ -29,3 +29,4 @@ articles:
       - {href: /php/wordpress/boxfile-explained, title: WordPress boxfile.yml Explained}
       - {href: /php/wordpress/reduce-deploy-size, title: Reduce the Size of Your Deploy}
       - {href: /php/wordpress/caching-plugins, title: Using Caching Plugins}
+      - {href: /php/generic/newrelic, title: New Relic}

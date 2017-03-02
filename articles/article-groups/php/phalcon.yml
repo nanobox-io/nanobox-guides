@@ -49,3 +49,4 @@ articles:
       - {href: /php/phalcon/composer, title: Composer}
       - {href: /php/phalcon/webserver-config, title: Webserver Config}
       - {href: /php/phalcon/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}
