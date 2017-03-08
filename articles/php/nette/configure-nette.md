@@ -12,7 +12,7 @@ run.config:
   engine.config:
     # use nginx
     webserver: nginx
-    
+
     # public directory
     document_root: www
 
@@ -28,9 +28,7 @@ You can add a web components in your `boxfile.yml`:
 
 ```yaml
 web.main:
-  start:
-    nginx: start-nginx
-    fpm: start-php
+  start: php-server
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
@@ -57,17 +55,12 @@ if you want Nette to stream logs to the nanobox dashboard we'll need to add a `l
 web.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    nginx[access]: /data/var/log/nginx/access.log
-    nginx[error]: /data/var/log/nginx/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
     nette[error]: /app/log/nette.log
     nette[exception]: /app/log/exception.log
 
 worker.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    php[error]: /data/var/log/php/php_error.log
     nette[error]: /app/log/nette.log
     nette[exception]: /app/log/exception.log
 ```
