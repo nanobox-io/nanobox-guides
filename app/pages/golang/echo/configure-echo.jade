@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Echo to run in Production | Nanobox"
+    description = "Learn how to configure a Echo application to run in production"
+    keywords    = "golang, echo production application, manage echo application, configure echo, production echo, echo in production"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "Configure Echo"
+    
+block markdown
+  include:md /articles/golang/echo/configure-echo.md

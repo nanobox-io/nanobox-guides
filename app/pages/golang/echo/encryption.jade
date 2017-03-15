@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Echo Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Echo production application"
+    keywords    = "nodejs, echo production application, manage echo application, ssl, tls, encryption"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "SSL/TLS Encryption"
+    
+block markdown
+  include:md /articles/shared/encryption.md

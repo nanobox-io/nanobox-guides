@@ -2,9 +2,12 @@ extends /app/pages/templates/framework-landing
 
 block configParams
   -
+    title        = "Create and Deploy a Production Node App | Nanobox"
+    description  = "Learn how to setup a Node development environment and configure it to deploy to production."
+    keywords     = "nodejs, nodejs config, nodejs development environment, nodejs production app, nodejs app, deploy nodejs, create nodejs app, config nodejs app"
     formalName   = "Nodejs"
     informalName = "nodejs"
-    icon         = "nodejs"
+    icon         = "node"
     iconCrumbs   = "nodejs"
     noQuickstart = true
 
@@ -12,7 +15,7 @@ block jsParams
   script.
     //- This is javascript
     requiredComponents = [
-      {name:'Nodejs', icon:'nodejs', href:'#'}
+      {name:'Nodejs', icon:'node', href:'#'}
     ]
     optionalComponents = [
       {name:'Postgres', icon:'postgres', href:'#'},

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Nette Application Teams | Nanobox"
+    description = "Easily manage Nette development teams and application collaborators"
+    keywords    = "php, nette production application, manage nette application, nette collaboration, team management"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    id          = "Team Management"
+    
+block markdown
+  include:md /articles/shared/team-management.md

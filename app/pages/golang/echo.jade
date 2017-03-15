@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Echo App | Nanobox"
+    description  = "Learn how to setup an Echo development environment and configure it to deploy to production."
+    keywords     = "echo, echo framework, golang frameworks, echo config, echo development environment, echo production app, echo app, deploy echo, create echo app, config echo app"
+    formalName   = "Echo"
+    informalName = "echo"
+    icon         = "echo"
+    iconCrumbs   = "golang,echo"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/echo"
+    devMode = true

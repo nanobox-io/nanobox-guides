@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production DoneJS Application | Nanobox"
+    description = "Manage a DoneJS application's logs, traffic, health, and storage"
+    keywords    = "nodejs, done production application, manage done application, monitor done, done logging, load balancer, done monitoring, production logs"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

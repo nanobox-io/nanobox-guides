@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Beego Application | Nanobox"
+    description = "How to point an existing domain name to a Beego application"
+    keywords    = "golang, beego production application, manage beego application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

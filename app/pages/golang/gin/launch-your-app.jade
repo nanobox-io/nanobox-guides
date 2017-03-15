@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Gin Application to Production | Nanobox"
+    description = "Learn how to deploy a Gin application to production servers"
+    keywords    = "golang, gin production application, manage gin application, deploy gin, launch gin, gin in production, gin production servers"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/gin/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

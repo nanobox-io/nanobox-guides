@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://guides.nanobox.io/</loc>
+  <lastmod>2017-01-19T00:05:52+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/python/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/php/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/nodejs/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/ruby/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/javascript/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/golang/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/elixir/</loc>
+  <lastmod>2017-01-19T00:06:54+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/java/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/net/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/scala/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/rust/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/erlang/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/perl/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/clojure/</loc>
+  <lastmod>2017-01-19T00:06:49+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/c/</loc>
+  <lastmod>2017-01-19T00:06:45+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/components/</loc>
+  <lastmod>2017-01-19T00:06:51+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/python/generic/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/php/generic/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/nodejs/generic/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/ruby/generic/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/javascript/generic/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/mysql/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/mongodb/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/redis/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/memcached/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/postgresql/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/storage/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/lisp/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://guides.nanobox.io/lua/</loc>
+  <lastmod>2017-01-19T00:06:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Phalcon Application | Nanobox"
+    description = "How to add and connect to a database with a Phalcon applciation"
+    keywords    = "php, phalcon production application, manage phalcon application, phalcon database, phalcon and mongodb, phalcon and postgres, mongodb, postgres"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/php/phalcon/add-a-database.md

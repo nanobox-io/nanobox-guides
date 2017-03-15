@@ -1,0 +1,50 @@
+title: Adonis
+href: /nodejs/adonis
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/adonis/from-scratch, title: Adonis from Scratch}
+      - {href: /nodejs/adonis/existing-app, title: Existing Adonis App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/adonis/add-a-database, title: Add a Database}
+      - {href: /nodejs/adonis/frontend-javascript, title: Frontend Javascript}
+      - {href: /nodejs/adonis/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/adonis/configure-adonis, title: Configure Adonis}
+      - {href: /nodejs/adonis/preview-your-app, title: Preview your App}
+      - {href: /nodejs/adonis/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/adonis/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/adonis/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/adonis/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/adonis/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/adonis/debugging, title: Debugging}
+      - {href: /nodejs/adonis/app-health, title: App Health}
+      - {href: /nodejs/adonis/remote-access, title: Remote Access}
+      - {href: /nodejs/adonis/team-management, title: Team Management}
+      - {href: /nodejs/adonis/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/adonis/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/adonis/npm, title: Yarn &amp; NPM}
+      # - {href: /nodejs/adonis/scale-your-app, title: Make Adonis scream}
+      # - {href: /nodejs/adonis/scale-your-app, title: New Relic}

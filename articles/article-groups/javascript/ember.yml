@@ -14,5 +14,5 @@ articles:
     tribe: the_essentials
     articles:
       - {href: /javascript/ember/configure-nodejs, title: Configure Nodejs}
-      - {href: /javascript/ember/package-managers, title: 'Yarn, NPM, & Bower'}
+      - {href: /javascript/ember/package-managers, title: 'Yarn, NPM, &amp; Bower'}
       - {href: /javascript/ember/task-runners, title: 'Task Runners'}

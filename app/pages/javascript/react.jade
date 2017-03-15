@@ -1,0 +1,21 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production React App | Nanobox"
+    description  = "Learn how to setup a React development environment and configure it to deploy to production."
+    keywords     = "react, react framework, javascript frameworks, react config, react development environment, react production app, react app, deploy react, create react app, config react app"
+    formalName   = "React"
+    informalName = "react"
+    icon         = "react"
+    iconCrumbs   = "javascript,react"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+    ]
+    optionalComponents = []
+    articleGroups = "javascript/react"

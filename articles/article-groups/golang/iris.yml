@@ -1,0 +1,37 @@
+title: Iris
+href: /golang/iris
+articles:
+
+  #
+  - title: "Getting Started"
+    articles:
+      - {href: /golang/iris/from-scratch, title: Iris from Scratch}
+      - {href: /golang/iris/existing-app, title: Existing Iris App}
+
+  #
+  - title: "Next Steps"
+    articles:
+      - {href: /golang/iris/add-a-database, title: Add a Database}
+      - {href: /golang/iris/local-evars, title: Local Environment Variables}
+      - {href: /golang/iris/javascript-runtime, title: Javascript Runtime}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /golang/iris/configure-iris, title: Configure Iris}
+      - {href: /golang/iris/stage-your-app, title: Stage your App}
+      - {href: /golang/iris/launch-your-app, title: Launch your App}
+      - {href: /golang/iris/point-your-domain, title: Point your Domain}
+      - {href: /golang/iris/encryption, title: SSL/TLS Encryption}
+      - {href: /golang/iris/production-evars, title: Production Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /golang/iris/configure-golang, title: Configure Golang}
+      - {href: /golang/iris/scale-your-app, title: Scale Your App}
+      - {href: /golang/iris/debugging, title: Debugging}
+      - {href: /golang/iris/app-health, title: App Health}
+      - {href: /golang/iris/remote-access, title: Remote Access}
+      - {href: /golang/iris/team-management, title: Team Management}
+      - {href: /golang/iris/manage-platform, title: Manage Platform}

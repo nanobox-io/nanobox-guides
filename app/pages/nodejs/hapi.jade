@@ -1,0 +1,28 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Hapi App | Nanobox"
+    description  = "Learn how to setup a Hapi development environment and configure it to deploy to production."
+    keywords     = "hapi, hapi framework, node js frameworks, hapi config, hapi development environment, hapi production app, hapi app, deploy hapi, create hapi app, config hapi app"
+    formalName   = "Hapi"
+    informalName = "hapi"
+    icon         = "hapi"
+    iconCrumbs   = "node,hapi"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "nodejs/hapi"
+    contributors       = [
+      {name:"David Oddoye", href:"https://github.com/oddoye-david"}
+    ]

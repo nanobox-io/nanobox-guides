@@ -8,7 +8,7 @@ mixin addChildren(articles)
       - anchorClass   = hasChildren ? "trigger" : ""
       
       .nav-item(class="#{classes}")
-        a(href="#{article.href}" class="#{anchorClass}")=article.title
+        a(href="#{article.href}" class="#{anchorClass}")!=article.title
         if hasChildren
           .child-toggle
           +addChildren(article.articles)

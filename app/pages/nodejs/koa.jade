@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Koa App | Nanobox"
+    description  = "Learn how to setup a Koa development environment and configure it to deploy to production."
+    keywords     = "koa, koa framework, node js frameworks, koa config, koa development environment, koa production app, koa app, deploy koa, create koa app, config koa app"
+    formalName   = "Koa"
+    informalName = "koa"
+    icon         = "koa"
+    iconCrumbs   = "node,koa"
+    launchTime   = "12"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "nodejs/koa"

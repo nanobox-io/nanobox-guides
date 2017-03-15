@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding Javascript to a Phalcon Application | Nanobox"
+    description = "How to add Javascriot to a Phalcon application"
+    keywords    = "php, phalcon application, phalcon javascript, javascript"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Frontend Javascript"
+    
+block markdown
+  :md
+    # Frontend Javascript
+  include:md /articles/shared/partials/nodejs.md
+  include:md /articles/shared/partials/package-managers.md
+  include:md /articles/shared/partials/task-runners.md

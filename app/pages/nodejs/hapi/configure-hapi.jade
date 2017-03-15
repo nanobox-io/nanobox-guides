@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Hapi to run in Production | Nanobox"
+    description = "Learn how to configure a Hapi application to run in production"
+    keywords    = "nodejs, hapi production application, manage hapi application, configure hapi, production hapi, hapi in production"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    id          = "Configure Hapi"
+    
+block markdown
+  include:md /articles/nodejs/hapi/configure-hapi.md

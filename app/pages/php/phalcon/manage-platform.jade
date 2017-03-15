@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Phalcon Application | Nanobox"
+    description = "Manage a Phalcon application's logs, traffic, health, and storage"
+    keywords    = "php, phalcon production application, manage phalcon application, monitor phalcon, phalcon logging, load balancer, phalcon monitoring, production logs"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

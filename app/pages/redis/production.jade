@@ -2,9 +2,12 @@ extends /app/pages/templates/article
 
 block configParams
   -
-    title    = "Managing Production Data"
-    articles = "redis"
-    icons    = "redis"
+    title       = "Manage Production Redis Data | Nanobox"
+    description = "Instructions for managing Redis data in production for apps deployed with Nanobox"
+    keywords    = "deploy redis, redis in production, redis, scaling redis database, local redis, local development, configure redis"
+    articles    = "redis"
+    icons       = "redis"
+    id          = "Managing Production Data"
     
 block markdown
   include:md /articles/redis/manage-production.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Echo Application | Nanobox"
+    description = "Manage a Echo application's logs, traffic, health, and storage"
+    keywords    = "golang, echo production application, manage echo application, monitor echo, echo logging, load balancer, echo monitoring, production logs"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

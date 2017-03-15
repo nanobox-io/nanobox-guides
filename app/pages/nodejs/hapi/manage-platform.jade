@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Hapi Application | Nanobox"
+    description = "Manage a Hapi application's logs, traffic, health, and storage"
+    keywords    = "nodejs, hapi production application, manage hapi application, monitor hapi, hapi logging, load balancer, hapi monitoring, production logs"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

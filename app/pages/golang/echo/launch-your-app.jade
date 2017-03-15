@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Echo Application to Production | Nanobox"
+    description = "Learn how to deploy a Echo application to production servers"
+    keywords    = "golang, echo production application, manage echo application, deploy echo, launch echo, echo in production, echo production servers"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/echo/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

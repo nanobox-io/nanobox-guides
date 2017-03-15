@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Feathers Application | Nanobox"
+    description = "How to point an existing domain name to a Feathers application"
+    keywords    = "nodejs, feathers production application, manage feathers application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

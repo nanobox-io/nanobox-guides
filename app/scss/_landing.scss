@@ -32,6 +32,17 @@
           a                        {font-style:italic; color:#0079D6; font-size:15px; font-weight: $semibold; padding:2px 0;}
         }
       }
+      .guides-title.contrib        {margin-top:70px; margin-bottom:15px;  }
+      .contrib-heart               {width:30px; margin-bottom: 10px; }
+      .contributors                {display:flex; flex-wrap: wrap; width:100%; justify-content: center; margin-bottom:30px; padding:0 20px;
+        .contributor               {width:16.66%; display: flex; flex-direction: column; align-items: center; padding: 10px 0;
+          img                      {border-radius: 50%;}
+          .name                    {font-style: italic; color: #0079D6; font-size: 15px; font-weight: 600;  height: 37px; text-align: center; margin:5px 0 3px;}
+          &:hover                  {
+            .name                  {border-bottom:3px solid; }
+          }
+        }
+      }
     }
 
     // Framework specific landing

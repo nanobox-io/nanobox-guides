@@ -5,7 +5,7 @@ You can add a database to your app by simply adding a data component to your `bo
 
 <div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
 
-In the above snippet `db` is the `NAME` of this component, and can be anything you choose as long as it is unique.
+In the above snippet `db` is the unique identifier of this component. It can be anything you choose as long as it is unique.
 
 Nanobox generates the following environment variables based off that name:
 
@@ -13,20 +13,15 @@ Nanobox generates the following environment variables based off that name:
 * `DATA_DB_USER` : user to connect with
 * `DATA_DB_PASS` : unique password
 
+For databases that require a name, the name will always be `gonano`.
+
 **HEADS UP**: The next time you `nanobox run` your database will be provisioned.
 
 ## Connect
 Before connecting to the database, you'll first need to install the `pg-promise` adapter:
 
 ```bash
-# drop into a nanobox console
-nanobox run
-
-# install npm package
-npm install pg-promise --save
-
-# exit the console
-exit
+nanobox run npm install pg-promise --save
 ```
 
 Then create a `database.js` with the following:

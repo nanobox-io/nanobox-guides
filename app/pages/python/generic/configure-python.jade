@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Python Versions | Nanobox"
+    description = "How to update or change python versions in development and production environments"
+    keywords    = "python, python production application, manage python application, configure python, production python, python in production, python version, manage python versions"
+    articles    = "python/generic"
+    icons       = "python,generic"
+    id          = "Configure Python"
+    
+block markdown
+  include:md /articles/python/config.md

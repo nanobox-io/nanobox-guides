@@ -2,9 +2,12 @@ extends /app/pages/templates/article
 
 block configParams
   -
-    title    = "Managing Production Data"
-    articles = "mysql"
-    icons    = "mysql"
+    title       = "Manage Production MySQL Data | Nanobox"
+    description = "Instructions for managing MySQL data in production for apps deployed with Nanobox"
+    keywords    = "deploy mysql, mysql in production, mysql, scaling mysql database, local mysql, local development, configure mysql"
+    articles    = "mysql"
+    icons       = "mysql"
+    id          = "Managing Production Data"
     
 block markdown
   include:md /articles/mysql/manage-production.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Phalcon PHP Application Extensions | Nanobox"
+    description = "Find out what PHP Extentions are available for Phalcon PHP"
+    keywords    = "php, phalcon production application, manage phalcon application, php extentions, phalcon php extensions"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "PHP Extensions"
+    
+block markdown
+  include:md /articles/php/extensions.md

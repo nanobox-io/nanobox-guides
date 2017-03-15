@@ -41,7 +41,7 @@ run.config:
 
 View the [full list of available extensions](/php/generic/php-extensions).
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser
 
 ```bash

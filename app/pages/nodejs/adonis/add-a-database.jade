@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to an Adonis Application | Nanobox"
+    description = "How to add and connect to a database with an Adonis applciation"
+    keywords    = "nodejs, adonis production application, manage adonis application, adonis database, adonis and mongodb, adonis and postgres, mongodb, postgres"
+    articles    = "nodejs/adonis"
+    icons       = "nodejs,adonis"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/nodejs/adonis/add-a-database.md

@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Nodal Application to Production | Nanobox"
+    description = "Learn how to deploy a Nodal application to production servers"
+    keywords    = "nodejs, nodal production application, manage nodal application, deploy nodal, launch nodal, nodal in production, nodal production servers"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/nodal/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

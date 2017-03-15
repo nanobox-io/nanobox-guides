@@ -1,0 +1,13 @@
+.guides-title.contrib Community Contributors
+.contrib-heart
+  img.shadow-icon(data-src="heart" scalable="true")
+.contributors
+  each contributor in contributors
+    a.contributor(href="#{contributor.href}")
+      if contributor.twitter
+        img(src="https://twitter.com/#{contributor.twitter}/profile_image?size=normal")
+      else if contributor.gravatarHash
+        img(src="https://secure.gravatar.com/avatar/#{contributor.gravatarHash.toLowerCase()}?d=retro&r=pg&size=48")
+      else
+        img(src="https://secure.gravatar.com/avatar/?d=retro&r=pg&size=48")
+      .name= contributor.name

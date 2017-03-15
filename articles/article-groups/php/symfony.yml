@@ -49,3 +49,4 @@ articles:
       - {href: /php/symfony/composer, title: Composer}
       - {href: /php/symfony/webserver-config, title: Webserver Config}
       - {href: /php/symfony/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

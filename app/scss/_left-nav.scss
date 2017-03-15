@@ -16,13 +16,13 @@
             }
           }
           &.active            {
-            a                 {font-weight:$bold; font-style:italic; 
+            a                 {font-weight:$bold; font-style:italic;
               &:before        {opacity:1;}
             }
           }
           &.parent            {position: relative;
             > .child-toggle   {cursor:pointer;
-              &:after         {background:white; color:#0276E3;  content:"+"; margin-left:auto; position:absolute; right:10px; top:3px; width:17px; height:17px;text-align:center; font-weight: $bold; border-radius: 50%;line-height: 18px;}
+              &:after         {background:white; color:#0276E3;  content:"+"; margin-left:auto; position:absolute; right:10px; top:3px; width:17px; height:17px;text-align:center; font-weight: $bold; border-radius: 50%;line-height: 18px; pointer-events: none; }
             }
             >.children         {padding-left:10px; display:none;}
             &.open            {

@@ -20,7 +20,7 @@ The [boxfile.yml](https://docs.nanobox.io/boxfile/) tells Nanobox how to build a
 ```yaml
 run.config:
   engine: php
-  config:
+  engine.config:
     runtime: php-7.0
     extensions:
       - gd
@@ -30,13 +30,7 @@ run.config:
 
 web.wp:
   start:
-    fpm: start-php
-    apache: start-apache
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
+    fpm: php-server
   network_dirs:
     data.storage:
       - wp-content/uploads/
@@ -94,17 +88,14 @@ With your boxfile.yml in place and your wp-config.php updated, you're ready to g
 
 
 ```bash
-#start the dev environment
-nanobox dev start
-
 # add a convenient way to access your app from the browser:
-nanobox dev dns add wordpress.nanobox.dev
+nanobox dns add local wordpress.dev
 
-# start PHP-FPM and Apache
-nanobox dev run
+# start nanobox and run the app
+nanobox run php-server
 ```
 
-You can visit your running WordPress app at `wordpress.nanobox.dev`.
+You can visit your running WordPress app at `wordpress.dev`.
 
 ## Now What?
 Now that you have WordPress running with Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!

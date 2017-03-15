@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Nodal Packages with Yarn & NPM | Nanobox"
+    description = "How to manage Nodal application dependencies with Yarn & NPM"
+    keywords    = "nodejs, nodal application, manage nodal application, yarn, npm, nodal yarn, nodal npm, nodejs yarn, nodejs npm"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    id          = "Yarn & NPM"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

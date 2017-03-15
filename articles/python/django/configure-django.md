@@ -1,7 +1,7 @@
 # Configure Django for Production
 
 ## Setup a webserver
-Django runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into django through gunicorn.
+Django runs best in production with a reverse-proxy setup. Let's configure nginx to serve static assets directly, handle compression, and proxy connections into Django through gunicorn.
 
 #### Nginx
 Add the following to your `boxfile.yml` to make nginx available to the runtime:
@@ -27,6 +27,7 @@ events {
 }
 
 http {
+    include /data/etc/nginx/mime.types;
     sendfile on;
 
     gzip              on;
@@ -229,6 +230,7 @@ For your app to run in production, at the very least you'll need a [web componen
 You can have as many web components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
+# add a web component and give it a "start" command
 web.main:
   start:
     nginx: nginx -c /app/etc/nginx.conf
@@ -241,18 +243,18 @@ In the above snippet `main` is the name of web component and can be anything you
 You can have as many worker components as your app needs by simply adding them to your existing `boxfile.yml`:
 
 ```yaml
+# add a worker component and give it a "start" command
 worker.main:
   start: 'python jobs-worker.py'
 ```
 
 ## Collect static assets
-For django to run behind nginx in production, we'll need to ensure the assets get collected from all of the django apps and dropped into the `assets` directory (which was where we told nginx to serve them from).
+For Django to run behind nginx in production, we'll need to ensure the assets get collected from all of the Django apps and dropped into the `assets` directory (which was where we told nginx to serve them from).
 
 #### Configure assets
 Set the following asset configuration within `settings.py`:
 
 ```python
-STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 ```
 

@@ -1,0 +1,50 @@
+title: Feathers
+href: /nodejs/feathers
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/feathers/from-scratch, title: Feathers from Scratch}
+      - {href: /nodejs/feathers/existing-app, title: Existing Feathers App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/feathers/add-a-database, title: Add a Database}
+      - {href: /nodejs/feathers/frontend-javascript, title: Frontend Javascript}
+      - {href: /nodejs/feathers/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/feathers/configure-feathers, title: Configure Feathers}
+      - {href: /nodejs/feathers/preview-your-app, title: Preview your App}
+      - {href: /nodejs/feathers/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/feathers/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/feathers/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/feathers/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/feathers/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/feathers/debugging, title: Debugging}
+      - {href: /nodejs/feathers/app-health, title: App Health}
+      - {href: /nodejs/feathers/remote-access, title: Remote Access}
+      - {href: /nodejs/feathers/team-management, title: Team Management}
+      - {href: /nodejs/feathers/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/feathers/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/feathers/npm, title: Yarn &amp; NPM}
+      # - {href: /nodejs/feathers/scale-your-app, title: Make Feathers scream}
+      # - {href: /nodejs/feathers/scale-your-app, title: New Relic}

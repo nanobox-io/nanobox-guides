@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Hapi Application Teams | Nanobox"
+    description = "Easily manage Hapi development teams and application collaborators"
+    keywords    = "nodejs, hapi production application, manage hapi application, hapi collaboration, team management"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    id          = "Team Management"
+    
+block markdown
+  include:md /articles/shared/team-management.md

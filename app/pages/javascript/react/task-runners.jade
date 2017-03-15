@@ -1,0 +1,15 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Task Runners"
+    keywords    = "javascript,react,gulp,grunt,brunch"
+    description = "Using task runners with React and Nanobox"
+    articles    = "javascript/react"
+    icons       = "javascript,react"
+    id          = "Task Runners"
+    
+block markdown
+  :md
+    # Yarn, NPM, & Bower
+  include:md /articles/shared/partials/task-runners.md

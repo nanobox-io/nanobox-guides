@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production DoneJS Applications | Nanobox"
+    description = "Monitor a production DoneJS application with live and historical stats"
+    keywords    = "nodejs, done production application, manage done application, stats, nodejs stats, done stats, monitor done, done app health"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    id          = "App Health"
+    
+block markdown
+  include:md /articles/shared/app-health.md

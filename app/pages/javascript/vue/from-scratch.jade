@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Vue From Scratch"
+    keywords    = "javascript,vue,new"
+    description = "Launch a new Vue app with Nanobox"
+    articles    = "javascript/vue"
+    icons       = "javascript,vue"
+    id          = "Vue From Scratch"
+    
+block markdown
+  include:md /articles/javascript/vue/from-scratch.md

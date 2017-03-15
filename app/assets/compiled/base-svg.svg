@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
@@ -49,6 +49,7 @@
 	.st43{fill:#E6DDDD;}
 	.st44{fill:#ADB1B9;}
 	.st45{fill:none;stroke:#B4C5CF;stroke-width:1.5;stroke-miterlimit:10;}
+	.st46{fill:none;stroke:#11A7ED;stroke-width:2.1377;stroke-miterlimit:10;}
 </style>
 <g id="logo_x60_19x33">
 	<polygon class="st0" points="18.959,25.987 9.591,30.815 0,25.901 9.368,21.072 	"/>
@@ -265,7 +266,7 @@
 	<polyline class="st34" points="7.646,0.53 12.192,5.077 7.646,9.624 	"/>
 </g>
 <g id="snippet-file_x60_56x76">
-	<polygon class="st35" points="18.618,0 0,18.775 0,75 55,75 55,0 	"/>
+	<polygon class="st35" points="18.618,0 0.196,18.775 0.196,75 55.196,75 55.196,0 	"/>
 	<polygon class="st36" points="0,18.881 18.513,18.881 18.513,0.263 	"/>
 	<polyline class="st36" points="16.051,45.333 44.419,75.197 55.062,75.197 55.169,48.234 39.012,32.077 	"/>
 	<polygon class="st19" points="16.051,32.077 27.531,25.449 39.012,32.077 39.012,45.333 27.531,51.962 16.051,45.333 	"/>
@@ -324,5 +325,12 @@
 	<line class="st45" x1="56.308" y1="35.154" x2="56.356" y2="46.456"/>
 	<line class="st45" x1="16.646" y1="49.184" x2="16.693" y2="37.882"/>
 	<line class="st45" x1="20.497" y1="28.54" x2="30.295" y2="22.907"/>
+</g>
+<g id="heart_x60_29x28">
+	<polygon class="st46" points="14.422,6.853 21.882,1.44 27.775,5.616 27.775,15.776 14.422,25.859 1.069,15.776 1.069,5.616 
+		6.807,1.327 	"/>
+	<polyline class="st46" points="14.345,25.859 14.345,15.574 1.672,6.309 	"/>
+	<polyline class="st46" points="20.653,21.29 20.653,11.005 6.751,1.234 	"/>
+	<line class="st46" x1="14.345" y1="15.574" x2="27.775" y2="5.616"/>
 </g>
 </svg>

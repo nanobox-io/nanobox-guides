@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Nodal Application in Development| Nanobox"
+    description = "Learn how to add environment variable to a Nodal applicationin development"
+    keywords    = "nodejs, nodal application, manage nodal application, nodal environment variables, environment variables"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    id          = "Local Environment Variables"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

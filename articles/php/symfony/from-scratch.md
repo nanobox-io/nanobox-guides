@@ -42,7 +42,7 @@ run.config:
 
 ## Generate a Symfony App
 
-**HEADS UP**: The Symfony installer requires that your nanobox VM has at least 2GB of RAM available. You can manage your VM's resource with a <a href="https://docs.nanobox.io/local-config/nanobox-config-yml/", target="_blank">config.yml</a> or through <a href="https://docs.nanobox.io/local-config/local-performance/", target="_blank">VirtualBox</a> directly.
+**HEADS UP**: The Symfony installer requires that your nanobox VM has at least 2GB of RAM available. You can manage your VM's resources with the <a href="https://docs.nanobox.io/cli/configure/", target="_blank"><code>nanobox config command</code></a>.
 
 ```bash
 # drop into a nanobox console
@@ -73,7 +73,7 @@ composer install --prefer-source
 exit
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser
 
 ```bash

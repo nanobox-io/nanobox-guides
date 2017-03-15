@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Nette Application | Nanobox"
+    description = "Learn how to add environment variable to a production Nette application"
+    keywords    = "php, nette production application, manage nette application, nette environment variables, environment variables"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    id          = "Environment Variables"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

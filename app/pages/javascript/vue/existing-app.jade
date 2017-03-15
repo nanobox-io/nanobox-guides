@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Existing Vue App"
+    keywords    = "javascript,vue"
+    description = "Launch your existing Vue app with Nanobox"
+    articles    = "javascript/vue"
+    icons       = "javascript,vue"
+    id          = "Existing Vue App"
+    
+block markdown
+  include:md /articles/javascript/vue/existing-app.md

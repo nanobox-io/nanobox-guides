@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Revel to run in Production | Nanobox"
+    description = "Learn how to configure a Revel application to run in production"
+    keywords    = "golang, revel production application, manage revel application, configure revel, production revel, revel in production"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    id          = "Configure Revel"
+    
+block markdown
+  include:md /articles/golang/revel/configure-revel.md

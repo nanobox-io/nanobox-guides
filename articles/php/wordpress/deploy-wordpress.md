@@ -1,36 +1,30 @@
 # Deploy WordPress
 
 ## Test Locally First
-Nanobox provides a "sim" environment that simulates a full production deploy on your local machine. Once you're done making changes in dev and are ready to test your app, test the deploy and running app in sim:
+Nanobox provides a "dry-run" environment that simulates a full production deploy on your local machine. Once you're done making changes in dev and are ready to test your app, test the deploy and running app in dry-run:
 
 ```bash
-# Compile your code
-nanobox compile
+# Add a convenient way to access your dry-run app from the browser:
+nanobox dns add dry-run wordpress.test
 
-# Start your sim environment
-nanobox sim start
-
-# Add a convenient way to access your sim app from the browser:
-nanobox sim dns add wordpress.nanobox.sim
-
-# Deploy to your sim environment
-nanobox sim deploy
+# Deploy to dry-run
+nanobox deploy dry-run
 ```
 
-Once deployed, you can access and test your sim app at `http://wordpress.nanobox.sim`.
+Once deployed, you can access and test your test app at `http://wordpress.test`.
 
-*Dev and sim environments are completely isolated from each other so you may want/need to [import data](/php/wordpress/importing-data) and [uploads](/php/wordpress/importing-uploads) into your sim app.*
+*Development and dry-run environments are completely isolated from each other so you may want/need to [import data](/php/wordpress/importing-data) and [uploads](/php/wordpress/importing-uploads) into your dry-run app.*
 
 
 ## Launch Your App with Nanobox
 Login to your [Nanobox dashboard](https://dashboard.nanobox.io) and [launch a new app](https://docs.nanobox.io/workflow/launch-app/).
 
-### Link Your Codebase to Your New App
-In order to deploy to your new app, you'll need to link it to your local WordPress codebase using the `nanobox link` command.
+### Add Your App as a Remote
+In order to deploy to your new app, you'll need to add the app as a remote on your local project using the `nanobox remote add` command.
 
 ```bash
 # Link your local codebase to your nanobox app
-nanobox link app-name
+nanobox remote add app-name
 ```
 
 ### Set Auth Key & Salt Evars
@@ -50,7 +44,7 @@ nanobox evar add AUTH_KEY='Sl>,5![EPRR:7dQd4/P03$_5Ira$dF,~>' SECURE_AUTH_KEY=':
 nanobox deploy
 ```
 
-Your app's build package will be deployed to your app on Nanobox and all your app's components (web, database, storage) will be provisioned.
+Nanobox will deploye to your app to a live server and provision and all your app's components (web, database, storage).
 
 ### Import Data & Uploads
 With your production app up and running, you can import your database and uploads if necessary.

@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Golang App | Nanobox"
+    description  = "Learn how to setup a Golang development environment and configure it to deploy to production."
+    keywords     = "golang, golang config, golang development environment, golang production app, golang app, deploy golang, create golang app, config golang app"
+    formalName   = "Golang"
+    informalName = "golang"
+    icon         = "golang"
+    iconCrumbs   = "golang"
+    noQuickstart = true
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Golang', icon:'golang', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Postgres', icon:'postgres', href:'#'},
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "golang/generic"

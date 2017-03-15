@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding Javascript to a Nette Application | Nanobox"
+    description = "How to add Javascriot to a Nette application"
+    keywords    = "php, nette application, nette javascript, javascript"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    id          = "Frontend Javascript"
+    
+block markdown
+  :md
+    # Frontend Javascript
+  include:md /articles/shared/partials/nodejs.md
+  include:md /articles/shared/partials/package-managers.md
+  include:md /articles/shared/partials/task-runners.md

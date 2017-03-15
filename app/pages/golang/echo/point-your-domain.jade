@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Echo Application | Nanobox"
+    description = "How to point an existing domain name to a Echo application"
+    keywords    = "golang, echo production application, manage echo application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Beego Applications | Nanobox"
+    description = "Easily scale production Beego applications with zero downtime"
+    keywords    = "golang, beego production application, manage beego application, scale beego application, zero downtime"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    id          = "Scale your App"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

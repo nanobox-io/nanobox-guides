@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Iris Application | Nanobox"
+    description = "How to add and connect to a database with a Iris applciation"
+    keywords    = "golang, iris production application, manage iris application, iris database, iris and mongodb, iris and postgres, mongodb, postgres"
+    articles    = "golang/iris"
+    icons       = "golang,iris"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/golang/iris/add-a-database.md

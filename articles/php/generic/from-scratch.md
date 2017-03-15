@@ -40,7 +40,7 @@ View the [full list of available extensions](/php/generic/php-extensions).
 ## Generate a PHP App
 Since this is a generic PHP app, you get to choose your own adventure!
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser
 
 ```bash

@@ -5,7 +5,7 @@ The boxfile.yml provided in this guide includes all config options required to g
 ```yaml
 run.config:
   engine: php
-  config:
+  engine.config:
     runtime: php-7.0
     extensions:
       - gd
@@ -14,14 +14,7 @@ run.config:
       - zlib
 
 web.wp:
-  start:
-    fpm: start-php
-    apache: start-apache
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
+  start: php-server
   network_dirs:
     data.storage:
       - wp-content/uploads/
@@ -79,34 +72,22 @@ Your web component will run WordPress and make it accessible over the public net
 Each component in your boxfile.yml has an ID. The ID tells Nanobox what type of component to create and provides unique identifier. In this case, we'll use `web.wp`. `web` tells Nanobox to create a web component and `wp` is the unique identifier.
 
 ### start
-Each web component requires one or more start commands. These tell Nanobox what commands to run to start the web server and php interpreter. By default, the PHP engine uses Apache and PHP-FPM. The following commands start each of those services.
+Each web component requires one or more start commands. These tell Nanobox what commands to run to start the web server and php interpreter. The php engines provides a helper script, `php-server`, that will start all the necessary services based on settings in your boxfile.yml.
 
 ```yaml
 web.wp:
-  start:
-    fpm: start-php
-    apache: start-apache
-```
-
-Other web servers and php interpreters are available and require different start commands. More information is provided in the following PHP guides:
-
-[PHP Web Server Settings](http://localhost:4567/php/web-server-settings/)  
-[PHP Start Commands](http://localhost:4567/php/start/)
-
-### log_watch
-Nanobox's [`log_watch` config option](https://docs.nanobox.io/app-config/app-logs/) pipe log output that is typically written to a file into your app's log stream. This allows you to view those logs without having to inspect the actual log file. What log_watches you use depends on the Web Server and PHP interpreter you're using. More information is available in the [PHP Start Commands guide](#).
-
-```yaml
-web.wp:
-  log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
+  start: php-server
 ```
 
 ### network_dirs
 Network directories allow you to store the contents of specific directories in a persistent file-store. When deploying to Nanobox, web nodes are replaced by all new, updated web nodes. Without network directories, any uploads or change to the files in your app would be wiped out. Network directories allow things like uploads to persist and be shared by multiple web nodes. These require a [storage component](#storage-component).
+
+```yaml
+web.wp:
+  # ...
+  network_dirs:
+    data.storage:
+      - wp-content/uploads/
 
 ## MySQL Database Component
 WordPress needs a MySQL database. Including a data component with the `image` set to `nanobox/mysql` will tell Nanobox to provision a MySQL database when deploying your app.

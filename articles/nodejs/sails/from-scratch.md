@@ -26,10 +26,8 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install sails so we can use it to generate our application
+# install sails so you can use it to generate your application
 npm install -g sails
-
-# generate our new sails application; due to a limitation in sails we'll have to generate our app in another folder and move it where we want it
 
 # cd into the /tmp dir to create an app
 cd /tmp
@@ -56,7 +54,7 @@ To allow connections from the host machine into the app's container, you'll need
 host: '0.0.0.0'
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

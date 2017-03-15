@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Gin Application from Scratch | Nanobox"
+    description = "Learn how to create a new Gin application and local development environment"
+    keywords    = "golang, gin application, gin application, golang dev environment, dev environment, gin dev environemnt, gin dev, docker, containers"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    id          = "Gin from Scratch"
+    
+block markdown
+  include:md /articles/golang/gin/from-scratch.md

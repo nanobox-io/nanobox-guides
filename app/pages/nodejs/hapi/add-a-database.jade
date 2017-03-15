@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Hapi Application | Nanobox"
+    description = "How to add and connect to a database with a Hapi applciation"
+    keywords    = "nodejs, hapi production application, manage hapi application, hapi database, hapi and mongodb, hapi and postgres, mongodb, postgres"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/nodejs/hapi/add-a-database.md

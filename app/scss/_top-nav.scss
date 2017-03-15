@@ -5,7 +5,6 @@
   .company               {margin-left:18px; text-transform: uppercase; font-weight: $semibold; font-size:21px; color:$navy; letter-spacing: 0.1em;
     &:after              {content:"/ Guides /"; color:#94ACBA; font-size:12px; letter-spacing: 0.06em; margin-left:15px; }
   }
-  #beta-tag              { margin: 5px 0 0 8px;}
   .index-items           {display:none;}
   .menu                  {margin-left:auto;
     .nav                 {display:flex;  font-size:12px; letter-spacing: 0.06em; font-weight: $bold; text-transform: uppercase;

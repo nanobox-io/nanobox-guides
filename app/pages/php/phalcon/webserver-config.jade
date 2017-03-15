@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Apache and Nginx for Phalcon PHP | Nanobox"
+    description = "How to configure Apache and Nginx to run Phalcon PHP in production"
+    keywords    = "php, phalcon production application, manage phalcon application, nginx, apache, nginx php, apache php, phalcon php nginx, phalcon php apache"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Webserver Config"
+    
+block markdown
+  include:md /articles/php/webserver-config.md

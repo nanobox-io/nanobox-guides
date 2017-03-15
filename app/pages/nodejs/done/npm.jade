@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing DoneJS Packages with Yarn & NPM | Nanobox"
+    description = "How to manage DoneJS application dependencies with Yarn & NPM"
+    keywords    = "nodejs, done application, manage done application, yarn, npm, done yarn, done npm, nodejs yarn, nodejs npm"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    id          = "Yarn & NPM"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

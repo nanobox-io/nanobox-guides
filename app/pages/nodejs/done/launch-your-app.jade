@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a DoneJS Application to Production | Nanobox"
+    description = "Learn how to deploy a DoneJS application to production servers"
+    keywords    = "nodejs, done production application, manage done application, deploy done, launch done, done in production, done production servers"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/done/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

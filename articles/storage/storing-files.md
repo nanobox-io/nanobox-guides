@@ -42,7 +42,7 @@ data.storage:
 Both web.site and worker.jobs will be able to write to and read from `path/to/dirA` on data.storage.
 
 ## Important Things to Note
-The following are importing things you should know when using storage components.
+The following are important things you should know when using storage components.
 
 ### Do Not Nest Network Dirs in other Network Dirs
 When listing network directories, do not list nested directories. Only list the common most parent. For example, you shouldn't include both `tmp-files` and `tmp-files/logs` as network directories. You should only include `tmp-files`

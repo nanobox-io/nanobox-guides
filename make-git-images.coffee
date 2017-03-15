@@ -18,7 +18,7 @@ Horseman.registerAction 'createIcons', (icons)->
       .crop('.github-icons', "./quickstart-icons/#{item.icon}.png")
   , Promise.resolve()
 
-
+# Storing these in case we ever make a change and want to generate again
 generatedIcons = [
   {icon:'rails', title:'Ruby on Rails'}
   {icon:'sinatra', title:'Sinatra'}
@@ -27,18 +27,51 @@ generatedIcons = [
   {icon:'laravel', title:'Laravel'}
   {icon:'codeigniter', title:'Codeigniter'}
   {icon:'wordpress', title:'Wordpress'}
-  {icon:'meteor', title:'meteor'}
-  {icon:'express', title:'express'}
-  {icon:'sails', title:'sails'}
-  {icon:'angular', title:'angular'}
-  {icon:'ember', title:'ember'}
-  {icon:'phoenix', title:'phoenix'}
+  {icon:'meteor', title:'Meteor'}
+  {icon:'express', title:'Express'}
+  {icon:'sails', title:'Sails'}
+  {icon:'angular', title:'Angular'}
+  {icon:'ember', title:'Ember'}
+  {icon:'phoenix', title:'Phoenix'}
   {icon:'lumen', title:'Lumen'}
   {icon:'slim', title:'Slim'}
+  {icon:'cakephp', title:'CakePHP'}
+  {icon:'symfony', title:'Symfony'}
+  {icon:'hapi', title:'Hapi'}
+  {icon:'vue', title:'Vue'}
+  {icon:'nette', title:'Nette'}
+  {icon:'hanami', title:'Hanami'}
+  {icon:'ghost', title:'Ghost'}
+  {icon:'phalcon', title:'Phalcon'}
+  {icon:'silex', title:'Silex'}
+  {icon:'react', title:'React'}
+  {icon:'pyramid', title:'Pyramid'}
+  {icon:'bottle', title:'Bottle'}
+  {icon:'backbone', title:'Backbone'}
+  {icon:'denali', title:'Denali'}
+  {icon:'zf', title:'Zend Framework'}
+  {icon:'yii', title:'Yii'}
+  {icon:'revel', title:'Revel'}
+  {icon:'echo', title:'Echo'}
+  {icon:'iris', title:'Iris'}
+  {icon:'gin', title:'Gin'}
+  {icon:'beego', title:'Beego'}
+  {icon:'hugo', title:'Hugo'}
+  {icon:'trails', title:'Trails'}
+  {icon:'adonis', title:'Adonis'}
+  {icon:'totaljs', title:'Total.js'}
+  {icon:'keystonejs', title:'KeystoneJS'}
+  {icon:'feathers', title:'Feathers'}
+  {icon:'donejs', title:'DoneJS'}
+  {icon:'horizon', title:'Horizon'}
+  {icon:'koa', title:'Koa'}
+  {icon:'nodal', title:'Nodal'}
+  {icon:'buffalo', title:'Buffalo'}
 ]
 
+# Add new icons to generate here:
 newIcons = [
-  {icon:'cakephp', title:'CakePHP'}
+  # ex : {icon:'rails', title:'Ruby on Rails'}
 ]
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )

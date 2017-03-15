@@ -2,9 +2,12 @@ extends /app/pages/templates/article
 
 block configParams
   -
-    title    = "Managing Local Data"
-    articles = "postgresql"
-    icons    = "postgres"
+    title       = "Manage Local Postgres Data | Nanobox"
+    description = "Instructions for managing local Postgres data in apps running in Nanobox"
+    keywords    = "deploy postgres, postgres in production, postgresql, scaling postgres database, local postgres, local development, configure postgres"
+    articles    = "postgresql"
+    icons       = "postgres"
+    id          = "Managing Local Data"
     
 block markdown
   include:md /articles/postgresql/manage-local.md

@@ -29,19 +29,17 @@ nanobox run
 # install ember so we can use it to generate our application
 npm install -g ember-cli
 
-# generate our new ember application; due to a limitation in ember we'll have to generate our app in another folder and move it where we want it
-
 # cd into the /tmp dir to create an app
 cd /tmp
 
 # generate the ember app
-ember new tmp-app
+ember new myapp
 
 # cd back into the /app dir
 cd -
 
 # copy the generated app into the project
-cp -a /tmp/tmp-app/* .
+cp -a /tmp/myapp/* .
 
 # exit the console
 exit
@@ -58,7 +56,7 @@ To allow connections from the host machine into the app's container, you'll need
 }
 ```
 
-#### Add a local DNS
+## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash

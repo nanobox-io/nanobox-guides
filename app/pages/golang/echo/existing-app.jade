@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Echo Applicatin in Docker | Nanobox"
+    description = "Learn how to take an existing Echo application and run it using Docker"
+    keywords    = "golang, echo production application, manage echo application, docker, echo on docker, containers"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "Existing Echo App"
+    
+block markdown
+  include:md /articles/golang/echo/existing-app.md

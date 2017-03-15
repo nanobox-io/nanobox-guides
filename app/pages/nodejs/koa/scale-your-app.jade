@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Koa Applications | Nanobox"
+    description = "Easily scale production Koa applications with zero downtime"
+    keywords    = "nodejs, koa production application, manage koa application, scale koa application, zero downtime"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    id          = "Scale your App"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

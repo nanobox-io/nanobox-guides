@@ -1,0 +1,15 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Task Runners"
+    keywords    = "javascript,vue,gulp,grunt,brunch"
+    description = "Using task runners with Vue and Nanobox"
+    articles    = "javascript/vue"
+    icons       = "javascript,vue"
+    id          = "Task Runners"
+    
+block markdown
+  :md
+    # Yarn, NPM, & Bower
+  include:md /articles/shared/partials/task-runners.md

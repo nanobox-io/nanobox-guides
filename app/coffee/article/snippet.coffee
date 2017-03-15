@@ -1,11 +1,11 @@
 class Snippet
 
   serviceDictionary:
-    postgres   : {image:'postgresql', icon:'postgres', serviceId:'data.db', category:'database' }
-    mongo      : {image:'mongodb',    icon:'mongo',    serviceId:'data.db', category:'database' }
-    mysql      : {image:'mysql',      icon:'mysql',    serviceId:'data.db', category:'database', name:'MySQL' }
-    redis      : {image:'redis',      icon:'redis',    serviceId:'data.db', category:'database' }
-    memcached  : {image:'memcached',  icon:'memcached',serviceId:'data.db', category:'database' }
+    postgres   : {image:'postgresql:9.5', icon:'postgres', serviceId:'data.db', category:'database' }
+    mongo      : {image:'mongodb:3.0',    icon:'mongo',    serviceId:'data.db', category:'database' }
+    mysql      : {image:'mysql:5.6',      icon:'mysql',    serviceId:'data.db', category:'database', name:'MySQL' }
+    redis      : {image:'redis:3.0',      icon:'redis',    serviceId:'data.db', category:'database' }
+    memcached  : {image:'memcached:1.4',  icon:'memcached',serviceId:'data.db', category:'database' }
 
   constructor : (@$item, @$codeBlock)->
 
@@ -34,6 +34,9 @@ class Snippet
 
     $($serviceBtn[0]).trigger 'click'
     castShadows $node
+
+  snippetToggler : () ->
+    console.log "hahah"
 
   replaceComments : () ->
 

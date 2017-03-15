@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Nodal Application | Nanobox"
+    description = "Learn how to add environment variable to a production Nodal application"
+    keywords    = "nodejs, nodal production application, manage nodal application, nodal environment variables, environment variables"
+    articles    = "nodejs/nodal"
+    icons       = "nodejs,nodal"
+    id          = "Environment Variables"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

@@ -26,6 +26,7 @@ events {
 }
 
 http {
+    include /data/etc/nginx/mime.types;
     sendfile on;
 
     gzip              on;
@@ -39,7 +40,7 @@ http {
                       application/x-javascript
                       application/atom+xml;
 
-    # Proxy upstream to the puma process
+    # Proxy upstream to the node process
     upstream sails {
         server 127.0.0.1:1337;
     }
@@ -75,7 +76,7 @@ You can have as many web components as your app needs by simply adding them to y
 web.main:
   start:
     nginx: nginx -c /app/config/nginx.conf
-    express: express lift
+    sails: sails lift
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).

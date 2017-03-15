@@ -49,3 +49,4 @@ articles:
       - {href: /php/generic/composer, title: Composer}
       - {href: /php/generic/webserver-config, title: Webserver Config}
       - {href: /php/generic/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

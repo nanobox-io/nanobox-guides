@@ -1,13 +1,6 @@
-☐ Make left nav title clickable
-☐ Make left nav parent items clickable
-☐ Add Docs link
-☐ Add Services link
-✔ Add "In Beta" overarching message     done(√)
-✔ Add in depth "Let us know you're interested / help us" messaging on alpha pages     done(√)
-✔ Add lua page     done(√)
-✔ Add lisp page     done(√)
-☐ Maintain ordering of grouped articles
-☐ Change "additional components" -> "optional components"
-
-width:47px; height:53px; background-position:-292px -2px;
-width:47px; height:53px; background-position:-246px -2px;
+☐ Add the following contributors:
+contributors       = [
+  // General Guides
+  {name:"Ian Walter", gravatarHash:'9EABE5CD9EF43BAD75D08839E01B0A38', href:"https://iankwalter.com"}
+]
+☐ Figure out if we want CMS / generators sections

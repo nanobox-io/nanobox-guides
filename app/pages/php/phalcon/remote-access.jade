@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access to Phalcon Applications | Nanobox"
+    description = "Securely manage running Phalcon application with SSH remote access"
+    keywords    = "php, phalcon production application, manage phalcon application, ssh access, remote access, server management, secure access"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Remote Access"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

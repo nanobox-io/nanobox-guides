@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Phalcon Application to Production | Nanobox"
+    description = "Learn how to deploy a Phalcon application to production servers"
+    keywords    = "php, phalcon production application, manage phalcon application, deploy phalcon, launch phalcon, phalcon in production, phalcon production servers"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Launch Your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/php/phalcon/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

@@ -45,6 +45,6 @@ articles:
   - title: "Advanced"
     articles:
       - {href: /nodejs/express/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/express/npm, title: Yarn & NPM}
+      - {href: /nodejs/express/npm, title: Yarn &amp; NPM}
       # - {href: /nodejs/express/scale-your-app, title: Make Express scream}
       # - {href: /nodejs/express/scale-your-app, title: New Relic}

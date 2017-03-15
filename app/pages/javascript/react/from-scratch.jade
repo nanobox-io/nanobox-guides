@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "React From Scratch"
+    keywords    = "javascript,react,new"
+    description = "Launch a new React app with Nanobox"
+    articles    = "javascript/react"
+    icons       = "javascript,react"
+    id          = "React From Scratch"
+    
+block markdown
+  include:md /articles/javascript/react/from-scratch.md

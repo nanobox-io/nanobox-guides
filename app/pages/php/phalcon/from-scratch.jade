@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Phalcon Application from Scratch | Nanobox"
+    description = "Learn how to create a new Phalcon application and local development environment"
+    keywords    = "php, phalcon application, phalcon application, php dev environment, dev environment, phalcon dev environemnt, phalcon dev, docker, containers"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Phalcon from Scratch"
+    
+block markdown
+  include:md /articles/php/phalcon/from-scratch.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Gin Application | Nanobox"
+    description = "Manage a Gin application's logs, traffic, health, and storage"
+    keywords    = "golang, gin production application, manage gin application, monitor gin, gin logging, load balancer, gin monitoring, production logs"
+    articles    = "golang/gin"
+    icons       = "golang,gin"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

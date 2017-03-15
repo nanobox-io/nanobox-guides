@@ -6,8 +6,8 @@ articles:
   - title: "Getting Started"
     tribe: the_essentials
     articles:
-      - {href: /php/codeigniter/from-scratch, title: Codeigniter from Scratch}
-      - {href: /php/codeigniter/existing-app, title: Existing Codeigniter App}
+      - {href: /php/codeigniter/from-scratch, title: CodeIgniter from Scratch}
+      - {href: /php/codeigniter/existing-app, title: Existing CodeIgniter App}
 
   #
   - title: "Next Steps"
@@ -20,7 +20,7 @@ articles:
   #
   - title: "Go Live"
     articles:
-      - {href: /php/codeigniter/configure-codeigniter, title: Configure Codeigniter}
+      - {href: /php/codeigniter/configure-codeigniter, title: Configure CodeIgniter}
       - {href: /php/codeigniter/preview-your-app, title: Preview your App}
       - {href: /php/codeigniter/launch-your-app, title: Launch your App}
 
@@ -49,3 +49,4 @@ articles:
       - {href: /php/codeigniter/composer, title: Composer}
       - {href: /php/codeigniter/webserver-config, title: Webserver Config}
       - {href: /php/codeigniter/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

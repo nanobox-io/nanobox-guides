@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Koa Packages with Yarn & NPM | Nanobox"
+    description = "How to manage Koa application dependencies with Yarn & NPM"
+    keywords    = "nodejs, koa application, manage koa application, yarn, npm, koa yarn, koa npm, nodejs yarn, nodejs npm"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    id          = "Yarn & NPM"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

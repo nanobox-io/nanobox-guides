@@ -1,11 +1,11 @@
 extends ../templates/base
 
 block js
-  // build:index /js/landing.js
+  // build:js /js/landing.js
   script(src="/js/landing.js")
   // endbuild
   
-  // build:index /js/framework-landing.js
+  // build:js /js/framework-landing.js
   script(src="/js/framework-landing.js")
   // endbuild
   
@@ -14,7 +14,8 @@ block js
     var requiredComponents = (requiredComponents === null) ? [] : requiredComponents
     var optionalComponents = (optionalComponents === null) ? [] : optionalComponents
     var articleGroups      = (articleGroups === null)      ? [] : articleGroups
-    article = new FrameworkLanding(requiredComponents, optionalComponents, "#{informalName}", articleGroups )
+    var contributors       = (contributors === null)       ? [] : contributors
+    article = new FrameworkLanding(requiredComponents, optionalComponents, "#{informalName}", articleGroups, contributors )
     $main = $('.main')
     nanobox.addBreadcrumb( $main )
     //- nanobox.addIcons( $main, "#{iconCrumbs}" )
@@ -40,7 +41,7 @@ block content
             img.shadow-icon(data-src="from-scratch")
             .title Quickstart
             .blurb Install and run a #{informalName} app from scratch in #{launchTime} mins
-            a(href="https://github.com/nanobox-quickstarts/nanobox-#{informalName}/blob/master/README.md")
+            a(href="https://github.com/nanobox-quickstarts/nanobox-#{informalName}#readme")
               .txt Let's Go
               .icon
                 img.shadow-icon(data-src="go-arrow")

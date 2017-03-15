@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Koa Application Teams | Nanobox"
+    description = "Easily manage Koa development teams and application collaborators"
+    keywords    = "nodejs, koa production application, manage koa application, koa collaboration, team management"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    id          = "Team Management"
+    
+block markdown
+  include:md /articles/shared/team-management.md

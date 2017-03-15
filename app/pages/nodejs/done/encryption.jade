@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a DoneJS Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a DoneJS production application"
+    keywords    = "nodejs, done production application, manage done application, ssl, tls, encryption"
+    articles    = "nodejs/done"
+    icons       = "nodejs,done"
+    id          = "SSL/TLS Encryption"
+    
+block markdown
+  include:md /articles/shared/encryption.md

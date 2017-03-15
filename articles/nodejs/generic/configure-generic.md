@@ -26,6 +26,7 @@ events {
 }
 
 http {
+    include /data/etc/nginx/mime.types;
     sendfile on;
 
     gzip              on;
@@ -39,7 +40,7 @@ http {
                       application/x-javascript
                       application/atom+xml;
 
-    # Proxy upstream to the puma process
+    # Proxy upstream to the node process
     upstream nodejs {
         server 127.0.0.1:3000;
     }

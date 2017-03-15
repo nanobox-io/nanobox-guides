@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Revel Application from Scratch | Nanobox"
+    description = "Learn how to create a new Revel application and local development environment"
+    keywords    = "golang, revel application, revel application, golang dev environment, dev environment, revel dev environemnt, revel dev, docker, containers"
+    articles    = "golang/revel"
+    icons       = "golang,revel"
+    id          = "Revel from Scratch"
+    
+block markdown
+  include:md /articles/golang/revel/from-scratch.md

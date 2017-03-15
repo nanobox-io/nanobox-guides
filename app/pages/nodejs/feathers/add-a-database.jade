@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Feathers Application | Nanobox"
+    description = "How to add and connect to a database with a Feathers applciation"
+    keywords    = "nodejs, feathers production application, manage feathers application, feathers database, feathers and mongodb, feathers and postgres, mongodb, postgres"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/nodejs/feathers/add-a-database.md

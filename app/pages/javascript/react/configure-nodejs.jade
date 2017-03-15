@@ -1,0 +1,15 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Nodejs"
+    keywords    = "javascript,react,nodejs"
+    description = "Configure Node.js with Nanobox"
+    articles    = "javascript/react"
+    icons       = "javascript,react"
+    id          = "Configure Nodejs"
+    
+block markdown
+  :md
+    # Configure Nodejs
+  include:md /articles/shared/partials/nodejs.md

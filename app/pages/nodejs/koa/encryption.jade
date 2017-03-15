@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Koa Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Koa production application"
+    keywords    = "nodejs, koa production application, manage koa application, ssl, tls, encryption"
+    articles    = "nodejs/koa"
+    icons       = "nodejs,koa"
+    id          = "SSL/TLS Encryption"
+    
+block markdown
+  include:md /articles/shared/encryption.md

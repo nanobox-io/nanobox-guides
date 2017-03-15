@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Phalcon Application in Production | Nanobox"
+    description = "Learn how to debug a production Phalcon application"
+    keywords    = "php, phalcon production application, manage phalcon application, phalcon logging, phalcon monitoring, debug phalcon, debugging phalcon"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md

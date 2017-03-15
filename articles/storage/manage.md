@@ -1,10 +1,10 @@
 # Managing Production Storage Components
 
-To establish a secure remote connection to your production storage component, use the Nanobox CLI's [`tunnel` command](https://docs.nanobox.io/cli/tunnel/). This will bind to a local port and establish a secure tunnel to your live component.
+To establish a secure remote connection to your production storage component, use the Nanobox CLI's [`tunnel` command](https://docs.nanobox.io/cli/tunnel/). This will bind to a local port and establish a secure tunnel to your live component. You should pass a custom port since port 22 is likely already in use and is reserved for admin users.
 
 #### Open a Tunnel to Your Storage Component
 ```bash
-nanobox tunnel data.storage
+nanobox tunnel data.storage -p 1234
 ```
 
 Connection credentials for the tunnel are provided in your app dashboard under the "Connect" section of your storage component.
@@ -16,26 +16,26 @@ Connection credentials for the tunnel are provided in your app dashboard under t
 ## Connect with SSH or SFTP
 Use the tunnel-bound port on your local machine and the tunnel credentials provided in your dashboard to connect with SSH or SFTP.
 
-Network directories are housed in the `data` directory in the home directory of your storage component. Directory paths are relative to the `data` directory.
+Network directories are housed in the `/data/var/db/unfs/` directory of your storage component. Directory paths are relative to `/data/var/db/unfs/`.
 
 ### SSH Example
 ```bash
-ssh -p 22 gonano@127.0.0.1
+ssh -p 1234 gonano@127.0.0.1
 # You'll be prompted for the password
 
 # navigate to a network directory
-cd data/path/to/dirA
+cd /data/var/db/unfs/path/to/dirA
 ```
 
 ### SCP Examples
 ```bash
 # copy files from your local code filesystem
 # into to your storage component at the same path
-scp -P 22 -r path/to/dirA/* gonano@127.0.0.1:data/path/to/dirA
+scp -P 1234 -r path/to/dirA/* gonano@127.0.0.1:/data/var/db/unfs/path/to/dirA
 
 # copy files from your storage component
 # into to your local code filesystem
-scp -P 22 -r gonano@127.0.0.1:data/path/to/dirA/* path/to/dirA
+scp -P 1234 -r gonano@127.0.0.1:/data/var/db/unfs/path/to/dirA/* path/to/dirA
 
 # Both commands will prompt for the password
 ```

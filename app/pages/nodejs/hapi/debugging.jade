@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Hapi Application in Production | Nanobox"
+    description = "Learn how to debug a production Hapi application"
+    keywords    = "nodejs, hapi production application, manage hapi application, hapi logging, hapi monitoring, debug hapi, debugging hapi"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md

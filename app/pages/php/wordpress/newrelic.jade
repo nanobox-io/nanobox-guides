@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Using New Relic in WordPress Applications | Nanobox"
+    description = "How to install and use New Relic in WordPress applications deployed with Nanobox"
+    keywords    = "newrelic wordpress, performance monitoring, newrelic php, new relic php, new relic paas, installing new relic, installing newrelic php, production performance monitoring"
+    articles    = "php/wordpress"
+    icons       = "php,wordpress"
+    id          = "New Relic"
+    
+block markdown
+  include:md /articles/php/newrelic.md

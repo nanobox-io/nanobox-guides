@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Iris Application to Production | Nanobox"
+    description = "Learn how to deploy a Iris application to production servers"
+    keywords    = "golang, iris production application, manage iris application, deploy iris, launch iris, iris in production, iris production servers"
+    articles    = "golang/iris"
+    icons       = "golang,iris"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/iris/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

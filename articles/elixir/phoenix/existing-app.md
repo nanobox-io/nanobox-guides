@@ -15,7 +15,7 @@ cd your-phoenix-app
 #### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
-At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Elixir <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>. You'll also want to add `inotify-tools` as a development package so it'll be available in your local dev environment:
 
 ```yaml
 run.config:
@@ -50,7 +50,7 @@ data.db:
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local phoenix.dev
+mix deps.get
 ```
 
 #### Configure the database

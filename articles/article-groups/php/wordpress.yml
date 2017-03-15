@@ -4,14 +4,13 @@ articles:
 
   - title: Getting Started
     articles:
-      - {href: /php/wordpress/install-nanobox, title: Install Nanobox}
       - {href: /php/wordpress/from-scratch, title: WordPress from Scratch}
       - {href: /php/wordpress/existing-app, title: Existing WordPress App}
 
   - title: Plugins & Themes
     articles:
-      - {href: /php/wordpress/installing-updating-plugins, title: Installing & Updating Plugins}
-      - {href: /php/wordpress/installing-updating-themes, title: Installing & Updating Themes}
+      - {href: /php/wordpress/installing-updating-plugins, title: Installing &amp; Updating Plugins}
+      - {href: /php/wordpress/installing-updating-themes, title: Installing &amp; Updating Themes}
 
   - title: Data & Storage Management
     articles:
@@ -30,3 +29,4 @@ articles:
       - {href: /php/wordpress/boxfile-explained, title: WordPress boxfile.yml Explained}
       - {href: /php/wordpress/reduce-deploy-size, title: Reduce the Size of Your Deploy}
       - {href: /php/wordpress/caching-plugins, title: Using Caching Plugins}
+      - {href: /php/generic/newrelic, title: New Relic}

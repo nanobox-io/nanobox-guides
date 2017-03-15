@@ -1,4 +1,4 @@
 documentation: /postgresql
 boxfile: |
   data.postgres:
-    image: nanobox/postgresql
+    image: nanobox/postgresql:9.5

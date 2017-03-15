@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Hapi Application from Scratch | Nanobox"
+    description = "Learn how to create a new Hapi application and local development environment"
+    keywords    = "nodejs, hapi application, hapi application, nodejs dev environment, dev environment, hapi dev environemnt, hapi dev, docker, containers"
+    articles    = "nodejs/hapi"
+    icons       = "nodejs,hapi"
+    id          = "Hapi from Scratch"
+    
+block markdown
+  include:md /articles/nodejs/hapi/from-scratch.md

@@ -72,6 +72,35 @@ Sample Article Group File:
       articles:
         - {href: '#', title: Lower Article}
         - {href: '#', title: Another}
+```
 
+# Generating github quickstart images
 
+We generate the github quickstart headers by launching a headless browser (phantomjs), forming the image in html and saving as a png.
+
+1. `nanobox run gulp`
+1. Edit `make-git-images.coffee` to add the new icons you want to generate an image for to the `newIcons` array. Also make sure that we have svg icons for that icon.
+1. In a new terminal `nanobox run`
+1. Run `sudo ldconfig /data/lib` (in nanobox)
+1. Run `coffee make-git-images.coffee` (in nanobox)
+
+# Adding contributors
+
+(Currently only available for frameworks)
+
+Sample framework landing page (jade). If you add a contributors array, contributors will be added to that framework landing page:
+
+``` jade
+block jsParams
+  script.
+    // (...)
+    contributors       = [
+      {name:"tolmark12", gravatarHash:'96B5571D8A9CD5B868226A5BD527D8ED', href:"https://github.com/Tolmark12"}
+    ]
+    /*
+    @name         : Their name or username, ask which they prefer
+    @twitter      : We use twitter to pull their twitter profile image (vs gravatar)
+    @gravatarHash : We use gravatar to show an image, get an email connected to gravatar and generate a MD5 hash. ex : http://onlinemd5.com/
+    @href         : Link to their site, twitter profile, github profile, etc. whatever they want. We probably prefer github.
+    */
 ```

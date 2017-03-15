@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Phalcon Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Phalcon production application"
+    keywords    = "php, phalcon production application, manage phalcon application, ssl, tls, encryption"
+    articles    = "php/phalcon"
+    icons       = "php,phalcon"
+    id          = "SSL/TLS Encryption"
+    
+block markdown
+  include:md /articles/shared/encryption.md

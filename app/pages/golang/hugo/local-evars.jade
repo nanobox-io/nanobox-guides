@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Hugo Application in Development| Nanobox"
+    description = "Learn how to add environment variable to a Hugo applicationin development"
+    keywords    = "golang, hugo application, manage hugo application, hugo environment variables, environment variables"
+    articles    = "golang/hugo"
+    icons       = "golang,hugo"
+    id          = "Local Environment Variables"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

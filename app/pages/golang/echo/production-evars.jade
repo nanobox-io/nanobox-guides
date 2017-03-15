@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Echo Application | Nanobox"
+    description = "Learn how to add environment variable to a production Echo application"
+    keywords    = "golang, echo production application, manage echo application, echo environment variables, environment variables"
+    articles    = "golang/echo"
+    icons       = "golang,echo"
+    id          = "Environment Variables"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

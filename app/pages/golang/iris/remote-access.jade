@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access to Iris Applications | Nanobox"
+    description = "Securely manage running Iris application with SSH remote access"
+    keywords    = "golang, iris production application, manage iris application, ssh access, remote access, server management, secure access"
+    articles    = "golang/iris"
+    icons       = "golang,iris"
+    id          = "Remote Access"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

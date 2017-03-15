@@ -1,0 +1,22 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Javascript App | Nanobox"
+    description  = "Learn how to setup a Javascript development environment and configure it to deploy to production."
+    keywords     = "javascript, javascript config, javascript development environment, javascript production app, javascript app, deploy javascript, create javascript app, config javascript app"
+    formalName   = "Javascript"
+    informalName = "JS"
+    icon         = "javascript"
+    iconCrumbs   = "javascript"
+    launchTime   = "5"
+    noQuickstart = true
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+    ]
+    optionalComponents = []
+    articleGroups = "javascript/generic"

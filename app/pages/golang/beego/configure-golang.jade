@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Golang Versions | Nanobox"
+    description = "How to update or change golang versions in development and production environments"
+    keywords    = "golang, beego production application, manage beego application, configure beego, production beego, beego in production, golang version, manage golang versions"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    id          = "Configure Golang"
+    
+block markdown
+  include:md /articles/golang/config.md

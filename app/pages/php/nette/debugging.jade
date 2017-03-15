@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Nette Application in Production | Nanobox"
+    description = "Learn how to debug a production Nette application"
+    keywords    = "php, nette production application, manage nette application, nette logging, nette monitoring, debug nette, debugging nette"
+    articles    = "php/nette"
+    icons       = "php,nette"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md

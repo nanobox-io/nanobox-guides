@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Nodejs Versions | Nanobox"
+    description = "How to update or change nodejs versions in development and production environments"
+    keywords    = "nodejs, feathers production application, manage feathers application, configure feathers, production feathers, feathers in production, nodejs version, manage nodejs versions"
+    articles    = "nodejs/feathers"
+    icons       = "nodejs,feathers"
+    id          = "Configure Nodejs"
+    
+block markdown
+  include:md /articles/nodejs/config.md

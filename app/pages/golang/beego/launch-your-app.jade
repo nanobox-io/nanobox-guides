@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Beego Application to Production | Nanobox"
+    description = "Learn how to deploy a Beego application to production servers"
+    keywords    = "golang, beego production application, manage beego application, deploy beego, launch beego, beego in production, beego production servers"
+    articles    = "golang/beego"
+    icons       = "golang,beego"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/golang/beego/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md
