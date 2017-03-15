@@ -19,13 +19,32 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 
 ```yaml
 run.config:
+  # elixir runtime
   engine: elixir
+  
+  # we need nodejs in development
+  # ensure inotify exists for hot-code reloading
+  dev_packages:
+    - nodejs
+    - inotify-tools
+    
+  # cache node_modules
+  cache_dirs:
+    - node_modules
+    
+  # add node_module bins to the $PATH
+  extra_path_dirs:
+    - node_modules/.bin
+    
+  # enable the filesystem watcher
+  fs_watch: true
+
+# add postgres as a data component
+data.db:
+  image: nanobox/postgresql
 ```
 
 ## Configure Phoenix
-
-#### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the ...:
 
 #### Add a local DNS
 Add a convenient way to access your app from the browser:
@@ -34,14 +53,27 @@ Add a convenient way to access your app from the browser:
 nanobox dns add local phoenix.dev
 ```
 
-## Run the app
-**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/elixir/phoenix/add-a-database) before your app will run.
+#### Configure the database
+**HEADS UP**: You can find more information about [adding and configuring a database](/elixir/phoenix/add-a-database) but here's the quick and dirty:
 
-```bash
-WIP
+```elixir
+# Configure your database
+config :phoenix_crud, PhoenixCrud.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DATA_DB_USER"),
+  password: System.get_env("DATA_DB_PASS"),
+  hostname: System.get_env("DATA_DB_HOST"),
+  database: "app_dev",
+  pool_size: 10
 ```
 
-Visit your app at <a href="http://phoenix.dev:3000" target="\_blank">phoenix.dev:3000</a>
+## Run the app
+
+```
+nanobox run mix phoenix.server
+```
+
+Visit your app at <a href="http://phoenix.dev:4000" target="\_blank">phoenix.dev:4000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Phoenix app:
