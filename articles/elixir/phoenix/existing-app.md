@@ -19,48 +19,61 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 
 ```yaml
 run.config:
+  # elixir runtime
   engine: elixir
+  
+  # we need nodejs in development
+  # ensure inotify exists for hot-code reloading
   dev_packages:
+    - nodejs
     - inotify-tools
+    
+  # cache node_modules
+  cache_dirs:
+    - node_modules
+    
+  # add node_module bins to the $PATH
+  extra_path_dirs:
+    - node_modules/.bin
+    
+  # enable the filesystem watcher
+  fs_watch: true
+
+# add postgres as a data component
+data.db:
+  image: nanobox/postgresql
 ```
 
 ## Configure Phoenix
 
-#### Update to Port 8080
-To connect to the public network, you need to configure your app to listen on port 8080 by modifying your `config/dev.exs` and `config/prod.exs`:
-
-```elixir
-# /config/dev.exs
-config :myapp, Myapp.Endpoint,
-  http: [port: 8080],
-  debug_errors: true,
-  code_reloader: true,
-  check_origin: false,
-  watchers: []
-```
-
-```elixir
-# /config/prod.exs
-config :myapp, Myapp.Endpoint,
-  http: [port: 8080],
-  url: [host: "example.com", port: 8080],
-  cache_static_manifest: "priv/static/manifest.json"
-```
-
-## Fetch your Dependencies
-Inside of your Nanobox console, fetch your app's dependencies:
+#### Add a local DNS
+Add a convenient way to access your app from the browser:
 
 ```bash
 mix deps.get
 ```
 
-## Run the app
+#### Configure the database
+**HEADS UP**: You can find more information about [adding and configuring a database](/elixir/phoenix/add-a-database) but here's the quick and dirty:
 
-```bash
-mix phoenix.server
+```elixir
+# Configure your database
+config :phoenix_crud, PhoenixCrud.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DATA_DB_USER"),
+  password: System.get_env("DATA_DB_PASS"),
+  hostname: System.get_env("DATA_DB_HOST"),
+  database: "app_dev",
+  pool_size: 10
 ```
 
-Visit your app at <a href="http://phoenix.dev" target="\_blank">phoenix.dev</a>
+## Run the app
+
+```
+nanobox run mix phoenix.server
+```
+
+Visit your app at <a href="http://phoenix.dev:4000" target="\_blank">phoenix.dev:4000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Phoenix app:
