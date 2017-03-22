@@ -26,6 +26,7 @@ events {
 }
 
 http {
+    include /data/etc/nginx/mime.types;
     sendfile on;
 
     gzip              on;

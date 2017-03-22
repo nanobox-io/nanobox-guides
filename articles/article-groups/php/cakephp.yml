@@ -49,3 +49,4 @@ articles:
       - {href: /php/cakephp/composer, title: Composer}
       - {href: /php/cakephp/webserver-config, title: Webserver Config}
       - {href: /php/cakephp/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

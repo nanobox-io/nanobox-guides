@@ -49,3 +49,4 @@ articles:
       - {href: /php/slim/composer, title: Composer}
       - {href: /php/slim/webserver-config, title: Webserver Config}
       - {href: /php/slim/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

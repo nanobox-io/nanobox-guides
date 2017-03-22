@@ -8,9 +8,7 @@ You can add a web components in your `boxfile.yml`:
 
 ```yaml
 web.main:
-  start:
-    nginx: start-apache
-    fpm: start-php
+  start: php-server
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
@@ -36,10 +34,6 @@ if you want Slim to stream logs to the nanobox dashboard we'll need to add a `lo
 web.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
     slim[app]: logs/app.log
 ```
 

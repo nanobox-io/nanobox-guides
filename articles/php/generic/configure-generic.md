@@ -8,9 +8,7 @@ You can add a web components in your `boxfile.yml`:
 
 ```yaml
 web.main:
-  start:
-    nginx: start-apache
-    fpm: start-php
+  start: php-server
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
@@ -46,10 +44,10 @@ You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) 
 
 ## Add Storage Component
 
-You might also need certain directories to be shared among all PHP instances. We can do this easily with nanobox by adding a storage data component:
+You might also need certain directories with writable permissions to be shared among all PHP instances and/or persist between deploys. This is accomplished with a [storage component](/storage) and [network directories](/storage/storing-files/):
 
 ```yaml
-run.config:
+web.main:
   network_dirs:
     data.storage:
       - path/to/shared/directory

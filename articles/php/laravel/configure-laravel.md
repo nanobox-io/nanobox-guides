@@ -14,7 +14,7 @@ run.config:
     webserver: nginx
 
     # public directory
-    document_root: web
+    document_root: public
 ```
 
 ## Add webs and workers
@@ -25,9 +25,7 @@ You can have as many web components as your app needs by simply adding them to y
 
 ```yaml
 web.main:
-  start:
-    nginx: start-nginx
-    fpm: start-php
+  start: php-server
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
@@ -66,16 +64,11 @@ if you want Laravel to stream logs to the nanobox dashboard we'll need to add a 
 web.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    nginx[access]: /data/var/log/nginx/access.log
-    nginx[error]: /data/var/log/nginx/error.log
-    php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
     laravel[error]: /app/storage/logs/laravel.log
 
 worker.main:
   # the path to a logfile you want streamed to the nanobox dashboard
   log_watch:
-    php[error]: /data/var/log/php/php_error.log
     laravel[error]: /app/storage/logs/laravel.log
 ```
 
@@ -105,8 +98,8 @@ In your existing boxfile.yml add the following code:
 deploy.config:
   before_live:
     web.main:
-      - php artisan migrate --force
       - mkdir -p storage/framework/{sessions,cache,views}
+      - php artisan migrate --force
 ```
 
 ## Now what?
