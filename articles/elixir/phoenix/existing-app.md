@@ -21,21 +21,21 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 run.config:
   # elixir runtime
   engine: elixir
-  
+
   # we need nodejs in development
   # ensure inotify exists for hot-code reloading
   dev_packages:
     - nodejs
     - inotify-tools
-    
+
   # cache node_modules
   cache_dirs:
     - node_modules
-    
+
   # add node_module bins to the $PATH
   extra_path_dirs:
     - node_modules/.bin
-    
+
   # enable the filesystem watcher
   fs_watch: true
 
@@ -50,7 +50,7 @@ data.db:
 Add a convenient way to access your app from the browser:
 
 ```bash
-mix deps.get
+nanobox dns add local phoenix.dev
 ```
 
 #### Configure the database
