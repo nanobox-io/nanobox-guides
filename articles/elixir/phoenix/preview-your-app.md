@@ -23,7 +23,7 @@ With `dry-run` your app will continue to run until stopped (`ctrl + c`). This al
 
 #### Phoenix 1.3 PORT environment variable
 
-In Phoenix v1.3 and up, the `PORT` environment variable must be set when running when in production. Before staging the nanobox app in a `dry-run`, set this variable with:
+In Phoenix v1.3 and up, the `PORT` environment variable must be set when running in production. Before staging the nanobox app in a `dry-run`, set this variable with:
 
 ```bash
 nanobox evar add dry-run PORT=8080
