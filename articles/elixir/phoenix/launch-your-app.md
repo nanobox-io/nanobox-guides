@@ -10,7 +10,7 @@ New apps are launched from your <a href="https://dashboard.nanobox.io" target="\
 
 #### Phoenix 1.3 PORT environment variable
 
-In Phoenix v1.3 and up, the `PORT` environment variable must be set when running when in production.
+In Phoenix v1.3 and up, the `PORT` environment variable must be set when running in production.
 Nanobox [forwards all http/s traffic](https://docs.nanobox.io/domains-networking/protocols-incoming-requests/#http-https) on 80 and 443 to the application running on 8080. Before deploying to production, add the environment variable to your `remote` context. Before launching your nanobox app set this variable with:
 
 ```bash
