@@ -15,6 +15,8 @@ Nanobox generates the following environment variables based off that name:
 
 For databases that require a name, the name will always be `gonano`.
 
+To specify the port used to connect to the database, set the enviroment variable ``DATA_DB_PORT``.
+
 **HEADS UP**: Your database will be provisioned the next time you `nanobox run`.
 
 ## Connect
@@ -38,18 +40,18 @@ Modify your `config/database.php` to connect your app:
 ```php
 'connections' => [
   'mysql' => [
-    'driver' => 'mysql',
-    'host' => env('DATA_DB_HOST', ''),
-    'port' => '3306',
-    'database' => 'gonano',
-    'username' => env('DATA_DB_USER', ''),
-    'password' => env('DATA_DB_PASS', ''),
-    'charset' => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix' => '',
-    'strict' => true,
-    'engine' => null,
-  ],
+      'driver' => 'mysql',
+      'host' => env('DATA_DB_HOST', env('DB_HOST', '127.0.0.1')),
+      'port' => env('DATA_DB_PORT', env('DB_PORT', '3306')),
+      'database' =>  env('DATA_DB_HOST', false) ? 'gonano' : env('DB_DATABASE', 'forge'),
+      'username' =>  env('DATA_DB_USER', env('DB_USERNAME', 'forge')),
+      'password' =>  env('DATA_DB_PASS', env('DB_PASSWORD', '')),
+      'charset' => 'utf8mb4',
+      'collation' => 'utf8mb4_unicode_ci',
+      'prefix' => '',
+      'strict' => true,
+      'engine' => null,
+  ]
 ],
 ```
 
