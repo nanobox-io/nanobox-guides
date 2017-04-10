@@ -40,17 +40,17 @@ Modify your `config/database.php` to connect your app:
 ```php
 'connections' => [
   'mysql' => [
-     'driver' => 'mysql',
-     'host' => env('DATA_DB_HOST', env('DB_HOST', '127.0.0.1')),
-     'port' => env('DATA_DB_PORT', env('DB_PORT', '3306')),
-     'database' => env('DATA_DB_HOST', false) ? 'gonano' : env('DB_DATABASE', 'forge'),
-     'username' => env('DATA_DB_USER', env('DB_USERNAME', 'forge')),
-     'password' => env('DATA_DB_PASS', env('DB_PASSWORD', '')),
-     'charset' => 'utf8mb4',
-     'collation' => 'utf8mb4_unicode_ci',
-     'prefix' => '',
-     'strict' => true,
-     'engine' => null,
+    'driver' => 'mysql',
+    'host' => env('DATA_DB_HOST', env('DB_HOST', '127.0.0.1')),
+    'port' => env('DATA_DB_PORT', env('DB_PORT', '3306')),
+    'database' => env('DATA_DB_HOST', false) ? 'gonano' : env('DB_DATABASE', 'forge'),
+    'username' => env('DATA_DB_USER', env('DB_USERNAME', 'forge')),
+    'password' => env('DATA_DB_PASS', env('DB_PASSWORD', '')),
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_unicode_ci',
+    'prefix' => '',
+    'strict' => true,
+    'engine' => null,
   ],
 ],
 ```
