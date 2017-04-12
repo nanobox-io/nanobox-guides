@@ -27,5 +27,8 @@
     "gulpfile.*",
     "package.json",
     "**/.*"
-  ]
+  ],
+  "resolutions": {
+    "velocity": "~1.2.2"
+  }
 }
