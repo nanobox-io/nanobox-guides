@@ -8,12 +8,14 @@ The following setting allows you to define your Elixir runtime environment.
 #### runtime
 Specifies which Elixir runtime and version to use. The following runtimes are available:
 
-<!-- - python-2.7
-- python-3.4
-- python-3.5
+- elixir-1.0
+- elixir-1.1
+- elixir-1.3
+- elixir-1.4
 
 ```yaml
 run.config:
-  config:
-    runtime: python-3.5
-``` -->
+  engine: elixir
+  engine.config:
+    runtime: elixir-1.4
+```

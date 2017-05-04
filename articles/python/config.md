@@ -15,6 +15,7 @@ Specifies which Python runtime and version to use. The following runtimes are av
 
 ```yaml
 run.config:
+  engine: python
   engine.config:
     runtime: python-3.5
 ```
