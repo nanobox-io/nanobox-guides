@@ -1,6 +1,6 @@
 {
   "name": "package",
-  "version": "0.0.193",
+  "version": "0.0.194",
   "dependencies": {
     "clipboard": "~1.5.15",
     "highlight": "^9.7.0",
