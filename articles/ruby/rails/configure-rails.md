@@ -200,7 +200,7 @@ We can have rails compile assets during the deploy process by adding an extra st
 ```yaml
 deploy.config:
   extra_steps:
-    - rake assets:precompile
+    - rake assets:precompile RAILS_ENV=production
 ```
 
 ## Migrate Data
