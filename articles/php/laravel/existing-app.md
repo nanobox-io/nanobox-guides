@@ -25,6 +25,9 @@ run.config:
   # php engine configuration (php version, extensions, etc)
   engine.config:
 
+    # sets the document root to public
+    document_root: public
+
     # sets the php version to 7.0
     runtime: php-7.0
 
@@ -38,6 +41,7 @@ run.config:
       - dom
       - xml
       - ctype
+      - xmlwriter
 ```
 
 ## Add a local DNS
