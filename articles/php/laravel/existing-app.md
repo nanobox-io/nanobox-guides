@@ -28,8 +28,8 @@ run.config:
     # sets the document root to public
     document_root: public
 
-    # sets the php version to 7.0
-    runtime: php-7.0
+    # sets the php version to 7.1
+    runtime: php-7.1
 
     # enables php extensions
     extensions:
