@@ -1,7 +1,7 @@
-# Codigniter from Scratch
+# Lumen from Scratch
 Part of what makes Nanobox so useful is you don't even need PHP or Lumen installed on your local machine to use them.
 
-## Create a Codigniter project
+## Create a Lumen Project
 Create a project folder and change into it:
 
 ```bash

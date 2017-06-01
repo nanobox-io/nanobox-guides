@@ -8,6 +8,6 @@ A-Records are used to point your domain to a specific IP address. If you choose 
 ![Load-Balancer IP](/assets/shared/point-your-domain.png)
 
 ## Using a CNAME
-CNAMEs are used to define aliases for domains. Essentially they point a domain at another domain, but are not a redirect. For example, if domain.com has a CNAME for myapp.nanoapp.io, domain.com acts as a alias for myapp.nanoapp.io and loads the site without changing the request URI.
+CNAMEs are used to define aliases for domains. Essentially they point a domain at another domain, but are not a redirect. For example, if domain.com has a CNAME for `username-myapp.nanoapp.io` or `teamname-myapp.nanoapp.io`, domain.com acts as a alias for and loads the site without changing the request URI.
 
-Every app deployed with Nanobox is given a dev url using this pattern: `app-name.nanoapp.io`. You can CNAME your own domain to your app's nanoapp.io domain.
+Every app deployed with Nanobox is given a dev url using this pattern: `username-appname.nanoapp.io` or `teamname-appname.nanoapp.io`. You can CNAME your own domain to your app's nanoapp.io domain.

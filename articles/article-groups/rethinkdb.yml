@@ -1,0 +1,12 @@
+title: RethinkDB
+href: /rethinkdb
+articles:
+  - title: Getting Started
+    articles:
+      - {href: /rethinkdb/create, title: Create a RethinkDB Database}
+      - {href: /rethinkdb/connect, title: Connect to RethinkDB}
+      - {href: /rethinkdb/configure, title: RethinkDB Config Options}
+  - title: Managing Data
+    articles:
+      - {href: /rethinkdb/local, title: Managing Local Data}
+      - {href: /rethinkdb/production, title: Managing Production Data}
