@@ -12,7 +12,7 @@ Specifies which Node.js runtime and version to use. The following runtimes are a
 - nodejs-4.1
 - nodejs-4.2
 - nodejs-4.3
-- nodejs-4.4 *(default)*
+- nodejs-4.4
 - nodejs-5.0
 - nodejs-5.1
 - nodejs-5.2
@@ -37,6 +37,15 @@ Specifies which Node.js runtime and version to use. The following runtimes are a
 - nodejs-6.8
 - nodejs-6.9
 - nodejs-7.0
+- nodejs-7.1
+- nodejs-7.2
+- nodejs-7.3
+- nodejs-7.4
+- nodejs-7.5
+- nodejs-7.7
+- nodejs-7.8
+- nodejs-7.9
+- nodejs-8.0
 - iojs-2.3
 
 ```yaml
