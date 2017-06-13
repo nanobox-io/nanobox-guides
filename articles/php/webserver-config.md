@@ -96,8 +96,8 @@ Sets Apache's [`MaxClients` directive](http://httpd.apache.org/docs/2.2/mod/mpm_
 
 ```yaml
 run.config:
-config:
-apache_max_clients: 128
+  engine.config:
+    apache_max_clients: 128
 ```
 
 #### apache\_server\_limit
