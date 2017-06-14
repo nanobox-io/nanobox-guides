@@ -54,7 +54,7 @@ http {
 
         # Settings to serve static files
         location ^~ /static/  {
-            root /app/static/;
+            root /app/;
         }
 
         # Serve a static file (ex. favico)
