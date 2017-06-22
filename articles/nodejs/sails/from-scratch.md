@@ -27,7 +27,7 @@ run.config:
 nanobox run
 
 # install sails so you can use it to generate your application
-npm install -g sails
+yarn add sails
 
 # cd into the /tmp dir to create an app
 cd /tmp
@@ -48,11 +48,7 @@ exit
 ## Configure Sails
 
 #### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
-
-```javascript
-host: '0.0.0.0'
-```
+To allow connections from the host machine into the app's container, your app needs to listen on all available IP's (0.0.0.0). Sails does this by default, and so no additional configuration is needed.
 
 ## Add a local DNS
 Add a convenient way to access your app from the browser:
@@ -76,11 +72,11 @@ With Nanobox, you have everything you need develop and run your sails app:
 # drop into a Nanobox console
 nanobox run
 
-# where node is installed,
+# where node is installed
 node -v
 
-# npm is installed,
-npm -v
+# npm/yarn are installed
+npm -v; yarn --version
 
 # and your code is mounted
 ls
