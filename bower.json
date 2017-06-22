@@ -3,6 +3,7 @@
   "version": "0.0.194",
   "dependencies": {
     "clipboard": "~1.5.15",
+    "front-top-nav": "nanobox-io/front-top-nav",
     "highlight": "^9.7.0",
     "history.js": "~1.8.0",
     "jade": "~1.6.0",
@@ -14,7 +15,6 @@
     "pubsub-js": "~1.5.0",
     "shadow-icons": "tolmark12/shadow-icons-js",
     "sprint.js": "*",
-    "front-top-nav": "nanobox-io/front-top-nav",
     "velocity": "~1.2.2"
   },
   "ignore": [

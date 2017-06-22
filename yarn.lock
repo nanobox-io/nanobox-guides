@@ -1402,6 +1402,14 @@ gulp-bump@~0.1.11:
     semver "^2.3.2"
     through2 "^0.5.1"
 
+gulp-changed:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-3.1.0.tgz#87cd1593a0bb4a5129dc2f229bece6d9488c272a"
+  dependencies:
+    gulp-util "^3.0.0"
+    pify "^2.3.0"
+    through2 "^2.0.0"
+
 gulp-coffee@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/gulp-coffee/-/gulp-coffee-2.0.1.tgz#7236f5437be9b375bcd9cf84c09c135700d574e0"

@@ -40,6 +40,8 @@ inject       = require 'gulp-inject'
 foreach      = require 'gulp-foreach'
 rev          = require 'gulp-rev'
 del          = require 'del'
+changed      = require 'gulp-changed'
+
 # Paths to source files
 
 articlePath       = 'articles/**/*.md'
@@ -74,6 +76,7 @@ html = (cb, src)->
   src    = if !src? then "" else "#{src}/"
   source = "#{jadePath}/#{src}**/*.jade"
   gulp.src source
+    .pipe changed("./server/#{src}", {extension: '.html'})
     .pipe jade({jade:pug, basedir:'./' }).on('error', (err)-> console.log(err); this.emit('end') )
     .on 'error', onError
     .pipe gulp.dest("./server/#{src}")
