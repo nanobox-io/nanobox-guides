@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch an Elixir Application to Production | Nanobox"
+    description = "Learn how to deploy an Elixir application to production servers"
+    keywords    = "elixir, elixir production application, manage elixir application, deploy elixir, launch elixir, elixir in production, elixir production servers"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/elixir/generic/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to an Elixir Application | Nanobox"
+    description = "How to point an existing domain name to an Elixir application"
+    keywords    = "elixir, elixir production application, manage elixir application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

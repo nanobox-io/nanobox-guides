@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Elixir Application in Production | Nanobox"
+    description = "Learn how to debug a production Elixir application"
+    keywords    = "elixir, elixir production application, manage elixir application, elixir logging, elixir monitoring, debug elixir, debugging elixir"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md
