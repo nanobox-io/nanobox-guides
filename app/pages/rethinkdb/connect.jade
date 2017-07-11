@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Securely Connect to RethinkDB in Production and Development | Nanobox"
+    description = "Instructions for connecting to RethinkDB in development and production with Nanobox."
+    keywords    = "deploy rethinkdb, rethinkdb in production, rethinkdb, scaling rethinkdb database, local rethinkdb, local development, configure rethinkdb"
+    articles    = "rethinkdb"
+    icons       = "rethink"
+    id          = "Connect to RethinkDB"
+    
+block markdown
+  include:md /articles/rethinkdb/connect.md

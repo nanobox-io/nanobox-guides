@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Local RethinkDB Data | Nanobox"
+    description = "Instructions for managing local RethinkDB data in apps running in Nanobox"
+    keywords    = "deploy rethinkdb, rethinkdb in production, rethinkdb, scaling rethinkdb database, local rethinkdb, local development, configure rethinkdb"
+    articles    = "rethinkdb"
+    icons       = "rethink"
+    id          = "Managing Local Data"
+    
+block markdown
+  include:md /articles/rethinkdb/manage-local.md
