@@ -131,6 +131,7 @@
                 @include languageBox(postgres,  #3D8EC9);
                 @include languageBox(memcached, #A1CCCC);
                 @include languageBox(storage,   #9dc6e4);
+                @include languageBox(rethink,   #3c91a2);
               }
             }
           }
