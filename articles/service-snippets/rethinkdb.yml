@@ -1,0 +1,4 @@
+documentation: /rethinkdb
+boxfile: |
+  data.rethinkdb:
+    image: nanobox/rethinkdb:2.3
