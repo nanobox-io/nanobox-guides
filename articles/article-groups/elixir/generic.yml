@@ -1,0 +1,47 @@
+title: Generic
+href: /elixir/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /elixir/generic/from-scratch, title: Elixir App from Scratch}
+      - {href: /elixir/generic/existing-app, title: Existing Elixir App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /elixir/generic/add-a-database, title: Add a Database}
+      - {href: /elixir/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /elixir/generic/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /elixir/generic/configure-generic, title: Configure your App}
+      - {href: /elixir/generic/preview-your-app, title: Preview your App}
+      - {href: /elixir/generic/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /elixir/generic/point-your-domain, title: Point your Domain}
+      - {href: /elixir/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /elixir/generic/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /elixir/generic/scale-your-app, title: Scale Your App}
+      - {href: /elixir/generic/debugging, title: Debugging}
+      - {href: /elixir/generic/app-health, title: App Health}
+      - {href: /elixir/generic/remote-access, title: Remote Access}
+      - {href: /elixir/generic/team-management, title: Team Management}
+      - {href: /elixir/generic/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /elixir/generic/configure-elixir, title: Configure Elixir}

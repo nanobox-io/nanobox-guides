@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production Elixir Applications | Nanobox"
+    description = "Monitor a production Elixir application with live and historical stats"
+    keywords    = "elixir, elixir production application, manage elixir application, stats, elixir stats, elixir stats, monitor elixir, elixir app health"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "App Health"
+    
+block markdown
+  include:md /articles/shared/app-health.md

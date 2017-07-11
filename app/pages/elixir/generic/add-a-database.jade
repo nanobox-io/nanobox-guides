@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to an Elixir Application | Nanobox"
+    description = "How to add and connect to a database with an Elixir applciation"
+    keywords    = "elixir, elixir production application, manage elixir application, elixir database, elixir and mongodb, elixir and postgres, mongodb, postgres"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/elixir/generic/add-a-database.md

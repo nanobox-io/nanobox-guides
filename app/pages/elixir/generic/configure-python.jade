@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Elixir Versions | Nanobox"
+    description = "How to update or change elixir versions in development and production environments"
+    keywords    = "elixir, elixir production application, manage elixir application, configure elixir, production elixir, elixir in production, elixir version, manage elixir versions"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Configure Elixir"
+    
+block markdown
+  include:md /articles/elixir/config.md

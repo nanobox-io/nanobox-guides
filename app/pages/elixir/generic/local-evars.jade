@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Elixir Application in Development| Nanobox"
+    description = "Learn how to add environment variable to an Elixir applicationin development"
+    keywords    = "elixir, elixir application, manage elixir application, elixir environment variables, environment variables"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Local Environment Variables"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

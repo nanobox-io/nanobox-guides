@@ -1,0 +1,25 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Elixir App | Nanobox"
+    description  = "Learn how to setup an Elixir development environment and configure it to deploy to production."
+    keywords     = "elixir, elixir config, elixir development environment, elixir production app, elixir app, deploy elixir, create elixir app, config elixir app"
+    formalName   = "Elixir"
+    informalName = "elixir"
+    icon         = "elixir"
+    iconCrumbs   = "elixir"
+    noQuickstart = true
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Elixir', icon:'elixir', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Postgres', icon:'postgres', href:'#'},
+      {name:'MongoDB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "elixir/generic"

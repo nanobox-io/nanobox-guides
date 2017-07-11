@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding Javascript to an Elixir Application | Nanobox"
+    description = "How to add Javascriot to an Elixir application"
+    keywords    = "elixir, elixir application, elixir javascript, javascript"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Frontend Javascript"
+    
+block markdown
+  :md
+    # Frontend Javascript
+  include:md /articles/shared/partials/nodejs.md
+  include:md /articles/shared/partials/package-managers.md
+  include:md /articles/shared/partials/task-runners.md

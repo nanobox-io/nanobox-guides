@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create an Elixir Application from Scratch | Nanobox"
+    description = "Learn how to create a new Elixir application and local development environment"
+    keywords    = "elixir, elixir application, elixir application, elixir dev environment, dev environment, elixir dev environemnt, elixir dev, docker, containers"
+    articles    = "elixir/generic"
+    icons       = "elixir,generic"
+    id          = "Elixir App from Scratch"
+    
+block markdown
+  include:md /articles/elixir/generic/from-scratch.md
