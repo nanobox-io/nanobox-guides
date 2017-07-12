@@ -1,7 +1,5 @@
 # RethinkDB Config Options
 
-_**Work in Progress**_
-
 RethinkDB components are configured in your `boxfile.yml`. All available configuration options are outlined below.
 
 ### Important Notes About Configuration Changes

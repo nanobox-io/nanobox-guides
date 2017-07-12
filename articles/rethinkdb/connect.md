@@ -1,7 +1,5 @@
 # Connect to RethinkDB
 
-_**Work in Progress**_
-
 When using Nanobox, projects are meant to be both portable and secure. In order for your project to be both, you should use environment variables in your RethinkDB connections.
 
 ## Use Environment Variables to Connect
@@ -43,8 +41,6 @@ data.rethink
 
 # Auto-Generated Environment Variables
 DATA_RETHINK_HOST
-DATA_RETHINK_USER
-DATA_RETHINK_PASS
 ```
 
 ## Viewing Environment Variables
