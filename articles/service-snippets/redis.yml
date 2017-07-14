@@ -1,4 +1,4 @@
 documentation: /redis
 boxfile: |
   data.redis :
-    image : nanobox/redis:3.0
+    image : nanobox/redis:3.2

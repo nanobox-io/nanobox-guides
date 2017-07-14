@@ -52,16 +52,16 @@ data.redis:
 ### Redis Version
 You should append the Redis version number to your `image` with a `:`. The following versions are available:
 
-- 2.6
 - 2.8
 - 3.0
 - 3.2
+- 4.0
 
 **Note:** Due to version compatibility constraints, Redis versions cannot be changed after the service is created. To use a different version, you'll have to create a new Redis component.
 
 ```yaml
 data.redis:
-  image: nanobox/redis:3.0
+  image: nanobox/redis:3.2
 ```
 
 ### tcp\_keepalive

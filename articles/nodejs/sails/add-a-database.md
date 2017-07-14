@@ -3,7 +3,7 @@
 ## Configure
 You can add a database to your app by simply adding a data component to your `boxfile.yml`:
 
-<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo" ></div>
+<div class="meta" data-class="snippet" data-optional-components="postgres,mysql,mongo,rethinkdb" ></div>
 
 In the above snippet `db` is the unique identifier of this component. It can be anything you choose as long as it is unique.
 
