@@ -19,4 +19,4 @@ Visit your app at <a href="http://koa.preview" target="\_blank">http://koa.previ
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
 
-**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/nodejs/koa/local-evars) with `nanobox add evar dry-run KEY=VALUE`.
+**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/nodejs/koa/local-evars) with `nanobox evar add dry-run KEY=VALUE`.

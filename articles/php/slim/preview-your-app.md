@@ -19,4 +19,4 @@ Visit your app at <a href="http://slim.preview" target="\_blank">http://slim.pre
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
 
-**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/php/slim/local-evars) with `nanobox add evar dry-run KEY=VALUE`.
+**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/php/slim/local-evars) with `nanobox evar add dry-run KEY=VALUE`.

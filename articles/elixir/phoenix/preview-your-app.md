@@ -19,7 +19,7 @@ Visit your app at <a href="http://phoenix.preview" target="\_blank">http://phoen
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
 
-**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/elixir/phoenix/local-evars) with `nanobox add evar dry-run KEY=VALUE`.
+**HEADS UP**: You can add environment variables to dry-run the same way you do [locally](/elixir/phoenix/local-evars) with `nanobox evar add dry-run KEY=VALUE`.
 
 #### Phoenix 1.3 PORT environment variable
 
