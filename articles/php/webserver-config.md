@@ -8,17 +8,32 @@ The following web servers are available:
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     webserver: 'apache'
 ```
 
 ## Apache
 
+#### apache_version
+Defines which version of Apache to use in your application. The following versions are available:
+
+- 2.2
+- 2.4
+
+```yaml
+run.config:
+  engine: php
+  engine.config:
+    apache_version: 2.2
+```
+
 #### apache\_document\_root
 The public root of your web application. For instance, if you like to house your app in `/public` for security or organizational purposes, you can specify that here. The default is the `/`.
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_document_root: '/'
 ```
@@ -28,6 +43,7 @@ When a path is not specified in the url, these files are served in order in whic
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_index_list:
       - index.php
@@ -39,6 +55,7 @@ When a path is not specified in the url, this files is served. *This is similar 
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_default_gateway: "index.php"
 ```
@@ -52,6 +69,7 @@ Specify which PHP interpreter you would like Apache to use.
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_php_interpreter: php_fpm
 ```
@@ -77,6 +95,7 @@ The following modules are enabled when using php_fpm:
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_modules
 ```
@@ -87,6 +106,7 @@ Sets Apaches [`MaxSpareServers` directive](http://httpd.apache.org/docs/2.2/mod/
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_max_spares: 10
 ```
@@ -96,6 +116,7 @@ Sets Apache's [`MaxClients` directive](http://httpd.apache.org/docs/2.2/mod/mpm_
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_max_clients: 128
 ```
@@ -105,6 +126,7 @@ Sets Apaches [`ServerLimit` directive](http://httpd.apache.org/docs/2.2/mod/mpm_
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_server_limit: 128
 ```
@@ -114,6 +136,7 @@ Sets Apache's [`MaxRequestsPerChild` directive](http://httpd.apache.org/docs/2.2
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_max_requests: 10000
 ```
@@ -123,6 +146,7 @@ Adds far future expires to your header, setting the number of seconds static ass
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_static_expire: 86400
 ```
@@ -132,6 +156,7 @@ Sets Apache's [`LogLevel` directive](http://httpd.apache.org/docs/2.2/mod/core.h
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_log_level: warn
 ```
@@ -141,6 +166,7 @@ Enables or disables the Apache Access log.
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     apache_access_log: false
 ```
@@ -154,6 +180,7 @@ The public root of your web application. For instance, if you like to house your
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     nginx_document_root: '/'
 ```
@@ -163,6 +190,7 @@ When a path is not specified in the url, these files are served in order in whic
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     nginx_index_list:
       - index.php
@@ -174,6 +202,7 @@ When a path is not specified in the url, this files is served. *This is similar 
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     nginx_default_gateway: 'index.php'
 ```
@@ -187,6 +216,7 @@ The public root of your web application. For instance, if you like to house your
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     builtin_document_root: '/'
 ```
@@ -200,6 +230,7 @@ Sets `events.mechanism` setting in the `php-fpm.conf` which specifies the events
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     php_fpm_events_mechanism: 'epoll'
 ```
@@ -209,6 +240,7 @@ Sets the maximum number of child processes that can be created by PHP.
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     php_fpm_max_children: 20
 ```
@@ -218,6 +250,7 @@ The desired maximum number of idle server processes.
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     php_fpm_max_spare_servers: 1
 ```
@@ -227,6 +260,7 @@ Sets the number of requests each child process should execute before respawning.
 
 ```yaml
 run.config:
+  engine: php
   engine.config:
     php_fpm_max_requests: 128
 ```
