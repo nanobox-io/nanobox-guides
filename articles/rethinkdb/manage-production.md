@@ -19,6 +19,8 @@ View the [`console` documentation](https://docs.nanobox.io/cli/console/) for mor
 ## Use a Third-Party Client Over a Secure Tunnel
 RethinkDB has a list of [third-party clients](https://www.rethinkdb.com/docs/third-party-admin-tools/) you can use to manage your data. For security reasons, the only way to access a database deployed with Nanobox is through a secure tunnel. The tunnel establishes a secure connection between your local machine and your remote database. It binds to a local port and forwards requests to your live database.
 
+Use the ID of the RethinkDB component in your `boxfile.yml` to establish a tunnel (data.db, data.rethinkdb, etc.).
+
 ```bash
 nanobox tunnel data.rethinkdb
 ```

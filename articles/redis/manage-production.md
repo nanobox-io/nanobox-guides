@@ -2,6 +2,8 @@
 To establish a secure remote connection to your production component, use the Nanobox CLI's [`tunnel` command](https://docs.nanobox.io/cli/tunnel/). This will bind to a local port and establish a secure tunnel to your live Redis component.
 
 #### Open a Tunnel to Redis
+Use the ID of the Redis component in your `boxfile.yml` to establish a tunnel (data.redis, data.queue, etc.).
+
 ```bash
 nanobox tunnel data.redis
 ```

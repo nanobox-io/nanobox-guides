@@ -9,6 +9,8 @@ Your app's router will handle http and SSL/TLS encryption, and then forward the 
 ## Add a web component
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/).
 
+The Elixir engine provides a `node-start` helper script that ensures all nodes in an Elixir cluster have the necessary credentials to communicate with each other. You should always prefix your web component's start command with `node-start`.
+
 ```yaml
 web.main:
   start: node-start mix run

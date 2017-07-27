@@ -15,6 +15,8 @@ config :phoenix_crud, PhoenixCrud.Endpoint,
 ## Add a web component
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/).
 
+The Elixir engine provides a `node-start` helper script that ensures all nodes in an Elixir cluster have the necessary credentials to communicate with each other. You should always prefix your web component's start command with `node-start`.
+
 ```yaml
 web.main:
   start: node-start mix phoenix.server
@@ -40,7 +42,7 @@ In your existing boxfile.yml add the following code:
 
 ```yaml
 deploy.config:
-  # just before the new process comes online, 
+  # just before the new process comes online,
   # let's migrate the database
   before_live:
     web.main:
@@ -56,21 +58,21 @@ Your final `boxfile.yml` might look something like this:
 run.config:
   # elixir runtime
   engine: elixir
-  
+
   # we need nodejs in development
   # ensure inotify exists for hot-code reloading
   dev_packages:
     - nodejs
     - inotify-tools
-    
+
   # cache node_modules
   cache_dirs:
     - node_modules
-    
+
   # add node_module bins to the $PATH
   extra_path_dirs:
     - node_modules/.bin
-    
+
   # enable the filesystem watcher
   fs_watch: true
 
@@ -78,8 +80,8 @@ deploy.config:
   # generate the static assets digest
   extra_steps:
     - mix phoenix.digest
-  
-  # just before the new process comes online, 
+
+  # just before the new process comes online,
   # let's migrate the database
   before_live:
     web.main:
@@ -91,7 +93,7 @@ deploy.config:
 # add postgres as a data component
 data.db:
   image: nanobox/postgresql
-  
+
 web.main:
   start: node-start mix phoenix.server
 ```

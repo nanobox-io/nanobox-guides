@@ -2,6 +2,8 @@
 To establish a secure remote connection to your production database, use the Nanobox CLI's [`tunnel` command](https://docs.nanobox.io/cli/tunnel/). This will bind to a local port and establish a secure tunnel to your live PostgreSQL component.
 
 #### Open a Tunnel to PostgreSQL
+Use the ID of the PostgreSQL component in your `boxfile.yml` to establish a tunnel (data.db, data.postgres, etc.).
+
 ```bash
 nanobox tunnel data.postgres
 ```

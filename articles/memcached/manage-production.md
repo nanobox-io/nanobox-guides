@@ -2,6 +2,8 @@
 To establish a secure remote connection to your production component, use the Nanobox CLI's [`tunnel` command](https://docs.nanobox.io/cli/tunnel/). This will bind to a local port and establish a secure tunnel to your live Memcached component.
 
 #### Open a Tunnel to Memcached
+Use the ID of the Memcached component in your `boxfile.yml` to establish a tunnel (data.cache, data.memcached, etc.).
+
 ```bash
 nanobox tunnel data.memcached
 ```
