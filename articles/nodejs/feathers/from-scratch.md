@@ -30,7 +30,7 @@ nanobox run
 npm install -g feathers-cli
 
 # generate the feathers app; follow the prompts to create your application
-feathers generate
+feathers generate app
 
 # exit the yarn console
 exit
