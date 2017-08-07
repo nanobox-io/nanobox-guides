@@ -12,6 +12,7 @@ Specifies which Elixir runtime and version to use. The following runtimes are av
 - elixir-1.1
 - elixir-1.3
 - elixir-1.4
+- elixir-1.5
 
 ```yaml
 run.config:
