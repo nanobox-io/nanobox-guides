@@ -25,7 +25,7 @@ Defines which version of Apache to use in your application. The following versio
 run.config:
   engine: php
   engine.config:
-    apache_version: 2.2
+    apache_version: '2.2'
 ```
 
 #### apache\_document\_root
@@ -35,7 +35,7 @@ The public root of your web application. For instance, if you like to house your
 run.config:
   engine: php
   engine.config:
-    apache_document_root: '/'
+    apache_document_root: public
 ```
 
 #### apache\_index\_list
@@ -57,7 +57,7 @@ When a path is not specified in the url, this files is served. *This is similar 
 run.config:
   engine: php
   engine.config:
-    apache_default_gateway: "index.php"
+    apache_default_gateway: 'index.php'
 ```
 
 #### apache\_php\_interpreter
@@ -182,7 +182,7 @@ The public root of your web application. For instance, if you like to house your
 run.config:
   engine: php
   engine.config:
-    nginx_document_root: '/'
+    nginx_document_root: public
 ```
 
 #### nginx\_index\_list
@@ -218,7 +218,7 @@ The public root of your web application. For instance, if you like to house your
 run.config:
   engine: php
   engine.config:
-    builtin_document_root: '/'
+    builtin_document_root: public
 ```
 
 ## PHP-FPM

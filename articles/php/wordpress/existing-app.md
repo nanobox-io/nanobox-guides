@@ -101,8 +101,8 @@ You can visit your running WordPress app at `wordpress.dev`.
 ## Now What?
 Now that you have WordPress running with Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!
 
-[Importing Data](/php/wordpress/data-storage-management/importing-data)  
-[Importing Uploads](/php/wordpress/data-storage-management/importing-uploads)  
+[Importing Data](/php/wordpress/importing-data)  
+[Importing Uploads](/php/wordpress/importing-uploads)  
 [Installing & Updating Plugins](/php/wordpress/installing-updating-plugins)  
 [Installing & Updating Themes](/php/wordpress/installing-updating-themes)  
 [Deploying Wordpress](/php/wordpress/deploy-wordpress)
