@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Play Applicatin in Docker | Nanobox"
+    description = "Learn how to take an existing Play application and run it using Docker"
+    keywords    = "scala, play production application, manage play application, docker, play on docker, containers"
+    articles    = "scala/play"
+    icons       = "scala,play"
+    id          = "Existing Play App"
+    
+block markdown
+  include:md /articles/scala/play/existing-app.md
