@@ -4,7 +4,7 @@ Environment variables allow your app to run in multiple environments without mod
 
 ### Add
 ```bash
-nanobox evar add local KEY1=VALUE1,KEY2=VALUE2
+nanobox evar add local KEY1=VALUE1 KEY2=VALUE2
 ```
 
 ### Remove

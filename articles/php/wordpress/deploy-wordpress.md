@@ -30,12 +30,27 @@ nanobox remote add app-name
 ### Set Auth Key & Salt Evars
 WordPress uses authentication keys and salts to securely create sessions. If you've updated your wp-config.php to use the configuration specified [here](/php/wordpress//#setup-auth-keys-salts), you'll need to set those environment variables in your production app.
 
-Visit [WordPress' Auth Key and Salt API](https://api.wordpress.org/secret-key/1.1/salt/) to generate random values for each. Pass each key-value pair into your Nanobox app using the following command:
+Visit [WordPress' Auth Key and Salt API](https://api.wordpress.org/secret-key/1.1/salt/) to generate random values for each. Save the content of this page in a file named `evars`. Use the Nanobox CLI to load the environment variables from the `evars` file.
 
+#### ./evars
 <em style="font-size: .8em">This is an example. Be sure to use your own unique values.</em>
 
 ```bash
-nanobox evar add AUTH_KEY='Sl>,5![EPRR:7dQd4/P03$_5Ira$dF,~>' SECURE_AUTH_KEY=':=D;!X(1an~r#B(L.E?_+oAYXoGgjDen1' LOGGED_IN_KEY='4]X]-,`1zjrcvG=WSWE/-2+n%=V^bHB9J' NONCE_KEY='WJVs@}9#s7U,q-}<>07FvxHO3rYJ`u-{p' AUTH_SALT='S$.W{XrI2%adaMysm-<S:e&d!<9E-)N/d' SECURE_AUTH_SALT='_h)+V.XBHXL@@Cc.BG,-At|vS|)_rOJ`H' LOGGED_IN_SALT=';VE`XM9--ih!LJju=c;2|/|6$8ik0u[Me' NONCE_SALT='/fTF;u`(z<$|d nse?HwD1Ih@o[:v=ub|'
+AUTH_KEY="Sl>,5![EPRR:7dQd4/P03$_5Ira$dF,~>"
+SECURE_AUTH_KEY=":=D;!X(1an~r#B(L.E?_+oAYXoGgjDen1"
+LOGGED_IN_KEY="4]X]-,'1zjrcvG=WSWE/-2+n%=V^bHB9J"
+NONCE_KEY="WJVs@}9#s7U,q-}<>07FvxHO3rYJ'u-{p"
+AUTH_SALT="S$.W{XrI2%adaMysm-<S:e&d!<9E-)N/d"
+SECURE_AUTH_SALT="_h)+V.XBHXL@@Cc.BG,-At|vS|)_rOJ'H"
+LOGGED_IN_SALT=";VE'XM9--ih!LJju=c;2|/|6$8ik0u[Me"
+NONCE_SALT="/fTF;u'(z<$|d nse?HwD1Ih@o[:v=ub|"
+```
+
+_**Note:** There are some character and formatting restrictions you should be aware of that are covered in the [`evar` command documentation](https://docs.nanobox.io/cli/evar/#environment-variable-files). Generally, if you wrap all your values in double quotes (_`""`_), you should be ok._
+
+#### Add the Environment Variables
+````
+nanobox evar load ./evars
 ```
 
 ### Deploy to Your App
