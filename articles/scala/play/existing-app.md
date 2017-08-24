@@ -1,13 +1,13 @@
-# Existing Flask App
-Part of what makes Nanobox so useful is you don't even need Python or Flask installed on your local machine to use them.
+# Existing Play App
+Part of what makes Nanobox so useful is you don't even need Scala or Play installed on your local machine to use them.
 
 ## Setup
 
-#### cd into your Flask app
+#### cd into your Play app
 Change into an existing project folder:
 
 ```bash
-cd your-flask-app
+cd your-play-app
 ```
 
 **HEADS UP**: All `nanobox` commands *must* be run from within your project folder.
@@ -15,68 +15,49 @@ cd your-flask-app
 #### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
-At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Python <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Scala <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
-  engine: python
-```
-
-## Configure Flask
-
-#### Install packages via pip
-If you don't already have a requirements.txt file, you'll need to install all of your app's dependencies (including Flask) individually and freeze them like this:
-
-```bash
-# drop into a Nanobox console
-nanobox run
-
-# install pip packages
-pip install Flask
-
-# freeze your dependencies
-pip freeze > requirements.txt
-
-# exit nanobox
-exit
-```
-
-#### Listen on 0.0.0.0
-To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0).
-
-```python
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+  engine: scala
 ```
 
 ## Add a local DNS
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local flask.dev
+nanobox dns add local play.dev
+```
+
+Ensure the custom domain is allowed by adding to the `conf/application.conf`:
+
+```scala
+play.filters.hosts = {
+  allowed = ["play.dev:9000"]
+}
 ```
 
 ## Run the app
-**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/python/flask/add-a-database) before your app will run.
+**HEADS UP**: If your app uses a database, you'll need to [add and configure it](/scala/play/add-a-database) before your app will run.
 
 ```bash
-nanobox run python your-flask-app.py
+nanobox run sbt run
 ```
 
-Visit your app at <a href="http://flask.dev:5000" target="\_blank">flask.dev:5000</a>
+Visit your app at <a href="http://play.dev:9000" target="\_blank">play.dev:9000</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your Flask app:
+With Nanobox, you have everything you need develop and run your Play app:
 
 ```bash
 # drop into a Nanobox console
 nanobox run
 
-# where python is installed,
-python -v
+# where scala is installed,
+scala -version
 
-# your packages are available,
-pip list
+# sbt is available
+sbt help
 
 # and your code is mounted
 ls
@@ -88,7 +69,7 @@ exit
 ## Now what?
 Whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
-* [Add a Database](/python/flask/add-a-database)
-* [Frontend Javascript](/python/flask/frontend-javascript)
-* [Local Environment Variables](/python/flask/local-evars)
-* [Back to Flask overview](/python/flask)
+* [Add a Database](/scala/play/add-a-database)
+* [Frontend Javascript](/scala/play/frontend-javascript)
+* [Local Environment Variables](/scala/play/local-evars)
+* [Back to Play overview](/scala/play)
