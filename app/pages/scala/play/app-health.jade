@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production Play Applications | Nanobox"
+    description = "Monitor a production Play application with live and historical stats"
+    keywords    = "scala, play production application, manage play application, stats, scala stats, play stats, monitor play, play app health"
+    articles    = "scala/play"
+    icons       = "scala,play"
+    id          = "App Health"
+    
+block markdown
+  include:md /articles/shared/app-health.md

@@ -1,0 +1,5 @@
+name: Scala
+icon: scala
+home: /scala
+frameworks:
+  - {href: /scala/play, name: Play, icon: play}

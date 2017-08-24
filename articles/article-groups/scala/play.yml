@@ -1,0 +1,50 @@
+title: Play
+href: /scala/play
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /scala/play/from-scratch, title: Play from Scratch}
+      - {href: /scala/play/existing-app, title: Existing Play App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /scala/play/add-a-database, title: Add a Database}
+      - {href: /scala/play/frontend-javascript, title: Frontend Javascript}
+      - {href: /scala/play/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /scala/play/configure-play, title: Configure Play}
+      - {href: /scala/play/preview-your-app, title: Preview your App}
+      - {href: /scala/play/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /scala/play/point-your-domain, title: Point your Domain}
+      - {href: /scala/play/encryption, title: SSL/TLS Encryption}
+      - {href: /scala/play/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /scala/play/scale-your-app, title: Scale Your App}
+      - {href: /scala/play/debugging, title: Debugging}
+      - {href: /scala/play/app-health, title: App Health}
+      - {href: /scala/play/remote-access, title: Remote Access}
+      - {href: /scala/play/team-management, title: Team Management}
+      - {href: /scala/play/manage-platform, title: Manage Platform}
+
+  #
+  # - title: "Advanced"
+    # articles:
+      # - {href: /scala/play/configure-scala, title: Configure Play}
+      # - {href: /scala/play/pip, title: Pip}
+      # - {href: /scala/play/scale-your-app, title: Make Play scream}
+      # - {href: /scala/play/scale-your-app, title: New Relic}

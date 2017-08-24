@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Play Application from Scratch | Nanobox"
+    description = "Learn how to create a new Play application and local development environment"
+    keywords    = "scala, play application, play application, scala dev environment, dev environment, play dev environemnt, play dev, docker, containers"
+    articles    = "scala/play"
+    icons       = "scala,play"
+    id          = "Play from Scratch"
+    
+block markdown
+  include:md /articles/scala/play/from-scratch.md
