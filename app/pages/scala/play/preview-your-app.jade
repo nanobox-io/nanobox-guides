@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Play application | Nanobox"
+    description = "Easily stage a Play application before deplying to production"
+    keywords    = "scala, play production application, manage play application, test play application, stage play application"
+    articles    = "scala/play"
+    icons       = "scala,play"
+    id          = "Preview your App"
+    
+block markdown
+  include:md /articles/scala/play/preview-your-app.md

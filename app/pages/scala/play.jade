@@ -1,0 +1,23 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Play App | Nanobox"
+    description  = "Learn how to setup a Play development environment and configure it to deploy to production."
+    keywords     = "play, play framework, scala frameworks, play config, play development environment, play production app, play app, deploy play, create play app, config play app"
+    formalName   = "Play"
+    informalName = "play"
+    icon         = "play"
+    iconCrumbs   = "scala,play"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Scala', icon:'scala', href:'#'},
+      {name:'Postgres', icon:'postgres', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    articleGroups = "scala/play"

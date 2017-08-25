@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Scala Versions | Nanobox"
+    description = "How to update or change scala versions in development and production environments"
+    keywords    = "scala, play production application, manage play application, configure play, production play, play in production, scala version, manage scala versions"
+    articles    = "scala/play"
+    icons       = "scala,play"
+    id          = "Configure Scala"
+    
+block markdown
+  include:md /articles/scala/config.md
