@@ -7,7 +7,7 @@ run.config:
   engine: golang
   config:
     package: 'github.com/username/code'
-    runtime: go-1.6
+    runtime: go-1.8
     fetch: 'go get'
     build: 'go build'
 ```
@@ -28,13 +28,15 @@ Specifies which Golang runtime to use. The following runtimes are available:
 - go-1.4
 - go-1.5
 - go-1.6
-- go-1.7 *(default)*
+- go-1.7
+- go-1.8 *(default)*
+- go-1.9
 
 ```yaml
 run.config:
   engine: golang
   config:
-    runtime: go-1.7
+    runtime: go-1.8
 ```
 
 #### fetch
