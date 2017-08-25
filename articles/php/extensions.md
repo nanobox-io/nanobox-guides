@@ -143,6 +143,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | tidy           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | timezonedb     | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | tokenizer      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| trader         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | txforward      | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
 | uploadprogress | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
 | wddx           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |

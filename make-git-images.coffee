@@ -74,6 +74,7 @@ generatedIcons = [
 # Add new icons to generate here:
 newIcons = [
   # ex : {icon:'rails', title:'Ruby on Rails'}
+  {icon:'play', title:'Play'}
 ]
 
 horseman = new Horseman( {phantomPath:phantomjs.path} )
