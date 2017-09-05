@@ -10,6 +10,7 @@ frameworks:
   - {href: /nodejs/feathers, name: Feathers, icon: feathers, devMode: true}
   - {href: /nodejs/done, name: DoneJS, icon: donejs, devMode: true}
   - {href: /nodejs/koa, name: Koa, icon: koa, devMode: true}
+  - {href: /nodejs/moleculer, name: Moleculer, icon: moleculer, devMode: true}
   # - {href: /nodejs/horizon, name: Horizon, icon: horizon, devMode: true}
   # - {href: /nodejs/keystonejs, name: KeystoneJS, icon: keystonejs, devMode: true}
   # - {href: /nodejs/totaljs, name: Total.js, icon: totaljs, devMode: true}

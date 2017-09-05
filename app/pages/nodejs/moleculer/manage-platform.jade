@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Moleculer Application | Nanobox"
+    description = "Manage a Moleculer application's logs, traffic, health, and storage"
+    keywords    = "nodejs, moleculer production application, manage moleculer application, monitor moleculer, moleculer logging, load balancer, moleculer monitoring, production logs"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

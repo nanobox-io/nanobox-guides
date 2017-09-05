@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Moleculer Packages with Yarn & NPM | Nanobox"
+    description = "How to manage Moleculer application dependencies with Yarn & NPM"
+    keywords    = "nodejs, moleculer application, manage moleculer application, yarn, npm, moleculer yarn, moleculer npm, nodejs yarn, nodejs npm"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Yarn & NPM"
+    
+block markdown
+  include:md /articles/nodejs/npm.md

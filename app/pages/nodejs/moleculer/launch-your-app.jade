@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Moleculer Application to Production | Nanobox"
+    description = "Learn how to deploy a Moleculer application to production servers"
+    keywords    = "nodejs, moleculer production application, manage moleculer application, deploy moleculer, launch moleculer, moleculer in production, moleculer production servers"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/nodejs/moleculer/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

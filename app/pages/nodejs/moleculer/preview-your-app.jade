@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Moleculer application | Nanobox"
+    description = "Easily stage a Moleculer application before deplying to production"
+    keywords    = "nodejs, moleculer production application, manage moleculer application, test moleculer application, stage moleculer application"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Preview your App"
+    
+block markdown
+  include:md /articles/nodejs/moleculer/preview-your-app.md

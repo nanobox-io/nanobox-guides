@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Production Moleculer Application | Nanobox"
+    description = "Learn how to add environment variable to a production Moleculer application"
+    keywords    = "nodejs, moleculer production application, manage moleculer application, moleculer environment variables, environment variables"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Environment Variables"
+    
+block markdown
+  include:md /articles/shared/production-evars.md

@@ -1,0 +1,47 @@
+title: Moleculer
+href: /nodejs/moleculer
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/moleculer/from-scratch, title: Moleculer from Scratch}
+      - {href: /nodejs/moleculer/existing-app, title: Existing Moleculer App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /nodejs/moleculer/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /nodejs/moleculer/configure-moleculer, title: Configure Moleculer}
+      - {href: /nodejs/moleculer/preview-your-app, title: Preview your App}
+      - {href: /nodejs/moleculer/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /nodejs/moleculer/point-your-domain, title: Point your Domain}
+      - {href: /nodejs/moleculer/encryption, title: SSL/TLS Encryption}
+      - {href: /nodejs/moleculer/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /nodejs/moleculer/scale-your-app, title: Scale Your App}
+      - {href: /nodejs/moleculer/debugging, title: Debugging}
+      - {href: /nodejs/moleculer/app-health, title: App Health}
+      - {href: /nodejs/moleculer/remote-access, title: Remote Access}
+      - {href: /nodejs/moleculer/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /nodejs/moleculer/configure-nodejs, title: Configure Nodejs}
+      - {href: /nodejs/moleculer/npm, title: Yarn & NPM}
+      # - {href: /nodejs/moleculer/scale-your-app, title: Make Moleculer scream}
+      # - {href: /nodejs/moleculer/scale-your-app, title: New Relic}

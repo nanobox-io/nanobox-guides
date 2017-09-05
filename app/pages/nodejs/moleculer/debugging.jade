@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Moleculer Application in Production | Nanobox"
+    description = "Learn how to debug a production Moleculer application"
+    keywords    = "nodejs, moleculer production application, manage moleculer application, moleculer logging, moleculer monitoring, debug moleculer, debugging moleculer"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md
