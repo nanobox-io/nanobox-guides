@@ -38,7 +38,6 @@ articles:
       - {href: /php/nette/debugging, title: Debugging}
       - {href: /php/nette/app-health, title: App Health}
       - {href: /php/nette/remote-access, title: Remote Access}
-      - {href: /php/nette/team-management, title: Team Management}
       - {href: /php/nette/manage-platform, title: Manage Platform}
 
   #

@@ -38,7 +38,6 @@ articles:
       - {href: /scala/play/debugging, title: Debugging}
       - {href: /scala/play/app-health, title: App Health}
       - {href: /scala/play/remote-access, title: Remote Access}
-      - {href: /scala/play/team-management, title: Team Management}
       - {href: /scala/play/manage-platform, title: Manage Platform}
 
   #

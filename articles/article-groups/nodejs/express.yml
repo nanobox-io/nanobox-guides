@@ -38,13 +38,12 @@ articles:
       - {href: /nodejs/express/debugging, title: Debugging}
       - {href: /nodejs/express/app-health, title: App Health}
       - {href: /nodejs/express/remote-access, title: Remote Access}
-      - {href: /nodejs/express/team-management, title: Team Management}
       - {href: /nodejs/express/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
       - {href: /nodejs/express/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/express/npm, title: Yarn &amp; NPM}
+      - {href: /nodejs/express/yarn-npm, title: Yarn & NPM}
       # - {href: /nodejs/express/scale-your-app, title: Make Express scream}
       # - {href: /nodejs/express/scale-your-app, title: New Relic}

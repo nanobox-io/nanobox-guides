@@ -38,7 +38,6 @@ articles:
       - {href: /elixir/phoenix/debugging, title: Debugging}
       - {href: /elixir/phoenix/app-health, title: App Health}
       - {href: /elixir/phoenix/remote-access, title: Remote Access}
-      - {href: /elixir/phoenix/team-management, title: Team Management}
       - {href: /elixir/phoenix/manage-platform, title: Manage Platform}
 
   #

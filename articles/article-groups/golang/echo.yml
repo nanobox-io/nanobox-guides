@@ -33,5 +33,4 @@ articles:
       - {href: /golang/echo/debugging, title: Debugging}
       - {href: /golang/echo/app-health, title: App Health}
       - {href: /golang/echo/remote-access, title: Remote Access}
-      - {href: /golang/echo/team-management, title: Team Management}
       - {href: /golang/echo/manage-platform, title: Manage Platform}

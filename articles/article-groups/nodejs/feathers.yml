@@ -38,13 +38,12 @@ articles:
       - {href: /nodejs/feathers/debugging, title: Debugging}
       - {href: /nodejs/feathers/app-health, title: App Health}
       - {href: /nodejs/feathers/remote-access, title: Remote Access}
-      - {href: /nodejs/feathers/team-management, title: Team Management}
       - {href: /nodejs/feathers/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
       - {href: /nodejs/feathers/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/feathers/npm, title: Yarn &amp; NPM}
+      - {href: /nodejs/feathers/yarn-npm, title: Yarn & NPM}
       # - {href: /nodejs/feathers/scale-your-app, title: Make Feathers scream}
       # - {href: /nodejs/feathers/scale-your-app, title: New Relic}

@@ -33,5 +33,4 @@ articles:
       - {href: /golang/iris/debugging, title: Debugging}
       - {href: /golang/iris/app-health, title: App Health}
       - {href: /golang/iris/remote-access, title: Remote Access}
-      - {href: /golang/iris/team-management, title: Team Management}
       - {href: /golang/iris/manage-platform, title: Manage Platform}

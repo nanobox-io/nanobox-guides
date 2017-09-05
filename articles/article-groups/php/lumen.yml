@@ -38,7 +38,6 @@ articles:
       - {href: /php/lumen/debugging, title: Debugging}
       - {href: /php/lumen/app-health, title: App Health}
       - {href: /php/lumen/remote-access, title: Remote Access}
-      - {href: /php/lumen/team-management, title: Team Management}
       - {href: /php/lumen/manage-platform, title: Manage Platform}
 
   #

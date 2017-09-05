@@ -38,13 +38,12 @@ articles:
       - {href: /nodejs/koa/debugging, title: Debugging}
       - {href: /nodejs/koa/app-health, title: App Health}
       - {href: /nodejs/koa/remote-access, title: Remote Access}
-      - {href: /nodejs/koa/team-management, title: Team Management}
       - {href: /nodejs/koa/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
       - {href: /nodejs/koa/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/koa/npm, title: Yarn &amp; NPM}
+      - {href: /nodejs/koa/yarn-npm, title: Yarn & NPM}
       # - {href: /nodejs/koa/scale-your-app, title: Make Koa scream}
       # - {href: /nodejs/koa/scale-your-app, title: New Relic}

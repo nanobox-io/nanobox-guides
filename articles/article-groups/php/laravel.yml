@@ -38,7 +38,6 @@ articles:
       - {href: /php/laravel/debugging, title: Debugging}
       - {href: /php/laravel/app-health, title: App Health}
       - {href: /php/laravel/remote-access, title: Remote Access}
-      - {href: /php/laravel/team-management, title: Team Management}
       - {href: /php/laravel/manage-platform, title: Manage Platform}
 
   #

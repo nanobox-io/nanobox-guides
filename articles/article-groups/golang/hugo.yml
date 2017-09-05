@@ -30,5 +30,4 @@ articles:
       - {href: /golang/hugo/debugging, title: Debugging}
       - {href: /golang/hugo/app-health, title: App Health}
       - {href: /golang/hugo/remote-access, title: Remote Access}
-      - {href: /golang/hugo/team-management, title: Team Management}
       - {href: /golang/hugo/manage-platform, title: Manage Platform}

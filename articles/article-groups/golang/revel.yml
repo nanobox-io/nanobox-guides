@@ -33,5 +33,4 @@ articles:
       - {href: /golang/revel/debugging, title: Debugging}
       - {href: /golang/revel/app-health, title: App Health}
       - {href: /golang/revel/remote-access, title: Remote Access}
-      - {href: /golang/revel/team-management, title: Team Management}
       - {href: /golang/revel/manage-platform, title: Manage Platform}

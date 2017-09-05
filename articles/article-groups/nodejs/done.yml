@@ -38,13 +38,12 @@ articles:
       - {href: /nodejs/done/debugging, title: Debugging}
       - {href: /nodejs/done/app-health, title: App Health}
       - {href: /nodejs/done/remote-access, title: Remote Access}
-      - {href: /nodejs/done/team-management, title: Team Management}
       - {href: /nodejs/done/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
       - {href: /nodejs/done/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/done/npm, title: Yarn &amp; NPM}
+      - {href: /nodejs/done/yarn-npm, title: Yarn & NPM}
       # - {href: /nodejs/done/scale-your-app, title: Make DoneJS scream}
       # - {href: /nodejs/done/scale-your-app, title: New Relic}

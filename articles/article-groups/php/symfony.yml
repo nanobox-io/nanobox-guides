@@ -38,7 +38,6 @@ articles:
       - {href: /php/symfony/debugging, title: Debugging}
       - {href: /php/symfony/app-health, title: App Health}
       - {href: /php/symfony/remote-access, title: Remote Access}
-      - {href: /php/symfony/team-management, title: Team Management}
       - {href: /php/symfony/manage-platform, title: Manage Platform}
 
   #

@@ -38,11 +38,10 @@ articles:
       - {href: /nodejs/generic/debugging, title: Debugging}
       - {href: /nodejs/generic/app-health, title: App Health}
       - {href: /nodejs/generic/remote-access, title: Remote Access}
-      - {href: /nodejs/generic/team-management, title: Team Management}
       - {href: /nodejs/generic/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
       - {href: /nodejs/generic/configure-nodejs, title: Configure Node}
-      - {href: /nodejs/generic/npm, title: Yarn &amp; NPM}
+      - {href: /nodejs/generic/yarn-npm, title: Yarn & NPM}

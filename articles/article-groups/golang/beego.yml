@@ -33,5 +33,4 @@ articles:
       - {href: /golang/beego/debugging, title: Debugging}
       - {href: /golang/beego/app-health, title: App Health}
       - {href: /golang/beego/remote-access, title: Remote Access}
-      - {href: /golang/beego/team-management, title: Team Management}
       - {href: /golang/beego/manage-platform, title: Manage Platform}

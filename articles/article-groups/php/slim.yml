@@ -38,7 +38,6 @@ articles:
       - {href: /php/slim/debugging, title: Debugging}
       - {href: /php/slim/app-health, title: App Health}
       - {href: /php/slim/remote-access, title: Remote Access}
-      - {href: /php/slim/team-management, title: Team Management}
       - {href: /php/slim/manage-platform, title: Manage Platform}
 
   #

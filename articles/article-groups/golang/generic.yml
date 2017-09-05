@@ -38,7 +38,6 @@ articles:
       - {href: /golang/generic/debugging, title: Debugging}
       - {href: /golang/generic/app-health, title: App Health}
       - {href: /golang/generic/remote-access, title: Remote Access}
-      - {href: /golang/generic/team-management, title: Team Management}
       - {href: /golang/generic/manage-platform, title: Manage Platform}
 
   #

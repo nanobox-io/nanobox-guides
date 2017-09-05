@@ -38,7 +38,6 @@ articles:
       - {href: /php/generic/debugging, title: Debugging}
       - {href: /php/generic/app-health, title: App Health}
       - {href: /php/generic/remote-access, title: Remote Access}
-      - {href: /php/generic/team-management, title: Team Management}
       - {href: /php/generic/manage-platform, title: Manage Platform}
 
   #

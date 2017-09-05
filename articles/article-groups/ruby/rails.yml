@@ -38,7 +38,6 @@ articles:
       - {href: /ruby/rails/debugging, title: Debugging}
       - {href: /ruby/rails/app-health, title: App Health}
       - {href: /ruby/rails/remote-access, title: Remote Access}
-      - {href: /ruby/rails/team-management, title: Team Management}
       - {href: /ruby/rails/manage-platform, title: Manage Platform}
 
   #

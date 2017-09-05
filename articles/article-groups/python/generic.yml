@@ -38,7 +38,6 @@ articles:
       - {href: /python/generic/debugging, title: Debugging}
       - {href: /python/generic/app-health, title: App Health}
       - {href: /python/generic/remote-access, title: Remote Access}
-      - {href: /python/generic/team-management, title: Team Management}
       - {href: /python/generic/manage-platform, title: Manage Platform}
 
   #

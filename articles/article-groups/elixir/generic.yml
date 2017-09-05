@@ -38,7 +38,6 @@ articles:
       - {href: /elixir/generic/debugging, title: Debugging}
       - {href: /elixir/generic/app-health, title: App Health}
       - {href: /elixir/generic/remote-access, title: Remote Access}
-      - {href: /elixir/generic/team-management, title: Team Management}
       - {href: /elixir/generic/manage-platform, title: Manage Platform}
 
   #

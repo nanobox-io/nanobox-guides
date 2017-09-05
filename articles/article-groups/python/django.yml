@@ -38,7 +38,6 @@ articles:
       - {href: /python/django/debugging, title: Debugging}
       - {href: /python/django/app-health, title: App Health}
       - {href: /python/django/remote-access, title: Remote Access}
-      - {href: /python/django/team-management, title: Team Management}
       - {href: /python/django/manage-platform, title: Manage Platform}
 
   #

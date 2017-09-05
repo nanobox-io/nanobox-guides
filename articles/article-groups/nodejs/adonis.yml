@@ -38,13 +38,12 @@ articles:
       - {href: /nodejs/adonis/debugging, title: Debugging}
       - {href: /nodejs/adonis/app-health, title: App Health}
       - {href: /nodejs/adonis/remote-access, title: Remote Access}
-      - {href: /nodejs/adonis/team-management, title: Team Management}
       - {href: /nodejs/adonis/manage-platform, title: Manage Platform}
 
   #
   - title: "Advanced"
     articles:
       - {href: /nodejs/adonis/configure-nodejs, title: Configure Nodejs}
-      - {href: /nodejs/adonis/npm, title: Yarn &amp; NPM}
+      - {href: /nodejs/adonis/yarn-npm, title: Yarn & NPM}
       # - {href: /nodejs/adonis/scale-your-app, title: Make Adonis scream}
       # - {href: /nodejs/adonis/scale-your-app, title: New Relic}

@@ -38,7 +38,6 @@ articles:
       - {href: /php/phalcon/debugging, title: Debugging}
       - {href: /php/phalcon/app-health, title: App Health}
       - {href: /php/phalcon/remote-access, title: Remote Access}
-      - {href: /php/phalcon/team-management, title: Team Management}
       - {href: /php/phalcon/manage-platform, title: Manage Platform}
 
   #

@@ -38,7 +38,6 @@ articles:
       - {href: /ruby/generic/debugging, title: Debugging}
       - {href: /ruby/generic/app-health, title: App Health}
       - {href: /ruby/generic/remote-access, title: Remote Access}
-      - {href: /ruby/generic/team-management, title: Team Management}
       - {href: /ruby/generic/manage-platform, title: Manage Platform}
 
   #

@@ -33,5 +33,4 @@ articles:
       - {href: /golang/gin/debugging, title: Debugging}
       - {href: /golang/gin/app-health, title: App Health}
       - {href: /golang/gin/remote-access, title: Remote Access}
-      - {href: /golang/gin/team-management, title: Team Management}
       - {href: /golang/gin/manage-platform, title: Manage Platform}
