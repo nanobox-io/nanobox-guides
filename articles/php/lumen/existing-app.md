@@ -40,7 +40,9 @@ run.config:
       - pdo
       - mbstring
       - tokenizer
-      - zip
+      - xml
+      - xmlwriter
+      - zip      
 ```
 
 The full list of available extensions can be found [here](/php/lumen/php-extensions)
