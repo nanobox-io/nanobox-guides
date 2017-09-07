@@ -43,5 +43,3 @@ articles:
     articles:
       - {href: /nodejs/moleculer/configure-nodejs, title: Configure Nodejs}
       - {href: /nodejs/moleculer/npm, title: Yarn & NPM}
-      # - {href: /nodejs/moleculer/scale-your-app, title: Make Moleculer scream}
-      # - {href: /nodejs/moleculer/scale-your-app, title: New Relic}
