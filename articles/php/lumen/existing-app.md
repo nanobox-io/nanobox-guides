@@ -36,8 +36,10 @@ Your app may need specific php extensions to function properly. You can include 
 run.config:
   engine.config:
     extensions:
+      - dom
       - pdo
       - mbstring
+      - tokenizer
       - zip
 ```
 
