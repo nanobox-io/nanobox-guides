@@ -27,8 +27,12 @@ run.config:
     document_root: public
     # enables php extensions
     extensions:
+      - dom
       - pdo
       - mbstring
+      - tokenizer
+      - xml
+      - xmlwriter
       - zip
 ```
 
