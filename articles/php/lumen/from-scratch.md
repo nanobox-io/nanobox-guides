@@ -29,6 +29,7 @@ run.config:
     extensions:
       - pdo
       - mbstring
+      - zip
 ```
 
 ## Generate a Lumen App
