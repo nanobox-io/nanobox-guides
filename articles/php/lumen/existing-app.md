@@ -36,7 +36,9 @@ Your app may need specific php extensions to function properly. You can include 
 run.config:
   engine.config:
     extensions:
-      - EXTENSION
+      - pdo
+      - mbstring
+      - zip
 ```
 
 The full list of available extensions can be found [here](/php/lumen/php-extensions)
