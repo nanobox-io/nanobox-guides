@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Nodejs Versions | Nanobox"
+    description = "How to update or change nodejs versions in development and production environments"
+    keywords    = "nodejs, moleculer production application, manage moleculer application, configure moleculer, production moleculer, moleculer in production, nodejs version, manage nodejs versions"
+    articles    = "nodejs/moleculer"
+    icons       = "nodejs,moleculer"
+    id          = "Configure Nodejs"
+    
+block markdown
+  include:md /articles/nodejs/config.md

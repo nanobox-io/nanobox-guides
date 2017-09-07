@@ -1,0 +1,27 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Moleculer App | Nanobox"
+    description  = "Learn how to setup a Moleculer development environment and configure it to deploy to production."
+    keywords     = "moleculer, moleculer framework, node js frameworks, moleculer config, moleculer development environment, moleculer production app, moleculer app, deploy moleculer, create moleculer app, config moleculer app"
+    formalName   = "Moleculer"
+    informalName = "Moleculer"
+    icon         = "moleculer"
+    iconCrumbs   = "node,moleculer"
+    noQuickstart = true
+    //- launchTime   = "12"
+    
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'Nodejs', icon:'node', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'Postgres', icon:'postgres', href:'#'},
+      {name:'MongoDB', icon:'mongo', href:'#'}
+    ]
+    articleGroups = "nodejs/moleculer"

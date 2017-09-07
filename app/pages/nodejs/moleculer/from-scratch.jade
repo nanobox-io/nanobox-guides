@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Moleculer Application from Scratch | Nanobox"
+    description = "Learn how to create a new Moleculer application and local development environment"
+    keywords    = "nodejs, moleculer application, moleculer application, nodejs dev environment, dev environment, moleculer dev environemnt, moleculer dev, docker, containers"
+    articles    = "nodejs/moleculer"
+    icons       = "node,moleculer"
+    id          = "Moleculer from Scratch"
+    
+block markdown
+  include:md /articles/nodejs/moleculer/from-scratch.md
