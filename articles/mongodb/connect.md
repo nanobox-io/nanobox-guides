@@ -10,9 +10,7 @@ In your app's connection to MongoDB, use the auto-generated environment variable
 
 client_host = [ENV['DATA_MONGODB_HOST']+':27017']
 client_options = {
-  database: 'gonano',
-  user:     ENV['DATA_MONGODB_USER'],
-  password: ENV['DATA_MONGODB_PASS']
+  database: 'gonano'
 }
 ```
 
