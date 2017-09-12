@@ -42,7 +42,7 @@ http {
 
     # Proxy upstream to the node process
     upstream feathers {
-        server 127.0.0.1:1337;
+        server 127.0.0.1:3030;
     }
 
     # Configuration for Nginx
@@ -76,7 +76,7 @@ You can have as many web components as your app needs by simply adding them to y
 web.main:
   start:
     nginx: nginx -c /app/config/nginx.conf
-    feathers: feathers lift
+    feathers: yarn start
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
