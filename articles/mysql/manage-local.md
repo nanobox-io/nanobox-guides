@@ -1,5 +1,5 @@
 # Managing Local Data
-When working in your local Nanobox environment, your PostgreSQL component is given it's own virtual IP and port to which you can connect. To view these credentials, use the Nanobox CLI's `info` command.
+When working in your local Nanobox environment, your MySQL component is given it's own virtual IP and port to which you can connect. To view these credentials, use the Nanobox CLI's `info` command.
 
 ```bash
 # View local app/component info
@@ -17,7 +17,7 @@ data.mysql
 ```
 
 ## Use Your Client of Choice to Connect
-Use the IP of your PostgreSQL component with either the root or nanobox user/password provided in the info output to connect with your MySQL client or GUI of choice.
+Use the IP of your MySQL component with either the root or nanobox user/password provided in the info output to connect with your MySQL client or GUI of choice.
 
 Other credentials you may need to establish the connection:
 
