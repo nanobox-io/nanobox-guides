@@ -34,6 +34,34 @@ data.mysql:
     ft_min_word_len: 4
     ft_query_expansion_limit: 20
     ft_stopword_file: ' '
+    users:
+      - username: root
+        meta:
+          privileges:
+            - privilege: ALL PRIVILEGES
+              'on': "*.*"
+              with_grant: true
+      - username: nanobox
+        meta:
+          privileges:
+            - privilege: ALL PRIVILEGES
+              'on': gonano.*
+              with_grant: true
+            - privilege: ALL PRIVILEGES
+              'on': testing.*
+              with_grant: true
+            - privilege: ALL PRIVILEGES
+              'on': blah.*
+              with_grant: true
+            - privilege: PROCESS
+              'on': "*.*"
+              with_grant: false
+            - privilege: SUPER
+              'on': "*.*"
+              with_grant: false
+          databases:
+            - gonano
+            - testing
 ```  
 
 ### MySQL Version
@@ -238,6 +266,70 @@ data.mysql:
   image: nanobox/mysql
   config:
     ft_stopword_file: ' '
+```
+
+### Custom Users/Permissions/Databases
+You can create custom users with custom permissions as well as additional databases.
+
+```yaml
+data.mysql:
+  image: nanobox/mysql
+  config:
+    users:
+      - username: root
+        meta:
+          privileges:
+            - privilege: ALL PRIVILEGES
+              'on': "*.*"
+              with_grant: true
+      - username: nanobox
+        meta:
+          privileges:
+            - privilege: ALL PRIVILEGES
+              'on': gonano.*
+              with_grant: true
+            - privilege: ALL PRIVILEGES
+              'on': testing.*
+              with_grant: true
+            - privilege: ALL PRIVILEGES
+              'on': blah.*
+              with_grant: true
+            - privilege: PROCESS
+              'on': "*.*"
+              with_grant: false
+            - privilege: SUPER
+              'on': "*.*"
+              with_grant: false
+          databases:
+          - gonano
+          - testing
+```
+
+For each custom user specified, Nanobox will generate an environment variable for the user's password using the following pattern:
+
+```yaml
+# Pattern
+COMPONENT_ID_USERNAME_PASS
+
+# Examples
+
+## Custom user config 1
+data.mysql:
+  config:
+    users:
+      - username: myuser
+
+## Generated password evar 1
+DATA_MYSQL_MYUSER_PASS
+
+## Custom user config 2
+data.db:
+  config:
+    users:
+      - username: dbuser
+
+## Generated password evar 2
+DATA_DB_DBUSER_PASS
 ```
 
 ### Request MySQL boxfile.yml Configs

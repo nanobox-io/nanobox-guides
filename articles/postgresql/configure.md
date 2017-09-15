@@ -24,7 +24,57 @@ You should append the Postgres version number to your `image` with a `:`. The fo
 
 ```yaml
 data.db:
-  image: nanobox/postgresql:9.4
+  image: nanobox/postgresql:9.5
+```
+
+### Custom Users/Permissions/Databases
+You can create custom users with custom permissions as well as additional databases.
+
+```yaml
+data.postgresql:
+  image: nanobox/postgresql:9.5
+  config:
+    users:
+    - username: customuser
+      meta:
+        privileges:
+        - privilege: ALL PRIVILEGES
+          type: DATABASE
+          'on': gonano
+          grant: true
+        - privilege: ALL PRIVILEGES
+          type: DATABASE
+          'on': customdb
+          grant: true
+        roles:
+        - SUPERUSER
+```
+
+For each custom user specified, Nanobox will generate an environment variable for the user's password using the following pattern:
+
+```yaml
+# Pattern
+COMPONENT_ID_USERNAME_PASS
+
+# Examples
+
+## Custom user config 1
+data.postgres:
+  config:
+    users:
+      - username: customuser
+
+## Generated password evar 1
+DATA_POSTGRES_CUSTOMUSER_PASS
+
+## Custom user config 2
+data.db:
+  config:
+    users:
+      - username: dbuser
+
+## Generated password evar 2
+DATA_DB_DBUSER_PASS
 ```
 
 ### Request PostgreSQL boxfile.yml Configs
