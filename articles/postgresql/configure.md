@@ -19,6 +19,7 @@ You should append the Postgres version number to your `image` with a `:`. The fo
 - 9.3
 - 9.4
 - 9.5
+- 9.6
 
 **Note:** PostgreSQL versions cannot be changed after the service is created. To use a different version, you'll have to create a new PostgreSQL component and manually migrate data.
 

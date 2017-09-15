@@ -14,7 +14,7 @@ When config changes are made to a production database, a new node is provisioned
 ## Config Options
 ```yaml
 data.db:
-  image: nanobox/mongodb:3.0
+  image: nanobox/mongodb:3.2
   config:
     objcheck: true
     log_verbosity: 'v'
@@ -29,12 +29,14 @@ You should append the MongoDB version number to your `image` with a `:`. The fol
 
 - 2.6
 - 3.0
+- 3.2
+- 3.4
 
 **Note:** Due to version compatibility constraints, MongoDB versions cannot be changed after the service is created. To use a different version, you'll have to create a new MongoDB service and manually migrate data.
 
 ```yaml
 data.db:
-  image: nanobox/mongodb:3.0
+  image: nanobox/mongodb:3.2
 ```
 
 ### objcheck
