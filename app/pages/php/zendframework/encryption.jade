@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Zend Framework Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Zend Framework production application"
+    keywords    = "php, zend framework production application, manage zend framework application, ssl, tls, encryption"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "SSL/TLS Encryption"
+    
+block markdown
+  include:md /articles/shared/encryption.md

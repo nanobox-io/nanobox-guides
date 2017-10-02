@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing PHP Extensions with Composer | Nanobox"
+    description = "How to manage Yii application dependencies with Composer"
+    keywords    = "php, yii application, manage yii application, composer, yii composer, php composer"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Composer"
+    
+block markdown
+  include:md /articles/php/composer.md

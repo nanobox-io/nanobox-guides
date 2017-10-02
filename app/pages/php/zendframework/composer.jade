@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing PHP Extensions with Composer | Nanobox"
+    description = "How to manage Zend Framework application dependencies with Composer"
+    keywords    = "php, zend framework application, manage zend framework application, composer, zend framework composer, php composer"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Composer"
+    
+block markdown
+  include:md /articles/php/composer.md

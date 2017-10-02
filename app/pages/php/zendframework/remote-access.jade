@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Remote Access to Zend Framework Applications | Nanobox"
+    description = "Securely manage running Zend Framework application with SSH remote access"
+    keywords    = "php, zend framework production application, manage zend framework application, ssh access, remote access, server management, secure access"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Remote Access"
+    
+block markdown
+  include:md /articles/shared/remote-access.md

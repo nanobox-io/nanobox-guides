@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Yii Application in Docker | Nanobox"
+    description = "Learn how to take an existing Yii application and run it using Docker"
+    keywords    = "php, yii production application, manage yii application, docker, yii on docker, containers"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Existing Yii App"
+    
+block markdown
+  include:md /articles/php/yii/existing-app.md

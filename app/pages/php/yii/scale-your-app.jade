@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Yii Applications | Nanobox"
+    description = "Easily scale production Yii applications with zero downtime"
+    keywords    = "php, yii production application, manage yii application, scale yii application, zero downtime"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Scale your App"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

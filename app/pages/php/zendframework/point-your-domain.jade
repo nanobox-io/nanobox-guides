@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Zend Framework Application | Nanobox"
+    description = "How to point an existing domain name to a Zend Framework application"
+    keywords    = "php, zend framework production application, manage zend framework application, point dns, add dns, domain, domin pointing, point domain"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

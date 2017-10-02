@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Zend Framework Application from Scratch | Nanobox"
+    description = "Learn how to create a new Zend Framework application and local development environment"
+    keywords    = "php, zend framework application, zend framework application, php dev environment, dev environment, zend framework dev environemnt, zend framework dev, docker, containers"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Zend Framework from Scratch"
+    
+block markdown
+  include:md /articles/php/zendframework/from-scratch.md

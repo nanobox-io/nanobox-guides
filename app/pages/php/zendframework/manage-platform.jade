@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Zend Framework Application | Nanobox"
+    description = "Manage a Zend Framework application's logs, traffic, health, and storage"
+    keywords    = "php, zend framework production application, manage zend framework application, monitor zend framework, zend framework logging, load balancer, zend framework monitoring, production logs"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

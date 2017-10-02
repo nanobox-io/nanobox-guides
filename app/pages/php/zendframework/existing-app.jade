@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Zend Framework Application in Docker | Nanobox"
+    description = "Learn how to take an existing Zend Framework application and run it using Docker"
+    keywords    = "php, zend framework production application, manage zend framework application, docker, zend framework on docker, containers"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Existing Zend Framework App"
+    
+block markdown
+  include:md /articles/php/zendframework/existing-app.md

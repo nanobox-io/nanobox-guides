@@ -1,0 +1,27 @@
+extends /app/pages/templates/framework-landing  
+
+block configParams
+  -
+    title        = "Create and Deploy a Production Yii App | Nanobox"
+    description  = "Learn how to setup a Yii development environment and configure it to deploy to production."
+    keywords     = "yii, yii framework, php frameworks, yii config, yii development environment, yii production app, yii app, deploy yii, create yii app, config yii app"
+    formalName   = "Yii"
+    informalName = "yii"
+    icon         = "yii"
+    iconCrumbs   = "php,yii"
+
+block jsParams
+  script.
+    //- This is javascript
+    requiredComponents = [
+      {name:'PHP', icon:'php', href:'#'},
+      {name:'MySQL', icon:'mysql', href:'#'},
+      {name:'Storage', icon:'storage', href:'#'}
+    ]
+    optionalComponents = [
+      {name:'PostgreSQL', icon:'postgres', href:'#'},
+      {name:'Mongo DB', icon:'mongo', href:'#'},
+      {name:'Redis', icon:'redis', href:'#'},
+      {name:'Memcached', icon:'memcached', href:'#'}
+    ]
+    articleGroups = "php/yii"

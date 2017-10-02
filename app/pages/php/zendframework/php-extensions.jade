@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Zend Framework PHP Application Extensions | Nanobox"
+    description = "Find out what PHP Extentions are available for Zend Framework PHP"
+    keywords    = "php, zend framework production application, manage zend framework application, php extentions, zend framework php extensions"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "PHP Extensions"
+    
+block markdown
+  include:md /articles/php/extensions.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Apache and Nginx for Yii PHP | Nanobox"
+    description = "How to configure Apache and Nginx to run Yii PHP in production"
+    keywords    = "php, yii production application, manage yii application, nginx, apache, nginx php, apache php, yii php nginx, yii php apache"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Webserver Config"
+    
+block markdown
+  include:md /articles/php/webserver-config.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage a Zend Framework application | Nanobox"
+    description = "Easily stage a Zend Framework application before deplying to production"
+    keywords    = "php, zend framework production application, manage zend framework application, test zend framework application, stage zend framework application"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Preview your App"
+    
+block markdown
+  include:md /articles/php/zendframework/preview-your-app.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Yii Application from Scratch | Nanobox"
+    description = "Learn how to create a new Yii application and local development environment"
+    keywords    = "php, yii application, yii application, php dev environment, dev environment, yii dev environemnt, yii dev, docker, containers"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Yii from Scratch"
+    
+block markdown
+  include:md /articles/php/yii/from-scratch.md

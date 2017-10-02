@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing PHP Versions | Nanobox"
+    description = "How to update or change php versions in development and production environments"
+    keywords    = "php, yii production application, manage yii application, configure yii, production yii, yii in production, php version, manage php versions"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Configure PHP"
+    
+block markdown
+  include:md /articles/php/config.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production Yii Applications | Nanobox"
+    description = "Monitor a production Yii application with live and historical stats"
+    keywords    = "php, yii production application, manage yii application, stats, php stats, yii stats, monitor yii, yii app health"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "App Health"
+    
+block markdown
+  include:md /articles/shared/app-health.md

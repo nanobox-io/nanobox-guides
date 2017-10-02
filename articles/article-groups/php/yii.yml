@@ -1,0 +1,51 @@
+title: Yii
+href: /php/yii
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/yii/from-scratch, title: Yii from Scratch}
+      - {href: /php/yii/existing-app, title: Existing Yii App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/yii/add-a-database, title: Add a Database}
+      - {href: /php/yii/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/yii/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/yii/configure-yii, title: Configure Yii}
+      - {href: /php/yii/preview-your-app, title: Preview your App}
+      - {href: /php/yii/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/yii/point-your-domain, title: Point your Domain}
+      - {href: /php/yii/encryption, title: SSL/TLS Encryption}
+      - {href: /php/yii/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/yii/scale-your-app, title: Scale Your App}
+      - {href: /php/yii/debugging, title: Debugging}
+      - {href: /php/yii/app-health, title: App Health}
+      - {href: /php/yii/remote-access, title: Remote Access}
+      - {href: /php/yii/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/yii/configure-php, title: Configure PHP}
+      - {href: /php/yii/php-extensions, title: PHP Extensions}
+      - {href: /php/yii/composer, title: Composer}
+      - {href: /php/yii/webserver-config, title: Webserver Config}
+      - {href: /php/yii/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}

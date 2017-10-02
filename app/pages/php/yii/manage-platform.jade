@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Yii Application | Nanobox"
+    description = "Manage a Yii application's logs, traffic, health, and storage"
+    keywords    = "php, yii production application, manage yii application, monitor yii, yii logging, load balancer, yii monitoring, production logs"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

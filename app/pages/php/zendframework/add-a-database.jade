@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Zend Framework Application | Nanobox"
+    description = "How to add and connect to a database with a Zend Framework applciation"
+    keywords    = "php, zend framework production application, manage zend framework application, zend framework database, zend framework and mongodb, zend framework and postgres, mongodb, postgres"
+    articles    = "php/zendframework"
+    icons       = "php,zendframework"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/php/zendframework/add-a-database.md

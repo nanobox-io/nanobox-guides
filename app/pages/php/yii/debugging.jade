@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Yii Application in Production | Nanobox"
+    description = "Learn how to debug a production Yii application"
+    keywords    = "php, yii production application, manage yii application, yii logging, yii monitoring, debug yii, debugging yii"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md

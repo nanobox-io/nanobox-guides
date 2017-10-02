@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Yii Application to Production | Nanobox"
+    description = "Learn how to deploy a Yii application to production servers"
+    keywords    = "php, yii production application, manage yii application, deploy yii, launch yii, yii in production, yii production servers"
+    articles    = "php/yii"
+    icons       = "php,yii"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/php/yii/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

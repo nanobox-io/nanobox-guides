@@ -1,0 +1,51 @@
+title: Zend Framework
+href: /php/zendframework
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /php/zendframework/from-scratch, title: Zend Framework from Scratch}
+      - {href: /php/zendframework/existing-app, title: Existing Zend Framework App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /php/zendframework/add-a-database, title: Add a Database}
+      - {href: /php/zendframework/frontend-javascript, title: Frontend Javascript}
+      - {href: /php/zendframework/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /php/zendframework/configure-zendframework, title: Configure Zend Framework}
+      - {href: /php/zendframework/preview-your-app, title: Preview your App}
+      - {href: /php/zendframework/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /php/zendframework/point-your-domain, title: Point your Domain}
+      - {href: /php/zendframework/encryption, title: SSL/TLS Encryption}
+      - {href: /php/zendframework/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /php/zendframework/scale-your-app, title: Scale Your App}
+      - {href: /php/zendframework/debugging, title: Debugging}
+      - {href: /php/zendframework/app-health, title: App Health}
+      - {href: /php/zendframework/remote-access, title: Remote Access}
+      - {href: /php/zendframework/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /php/zendframework/configure-php, title: Configure PHP}
+      - {href: /php/zendframework/php-extensions, title: PHP Extensions}
+      - {href: /php/zendframework/composer, title: Composer}
+      - {href: /php/zendframework/webserver-config, title: Webserver Config}
+      - {href: /php/zendframework/extensions-config, title: Extensions Config}
+      - {href: /php/generic/newrelic, title: New Relic}
