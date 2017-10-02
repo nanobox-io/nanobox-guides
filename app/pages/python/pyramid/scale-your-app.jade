@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Pyramid Applications | Nanobox"
+    description = "Easily scale production Pyramid applications with zero downtime"
+    keywords    = "python, pyramid production application, manage pyramid application, scale pyramid application, zero downtime"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Scale your App"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

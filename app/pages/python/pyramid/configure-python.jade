@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Python Versions | Nanobox"
+    description = "How to update or change python versions in development and production environments"
+    keywords    = "python, pyramid production application, manage pyramid application, configure pyramid, production pyramid, pyramid in production, python version, manage python versions"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Configure Python"
+    
+block markdown
+  include:md /articles/python/config.md

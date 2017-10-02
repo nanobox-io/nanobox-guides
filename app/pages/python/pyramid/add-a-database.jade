@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to a Pyramid Application | Nanobox"
+    description = "How to add and connect to a database with a Pyramid applciation"
+    keywords    = "python, pyramid production application, manage pyramid application, pyramid database, pyramid and mongodb, pyramid and postgres, mongodb, postgres"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/python/pyramid/add-a-database.md

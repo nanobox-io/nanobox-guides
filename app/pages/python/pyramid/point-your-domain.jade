@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Pyramid Application | Nanobox"
+    description = "How to point an existing domain name to a Pyramid application"
+    keywords    = "python, pyramid production application, manage pyramid application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

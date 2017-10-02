@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Python Dependencies with Pip | Nanobox"
+    description = "How to manage Python dependencies with Pip"
+    keywords    = "python, pyramid application, manage pyramid application, pip, python pip, pyramid pip"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Pip"
+    
+block markdown
+  include:md /articles/python/pip.md

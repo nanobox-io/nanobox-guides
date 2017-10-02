@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Pyramid Application | Nanobox"
+    description = "Manage a Pyramid application's logs, traffic, health, and storage"
+    keywords    = "python, pyramid production application, manage pyramid application, monitor pyramid, pyramid logging, load balancer, pyramid monitoring, production logs"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

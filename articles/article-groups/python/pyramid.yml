@@ -1,0 +1,47 @@
+title: Pyramid
+href: /python/pyramid
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /python/pyramid/from-scratch, title: Pyramid from Scratch}
+      - {href: /python/pyramid/existing-app, title: Existing Pyramid App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /python/pyramid/add-a-database, title: Add a Database}
+      - {href: /python/pyramid/frontend-javascript, title: Frontend Javascript}
+      - {href: /python/pyramid/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /python/pyramid/configure-pyramid, title: Configure Pyramid}
+      - {href: /python/pyramid/preview-your-app, title: Preview your App}
+      - {href: /python/pyramid/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /python/pyramid/point-your-domain, title: Point your Domain}
+      - {href: /python/pyramid/encryption, title: SSL/TLS Encryption}
+      - {href: /python/pyramid/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /python/pyramid/scale-your-app, title: Scale Your App}
+      - {href: /python/pyramid/debugging, title: Debugging}
+      - {href: /python/pyramid/app-health, title: App Health}
+      - {href: /python/pyramid/remote-access, title: Remote Access}
+      - {href: /python/pyramid/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /python/pyramid/configure-python, title: Configure Python}
+      - {href: /python/pyramid/pip, title: Pip}

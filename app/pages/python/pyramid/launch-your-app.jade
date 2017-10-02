@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Pyramid Application to Production | Nanobox"
+    description = "Learn how to deploy a Pyramid application to production servers"
+    keywords    = "python, pyramid production application, manage pyramid application, deploy pyramid, launch pyramid, pyramid in production, pyramid production servers"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/python/pyramid/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

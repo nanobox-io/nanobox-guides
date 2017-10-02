@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Pyramid Application in Docker | Nanobox"
+    description = "Learn how to take an existing Pyramid application and run it using Docker"
+    keywords    = "python, pyramid production application, manage pyramid application, docker, pyramid on docker, containers"
+    articles    = "python/pyramid"
+    icons       = "python,pyramid"
+    id          = "Existing Pyramid App"
+    
+block markdown
+  include:md /articles/python/pyramid/existing-app.md
