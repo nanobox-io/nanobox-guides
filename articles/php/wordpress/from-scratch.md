@@ -30,7 +30,8 @@ run.config:
 
 web.wp:
   start:
-    fpm: php-server
+    php: start-php
+    apache: start-apache
   network_dirs:
     data.storage:
       - wp-content/uploads/

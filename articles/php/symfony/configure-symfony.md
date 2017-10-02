@@ -28,7 +28,9 @@ You can add a web components in your `boxfile.yml`:
 
 ```yaml
 web.main:
-  start: php-server
+  start:
+    php: start-php
+    nginx: start-nginx
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).

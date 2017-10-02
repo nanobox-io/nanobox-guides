@@ -14,7 +14,9 @@ run.config:
       - zlib
 
 web.wp:
-  start: php-server
+  start:
+    php: start-php
+    apache: start-apache
   network_dirs:
     data.storage:
       - wp-content/uploads/

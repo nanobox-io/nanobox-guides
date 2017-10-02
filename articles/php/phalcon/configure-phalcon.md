@@ -11,10 +11,11 @@ Add the following to you `boxfile.yml` to make the php engine setup and configur
 run.config:
   engine.config:
     # use apache
-    webserver: apache
+    webserver: nginx
 
     # public directory
-    apache_document_root: public
+    document_root: public
+```
 
 ## Add a web
 For your app to run in production, at the very least you'll need a [web component](https://docs.nanobox.io/boxfile/web/).
@@ -24,7 +25,9 @@ You can add a web components in your `boxfile.yml`:
 
 ```yaml
 web.main:
-  start: php-server
+  start:
+    php: start-php
+    nginx: start-nginx
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).

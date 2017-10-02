@@ -25,7 +25,9 @@ You can have as many web components as your app needs by simply adding them to y
 
 ```yaml
 web.main:
-  start: php-server
+  start:
+    php: start-php
+    nginx: start-nginx
 ```
 
 In the above snippet `main` is the name of web component and can be anything you choose (it is only used as a unique identifier).
