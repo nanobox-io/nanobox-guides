@@ -48,7 +48,7 @@ block markdown
 
 ##### 3) Create (or edit an existing) article group
 
-Article groups define the related articles that will are shown in the left hand column of article pages.
+Article groups define the related articles that are shown in the left hand column of article pages.
 
 ```
 /articles/article-groups/rails.yml
