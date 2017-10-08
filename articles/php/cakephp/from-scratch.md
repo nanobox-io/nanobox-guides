@@ -23,6 +23,8 @@ run.config:
   engine.config:
     # sets the php version to 7.0
     runtime: php-7.0
+    # set the apache/nginx document root to public
+    document_root: webroot
     # enables php extensions
     extensions:
       - pdo
