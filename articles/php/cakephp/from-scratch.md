@@ -44,23 +44,17 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install unzip package
-pkgin in -y unzip
-
 # cd into a temporary directory
 cd /tmp
 
-# download CakePHP
-wget https://github.com/cakephp/cakephp/releases/download/3.5.3/cakephp-3-5-3.zip
-
-# unzip cakephp
-unzip cakephp-3-5-3.zip
+# generate a CakePHP skeleton app
+composer create-project --prefer-dist cakephp/app cakephp_app
 
 # cd back into the /app dir
 cd -
 
 # copy the framework into the project
-cp -a /tmp/cakephp-3-5-3/* .
+cp -a /tmp/cakephp_app/* .
 
 # exit the console
 exit
