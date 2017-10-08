@@ -23,6 +23,19 @@ run.config:
   engine.config:
     # sets the php version to 7.0
     runtime: php-7.0
+    # enables php extensions
+    extensions:
+      - pdo
+      - mbstring
+      - intl
+      - tokenizer
+      - session
+      - zip
+      - dom
+      - xml
+      - ctype
+      - xmlwriter
+  
 ```
 
 ## Generate a CakePHP App
