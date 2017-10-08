@@ -78,7 +78,7 @@ nanobox run php-server
 Visit your app at <a href="http://cakephp.dev" target="\_blank">cakephp.dev</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your cakephp app:
+With Nanobox, you have everything you need develop and run your CakePHP app:
 
 ```bash
 # drop into a Nanobox console
