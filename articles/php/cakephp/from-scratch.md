@@ -1,7 +1,7 @@
-# Codigniter from Scratch
+# CakePHP from Scratch
 Part of what makes Nanobox so useful is you don't even need PHP or CakePHP installed on your local machine to use them.
 
-## Create a Codigniter project
+## Create a CakePHP project
 Create a project folder and change into it:
 
 ```bash
