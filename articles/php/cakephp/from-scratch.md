@@ -37,17 +37,17 @@ pkgin in -y unzip
 # cd into a temporary directory
 cd /tmp
 
-# download cakephp
-wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.2.zip
+# download CakePHP
+wget https://github.com/cakephp/cakephp/releases/download/3.5.3/cakephp-3-5-3.zip
 
 # unzip cakephp
-unzip 3.1.2.zip
+unzip cakephp-3-5-3.zip
 
 # cd back into the /app dir
 cd -
 
 # copy the framework into the project
-cp -a /tmp/CodeIgniter-3.1.2/* .
+cp -a /tmp/cakephp-3-5-3/* .
 
 # exit the console
 exit
