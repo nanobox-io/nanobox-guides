@@ -29,33 +29,35 @@ run.config:
       - mysqli
 ```
 
-#### Modify Your database.php
-Modify your `application/config/database.php` to connect your app:
+#### Modify Your app.php
+Modify your `config/app.php` to connect your app:
 
 **Port:** The port will always be the default port of the service you're using.  
 **Name:** The database name will always be `gonano`.
 
 ```php
-$db['default'] = array(
-  'dsn'   => '',
-  'hostname' => $_ENV["DATA_DB_HOST"],
-  'username' => $_ENV["DATA_DB_USER"],
-  'password' => $_ENV["DATA_DB_PASS"],
-  'database' => 'gonano',
-  'dbdriver' => 'mysqli',
-  'dbprefix' => '',
-  'pconnect' => TRUE,
-  'db_debug' => TRUE,
-  'cache_on' => FALSE,
-  'cachedir' => '',
-  'char_set' => 'utf8',
-  'dbcollat' => 'utf8_general_ci',
-  'swap_pre' => '',
-  'encrypt' => FALSE,
-  'compress' => FALSE,
-  'stricton' => FALSE,
-  'failover' => array()
-);
+'Datasources' => [
+    'default' => [
+        'className' => 'Cake\Database\Connection',
+        'driver' => 'Cake\Database\Driver\Mysql',
+        'persistent' => false,
+        'host' => env('DATA_DB_HOST', env('DB_HOST', 'localhost')),
+        /**
+         * CakePHP will use the default DB port based on the driver selected
+         * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
+         * the following line and set the port accordingly
+         */
+        //'port' => 'non_standard_port_number',
+        'username' => env('DATA_DB_USER', env('DB_USERNAME', 'my_app')),
+        'password' => env('DATA_DB_PASS', env('DB_PASSWORD', 'secret')),
+        'database' => env('DATA_DB_HOST', false) ? 'gonano' : env('DB_DATABASE', 'my_app'),
+        'encoding' => 'utf8',
+        'timezone' => 'UTC',
+        'flags' => [],
+        'cacheMetadata' => true,
+        'log' => false,
+    ],
+],
 ```
 **HEADS UP**: Any database created by nanobox will *always* be named `gonano`
 
@@ -65,7 +67,7 @@ $db['default'] = array(
 You can connect directly to your database from an <a href="https://docs.nanobox.io/local-dev/managing-local-data/" target="\_blank">external client</a>.
 
 #### From CakePHP
-You can also test your connection by simply trying to run your app and see if it is able to connect.
+You can also test your connection by simply trying to run your app and see if it is able to connect. Basically, on the home page, CakePHP will show the status of database connection.
 
 Assuming you have migrations setup according to the [official guide](https://cakephp.com/user_guide/libraries/migration.html), you can run them directly.
 
