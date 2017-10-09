@@ -21,8 +21,8 @@ run.config:
   engine: php
   # php engine configuration (php version, extensions, etc)
   engine.config:
-    # sets the php version to 7.0
-    runtime: php-7.0
+    # sets the php version to 7.1
+    runtime: php-7.1
     # set the apache/nginx document root to public
     document_root: webroot
     # enables php extensions
@@ -34,10 +34,11 @@ run.config:
       - session
       - zip
       - dom
+      - simplexml
+      - xmlwriter
       - xml
       - ctype
-      - xmlwriter
-  
+      - iconv
 ```
 
 ## Generate a CakePHP App
