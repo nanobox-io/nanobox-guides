@@ -1,7 +1,7 @@
-# Codigniter from Scratch
+# CakePHP from Scratch
 Part of what makes Nanobox so useful is you don't even need PHP or CakePHP installed on your local machine to use them.
 
-## Create a Codigniter project
+## Create a CakePHP project
 Create a project folder and change into it:
 
 ```bash
@@ -21,8 +21,24 @@ run.config:
   engine: php
   # php engine configuration (php version, extensions, etc)
   engine.config:
-    # sets the php version to 7.0
-    runtime: php-7.0
+    # sets the php version to 7.1
+    runtime: php-7.1
+    # set the apache/nginx document root to public
+    document_root: webroot
+    # enables php extensions
+    extensions:
+      - pdo
+      - mbstring
+      - intl
+      - tokenizer
+      - session
+      - zip
+      - dom
+      - simplexml
+      - xmlwriter
+      - xml
+      - ctype
+      - iconv
 ```
 
 ## Generate a CakePHP App
@@ -31,23 +47,17 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install unzip package
-pkgin in -y unzip
-
 # cd into a temporary directory
 cd /tmp
 
-# download cakephp
-wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.2.zip
-
-# unzip cakephp
-unzip 3.1.2.zip
+# generate a CakePHP skeleton app
+composer create-project --prefer-dist cakephp/app cakephp_app
 
 # cd back into the /app dir
 cd -
 
 # copy the framework into the project
-cp -a /tmp/CodeIgniter-3.1.2/* .
+cp -a /tmp/cakephp_app/* .
 
 # exit the console
 exit
@@ -69,7 +79,7 @@ nanobox run php-server
 Visit your app at <a href="http://cakephp.dev" target="\_blank">cakephp.dev</a>
 
 ## Explore
-With Nanobox, you have everything you need develop and run your cakephp app:
+With Nanobox, you have everything you need develop and run your CakePHP app:
 
 ```bash
 # drop into a Nanobox console

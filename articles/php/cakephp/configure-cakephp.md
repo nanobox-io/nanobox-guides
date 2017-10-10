@@ -46,7 +46,7 @@ You can visit the [log_watch](https://docs.nanobox.io/boxfile/web/#custom-logs) 
 
 ## Add Storage Component
 
-You might also need certain directories to be shared among all cakephp instances. We can do this easily with nanobox by adding a storage data component:
+You might also need certain directories to be shared among all CakePHP instances. We can do this easily with nanobox by adding a storage data component:
 
 ```yaml
 run.config:
@@ -72,8 +72,8 @@ deploy.config:
 ```
 
 ## Now what?
-With your app configured for running in production, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
+With your app configured for running in production, what's next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * [Preview your App](/php/cakephp/preview-your-app)
 * [Launch your App](/php/cakephp/launch-your-app)
-* [Back to cakephp overview](/php/cakephp)
+* [Back to CakePHP overview](/php/cakephp)
