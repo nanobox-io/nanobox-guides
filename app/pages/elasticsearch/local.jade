@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Local Elasticsearch Data | Nanobox"
+    description = "Instructions for managing local Elasticsearch data in apps running in Nanobox"
+    keywords    = "deploy elasticsearch, elasticsearch in production, elasticsearch, scaling elasticsearch, local elasticsearch, local development, configure elasticsearch"
+    articles    = "elasticsearch"
+    icons       = "elasticsearch"
+    id          = "Managing Local Data"
+    
+block markdown
+  include:md /articles/elasticsearch/manage-local.md

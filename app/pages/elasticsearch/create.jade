@@ -1,0 +1,13 @@
+extends /app/pages/templates/article
+
+block configParams
+  -
+    title       = "Create a Elasticsearch Database in Local and Production Environments | Nanobox"
+    description = "Instructions for creating to a Elasticsearch database in development and production with Nanobox"
+    keywords    = "deploy elasticsearch, elasticsearch in production, elasticsearch, mongo, scaling elasticsearch, local elasticsearch, local development, configure elasticsearch"
+    articles    = "elasticsearch"
+    icons       = "elasticsearch"
+    id          = "Create an Elasticsearch Component"
+
+block markdown
+  include:md /articles/elasticsearch/create.md
