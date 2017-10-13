@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Manage Production Elasticsearch Data | Nanobox"
+    description = "Instructions for managing Elasticsearch data in production for apps deployed with Nanobox"
+    keywords    = "deploy elasticsearch, elasticsearch in production, elasticsearch, mongo, scaling elasticsearch, local elasticsearch, local development, configure elasticsearch"
+    articles    = "elasticsearch"
+    icons       = "elasticsearch"
+    id          = "Managing Production Data"
+    
+block markdown
+  include:md /articles/elasticsearch/manage-production.md

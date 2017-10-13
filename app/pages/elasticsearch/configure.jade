@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Elasticsearch for Development and Production Deployment | Nanobox"
+    description = "Instructions for configuring a Elasticsearch database for development and production with Nanobox."
+    keywords    = "deploy elasticsearch, elasticsearch in production, elasticsearch, scaling elasticsearch, local elasticsearch, local development, configure elasticsearch"
+    articles    = "elasticsearch"
+    icons       = "elasticsearch"
+    id          = "Elasticsearch Config Options"
+    
+block markdown
+  include:md /articles/elasticsearch/configure.md
