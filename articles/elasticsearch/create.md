@@ -1,6 +1,6 @@
 # Create an Elasticsearch Component
 
-**Important:** _Elasticsearch is a [memory intensive service](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html). Without enough RAM, it will not be able to start. When deploying to production, you will likely need to scale beyond the default server size (depending on your provider)._
+**Important:** _Elasticsearch is a [memory-intensive service](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html). Without enough RAM, it will not be able to start. When deploying to production, you will likely need to scale beyond the default server size (depending on your provider)._
 
 To add Elasticsearch to your app, add a data component to your `boxfile.yml` with the `image` set to `nanobox/elasticsearch`. You should append your image with a specific version of Elasticsearch. Available versions are listed in the [Elasticsearch Config Options guide](/elasticsearch/configure/#elasticsearch-version).
 

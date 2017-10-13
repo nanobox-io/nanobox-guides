@@ -7,12 +7,10 @@ In your app's connection to Elasticsearch, use your component's [auto-generated 
 
 ##### Node.js Example
 ```javascript
-var elasticsearch=require('elasticsearch');
+var elasticsearch = require('elasticsearch');
 
 var client = new elasticsearch.Client( {  
-  hosts: [
-    'https://' + process.env.DATA_ELASTICSEARCH_HOST + ':9200/'
-  ]
+  host: process.env.DATA_ELASTICSEARCH_HOST + ':9200/'
 });
 ```
 
