@@ -41,7 +41,7 @@ nanobox run bundle install
 You can connect directly to your database from an <a href="https://docs.nanobox.io/data-management/managing-local-data/" target="\_blank">external client</a>.
 
 #### With Ruby
-Your can also test the connection directly from your app:
+You can also test the connection directly from your app:
 
 ```bash
 nanobox run ruby your-app.rb
