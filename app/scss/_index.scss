@@ -43,3 +43,7 @@ $lang-width                            : 690px;
     }
   }
 }
+.main-wrapper               {
+  @media (max-width:1024px)
+                            {margin: 0 40px;}
+}
