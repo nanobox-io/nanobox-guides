@@ -9,7 +9,7 @@ Nanobox creates an isolated virtual environment for your app, mounting the app's
 From within this environment you can develop and run your app as you normally would with things like `go get` or `go build`.
 
 #### Change into your project directory
-Make sure to change directories into your project at this point, as all `nanobox dev` commands will be run from the root of your project.
+Make sure to change directories into your project at this point, as all `nanobox` commands will be run from the root of your project.
 
 #### Add a boxfile.yml
 The <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> tells nanobox how to build and configure your app's environment. At the root of your project create a `boxfile.yml` telling nanobox you want to use the static <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a> (a set of scripts that configure an environment):
