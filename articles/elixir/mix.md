@@ -6,7 +6,7 @@
 
 <!-- ```bash
 # Console into your dev container
-nanobox dev console
+nanobox run
 
 # Run mix commands
 mix install gunicorn

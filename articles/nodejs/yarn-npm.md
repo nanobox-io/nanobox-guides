@@ -4,7 +4,7 @@ Nodejs ships with npm and yarn and both are included in the [Node.js Engine](htt
 
 ```bash
 # Console into your dev container
-nanobox dev console
+nanobox run
 
 # Run npm commands
 npm install
