@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Crystal Application in Development| Nanobox"
+    description = "Learn how to add environment variable to a Crystal applicationin development"
+    keywords    = "crystal, crystal application, manage crystal application, crystal environment variables, environment variables"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Local Environment Variables"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

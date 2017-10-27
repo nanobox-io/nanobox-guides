@@ -1,0 +1,47 @@
+title: Amber
+href: /crystal/amber
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /crystal/amber/from-scratch, title: Amber from Scratch}
+      - {href: /crystal/amber/existing-app, title: Existing Amber App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /crystal/amber/add-a-database, title: Add a Database}
+      - {href: /crystal/amber/frontend-javascript, title: Frontend Javascript}
+      - {href: /crystal/amber/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /crystal/amber/configure-amber, title: Configure Amber}
+      - {href: /crystal/amber/preview-your-app, title: Preview your App}
+      - {href: /crystal/amber/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /crystal/amber/point-your-domain, title: Point your Domain}
+      - {href: /crystal/amber/encryption, title: SSL/TLS Encryption}
+      - {href: /crystal/amber/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /crystal/amber/scale-your-app, title: Scale Your App}
+      - {href: /crystal/amber/debugging, title: Debugging}
+      - {href: /crystal/amber/app-health, title: App Health}
+      - {href: /crystal/amber/remote-access, title: Remote Access}
+      - {href: /crystal/amber/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /crystal/amber/configure-crystal, title: Configure Crystal}
+      - {href: /crystal/amber/shards, title: Shards}

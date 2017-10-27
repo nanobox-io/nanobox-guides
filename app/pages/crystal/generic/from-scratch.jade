@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create a Crystal Application from Scratch | Nanobox"
+    description = "Learn how to create a new Crystal application and local development environment"
+    keywords    = "crystal, crystal application, crystal application, crystal dev environment, dev environment, crystal dev environemnt, crystal dev, docker, containers"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Crystal App from Scratch"
+    
+block markdown
+  include:md /articles/crystal/generic/from-scratch.md

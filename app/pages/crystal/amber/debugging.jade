@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Amber Application in Production | Nanobox"
+    description = "Learn how to debug a production Amber application"
+    keywords    = "crystal, amber, amber production application, manage amber application, amber logging, amber monitoring, debug amber, debugging amber"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md

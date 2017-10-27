@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Create an Amber Application from Scratch | Nanobox"
+    description = "Learn how to create a new Amber application and local development environment"
+    keywords    = "crystal, amber, amber application, amber application, crystal dev environment, dev environment, amber dev environemnt, amber dev, docker, containers"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Rails from Scratch"
+    
+block markdown
+  include:md /articles/crystal/amber/from-scratch.md

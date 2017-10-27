@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add SSL/TLS Encryption to a Crystal Application | Nanobox"
+    description = "Learn how to easily add SSL/TLS encryption to a Crystal production application"
+    keywords    = "crystal, crystal production application, manage crystal application, ssl, tls, encryption"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "SSL/TLS Encryption"
+    
+block markdown
+  include:md /articles/shared/encryption.md

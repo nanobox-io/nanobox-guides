@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch an Amber Application to Production | Nanobox"
+    description = "Learn how to deploy an Amber application to production servers"
+    keywords    = "crystal, amber, amber production application, manage amber application, deploy amber, launch amber, amber in production, amber production servers"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/crystal/amber/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

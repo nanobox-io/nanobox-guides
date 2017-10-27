@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing a Production Amber Application | Nanobox"
+    description = "Manage an Amber application's logs, traffic, health, and storage"
+    keywords    = "crystal, amber, amber production application, manage amber application, monitor amber, amber logging, load balancer, amber monitoring, production logs"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Manage Platform"
+    
+block markdown
+  include:md /articles/shared/manage-platform.md

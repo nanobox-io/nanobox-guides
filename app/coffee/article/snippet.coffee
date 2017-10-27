@@ -1,12 +1,13 @@
 class Snippet
 
   serviceDictionary:
-    postgres   : {image:'postgresql:9.5', icon:'postgres', serviceId:'data.db', category:'database' }
-    mongo      : {image:'mongodb:3.0',    icon:'mongo',    serviceId:'data.db', category:'database' }
-    mysql      : {image:'mysql:5.6',      icon:'mysql',    serviceId:'data.db', category:'database', name:'MySQL' }
-    redis      : {image:'redis:3.2',      icon:'redis',    serviceId:'data.db', category:'database' }
-    memcached  : {image:'memcached:1.4',  icon:'memcached',serviceId:'data.db', category:'database' }
-    rethinkdb  : {image:'rethinkdb:2.3',  icon:'rethink',  serviceId:'data.db', category:'database', name:'RethinkDB'}
+    postgres       : {image:'postgresql:9.5',   icon:'postgres',      serviceId:'data.db', category:'database' }
+    mongo          : {image:'mongodb:3.0',      icon:'mongo',         serviceId:'data.db', category:'database' }
+    mysql          : {image:'mysql:5.6',        icon:'mysql',         serviceId:'data.db', category:'database', name:'MySQL' }
+    redis          : {image:'redis:3.2',        icon:'redis',         serviceId:'data.db', category:'database' }
+    memcached      : {image:'memcached:1.4',    icon:'memcached',     serviceId:'data.db', category:'database' }
+    rethinkdb      : {image:'rethinkdb:2.3',    icon:'rethink',       serviceId:'data.db', category:'database', name:'RethinkDB'}
+    elasticsearch  : {image:'elasticsearch:5',  icon:'elasticsearch', serviceId:'data.es', category:'database', name:'Elasticsearch'}
 
   constructor : (@$item, @$codeBlock)->
 

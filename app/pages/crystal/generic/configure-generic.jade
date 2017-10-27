@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Configure Crystal to run in Production | Nanobox"
+    description = "Learn how to configure a Crystal application to run in production"
+    keywords    = "crystal, crystal production application, manage crystal application, configure crystal, production crystal, crystal in production"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Configure your App"
+    
+block markdown
+  include:md /articles/crystal/generic/configure-generic.md

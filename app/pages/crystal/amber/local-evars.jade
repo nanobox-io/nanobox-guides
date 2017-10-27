@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add Environment Variable to Amber Application in Development| Nanobox"
+    description = "Learn how to add environment variable to an Amber applicationin development"
+    keywords    = "crystal, amber, amber application, manage amber application, amber environment variables, environment variables"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Local Environment Variables"
+    
+block markdown
+  include:md /articles/shared/local-evars.md

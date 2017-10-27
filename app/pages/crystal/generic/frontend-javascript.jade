@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding Javascript to a Crystal Application | Nanobox"
+    description = "How to add Javascript to a Crystal application"
+    keywords    = "crystal, crystal application, crystal javascript, javascript"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Frontend Javascript"
+    
+block markdown
+  :md
+    # Frontend Javascript
+  include:md /articles/shared/partials/nodejs.md
+  include:md /articles/shared/partials/package-managers.md
+  include:md /articles/shared/partials/task-runners.md

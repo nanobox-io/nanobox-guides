@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Crystal Application in Docker | Nanobox"
+    description = "Learn how to take an existing Crystal application and run it using Docker"
+    keywords    = "crystal, crystal production application, manage crystal application, docker, crystal on docker, containers"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Existing Crystal App"
+    
+block markdown
+  include:md /articles/crystal/generic/existing-app.md

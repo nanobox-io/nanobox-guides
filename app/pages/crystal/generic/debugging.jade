@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Debug Crystal Application in Production | Nanobox"
+    description = "Learn how to debug a production Crystal application"
+    keywords    = "crystal, crystal production application, manage crystal application, crystal logging, crystal monitoring, debug crystal, debugging crystal"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Debugging"
+    
+block markdown
+  include:md /articles/shared/debugging.md

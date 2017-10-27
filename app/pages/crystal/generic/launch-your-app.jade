@@ -1,0 +1,17 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Launch a Crystal Application to Production | Nanobox"
+    description = "Learn how to deploy a Crystal application to production servers"
+    keywords    = "crystal, crystal production application, manage crystal application, deploy crystal, launch crystal, crystal in production, crystal production servers"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Launch your App"
+    
+block markdown
+  :md
+    # Launch Your App
+  include:md /articles/shared/partials/launch-your-app.md
+  include:md /articles/crystal/generic/launch-your-app.md
+  include:md /articles/shared/partials/deploy-your-app.md

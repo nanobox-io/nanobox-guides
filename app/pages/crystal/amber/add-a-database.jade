@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Add a Database to an Amber Application | Nanobox"
+    description = "How to add and connect to a database with an Amber applciation"
+    keywords    = "crystal, amber, amber production application, manage amber application, amber database, amber and mongodb, amber and postgres, mongodb, postgres"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Add a Database"
+    
+block markdown
+  include:md /articles/crystal/amber/add-a-database.md

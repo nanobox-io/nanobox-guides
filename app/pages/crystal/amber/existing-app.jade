@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Run an Existing Amber Application in Docker | Nanobox"
+    description = "Learn how to take an existing Amber application and run it using Docker"
+    keywords    = "crystal, amber, amber production application, manage amber application, docker, amber on docker, containers"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Existing Rails App"
+    
+block markdown
+  include:md /articles/crystal/amber/existing-app.md

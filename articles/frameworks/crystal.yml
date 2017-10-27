@@ -1,0 +1,5 @@
+name: Crystal
+icon: crystal
+home: /crystal
+frameworks:
+  - {href: /crystal/amber, name: Amber, icon: amber}

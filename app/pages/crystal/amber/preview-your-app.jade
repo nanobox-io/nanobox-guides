@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Stage an Amber application | Nanobox"
+    description = "Easily stage an Amber application before deploying to production"
+    keywords    = "crystal, amber, amber production application, manage amber application, test amber application, stage amber application"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Preview your App"
+    
+block markdown
+  include:md /articles/crystal/amber/preview-your-app.md

@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Adding a Domain to a Crystal Application | Nanobox"
+    description = "How to point an existing domain name to a Crystal application"
+    keywords    = "crystal, crystal production application, manage crystal application point dns, add dns, domain, domin pointing, point domain"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Point your Domain"
+    
+block markdown
+  include:md /articles/shared/point-your-domain.md

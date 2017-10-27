@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Managing Crystal Versions | Nanobox"
+    description = "How to update or change Crystal versions in development and production environments"
+    keywords    = "crystal, crystal production application, manage crystal application, configure crystal, production crystal, crystal in production, crystal version, manage crystal versions"
+    articles    = "crystal/generic"
+    icons       = "crystal"
+    id          = "Configure Crystal"
+    
+block markdown
+  include:md /articles/crystal/config.md

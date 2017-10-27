@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Scale Amber Applications | Nanobox"
+    description = "Easily scale production Amber applications with zero downtime"
+    keywords    = "crystal, amber, amber production application, manage amber application, scale amber application, zero downtime"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "Scale your App"
+    
+block markdown
+  include:md /articles/shared/scale-your-app.md

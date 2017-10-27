@@ -1,0 +1,13 @@
+extends /app/pages/templates/article  
+
+block configParams
+  -
+    title       = "Monitoring Production Amber Applications | Nanobox"
+    description = "Monitor a production Amber application with live and historical stats"
+    keywords    = "crystal, amber, amber production application, manage amber application, stats, crystal stats, amber stats, monitor amber, amber app health"
+    articles    = "crystal/amber"
+    icons       = "crystal,amber"
+    id          = "App Health"
+    
+block markdown
+  include:md /articles/shared/app-health.md

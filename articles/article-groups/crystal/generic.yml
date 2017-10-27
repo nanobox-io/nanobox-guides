@@ -1,0 +1,47 @@
+title: Generic
+href: /crystal/generic
+articles:
+
+  #
+  - title: "Getting Started"
+    tribe: the_essentials
+    articles:
+      - {href: /crystal/generic/from-scratch, title: Crystal App from Scratch}
+      - {href: /crystal/generic/existing-app, title: Existing Crystal App}
+
+  #
+  - title: "Next Steps"
+    tribe: the_essentials
+    articles:
+      - {href: /crystal/generic/add-a-database, title: Add a Database}
+      - {href: /crystal/generic/frontend-javascript, title: Frontend Javascript}
+      - {href: /crystal/generic/local-evars, title: Local Environment Variables}
+
+  #
+  - title: "Go Live"
+    articles:
+      - {href: /crystal/generic/configure-generic, title: Configure your App}
+      - {href: /crystal/generic/preview-your-app, title: Preview your App}
+      - {href: /crystal/generic/launch-your-app, title: Launch your App}
+
+  #
+  - title: "Production"
+    articles:
+      - {href: /crystal/generic/point-your-domain, title: Point your Domain}
+      - {href: /crystal/generic/encryption, title: SSL/TLS Encryption}
+      - {href: /crystal/generic/production-evars, title: Environment Variables}
+
+  #
+  - title: "Going Further"
+    articles:
+      - {href: /crystal/generic/scale-your-app, title: Scale Your App}
+      - {href: /crystal/generic/debugging, title: Debugging}
+      - {href: /crystal/generic/app-health, title: App Health}
+      - {href: /crystal/generic/remote-access, title: Remote Access}
+      - {href: /crystal/generic/manage-platform, title: Manage Platform}
+
+  #
+  - title: "Advanced"
+    articles:
+      - {href: /crystal/generic/configure-crystal, title: Configure Crystal}
+      - {href: /crystal/generic/shards, title: Shards}
