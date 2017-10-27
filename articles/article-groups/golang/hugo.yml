@@ -15,7 +15,6 @@ articles:
   #
   - title: "Production"
     articles:
-      - {href: /golang/hugo/configure-hugo, title: Configure Hugo}
       - {href: /golang/hugo/stage-your-app, title: Stage your App}
       - {href: /golang/hugo/launch-your-app, title: Launch your App}
       - {href: /golang/hugo/point-your-domain, title: Point your Domain}

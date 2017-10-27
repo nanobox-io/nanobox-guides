@@ -2,7 +2,7 @@ name: Golang
 icon: golang
 home: /golang
 frameworks:
-  # - {href: /golang/hugo, name: hugo, icon: hugo}
+  - {href: /golang/hugo, name: hugo, icon: hugo}
   - {href: /golang/beego, name: beego, icon: beego, devMode: true}
   - {href: /golang/echo, name: echo, icon: echo, devMode: true}
   - {href: /golang/gin, name: gin, icon: gin, devMode: true}
