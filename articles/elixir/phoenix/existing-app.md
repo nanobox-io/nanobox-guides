@@ -50,7 +50,7 @@ data.db:
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local phoenix.dev
+nanobox dns add local phoenix.local
 ```
 
 #### Configure the database
@@ -73,7 +73,7 @@ config :phoenix_crud, PhoenixCrud.Repo,
 nanobox run mix phoenix.server
 ```
 
-Visit your app at <a href="http://phoenix.dev:4000" target="\_blank">phoenix.dev:4000</a>
+Visit your app at <a href="http://phoenix.local:4000" target="\_blank">phoenix.local:4000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Phoenix app:

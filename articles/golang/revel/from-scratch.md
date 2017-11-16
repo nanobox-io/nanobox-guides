@@ -54,7 +54,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local revel.dev
+nanobox dns add local revel.local
 ```
 
 ## Run the app
@@ -63,7 +63,7 @@ nanobox dns add local revel.dev
 nanobox run revel run nanobox-revel
 ```
 
-Visit your app at <a href="http://revel.dev:9000" target="\_blank">revel.dev:9000</a>
+Visit your app at <a href="http://revel.local:9000" target="\_blank">revel.local:9000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your revel app:

@@ -44,7 +44,7 @@ run.config:
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local symfony.dev
+nanobox dns add local symfony.local
 ```
 
 ## Run the app
@@ -55,7 +55,7 @@ nanobox dns add local symfony.dev
 nanobox run php bin/console server:run 0.0.0.0
 ```
 
-Visit your app at <a href="http://symfony.dev:8000" target="\_blank">symfony.dev:8000</a>
+Visit your app at <a href="http://symfony.local:8000" target="\_blank">symfony.local:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your symfony app:

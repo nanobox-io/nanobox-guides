@@ -152,10 +152,10 @@ nanobox run mix phx.server
 In your desktop, got to your project folder
 
 ```bash
-nanobox dns add local phoenix.dev
+nanobox dns add local phoenix.local
 ```
 
-Visit your app at <a href="http://phoenix.dev:4000" target="\_blank">phoenix.dev:4000</a>
+Visit your app at <a href="http://phoenix.local:4000" target="\_blank">phoenix.local:4000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Phoenix app:

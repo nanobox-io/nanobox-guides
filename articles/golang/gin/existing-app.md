@@ -33,7 +33,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local gin.dev
+nanobox dns add local gin.local
 ```
 
 ## Run the app
@@ -43,7 +43,7 @@ nanobox dns add local gin.dev
 nanobox run go run main.go
 ```
 
-Visit your app at <a href="http://gin.dev:8080" target="\_blank">gin.dev:8080</a>
+Visit your app at <a href="http://gin.local:8080" target="\_blank">gin.local:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your gin app:

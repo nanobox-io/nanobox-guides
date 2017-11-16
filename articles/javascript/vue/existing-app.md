@@ -26,7 +26,7 @@ run.config:
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local vue.dev
+nanobox dns add local vue.local
 ```
 
 ## Run the app
@@ -36,7 +36,7 @@ To allow connections from the host machine into the app's container, you'll need
 nanobox run npm run dev --host 0.0.0.0
 ```
 
-Visit your app at <a href="http://vue.dev" target="\_blank">vue.dev</a>
+Visit your app at <a href="http://vue.local" target="\_blank">vue.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your vue app:

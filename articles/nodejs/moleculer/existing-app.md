@@ -40,13 +40,13 @@ Add a convenient way to access your app from the browser, then start the dev env
 
 ```bash
 # add a local dns for easy browser access
-nanobox dns add local moleculer.dev
+nanobox dns add local moleculer.local
 
 # start the dev environment and start molecular
 nanobox run yarn run dev
 ```
 
-Visit your app at <a href="http://moleculer.dev:3000" target="\_blank">moleculer.dev:3000</a>
+Visit your app at <a href="http://moleculer.local:3000" target="\_blank">moleculer.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your moleculer app:

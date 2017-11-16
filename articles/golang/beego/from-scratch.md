@@ -43,7 +43,7 @@ exit
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local beego.dev
+nanobox dns add local beego.local
 ```
 
 ## Configure Beego
@@ -57,7 +57,7 @@ To allow connections from the host machine into the app's container, your app ne
 nanobox run bee run
 ```
 
-Visit your app at <a href="http://beego.dev:8080" target="\_blank">beego.dev:8080</a>
+Visit your app at <a href="http://beego.local:8080" target="\_blank">beego.local:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your beego app:

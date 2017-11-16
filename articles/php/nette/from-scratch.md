@@ -52,7 +52,7 @@ run.config:
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local nette.dev
+nanobox dns add local nette.local
 ```
 
 ## Turn on nette debug mode
@@ -68,7 +68,7 @@ nanobox evar add local NETTE_DEVEL=1
 nanobox run php -S 0.0.0.0:8000 -t www
 ```
 
-Visit your app at <a href="http://nette.dev:8000" target="\_blank">nette.dev:8000</a>
+Visit your app at <a href="http://nette.local:8000" target="\_blank">nette.local:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your nette app:

@@ -31,7 +31,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local koa.dev
+nanobox dns add local koa.local
 ```
 
 ## Run the app
@@ -41,7 +41,7 @@ nanobox dns add local koa.dev
 nanobox run node app.js
 ```
 
-Visit your app at <a href="http://koa.dev:3000" target="\_blank">koa.dev:3000</a>
+Visit your app at <a href="http://koa.local:3000" target="\_blank">koa.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your koa app:

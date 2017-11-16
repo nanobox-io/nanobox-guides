@@ -31,7 +31,7 @@ To allow connections from the host machine into the app's container, you'll need
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local node.dev
+nanobox dns add local node.local
 ```
 
 ## Run the app
@@ -41,7 +41,7 @@ nanobox dns add local node.dev
 nanobox run node your-app.js
 ```
 
-Visit your app at <a href="http://node.dev:3000" target="\_blank">node.dev:3000</a>
+Visit your app at <a href="http://node.local:3000" target="\_blank">node.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your node app:

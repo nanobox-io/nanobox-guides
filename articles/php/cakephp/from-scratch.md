@@ -67,7 +67,7 @@ exit
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local cakephp.dev
+nanobox dns add local cakephp.local
 ```
 
 ## Run the app
@@ -76,7 +76,7 @@ nanobox dns add local cakephp.dev
 nanobox run php-server
 ```
 
-Visit your app at <a href="http://cakephp.dev" target="\_blank">cakephp.dev</a>
+Visit your app at <a href="http://cakephp.local" target="\_blank">cakephp.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your CakePHP app:

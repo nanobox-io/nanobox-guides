@@ -55,7 +55,7 @@ If you want to install and use Phalcon Devtools, add the follwoing to your `comp
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local phalcon.dev
+nanobox dns add local phalcon.local
 ```
 
 ## Run the app
@@ -66,7 +66,7 @@ nanobox dns add local phalcon.dev
 nanobox run php-server
 ```
 
-Visit your app at <a href="http://phalcon.dev" target="\_blank">phalcon.dev</a>
+Visit your app at <a href="http://phalcon.local" target="\_blank">phalcon.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your phalcon app:

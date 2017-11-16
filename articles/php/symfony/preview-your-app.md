@@ -6,7 +6,7 @@ Nanobox allows you to test your app in a production environment, locally, before
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add dry-run symfony.preview
+nanobox dns add dry-run symfony.test
 ```
 
 ## dry-run the app
@@ -15,7 +15,7 @@ nanobox dns add dry-run symfony.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://symfony.preview" target="\_blank">http://symfony.preview</a>
+Visit your app at <a href="http://symfony.test" target="\_blank">http://symfony.test</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
 

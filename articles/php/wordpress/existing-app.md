@@ -92,13 +92,13 @@ With your `boxfile.yml` in place and your `wp-config.php` updated, you're ready 
 
 ```bash
 # add a convenient way to access your app from the browser:
-nanobox dns add local wordpress.dev
+nanobox dns add local wordpress.local
 
 # start nanobox and run the app
 nanobox run php-server
 ```
 
-You can visit your running WordPress app at `wordpress.dev`.
+You can visit your running WordPress app at `wordpress.local`.
 
 ## Now What?
 Now that you have WordPress running with Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!

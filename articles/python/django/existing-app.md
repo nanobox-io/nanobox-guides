@@ -44,14 +44,14 @@ exit
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local django.dev
+nanobox dns add local django.local
 ```
 
 To use the DNS route you'll need to update the `ALLOWED_HOSTS` section of `app/settings.py`:
 
 ```python
 ALLOWED_HOSTS = [
-  'django.dev'
+  'django.local'
 ]
 ```
 
@@ -66,7 +66,7 @@ To allow connections from the host machine into the app's container, you'll need
 nanobox run python manage.py runserver 0.0.0.0:8000
 ```
 
-Visit your app at <a href="http://django.dev:8000" target="\_blank">django.dev:8000</a>
+Visit your app at <a href="http://django.local:8000" target="\_blank">django.local:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Django app:

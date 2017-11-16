@@ -31,7 +31,7 @@ To allow connections from the host machine into the app's container, you'll need
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local golang.dev
+nanobox dns add local golang.local
 ```
 
 ## Run the app
@@ -41,7 +41,7 @@ nanobox dns add local golang.dev
 nanobox run go run YOURAPP.go
 ```
 
-Visit your app at <a href="http://golang.dev:8080" target="\_blank">golang.dev:8080</a>
+Visit your app at <a href="http://golang.local:8080" target="\_blank">golang.local:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Golang app:

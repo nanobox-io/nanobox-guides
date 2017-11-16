@@ -57,7 +57,7 @@ exit
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local codeigniter.dev
+nanobox dns add local codeigniter.local
 ```
 
 ## Run the app
@@ -66,7 +66,7 @@ nanobox dns add local codeigniter.dev
 nanobox run php-server
 ```
 
-Visit your app at <a href="http://codeigniter.dev" target="\_blank">codeigniter.dev</a>
+Visit your app at <a href="http://codeigniter.local" target="\_blank">codeigniter.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your codeigniter app:

@@ -47,14 +47,14 @@ exit
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local pyramid.dev
+nanobox dns add local pyramid.local
 ```
 
 To use the DNS route you'll need to update the `ALLOWED_HOSTS` section of `app/settings.py`:
 
 ```python
 ALLOWED_HOSTS = [
-  'pyramid.dev'
+  'pyramid.local'
 ]
 ```
 
@@ -69,7 +69,7 @@ To allow connections from the host machine into the app's container, you'll need
 nanobox run python manage.py runserver 0.0.0.0:8000
 ```
 
-Visit your app at <a href="http://pyramid.dev:8000" target="\_blank">pyramid.dev:8000</a>
+Visit your app at <a href="http://pyramid.local:8000" target="\_blank">pyramid.local:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Pyramid app:
