@@ -57,7 +57,7 @@ server.listen(port, '0.0.0.0');
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local express.dev
+nanobox dns add local express.local
 ```
 
 ## Run the app
@@ -66,7 +66,7 @@ nanobox dns add local express.dev
 nanobox run npm start
 ```
 
-Visit your app at <a href="http://express.dev:3000" target="\_blank">express.dev:3000</a>
+Visit your app at <a href="http://express.local:3000" target="\_blank">express.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your express app:

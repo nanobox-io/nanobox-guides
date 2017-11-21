@@ -60,7 +60,7 @@ end
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local rails.dev
+nanobox dns add local rails.local
 ```
 
 ## Run the app
@@ -69,7 +69,7 @@ nanobox dns add local rails.dev
 nanobox run rails s
 ```
 
-Visit your app at <a href="http://rails.dev:3000" target="\_blank">rails.dev:3000</a>
+Visit your app at <a href="http://rails.local:3000" target="\_blank">rails.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Rails app:

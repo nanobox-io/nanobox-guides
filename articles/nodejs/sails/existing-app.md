@@ -35,7 +35,7 @@ host: '0.0.0.0'
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local sails.dev
+nanobox dns add local sails.local
 ```
 
 ## Run the app
@@ -45,7 +45,7 @@ nanobox dns add local sails.dev
 nanobox run sails lift
 ```
 
-Visit your app at <a href="http://sails.dev:1337" target="\_blank">sails.dev:1337</a>
+Visit your app at <a href="http://sails.local:1337" target="\_blank">sails.local:1337</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your sails app:

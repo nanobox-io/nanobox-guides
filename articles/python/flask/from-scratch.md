@@ -62,7 +62,7 @@ if __name__ == "__main__":
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local flask.dev
+nanobox dns add local flask.local
 ```
 
 ## Run the app
@@ -71,7 +71,7 @@ nanobox dns add local flask.dev
 nanobox run python app.py
 ```
 
-Visit your app at <a href="http://flask.dev:5000" target="\_blank">flask.dev:5000</a>
+Visit your app at <a href="http://flask.local:5000" target="\_blank">flask.local:5000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Flask app:

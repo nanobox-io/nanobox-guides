@@ -66,7 +66,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local echo.dev
+nanobox dns add local echo.local
 ```
 
 ## Run the app
@@ -75,7 +75,7 @@ nanobox dns add local echo.dev
 nanobox run go run server.go
 ```
 
-Visit your app at <a href="http://echo.dev:1323" target="\_blank">echo.dev:1323</a>
+Visit your app at <a href="http://echo.local:1323" target="\_blank">echo.local:1323</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your echo app:

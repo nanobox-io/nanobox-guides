@@ -48,7 +48,7 @@ run.config:
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local laravel.dev
+nanobox dns add local laravel.local
 ```
 
 ## Run the app
@@ -61,7 +61,7 @@ To allow connections from the host machine into the app's container, you'll need
 nanobox run php artisan serve --host 0.0.0.0
 ```
 
-Visit your app at <a href="http://laravel.dev:8000" target="\_blank">laravel.dev:8000</a>
+Visit your app at <a href="http://laravel.local:8000" target="\_blank">laravel.local:8000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your laravel app:

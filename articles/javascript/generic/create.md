@@ -42,7 +42,7 @@ run.config:
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local myapp.dev
+nanobox dns add local myapp.local
 ```
 
 ## Set the Host to 0.0.0.0
@@ -56,7 +56,7 @@ Start the app with `nanobox run` and whatever command you normally use to start 
 nanobox run yarn start
 ```
 
-Visit your app at <a href="http://myapp.dev" target="\_blank">myapp.dev</a>
+Visit your app at <a href="http://myapp.local" target="\_blank">myapp.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your React app:

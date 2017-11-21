@@ -31,7 +31,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local nodal.dev
+nanobox dns add local nodal.local
 ```
 
 ## Run the app
@@ -41,7 +41,7 @@ nanobox dns add local nodal.dev
 nanobox run nodal s
 ```
 
-Visit your app at <a href="http://nodal.dev:3000" target="\_blank">nodal.dev:3000</a>
+Visit your app at <a href="http://nodal.local:3000" target="\_blank">nodal.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your nodal app:

@@ -8,7 +8,7 @@ Nanobox allows you to test your app in a production environment, locally, before
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add dry-run pyramid.preview
+nanobox dns add dry-run pyramid.test
 ```
 
 **HEADS UP**: You'll need to add `pyramid.st` to the list of `ALLOWED_HOSTS` in `app/settings.py`

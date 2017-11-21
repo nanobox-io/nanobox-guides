@@ -67,7 +67,7 @@ nanobox run
 Add a convenient way to access your app from a browser:
 
 ```bash
-nanobox dns add local hugo.dev
+nanobox dns add local hugo.local
 ```
 
 ## Hugo up-and-running
@@ -77,7 +77,7 @@ To view your application simply run the following command from a Nanobox console
 hugo server --bind="0.0.0.0" --baseUrl=$APP_IP
 ```
 
-Once the app has started you can visit it from your favorite browser at `hugo.dev:1313`.
+Once the app has started you can visit it from your favorite browser at `hugo.local:1313`.
 
 ## Now what?
 With an app running in a dev environment with nanobox, whats next? Think about what else your app might need and hopefully the topics below will help you get started with the next steps of your development!

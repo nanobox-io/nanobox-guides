@@ -26,7 +26,7 @@ run.config:
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local sinatra.dev
+nanobox dns add local sinatra.local
 ```
 
 ## Run the app
@@ -51,7 +51,7 @@ nanobox run rackup --host 0.0.0.0
 ```
 
 #### Check it out
-Visit your app at <a href="http://sinatra.dev:9292" target="\_blank">sinatra.dev:9292</a>
+Visit your app at <a href="http://sinatra.local:9292" target="\_blank">sinatra.local:9292</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Sinatra app:

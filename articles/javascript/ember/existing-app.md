@@ -37,7 +37,7 @@ To allow connections from the host machine into the app's container, you'll need
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local ember.dev
+nanobox dns add local ember.local
 ```
 
 ## Run the app
@@ -46,7 +46,7 @@ nanobox dns add local ember.dev
 nanobox run ember server
 ```
 
-Visit your app at <a href="http://ember.dev:4200" target="\_blank">ember.dev:4200</a>
+Visit your app at <a href="http://ember.local:4200" target="\_blank">ember.local:4200</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your ember app:

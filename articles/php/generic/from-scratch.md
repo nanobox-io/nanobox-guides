@@ -44,7 +44,7 @@ Since this is a generic PHP app, you get to choose your own adventure!
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local php.dev
+nanobox dns add local php.local
 ```
 
 ## Run the app
@@ -53,7 +53,7 @@ nanobox dns add local php.dev
 nanobox run php-server
 ```
 
-Visit your app at <a href="http://php.dev" target="\_blank">php.dev</a>
+Visit your app at <a href="http://php.local" target="\_blank">php.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your PHP app:

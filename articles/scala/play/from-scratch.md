@@ -41,14 +41,14 @@ cp -a /tmp/<your-app-name>/* .
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local play.dev
+nanobox dns add local play.local
 ```
 
 Ensure the custom domain is allowed by adding to the `conf/application.conf`:
 
 ```scala
 play.filters.hosts = {
-  allowed = ["play.dev:9000"]
+  allowed = ["play.local:9000"]
 }
 ```
 
@@ -58,7 +58,7 @@ play.filters.hosts = {
 sbt run
 ```
 
-Visit your app at <a href="http://play.dev:9000" target="\_blank">play.dev:9000</a>
+Visit your app at <a href="http://play.local:9000" target="\_blank">play.local:9000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Play app:

@@ -80,7 +80,7 @@ exit
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local yii.dev
+nanobox dns add local yii.local
 ```
 
 ## Run the app
@@ -89,7 +89,7 @@ nanobox dns add local yii.dev
 nanobox run php bin/console server:run 0.0.0.0
 ```
 
-Visit your app at <a href="http://yii.dev" target="\_blank">yii.dev</a>
+Visit your app at <a href="http://yii.local" target="\_blank">yii.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your yii app:

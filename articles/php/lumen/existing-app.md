@@ -51,7 +51,7 @@ The full list of available extensions can be found [here](/php/lumen/php-extensi
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local lumen.dev
+nanobox dns add local lumen.local
 ```
 
 ## Run the app
@@ -62,7 +62,7 @@ nanobox dns add local lumen.dev
 nanobox run php-server
 ```
 
-Visit your app at <a href="http://lumen.dev" target="\_blank">lumen.dev</a>
+Visit your app at <a href="http://lumen.local" target="\_blank">lumen.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your lumen app:

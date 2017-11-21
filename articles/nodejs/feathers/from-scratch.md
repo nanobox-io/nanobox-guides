@@ -48,7 +48,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local feathers.dev
+nanobox dns add local feathers.local
 ```
 
 ## Run the app
@@ -57,7 +57,7 @@ nanobox dns add local feathers.dev
 nanobox run npm start
 ```
 
-Visit your app at <a href="http://feathers.dev:3030" target="\_blank">feathers.dev:3030</a>
+Visit your app at <a href="http://feathers.local:3030" target="\_blank">feathers.local:3030</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your feathers app:

@@ -60,7 +60,7 @@ exit
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local slim.dev
+nanobox dns add local slim.local
 ```
 
 ## Run the app
@@ -69,7 +69,7 @@ nanobox dns add local slim.dev
 nanobox run php-server
 ```
 
-Visit your app at <a href="http://slim.dev" target="\_blank">slim.dev</a>
+Visit your app at <a href="http://slim.local" target="\_blank">slim.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your slim app:

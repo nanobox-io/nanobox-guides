@@ -38,7 +38,7 @@ HOST=0.0.0.0
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local adonis.dev
+nanobox dns add local adonis.local
 ```
 
 ## Run the app
@@ -48,7 +48,7 @@ nanobox dns add local adonis.dev
 nanobox run npm run dev
 ```
 
-Visit your app at <a href="http://adonis.dev:3333" target="\_blank">adonis.dev:3333</a>
+Visit your app at <a href="http://adonis.local:3333" target="\_blank">adonis.local:3333</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your adonis app:

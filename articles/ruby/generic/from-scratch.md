@@ -47,7 +47,7 @@ To allow connections from the host machine into the app's container, you'll need
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local ruby.dev
+nanobox dns add local ruby.local
 ```
 
 ## Run the app
@@ -56,7 +56,7 @@ nanobox dns add local ruby.dev
 nanobox run ruby your_app.rb
 ```
 
-Visit your app at <a href="http://ruby.dev:3000" target="\_blank">ruby.dev:3000</a>
+Visit your app at <a href="http://ruby.local:3000" target="\_blank">ruby.local:3000</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Ruby app:

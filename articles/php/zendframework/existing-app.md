@@ -47,7 +47,7 @@ run.config:
 Add a convenient way to access your app from the browser
 
 ```bash
-nanobox dns add local zendframework.dev
+nanobox dns add local zendframework.local
 ```
 
 ## Run the app
@@ -58,7 +58,7 @@ nanobox dns add local zendframework.dev
 nanobox run php bin/console server:run 0.0.0.0
 ```
 
-Visit your app at <a href="http://zendframework.dev" target="\_blank">zendframework.dev</a>
+Visit your app at <a href="http://zendframework.local" target="\_blank">zendframework.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Zend Framework app:

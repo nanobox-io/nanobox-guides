@@ -29,7 +29,7 @@ To allow connections from the host machine into the app's container, you'll need
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local python.dev
+nanobox dns add local python.local
 ```
 
 ## Run the app
@@ -39,7 +39,7 @@ nanobox dns add local python.dev
 nanobox run python YOURAPP.py
 ```
 
-Visit your app at <a href="http://python.dev:8080" target="\_blank">python.dev:8080</a>
+Visit your app at <a href="http://python.local:8080" target="\_blank">python.local:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Python app:

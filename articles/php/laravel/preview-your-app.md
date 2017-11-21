@@ -6,7 +6,7 @@ Nanobox allows you to test your app in a production environment, locally, before
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add dry-run laravel.preview
+nanobox dns add dry-run laravel.test
 ```
 
 ## dry-run the app
@@ -15,7 +15,7 @@ nanobox dns add dry-run laravel.preview
 nanobox deploy dry-run
 ```
 
-Visit your app at <a href="http://laravel.preview" target="\_blank">http://laravel.preview</a>
+Visit your app at <a href="http://laravel.test" target="\_blank">http://laravel.test</a>
 
 With `dry-run` your app will continue to run until stopped (`ctrl + c`). This allows you to to preview it, watch logs, seed data, and troubleshoot.
 

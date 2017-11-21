@@ -58,7 +58,7 @@ To allow connections from the host machine into the app's container, you'll need
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local elixir.dev
+nanobox dns add local elixir.local
 ```
 
 ## Run the app
@@ -68,7 +68,7 @@ To run the app and drop into an interactive iex session:
 nanobox run iex -S mix
 ```
 
-Visit your app at <a href="http://elixir.dev>" target="\_blank">elixir.dev</a>
+Visit your app at <a href="http://elixir.local>" target="\_blank">elixir.local</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your Elixir app:

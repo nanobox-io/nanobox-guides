@@ -31,7 +31,7 @@ To allow connections from the host machine into the app's container, your app ne
 Add a convenient way to access your app from the browser:
 
 ```bash
-nanobox dns add local done.dev
+nanobox dns add local done.local
 ```
 
 ## Run the app
@@ -41,7 +41,7 @@ nanobox dns add local done.dev
 nanobox run npm start
 ```
 
-Visit your app at <a href="http://done.dev:8080" target="\_blank">done.dev:8080</a>
+Visit your app at <a href="http://done.local:8080" target="\_blank">done.local:8080</a>
 
 ## Explore
 With Nanobox, you have everything you need develop and run your done app:
