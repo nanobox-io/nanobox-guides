@@ -1,21 +1,21 @@
-# Configure Python
+# Configure Scala
 
-The Python engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/).
+The Scala engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/).
 
-### Python Settings
-The following setting allows you to define your Python runtime environment.
+### Scala Settings
+The following setting allows you to define your Scala runtime environment.
 
-#### runtime
-Specifies which Python runtime and version to use. The following runtimes are available:
+#### java_runtime
+Specifies which Java runtime and version to use. The following runtimes are available:
 
-- python-2.7
-- python-3.4
-- python-3.5
-- python-3.6
+- openjdk8
+- sun-jdk6
+- sun-jdk7
+- oracle-jdk8
 
 ```yaml
 run.config:
   engine: python
   engine.config:
-    runtime: python-3.5
+    java_runtime: oracle-jdk8
 ```
