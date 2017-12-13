@@ -21,6 +21,9 @@ run.config:
 
   extra_packages:
     - nodejs
+    - pkgconf
+    - libxml2
+    - libxslt
 ```
 
 ## Generate a Rails App

@@ -23,6 +23,9 @@ run.config:
 
   extra_packages:
     - nodejs
+    - pkgconf
+    - libxml2
+    - libxslt
 ```
 
 ## Configure Rails
