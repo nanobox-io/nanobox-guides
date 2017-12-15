@@ -17,8 +17,8 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 
 ```yaml
 run.config:
-  enechoe: golang
-  enechoe.config:
+  engine: golang
+  engine.config:
     package: nanobox-echo
 ```
 
