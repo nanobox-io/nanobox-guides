@@ -62,7 +62,6 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | ctype          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | curl           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | dba            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| dio            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | dom            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | eaccelerator   | ✅  | ✅  | ❌  | ❌  | ❌  | ❌  | ❌  |
 | enchant        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
@@ -81,7 +80,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | http           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | iconv          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | igbinary       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| imagick        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| imagick        | ✅  | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  |
 | imap           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | intl           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | json           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
@@ -91,13 +90,12 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | lzf            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | magickwand     | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  | ❌  |
 | mbstring       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| mcrypt         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| memcache       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| mcrypt         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ❌  |
+| memcache       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ❌  |
 | memcached      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | mogilefs       | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | mongo          | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  | ❌  |
 | mongodb        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| mosquitto      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | mssql          | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  | ❌  |
 | mysql          | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  | ❌  |
 | mysqli         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
@@ -138,7 +136,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | sqlite3        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | ssh2           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | stats          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| stomp          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| stomp          | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ❌  |
 | svn            | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  | ❌  |
 | sysvmsg        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | sysvsem        | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
@@ -157,7 +155,7 @@ The following PHP/Zend extensions are available when using the Nanobox PHP engin
 | xmlrpc         | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | xmlwriter      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | xsl            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| yaml           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| yaml           | ✅  | ✅  | ✅  | ✅  | ❌  | ❌  | ❌  |
 | zephir_parser  | ❌  | ❌  | ❌  | ❌  | ✅  | ✅  | ✅  |
 | zip            | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
 | zlib           | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |

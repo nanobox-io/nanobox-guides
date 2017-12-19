@@ -64,14 +64,14 @@ run.config:
 
 Specify which PHP interpreter you would like Apache to use.
 
-- php_fpm *(default)*
+- fpm *(default)*
 - mod_php
 
 ```yaml
 run.config:
   engine: php
   engine.config:
-    apache_php_interpreter: php_fpm
+    apache_php_interpreter: fpm
 ```
 
 #### apache_modules
@@ -87,7 +87,7 @@ Specify which Apache modules to enable or disable. View the [full list of availa
 - setenvif
 - deflate
 
-The following modules are enabled when using php_fpm:
+The following modules are enabled when using fpm:
 
 - actions
 - alias
@@ -223,7 +223,7 @@ run.config:
 
 ## PHP-FPM
 
-These settings only apply when using Nginx or when using Apache with `php_fpm` as the `apache_php_interpreter`.
+These settings only apply when using Nginx or when using Apache with `fpm` as the `apache_php_interpreter`.
 
 #### php\_fpm\_events\_mechanism
 Sets `events.mechanism` setting in the `php-fpm.conf` which specifies the events mechanism FPM will use. More information is available in [PHP's documentation](http://php.net/manual/en/install.fpm.configuration.php#events-mechanism).
