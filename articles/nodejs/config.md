@@ -14,12 +14,13 @@ Specifies which Node.js runtime and version to use. The following runtimes are a
 - nodejs-7.10
 - nodejs-8.6
 - nodejs-8.9
+- nodejs-9.3
 
 ```yaml
 run.config:
   engine: nodejs
   engine.config:
-    runtime: nodejs-8.6
+    runtime: nodejs-8.9
 ```
 
 #### python_version
