@@ -47,6 +47,7 @@ exit
 #### Listen on 0.0.0.0
 To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/boot.rb`:
 
+##### Rails < 5.1
 ```ruby
 require 'rails/commands/server'
 module Rails
@@ -58,6 +59,15 @@ module Rails
   end
 end
 ```
+
+##### Rails >= 5.1
+
+```ruby
+
+ENV['HOST'] = '0.0.0.0'
+```
+per [rails source](https://github.com/rails/rails/blob/9f541657e7bc166dae8223bcae49c4ed81a04b9f/railties/lib/rails/commands/server/server_command.rb#L173)
+
 
 ## Add a local DNS
 Add a convenient way to access your app from the browser:
