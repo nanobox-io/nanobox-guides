@@ -18,7 +18,6 @@ At the root of your project create a `boxfile.yml` telling Nanobox you want to u
 ```yaml
 run.config:
   engine: ruby
-
   extra_packages:
     - nodejs
     - pkgconf
@@ -32,13 +31,16 @@ run.config:
 # drop into a nanobox console
 nanobox run
 
-# install the rails gem so we can use it to generate our app
+# Install Nokogiri
+gem install nokogiri -- --use-system-libraries --with-xml2-config=/data/bin/xml2-config --with-xslt-config=/data/bin/xslt-config
+
+# Install Rails
 gem install rails
 
-# generate our new rails app
+# Generate a new Rails application
 rails new .
 
-# exit the console
+# Exit the console
 exit
 ```
 
@@ -63,7 +65,6 @@ end
 ##### Rails >= 5.1
 
 ```ruby
-
 ENV['HOST'] = '0.0.0.0'
 ```
 per [rails source](https://github.com/rails/rails/blob/9f541657e7bc166dae8223bcae49c4ed81a04b9f/railties/lib/rails/commands/server/server_command.rb#L173)
