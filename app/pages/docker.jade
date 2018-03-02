@@ -1,0 +1,13 @@
+extends /app/pages/templates/article
+
+block configParams
+  -
+    title       = "Using Dockerfiles & Custom Docker Images | Nanobox"
+    description = "How to build, deploy, and use custom Dockerfiles and Docker images with applications deployed with Nanobox."
+    keywords    = "docker, deploy docker, dockerfile, custom dockerfile, custom docker image, scale docker, docker data, docker database"
+    articles    = ""
+    icons       = ""
+    id          = "Using Dockerfiles & Docker Images"
+    
+block markdown
+  include:md /articles/docker/docker.md

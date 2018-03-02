@@ -221,7 +221,7 @@ server = ->
 launch = ->
   console.log '-------------------------------'
   console.log 'Build Complete, visit : '
-  console.log "http://guides.nanobox.dev"
+  console.log "http://guides.nanobox.local"
   # gulp.src("./server/index.html") # An actual file must be specified or gulp will overlook the task.
   #   .pipe(open("",
   #     url: "http://localhost:3814/index.html",
