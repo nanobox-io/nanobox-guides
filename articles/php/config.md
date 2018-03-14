@@ -181,7 +181,6 @@ This allows you to specify the filepath to your browser capabilities file (brows
 
 ***Note:*** You must include your own browscap.ini in your app's repo. They are available for free from [browscap.org](http://browscap.org/).
 
-
 ```yaml
 run.config:
   engine.config:

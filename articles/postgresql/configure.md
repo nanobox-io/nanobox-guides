@@ -28,6 +28,19 @@ data.db:
   image: nanobox/postgresql:9.5
 ```
 
+### Postgres Extensions
+You can add Postgres extensions using the `extensions` config option.
+
+```yaml
+data.postgresql:
+  image: nanobox/postgresql:9.5
+  config:
+    extensions:
+      - postgis
+```
+
+_**Note:** Extension availability differs between versions of Postgres. Check the [Nanobox pkgsrc repo](http://packages.nanobox.io/2017/11/base/index.html) for packages related to the extension you're looking for._
+
 ### Custom Users/Permissions/Databases
 You can create custom users with custom permissions as well as additional databases.
 

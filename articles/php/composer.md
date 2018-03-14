@@ -12,3 +12,14 @@ composer SUB COMMAND
 # exit the console
 exit
 ```
+
+## Composer Install Command
+By default, the PHP engine will runs `composer install --prefer-source --no-interaction`, but you can customize the command with the `composer_install` boxfile.yml config.
+
+#### composer_install
+```yaml
+run.config:
+  engine: php
+  engine.config:
+    composer_install: 'composer install --no-interaction --prefer-source'
+```
