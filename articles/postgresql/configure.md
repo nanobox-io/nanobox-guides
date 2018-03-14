@@ -36,10 +36,72 @@ data.postgresql:
   image: nanobox/postgresql:9.5
   config:
     extensions:
+      - autoinc
       - postgis
 ```
 
-_**Note:** Extension availability differs between versions of Postgres. Check the [Nanobox pkgsrc repo](http://packages.nanobox.io/2017/11/base/index.html) for packages related to the extension you're looking for._
+#### PostgreSQL Extension Per PostgreSQL Version
+| extensions             | 9.3 | 9.4 | 9.5 | 9.6 |  10 |
+|:----------------------:|:---:|:---:|:---:|:---:|:---:|
+| adminpack              | ✅  | ✅  | ✅  | ✅  | ✅  |
+| autoinc                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| btree_gin              | ✅  | ✅  | ✅  | ✅  | ✅  |
+| btree_gist             | ✅  | ✅  | ✅  | ✅  | ✅  |
+| chkpass                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| citext                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| cube                   | ✅  | ✅  | ✅  | ✅  | ✅  |
+| dblink                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| dict_int               | ✅  | ✅  | ✅  | ✅  | ✅  |
+| dict_xsyn              | ✅  | ✅  | ✅  | ✅  | ✅  |
+| earthdistance          | ✅  | ✅  | ✅  | ✅  | ✅  |
+| file_fdw               | ✅  | ✅  | ✅  | ✅  | ✅  |
+| fuzzystrmatch          | ✅  | ✅  | ✅  | ✅  | ✅  |
+| hstore                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| hstore_plpython2u      | ❌  | ❌  | ✅  | ✅  | ✅  |
+| hstore_plpython3u      | ❌  | ❌  | ✅  | ✅  | ✅  |
+| hstore_plpythonu       | ❌  | ❌  | ✅  | ✅  | ✅  |
+| insert_username        | ✅  | ✅  | ✅  | ✅  | ✅  |
+| intagg                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| intarray               | ✅  | ✅  | ✅  | ✅  | ✅  |
+| isn                    | ✅  | ✅  | ✅  | ✅  | ✅  |
+| lo                     | ✅  | ✅  | ✅  | ✅  | ✅  |
+| ltree                  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| moddatetime            | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pageinspect            | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pg_buffercache         | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pg_freespacemap        | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pg_prewarm             | ❌  | ✅  | ✅  | ✅  | ✅  |
+| pg_stat_statements     | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pg_trgm                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pgcrypto               | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pgrowlocks             | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pgstattuple            | ✅  | ✅  | ✅  | ✅  | ✅  |
+| plperl                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| plperlu                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| plpgsql                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| plpython2u             | ✅  | ✅  | ✅  | ✅  | ✅  |
+| plpythonu              | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pltcl                  | ✅  | ✅  | ✅  | ✅  | ✅  |
+| pltclu                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| postgis                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| postgis_tiger_geocoder | ✅  | ✅  | ✅  | ✅  | ✅  |
+| postgis_topology       | ✅  | ✅  | ✅  | ✅  | ✅  |
+| postgres_fdw           | ✅  | ✅  | ✅  | ✅  | ✅  |
+| refint                 | ✅  | ✅  | ✅  | ✅  | ✅  |
+| seg                    | ✅  | ✅  | ✅  | ✅  | ✅  |
+| sslinfo                | ✅  | ✅  | ✅  | ✅  | ✅  |
+| tablefunc              | ✅  | ✅  | ✅  | ✅  | ✅  |
+| tcn                    | ✅  | ✅  | ✅  | ✅  | ✅  |
+| test_parser            | ✅  | ✅  | ❌  | ❌  | ❌  |
+| test_shm_mq            | ❌  | ✅  | ❌  | ❌  | ❌  |
+| timetravel             | ✅  | ✅  | ✅  | ✅  | ✅  |
+| tsearch2               | ✅  | ✅  | ✅  | ✅  | ❌  |
+| tsm_system_rows        | ❌  | ❌  | ✅  | ✅  | ✅  |
+| tsm_system_time        | ❌  | ❌  | ✅  | ✅  | ✅  |
+| unaccent               | ✅  | ✅  | ✅  | ✅  | ✅  |
+| uuid-ossp              | ✅  | ✅  | ✅  | ✅  | ✅  |
+| worker_spi             | ❌  | ✅  | ❌  | ❌  | ❌  |
+| xml2                   | ✅  | ✅  | ✅  | ✅  | ❌  |
 
 ### Custom Users/Permissions/Databases
 You can create custom users with custom permissions as well as additional databases.
