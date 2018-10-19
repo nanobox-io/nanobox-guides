@@ -97,7 +97,8 @@ The following modules are enabled when using fpm:
 run.config:
   engine: php
   engine.config:
-    apache_modules
+    apache_modules:
+      - headers
 ```
 
 #### apache\_max\_spares
