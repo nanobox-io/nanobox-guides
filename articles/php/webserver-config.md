@@ -98,7 +98,14 @@ run.config:
   engine: php
   engine.config:
     apache_modules:
-      - headers
+      - dir
+      - env
+      - expires
+      - log_config
+      - mime
+      - rewrite
+      - setenvif
+      - deflate
 ```
 
 #### apache\_max\_spares
