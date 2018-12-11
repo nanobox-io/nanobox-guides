@@ -28,7 +28,7 @@ run.config:
 To allow connections from the host machine into the app's container, you'll need to configure your app to listen on all available IP's (0.0.0.0) by modifying the `config/env/development.js`:
 
 ```javascript
-host: '0.0.0.0'
+explicitHost: '0.0.0.0'
 ```
 
 #### Add local DNS
