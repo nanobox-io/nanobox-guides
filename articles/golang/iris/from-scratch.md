@@ -1,5 +1,5 @@
 # Iris from Scratch
-Part of what makes Nanobox so useful is you don't even need Nodejs or Iris installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need Golang or Iris installed on your local machine to use them.
 
 ## Create a Iris project
 Create the project folder and change into it:
@@ -13,7 +13,7 @@ mkdir nanobox-iris && cd nanobox-iris
 #### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
-At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Golang <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
@@ -31,7 +31,7 @@ run.config:
 nanobox run
 
 # install iris so you can use it to generate your application
-go get -u github.com/kataras/iris/iris
+go get -u github.com/kataras/iris
 
 # exit the console
 exit
@@ -45,19 +45,26 @@ package main
 import "github.com/kataras/iris"
 
 func main() {
-  iris.Get("/hi", hi)
-  iris.Listen(":8080")
+  app := iris.New()
+
+  tmpl := iris.HTML("./templates", ".html")
+  app.RegisterView(tmpl)
+
+  app.Get("/hi", hi)
+
+  app.Run(iris.Addr(":8080"))
 }
 
-func hi(ctx *iris.Context){
-  ctx.Render("hi.html", struct { Name string }{ Name: "iris" })
+func hi(ctx iris.Context) {
+  ctx.ViewData("Name", "iris")
+  ctx.View("hi.html")
 }
 ```
 
 Create a new html page for your application at `./templates/hi.html`:
 
 ```html
-<html><head> <title> Hi Iris</title> </head>
+<html><head> <title> Hi {{.Name}}</title> </head>
   <body>
     <h1> Hi {{.Name}} </h1>
   </body>
