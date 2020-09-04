@@ -40,7 +40,7 @@
     "jade": "^1.11.0",
     "marked": "^0.3.6",
     "node-horseman": "^3.2.0",
-    "node-sass": "^3.11.2",
+    "node-sass": "^4.13.1",
     "phantomjs-prebuilt": "^2.1.13",
     "rimraf": "~2.2.8"
   },
