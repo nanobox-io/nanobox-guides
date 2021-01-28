@@ -1,19 +1,19 @@
 doctype html
 html(lang="en")
-  
+
   head
     block configParams
     -
       title       = typeof title === "undefined"       ? "Nanobox" : title
       keywords    = typeof keywords === "undefined"    ? "paas,app hosting" : keywords
       description = typeof description === "undefined" ? "nanobox" : description
-      
+
     title= title
     meta( name="viewport"    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" )
     meta( name="description" content="#{description}")
     meta( name="keywords"    content="#{keywords}")
     meta( http-equiv="Content-Type" content="text/html; charset=UTF-8" )
-      
+
     // build:css /style.css
     link(href='/css/shared-svg.css' rel='stylesheet' type='text/css')
     link(href="/bower-libs/front-top-nav/rel/style.css", rel="stylesheet")
@@ -22,23 +22,27 @@ html(lang="en")
     link(href='/css/base-svg.css' rel='stylesheet' type='text/css')
     link(href="/css/main.css", rel="stylesheet")
     // endbuild
-    
+
     block css
-    
+
     link(href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css')
     link(rel="icon" type="image/png" href="/assets/favicon.png")
 
   body
-    .main-wrapper 
+    .main-wrapper
       include ../shared/top-nav.jade
       .content-area
+        .eol
+          .txt WARNING: Nanobox is reaching its end of life on March 31, 2021.<br \>After that time, you will be unable to access the Nanobox service.<br \>
+          a(href="//blog.digitalocean.com/digitalocean-acquires-nanobox")
+            .txt More info.
         block content
-        
+
     //- most of this is built via css/js
     .support
       .icon
       .txt
-        
+
     // build:js /js/libs.js
     script(src="/bower-libs/front-top-nav/rel/style.js")
     script(src="/bower-libs/jquery/dist/jquery.js")
@@ -67,7 +71,7 @@ html(lang="en")
     script(src="/js/top-nav.js")
     //- script(src="/js/olark-groove.js")``
     // endbuild
-    
+
     // build:js /js/main.js
     //- Move this to only load on article pages
     script(src="/bower-libs/clipboard/dist/clipboard.js")
@@ -77,23 +81,23 @@ html(lang="en")
     script(src="/js/article-meta.js")
     //- script(src="/js/olark-groove.js")
     // endbuild
-    
+
     script(src="https://use.typekit.net/cqd5kth.js")
     script try{Typekit.load({ async: true });}catch(e){}
 
-    // build:remove 
+    // build:remove
     script(src="//guides.nanobox.local:35729/livereload.js")
     //- script(src="//localhost:35729/livereload.js")
     script(src="/js/local.js")
     // endbuild
-  
+
     block js
-    
-    //- 
+
+    //-
     script(type="text/javascript").
       $mainwrapper = $(".main-wrapper");
       castShadows( $('.main-wrapper') );
       topNav = new nanobox.TopNav( $(".top-nav") );
-      
+
     include ../shared/google-analytics.jade
     include ../shared/intercom.jade
