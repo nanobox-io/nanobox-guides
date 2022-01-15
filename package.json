@@ -38,7 +38,7 @@
     "gulp-wrap": "~0.3.0",
     "gulp-yaml": "^1.0.1",
     "jade": "^1.11.0",
-    "marked": "^0.3.6",
+    "marked": "^4.0.10",
     "node-horseman": "^3.2.0",
     "node-sass": "^3.11.2",
     "phantomjs-prebuilt": "^2.1.13",
