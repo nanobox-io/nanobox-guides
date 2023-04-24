@@ -1,5 +1,5 @@
 # Echo from Scratch
-Part of what makes Nanobox so useful is you don't even need Nodejs or Echo installed on your local machine to use them.
+Part of what makes Nanobox so useful is you don't even need Golang or Echo installed on your local machine to use them.
 
 ## Create a Echo project
 Create the project folder and change into it:
@@ -13,12 +13,12 @@ mkdir nanobox-echo && cd nanobox-echo
 #### Add a boxfile.yml
 Nanobox uses a <a href="https://docs.nanobox.io/boxfile/" target="\_blank">boxfile.yml</a> to configure your app's environment.
 
-At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Nodejs <a href="https://docs.nanobox.io/enechoes/" target="\_blank">enechoe</a>:
+At the root of your project create a `boxfile.yml` telling Nanobox you want to use the Golang <a href="https://docs.nanobox.io/engines/" target="\_blank">engine</a>:
 
 ```yaml
 run.config:
-  enechoe: golang
-  enechoe.config:
+  engine: golang
+  engine.config:
     package: nanobox-echo
 ```
 
